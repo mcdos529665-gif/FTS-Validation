@@ -1,0 +1,13 @@
+# temp-артефакты переноса
+tools/_small_b64.json
+tools/_decode.py
+
+# python
+__pycache__/
+*.pyc
+
+# мусор ОС/редакторов
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
