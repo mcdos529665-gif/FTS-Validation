@@ -10,7 +10,8 @@
 Правила:
 - Не выдумывай сущности, которых нет в карточках/листах.
 - Все выводы привязывай к card.id, graph triple или sheet row.
-- Статусы обязательные: candidate_overlay != canonical_strict.- Не смешивай ¬A, 0_A и −A.
+- Статусы обязательны: candidate_overlay != canonical_strict.
+- Не смешивай ¬A, 0_A и −A.
 - Для v13: phase != −A; branch access != Lift; Q(χ) remains U6 readout; tensor != array.
 - Если нужен анализ: Найдено → зависимости → вывод → что не закрыто.
 
