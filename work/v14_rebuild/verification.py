@@ -331,6 +331,35 @@ zc = Symbol("z_c", complex=True)
 check("C40", "|e^{iθ}z| = |z|: считывание Q теряет фазу (поэтому Q(z)=|z|² — У6, и phase ≠ −A)",
       simplify(Abs(exp(I * th) * zc) - Abs(zc)) == 0)
 
+# ---------------------------------------------------------------- красная команда (F3/O_09)
+# C41: радиус У12 не выводится: ВСЕ свойства уровня выполняются для любого r>0
+# (касание (0,0), две ветви, контакт нижней ветви ~ x²/(2r) — параметр свободен)
+rr = Symbol("r", real=True, positive=True)
+circle_r = x**2 + (y - rr)**2 - rr**2
+through_zero = circle_r.subs({x: 0, y: 0}) == 0
+branches_r = solve(Eq(circle_r, 0), y)
+contact_r = sp.series(rr - sqrt(rr**2 - x**2), x, 0, 4).removeO()
+check("C41", "Класс x²+(y−r)²=r² при ЛЮБОМ r>0 даёт все свойства У12; контакт x²/(2r): параметр r свободен",
+      through_zero and len(branches_r) == 2 and simplify(contact_r - x**2 / (2 * rr)) == 0,
+      f"нижняя ветвь ~ {contact_r}; r=2 даёт x²/4, r=1/2 дал бы ровно У6")
+
+# C42: куб обратим на R — «вопрос к кубу» имеет единственный ответ, т.е. не вопрос;
+# квадрат необратим — прообраз двузначен. Поэтому У8 = √, а не ∛.
+cube_inv = (solveset(Eq(t**3, 8), t, domain=S.Reals) == sp.FiniteSet(2)
+            and solveset(Eq(t**3, -8), t, domain=S.Reals) == sp.FiniteSet(-2))
+square_two = solveset(Eq(t**2, 4), t, domain=S.Reals) == sp.FiniteSet(-2, 2)
+check("C42", "t³=c имеет ровно один вещественный корень (∛ обратим — вопроса нет); t²=c — два (√ — вопрос)",
+      cube_inv and square_two)
+
+# C43: общее решение Δ²F=−F есть {A·cos + B·sin}; требование чётности (П4) обнуляет B —
+# cos отобран структурой уровня, sin (нечётный критерий = предвзятость) исключён
+gen = dsolve(Eq(f(x).diff(x, 2), -f(x)), f(x)).rhs
+C1, C2 = sorted(gen.free_symbols - {x}, key=lambda s: s.name)
+odd_part = simplify(gen.subs(x, -x) - gen)
+check("C43", "Решения Δ²F=−F: A·sin+B·cos; чётность убивает ровно sin-компоненту — критерий не может быть предвзят",
+      odd_part.has(sin) and simplify(odd_part.subs(C1, 0)) == 0,
+      f"общее решение: {gen}; нечётный остаток: {odd_part}")
+
 # ---------------------------------------------------------------- отчёт
 def write_report():
     n_pass = sum(1 for *_xs, ok, _w in [(r[0], r[1], r[2], r[3]) for r in RESULTS] if ok)
