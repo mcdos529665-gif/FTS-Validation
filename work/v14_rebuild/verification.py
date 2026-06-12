@@ -360,6 +360,45 @@ check("C43", "Решения Δ²F=−F: A·sin+B·cos; чётность уби�
       odd_part.has(sin) and simplify(odd_part.subs(C1, 0)) == 0,
       f"общее решение: {gen}; нечётный остаток: {odd_part}")
 
+# ---------------------------------------------------------------- Д11: регистр отношений (авторское расширение 2026-06-12)
+# C44: унификация правых частей: отношение анти-формы к форме = -1 на всех парах лестницы;
+# правая часть всякого уровня в ratio-регистре — одно утверждение «отношение ≠ 1»
+ratios = [simplify((-x) / x), simplify((-Abs(x)) / Abs(x)), simplify((-x**2) / x**2)]
+check("C44", "(−x)/x = (−|x|)/|x| = (−x²)/x² = −1 ≠ 1: все правые части нормализуются к «отношение ≠ 1»",
+      all(rv == -1 for rv in ratios) and sp.Integer(-1) != 1,
+      f"отношения пар: {ratios}")
+
+# C45: ratio-канал хранит ветвь, стирает величину — двойник C-40 (Q хранит величину, стирает ветвь)
+xp2 = Symbol("x_p", positive=True)
+aa = Symbol("a", positive=True)
+branch_kept = (all((Abs(v) / v - sign(v)) == 0 for v in (-3, -1, Rational(-1, 2), Rational(1, 2), 1, 3))
+               and simplify(Abs(xp2) / xp2) == 1 and simplify(Abs(-xp2) / (-xp2)) == -1)
+magnitude_erased = simplify((aa * x) / (aa * y) - x / y) == 0
+check("C45", "x/|x| = sign(x) (бит ветви) и (a·x)/(a·y) = x/y (величина стёрта): двойник C-40",
+      branch_kept and magnitude_erased)
+
+# C46: характер границы меняется: аддитивно формы ВСТРЕЧАЮТСЯ в нуле, в ratio-регистре ноль — ПОЛЮС
+additive_meet = simplify((x - (-x)).subs(x, 0)) == 0
+pole = (S.One / S.Zero) is S.ComplexInfinity
+check("C46", "Аддитивный регистр: F−(⊖F)=2F → 0 в нуле (встреча); ratio-регистр: 1/0 не определено (полюс)",
+      additive_meet and pole, "нулевая граница исключена из регистра отношений")
+
+# C47: комплексный ratio-канал = оператор извлечения фазы; полярное разложение = произведение каналов
+r2, t2 = symbols("r2 t2", positive=True), Symbol("t2", real=True)
+r2 = Symbol("r2", positive=True)
+zz = r2 * exp(I * t2)
+check("C47", "z/|z| = e^{iθ} (ratio-канал = фаза, Д10) и z = |z|·(z/|z|) (полярное разложение: Q-канал × ratio-канал)",
+      simplify(zz / Abs(zz) - exp(I * t2)) == 0 and simplify(Abs(zz) * (zz / Abs(zz)) - zz) == 0)
+
+# C48: лемма Tot: {+1,−1} — группа Z/2, бит ветви — групповое считывание (гомоморфизм);
+# узловой оператор = умножение на −1 [C-35]; Tot («отношение ≡ 1») = коллапс Z/2 → {1}:
+# элемента −1 нет — правые части (материал А+1) уничтожены
+closure = (sp.Integer(-1) * sp.Integer(-1) == 1 and sp.Integer(-1) * 1 == -1)
+homo = all(sign(va * vb) == sign(va) * sign(vb)
+           for va in (-2, 3) for vb in (-5, 7))
+check("C48", "Z/2={+1,−1} замкнута, sign(a·b)=sign(a)·sign(b): Tot = коллапс группы к {1} — узловому −1 не на чем действовать",
+      closure and homo)
+
 # ---------------------------------------------------------------- отчёт
 def write_report():
     n_pass = sum(1 for *_xs, ok, _w in [(r[0], r[1], r[2], r[3]) for r in RESULTS] if ok)
