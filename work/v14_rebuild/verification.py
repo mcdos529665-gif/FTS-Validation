@@ -426,6 +426,43 @@ nontrivial = simplify(x**2 - x) != 0  # как функции x²≠x ⟹ нос
 check("C52", "x=1: У6=У2, У7=У3, У8=У4 (пентада назад) — носитель умножения тривиален; вне {0,1} x²≠x",
       deg and nontrivial)
 
+# ---------------------------------------------------------------- χ-оверлей = А-регистр ∘ (x:=χ)
+# C53: χ-лестница не добавляет содержания уровней — это А-регистр с подстановкой x:=χ
+# [лист Chi_Stat_Ladder]. Формально: для каждого уровня χ-формула = flat-формула при x→χ.
+chi = Symbol("chi", real=True)
+flat_vs_chi = [
+    ("3", -x, -chi),
+    ("4", Abs(x), Abs(chi)),
+    ("5", -Abs(x), -Abs(chi)),
+    ("6", x * x, chi * chi),
+    ("7", -x * x, -chi * chi),
+    ("8", sqrt(Abs(x)), sqrt(Abs(chi))),
+    ("9", x * x * x, chi * chi * chi),
+]
+overlay_ok = all(simplify(flat.subs(x, chi) - chiform) == 0 for _lvl, flat, chiform in flat_vs_chi)
+check("C53", "χ-оверлей = А-регистр ∘ (x:=χ): для У3..У9 χ-формула = flat-формула при x→χ — НОВОГО содержания нет",
+      overlay_ok, "оверлей = подстановка носителя, не независимая лестница (нельзя выдать за доказанное)")
+
+# C54: канонический toy-пример χ² (лист Chi_Stat_Ladder, строки 51–55) — независимое воспроизведение
+O = [28, 20, 30, 22]
+E = 25
+chi_i = [sp.Rational(o - E) / sp.sqrt(E) for o in O]
+chi2 = sum(c**2 for c in chi_i)
+check("C54", "Toy-пример χ²: O=[28,20,30,22], E=25 ⟹ Σχᵢ² = 2.72 (воспроизведение канонической таблицы)",
+      simplify(chi2 - sp.Rational(272, 100)) == 0, f"χ_i={[float(c) for c in chi_i]}, χ²={float(chi2)}")
+
+# C55: гардрейл G_CHI_01 (x:=χ, НЕ χ²): подстановка x:=χ² превращает У6 в χ⁴ — деградация реальна
+u6_correct = (x * x).subs(x, chi)          # = χ²  (правильно)
+u6_wrong = (x * x).subs(x, chi**2)         # = χ⁴  (нарушение гардрейла)
+check("C55", "G_CHI_01: x:=χ даёт У6=χ², а x:=χ² дало бы χ⁴ — носитель есть χ, не χ² (иначе лестница = степени готовой статистики)",
+      simplify(u6_correct - chi**2) == 0 and simplify(u6_wrong - chi**4) == 0 and simplify(chi**4 - chi**2) != 0)
+
+# C56: нулевая граница в χ-носителе = идеальный fit; правые части наследуются
+chi_zero = solveset(Eq(chi * chi, 0), chi, domain=S.Reals)
+right_part = simplify(-chi**2 - chi**2) != 0  # −χ² ≠ χ² вне нуля (правая часть У7 в χ-носителе)
+check("C56", "χ-носитель: χ²=0 ⟺ χ=0 (идеальный fit O=E — нулевая граница) и −χ²≠χ² вне нуля (правая часть наследуется)",
+      chi_zero == sp.FiniteSet(0) and right_part)
+
 # ---------------------------------------------------------------- отчёт
 def write_report():
     n_pass = sum(1 for *_xs, ok, _w in [(r[0], r[1], r[2], r[3]) for r in RESULTS] if ok)
