@@ -463,6 +463,37 @@ right_part = simplify(-chi**2 - chi**2) != 0  # −χ² ≠ χ² вне нуля
 check("C56", "χ-носитель: χ²=0 ⟺ χ=0 (идеальный fit O=E — нулевая граница) и −χ²≠χ² вне нуля (правая часть наследуется)",
       chi_zero == sp.FiniteSet(0) and right_part)
 
+# ---------------------------------------------------------------- малая форма = проекция (автор, 2026-06-13)
+# Определение: нижний уровень есть «малая форма» (проекция projects_to) верхнего через один;
+# общий критерий — совпадение в ОБОИХ якорях (нуль И единица); вложение — сильный частный случай.
+
+# C57: форм-нить У2→У4→У6 ({x,|x|,x²}) — проекция: совпадают в нуле и в единице, не зеркало;
+# вложение У2⊂У4: x=|x| на всём луче x≥0
+proj = [x, Abs(x), x**2]
+anti = [-x, -Abs(x), -x**2]
+both_anchors = all((a - b).subs(x, 0) == 0 and (a - b).subs(x, 1) == 0
+                   for thread in (proj, anti) for a, b in zip(thread, thread[1:]))
+not_mirror = all(simplify(a + b) != 0 for thread in (proj, anti) for a, b in zip(thread, thread[1:]))
+embedding = solveset(Abs(x) - x, x, S.Reals) == sp.Interval(0, oo)
+check("C57", "Малая форма = проекция: нити {x,|x|,x²} и {−x,−|x|,−x²} совпадают в нуле И единице, не зеркало; вложение x=|x| на [0,∞)",
+      both_anchors and not_mirror and embedding)
+
+# C58: зеркальные пары (±1) противоречат: встречаются ТОЛЬКО в нуле, противоположны в единице
+mirror = [(x, -x), (Abs(x), -Abs(x)), (x**2, -(x**2))]
+only_zero = all(solveset(Eq(f, g), x, S.Reals) == sp.FiniteSet(0) for f, g in mirror)
+opp_unit = all(f.subs(x, 1) == -(g.subs(x, 1)) and f.subs(x, 1) != g.subs(x, 1) for f, g in mirror)
+check("C58", "Зеркальные пары (±1): встречаются только в нуле и противоположны в единице (1 vs −1) — противоречие",
+      only_zero and opp_unit)
+
+# C59: единичная граница — ДИСКРИМИНАНТ противоречия vs проекции
+# (в нуле неразличимы: все =0; в единице зеркало расходится ±1, проекция склеена)
+zero_blind = all(f.subs(x, 0) == 0 for f in proj + anti)
+unit_splits_mirror = all(f.subs(x, 1) != g.subs(x, 1) for f, g in mirror)
+unit_keeps_proj = (len({f.subs(x, 1) for f in proj}) == 1
+                   and len({f.subs(x, 1) for f in anti}) == 1)
+check("C59", "Единичная граница разделяет: в нуле все формы=0 (неразличимы), в единице зеркало→±1 (противоречие), проекция→совпадает (малая форма)",
+      zero_blind and unit_splits_mirror and unit_keeps_proj)
+
 # ---------------------------------------------------------------- отчёт
 def write_report():
     n_pass = sum(1 for *_xs, ok, _w in [(r[0], r[1], r[2], r[3]) for r in RESULTS] if ok)
