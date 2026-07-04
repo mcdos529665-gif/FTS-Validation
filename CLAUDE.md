@@ -45,6 +45,7 @@ python -X utf8 tools/oq_pool.py --write         # пулы пересекающ�
                                                 # (курируемый слой поверх — work/OQ_TRIAGE.md)
 
 python -X utf8 work/v14_rebuild/verification.py        # «тесты» теории: машинная проверка C01..C59
+python -X utf8 work/v14_rebuild/probes.py               # кандидат-пробы из заметок (НЕ сьют; FAIL → строка в work/REFUTED.md)
 python -X utf8 work/v14_rebuild/crosscheck.py grounds  # сверка ссылок статьи с каноном (секции: grounds|levels|sp|fails|find <q>|keys)
 python -X utf8 work/v14_rebuild/o20/run_o20.py         # внешний эмпирический тест (по пред-регистрации)
 
@@ -129,7 +130,8 @@ python tools/import_from.py "C:\путь\к\выгрузке"        # доус�
 
 1. Обновить `work/STATE.md`: что сделано, что в работе, следующий шаг, открытые
    нити — указателями, не пересказом.
-2. Значимое решение — строкой в `work/DECISIONS.md` (что и почему).
+2. Значимое решение — строкой в `work/DECISIONS.md` (что и почему); отказ/
+   опровержение/не-подтверждение — строкой в `work/REFUTED.md` (чем убито, остаток).
 3. Закрытый пункт — отметить в `work/OPEN_QUESTIONS.md` со ссылкой на карточку/коммит.
 4. `git add -A && git commit` — каждый осмысленный шаг отдельным коммитом
    (откат и diff всегда доступны). Дробить работу на единицы «одна лемма / одна
