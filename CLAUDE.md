@@ -41,6 +41,8 @@ python tools/query.py card U_07                 # карточка + входя�
 python tools/query.py context U_07 1            # карточка + соседи, готово вставить в сессию
 python tools/query.py find фаза                 # поиск по тексту/заголовку/символу
 python tools/query.py deps OP_Lift              # транзитивное depends_on
+python -X utf8 tools/oq_pool.py --write         # пулы пересекающихся открытых вопросов → work/OQ_POOLS.md
+                                                # (курируемый слой поверх — work/OQ_TRIAGE.md)
 
 python -X utf8 work/v14_rebuild/verification.py        # «тесты» теории: машинная проверка C01..C59
 python -X utf8 work/v14_rebuild/crosscheck.py grounds  # сверка ссылок статьи с каноном (секции: grounds|levels|sp|fails|find <q>|keys)
