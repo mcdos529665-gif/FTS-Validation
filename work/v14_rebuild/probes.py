@@ -17,7 +17,10 @@ verification.py как C-NN ТОЛЬКО когда её утверждение 
 версии на дату прогона):
   H-4…H-col   — half_hypothesis.md §4  (колонка неопределённости)
   S-1…S-7     — half_hypothesis.md §7  (сборка ℂ)
+  PAR-1…PAR-4 — ladder_table.md §отражение / DECISIONS 2026-06-17 («минус из
+                равенства»: чётные регенерируют ±, нечётные выносят знак)
   T-1…T-3     — topo_chi_note.md §1    (χ_E-слой; впервые реализованы здесь)
+  XE-1…XE-3   — topo_chi_note.md §1/§4 (инстансы Пуанкаре–Хопфа: классы нулей ↔ χ_E)
   P-1…P-4     — topo_chi_note.md §3    (Эйлер/шнуровка/Пик/DFT)
   CLT-1…CLT-5 — clt_u6_note.md §5      (там названы C-1…C-5; здесь переименованы,
                                         чтобы не путать с C-NN сьюта)
@@ -87,6 +90,41 @@ run("S-7", "half_hyp §7", "самоподобие: ветвь круга = зн
     lambda: simplify(2 * cos(t) - 2 * cos(-t)) == 0
     and simplify(2 * sin(t) + 2 * sin(-t)) == 0)
 
+# ----------------------------------------------------- PAR («минус из равенства»)
+def par1():
+    even_samples = [(Abs(x), 2), (x**2, 2), (-x**2, 2), (sqrt(Abs(x)), 4), (cos(x), pi / 3)]
+    for F, a in even_samples:
+        if simplify(F.subs(x, -x) - F) != 0:          # чётность
+            return False
+        c = F.subs(x, a)                               # регенерация ±:
+        if simplify(F.subs(x, -a) - c) != 0:           # F(a)=c ⟹ F(−a)=c
+            return False
+    return True
+run("PAR-1", "DEC 06-17", "чётные формы: F(−x)=F(x) и уравнение F(x)=c регенерирует ±-пару", par1)
+
+def par2():
+    for F in (x, -x, x**3):
+        if simplify(F.subs(x, -x) + F) != 0:           # нечётность: минус выносится
+            return False
+    return (solveset(Eq(x**3, 8), x, S.Reals) == sp.FiniteSet(2)          # пары НЕТ,
+            and solveset(Eq(-x, 3), x, S.Reals) == sp.FiniteSet(-3))      # знак сохранён
+run("PAR-2", "DEC 06-17", "нечётные формы: F(−x)=−F(x), знак проходит насквозь (x³=8→{2})", par2)
+
+def par3():
+    pairs = (solveset(Eq(x**2, 4), x, S.Reals) == sp.FiniteSet(-2, 2)
+             and solveset(Eq(Abs(x), 2), x, S.Reals) == sp.FiniteSet(-2, 2))
+    collapse = (solveset(Eq(x**2, 0), x, S.Reals) == sp.FiniteSet(0)
+                and solveset(Eq(Abs(x), 0), x, S.Reals) == sp.FiniteSet(0))
+    return pairs and collapse
+run("PAR-3", "DEC 06-17", "±-пара живёт при c≠0 и схлопывается ровно на нулевой границе [SP_ZERO]", par3)
+
+def par4():
+    neither = (simplify(exp(-x) - exp(x)) != 0 and simplify(exp(-x) + exp(x)) != 0)
+    sol = solveset(Eq(exp(x), 5), x, S.Reals) == sp.FiniteSet(sp.log(5))
+    no_mirror = simplify(exp(-sp.log(5)) - 5) != 0     # у решения нет зеркального партнёра
+    return neither and sol and no_mirror
+run("PAR-4", "DEC 06-17", "eˣ вне механизма зеркала: ни регенерации, ни выноса (своя ориентация [C-21])", par4)
+
 # ----------------------------------------------------------------- T (χ_E-слой)
 def t1():
     # всякое R∈SO(3) имеет собственное значение 1 → ось → 2 неподвижные точки на S²
@@ -121,6 +159,33 @@ def t3():
     exp_none = solveset(exp(x), x, S.Reals) == S.EmptySet
     return one_zero and cos_lattice and exp_none
 run("T-3", "topo_chi §1", "классы нулей [ADD_TOPO_INVARIANTS]: x² один · cos решётка · eˣ ни одного [C-19]", t3)
+
+# -------------------------------------------------- XE (классы нулей ↔ χ_E, #40)
+def xe1():
+    # поле вращения w(p)=a×p на сфере: нули ровно ±a; индекс каждого = winding = +1
+    a = np.array([0., 0., 1.]); u = np.array([1., 0., 0.]); v = np.array([0., 1., 0.])
+    if np.linalg.norm(np.cross(a, a)) != 0 or np.linalg.norm(np.cross(a, -a)) != 0:
+        return False
+    winds = []
+    for sgn in (+1.0, -1.0):
+        eps, s = 0.1, np.linspace(0, 2 * np.pi, 721)
+        p = (np.cos(eps) * sgn) * a[None, :] + np.sin(eps) * (
+            np.cos(s)[:, None] * u + np.sin(s)[:, None] * v)
+        w = np.cross(np.broadcast_to(a, p.shape), p)
+        ang = np.unwrap(np.arctan2(w @ v, w @ u))
+        winds.append((ang[-1] - ang[0]) / (2 * np.pi))
+    return all(abs(w - 1) < 1e-6 for w in winds) and round(sum(winds)) == 2
+run("XE-1", "topo_chi #40", "сфера: поле a×p — 2 нуля (±ось) индекса +1, сумма 2 = χ_E(S²) [инстанс П.–Хопфа]", xe1)
+
+def xe2():
+    ok_zeros = (sp.cos(pi / 2) == 0 and sp.cos(3 * pi / 2) == 0)   # решётка канона на S¹
+    idx = [int(sp.sign(-sin(z))) for z in (pi / 2, 3 * pi / 2)]    # индекс 1D-нуля = sign(f')
+    const_free = solveset(Eq(S.One, 0), x, S.Reals) == S.EmptySet  # беснулевое поле есть
+    return ok_zeros and sorted(idx) == [-1, 1] and sum(idx) == 0 and const_free
+run("XE-2", "topo_chi #40", "окружность: cos-поле — индексы −1/+1, сумма 0 = χ_E(S¹); класс eˣ (без нулей) ⟺ χ_E=0", xe2)
+
+run("XE-3", "topo_chi #40", "χ_E комбинаторно: октаэдр(S²) 6−12+8=2 · клетка тора 1−2+1=0",
+    lambda: (6 - 12 + 8 == 2) and (1 - 2 + 1 == 0))
 
 # ----------------------------------------------------------------- P (считывания)
 f_ = symbols('f', real=True)
