@@ -27,6 +27,9 @@ verification.py как C-NN ТОЛЬКО когда её утверждение 
   QG-1…QG-3   — questiongain_criterion.md (гейт O_14 + worked-neg/pos)
   MIR-1…MIR-5 — ladder_table.md §отражение (ориентация ≠-зеркала vs Tot-запрет:
                                         два ребра; 2026-07-05)
+  SEQ-1…SEQ-4 — ladder_table.md §режимы  (последовательный запрет: противоречие
+                                        на зеркальных шагах / вырождение на
+                                        шагах сборки; 2026-07-05)
 
 Запуск: python -X utf8 work/v14_rebuild/probes.py    (exit 0 ⟺ все PASS)
 """
@@ -371,6 +374,35 @@ def mir5():
             and simplify(LF[6] - LF[4] * pi_) == 0               # У6 = У4·π [C-34]
             and simplify(LF[8] - Abs(x)**Rational(1, 2)) == 0)   # У8 = |x|^(1/2) [H-u8]
 run("MIR-5", "ladder_tbl", "шаги нечет→чёт = СБОРКА, не зеркало (У4=У2∘π, У6=У4·π, У8=|x|^½) — канал 0_A/реверси", mir5)
+
+# --------------------------- SEQ (режимы последовательного запрета, ladder_table)
+# Разбор 2026-07-05 (авторский вопрос «при каких условиях a≠b запрещает a=|b|,
+# а a=−|b| — a=b·b?»): последовательный Tot-запрет имеет ДВА режима по решётке
+# C-57/C-58 — ПРОТИВОРЕЧИЕ на зеркальных шагах (0→1,2→3,4→5,6→7 [C-58]) и
+# ВЫРОЖДЕНИЕ на шагах сборки (1→2,3→4,5→6,7→8): Tot убивает различие-материал
+# (лемма Tot: Z/2→{1}), следующая форма не опровергается, а совпадает с нижней
+# (C-57-режим; QG-провал по O_14). См. ladder_table.md §«Ориентация отражения».
+a_, b_ = symbols('a b', real=True)
+
+run("SEQ-1", "ladder_tbl", "булева тень [OP_Tot]: У4=(a=b)∧(a≠b)→False, У5=(a=b)∨(a≠b)→True — пара {4,5} падает в полюса пары {0,1}",
+    lambda: sp.And(Eq(a_, b_), sp.Ne(a_, b_)) == sp.false
+    and all(sp.And(Eq(a_, b_), sp.Ne(a_, b_)).subs({a_: 0, b_: v}) == sp.false for v in (0, 1))
+    and all(sp.Or(Eq(a_, b_), sp.Ne(a_, b_)).subs({a_: 0, b_: v}) == sp.true for v in (0, 1)))
+
+run("SEQ-2", "ladder_tbl", "3→4: тотализация одной ветви — |x|≡x на [0,∞) [C-57] и |x|=2 теряет ±пару ({−2,2}→{2}): У4 вырождается в У2",
+    lambda: solveset(Eq(Abs(x), x), x, S.Reals) == sp.Interval(0, sp.oo)
+    and solveset(Eq(Abs(x), 2), x, S.Reals) == sp.FiniteSet(-2, 2)
+    and solveset(Eq(Abs(x), 2), x, sp.Interval(0, sp.oo)) == sp.FiniteSet(2))
+
+def seq3():
+    fam = np.full(10000, 3.7)
+    return fam.var() == 0.0 and fam.mean() == 3.7   # V·V=0; Agg возвращает код
+run("SEQ-3", "ladder_tbl", "5→6: без вариации V·V=0, Agg констант возвращает константу — «статистика константы = код» (ср. oq-const-statistics-code)", seq3)
+
+run("SEQ-4", "ladder_tbl", "7→8: вопрос ветви = двузначность квадрата (t²=4→{−2,2}); на тотализованной области {2} — вопроса нет; t²=−1→∅",
+    lambda: solveset(Eq(t**2, 4), t, S.Reals) == sp.FiniteSet(-2, 2)
+    and solveset(Eq(t**2, 4), t, sp.Interval(0, sp.oo)) == sp.FiniteSet(2)
+    and solveset(Eq(t**2, -1), t, S.Reals) == S.EmptySet)
 
 # ----------------------------------------------------------------- итог
 n_pass = sum(1 for r in RESULTS if r[3])
