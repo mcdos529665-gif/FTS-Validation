@@ -346,7 +346,7 @@ def main():
                     label = f"C-{v}" if kind == "C" else (f"У{v}" if kind == "LVL" else str(v))
                     agg[label] = (wt, c)
         glue = ", ".join(f"{k}×{c}" for k, (wt, c) in
-                         sorted(agg.items(), key=lambda x: (-x[1][0], -x[1][1]))[:12])
+                         sorted(agg.items(), key=lambda x: (-x[1][0], -x[1][1], x[0]))[:12])
         out.append(f"## Пул {pool_no} ({len(comp)} п.) — связки: {glue or '—'}")
         for it in sorted(members, key=lambda x: x["line"]):
             out.append(f"- #{it['id']:02d} `{it['anchor']}` (стр.{it['line']}) {snip(it['text'])}")
