@@ -72,6 +72,7 @@ PLAN = [
     ("~", "oq-d2-sign-retrieval-remainder"),
     (" ", "oq-roots-of-unity-z368"),
     ("~", "oq-pentad-role-cycle"),
+    (" ", "oq-padic-carrier-channel"),
     # ## Кандидат: слой χ_E
     (" ", "oq-sphere-u6-carrier"),
     ("x", "oq-txp-verif-done"),
