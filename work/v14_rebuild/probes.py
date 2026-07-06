@@ -24,6 +24,9 @@ verification.py как C-NN ТОЛЬКО когда её утверждение 
   P-1…P-4     — topo_chi_note.md §3    (Эйлер/шнуровка/Пик/DFT)
   CLT-1…CLT-5 — clt_u6_note.md §5      (там названы C-1…C-5; здесь переименованы,
                                         чтобы не путать с C-NN сьюта)
+  QG-1…QG-3   — questiongain_criterion.md (гейт O_14 + worked-neg/pos)
+  MIR-1…MIR-5 — ladder_table.md §отражение (ориентация ≠-зеркала vs Tot-запрет:
+                                        два ребра; 2026-07-05)
 
 Запуск: python -X utf8 work/v14_rebuild/probes.py    (exit 0 ⟺ все PASS)
 """
@@ -338,6 +341,36 @@ def qg3():
     move_derivable = same_regularity and null_forbids
     return move_derivable and qg_gate(True, not null_forbids) is True
 run("QG-3", "clt_u6 §3-4", "worked-pos Марков: зависимая семья с той же регулярностью — ход не воспроизводим → QG-pass", qg3)
+
+# ------------------------------------ MIR (ориентация отражения, ladder_table)
+# Разбор 2026-07-05 (авторское наблюдение, записано по авторскому подтверждению):
+# «скачущее» ≠-зеркало формул vs строго последовательный Tot-запрет — НЕ
+# противоречие: два разных ребра (инволюция внутри пар vs направленное голодание
+# О2/OP_Tot); сам подъём чередует каналы (чёт→нечет = анти-форма/≠-канал,
+# нечет→чёт = сборка/0_A-канал). См. ladder_table.md §«Ориентация отражения».
+LF = {2: x, 3: -x, 4: Abs(x), 5: -Abs(x), 6: x**2, 7: -x**2,
+      8: sqrt(Abs(x)), 9: x**3, 10: cos(x)}
+
+run("MIR-1", "ladder_tbl", "зеркало ложится ровно на партнёра по паре: −F_2k ≡ F_2k+1 для {2,3}{4,5}{6,7}",
+    lambda: all(simplify(-LF[2*k] - LF[2*k+1]) == 0 for k in (1, 2, 3)))
+
+run("MIR-2", "ladder_tbl", "партнёр = n XOR 1 ⇒ чётный видит зеркало СВЕРХУ, нечётный — СНИЗУ (пары {0,1}…{6,7})",
+    lambda: all(((n ^ 1) == n + 1) == (n % 2 == 0) for n in range(8))
+    and sorted({tuple(sorted((n, n ^ 1))) for n in range(8)}) == [(0, 1), (2, 3), (4, 5), (6, 7)])
+
+run("MIR-3", "ladder_tbl", "с У8 пара рвётся: −√|x| ≠ x³, −x³ ≠ cos x — отражение больше не рунг",
+    lambda: simplify(-LF[8] - LF[9]) != 0 and simplify(-LF[9] - LF[10]) != 0)
+
+run("MIR-4", "ladder_tbl", "пара {0,1} особая: y≠y = ∅ (противоречие), y=y = ℝ — вход лестницы с ≠-стороны",
+    lambda: solveset(sp.Ne(x, x), x, S.Reals) == S.EmptySet
+    and solveset(Eq(x, x), x, S.Reals) == S.Reals)
+
+def mir5():
+    pi_ = Abs(x)
+    return (simplify(LF[4] - LF[2].subs(x, pi_)) == 0            # У4 = У2∘π [C-34]
+            and simplify(LF[6] - LF[4] * pi_) == 0               # У6 = У4·π [C-34]
+            and simplify(LF[8] - Abs(x)**Rational(1, 2)) == 0)   # У8 = |x|^(1/2) [H-u8]
+run("MIR-5", "ladder_tbl", "шаги нечет→чёт = СБОРКА, не зеркало (У4=У2∘π, У6=У4·π, У8=|x|^½) — канал 0_A/реверси", mir5)
 
 # ----------------------------------------------------------------- итог
 n_pass = sum(1 for r in RESULTS if r[3])
