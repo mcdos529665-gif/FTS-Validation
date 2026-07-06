@@ -263,6 +263,8 @@ def intersects_report(open_items, show_hubs, show_cross):
     out.append("Гардрейлы: χ-склейка запрещена; C-60 (политика) вне хабов/рёбер; "
                "**similarity ≠ зависимость** — типизацию «гейт/закрывает» ставит курируемый "
                "слой событий (шаг 3 плана), не эта машина.")
+    out.append("Курируемый слой (события E1…E5, канонные предки, ТОП-5) — "
+               "`work/OQ_TRIAGE.md` §«Точки пересечения». Этот файл машинный — регенерируем.")
     out.append("")
     if show_hubs:
         out.append(hubs_report(open_items))
