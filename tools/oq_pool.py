@@ -14,8 +14,12 @@ oq_pool.py — анализатор OPEN_QUESTIONS: пулы пересекаю�
 отчитывается отдельным списком.
 
 Запуск:  python -X utf8 tools/oq_pool.py [--thresh N] [--write]
-  --thresh N  порог веса ребра (по умолчанию 3)
-  --write     сохранить отчёт в work/OQ_POOLS.md (иначе только stdout)
+  --thresh N     порог веса ребра (по умолчанию 3)
+  --write        сохранить отчёт (иначе только stdout)
+  --hubs         вместо пулов: ранжированные хабы (признак → пункты)
+  --cross        вместо пулов: мосты между курируемыми пулами (OQ_TRIAGE)
+  --intersects   и хабы, и мосты → work/OQ_INTERSECTS.md (с --write)
+  (пулы → work/OQ_POOLS.md; пересечения → work/OQ_INTERSECTS.md)
 
 Веса признаков: C-NN=3, ID карточки=3, уровень=2, О/Д=2, термин=1.
 """
@@ -132,12 +136,14 @@ def pair_weight(fa, fb):
     return w, shared
 
 
-def main():
-    thresh = 3
-    write = "--write" in sys.argv
-    if "--thresh" in sys.argv:
-        thresh = int(sys.argv[sys.argv.index("--thresh") + 1])
+FEAT_W = {"C": W_C, "ID": W_ID, "LVL": W_LVL, "OD": W_OD, "KW": W_KW}
 
+# Признаки, слишком общие для смыслового хаба (пополняется по факту прогона).
+# 'C-60' — политика проб (закрыта, П1), не структурная связь.
+HUB_STOP = {"C-60"}
+
+
+def load_open_items():
     text = io.open(OQ, encoding="utf-8").read()
     items = parse_items(text)
     open_items = [it for it in items if it["status"] in " ~"]
@@ -148,6 +154,141 @@ def main():
         it["anchor"] = am.group(1) if am else "oq-?"
         it["text"] = re.sub(r"\s*\{#oq-[a-z0-9-]+\}", "", it["text"]).strip()
         it["f"] = features(it["text"])
+    return open_items, closed
+
+
+def _label(kind, v):
+    if kind == "C":
+        return f"C-{v}"
+    if kind == "LVL":
+        return f"У{v}"
+    return str(v)
+
+
+def _fmt_shared(shared):
+    parts = []
+    if shared["C"]:
+        parts.append("C-" + ",".join(str(x) for x in sorted(shared["C"])))
+    if shared["ID"]:
+        parts.append(",".join(sorted(shared["ID"])))
+    if shared["LVL"]:
+        parts.append("У" + ",".join(str(x) for x in sorted(shared["LVL"])))
+    if shared["OD"]:
+        parts.append(",".join(sorted(shared["OD"])))
+    if shared["KW"]:
+        parts.append(",".join(sorted(shared["KW"])))
+    return "; ".join(parts) or "—"
+
+
+def hubs_report(open_items, top=24):
+    inv = {}
+    for it in open_items:
+        for kind in ("C", "ID", "LVL", "OD", "KW"):
+            for v in it["f"][kind]:
+                inv.setdefault((kind, v), []).append(it)
+    rows = []
+    for (kind, v), its in inv.items():
+        lab = _label(kind, v)
+        if len(its) < 2 or lab in HUB_STOP:
+            continue
+        score = FEAT_W[kind] * len(its)
+        rows.append((score, FEAT_W[kind], len(its), kind, lab, its))
+    rows.sort(key=lambda r: (-r[0], -r[1], -r[2], r[4]))
+    out = ["## Хабы (признак → пункты) — ранг = вес признака × охват", ""]
+    for score, w, cov, kind, lab, its in rows[:top]:
+        anchors = " ".join(f"`{it['anchor']}`"
+                           for it in sorted(its, key=lambda x: x["line"]))
+        out.append(f"- **{lab}** ({kind}, вес {w}×охват {cov}={score}) — {anchors}")
+    out.append("")
+    return "\n".join(out)
+
+
+def parse_pools(path):
+    """slug → set(Пx | 'Парк') из курируемого OQ_TRIAGE.md.
+
+    Членство = якоря в СТРОКЕ-определении пула (заголовок `**Пx**` + непрерывные
+    следующие строки, пока в них есть якоря). Первая строка без якоря = началась
+    проза → захват прекращается (иначе упоминание чужого якоря в описании ложно
+    приписывает членство; так же ловится утечка за `**Парк`). Членство может быть
+    множественным (пункт-мост честно попадает в два пула)."""
+    pools, cur, active = {}, None, False
+    for line in io.open(path, encoding="utf-8"):
+        h = re.match(r"^\*\*(П\d+)\b", line)
+        if h:
+            cur, active = h.group(1), True
+        elif line.startswith("**Парк"):
+            cur, active = "Парк", True
+        elif re.match(r"^##\s", line):
+            cur, active = None, False
+        if cur and active:
+            anchors = re.findall(r"oq-[a-z0-9-]+", line)
+            if anchors:
+                for s in anchors:
+                    pools.setdefault(s, set()).add(cur)
+            elif not h:
+                active = False  # прошли список членов — дальше описание
+    return pools
+
+
+def cross_report(open_items, pools, thresh=2):
+    n = len(open_items)
+    bridges = []
+    for i in range(n):
+        for j in range(i + 1, n):
+            a, b = open_items[i], open_items[j]
+            pa = pools.get(a["anchor"], set())
+            pb = pools.get(b["anchor"], set())
+            if not pa or not pb or (pa & pb):
+                continue  # нет разметки, либо общий пул — не мост
+            w, shared = pair_weight(a["f"], b["f"])
+            if w >= thresh:
+                bridges.append((w, a, b, pa, pb, shared))
+    bridges.sort(key=lambda x: (-x[0], x[1]["anchor"]))
+    out = [f"## Мосты между пулами (порог {thresh}; пары из РАЗНЫХ пулов)", ""]
+    if not bridges:
+        out.append("(мостов не найдено)")
+    for w, a, b, pa, pb, shared in bridges:
+        out.append(f"- `{a['anchor']}` ({'/'.join(sorted(pa))}) ↔ "
+                   f"`{b['anchor']}` ({'/'.join(sorted(pb))}) — вес {w}: {_fmt_shared(shared)}")
+    out.append("")
+    return "\n".join(out)
+
+
+def intersects_report(open_items, show_hubs, show_cross):
+    out = ["# OQ-INTERSECTS — точки пересечения открытых вопросов (машинный слой)", ""]
+    out.append(f"Источник: work/OPEN_QUESTIONS.md · открытых {len(open_items)} · "
+               f"генератор `tools/oq_pool.py --intersects`.")
+    out.append("Хаб = признак, общий для ≥2 пунктов (ранг = вес признака × охват). "
+               "Мост = ребро между пунктами из РАЗНЫХ курируемых пулов (OQ_TRIAGE).")
+    out.append("Гардрейлы: χ-склейка запрещена; C-60 (политика) вне хабов/рёбер; "
+               "**similarity ≠ зависимость** — типизацию «гейт/закрывает» ставит курируемый "
+               "слой событий (шаг 3 плана), не эта машина.")
+    out.append("")
+    if show_hubs:
+        out.append(hubs_report(open_items))
+    if show_cross:
+        out.append(cross_report(open_items, parse_pools(ROOT / "work" / "OQ_TRIAGE.md")))
+    return "\n".join(out)
+
+
+def main():
+    thresh = 3
+    write = "--write" in sys.argv
+    if "--thresh" in sys.argv:
+        thresh = int(sys.argv[sys.argv.index("--thresh") + 1])
+
+    open_items, closed = load_open_items()
+
+    show_hubs = "--hubs" in sys.argv or "--intersects" in sys.argv
+    show_cross = "--cross" in sys.argv or "--intersects" in sys.argv
+    if show_hubs or show_cross:
+        report = intersects_report(open_items, show_hubs, show_cross)
+        print(report)
+        if write:
+            dest = ROOT / "work" / "OQ_INTERSECTS.md"
+            io.open(dest, "w", encoding="utf-8", newline="\n").write(report + "\n")
+            print(f"\n[written] {dest}")
+        return
 
     n = len(open_items)
     parent = list(range(n))
