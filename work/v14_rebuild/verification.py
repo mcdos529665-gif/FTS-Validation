@@ -494,6 +494,44 @@ unit_keeps_proj = (len({f.subs(x, 1) for f in proj}) == 1
 check("C59", "Единичная граница разделяет: в нуле все формы=0 (неразличимы), в единице зеркало→±1 (противоречие), проекция→совпадает (малая форма)",
       zero_blind and unit_splits_mirror and unit_keeps_proj)
 
+# C60–C62: два режима последовательного запрета (§8.1б) — формульная реализация
+# связности О2 «тотализация уровня запрещает надстройку» (первая обнаруженная
+# автором закономерность лестницы). Фолд 2026-07-05 (были пробы MIR/SEQ).
+
+# C60: зеркальная половина: отражение чётного рунга (=↔≠, А-образ −F) ложится
+# ровно на СЛЕДУЮЩИЙ рунг (партнёр = n XOR 1); с У8 пара рвётся
+LF = {2: x, 3: -x, 4: Abs(x), 5: -Abs(x), 6: x**2, 7: -x**2,
+      8: sqrt(Abs(x)), 9: x**3, 10: cos(x)}
+mirror_next = all(simplify(-LF[2*k] - LF[2*k + 1]) == 0 for k in (1, 2, 3))
+parity_updown = all(((n ^ 1) == n + 1) == (n % 2 == 0) for n in range(8))
+break8 = simplify(-LF[8] - LF[9]) != 0 and simplify(-LF[9] - LF[10]) != 0
+check("C60", "Режим противоречия (шаги чёт→нечет): −F(2k)=F(2k+1) для пар {2,3}{4,5}{6,7}, партнёр = n XOR 1 (чётный↑/нечётный↓); с У8 пара рвётся",
+      mirror_next and parity_updown and break8)
+
+# C61: режим вырождения (шаги сборки): тотализация материала не опровергает
+# следующую форму, а схлопывает её в нижнюю (потеря отдельности уровня)
+deg34 = (solveset(Eq(Abs(x), x), x, S.Reals) == sp.Interval(0, oo)
+         and solveset(Eq(Abs(x), 2), x, S.Reals) == sp.FiniteSet(-2, 2)
+         and solveset(Eq(Abs(x), 2), x, sp.Interval(0, oo)) == sp.FiniteSet(2))
+c_pos = symbols("c", positive=True)
+pair_var = sp.Rational(1, 2) * ((c_pos - 0)**2 + (-c_pos - 0)**2)  # Var{c,−c}, среднее 0
+tot_var = sp.Rational(1, 2) * ((c_pos - c_pos)**2 + (c_pos - c_pos)**2)  # Var{c,c}
+deg56 = simplify(pair_var - c_pos**2) == 0 and simplify(tot_var) == 0
+deg78 = (solveset(Eq(t**2, 4), t, S.Reals) == sp.FiniteSet(-2, 2)
+         and solveset(Eq(t**2, 4), t, sp.Interval(0, oo)) == sp.FiniteSet(2)
+         and solveset(Eq(t**2, -1), t, S.Reals) == S.EmptySet)
+check("C61", "Режим вырождения (шаги сборки): 3→4 |x|≡x на [0,∞), ±пара {−2,2}→{2}; 5→6 Var{c,−c}=c² (V·V пары), Var{c,c}=0; 7→8 вопрос ветви {−2,2}→{2}, t²=−1→∅",
+      deg34 and deg56 and deg78)
+
+# C62: булева тень: Tot(0_A)=¬A схлопывает двухканальную оценку A3 в один канал;
+# средняя пара падает в полюса нижней: {4,5} → {0,1} (∅/ℝ)
+shadow_and = sp.And(Eq(a, b), sp.Ne(a, b)) == sp.false
+shadow_or = sp.Or(Eq(a, b), sp.Ne(a, b)) == sp.true
+poles = (solveset(sp.Ne(x, x), x, S.Reals) == S.EmptySet
+         and solveset(Eq(x, x), x, S.Reals) == S.Reals)
+check("C62", "Булева тень [OP_Tot]: (a=b)∧(a≠b)=False и (a=b)∨(a≠b)=True — Tot проецирует пару {4,5} в полюса пары {0,1} (∅/ℝ); вне тени пару держит A3",
+      shadow_and and shadow_or and poles)
+
 # ---------------------------------------------------------------- отчёт
 def write_report():
     n_pass = sum(1 for *_xs, ok, _w in [(r[0], r[1], r[2], r[3]) for r in RESULTS] if ok)
