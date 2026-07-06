@@ -79,7 +79,7 @@ PLAN = [
     ("~", "oq-zero-classes-chi-e"),
     # ## Кандидат: ЦПТ
     ("x", "oq-clt-verif-done"),
-    (" ", "oq-divorce-cases-genre"),
+    ("~", "oq-divorce-cases-genre"),
     (" ", "oq-levy-world"),
     (" ", "oq-edgeworth-u9"),
 ]

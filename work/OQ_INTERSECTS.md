@@ -9,18 +9,18 @@
 
 - **У8** (LVL, вес 2×охват 5=10) — `oq-u8-u10-optests` `oq-tot-groups-8-11` `oq-d2-half-overlay` `oq-synthesis-c-assembly` `oq-d2-sign-retrieval-remainder`
 - **У9** (LVL, вес 2×охват 5=10) — `oq-phase-causal-u9` `oq-u8-u10-optests` `oq-tot-groups-8-11` `oq-d2-sign-retrieval-remainder` `oq-edgeworth-u9`
+- **O_14** (ID, вес 3×охват 3=9) — `oq-d2-half-overlay` `oq-fourier-questiongain` `oq-divorce-cases-genre`
 - **У12** (LVL, вес 2×охват 4=8) — `oq-u12-radius-r` `oq-u12-antimode-gate` `oq-u12-antimode-authorfix` `oq-synthesis-c-assembly`
 - **У14** (LVL, вес 2×охват 4=8) — `oq-arity-window-13-14` `oq-passport-u14-u15` `oq-u14-worlds-agg-op` `oq-pentad-role-cycle`
 - **У6** (LVL, вес 2×охват 4=8) — `oq-pi-projection-above-u7` `oq-sphere-u6-carrier` `oq-zero-classes-chi-e` `oq-levy-world`
 - **ADD_TOPO_INVARIANTS** (ID, вес 3×охват 2=6) — `oq-sphere-u6-carrier` `oq-zero-classes-chi-e`
 - **C-34** (C, вес 3×охват 2=6) — `oq-pi-projection-above-u7` `oq-redteam-dependent-guards`
-- **O_14** (ID, вес 3×охват 2=6) — `oq-d2-half-overlay` `oq-fourier-questiongain`
 - **O_20** (ID, вес 3×охват 2=6) — `oq-o20-missing-benchmark` `oq-o3-twolists`
+- **О14** (OD, вес 2×охват 3=6) — `oq-d2-half-overlay` `oq-fourier-questiongain` `oq-divorce-cases-genre`
 - **У13** (LVL, вес 2×охват 3=6) — `oq-arity-window-13-14` `oq-u13-boundary-union-op` `oq-pentad-role-cycle`
 - **У15** (LVL, вес 2×охват 3=6) — `oq-passport-u14-u15` `oq-unit-circle-z15` `oq-pentad-role-cycle`
 - **граница** (KW, вес 1×охват 5=5) — `oq-passport-u14-u15` `oq-third-boundary` `oq-const-statistics-code` `oq-unit-circle-z15` `oq-u13-boundary-union-op`
 - **Д10** (OD, вес 2×охват 2=4) — `oq-unit-circle-z15` `oq-d10-phase-test`
-- **О14** (OD, вес 2×охват 2=4) — `oq-d2-half-overlay` `oq-fourier-questiongain`
 - **О2** (OD, вес 2×охват 2=4) — `oq-redteam-dependent-guards` `oq-const-statistics-code`
 - **О20** (OD, вес 2×охват 2=4) — `oq-o20-missing-benchmark` `oq-o3-twolists`
 - **У10** (LVL, вес 2×охват 2=4) — `oq-u8-u10-optests` `oq-tot-groups-8-11`
@@ -34,6 +34,8 @@
 
 ## Мосты между пулами (порог 2; пары из РАЗНЫХ пулов)
 
+- `oq-d2-half-overlay` (П4) ↔ `oq-divorce-cases-genre` (П10) — вес 5: O_14; О14
+- `oq-fourier-questiongain` (П4) ↔ `oq-divorce-cases-genre` (П10) — вес 5: O_14; О14
 - `oq-pi-projection-above-u7` (П3) ↔ `oq-sphere-u6-carrier` (П7) — вес 4: У6,7
 - `oq-pi-projection-above-u7` (П3) ↔ `oq-divorce-cases-genre` (П10) — вес 4: У2,3
 - `oq-pi-projection-above-u7` (П3) ↔ `oq-redteam-dependent-guards` (П12) — вес 3: C-34

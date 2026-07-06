@@ -293,6 +293,52 @@ def clt5():
             and abs(g1) < 0.12 and abs(g2) < 0.2 and abs(nvar - theo) < 0.4)
 run("CLT-5", "clt_u6 §5", "поправка Маркова: зависимость (λ=0.8) — аттрактор тот же; след связи = один V·V-скаляр", clt5)
 
+# ------------------------------------------- QG (критерий QuestionGain / O_14)
+# Гейт (операциональная форма defeat-клаузы [O_14] + «различающий ход»
+# [clt_u6_note §4]): чтение R, претендующее на «роль сверх переописания null X»,
+# проходит ⟺ есть ход m, ВЫВОДИМЫЙ из R и НЕ воспроизводимый из X при РАВНОЙ цене.
+# Воспроизводим при равной цене ⇒ основание падает (analogy_only, не уровень/роль).
+def qg_gate(move_derivable_from_R, move_reproducible_from_null_at_equal_cost):
+    return bool(move_derivable_from_R) and not bool(move_reproducible_from_null_at_equal_cost)
+
+
+def qg1():
+    # структура гейта = таблица истинности; PASS только в клетке (ход есть, не воспроизводим)
+    tbl = {(d, r): qg_gate(d, r) for d in (False, True) for r in (False, True)}
+    return (tbl[(True, False)] is True and tbl[(True, True)] is False
+            and tbl[(False, False)] is False and tbl[(False, True)] is False)
+run("QG-1", "clt_u6 §4/O_14", "гейт QuestionGain = defeat-клауза O_14 (воспроизводим при равной цене → падает)", qg1)
+
+
+def qg2():
+    # worked NEGATIVE (форма D2/o20): null X=|a| (модуль); R добавляет sign(a).
+    # y зависит ТОЛЬКО от |a| ⇒ при данном |a| знак не различает y ⇒ ход воспроизводим
+    # при равной цене ⇒ QG-fail (ровно информационная эквивалентность D2).
+    rng2 = np.random.default_rng(SEED)
+    a = rng2.normal(size=40000)
+    y = (a * a > 1.0).astype(float)
+    s = np.sign(a); hi = np.abs(a) > 1.0
+    p_pos = float(y[hi & (s > 0)].mean()); p_neg = float(y[hi & (s < 0)].mean())
+    reproducible = abs(p_pos - p_neg) < 0.02 and p_pos > 0.99   # знак не даёт различения
+    return reproducible and qg_gate(True, reproducible) is False
+run("QG-2", "clt_u6 §4", "worked-neg D2: sign реконструируем из |·| при равной цене → QG-fail (analogy_only)", qg2)
+
+
+def qg3():
+    # worked POSITIVE (форма Марков–Некрасов): null «регулярность ⇒ независимость».
+    # Ход = зависимая семья (lag-1 corr≠0) с ТОЙ ЖЕ регулярностью (среднее сходится):
+    # null такое запрещает ⇒ не воспроизводим ⇒ QG-pass. Тип хода выведен из типа ошибки.
+    rng2 = np.random.default_rng(SEED)
+    N = 200000
+    flip = rng2.random(N) >= 0.9; flip[0] = False
+    xs = (np.cumsum(flip) % 2).astype(float)
+    lag1 = float(np.corrcoef(xs[:-1], xs[1:])[0, 1])
+    same_regularity = abs(xs.mean() - 0.5) < 0.02
+    null_forbids = abs(lag1) > 0.2                 # зависимость null не воспроизводит
+    move_derivable = same_regularity and null_forbids
+    return move_derivable and qg_gate(True, not null_forbids) is True
+run("QG-3", "clt_u6 §3-4", "worked-pos Марков: зависимая семья с той же регулярностью — ход не воспроизводим → QG-pass", qg3)
+
 # ----------------------------------------------------------------- итог
 n_pass = sum(1 for r in RESULTS if r[3])
 n_fail = len(RESULTS) - n_pass
