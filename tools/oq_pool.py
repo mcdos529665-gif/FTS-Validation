@@ -144,6 +144,9 @@ def main():
     closed = len(items) - len(open_items)
     for i, it in enumerate(open_items):
         it["id"] = i + 1
+        am = re.search(r"\{#(oq-[a-z0-9-]+)\}", it["text"])
+        it["anchor"] = am.group(1) if am else "oq-?"
+        it["text"] = re.sub(r"\s*\{#oq-[a-z0-9-]+\}", "", it["text"]).strip()
         it["f"] = features(it["text"])
 
     n = len(open_items)
@@ -174,6 +177,8 @@ def main():
     out.append(f"Источник: work/OPEN_QUESTIONS.md · открытых {n} (закрытых пропущено {closed})"
                f" · порог ребра {thresh} · генератор tools/oq_pool.py")
     out.append(f"Ребро = общие признаки (C-NN·ID·уровень·О/Д·термин); свидетельства ниже.")
+    out.append(f"Идентификатор пункта — стабильный якорь `{{#oq-...}}` (из OPEN_QUESTIONS.md); "
+               f"#NN — позиционный, дрейфует при закрытии/добавлении. Ссылайся якорем.")
     out.append("")
 
     def snip(t, k=96):
@@ -201,21 +206,21 @@ def main():
                          sorted(agg.items(), key=lambda x: (-x[1][0], -x[1][1]))[:12])
         out.append(f"## Пул {pool_no} ({len(comp)} п.) — связки: {glue or '—'}")
         for it in sorted(members, key=lambda x: x["line"]):
-            out.append(f"- #{it['id']:02d} (стр.{it['line']}, [{it['section'][:40]}]) {snip(it['text'])}")
+            out.append(f"- #{it['id']:02d} `{it['anchor']}` (стр.{it['line']}) {snip(it['text'])}")
         out.append("")
 
     orphans = [open_items[i] for comp in ordered if len(comp) == 1 for i in comp]
     if orphans:
         out.append(f"## Одиночки ({len(orphans)})")
         for it in sorted(orphans, key=lambda x: x["line"]):
-            out.append(f"- #{it['id']:02d} (стр.{it['line']}) {snip(it['text'])}")
+            out.append(f"- #{it['id']:02d} `{it['anchor']}` (стр.{it['line']}) {snip(it['text'])}")
         out.append("")
 
     pol = [it for it in open_items if it["f"]["POL"]]
     if pol:
         out.append("## Политика C-60+ (одно решение, сквозь пулы)")
         for it in sorted(pol, key=lambda x: x["line"]):
-            out.append(f"- #{it['id']:02d} (стр.{it['line']}) {snip(it['text'], 80)}")
+            out.append(f"- #{it['id']:02d} `{it['anchor']}` (стр.{it['line']}) {snip(it['text'], 80)}")
         out.append("")
 
     report = "\n".join(out)
