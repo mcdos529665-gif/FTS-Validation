@@ -63,6 +63,7 @@ PLAN = [
     (" ", "oq-mprime-audit"),
     (" ", "oq-ddelta-weights"),
     (" ", "oq-canon-star-fate"),
+    (" ", "oq-strict-band-7-export"),
     # ## Кандидат: колонка неопределённости
     (" ", "oq-d2-half-overlay"),
     (" ", "oq-d4-column-precision"),
