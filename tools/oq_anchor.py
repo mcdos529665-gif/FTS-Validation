@@ -83,6 +83,7 @@ PLAN = [
     ("~", "oq-divorce-cases-genre"),
     (" ", "oq-levy-world"),
     (" ", "oq-edgeworth-u9"),
+    (" ", "oq-vieta-cubic-s3"),
 ]
 
 ITEM = re.compile(r"^- \[([ x~])\] (.*)$")
