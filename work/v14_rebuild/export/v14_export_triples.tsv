@@ -1,0 +1,3 @@
+SP_STRICT_BAND_7	depends_on	U_07
+SP_STRICT_BAND_7	depends_on	SP_WINDOW
+SP_STRICT_BAND_7	promotes_status_of	U_07
