@@ -44,7 +44,7 @@ python tools/query.py deps OP_Lift              # транзитивное depen
 python -X utf8 tools/oq_pool.py --write         # пулы пересекающихся открытых вопросов → work/OQ_POOLS.md
                                                 # (курируемый слой поверх — work/OQ_TRIAGE.md)
 
-python -X utf8 work/v14_rebuild/verification.py        # «тесты» теории: машинная проверка C01..C59
+python -X utf8 work/v14_rebuild/verification.py        # «тесты» теории: машинная проверка C01..C62
 python -X utf8 work/v14_rebuild/probes.py               # кандидат-пробы из заметок (НЕ сьют; FAIL → строка в work/REFUTED.md)
 python -X utf8 work/v14_rebuild/crosscheck.py grounds  # сверка ссылок статьи с каноном (секции: grounds|levels|sp|fails|find <q>|keys)
 python -X utf8 work/v14_rebuild/o20/run_o20.py         # внешний эмпирический тест (по пред-регистрации)

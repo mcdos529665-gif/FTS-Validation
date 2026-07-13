@@ -1,6 +1,6 @@
 ---
 name: fts-routine
-description: Механические, детерминированные операции над этим репозиторием — запустить скрипт и вернуть его вывод. Использовать для tools/verify.py (проверка целостности канона), tools/query.py (stats/card/context/find/deps), tools/oq_pool.py --write (пулы открытых вопросов), work/v14_rebuild/verification.py (тест-сьют C01..C59), work/v14_rebuild/probes.py (кандидат-пробы), work/v14_rebuild/crosscheck.py (сверка статьи с каноном). НЕ использовать для оценки содержания ФТС, решений о смене статуса карточек, редактирования файлов или мутирующих команд (tools/import_from.py, git commit/push, git init) — это остаётся на основной модели.
+description: Механические, детерминированные операции над этим репозиторием — запустить скрипт и вернуть его вывод. Использовать для tools/verify.py (проверка целостности канона), tools/query.py (stats/card/context/find/deps), tools/oq_pool.py --write (пулы открытых вопросов), work/v14_rebuild/verification.py (тест-сьют C01..C62), work/v14_rebuild/probes.py (кандидат-пробы), work/v14_rebuild/crosscheck.py (сверка статьи с каноном). НЕ использовать для оценки содержания ФТС, решений о смене статуса карточек, редактирования файлов или мутирующих команд (tools/import_from.py, git commit/push, git init) — это остаётся на основной модели.
 tools: Bash, Read, Grep
 model: haiku
 ---
