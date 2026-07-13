@@ -651,3 +651,14 @@
   Следствие: Д10 остаётся открыт и припаркован, SP_COMPLEX не двигается; сильная
   площадка требует same-frequency/different-phase или независимой рандомизации фаз.
   Исполнение: d10_phase/SECOND_SITE_AUDIT.md, CANDIDATES, runbook, OPEN_QUESTIONS, STATE.
+
+- 2026-07-13 (2) — ПОЛНЫЙ АУДИТ, статусный вердикт: PASS C-NN принципиально
+  не повышает интерпретацию ФТС. Сверка карточек показала: SP_U8 и U_08 имеют
+  `candidate_with_operational_gate`; SP_U9/U_09 — `FTS_candidate`; SP_U12/U_12 —
+  `candidate_requires_formalization + canonical_alignment`; SP_U10/SP_U11 отсутствуют.
+  Поэтому все заявленные в статье `canonical_v14` для U_07…U_12 отозваны до
+  наивысших реально подтверждённых статусов. `SP_STRICT_BAND_7` переклассифицирован
+  в `PROPOSAL_STRICT_BAND_7` типа `hypothesis_candidate`, без `promotes_status_of`: C-60
+  показывает арифметическую общность пар, но не вынужденность рунга У7.
+  Причина: соблюсти двухосевой `St_math/St_FTS` и no-smuggling. Трасса:
+  `audit/CLAIM_MATRIX.tsv`, аудированные paper/status patch/export.
