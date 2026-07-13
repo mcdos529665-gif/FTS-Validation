@@ -1,0 +1,59 @@
+Д10-тест: фаза vs декартова + тень (sign(Im))
+============================================================
+
+[interference_sine]
+  Polar (test) AUC: 0.9999 ± 0.0002
+  Null           : 1.0000 ± 0.0000
+  Δ AUC (test − null): -0.0001
+
+[interference_cosine]
+  Polar (test) AUC: 0.9999 ± 0.0001
+  Null           : 0.9999 ± 0.0001
+  Δ AUC (test − null): +0.0001
+
+[phase_shift_effect]
+  Polar (test) AUC: 0.5032 ± 0.0383
+  Null           : 0.9709 ± 0.0083
+  Δ AUC (test − null): -0.4676
+
+[rotating_vector]
+  Polar (test) AUC: 0.9999 ± 0.0001
+  Null           : 1.0000 ± 0.0000
+  Δ AUC (test − null): -0.0001
+
+[gaussian_linear]
+  Polar (test) AUC: 0.9491 ± 0.0146
+  Null           : 0.9100 ± 0.0119
+  Δ AUC (test − null): +0.0391
+
+[gaussian_smooth]
+  Polar (test) AUC: 0.4488 ± 0.0279
+  Null           : 0.9998 ± 0.0003
+  Δ AUC (test − null): -0.5510
+
+============================================================
+СТАТИСТИЧЕСКИЙ АНАЛИЗ
+============================================================
+
+РОТАЦИОННЫЕ задачи (4 × 20 фолдов = 80 пар):
+  Медиана Δ AUC: -0.0001
+  Среднее:       -0.1170 ± 0.2033
+  Wilcoxon (test > null): statistic=142.0, p=1.000000
+
+КОНТРОЛЬНЫЕ задачи (2 × 20 фолдов = 40 пар):
+  Медиана Δ AUC: -0.2431
+  Среднее:       -0.2560 ± 0.2959
+  Wilcoxon (test > null): statistic=210.0, p=0.996409
+
+============================================================
+ВЕРДИКТ
+============================================================
+
+Критерий PASS для H1:
+  [1] test > null на РОТАЦИОННЫХ (p < 0.01): False (p=1.000000)
+  [2] Δ AUC > +0.03 на РОТАЦИОННЫХ: False (медиана=-0.0001)
+  [3] Контроль чист (p > 0.05 на гауссовых): True (p=0.996409)
+
+FAIL (H0: нет значимого преимущества test над null на ротационных)
+
+Результаты сохранены: C:\Users\Mcdos\Desktop\FTS_v13_project\.claude\worktrees\agitated-khorana-ac2ec6\work\v14_rebuild\audit\reproductions\d10\synthetic-v1\results.json

@@ -1,0 +1,11 @@
+{
+  "variant": "radioml-v1",
+  "script": "work\\v14_rebuild\\d10_phase\\radioml\\run_radioml.py",
+  "historical_result": "work\\v14_rebuild\\d10_phase\\radioml\\results.json",
+  "generated_result": "work\\v14_rebuild\\audit\\reproductions\\d10\\radioml-v1\\results.json",
+  "runtime_seconds": 1068.9947133999958,
+  "historical_sha256": "457604cb80372262fcd2e9d06dc1c8c18210d6d322fe18c9425d4863dda817db",
+  "generated_sha256": "457604cb80372262fcd2e9d06dc1c8c18210d6d322fe18c9425d4863dda817db",
+  "semantic_json_equal": true,
+  "byte_equal": true
+}

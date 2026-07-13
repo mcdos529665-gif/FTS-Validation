@@ -1,0 +1,11 @@
+{
+  "variant": "synthetic-v1",
+  "script": "work\\v14_rebuild\\d10_phase\\run_d10.py",
+  "historical_result": "work\\v14_rebuild\\d10_phase\\results.json",
+  "generated_result": "work\\v14_rebuild\\audit\\reproductions\\d10\\synthetic-v1\\results.json",
+  "runtime_seconds": 2.02030950000335,
+  "historical_sha256": "7a7709a7484aebeb650c85250daf878b36cf0453d4d29777f92dd0e3486ab289",
+  "generated_sha256": "7a7709a7484aebeb650c85250daf878b36cf0453d4d29777f92dd0e3486ab289",
+  "semantic_json_equal": true,
+  "byte_equal": true
+}

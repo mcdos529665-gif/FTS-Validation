@@ -1,0 +1,71 @@
+{
+  "analysis_kind": "isolated_historical_reproduction",
+  "environment": {
+    "python": "3.13.14",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit_learn": "1.9.0"
+  },
+  "radioml": {
+    "path": "work\\v14_rebuild\\d10_phase\\radioml\\RML2016.10a_dict.pkl",
+    "size_bytes": 640919653,
+    "sha256": "b29ccc25b00d0718cd3b70ffa9158662ec83f6d9b63ffd845c7bcbe3b3096e8c"
+  },
+  "variants": [
+    {
+      "variant": "synthetic-v1",
+      "script": "work\\v14_rebuild\\d10_phase\\run_d10.py",
+      "historical_result": "work\\v14_rebuild\\d10_phase\\results.json",
+      "generated_result": "work\\v14_rebuild\\audit\\reproductions\\d10\\synthetic-v1\\results.json",
+      "runtime_seconds": 2.02030950000335,
+      "historical_sha256": "7a7709a7484aebeb650c85250daf878b36cf0453d4d29777f92dd0e3486ab289",
+      "generated_sha256": "7a7709a7484aebeb650c85250daf878b36cf0453d4d29777f92dd0e3486ab289",
+      "semantic_json_equal": true,
+      "byte_equal": true
+    },
+    {
+      "variant": "synthetic-pilot",
+      "script": "work\\v14_rebuild\\d10_phase\\pilot\\run_pilot.py",
+      "historical_result": "work\\v14_rebuild\\d10_phase\\pilot\\results.json",
+      "generated_result": "work\\v14_rebuild\\audit\\reproductions\\d10\\synthetic-pilot\\results.json",
+      "runtime_seconds": 255.87568759999704,
+      "historical_sha256": "d3c38e05da8add0f81108914646f960f901944a6ef01d86ea23b02577b833a5d",
+      "generated_sha256": "d3c38e05da8add0f81108914646f960f901944a6ef01d86ea23b02577b833a5d",
+      "semantic_json_equal": true,
+      "byte_equal": true
+    },
+    {
+      "variant": "radioml-v1",
+      "script": "work\\v14_rebuild\\d10_phase\\radioml\\run_radioml.py",
+      "historical_result": "work\\v14_rebuild\\d10_phase\\radioml\\results.json",
+      "generated_result": "work\\v14_rebuild\\audit\\reproductions\\d10\\radioml-v1\\results.json",
+      "runtime_seconds": 1068.9947133999958,
+      "historical_sha256": "457604cb80372262fcd2e9d06dc1c8c18210d6d322fe18c9425d4863dda817db",
+      "generated_sha256": "457604cb80372262fcd2e9d06dc1c8c18210d6d322fe18c9425d4863dda817db",
+      "semantic_json_equal": true,
+      "byte_equal": true
+    },
+    {
+      "variant": "radioml-v2",
+      "script": "work\\v14_rebuild\\d10_phase\\radioml\\run_radioml_v2.py",
+      "historical_result": "work\\v14_rebuild\\d10_phase\\radioml\\results_v2.json",
+      "generated_result": "work\\v14_rebuild\\audit\\reproductions\\d10\\radioml-v2\\results_v2.json",
+      "runtime_seconds": 1442.313627399999,
+      "historical_sha256": "8c000a7d4632be9b8212a1fbf8a6ab5c945c1d70333a0d7efc3133e79982c70f",
+      "generated_sha256": "8c000a7d4632be9b8212a1fbf8a6ab5c945c1d70333a0d7efc3133e79982c70f",
+      "semantic_json_equal": true,
+      "byte_equal": true
+    },
+    {
+      "variant": "radioml-v3",
+      "script": "work\\v14_rebuild\\d10_phase\\radioml\\run_radioml_v3.py",
+      "historical_result": "work\\v14_rebuild\\d10_phase\\radioml\\results_v3.json",
+      "generated_result": "work\\v14_rebuild\\audit\\reproductions\\d10\\radioml-v3\\results_v3.json",
+      "runtime_seconds": 175.47568870000396,
+      "historical_sha256": "a5356f66c98a0e5d771a2032d44dc73a22b9e64c389154753ed124d01095d2ab",
+      "generated_sha256": "a5356f66c98a0e5d771a2032d44dc73a22b9e64c389154753ed124d01095d2ab",
+      "semantic_json_equal": true,
+      "byte_equal": true
+    }
+  ]
+}

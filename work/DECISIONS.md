@@ -662,3 +662,17 @@
   показывает арифметическую общность пар, но не вынужденность рунга У7.
   Причина: соблюсти двухосевой `St_math/St_FTS` и no-smuggling. Трасса:
   `audit/CLAIM_MATRIX.tsv`, аудированные paper/status patch/export.
+
+- 2026-07-13 (3) — ПОЛНЫЙ АУДИТ, эмпирический вердикт: repeated-CV фолд не является
+  независимой внешней репликацией. O20/D2 пересчитаны post-hoc с train-fold-only
+  preprocessing, Nadeau–Bengio corrected uncertainty, Holm и одним эффектом на датасет.
+  O20: 1/4, sign p=0.9375; D2 primary HistGB: 2/4, sign p=0.6875. Сильные claims не
+  подтверждены; T2/T3 не capacity-matched. Все 5 Д10 повторены byte-for-byte; численная
+  воспроизводимость не устраняет representation/CFO/target конфаунды. Д10 остаётся открыт,
+  SP_COMPLEX стоит. История не переписана; новые выходы маркированы post-hoc.
+
+- 2026-07-13 (4) — ПОЛНЫЙ АУДИТ, графовый вердикт: TSV не является полным зеркалом
+  `card.depends_on`. Зафиксированы 102 card-only и 1 triple-only entity-ребро, три SCC;
+  буквальные объекты отделены от entity refs, все битые entity-ссылки классифицированы.
+  `source/` не меняется; `GRAPH_RELATION_PATCH.tsv` применяется только через будущий
+  workbook round-trip v14 + новый MANIFEST.
