@@ -1,0 +1,31 @@
+source	reference_kind	unresolved_target	proposed_resolution	classification
+CH_07	depends_on	OP_AgenticGate	Recover a dedicated reserved_underformalized gate card from the workbook or replace with OP_kappa only after author confirmation	missing_exported_entity
+OP_Tot	depends_on	O2	O_02	alias_normalization
+OP_Tot	depends_on	O12	O_12	alias_normalization
+OP_TotPlus	depends_on	O2	O_02	alias_normalization
+OP_TotMinus	depends_on	O2	O_02	alias_normalization
+OP_TotMinus	depends_on	O12	O_12	alias_normalization
+OP_Lift	depends_on	O3	O_03	alias_normalization
+OP_Lift	depends_on	O7	O_07	alias_normalization
+OP_Lift	depends_on	O8	O_08	alias_normalization
+OP_Promote	depends_on	O12	O_12	alias_normalization
+OP_kappa	depends_on	O15	O_15	alias_normalization
+OP_Unpack	depends_on	O9	O_09	alias_normalization
+OP_Unpack	depends_on	O12	O_12	alias_normalization
+OP_Compress2	depends_on	O8	O_08	alias_normalization
+OP_Expand2	depends_on	O8	O_08	alias_normalization
+OP_WindowClose	depends_on	OP_Window	Recover or create a reserved_underformalized window operator card; do not infer its semantics from the name	missing_exported_entity
+CHI_STAT_LADDER	depends_on	OP_ChiOverlayMap	Recover or create a reserved_underformalized operator card from the Chi_Stat_Ladder sheet	missing_exported_entity
+CHI_STAT_LADDER	depends_on	OP_ChiSquareDiagnostic	Recover or create a reserved_underformalized diagnostic card from the Chi_Stat_Ladder sheet	missing_exported_entity
+OP_ChiCarrier	depends_on	OP_ChiSquareDiagnostic	Same missing diagnostic card as CHI_STAT_LADDER	missing_exported_entity
+CHI_LADDER_U6	depends_on	OP_ChiSquareDiagnostic	Same missing diagnostic card as CHI_STAT_LADDER	missing_exported_entity
+CHI_LADDER_U10	depends_on	OP_dDelta	Recover the d_Delta operator from the workbook; keep the overlay underformalized meanwhile	missing_exported_entity
+OP_ComplexBranchAccess	depends_on	TA1	Recover the referenced TA1 entity from the workbook; branch access remains candidate_overlay	missing_exported_entity
+OP_ComplexBoundaryBranch	depends_on	U12_CHI_PI_BOUNDARY	Recover the referenced boundary card; do not identify it with U12_CHI_PI_COMPLEX_BOUNDARY	missing_exported_entity
+U12_CHI_PI_COMPLEX_BOUNDARY	depends_on	U12_CHI_PI_BOUNDARY	Recover the referenced real boundary card from the workbook	missing_exported_entity
+TENSOR_CARRIER	depends_on	Lambda_link	Recover the transformation-law link; tensor status remains candidate_overlay	missing_exported_entity
+OP_TensorContextMap	depends_on	Lambda_link	Same missing transformation-law link as TENSOR_CARRIER	missing_exported_entity
+SP_PARITY	triple_subject	SP_PARITY	Recover the status-promotion card before using promotes_status_of	missing_exported_entity
+SP_PHI	triple_subject	SP_PHI	Recover the status/support card before relying on its edge	missing_exported_entity
+SP_EPI	triple_subject	SP_EPI	Recover the ceiling card before relying on its edge	missing_exported_entity
+SP_LIMITS	triple_subject	SP_LIMITS	Recover the ceiling card before relying on its edge	missing_exported_entity
