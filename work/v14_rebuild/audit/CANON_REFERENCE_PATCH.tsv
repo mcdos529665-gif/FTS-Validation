@@ -29,3 +29,4 @@ SP_PARITY	triple_subject	SP_PARITY	Recover the status-promotion card before usin
 SP_PHI	triple_subject	SP_PHI	Recover the status/support card before relying on its edge	missing_exported_entity
 SP_EPI	triple_subject	SP_EPI	Recover the ceiling card before relying on its edge	missing_exported_entity
 SP_LIMITS	triple_subject	SP_LIMITS	Recover the ceiling card before relying on its edge	missing_exported_entity
+CHI_STAT_LADDER	triple_object	OP_ChiOverlayMap	Recover or create the missing operator card referenced by has_operator	missing_exported_entity
