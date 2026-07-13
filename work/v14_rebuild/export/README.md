@@ -12,6 +12,18 @@
 - `verification_report.md` — отчёт математического сьюта: 62 PASS / 0 FAIL.
 - `v14_export_cards.jsonl` — карточки в схеме `source/fts_cards.jsonl`.
 - `v14_export_triples.tsv` — рёбра в схеме `source/fts_triples.tsv`.
+- `audit/AUDIT_REPORT.md` — полный технический отчёт для автора.
+- `audit/REVIEW_CONCLUSION.md` — краткое заключение для рецензента.
+- `audit/FINDINGS.tsv` — реестр P0–P3 в формате
+  «Найдено → зависимости → вывод → что не закрыто».
+- `audit/CLAIM_MATRIX.tsv` — трасса существенных утверждений.
+- `audit/PATTERN_ATLAS.md` / `.tsv` — 31 закономерность на четырёх уровнях
+  доказательности.
+- `audit/LITERATURE_MATRIX.tsv` и `audit/SEARCH_LOG.md` — внешний поиск и
+  ограниченная граница новизны.
+- `audit/REPRODUCIBILITY.md` — данные, хеши, среда и эмпирический reanalysis.
+- `audit/GRAPH_AUDIT.md`, `CANON_REFERENCE_PATCH.tsv`,
+  `GRAPH_RELATION_PATCH.tsv` — дефекты неизменяемого v13 и план будущего экспорта.
 - `CHECKSUMS.sha256` — контрольные суммы остальных файлов пакета.
 
 ## Границы статусов
@@ -41,3 +53,18 @@
 Новая выгрузка обязана пройти workbook round-trip, новый `MANIFEST.json` и SHA256-сверку.
 `tools/query.py card PROPOSAL_STRICT_BAND_7` должен показать карточку без `promotes_status_of`.
 До этого каталог остаётся review-пакетом, а не каноном.
+
+## Текущий аудиторский вердикт
+
+- Необработанных P0/P1 нет; восемь P2 перечислены и не замаскированы.
+- O_20: 1/4 dataset wins, exact sign `p=0.9375`; D2: 2/4,
+  `p=0.6875`; чистого Д10-вердикта нет.
+- 62 PASS удостоверяют только точные math-предикаты, не смысл У7…У12.
+- Полного аналога ФТС не найдено только в пределах 28 запросов на 2026-07-13;
+  мировая новизна не заявляется.
+
+Полный runner находится в рабочем дереве:
+
+```text
+python -X utf8 work/v14_rebuild/audit/run_audit.py all
+```

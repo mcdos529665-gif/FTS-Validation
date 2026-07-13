@@ -17,18 +17,30 @@
       исторически; dataset-level wins=1/4, exact sign p=0.9375, mean ΔAUC=-0.0079.
       `cylinder-bands` v1 inactive; T2/T3 не capacity-matched. Повтор требует ≥5
       независимых наборов, capacity-matched null и новой предрегистрации.
-- [x] Формулы 7–11 (доведение до строгого вида) — FTS_v14_paper.md §7 {#oq-formulas-7-11-done}
-      (выведены словарём Д, канонизированы через К1–К5; чтения У8–У10 ждут
-      операциональных тестов 29_7plus_tests).
-- [x] Верхние уровни 12–17 — У12 канонизирован (§10.1); 13–15 получили {#oq-upper-12-17-done}
-      предсказанные формулы (candidate_prediction / projected_candidate);
-      16–17 оставлены speculative.
+- [~] Формулы 7–11 (математический слой доведён до строгого вида) — {#oq-formulas-7-11-done}
+      FTS_v14_paper.md §7, C-01…C-21. АУДИТ 2026-07-13: К1–К5 для смысловых
+      чтений не завершены; У7/U8 — candidate_with_operational_gate, У9 —
+      FTS_candidate, У10/U11 — reserved_underformalized. Закрыта математика,
+      не канонизация семантики; остаток — oq-u8-u10-optests и
+      oq-audit-semantic-repromotion.
+- [~] Верхние уровни 12–17 — У12 имеет проверенное геометрическое ядро, но {#oq-upper-12-17-done}
+      остаётся candidate_requires_formalization + canonical_alignment; 13–15 имеют
+      candidate_prediction/projected_candidate, 16–17 speculative. Прежняя отметка
+      «У12 канонизирован» отозвана статусным аудитом.
 - [x] χ-лестница У7–У11: статус overlay/gate → проверено (C-53…C-56, {#oq-chi-ladder-done}
       register_map §3.1). χ = А-регистр при x:=χ, нового содержания не даёт;
       сильная точка только У6 (χ²); выше — та же кандидатность + гардрейлы
       G_CHI_01..05. Не выдаётся за доказанное — формально (оверлей = подстановка
       носителя). Добавлена в карту как оверлей, не как регистр.
 - [ ] Комплексный overlay: причинно-контрфактическая модель фазы для У9+. {#oq-phase-causal-u9}
+- [x] Полный двухслойный аудит v13/v14: integrity, claim trace, formal predicates, {#oq-full-audit-done}
+      empirical reanalysis, literature matrix и pattern atlas собраны 2026-07-13.
+      Реестр `v14_rebuild/audit/FINDINGS.tsv`: открытых P0/P1 нет; каждый P2
+      понижен/ограничен и связан с отдельным OQ. Итоговый внешний workbook остаётся
+      не частью этого закрытия.
+- [ ] Систематический литературный review с citation-network coverage, двумя {#oq-systematic-literature-review}
+      независимыми проходами отбора и обновлением novelty boundary. Текущий результат
+      ограничен 28 запросами на 2026-07-13 и не доказывает мировую новизну.
 
 ## Новые (после пересборки v14, 2026-06-11)
 - [ ] Асимметрия узла 11: узлы 3/7 — анти-формы (−x, −x²), узел 11 — неподвижная {#oq-node11-asymmetry}

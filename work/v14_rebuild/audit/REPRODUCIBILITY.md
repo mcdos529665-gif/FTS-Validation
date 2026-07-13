@@ -94,4 +94,3 @@ python -X utf8 work/v14_rebuild/audit/run_audit.py empirical
 OpenML cache задаётся `FTS_OPENML_CACHE`; без него используется временный каталог ОС.
 Полные fold-level AUC и версии среды находятся в `o20/audit_results.json` и
 `d2_sign/audit_results.json`. Полные stdout Д10 сохранены рядом с изолированными JSON.
-

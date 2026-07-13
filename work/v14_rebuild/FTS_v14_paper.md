@@ -1371,7 +1371,7 @@ F1 (genuine insertion) — п. 8; F2 (genuine collapse) — пп. 1–3 (есл�
    repeated-CV uncertainty. Гипотеза «типизированное отсутствие (0_A) бьёт
    нетипизированный флаг (¬A)» **не подтвердилась**: 1/4 dataset wins,
    one-sided exact sign `p=0.9375`, средний `ΔAUC=-0.0079`
-   [audit/o20/AUDIT_REANALYSIS; audit/REPRODUCIBILITY]. Исторический pooled
+   [o20/AUDIT_REANALYSIS.md; audit/REPRODUCIBILITY.md]. Исторический pooled
    Wilcoxon не используется как междатасетное доказательство. T3 не
    capacity-matched, а OpenML cylinder-bands id=33/version=1 помечен inactive;
    это дополнительные ограничения, не оправдание повышения. Новая попытка
@@ -1400,12 +1400,12 @@ F1 (genuine insertion) — п. 8; F2 (genuine collapse) — пп. 1–3 (есл�
    код масштабировал весь X до CV. В датированной post-hoc реанализации все
    преобразования fit-ятся только на train-fold; основной HistGB-эффект даёт
    2/4 dataset wins, exact sign `p=0.6875`, средний `ΔAUC=-0.0012`
-   [audit/d2_sign/AUDIT_REANALYSIS]. Линейный эффект ionosphere вторичен, T3 не
+   [d2_sign/AUDIT_REANALYSIS.md; audit/REPRODUCIBILITY.md]. Линейный эффект ionosphere вторичен, T3 не
    capacity-matched. Внешняя роль не подтверждена; линия остаётся
    `candidate/analogy_only`, а внутренняя роль формы У8/У9 этим тестом не покрыта.
 10. **Д10 не дал чистого фазового вердикта.** Пять поколений synthetic/RadioML
     воспроизведены semantic- и byte-equal в изолированном каталоге
-    [audit/REPRODUCIBILITY; d10_phase/AUDIT_REANALYSIS]. Synthetic-v1 не подавал
+    [audit/REPRODUCIBILITY.md; d10_phase/AUDIT_REANALYSIS.md]. Synthetic-v1 не подавал
     непрерывную фазу; pilot был внутренней sanity-проверкой; RadioML-v1 смешал
     представление и ёмкость, v2 остановлен артефактным `lo_mean`, v3 —
     несостоятельной CFO-нормализацией при π-скачках. На второй площадке фаза

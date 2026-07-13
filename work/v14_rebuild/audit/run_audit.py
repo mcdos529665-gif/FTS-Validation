@@ -225,14 +225,26 @@ def check_integrity() -> None:
 
     checksums = EXPORT / "CHECKSUMS.sha256"
     if checksums.exists():
+        listed_names: set[str] = set()
         for line in checksums.read_text(encoding="utf-8").splitlines():
             if not line.strip():
                 continue
             expected, name = line.split(maxsplit=1)
             name = name.lstrip("*")
+            listed_names.add(name.replace("\\", "/"))
             path = EXPORT / name
             if not path.exists() or sha256(path) != expected.lower():
                 add("P1", "EXPORT_HASH", f"Checksum mismatch: {name}")
+        actual_names = {
+            path.relative_to(EXPORT).as_posix()
+            for path in EXPORT.rglob("*")
+            if path.is_file() and path != checksums
+        }
+        if listed_names != actual_names:
+            add(
+                "P1", "EXPORT_CHECKSUM_COVERAGE",
+                f"missing={sorted(actual_names-listed_names)}, stale={sorted(listed_names-actual_names)}",
+            )
 
 
 def expand_c_refs(value: str) -> set[str]:
@@ -271,12 +283,128 @@ def check_traceability() -> None:
     if covered != expected:
         add("P1", "CLAIM_COVERAGE", f"C coverage missing={sorted(expected-covered)}, extra={sorted(covered-expected)}")
 
+    if len(rows) < 25 or "CM-025" not in claim_ids:
+        add("P1", "CLAIM_SCOPE", "Claim matrix does not cover the recorded 25 significant claim groups")
+
+    findings_path = HERE / "FINDINGS.tsv"
+    finding_fields = {
+        "finding_id", "severity", "status", "area", "found", "dependencies",
+        "conclusion", "unresolved", "resolution",
+    }
+    if not findings_path.exists():
+        add("P1", "FINDINGS_MISSING", "FINDINGS.tsv is missing")
+    else:
+        with findings_path.open(encoding="utf-8", newline="") as fh:
+            finding_rows = list(csv.DictReader(fh, delimiter="\t"))
+        if not finding_rows or set(finding_rows[0]) != finding_fields:
+            add("P1", "FINDINGS_SCHEMA", f"Expected columns: {sorted(finding_fields)}")
+        else:
+            finding_ids = [row["finding_id"] for row in finding_rows]
+            if len(finding_ids) != len(set(finding_ids)):
+                add("P1", "FINDINGS_DUP", "Duplicate finding IDs")
+            for row in finding_rows:
+                if any(not row[field].strip() for field in finding_fields):
+                    add("P1", "FINDING_EMPTY", f"{row['finding_id']}: an audit field is empty")
+                if row["severity"] not in {"P0", "P1", "P2", "P3"}:
+                    add("P1", "FINDING_SEVERITY", f"{row['finding_id']}: {row['severity']}")
+                if row["status"] not in {"resolved", "accepted_open", "external_step"}:
+                    add("P1", "FINDING_STATUS", f"{row['finding_id']}: {row['status']}")
+                if row["severity"] in {"P0", "P1"} and row["status"] != "resolved":
+                    add(row["severity"], f"OPEN_{row['finding_id']}", row["conclusion"])
+                if row["severity"] == "P2":
+                    if row["status"] not in {"accepted_open", "external_step"}:
+                        add("P1", "P2_UNCLASSIFIED", f"{row['finding_id']}: P2 must be explicitly open")
+                    if "oq-" not in (row["unresolved"] + " " + row["resolution"]):
+                        add("P1", "P2_WITHOUT_OQ", f"{row['finding_id']}: no open-question pointer")
+
+    atlas_path = HERE / "PATTERN_ATLAS.tsv"
+    atlas_fields = {
+        "pattern_id", "name", "evidence_level", "domain", "statement", "sources",
+        "verification", "counterexample_or_defeat", "open_question", "verdict",
+    }
+    allowed_levels = {"доказано", "канон-grounded", "кандидат", "опровергнуто/артефакт"}
+    if not atlas_path.exists():
+        add("P1", "PATTERN_ATLAS_MISSING", "PATTERN_ATLAS.tsv is missing")
+    else:
+        with atlas_path.open(encoding="utf-8", newline="") as fh:
+            atlas_rows = list(csv.DictReader(fh, delimiter="\t"))
+        if not atlas_rows or set(atlas_rows[0]) != atlas_fields:
+            add("P1", "PATTERN_ATLAS_SCHEMA", f"Expected columns: {sorted(atlas_fields)}")
+        else:
+            pattern_ids = [row["pattern_id"] for row in atlas_rows]
+            if len(pattern_ids) != len(set(pattern_ids)):
+                add("P1", "PATTERN_DUP", "Duplicate pattern IDs")
+            actual_levels = {row["evidence_level"] for row in atlas_rows}
+            if actual_levels != allowed_levels:
+                add("P1", "PATTERN_LEVELS", f"Unexpected evidence levels: {sorted(actual_levels)}")
+            oq_text = (ROOT / "work" / "OPEN_QUESTIONS.md").read_text(encoding="utf-8")
+            oq_ids = set(re.findall(r"\{#(oq-[^}]+)\}", oq_text))
+            for row in atlas_rows:
+                if any(not row[field].strip() for field in atlas_fields):
+                    add("P1", "PATTERN_EMPTY", f"{row['pattern_id']}: an atlas field is empty")
+                if len([part for part in row["sources"].split(";") if part.strip()]) < 2:
+                    add("P1", "PATTERN_SOURCES", f"{row['pattern_id']}: fewer than two recorded sources")
+                used_oq = set(re.findall(r"oq-[a-z0-9-]+", row["open_question"]))
+                if not used_oq or not used_oq.issubset(oq_ids):
+                    add("P1", "PATTERN_OQ", f"{row['pattern_id']}: unknown/missing OQ {sorted(used_oq-oq_ids)}")
+
+    literature_path = HERE / "LITERATURE_MATRIX.tsv"
+    literature_fields = {
+        "lit_id", "direction", "source", "identifier", "source_claim",
+        "fts_mapping", "relation", "audit_verdict",
+    }
+    if not literature_path.exists():
+        add("P1", "LITERATURE_MATRIX_MISSING", "LITERATURE_MATRIX.tsv is missing")
+    else:
+        with literature_path.open(encoding="utf-8", newline="") as fh:
+            literature_rows = list(csv.DictReader(fh, delimiter="\t"))
+        if not literature_rows or set(literature_rows[0]) != literature_fields:
+            add("P1", "LITERATURE_SCHEMA", f"Expected columns: {sorted(literature_fields)}")
+        else:
+            literature_ids = [row["lit_id"] for row in literature_rows]
+            if len(literature_ids) != len(set(literature_ids)) or len(literature_rows) < 15:
+                add("P1", "LITERATURE_COVERAGE", "Literature matrix must contain 15 unique recorded sources")
+            for row in literature_rows:
+                if any(not row[field].strip() for field in literature_fields):
+                    add("P1", "LITERATURE_EMPTY", f"{row['lit_id']}: an audit field is empty")
+                if row["relation"] not in {"direct", "limiting", "alternative", "analogy"}:
+                    add("P1", "LITERATURE_RELATION", f"{row['lit_id']}: {row['relation']}")
+
+    for required_audit in (
+        HERE / "PATTERN_ATLAS.md", HERE / "SEARCH_LOG.md", HERE / "AUDIT_REPORT.md",
+        HERE / "REVIEW_CONCLUSION.md",
+    ):
+        if not required_audit.exists():
+            add("P1", "AUDIT_ARTIFACT_MISSING", f"Missing {required_audit.name}")
+
     paper = PAPER.read_text(encoding="utf-8")
     if "59 машинных проверок" in paper:
         add("P2", "STALE_COUNT", "Current paper still says 59 machine checks")
+    for phrase in ("1/4", "p=0.9375", "2/4", "p=0.6875"):
+        if phrase not in paper:
+            add("P1", "EMPIRICAL_PAPER_STALE", f"Current paper lacks corrected empirical value: {phrase}")
+    if "не найдено в пределах" not in paper:
+        add("P1", "NOVELTY_BOUNDARY_MISSING", "Current paper lacks the bounded novelty statement")
     export_paper = EXPORT / "FTS_v14_paper.md"
     if export_paper.exists() and export_paper.read_bytes() != PAPER.read_bytes():
         add("P2", "EXPORT_PAPER_DRIFT", "Export paper differs from working paper")
+    sync_pairs = [
+        (REBUILD / "status_patch_v14.md", EXPORT / "status_patch_v14.md"),
+        (REBUILD / "verification_report.md", EXPORT / "verification_report.md"),
+        *[
+            (HERE / name, EXPORT / "audit" / name)
+            for name in (
+                "BASELINE.md", "AUDIT_REPORT.md", "REVIEW_CONCLUSION.md", "FINDINGS.tsv",
+                "CLAIM_MATRIX.tsv", "PATTERN_ATLAS.md", "PATTERN_ATLAS.tsv",
+                "LITERATURE_MATRIX.tsv", "SEARCH_LOG.md", "REPRODUCIBILITY.md",
+                "GRAPH_AUDIT.md", "CANON_REFERENCE_PATCH.tsv", "GRAPH_RELATION_PATCH.tsv",
+                "requirements-audit.txt",
+            )
+        ],
+    ]
+    for working, review in sync_pairs:
+        if not review.exists() or review.read_bytes() != working.read_bytes():
+            add("P2", "EXPORT_AUDIT_DRIFT", f"Review copy differs: {review.relative_to(EXPORT)}")
 
 
 def check_formal() -> None:
