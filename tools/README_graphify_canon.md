@@ -74,3 +74,24 @@ graphify export html                              # 3. обновить инте
 - `emit`/`--stats` держи на чистом stdlib (как `query.py`/`verify.py`).
 - Пропуски печатай явно (no-smuggling: чего нет в каноне — не выдумывать; при
   доработках сохраняй лог причин).
+
+## Аудиторская навигация (не канон)
+
+После полного аудита v13/v14 отдельный инструмент
+`tools/graphify_audit_navigation.py` добавляет в уже собранный Graphify-граф
+**только навигационный** слой: паттерны, якоря OQ, программы, события, группы
+утверждений и находки. Входы — структурированные TSV из `work/v14_rebuild/audit/`
+и якоря из `work/OPEN_QUESTIONS.md`; `source/` не читается и не меняется.
+
+```
+python -X utf8 tools/graphify_audit_navigation.py --stats
+python -X utf8 tools/graphify_audit_navigation.py
+E:\Codex\mcp\graphify\tools\graphifyy\Scripts\python.exe -X utf8 tools/graphify_audit_navigation.py --inject
+E:\Codex\mcp\graphify\tools\graphifyy\Scripts\python.exe -X utf8 tools/graphify_audit_navigation.py --verify
+```
+
+Маркировка намеренно консервативна: `direct` из атласа — `EXTRACTED`; `indirect`
+и непрямая часть `mixed` — `INFERRED`; `support` — служебная навигация без
+теоретической статусной силы. В `graphify-out/` остаются фрагмент, краткий отчёт
+и manifest входных SHA256. При обновлении таблиц сначала запускай `--stats`, затем
+`--inject` и `--verify`; это не заменяет `run_audit.py traceability`.

@@ -18,6 +18,12 @@
   паттернов с 49/49 открытыми/частичными OQ, семью программами и общими событиями
   E1…E10/PARK/WATCH/ROLLUP; три мета-паттерна оставлены кандидатами. Coverage карты
   включён в P1-гейт.
+- Детерминированный Graphify-слой синхронизирован с этой картой: в
+  `graphify-out/` 626 узлов и 1257 связей, из них навигационный оверлей содержит
+  155 узлов, 590 рёбер и 1 hyperedge (31 паттерн, 49 OQ, 25 claim-групп, 20
+  находок). `direct` остаётся `EXTRACTED` (34 моста), а 86 кураторских мостов
+  помечены `INFERRED`; оверлей не меняет канон или статусы. Повторяемый запуск:
+  `tools/graphify_audit_navigation.py --inject --verify` через runtime на `E:`.
   Открытых P0/P1 нет. Канон: 13 ok / 0 missing / 0 mismatch / 0 extra; formal:
   62 PASS / 0 FAIL; candidate-probes: 47 PASS / 0 FAIL; crosscheck
   grounds/levels/sp/fails — exit 0; `run_audit.py all` — blockers=0.
