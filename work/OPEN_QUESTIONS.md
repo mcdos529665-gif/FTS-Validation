@@ -37,7 +37,9 @@
       empirical reanalysis, literature matrix и pattern atlas собраны 2026-07-13.
       Реестр `v14_rebuild/audit/FINDINGS.tsv`: открытых P0/P1 нет; каждый P2
       понижен/ограничен и связан с отдельным OQ. Итоговый внешний workbook остаётся
-      не частью этого закрытия.
+      не частью этого закрытия. Постаудиторская двусторонняя карта 31 паттерна,
+      49 действующих OQ, 7 программ и E1…E10/PARK/WATCH/ROLLUP добавлена 2026-07-14:
+      `v14_rebuild/audit/PATTERN_OQ_MAP.md/.tsv`.
 - [ ] Систематический литературный review с citation-network coverage, двумя {#oq-systematic-literature-review}
       независимыми проходами отбора и обновлением novelty boundary. Текущий результат
       ограничен 28 запросами на 2026-07-13 и не доказывает мировую новизну.

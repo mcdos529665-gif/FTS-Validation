@@ -19,6 +19,8 @@
 - `audit/CLAIM_MATRIX.tsv` — трасса существенных утверждений.
 - `audit/PATTERN_ATLAS.md` / `.tsv` — 31 закономерность на четырёх уровнях
   доказательности.
+- `audit/PATTERN_OQ_MAP.md` / `.tsv` — двусторонняя карта 31 паттерна,
+  49 действующих OQ, семи программ и событий E1…E10/PARK/WATCH/ROLLUP.
 - `audit/LITERATURE_MATRIX.tsv` и `audit/SEARCH_LOG.md` — внешний поиск и
   ограниченная граница новизны.
 - `audit/REPRODUCIBILITY.md` — данные, хеши, среда и эмпирический reanalysis.

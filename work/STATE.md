@@ -14,6 +14,10 @@
   `v14_rebuild/audit/` содержит baseline, runner, реестр 20 находок, матрицу 25
   существенных claim-групп, atlas 31 закономерности, графовый patch-plan,
   воспроизводимость, 15-источниковую литературную матрицу и два итоговых отчёта.
+  Постаудиторская карта `PATTERN_OQ_MAP.md/.tsv` (2026-07-14) связывает 31/31
+  паттернов с 49/49 открытыми/частичными OQ, семью программами и общими событиями
+  E1…E10/PARK/WATCH/ROLLUP; три мета-паттерна оставлены кандидатами. Coverage карты
+  включён в P1-гейт.
   Открытых P0/P1 нет. Канон: 13 ok / 0 missing / 0 mismatch / 0 extra; formal:
   62 PASS / 0 FAIL; candidate-probes: 47 PASS / 0 FAIL; crosscheck
   grounds/levels/sp/fails — exit 0; `run_audit.py all` — blockers=0.
@@ -54,10 +58,14 @@
   (строже, два null'а, абляция) и запущен — см. «В работе».
 
 ## В работе
-- Аудиторских P0/P1 не осталось. Внеаудиторский внешний шаг E5: авторский workbook
+- Аудиторских P0/P1 не осталось. Внеаудиторский внешний шаг E6: авторский workbook
   round-trip v14, новая выгрузка 13 файлов и MANIFEST. До него `export/` — только
   review-пакет; `source/` не менялся. Классифицированные P2 остаются в
   `audit/FINDINGS.tsv` и соответствующих OQ.
+- **E6 workbook round-trip** одним действием применяет три подготовленных исправления:
+  `strict-band`, graph relation и canon-reference
+  patch-планы. E5 теперь обозначает литературу/внешний контакт review-пакета;
+  более ранние записи «E5 = export» оставлены ниже как историческая нумерация.
 - ТЕКУЩИЙ ИССЛЕДОВАТЕЛЬСКИЙ БЛОК: П2 — уровни У13–У15. Статусы `projected`/
   `candidate` не повышать без новых оснований.
 - Д10 v3 ЗАВЕРШЁН (2026-07-10, исполнитель sonnet): АРТЕФАКТ — нормализация не сошлась.
@@ -80,7 +88,8 @@
 
 ## Следующий шаг
 - Автору: начать с `v14_rebuild/audit/REVIEW_CONCLUSION.md`, затем при необходимости
-  читать `AUDIT_REPORT.md`, `CLAIM_MATRIX.tsv` и `PATTERN_ATLAS.md`. Если принимается
+  читать `AUDIT_REPORT.md`, `CLAIM_MATRIX.tsv`, `PATTERN_ATLAS.md` и
+  `PATTERN_OQ_MAP.md`. Если принимается
   review-пакет — выполнить внешний workbook round-trip v14, применив
   `CANON_REFERENCE_PATCH.tsv`/`GRAPH_RELATION_PATCH.tsv`, затем создать новый
   MANIFEST и повторить SHA256 verify. Новые O20/D2/D10 или систематический

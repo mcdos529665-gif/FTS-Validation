@@ -323,6 +323,8 @@ def check_traceability() -> None:
         "verification", "counterexample_or_defeat", "open_question", "verdict",
     }
     allowed_levels = {"доказано", "канон-grounded", "кандидат", "опровергнуто/артефакт"}
+    atlas_rows: list[dict[str, str]] = []
+    atlas_valid = False
     if not atlas_path.exists():
         add("P1", "PATTERN_ATLAS_MISSING", "PATTERN_ATLAS.tsv is missing")
     else:
@@ -331,6 +333,7 @@ def check_traceability() -> None:
         if not atlas_rows or set(atlas_rows[0]) != atlas_fields:
             add("P1", "PATTERN_ATLAS_SCHEMA", f"Expected columns: {sorted(atlas_fields)}")
         else:
+            atlas_valid = True
             pattern_ids = [row["pattern_id"] for row in atlas_rows]
             if len(pattern_ids) != len(set(pattern_ids)):
                 add("P1", "PATTERN_DUP", "Duplicate pattern IDs")
@@ -347,6 +350,140 @@ def check_traceability() -> None:
                 used_oq = set(re.findall(r"oq-[a-z0-9-]+", row["open_question"]))
                 if not used_oq or not used_oq.issubset(oq_ids):
                     add("P1", "PATTERN_OQ", f"{row['pattern_id']}: unknown/missing OQ {sorted(used_oq-oq_ids)}")
+
+    map_path = HERE / "PATTERN_OQ_MAP.tsv"
+    map_fields = {
+        "oq_anchor", "oq_status", "research_program", "meta_pattern",
+        "pattern_ids", "bridge_type", "common_blocker", "resolution_event",
+        "resolution_kind", "note",
+    }
+    if not map_path.exists():
+        add("P1", "PATTERN_OQ_MAP_MISSING", "PATTERN_OQ_MAP.tsv is missing")
+    else:
+        with map_path.open(encoding="utf-8", newline="") as fh:
+            map_rows = list(csv.DictReader(fh, delimiter="\t"))
+        if not map_rows or set(map_rows[0]) != map_fields:
+            add("P1", "PATTERN_OQ_MAP_SCHEMA", f"Expected columns: {sorted(map_fields)}")
+        else:
+            oq_text = (ROOT / "work" / "OPEN_QUESTIONS.md").read_text(encoding="utf-8")
+            active_pairs: list[tuple[str, str]] = []
+            for marker, body in re.findall(
+                r"(?ms)^- \[([ ~])\] (.*?)(?=^- \[[ x~]\] |\Z)", oq_text
+            ):
+                anchors = re.findall(r"\{#(oq-[^}]+)\}", body)
+                if len(anchors) != 1:
+                    add(
+                        "P1", "OPEN_OQ_ANCHOR",
+                        f"Active OQ must have one anchor; found {anchors} in {body[:80]!r}",
+                    )
+                    continue
+                active_pairs.append((anchors[0], "partial" if marker == "~" else "open"))
+            if len(active_pairs) != len({anchor for anchor, _ in active_pairs}):
+                add("P1", "OPEN_OQ_DUP", "Duplicate active OQ anchors in OPEN_QUESTIONS.md")
+            active_oq = dict(active_pairs)
+            map_anchors = [row["oq_anchor"] for row in map_rows]
+            if len(map_anchors) != len(set(map_anchors)):
+                add("P1", "PATTERN_OQ_MAP_DUP", "Duplicate OQ anchors in pattern map")
+            if set(map_anchors) != set(active_oq):
+                add(
+                    "P1", "PATTERN_OQ_MAP_COVERAGE",
+                    f"OQ coverage missing={sorted(set(active_oq)-set(map_anchors))}, "
+                    f"extra={sorted(set(map_anchors)-set(active_oq))}",
+                )
+
+            pattern_set = {row["pattern_id"] for row in atlas_rows} if atlas_valid else set()
+            used_patterns: set[str] = set()
+            map_by_oq: dict[str, tuple[dict[str, str], set[str]]] = {}
+            for row in map_rows:
+                anchor = row["oq_anchor"]
+                if any(not row[field].strip() for field in map_fields):
+                    add("P1", "PATTERN_OQ_MAP_EMPTY", f"{anchor}: an audit field is empty")
+                if anchor in active_oq and row["oq_status"] != active_oq[anchor]:
+                    add(
+                        "P1", "PATTERN_OQ_MAP_STATUS",
+                        f"{anchor}: map={row['oq_status']}, OPEN_QUESTIONS={active_oq[anchor]}",
+                    )
+                if row["research_program"] not in {f"RP-{number}" for number in range(1, 8)}:
+                    add("P1", "PATTERN_OQ_MAP_PROGRAM", f"{anchor}: {row['research_program']}")
+                meta = {part.strip() for part in row["meta_pattern"].split(";") if part.strip()}
+                if not meta or not meta.issubset({"MP-A", "MP-B", "MP-C", "MP-S"}):
+                    add("P1", "PATTERN_OQ_MAP_META", f"{anchor}: {sorted(meta)}")
+                row_patterns = {
+                    part.strip() for part in row["pattern_ids"].split(";") if part.strip()
+                }
+                invalid_patterns = row_patterns - pattern_set if atlas_valid else set()
+                if not row_patterns or invalid_patterns:
+                    add(
+                        "P1", "PATTERN_OQ_MAP_PATTERN",
+                        f"{anchor}: unknown/missing patterns {sorted(invalid_patterns)}",
+                    )
+                used_patterns.update(row_patterns)
+                map_by_oq[anchor] = (row, row_patterns)
+                if row["bridge_type"] not in {"direct", "mixed", "indirect", "support"}:
+                    add("P1", "PATTERN_OQ_MAP_BRIDGE", f"{anchor}: {row['bridge_type']}")
+                if row["resolution_event"] not in {
+                    *(f"E{number}" for number in range(1, 11)), "PARK", "WATCH", "ROLLUP",
+                }:
+                    add("P1", "PATTERN_OQ_MAP_EVENT", f"{anchor}: {row['resolution_event']}")
+                if row["resolution_kind"] not in {
+                    "formalization", "experiment", "literature", "author_decision",
+                    "export", "lemma", "watch",
+                }:
+                    add("P1", "PATTERN_OQ_MAP_KIND", f"{anchor}: {row['resolution_kind']}")
+
+            if atlas_valid and used_patterns != pattern_set:
+                add(
+                    "P1", "PATTERN_OQ_MAP_PATTERN_COVERAGE",
+                    f"Pattern coverage missing={sorted(pattern_set-used_patterns)}, "
+                    f"extra={sorted(used_patterns-pattern_set)}",
+                )
+
+            direct_by_oq: dict[str, set[str]] = {}
+            if atlas_valid:
+                for row in atlas_rows:
+                    for anchor in re.findall(r"oq-[a-z0-9-]+", row["open_question"]):
+                        direct_by_oq.setdefault(anchor, set()).add(row["pattern_id"])
+            for anchor, (map_row, mapped_patterns) in map_by_oq.items():
+                direct_patterns = direct_by_oq.get(anchor, set())
+                bridge_type = map_row["bridge_type"]
+                if direct_patterns and bridge_type not in {"direct", "mixed"}:
+                    add(
+                        "P1", "PATTERN_OQ_MAP_DIRECT_TYPE",
+                        f"{anchor}: direct atlas edge must be marked direct or mixed",
+                    )
+                if direct_patterns and not direct_patterns.issubset(mapped_patterns):
+                    add(
+                        "P1", "PATTERN_OQ_MAP_DIRECT_EDGE",
+                        f"{anchor}: missing direct patterns {sorted(direct_patterns-mapped_patterns)}",
+                    )
+                if bridge_type == "direct" and mapped_patterns != direct_patterns:
+                    add(
+                        "P1", "PATTERN_OQ_MAP_DIRECT_EXACT",
+                        f"{anchor}: direct row has non-literal patterns {sorted(mapped_patterns-direct_patterns)}",
+                    )
+                if bridge_type == "mixed" and (
+                    not direct_patterns or not (mapped_patterns - direct_patterns)
+                ):
+                    add(
+                        "P1", "PATTERN_OQ_MAP_MIXED",
+                        f"{anchor}: mixed row must contain literal and curated patterns",
+                    )
+                if bridge_type in {"indirect", "support"} and direct_patterns:
+                    add(
+                        "P1", "PATTERN_OQ_MAP_INDIRECT_EXACT",
+                        f"{anchor}: {bridge_type} row contains literal atlas edges",
+                    )
+            declared_direct = {
+                anchor for anchor, (row, _) in map_by_oq.items()
+                if row["bridge_type"] in {"direct", "mixed"}
+            }
+            live_direct = set(direct_by_oq) & set(active_oq)
+            if declared_direct != live_direct:
+                add(
+                    "P1", "PATTERN_OQ_MAP_DIRECT_COVERAGE",
+                    f"Declared direct missing={sorted(live_direct-declared_direct)}, "
+                    f"extra={sorted(declared_direct-live_direct)}",
+                )
 
     literature_path = HERE / "LITERATURE_MATRIX.tsv"
     literature_fields = {
@@ -371,8 +508,8 @@ def check_traceability() -> None:
                     add("P1", "LITERATURE_RELATION", f"{row['lit_id']}: {row['relation']}")
 
     for required_audit in (
-        HERE / "PATTERN_ATLAS.md", HERE / "SEARCH_LOG.md", HERE / "AUDIT_REPORT.md",
-        HERE / "REVIEW_CONCLUSION.md",
+        HERE / "PATTERN_ATLAS.md", HERE / "PATTERN_OQ_MAP.md",
+        HERE / "SEARCH_LOG.md", HERE / "AUDIT_REPORT.md", HERE / "REVIEW_CONCLUSION.md",
     ):
         if not required_audit.exists():
             add("P1", "AUDIT_ARTIFACT_MISSING", f"Missing {required_audit.name}")
@@ -396,6 +533,7 @@ def check_traceability() -> None:
             for name in (
                 "BASELINE.md", "AUDIT_REPORT.md", "REVIEW_CONCLUSION.md", "FINDINGS.tsv",
                 "CLAIM_MATRIX.tsv", "PATTERN_ATLAS.md", "PATTERN_ATLAS.tsv",
+                "PATTERN_OQ_MAP.md", "PATTERN_OQ_MAP.tsv",
                 "LITERATURE_MATRIX.tsv", "SEARCH_LOG.md", "REPRODUCIBILITY.md",
                 "GRAPH_AUDIT.md", "CANON_REFERENCE_PATCH.tsv", "GRAPH_RELATION_PATCH.tsv",
                 "requirements-audit.txt",
