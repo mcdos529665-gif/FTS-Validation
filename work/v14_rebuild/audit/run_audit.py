@@ -24,6 +24,13 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+from data_paths import (
+    RADIOML_EXPECTED_SHA256,
+    RADIOML_EXPECTED_SIZE,
+    radioml_search_summary,
+    resolve_radioml_path,
+)
+
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -565,10 +572,11 @@ def check_formal() -> None:
 
 
 def check_empirical() -> None:
-    radio = REBUILD / "d10_phase" / "radioml" / "RML2016.10a_dict.pkl"
-    expected = "b29ccc25b00d0718cd3b70ffa9158662ec83f6d9b63ffd845c7bcbe3b3096e8c"
-    if not radio.exists() or sha256(radio) != expected:
-        add("P1", "RADIOML_INPUT", "RadioML input is missing or has an unexpected hash")
+    radio = resolve_radioml_path()
+    if not radio.exists():
+        add("P1", "RADIOML_INPUT", f"RadioML input is missing; checked: {radioml_search_summary()}")
+    elif radio.stat().st_size != RADIOML_EXPECTED_SIZE or sha256(radio) != RADIOML_EXPECTED_SHA256:
+        add("P1", "RADIOML_INPUT", f"RadioML input has an unexpected size or hash: {radio}")
     for path in [
         REBUILD / "o20" / "AUDIT_REANALYSIS.md",
         REBUILD / "o20" / "audit_results.json",
@@ -622,7 +630,10 @@ def check_empirical() -> None:
             if not row.get("semantic_json_equal") or not row.get("byte_equal"):
                 add("P1", "D10_REPRO_DRIFT", f"D10 drift: {row.get('variant')}")
         radio_manifest = manifest.get("radioml", {})
-        if radio_manifest.get("sha256") != expected or radio_manifest.get("size_bytes") != 640_919_653:
+        if (
+            radio_manifest.get("sha256") != RADIOML_EXPECTED_SHA256
+            or radio_manifest.get("size_bytes") != RADIOML_EXPECTED_SIZE
+        ):
             add("P1", "D10_INPUT_DRIFT", "D10 manifest has unexpected RadioML identity")
 
     historical = [

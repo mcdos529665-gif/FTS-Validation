@@ -23,13 +23,19 @@ import numpy as np
 import scipy
 import sklearn
 
+from data_paths import (
+    RADIOML_EXPECTED_SHA256,
+    RADIOML_EXPECTED_SIZE,
+    radioml_search_summary,
+    resolve_radioml_path,
+)
+
 
 AUDIT_DIR = Path(__file__).resolve().parent
 REBUILD_DIR = AUDIT_DIR.parent
 D10_DIR = REBUILD_DIR / "d10_phase"
 OUTPUT_ROOT = AUDIT_DIR / "reproductions" / "d10"
-RADIOML = D10_DIR / "radioml" / "RML2016.10a_dict.pkl"
-RADIOML_SHA256 = "b29ccc25b00d0718cd3b70ffa9158662ec83f6d9b63ffd845c7bcbe3b3096e8c"
+RADIOML = resolve_radioml_path()
 
 VARIANTS = {
     "synthetic-v1": (D10_DIR / "run_d10.py", D10_DIR / "results.json", "results.json"),
@@ -116,9 +122,11 @@ def main() -> int:
 
     if any(name.startswith("radioml") for name in selected):
         if not RADIOML.exists():
-            raise FileNotFoundError(RADIOML)
+            raise FileNotFoundError(f"RadioML не найден. Проверены: {radioml_search_summary()}")
+        if RADIOML.stat().st_size != RADIOML_EXPECTED_SIZE:
+            raise RuntimeError(f"RadioML size mismatch: {RADIOML.stat().st_size}")
         actual = sha256(RADIOML)
-        if actual != RADIOML_SHA256:
+        if actual != RADIOML_EXPECTED_SHA256:
             raise RuntimeError(f"RadioML SHA256 mismatch: {actual}")
 
     records = []
@@ -137,6 +145,10 @@ def main() -> int:
     if summary_path.exists():
         previous = {row["variant"]: row for row in json.loads(summary_path.read_text(encoding="utf-8"))["variants"]}
     previous.update({row["variant"]: row for row in records})
+    try:
+        radioml_manifest_path = str(RADIOML.relative_to(REBUILD_DIR.parent.parent))
+    except ValueError:
+        radioml_manifest_path = str(RADIOML)
     summary = {
         "analysis_kind": "isolated_historical_reproduction",
         "environment": {
@@ -146,7 +158,7 @@ def main() -> int:
             "scikit_learn": sklearn.__version__,
         },
         "radioml": {
-            "path": str(RADIOML.relative_to(REBUILD_DIR.parent.parent)),
+            "path": radioml_manifest_path,
             "size_bytes": RADIOML.stat().st_size if RADIOML.exists() else None,
             "sha256": sha256(RADIOML) if RADIOML.exists() else None,
         },
