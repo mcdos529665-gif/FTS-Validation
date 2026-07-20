@@ -15,9 +15,19 @@
   (новая выгрузка + MANIFEST) и/или версия статьи для внешней критики.
 
 ## В работе
+- **E5 systematic-review · wave 0 (2026-07-20):** создан явный
+  `$fts-academic-research` и каталог `v14_rebuild/e5_literature_review/`.
+  По всем внешне маршрутизируемым линиям канона зафиксированы 38 кандидатов;
+  первый screen Codex = 15 `include` / 5 `exclude` / 18 `uncertain`. Семь DOI
+  собраны в `seed_set.bib`; S2 оставлен graceful-degraded (`URLError` и ранее
+  `429`, без угадывания ID). `source/` и `St_FTS` не менялись.
 - —
 
 ## Следующий шаг
+- Для E5: импортировать `seed_set.bib` в ResearchRabbit по
+  `work/v14_rebuild/e5_literature_review/RESEARCHRABBIT_HANDOFF.md`, вернуть
+  raw export и независимо заполнить `SCREENING_RESEARCHER.tsv`. Синтез и
+  novelty boundary запрещены до явной adjudication.
 - Автор читает work/v14_rebuild/FTS_v14_paper.md и принимает/отклоняет
   status_patch_v14.md (включая §0 — закрытия открытых вопросов канона,
   в т.ч. Q_LOGIC_7_11). Инструменты точечного доступа: crosscheck.py,
@@ -27,6 +37,10 @@
 - См. work/OPEN_QUESTIONS.md (обновлён: закрыто 3 пункта, добавлено 4 новых).
 
 ## Лог сессий
+- 2026-07-20 — в основной `master` перенесён E5 academic-research contour и
+  wave 0: 38 кандидатов, 7-DOI seed-set, разделённые screening-файлы и ручной
+  ResearchRabbit handoff. Внешние источники не меняют статус ФТС; второй screen
+  и adjudication остаются обязательными.
 - 2026-06-11 — создан каркас проекта (структура, tools/, правила, git). Канон source/
   пока неполный: загружены и сверены fts_triples.tsv, sheet_index.tsv, INSTALL.md;
   остальные файлы пакета ожидают импорта пользователем (tools/import_from.py).

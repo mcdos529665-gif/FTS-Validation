@@ -84,3 +84,12 @@
   (core.autocrlf=false + .gitattributes `source/** -text`), блобы source/
   перефиксированы байт-точно. Почему: SHA256-verify требует байтовой
   идентичности; git-нормализация молча ломала канон при checkout.
+
+- 2026-07-20 — E5 WAVE 0 ПЕРЕНЕСЁН В ОСНОВНОЙ MASTER КАК
+  ПРЕДВАРИТЕЛЬНЫЙ РЕЗУЛЬТАТ. Контур хранит 38 кандидатов, первый независимый
+  screen Codex, DOI-preserving seed-set и ручной ResearchRabbit round-trip.
+  Semantic Scholar не дал идентификаторы (`URLError`/предыдущий `429`), поэтому
+  новые Consensus records не получают автоматическое `include`. Почему:
+  discovery нужен для поиска точек сопряжения, но без researcher screen,
+  DOI-preserving export и adjudication он не даёт synthesis, novelty claim или
+  изменения `St_FTS`.
