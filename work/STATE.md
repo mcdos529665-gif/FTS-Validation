@@ -83,6 +83,17 @@
   (строже, два null'а, абляция) и запущен — см. «В работе».
 
 ## В работе
+- **E5 academic research contour подготовлен (2026-07-20):** установлен и
+  зафиксирован пользовательский `academic-research-skills` v0.1.18 (upstream ARS
+  v3.16.0), создан явно вызываемый `.agents/skills/fts-academic-research` с
+  `allow_implicit_invocation=false`, добавлен советующий гейт в `AGENTS.md`.
+  Рабочий каталог `v14_rebuild/e5_literature_review/` содержит замороженный
+  протокол/Material Passport, единые TSV-схемы, BibTeX round-trip, раздельные
+  screening-файлы, adjudication, graph/evidence/synthesis/novelty artifacts.
+  Consensus `search→fetch` прошёл; первый кандидат E5-0001 оставлен `uncertain`,
+  потому что анонимный Semantic Scholar исчерпал 429-backoff. Offline-тесты DOI,
+  1 RPS/Retry-After и ResearchRabbit DOI retention прошли. Второй screening и
+  adjudication ещё не выполнены; `St_FTS` не менялся.
 - Аудиторских P0/P1 не осталось. Внеаудиторский внешний шаг E6: авторский workbook
   round-trip v14, новая выгрузка 13 файлов и MANIFEST. До него `export/` — только
   review-пакет; `source/` не менялся. Классифицированные P2 остаются в
@@ -112,6 +123,10 @@
   идентифицируемости, шаблон двух null'ов, лестница абляций — RESULTS_v2.md).
 
 ## Следующий шаг
+- Для E5: исследователь заполняет независимый `SCREENING_RESEARCHER.tsv` только
+  после формирования проверенного seed-set; затем возвращает ResearchRabbit-export
+  и проходит явный adjudication-checkpoint. До этого `SYNTHESIS.md` и
+  `NOVELTY_BOUNDARY.md` остаются `not_started`.
 - Автору: начать с `v14_rebuild/audit/REVIEW_CONCLUSION.md`, затем при необходимости
   читать `AUDIT_REPORT.md`, `CLAIM_MATRIX.tsv`, `PATTERN_ATLAS.md` и
   `PATTERN_OQ_MAP.md`. Если принимается
@@ -393,6 +408,14 @@
   literature review и внешний workbook round-trip.
 
 ## Лог сессий
+- 2026-07-20 — реализован гибридный академический контур: Desktop-плагин ARS
+  v0.1.18/v3.16.0, проектный explicit-only роутер, advisory-триггеры, Consensus +
+  Semantic Scholar + ручной ResearchRabbit + отдельный Wolfram-маршрут. Кэш ARS
+  вынесен в `E:\FTS-data\academic-research\verification.db`. ARS quality gates,
+  валидатор навыка и offline provider/round-trip тесты прошли. E5-пилот начал
+  замороженный протокол и Consensus search/fetch; S2 вернул 429 после корректного
+  backoff, поэтому кандидат не включён автоматически. Финальные гейты: канон
+  13/0/0, formal 62/0, probes 47/0, audit blockers=0; `source/` не менялся.
 - 2026-07-14 (3) — аккуратная уборка RadioML: файл 611,23 МиБ скопирован в
   `E:\FTS-data\RadioML`, обе копии подтверждены одинаковыми размером и SHA256,
   затем локальный дубликат удалён. Добавлен единый переносимый resolver с

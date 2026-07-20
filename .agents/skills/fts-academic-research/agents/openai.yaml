@@ -1,0 +1,6 @@
+interface:
+  display_name: "FTS Academic Research"
+  short_description: "Внешние основания и обзоры для ФТС"
+  default_prompt: "Используй $fts-academic-research для проверки указанного claim/OQ в режиме quick, fact-check, lit-review или systematic-review."
+policy:
+  allow_implicit_invocation: false

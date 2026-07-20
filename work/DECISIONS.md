@@ -744,3 +744,15 @@
   не создаёт резервную папку и не меняет community. Причина: карту паттернов и
   очередь OQ теперь можно проходить единым маршрутом, сохраняя границу
   «навигация ≠ канон/доказательство».
+
+- 2026-07-20 — АКАДЕМИЧЕСКИЙ КОНТУР ФТС ЯВНЫЙ И ДВУХКОНТУРНЫЙ. Пользовательский
+  Academic Research Skills фиксируется на `v0.1.18` (upstream ARS `v3.16.0`) и
+  работает inline; full-runtime, автоматические agent-команды и hooks не включаются.
+  Репозиторный `$fts-academic-research` имеет `allow_implicit_invocation=false`:
+  `AGENTS.md` только советует его для prior art, внешнего evidence, systematic review,
+  citation coverage и status-claims. Consensus выполняет discovery, Semantic Scholar —
+  identity/dedup с 1 RPS и 429 backoff, ResearchRabbit — ручной BibTeX round-trip,
+  Wolfram остаётся отдельным математическим аудитом. Два screening-прохода независимы
+  до adjudication. Любая публикация остаётся `[внешнее]` и не повышает `St_FTS` без
+  отдельного авторского SP/K1–K5 решения. Причина: получить воспроизводимое внешнее
+  покрытие E5, не нарушая no-smuggling и неизменяемость `source/`/исторического аудита.
