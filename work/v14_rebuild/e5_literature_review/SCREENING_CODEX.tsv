@@ -1,2 +1,39 @@
 record_id	decision	reason	reviewer	locked_at
 E5-0001	uncertain	Identity lacks DOI/S2 verification after provider 429; only analogy-level relevance is visible from abstract	Codex	2026-07-20T12:15:54Z
+E5-0002	uncertain	Abstract is an external hierarchy/information analogy; no verified DOI/S2 identity or FTS correspondence	Codex	2026-07-20T12:40:00Z
+E5-0003	uncertain	Abstract concerns hierarchical-model identifiability but does not define an FTS mapping	Codex	2026-07-20T12:40:00Z
+E5-0004	uncertain	Abstract concerns granular hierarchical models but does not establish an FTS mapping	Codex	2026-07-20T12:40:00Z
+E5-0005	uncertain	Structured-missingness evidence is potentially limiting but awaits identity verification and researcher screen	Codex	2026-07-20T12:40:00Z
+E5-0006	uncertain	Missing-data graphical models are potentially limiting but await identity verification and researcher screen	Codex	2026-07-20T12:40:00Z
+E5-0007	uncertain	Logical presence/absence is terminology-neighbour evidence only; relation to 0_A is not established	Codex	2026-07-20T12:40:00Z
+E5-0008	exclude	ArXiv-only result fails the frozen identity criterion for the included set	Codex	2026-07-20T12:40:00Z
+E5-0009	uncertain	Conceptual projection/invariance result has no verified publisher or S2/DOI identity in this wave	Codex	2026-07-20T12:40:00Z
+E5-0010	uncertain	Phase-focused result has no verified publisher or S2/DOI identity in this wave	Codex	2026-07-20T12:40:00Z
+E5-0011	exclude	ArXiv-only result fails the frozen identity criterion for the included set	Codex	2026-07-20T12:40:00Z
+E5-0012	uncertain	Phase invariant is a plausible external alternative, but identity verification and mapping remain open	Codex	2026-07-20T12:40:00Z
+E5-0013	exclude	Duplicate discovery trace of E5-H02; screen the retained historical seed instead	Codex	2026-07-20T12:40:00Z
+E5-0014	uncertain	Blackwell theorem is relevant but its provider record lacks DOI/S2 identity in this wave	Codex	2026-07-20T12:40:00Z
+E5-0015	exclude	ArXiv-only result fails the frozen identity criterion for the included set	Codex	2026-07-20T12:40:00Z
+E5-0016	uncertain	NeurIPS record is a potential group-invariance alternative; DOI/S2 identity remains unverified	Codex	2026-07-20T12:40:00Z
+E5-0017	uncertain	Category/identity-type terminology is potentially limiting but DOI/S2 identity remains unverified	Codex	2026-07-20T12:40:00Z
+E5-0018	exclude	Duplicate discovery trace of E5-H13; screen the retained historical seed instead	Codex	2026-07-20T12:40:00Z
+E5-H01	include	[внешнее] Blackwell comparison limits any transfer from level order to informativeness without explicit experiments, kernels, and decision class	Codex	2026-07-20T12:40:00Z
+E5-H02	include	[внешнее] Markov-category Blackwell comparison is an alternative route, not confirmation: the required categorical structure is absent from the canon	Codex	2026-07-20T12:40:00Z
+E5-H03	include	[внешнее] Rubin conditions limit treating typed absence as a general missing-data inference mechanism	Codex	2026-07-20T12:40:00Z
+E5-H04	include	[внешнее] Missing-indicator evidence limits causal or parametric interpretations of a predictive absence encoding	Codex	2026-07-20T12:40:00Z
+E5-H05	include	[внешнее] Corrected resampling is a direct methodological control, not an external replication	Codex	2026-07-20T12:40:00Z
+E5-H06	include	[внешнее] Dataset-level comparison is a direct methodological control; n=4 limits generalization	Codex	2026-07-20T12:40:00Z
+E5-H07	include	[внешнее] Explicit group actions and intertwining laws are an alternative formalism, not supplied by an FTS label alone	Codex	2026-07-20T12:40:00Z
+E5-H08	include	[внешнее] Rotation-equivariant phase machinery is an alternative baseline and limits novelty of phase alone	Codex	2026-07-20T12:40:00Z
+E5-H09	include	[внешнее] Complex-valued architectures are an alternative baseline; a complex overlay does not establish a necessary role	Codex	2026-07-20T12:40:00Z
+E5-H10	include	[внешнее] RadioML is contextual evidence only; it does not identify a distinct continuous-phase role	Codex	2026-07-20T12:40:00Z
+E5-H11	include	[внешнее] Categorical retraction terminology requires objects, morphisms, composition, and laws before transfer	Codex	2026-07-20T12:40:00Z
+E5-H12	include	[внешнее] HoTT model conditions prevent transfer from topological wording alone	Codex	2026-07-20T12:40:00Z
+E5-H13	include	[внешнее] Weak-factorization terminology does not identify an FTS Lift without lifting properties and morphism classes	Codex	2026-07-20T12:40:00Z
+E5-H14	include	[внешнее] HoTT path terminology is a limiting reference, not a supplied model for FTS	Codex	2026-07-20T12:40:00Z
+E5-H15	include	[внешнее] Typed-absence terminology is an analogy only; the specific FTS construction is neither established known nor established novel	Codex	2026-07-20T12:40:00Z
+E5-0019	uncertain	JMLR comparison-method result is relevant to the O_20 statistical route but awaits DOI/S2 verification and researcher screen	Codex	2026-07-20T12:44:00Z
+E5-0020	uncertain	Resampling-test result is relevant to the O_20 statistical route but awaits DOI/S2 verification and researcher screen	Codex	2026-07-20T12:44:00Z
+E5-0021	uncertain	Complex AMR result is an external baseline; it does not identify an FTS-specific phase role	Codex	2026-07-20T12:44:00Z
+E5-0022	uncertain	Complex AMR result is an external baseline; it does not identify an FTS-specific phase role	Codex	2026-07-20T12:44:00Z
+E5-0023	uncertain	Complex AMR result is an external baseline; it does not identify an FTS-specific phase role	Codex	2026-07-20T12:44:00Z

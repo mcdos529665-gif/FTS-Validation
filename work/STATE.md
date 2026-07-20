@@ -83,17 +83,18 @@
   (строже, два null'а, абляция) и запущен — см. «В работе».
 
 ## В работе
-- **E5 academic research contour подготовлен (2026-07-20):** установлен и
-  зафиксирован пользовательский `academic-research-skills` v0.1.18 (upstream ARS
-  v3.16.0), создан явно вызываемый `.agents/skills/fts-academic-research` с
-  `allow_implicit_invocation=false`, добавлен советующий гейт в `AGENTS.md`.
-  Рабочий каталог `v14_rebuild/e5_literature_review/` содержит замороженный
-  протокол/Material Passport, единые TSV-схемы, BibTeX round-trip, раздельные
-  screening-файлы, adjudication, graph/evidence/synthesis/novelty artifacts.
-  Consensus `search→fetch` прошёл; первый кандидат E5-0001 оставлен `uncertain`,
-  потому что анонимный Semantic Scholar исчерпал 429-backoff. Offline-тесты DOI,
-  1 RPS/Retry-After и ResearchRabbit DOI retention прошли. Второй screening и
-  adjudication ещё не выполнены; `St_FTS` не менялся.
+- **E5 systematic-review · wave 0 (2026-07-20):** по явному авторскому вызову
+  `$fts-academic-research` расширен frozen protocol двумя прозрачными amendments:
+  Q06–Q08 (Blackwell, group/phase, category/HoTT) и Q09–Q10 (статистический
+  вывод и RadioML/complex representation). Consensus выполнил discovery и fetch
+  для Q01–Q10 и отдельного Q09 synonym; зафиксированы 38 кандидатов и первый
+  независимый screen Codex: 15 `include` / 5 `exclude` / 18 `uncertain`.
+  DOI-preserving seed-set содержит 7 источников; ResearchRabbit round-trip и
+  второй экран исследователя ещё не выполнены. Semantic Scholar в этой волне
+  вернул `URLError`, а пилот E5-0001 ранее корректно остановился после `429`
+  backoff; S2 IDs не угадывались и автоповтор не делался. Синтез, novelty boundary
+  и adjudication остаются `not_started`; все внешние выводы `[внешнее]`, `St_FTS`
+  не менялся. E5 validator и offline provider/DOI tests прошли.
 - Аудиторских P0/P1 не осталось. Внеаудиторский внешний шаг E6: авторский workbook
   round-trip v14, новая выгрузка 13 файлов и MANIFEST. До него `export/` — только
   review-пакет; `source/` не менялся. Классифицированные P2 остаются в
@@ -123,10 +124,11 @@
   идентифицируемости, шаблон двух null'ов, лестница абляций — RESULTS_v2.md).
 
 ## Следующий шаг
-- Для E5: исследователь заполняет независимый `SCREENING_RESEARCHER.tsv` только
-  после формирования проверенного seed-set; затем возвращает ResearchRabbit-export
-  и проходит явный adjudication-checkpoint. До этого `SYNTHESIS.md` и
-  `NOVELTY_BOUNDARY.md` остаются `not_started`.
+- Для E5: исследователь импортирует `seed_set.bib` по
+  `v14_rebuild/e5_literature_review/RESEARCHRABBIT_HANDOFF.md`, возвращает
+  неизменённый export и независимо заполняет `SCREENING_RESEARCHER.tsv` для 38
+  замороженных записей. Только затем возможен явный adjudication-checkpoint;
+  до него `SYNTHESIS.md` и `NOVELTY_BOUNDARY.md` остаются `not_started`.
 - Автору: начать с `v14_rebuild/audit/REVIEW_CONCLUSION.md`, затем при необходимости
   читать `AUDIT_REPORT.md`, `CLAIM_MATRIX.tsv`, `PATTERN_ATLAS.md` и
   `PATTERN_OQ_MAP.md`. Если принимается
@@ -416,6 +418,15 @@
   замороженный протокол и Consensus search/fetch; S2 вернул 429 после корректного
   backoff, поэтому кандидат не включён автоматически. Финальные гейты: канон
   13/0/0, formal 62/0, probes 47/0, audit blockers=0; `source/` не менялся.
+- 2026-07-20 (2) — E5 Wave 0 расширил явно запрошенный охват до всех внешне
+  маршрутизируемых семейств канона: hierarchy, typed absence/missingness,
+  projection/invariants, sign/phase/group/complex, Blackwell, category/HoTT и
+  empirical resampling. Заморожены A001/A002, 11 Consensus query events и 38
+  кандидатов; Codex first screen = 15 include / 5 exclude / 18 uncertain. S2
+  остался graceful-degraded (`URLError`, без угадывания ID); создан 7-DOI
+  ResearchRabbit seed-set и human handoff. E5 validator + offline tests PASS;
+  канон 13/0/0; `source/` не менялся. До исследовательского screen, graph
+  round-trip и adjudication никакого synthesis/novelty/status effect нет.
 - 2026-07-14 (3) — аккуратная уборка RadioML: файл 611,23 МиБ скопирован в
   `E:\FTS-data\RadioML`, обе копии подтверждены одинаковыми размером и SHA256,
   затем локальный дубликат удалён. Добавлен единый переносимый resolver с

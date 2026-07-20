@@ -1,0 +1,26 @@
+# E5 wave 0 · pre-adjudication status
+
+## Coverage map
+
+| Canon-facing family | Retrieval family | Wave-0 records | Permitted current reading |
+|---|---|---:|---|
+| Hierarchy / distinguishability | Q01 | E5-0001…E5-0004 | External analogies only; no hierarchy theorem transfer. |
+| Typed absence / missingness | Q02 | E5-0005…E5-0007, E5-H03…E5-H04, E5-H15 | Missing-data and logical-absence claims remain distinct. |
+| Projection / invariants | Q03 | E5-0008…E5-0009 | No formal correspondence has been established. |
+| Sign / phase / complex branch | Q04, Q07, Q10 | E5-0010…E5-0012, E5-0015…E5-0016, E5-0021…E5-0023, E5-H07…E5-H10 | [внешнее] Known equivariant and complex-valued baselines constrain novelty claims; they do not define an FTS phase/branch law. |
+| Blackwell / comparison of experiments | Q06 | E5-0013…E5-0014, E5-H01…E5-H02 | [внешнее] A bridge requires explicit experiments, kernels, decisions, and where relevant a Markov-category structure. |
+| Retraction / identity / Lift / HoTT | Q08 | E5-0017…E5-0018, E5-H11…E5-H14 | [внешнее] Word overlap does not transfer categorical or HoTT theorems. |
+| Repeated resampling / multi-dataset inference | Q09 | E5-0019…E5-0020, E5-H05…E5-H06 | [внешнее] Methodological controls are not independent external replication. |
+
+## Counts and gates
+
+- Frozen candidate set for the first two screens: **38** records.
+- Codex first screen: **15 include / 5 exclude / 18 uncertain**.
+- Researcher screen: not started; `SCREENING_RESEARCHER.tsv` is intentionally empty.
+- Semantic Scholar verification: unavailable for this wave; no S2 ID was inferred.
+- Citation expansion: not started; manual ResearchRabbit export is pending.
+- Evidence matrix, synthesis, novelty boundary, and adjudication: intentionally not
+  started. A source cannot change `St_FTS` at this stage.
+
+This is a coverage and routing record, not a claim that all possible literature or
+worldwide novelty has been exhausted.
