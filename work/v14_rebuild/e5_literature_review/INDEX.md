@@ -10,3 +10,8 @@ seed-set → ручной ResearchRabbit round-trip → два независи�
 Ни один внешний источник автоматически не меняет `St_FTS` или статус карточки.
 Передача наружу по умолчанию ограничена поисковыми строками и библиографическими
 метаданными.
+
+Wave 0: `PROTOCOL_AMENDMENT_001.md`, `PROTOCOL_AMENDMENT_002.md`,
+`SEARCH_LOG.tsv`, `CANDIDATES.tsv`, `SCREENING_CODEX.tsv`, `PROVIDER_STATUS.md`,
+`WAVE_0_STATUS.md`, and `RESEARCHRABBIT_HANDOFF.md` form the frozen pre-adjudication
+package. The researcher-only second pass begins in `SCREENING_RESEARCHER.tsv`.
