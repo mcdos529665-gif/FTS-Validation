@@ -1,0 +1,20 @@
+passport_id: "FTS-E5-2026-07-20"
+oq: "oq-systematic-literature-review"
+protocol: "PROTOCOL.md"
+protocol_status: "frozen"
+created_at: "2026-07-20T15:30:00+03:00"
+canon_snapshot: "v13_complex_branch_overlay"
+workspace_scope: "work/v14_rebuild/e5_literature_review"
+historical_audit_mutable: false
+source_mutable: false
+external_data_policy: "queries_and_bibliographic_metadata_only"
+providers:
+  consensus: "discovery_then_fetch"
+  semantic_scholar: "identity_metadata_dedup_1rps"
+  researchrabbit: "manual_bibtex_roundtrip"
+  wolfram: "separate_explicit_formula_audit"
+screeners:
+  first: "Codex"
+  second: "researcher"
+  blinded_until: "adjudication"
+status_effect: "none_without_author_SP_K1_K5_decision"
