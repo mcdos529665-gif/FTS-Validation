@@ -27,3 +27,11 @@ adjudication. Независимый второй проход исследов�
 узкий `BLACKWELL_BRIDGE.md`: типизированный кандидат для У4–У6, точный пример,
 контрпримеры и `check_blackwell_bridge.py`. Это не общий E5-синтез и не снимает
 гейты второго screening-прохода и adjudication.
+
+По поправке `PROTOCOL_AMENDMENT_004.md` добавлены ещё два раздельных проекта:
+`TYPED_ABSENCE_BRIDGE.md` задаёт кандидатную запись `0_A` через тип, локус,
+механизм, provenance и свидетельство; `LIFT_TYPING_PROJECT.md` задаёт паспорт
+категориальной типизации `[OP_Lift]` и явно отделяет его от WFS lifting
+property. Точные конечные пробы TA-01…TA-05 и LT-01…LT-05 находятся в
+`check_absence_lift_projects.py` и `ABSENCE_LIFT_REPORT.md`. Эти проекты также
+не меняют screening, общий синтез или `St_FTS`.

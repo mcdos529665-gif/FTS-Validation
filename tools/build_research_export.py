@@ -38,6 +38,11 @@ E5_BLACKWELL_AMENDMENT = E5_ROOT / "PROTOCOL_AMENDMENT_003.md"
 E5_BLACKWELL_BRIDGE = E5_ROOT / "BLACKWELL_BRIDGE.md"
 E5_BLACKWELL_REPORT = E5_ROOT / "BLACKWELL_BRIDGE_REPORT.md"
 E5_BLACKWELL_CHECK = E5_ROOT / "check_blackwell_bridge.py"
+E5_ABSENCE_LIFT_AMENDMENT = E5_ROOT / "PROTOCOL_AMENDMENT_004.md"
+E5_TYPED_ABSENCE = E5_ROOT / "TYPED_ABSENCE_BRIDGE.md"
+E5_LIFT_TYPING = E5_ROOT / "LIFT_TYPING_PROJECT.md"
+E5_ABSENCE_LIFT_REPORT = E5_ROOT / "ABSENCE_LIFT_REPORT.md"
+E5_ABSENCE_LIFT_CHECK = E5_ROOT / "check_absence_lift_projects.py"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -67,6 +72,11 @@ INPUT_PATHS = (
     E5_BLACKWELL_BRIDGE,
     E5_BLACKWELL_REPORT,
     E5_BLACKWELL_CHECK,
+    E5_ABSENCE_LIFT_AMENDMENT,
+    E5_TYPED_ABSENCE,
+    E5_LIFT_TYPING,
+    E5_ABSENCE_LIFT_REPORT,
+    E5_ABSENCE_LIFT_CHECK,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -250,7 +260,7 @@ def safe_cell(value: str) -> str:
 def external_bibliography() -> str:
     candidates = candidate_records()
     lines = [
-        "### 7.8. Библиографический указатель",
+        "### 7.13. Библиографический указатель",
         "",
         "Ниже приведены только библиографические метаданные и исследовательская роль.",
         "Полные тексты, OCR-файлы и переводческие досье в выгрузку не включены.",
@@ -282,7 +292,7 @@ def external_bibliography() -> str:
     lines.extend(
         [
             "",
-            "### 7.9. BibTeX для цитирования",
+            "### 7.14. BibTeX для цитирования",
             "",
             "~~~~bibtex",
             read_text(E5_SEEDS),
@@ -394,6 +404,27 @@ def render_export() -> str:
                     E5_BLACKWELL_CHECK,
                     "python",
                 ),
+                markdown_source(
+                    "7.8. Поправка протокола для 0_A и Lift",
+                    E5_ABSENCE_LIFT_AMENDMENT,
+                ),
+                markdown_source(
+                    "7.9. Механизм и provenance структурированного отсутствия",
+                    E5_TYPED_ABSENCE,
+                ),
+                markdown_source(
+                    "7.10. Категориальный проект типизации Lift",
+                    E5_LIFT_TYPING,
+                ),
+                markdown_source(
+                    "7.11. Отчёт проверок 0_A и Lift",
+                    E5_ABSENCE_LIFT_REPORT,
+                ),
+                fenced_source(
+                    "7.12. Исполняемый код проверок 0_A и Lift",
+                    E5_ABSENCE_LIFT_CHECK,
+                    "python",
+                ),
                 external_bibliography(),
             ]
         ),
@@ -456,6 +487,16 @@ def validate_export(text: str) -> None:
     ):
         if marker not in text:
             raise ExportError(f"в выгрузке потерян Blackwell-маркер: {marker}")
+
+    for marker in (
+        "candidate_typed_absence",
+        "categorical_typing_project",
+        "TA-05",
+        "LT-05",
+        "10 PASS / 0 FAIL",
+    ):
+        if marker not in text:
+            raise ExportError(f"в выгрузке потерян маркер 0_A/Lift: {marker}")
 
 
 def build_bytes() -> bytes:
