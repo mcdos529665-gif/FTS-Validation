@@ -1,26 +1,30 @@
-# E5 wave 0 · pre-adjudication status
+# E5, волна 0 · статус до adjudication
 
-## Coverage map
+## Карта покрытия
 
-| Canon-facing family | Retrieval family | Wave-0 records | Permitted current reading |
+| Семья, обращённая к канону | Семья поиска | Записи волны 0 | Допустимое текущее чтение |
 |---|---|---:|---|
-| Hierarchy / distinguishability | Q01 | E5-0001…E5-0004 | External analogies only; no hierarchy theorem transfer. |
-| Typed absence / missingness | Q02 | E5-0005…E5-0007, E5-H03…E5-H04, E5-H15 | Missing-data and logical-absence claims remain distinct. |
-| Projection / invariants | Q03 | E5-0008…E5-0009 | No formal correspondence has been established. |
-| Sign / phase / complex branch | Q04, Q07, Q10 | E5-0010…E5-0012, E5-0015…E5-0016, E5-0021…E5-0023, E5-H07…E5-H10 | [внешнее] Known equivariant and complex-valued baselines constrain novelty claims; they do not define an FTS phase/branch law. |
-| Blackwell / comparison of experiments | Q06 | E5-0013…E5-0014, E5-H01…E5-H02 | [внешнее] A bridge requires explicit experiments, kernels, decisions, and where relevant a Markov-category structure. |
-| Retraction / identity / Lift / HoTT | Q08 | E5-0017…E5-0018, E5-H11…E5-H14 | [внешнее] Word overlap does not transfer categorical or HoTT theorems. |
-| Repeated resampling / multi-dataset inference | Q09 | E5-0019…E5-0020, E5-H05…E5-H06 | [внешнее] Methodological controls are not independent external replication. |
+| Иерархия / различимость | Q01 | E5-0001…E5-0004 | Только внешние аналогии; перенос теорем об иерархии запрещён. |
+| Типизированное отсутствие / пропуски | Q02 | E5-0005…E5-0007, E5-H03…E5-H04, E5-H15 | Утверждения о missing data и логическом отсутствии остаются разными. |
+| Проекция / инварианты | Q03 | E5-0008…E5-0009 | Формальное соответствие не установлено. |
+| Знак / фаза / комплексная ветвь | Q04, Q07, Q10 | E5-0010…E5-0012, E5-0015…E5-0016, E5-0021…E5-0023, E5-H07…E5-H10 | `[внешнее]` Известные эквивариантные и комплекснозначные baseline ограничивают claims новизны, но не задают закон фазы/ветви ФТС. |
+| Блэквелл / сравнение экспериментов | Q06 | E5-0013…E5-0014, E5-H01…E5-H02 | `[внешнее]` Мост требует явных экспериментов, ядер, решений и, где нужно, структуры марковской категории. |
+| Ретракция / тождество / Lift / HoTT | Q08 | E5-0017…E5-0018, E5-H11…E5-H14 | `[внешнее]` Совпадение слов не переносит категориальные теоремы или теоремы HoTT. |
+| Повторные разбиения / сравнение на наборах данных | Q09 | E5-0019…E5-0020, E5-H05…E5-H06 | `[внешнее]` Методологический контроль не является независимой внешней репликацией. |
 
-## Counts and gates
+## Числа и гейты
 
-- Frozen candidate set for the first two screens: **38** records.
-- Codex first screen: **15 include / 5 exclude / 18 uncertain**.
-- Researcher screen: not started; `SCREENING_RESEARCHER.tsv` is intentionally empty.
-- Semantic Scholar verification: unavailable for this wave; no S2 ID was inferred.
-- Citation expansion: not started; manual ResearchRabbit export is pending.
-- Evidence matrix, synthesis, novelty boundary, and adjudication: intentionally not
-  started. A source cannot change `St_FTS` at this stage.
+- Замороженный набор для двух первых screening-проходов: **38** записей.
+- Первый screen Codex: **15 include / 5 exclude / 18 uncertain**.
+- Полнотекстовый локальный intake: **6** работ, все привязаны к существующим
+  записям; новые дубли не создавались.
+- Русские досье: **6**, по одному на каждую работу.
+- Screen исследователя не начат; `SCREENING_RESEARCHER.tsv` намеренно пуст.
+- Проверка Semantic Scholar недоступна в этой волне; S2 ID не выводились
+  предположительно.
+- Расширение цитирования не начато; ожидается ручной экспорт ResearchRabbit.
+- Evidence matrix, синтез, novelty boundary и adjudication намеренно не начаты.
+  На этом этапе источник не может изменить `St_FTS`.
 
-This is a coverage and routing record, not a claim that all possible literature or
-worldwide novelty has been exhausted.
+Это запись покрытия и маршрутизации, а не утверждение об исчерпании всей
+литературы или доказательстве мировой новизны.

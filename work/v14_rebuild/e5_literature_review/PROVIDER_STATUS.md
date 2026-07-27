@@ -1,32 +1,43 @@
-# Provider status · E5 wave 0
+# Статус провайдеров · E5, волна 0
 
-- checked_at: `2026-07-20`
-- data boundary: only search strings and bibliographic metadata left the workspace;
-  no manuscript, private note, or canon corpus was sent to a provider.
+- проверено: `2026-07-27`
+- граница данных: за пределы рабочей области передавались только поисковые строки
+  и библиографические метаданные; рукопись, частные заметки, канон и шесть
+  полнотекстовых OCR-файлов провайдерам не отправлялись.
 
 ## Consensus
 
-All registered discovery strings Q01–Q10 (plus the explicit Q09 synonym) were run.
-Each returned ten visible records; title/abstract-relevant candidates were fetched before
-being placed in `CANDIDATES.tsv`. The retrieval trace is `SEARCH_LOG.tsv`. Consensus is
-used for discovery only, not as a status-changing authority.
+Все зарегистрированные строки discovery Q01–Q10, включая дополнительный синоним
+Q09, выполнены. Каждый запрос вернул десять видимых записей; кандидаты,
+релевантные по заголовку и аннотации, были получены перед добавлением в
+`CANDIDATES.tsv`. Трасса поиска находится в `SEARCH_LOG.tsv`. Consensus
+используется только для discovery и не является основанием изменения статуса.
 
 ## Semantic Scholar
 
-The first DOI lookup in this wave returned `URLError`; an earlier pilot title lookup
-for E5-0001 exhausted a documented `429` backoff. In accordance with the protocol,
-there was no automatic retry and no guessed S2 paper ID. Records without a DOI or
-publisher identity remain `uncertain` or `exclude` until a future successful lookup
-or a researcher-supplied primary record.
+Первый DOI lookup волны вернул `URLError`; более ранний пилотный поиск E5-0001
+исчерпал предусмотренный backoff после `429`. Повторная пакетная проверка шести
+полнотекстовых работ 27 июля не завершилась в разумный срок и была остановлена.
+Автоматических повторов и угаданных S2 paper ID нет. Записи без DOI или
+издательской идентичности остаются `uncertain` либо `exclude` до успешной
+проверки или получения первичной записи от исследователя.
 
 ## ResearchRabbit
 
-No API/MCP route is assumed. `seed_set.bib` contains seven DOI-preserving seeds for a
-manual, human-controlled citation-graph expansion. The round-trip is pending; see
-`RESEARCHRABBIT_HANDOFF.md`. ResearchRabbit may expand a graph but never validates a
-paper's existence by itself.
+Наличие API/MCP не предполагается. `seed_set.bib` содержит семь seed-записей с
+сохранёнными DOI для ручного, управляемого исследователем расширения графа
+цитирования. Round-trip пока не выполнен; см. `RESEARCHRABBIT_HANDOFF.md`.
+ResearchRabbit расширяет граф, но сам по себе не подтверждает существование
+публикации.
 
 ## Wolfram
 
-Not invoked. This review contains no author-supplied exact predicate, domain, and
-formula package; literature retrieval cannot trigger a Wolfram audit.
+Не вызывался. В литературном маршруте нет предоставленного автором полного пакета
+точного предиката, области и формулы; литературный поиск не запускает
+Wolfram-аудит.
+
+## Локальные полнотекстовые материалы
+
+Шесть переданных Markdown-файлов импортированы локально и зарегистрированы в
+`PAPER_INTAKE.tsv`. Их SHA256 проверены после копирования. Эти тексты не
+использовались для внешнего provider lookup.

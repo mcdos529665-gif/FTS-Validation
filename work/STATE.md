@@ -21,13 +21,20 @@
   первый screen Codex = 15 `include` / 5 `exclude` / 18 `uncertain`. Семь DOI
   собраны в `seed_set.bib`; S2 оставлен graceful-degraded (`URLError` и ранее
   `429`, без угадывания ID). `source/` и `St_FTS` не менялись.
+- **E5 полнотекстовый intake (2026-07-27):** шесть переданных OCR/Markdown-работ
+  сопоставлены с E5-H01/H02/H04/H05/H12/H13 и сохранены byte-for-byte в
+  `e5_literature_review/papers/`. Для каждой создано русское досье; SHA256,
+  DOI и метрики OCR зафиксированы в `PAPER_INTAKE.tsv`. Предварительные точки
+  сопряжения собраны в `COUPLING_MAP.md`; это `[внешнее]`, не synthesis и не
+  статусное основание.
 - —
 
 ## Следующий шаг
 - Для E5: импортировать `seed_set.bib` в ResearchRabbit по
   `work/v14_rebuild/e5_literature_review/RESEARCHRABBIT_HANDOFF.md`, вернуть
-  raw export и независимо заполнить `SCREENING_RESEARCHER.tsv`. Синтез и
-  novelty boundary запрещены до явной adjudication.
+  raw export; прочитать русские досье в `papers/` и независимо заполнить
+  `SCREENING_RESEARCHER.tsv`. Синтез и novelty boundary запрещены до явной
+  adjudication.
 - Автор читает work/v14_rebuild/FTS_v14_paper.md и принимает/отклоняет
   status_patch_v14.md (включая §0 — закрытия открытых вопросов канона,
   в т.ч. Q_LOGIC_7_11). Инструменты точечного доступа: crosscheck.py,
@@ -37,6 +44,11 @@
 - См. work/OPEN_QUESTIONS.md (обновлён: закрыто 3 пункта, добавлено 4 новых).
 
 ## Лог сессий
+- 2026-07-27 — в основной `master` импортированы шесть пользовательских
+  полнотекстовых OCR/Markdown-работ E5: неизменённые оригиналы, шесть русских
+  досье, общий SHA256-паспорт и предварительная карта сопряжений. Валидатор E5
+  расширен проверкой полнотекстового intake. Проверки: E5 PASS, integration
+  PASS, канон 13 ok / 0 mismatch, теория 59 PASS / 0 FAIL; `source/` не менялся.
 - 2026-07-20 — в основной `master` перенесён E5 academic-research contour и
   wave 0: 38 кандидатов, 7-DOI seed-set, разделённые screening-файлы и ручной
   ResearchRabbit handoff. Внешние источники не меняют статус ФТС; второй screen

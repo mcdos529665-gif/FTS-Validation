@@ -21,3 +21,21 @@ screeners:
   second: "researcher"
   blinded_until: "adjudication"
 status_effect: "none_without_author_SP_K1_K5_decision"
+reader_language: "ru"
+source_language: "en"
+translation_policy: "russian_dossier_preserves_ids_formulas_and_no_smuggling"
+fulltext_intake:
+  package_id: "FTS-E5-FULLTEXT-2026-07-27"
+  plan: "IMPORT_PLAN.md"
+  manifest: "PAPER_INTAKE.tsv"
+  coupling_map: "COUPLING_MAP.md"
+  directory: "papers"
+  record_ids:
+    - "E5-H01"
+    - "E5-H02"
+    - "E5-H04"
+    - "E5-H05"
+    - "E5-H12"
+    - "E5-H13"
+  originals_modified: false
+  sent_to_external_services: false

@@ -13,5 +13,12 @@ seed-set → ручной ResearchRabbit round-trip → два независи�
 
 Wave 0: `PROTOCOL_AMENDMENT_001.md`, `PROTOCOL_AMENDMENT_002.md`,
 `SEARCH_LOG.tsv`, `CANDIDATES.tsv`, `SCREENING_CODEX.tsv`, `PROVIDER_STATUS.md`,
-`WAVE_0_STATUS.md`, and `RESEARCHRABBIT_HANDOFF.md` form the frozen pre-adjudication
-package. The researcher-only second pass begins in `SCREENING_RESEARCHER.tsv`.
+`WAVE_0_STATUS.md` и `RESEARCHRABBIT_HANDOFF.md` образуют замороженный пакет до
+adjudication. Независимый второй проход исследователя начинается в
+`SCREENING_RESEARCHER.tsv`.
+
+Шесть переданных полнотекстовых работ добавлены по
+`IMPORT_PLAN.md`. Общий паспорт и контрольные суммы находятся в
+`PAPER_INTAKE.tsv`, неизменённые OCR-оригиналы и русские читательские досье —
+в `papers/`. Предварительные, неканонические точки сопряжения собраны в
+`COUPLING_MAP.md`.

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import re
 from pathlib import Path
 
@@ -19,6 +20,29 @@ REQUIRED = {
     "CITATION_GRAPH.tsv": ["source_record_id", "target_record_id", "edge_type", "provider", "retrieved_at"],
     "EVIDENCE_MATRIX.tsv": ["record_id", "claim_or_oq", "finding", "direction", "fts_relation", "limitations", "source_pointer"],
 }
+PAPER_INTAKE_HEADER = [
+    "record_id",
+    "doi",
+    "s2_paper_id",
+    "title",
+    "year",
+    "provider",
+    "retrieved_at",
+    "query_id",
+    "claim_or_oq",
+    "screening_decision",
+    "screening_reason",
+    "fts_relation",
+    "source_path",
+    "source_sha256",
+    "project_path",
+    "lines",
+    "display_math_delimiters",
+    "image_links",
+    "references_present",
+    "russian_dossier",
+    "intake_status",
+]
 
 
 def read_tsv(path: Path, expected: list[str]) -> list[dict[str, str]]:
@@ -41,6 +65,24 @@ def bib_has_entries(path: Path) -> bool:
     return path.exists() and bool(re.search(r"^\s*@", path.read_text(encoding="utf-8"), flags=re.MULTILINE))
 
 
+def file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def resolve_inside(root: Path, relative: str) -> Path | None:
+    if not relative:
+        return None
+    candidate = (root / relative).resolve()
+    resolved_root = root.resolve()
+    if candidate != resolved_root and resolved_root not in candidate.parents:
+        return None
+    return candidate
+
+
 def validate(root: Path) -> list[str]:
     errors: list[str] = []
     rows: dict[str, list[dict[str, str]]] = {}
@@ -55,6 +97,7 @@ def validate(root: Path) -> list[str]:
             errors.append(str(exc))
 
     candidates = rows.get("CANDIDATES.tsv", [])
+    candidates_by_id = {row["record_id"]: row for row in candidates if row["record_id"]}
     ids = [row["record_id"] for row in candidates if row["record_id"]]
     if len(ids) != len(set(ids)):
         errors.append("CANDIDATES.tsv: duplicate record_id")
@@ -87,6 +130,56 @@ def validate(root: Path) -> list[str]:
     rr_dois = bib_dois(root / "researchrabbit_export.bib")
     if bib_has_entries(root / "researchrabbit_export.bib") and not seed_dois.issubset(rr_dois):
         errors.append("researchrabbit_export.bib: seed DOI loss")
+
+    intake_path = root / "PAPER_INTAKE.tsv"
+    if intake_path.exists():
+        try:
+            intake = read_tsv(intake_path, PAPER_INTAKE_HEADER)
+        except ValueError as exc:
+            errors.append(str(exc))
+            intake = []
+
+        intake_ids = [row["record_id"] for row in intake if row["record_id"]]
+        if len(intake_ids) != len(set(intake_ids)):
+            errors.append("PAPER_INTAKE.tsv: duplicate record_id")
+
+        for row in intake:
+            record_id = row["record_id"]
+            candidate = candidates_by_id.get(record_id)
+            if candidate is None:
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: record absent from CANDIDATES.tsv")
+            elif row["doi"].lower() != candidate["doi"].lower():
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: DOI differs from CANDIDATES.tsv")
+
+            if row["screening_decision"] not in DECISIONS:
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: invalid screening_decision")
+            if row["fts_relation"] not in RELATIONS:
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: invalid fts_relation")
+            if row["intake_status"] != "imported":
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: intake_status must be imported")
+
+            expected_hash = row["source_sha256"].lower()
+            if not re.fullmatch(r"[0-9a-f]{64}", expected_hash):
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: invalid source_sha256")
+
+            project_file = resolve_inside(root, row["project_path"])
+            if project_file is None:
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: project_path escapes workspace")
+            elif not project_file.is_file():
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: missing project source")
+            elif re.fullmatch(r"[0-9a-f]{64}", expected_hash) and file_sha256(project_file) != expected_hash:
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: project source SHA256 mismatch")
+
+            source_file = Path(row["source_path"])
+            if source_file.exists() and re.fullmatch(r"[0-9a-f]{64}", expected_hash):
+                if file_sha256(source_file) != expected_hash:
+                    errors.append(f"PAPER_INTAKE.tsv:{record_id}: external source SHA256 mismatch")
+
+            dossier = resolve_inside(root, row["russian_dossier"])
+            if dossier is None:
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: russian_dossier escapes workspace")
+            elif not dossier.is_file():
+                errors.append(f"PAPER_INTAKE.tsv:{record_id}: missing russian dossier")
     return errors
 
 

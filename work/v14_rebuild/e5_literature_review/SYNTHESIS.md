@@ -1,6 +1,6 @@
-# E5 synthesis
+# Синтез E5
 
-Status: `not_started`.
+Статус: `not_started`.
 
 Синтез запрещён до завершения двух независимых screening-файлов и явной
 adjudication всех расхождений. Внешние результаты не меняют `St_FTS`.

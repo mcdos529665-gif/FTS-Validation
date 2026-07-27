@@ -1,21 +1,21 @@
-# ResearchRabbit handoff · E5 wave 0
+# Передача в ResearchRabbit · E5, волна 0
 
-This is the one manual step in the citation-graph route. It is deliberately not
-automated and it does not send any FTS manuscript, private note, or canon content.
+Это единственный ручной шаг в маршруте графа цитирования. Он намеренно не
+автоматизирован и не требует отправлять рукопись ФТС, частные заметки или канон.
 
-1. In ResearchRabbit, create a collection named `FTS-E5-2026-07-20-W0`.
-2. Import `seed_set.bib` without changing its seven DOI fields.
-3. For each seed, inspect **references**, **citations**, and **similar papers**. Keep
-   candidates only when they bear on one of Q01–Q10; do not treat a visual graph edge
-   as proof that a paper exists or supports FTS.
-4. Export the collection as BibTeX. Preserve the untouched provider export as
-   `researchrabbit_export.bib` in this directory. If ResearchRabbit only provides
-   RIS or CSV, retain that raw file beside it and state its filename in the next
-   handoff; do not manufacture a BibTeX conversion in place of the raw export.
-5. Do not screen against the Codex decisions yet. Complete the independent second
-   pass in `SCREENING_RESEARCHER.tsv` for the frozen set, then add graph-derived
-   records as a clearly labelled next wave.
+1. Создать в ResearchRabbit коллекцию `FTS-E5-2026-07-20-W0`.
+2. Импортировать `seed_set.bib`, не изменяя семь полей DOI.
+3. Для каждой seed-работы просмотреть **references**, **citations** и
+   **similar papers**. Оставлять кандидатов только при связи с Q01–Q10; ребро на
+   визуальном графе не доказывает существование работы и не подтверждает ФТС.
+4. Экспортировать коллекцию в BibTeX. Неизменённый экспорт сохранить в этом
+   каталоге как `researchrabbit_export.bib`. Если доступен только RIS или CSV,
+   сохранить сырой файл рядом и указать его имя при следующей передаче; не
+   подменять сырой экспорт самостоятельно изготовленным BibTeX.
+5. Пока не сопоставлять решения с оценками Codex. Сначала завершить независимый
+   второй проход по замороженному набору в `SCREENING_RESEARCHER.tsv`, затем
+   добавить найденные через граф записи как явно отмеченную следующую волну.
 
-The validator will reject an export that drops any DOI from `seed_set.bib`.
-Disagreements with `SCREENING_CODEX.tsv` must remain unexamined until an explicit
-row is entered in `ADJUDICATION.tsv`.
+Валидатор отклонит экспорт, в котором потерян хотя бы один DOI из
+`seed_set.bib`. Расхождения с `SCREENING_CODEX.tsv` не разбираются до добавления
+явной строки в `ADJUDICATION.tsv`.

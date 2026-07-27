@@ -1,4 +1,4 @@
-# E5 systematic-review protocol
+# Протокол систематического обзора E5
 
 - protocol_id: `FTS-E5-2026-07-20`
 - OQ: `oq-systematic-literature-review`
