@@ -34,6 +34,10 @@ E5_STATUS = E5_ROOT / "WAVE_0_STATUS.md"
 E5_COUPLING = E5_ROOT / "COUPLING_MAP.md"
 E5_SEEDS = E5_ROOT / "seed_set.bib"
 E5_CANDIDATES = E5_ROOT / "CANDIDATES.tsv"
+E5_BLACKWELL_AMENDMENT = E5_ROOT / "PROTOCOL_AMENDMENT_003.md"
+E5_BLACKWELL_BRIDGE = E5_ROOT / "BLACKWELL_BRIDGE.md"
+E5_BLACKWELL_REPORT = E5_ROOT / "BLACKWELL_BRIDGE_REPORT.md"
+E5_BLACKWELL_CHECK = E5_ROOT / "check_blackwell_bridge.py"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -59,6 +63,10 @@ INPUT_PATHS = (
     E5_COUPLING,
     E5_SEEDS,
     E5_CANDIDATES,
+    E5_BLACKWELL_AMENDMENT,
+    E5_BLACKWELL_BRIDGE,
+    E5_BLACKWELL_REPORT,
+    E5_BLACKWELL_CHECK,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -242,7 +250,7 @@ def safe_cell(value: str) -> str:
 def external_bibliography() -> str:
     candidates = candidate_records()
     lines = [
-        "### 7.4. Библиографический указатель",
+        "### 7.8. Библиографический указатель",
         "",
         "Ниже приведены только библиографические метаданные и исследовательская роль.",
         "Полные тексты, OCR-файлы и переводческие досье в выгрузку не включены.",
@@ -274,7 +282,7 @@ def external_bibliography() -> str:
     lines.extend(
         [
             "",
-            "### 7.5. BibTeX для цитирования",
+            "### 7.9. BibTeX для цитирования",
             "",
             "~~~~bibtex",
             read_text(E5_SEEDS),
@@ -369,6 +377,23 @@ def render_export() -> str:
                 markdown_source("7.1. Протокол систематического обзора", E5_PROTOCOL),
                 markdown_source("7.2. Текущий статус волны 0", E5_STATUS),
                 markdown_source("7.3. Предварительная карта сопряжений", E5_COUPLING),
+                markdown_source(
+                    "7.4. Поправка протокола для ограниченного Blackwell-моста",
+                    E5_BLACKWELL_AMENDMENT,
+                ),
+                markdown_source(
+                    "7.5. Типизированный Blackwell-мост У4–У6",
+                    E5_BLACKWELL_BRIDGE,
+                ),
+                markdown_source(
+                    "7.6. Отчёт точных кандидатных проверок",
+                    E5_BLACKWELL_REPORT,
+                ),
+                fenced_source(
+                    "7.7. Исполняемый код проверок Blackwell-моста",
+                    E5_BLACKWELL_CHECK,
+                    "python",
+                ),
                 external_bibliography(),
             ]
         ),
@@ -423,6 +448,14 @@ def validate_export(text: str) -> None:
     for entry in bib_entries():
         if entry["doi_normalized"] not in lower:
             raise ExportError(f"в выгрузке потерян DOI: {entry['doi_normalized']}")
+
+    for marker in (
+        "candidate_external_bridge",
+        "BW-06",
+        "6 PASS / 0 FAIL",
+    ):
+        if marker not in text:
+            raise ExportError(f"в выгрузке потерян Blackwell-маркер: {marker}")
 
 
 def build_bytes() -> bytes:

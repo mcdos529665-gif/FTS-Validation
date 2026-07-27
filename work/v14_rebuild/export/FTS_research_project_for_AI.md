@@ -30,23 +30,27 @@
 
 | Входной артефакт | SHA256 |
 |---|---|
-| `tools/build_research_export.py` | `f49170c2a8f2d1b60974744be7cdafd7ebbfaf2af848aac2779f4d5735d626d3` |
+| `tools/build_research_export.py` | `417de10b8c277f6e2f3c3e5ab1c1782b58f5746898a7be0cb248b4373f670877` |
 | `PROJECT_INSTRUCTIONS.md` | `e43952c527a3367a2a2f94c2399b3a68ce7df482fbd3b52b6c6b8488f829b2ec` |
-| `work/STATE.md` | `5c2ebc64b0d63c8a5fc3c7eb35f0c7ac05d1e2b8369053f2818f5561d3120427` |
+| `work/STATE.md` | `ec7ce96fa772bc3847131b7a17a5f1c032bc6357edae9455672dfe5a033d2508` |
 | `work/notation.md` | `32cbb128528a36d2604ef7425368768145232ca1d3e5b2295bb855977dca14d6` |
-| `work/DECISIONS.md` | `c3ccd1a8a3b3be6d5e96f019cad5681357fc4ae29dda21cb4a5b3f4c1b42d06b` |
-| `work/OPEN_QUESTIONS.md` | `7fe3d95caed5364f52e6dd1698cacb3ea63cb6419226442618eda752658a7db0` |
-| `work/v14_rebuild/FTS_v14_paper.md` | `648f72edaaba6fcd14a3ea4336aaebf2bb19e848686c8319fc5f8d41b544f83c` |
+| `work/DECISIONS.md` | `9a1344cfbcbc30080bd2d770f4a5f34ae42198dedc5c33f472f86250ee40a127` |
+| `work/OPEN_QUESTIONS.md` | `920c6bce22a879986053a76a975d989ce05f83b8bd910d3fe592a0b2543c5302` |
+| `work/v14_rebuild/FTS_v14_paper.md` | `d416ac8905f0ffd4fac2cf4716590869276a0c6ea27c71f55b8c23968f26671a` |
 | `work/v14_rebuild/FTS_v14_register_map.md` | `acd541f799cbafdf28f6f93f12364cf4b0429f9c47ea03d37e5f5a0ab652593c` |
 | `work/v14_rebuild/status_patch_v14.md` | `552f71d4cca0be5d389dc02fe4dc3fb7da3960b9375a19d03b77ff0cef4233d7` |
 | `work/v14_rebuild/red_team_F3.md` | `430c6702be99121f67d989f840c73f01d9aaf8f429b3b809fbb8577dce18f7c9` |
 | `work/v14_rebuild/verification_report.md` | `bf62cfd3557746983eb9a5ee07504d364ca5bf7fd111f9b3fa8567627845cc4e` |
 | `work/v14_rebuild/verification.py` | `567dcfab430dedefce067b6f7a302bbc72b5775cd55679560467ae1cc9486581` |
 | `work/v14_rebuild/e5_literature_review/PROTOCOL.md` | `2029b76016c70baf3a7aab5a0881eb806002ee9bcfa42b141dca33c72a93f63b` |
-| `work/v14_rebuild/e5_literature_review/WAVE_0_STATUS.md` | `c329a8e06c28ce33e7926dbf5c2946125f027208aa6d7bbf9820b4450f6c2385` |
-| `work/v14_rebuild/e5_literature_review/COUPLING_MAP.md` | `c6486adb90224ffcf9317358211d154fdb4033ef19caf3324b253b0668a1e3ef` |
+| `work/v14_rebuild/e5_literature_review/WAVE_0_STATUS.md` | `8730fec6026630ef392628ea67b060929457b72273c51606542a9a97eb759bb7` |
+| `work/v14_rebuild/e5_literature_review/COUPLING_MAP.md` | `728dd4ad94074e50b3ba3c5c112cacc47ee41524beac26fb5a3feb9b61932730` |
 | `work/v14_rebuild/e5_literature_review/seed_set.bib` | `f2f2fd67e641ecafea8a36ba2843efd6c4181934f3f356e360c2ed82ab33b247` |
 | `work/v14_rebuild/e5_literature_review/CANDIDATES.tsv` | `e114406468407ad2700bd11b4f818736a4916ba9318f300a479f5a01b7a64227` |
+| `work/v14_rebuild/e5_literature_review/PROTOCOL_AMENDMENT_003.md` | `98079a8a24f0ffe31101549389698194b1df59fd1f44bd729f9bb6e6240a4ad3` |
+| `work/v14_rebuild/e5_literature_review/BLACKWELL_BRIDGE.md` | `270267fb95c2530d7cb677bf0b01a81e0cf1e196d30b4569dbb342e6be61ff8b` |
+| `work/v14_rebuild/e5_literature_review/BLACKWELL_BRIDGE_REPORT.md` | `1e4a43cbdf95ffcf3ef613712d869b3a570e16cf90e226cc734815a59b266bab` |
+| `work/v14_rebuild/e5_literature_review/check_blackwell_bridge.py` | `4d2d396e8b6d034338a3ccd7969e1dde87803697e019d0ff1c51b77a729e537f` |
 | `source/MANIFEST.json` | `a91c453226cac21072478fa1fbf2db766e36f1bfe477e52414ee19f5c8f6f16a` |
 | `source/FTS_v13_LLM_CONTEXT.md` | `65be293a8e93eec5cb7d732ef2cd588115ada25d87471bd613e1ffab8693ead2` |
 | `source/FTS_v13_LLM_FULL_DUMP.md` | `a3f1852af32bbf1ef385e34dbbe6908b38374baa9cd08f0ef21437f3f7440d73` |
@@ -158,8 +162,9 @@
 #### Текущая цель
 - Пересборка v14 выполнена, сверена, авторские решения приняты (2026-06-12),
   F3 прогнан красной командой. Самодостаточная исследовательская выгрузка для
-  загрузки в ИИ собрана; следующий содержательный инкремент — E5 systematic-review
-  и/или канонический экспорт v14 (новая выгрузка + MANIFEST).
+  загрузки в ИИ собрана. Ограниченный Blackwell-мост У4–У6 оформлен; следующий
+  содержательный инкремент — проверить его на нетривиальных экспериментальных
+  реализациях уровней и/или продолжить E5 systematic-review.
 
 #### В работе
 - **E5 systematic-review · wave 0 (2026-07-20):** создан явный
@@ -174,6 +179,12 @@
   DOI и метрики OCR зафиксированы в `PAPER_INTAKE.tsv`. Предварительные точки
   сопряжения собраны в `COUPLING_MAP.md`; это `[внешнее]`, не synthesis и не
   статусное основание.
+- **Blackwell-мост (2026-07-27):** по отдельной авторской поправке
+  `PROTOCOL_AMENDMENT_003.md` построен `candidate_external_bridge` для ролей
+  У4→У5→У6: конечный эксперимент → правило решения → агрегат риска.
+  `BLACKWELL_BRIDGE.md` содержит типы, лемму репликации, Blackwell-остаток,
+  точный бинарный пример, контрпримеры и условия поражения; BW-01…BW-06 =
+  6 PASS / 0 FAIL. Канонический `projects_to` и `St_FTS` не менялись.
 - **Единая выгрузка для ИИ (2026-07-27):** добавлен детерминированный сборщик
   `tools/build_research_export.py` и производный файл
   `v14_rebuild/export/FTS_research_project_for_AI.md`. В выгрузке объединены
@@ -189,13 +200,19 @@
   raw export; прочитать русские досье в `papers/` и независимо заполнить
   `SCREENING_RESEARCHER.tsv`. Синтез и novelty boundary запрещены до явной
   adjudication.
+- Для Blackwell-моста: задать не игрушечные экспериментальные реализации
+  $\mathcal E_6,\mathcal E_4$ на одном пространстве состояний и проверить
+  существование/отсутствие канала $P_4=P_6K_{6\to4}$. Без этого мост не является
+  свидетелем `U_06→projects_to→U_04`.
 - Автор читает work/v14_rebuild/FTS_v14_paper.md и принимает/отклоняет
   status_patch_v14.md (включая §0 — закрытия открытых вопросов канона,
   в т.ч. Q_LOGIC_7_11). Инструменты точечного доступа: crosscheck.py,
   sheet_dump.py (в work/v14_rebuild/).
 
 #### Открытые нити
-- См. work/OPEN_QUESTIONS.md (обновлён: закрыто 3 пункта, добавлено 4 новых).
+- См. `work/OPEN_QUESTIONS.md`; ближайшая новая нить — экспериментальные
+  реализации $\mathcal E_6,\mathcal E_4$ для проверки Blackwell-свидетеля
+  канонической проекции.
 
 ## 3. Основной исследовательский текст v14
 
@@ -903,6 +920,38 @@ candidate_v14 (аргумент, не теорема: полнота слова�
 сходятся в один узел: соседи по окну (±1) спорят как `F` и `⊖F`, а уровни
 через один (+2) вложены как тень и предмет.
 
+##### 8.1б. Blackwell-мост У4–У6 (`candidate_external_bridge`)
+
+По авторской команде оформлен один внешний операциональный свидетель для
+последовательности ролей У4→У5→У6:
+
+$$
+\Theta\xrightarrow{P}X\xrightarrow{\delta}A,\qquad
+L:\Theta\times A\to\mathbb R,\qquad
+r(P,\delta,L)\in\mathbb R^\Theta.
+$$
+
+Здесь эксперимент $P$ является кандидатным чтением У4, правило решения
+$\delta$ — экземпляром `Select(B)` У5, а вектор риска или его байесовская
+цена — экземпляром `Agg_i(V_i)` У6 [карточки U_04…U_06, CH_04…CH_06;
+триплеты U_04→has_next→U_05→has_next→U_06].
+
+Если $Q=PK$ для марковской матрицы $K$, то любое правило на `Q`
+воспроизводится на `P` композицией с $K$ и имеет тот же вектор риска
+[внешнее: Blackwell 1953, DOI 10.1214/aoms/1177729032]. Точный бинарный
+пример даёт разрыв оптимального риска `0` против `1/2`; перестановочный и
+двухбитовый контрпримеры запрещают читать новое имя наблюдения или выигрыш на
+одной метрике как общий порядок. Рациональные проверки: BW-01…BW-06,
+`6 PASS / 0 FAIL`.
+
+Это **не** отождествляет Blackwell-огрубление с `projects_to`: в данном
+отображении У4 имеет тип эксперимента, а У6 — тип агрегата риска. Свидетель
+`U_06→projects_to→U_04` потребовал бы отдельно задать два эксперимента
+$\mathcal E_6,\mathcal E_4$ и канал $P_4=P_6K_{6\to4}$; таких объектов в
+каноне нет `[карточка O_08]`. Полный паспорт, `Res_BW`, связь-кандидат с
+`[O_14] QuestionGain`, условия поражения и проверки находятся в
+`e5_literature_review/BLACKWELL_BRIDGE.md`. `St_FTS` не меняется.
+
 ##### 8.2. Пентадная рекурсия (шаг 4)
 
 Композиция двух шагов проекции даёт сдвиг на окно: **формы окна (7…11) — это
@@ -1299,6 +1348,11 @@ F1 (genuine insertion) — п. 8; F2 (genuine collapse) — пп. 1–3 (есл�
    (топология провенанса) остаётся.
 6. **У14** — самое слабое место предсказательного блока: тип объекта без
    оператора.
+7. **Blackwell-мост ограничен У4–У6.** Построена типизированная реализация
+   «эксперимент → решение → риск», но отображения уровней на пару экспериментов
+   $\mathcal E_6,\mathcal E_4$ и марковского свидетеля канонического
+   `projects_to` нет. До такого построения мост остаётся
+   `candidate_external_bridge`, а не внешним доказательством лестницы.
 
 ---
 
@@ -2558,6 +2612,15 @@ if __name__ == "__main__":
   отношения и краткая роль. Почему: это сохраняет происхождение внешних работ,
   не раздувает переносимый контекст чужими текстами и не создаёт ложного
   основания для повышения `St_FTS`.
+- 2026-07-27 — BLACKWELL-МОСТ ОФОРМЛЕН КАК
+  `candidate_external_bridge` ДЛЯ РОЛЕЙ У4→У5→У6, А НЕ КАК ДОКАЗАТЕЛЬСТВО
+  ЛЕСТНИЦЫ. Внешняя строгая часть — сравнение конечных экспериментов через
+  $Q=PK$ и задачи решения; кандидатная часть — отображение
+  «эксперимент → Select → Agg риска». Канонический `projects_to` не
+  отождествляется с огрублением: для него отдельно нужны экспериментальные
+  реализации $\mathcal E_6,\mathcal E_4$ и канал между ними. Почему: это даёт
+  ФТС проверяемый операциональный тест и условие поражения, не подмешивая
+  внешний порядок информативности в значения уровней и не меняя `St_FTS`.
 
 ### 6.2. Открытые вопросы
 
@@ -2634,6 +2697,15 @@ if __name__ == "__main__":
 - [ ] Операциональный тест Д10: задача, где доступ к промежуточной фазе
       (θ ∉ {0,π}) даёт выигрыш над дискретной парой {F, ⊖F}. Пока теста нет —
       потолок SP_COMPLEX (analogy_only → candidate_overlay) сохраняется.
+- [x] Ограниченный Blackwell-мост У4–У6 — оформлен как
+      `candidate_external_bridge`: эксперимент → правило решения → агрегат
+      риска, точный бинарный пример и контрпримеры BW-01…BW-06
+      (`e5_literature_review/BLACKWELL_BRIDGE.md`, 2026-07-27).
+- [ ] Построить нетривиальные экспериментальные реализации
+      $\mathcal E_6,\mathcal E_4$ и проверить, существует ли марковский канал
+      $P_4=P_6K_{6\to4}$, который может служить внешним свидетелем
+      `U_06→projects_to→U_04`. До этого Blackwell-мост не подтверждает
+      каноническую проекцию.
 
 ##### Анти-цели (чем ФТС НЕ является)
 Не абсолютная метатеория мира; не «доказанные 8+»; не смешение ¬A/0_A/−A;
@@ -2739,6 +2811,9 @@ Codex и исследователь независимо оценивают од
 - Расширение цитирования не начато; ожидается ручной экспорт ResearchRabbit.
 - Evidence matrix, синтез, novelty boundary и adjudication намеренно не начаты.
   На этом этапе источник не может изменить `St_FTS`.
+- По отдельной авторской команде оформлен ограниченный Blackwell-мост У4–У6:
+  `BLACKWELL_BRIDGE.md`, BW-01…BW-06 = **6 PASS / 0 FAIL**. Он использует уже
+  включённые E5-H01/H02, не меняет screening и не разблокирует общий синтез.
 
 Это запись покрытия и маршрутизации, а не утверждение об исчерпании всей
 литературы или доказательстве мировой новизны.
@@ -2753,13 +2828,15 @@ Codex и исследователь независимо оценивают од
 - основание: локальный полнотекстовый intake от 27 июля 2026 года
 - область вывода: только исследовательская
 - влияние на `St_FTS`: отсутствует
+- отдельный инкремент: `BLACKWELL_BRIDGE.md` по авторской поправке
+  `PROTOCOL_AMENDMENT_003.md`
 
 Карта показывает, где стоит проверять формальный мост. Она не утверждает, что
 мост уже существует.
 
 | Запись | Внешний формализм | Узел ФТС | Отношение | Минимум для честного сопряжения | Текущее ограничение |
 |---|---|---|---|---|---|
-| E5-H01 | Порядок информативности Блэквелла, задачи решения, стохастическое огрубление | Общая лестница различимости | `limiting` | Задать гипотезы, наблюдения, потери и марковский канал между двумя уровнями | Порядок уровней сам по себе не является порядком информативности |
+| E5-H01 | Порядок информативности Блэквелла, задачи решения, стохастическое огрубление | У4–У6; отдельная проверка `projects_to` | `limiting` | Задать состояния, наблюдения, потери и марковский канал | Для ролей У4→У5→У6 построен конечный кандидат; канала между экспериментальными реализациями уровней ещё нет |
 | E5-H02 | Марковские категории, условные распределения, стандартные эксперименты, BSS | Операциональное чтение различимости | `alternative` | Построить категорию, морфизмы, композицию, вероятностную монаду и конкретные эксперименты | Нужная категориальная структура в каноне не задана |
 | E5-H04 | Индикатор пропуска в статистической модели | `[O_20]` AbsDataGain; различение с `0_A` | `limiting` | Предрегистрировать дизайн, механизм пропуска, baseline и метрики смещения | Индикатор отсутствия может ухудшать вывод; он не равен `0_A` |
 | E5-H05 | Дисперсия repeated holdout и скорректированный resampled t-test | `[O_20]` как кандидат, требующий эмпирического теста | `direct` | Зафиксировать независимую единицу, splits, primary metric и оценку корреляции | Метод контролирует статистический вывод, но не подтверждает содержание O_20 |
@@ -2771,9 +2848,11 @@ Codex и исследователь независимо оценивают од
 1. **Эмпирическая:** использовать E5-H04 и E5-H05 при проектировании условия
    поражения `[O_20]`; сравнить typed-absence модель с baseline без неё и
    контролировать зависимость повторных разбиений.
-2. **Информационная:** выбрать одну пару уровней и попытаться построить полный
-   статистический эксперимент в смысле E5-H01. Не начинать с утверждения, что
-   порядок уже совпадает.
+2. **Информационная — частично выполнено:** в `BLACKWELL_BRIDGE.md` построена
+   типизированная связка У4→У5→У6 и конечный непустой Blackwell-остаток.
+   Следующий тест — независимо задать эксперименты $\mathcal E_6,\mathcal E_4$
+   и проверить существование канала $P_4=P_6K_{6\to4}$; текущая конструкция
+   канонический `projects_to` не доказывает.
 3. **Категориальная:** для `[OP_Lift]` выписать типы объектов и стрелок. Если не
    удаётся сформулировать коммутативный квадрат и diagonal filler, связь с
    E5-H12/E5-H13 остаётся терминологической.
@@ -2785,12 +2864,662 @@ Codex и исследователь независимо оценивают од
 - Не выполнен независимый screen исследователя.
 - Не выполнен ResearchRabbit round-trip.
 - Не проверено citation-network coverage вокруг шести работ.
-- Не построено ни одного полного формального отображения из внешнего формализма
-  в объекты ФТС.
+- Построено одно ограниченное отображение ролей У4–У6 во внешний конечный
+  эксперимент; отображения канонических уровней на пару сравнимых экспериментов
+  и общего закона лестницы нет.
 - Поэтому `EVIDENCE_MATRIX.tsv`, `SYNTHESIS.md` и `NOVELTY_BOUNDARY.md` остаются
   незаполненными.
 
-### 7.4. Библиографический указатель
+### 7.4. Поправка протокола для ограниченного Blackwell-моста
+
+*Источник сборки: `work/v14_rebuild/e5_literature_review/PROTOCOL_AMENDMENT_003.md`.*
+
+#### Поправка 003 к протоколу — ограниченный Blackwell-мост
+
+- amendment_id: `FTS-E5-A003`
+- authorized_by: авторская команда «Оформи Blackwell-мост»
+- authorized_at: `2026-07-27`
+- applies_to: `FTS-E5-2026-07-20`
+- status: `focused_bridge_authorized`
+
+##### Причина
+
+Общий синтез E5 остаётся закрыт до второго независимого screening-прохода и
+adjudication. Одновременно автор явно разрешил отдельный узкий инкремент:
+проверить, можно ли на уже включённых работах E5-H01 и E5-H02 построить
+типизированный операциональный мост к У4–У6.
+
+##### Разрешённый объём
+
+- выписать конечную форму порядка Блэквелла и её предпосылки;
+- построить кандидатное отображение
+  `У4 → эксперимент`, `У5 → правило решения`, `У6 → агрегат риска`;
+- дать точный конечный пример, контрпримеры и исполняемые проверки;
+- проверить, может ли конструкция служить кандидатом для `Res_n` и
+  `[O_14] QuestionGain`;
+- добавить в статью v14 только краткий указатель с явным кандидатным статусом.
+
+##### Что поправка не разрешает
+
+- не изменять `SCREENING_CODEX.tsv`, `SCREENING_RESEARCHER.tsv` и
+  `ADJUDICATION.tsv`;
+- не заполнять общий `SYNTHESIS.md`, `EVIDENCE_MATRIX.tsv` или
+  `NOVELTY_BOUNDARY.md`;
+- не объявлять уровни ФТС статистическими экспериментами по совпадению слов;
+- не отождествлять стохастическое огрубление с каноническим `projects_to`;
+- не повышать `St_FTS`, статусы карточек или силу общего novelty-claim.
+
+Поправка является авторским разрешением на один проверяемый исследовательский
+мост, а не снятием гейтов систематического обзора.
+
+### 7.5. Типизированный Blackwell-мост У4–У6
+
+*Источник сборки: `work/v14_rebuild/e5_literature_review/BLACKWELL_BRIDGE.md`.*
+
+#### Blackwell-мост для У4–У6
+
+##### Паспорт
+
+- Статус: `candidate_external_bridge`.
+- Область: только операциональное чтение У4–У6.
+- Каноническое основание: `[U_04]`, `[U_05]`, `[U_06]`, `[CH_04]`,
+  `[CH_05]`, `[CH_06]`, `[O_08]`, `[O_14]`, `[OP_Lift]`.
+- Внешнее основание: E5-H01, David Blackwell, *Equivalent Comparisons of
+  Experiments* (1953), DOI
+  [10.1214/aoms/1177729032](https://doi.org/10.1214/aoms/1177729032);
+  E5-H02, Tobias Fritz, Tomáš Gonda, Paolo Perrone, Eigil Fjeldgren Rischel,
+  *Representable Markov Categories and Comparison of Statistical Experiments
+  in Categorical Probability* (2023), DOI
+  [10.1016/j.tcs.2023.113896](https://doi.org/10.1016/j.tcs.2023.113896).
+- Влияние на `St_FTS`: отсутствует.
+- Протокольное основание: `PROTOCOL_AMENDMENT_003.md`.
+
+Мост разделяет три слоя: канонические факты ФТС, внешний математический
+результат и кандидатное отображение между ними. Ни один внешний термин не
+становится смыслом уровня автоматически.
+
+##### 1. Точные типы внешней конструкции
+
+Пусть заданы конечные множества:
+
+- `Θ` — состояния, которые требуется различать;
+- `X` — наблюдения более информативного эксперимента;
+- `Y` — наблюдения огрублённого эксперимента;
+- `A` — допустимые действия.
+
+Эксперимент — строко-стохастическая матрица
+
+$$
+P\in\operatorname{Stoch}(\Theta,X),\qquad
+P_{\theta x}\geq 0,\qquad \sum_x P_{\theta x}=1.
+$$
+
+Правило решения — строко-стохастическая матрица
+
+$$
+\delta\in\operatorname{Stoch}(X,A).
+$$
+
+Для функции потерь $L:\Theta\times A\to\mathbb R$ правило $\delta$ порождает
+вектор риска
+
+$$
+r_\theta(P,\delta,L)
+=
+\sum_{x\in X}\sum_{a\in A}
+P_{\theta x}\delta_{xa}L(\theta,a).
+$$
+
+Множество достижимых векторов риска в задаче $d=(A,L)$:
+
+$$
+\mathcal R(P;d)
+=
+\left\{
+r(P,\delta,L):
+\delta\in\operatorname{Stoch}(X,A)
+\right\}.
+$$
+
+При фиксированном априорном распределении
+$\mu\in\Delta(\Theta)$ скалярная цена задачи $d=(A,L)$ равна
+
+$$
+V_\mu(P;d)
+=
+\min_{\delta\in\operatorname{Stoch}(X,A)}
+\sum_{\theta\in\Theta}\mu_\theta r_\theta(P,\delta,L).
+$$
+
+Эти определения — `[внешнее]`; в каноне ФТС пространств `Θ`, `X`, `A`,
+функции потерь и априорного распределения нет.
+
+##### 2. Строгая внешняя лемма
+
+Пусть $K\in\operatorname{Stoch}(X,Y)$ и
+
+$$
+Q=PK.
+$$
+
+Тогда для любого правила
+$\gamma\in\operatorname{Stoch}(Y,A)$ правило
+$\delta=K\gamma\in\operatorname{Stoch}(X,A)$ даёт тот же вектор риска:
+
+$$
+\begin{aligned}
+r_\theta(P,K\gamma,L)
+&=
+\sum_{x,a}P_{\theta x}(K\gamma)_{xa}L(\theta,a)\\
+&=
+\sum_{y,a}(PK)_{\theta y}\gamma_{ya}L(\theta,a)\\
+&=
+r_\theta(Q,\gamma,L).
+\end{aligned}
+$$
+
+Следовательно, $P$ может воспроизвести каждую процедуру, доступную после
+огрубления $Q$, и
+
+$$
+V_\mu(P;d)\leq V_\mu(Q;d)
+$$
+
+для любой конечной задачи решения. В конечном случае обратное утверждение
+даёт теорема Блэквелла—Шермана—Стейна:
+
+$$
+\forall d\quad
+\mathcal R(P;d)\supseteq\mathcal R(Q;d)
+\quad\Longleftrightarrow\quad
+\exists K\in\operatorname{Stoch}(X,Y):\;PK=Q
+$$
+
+([внешнее: E5-H01, теоремы 3, 5 и 6]). E5-H02 переносит этот язык в
+марковские категории при дополнительных предпосылках; такие предпосылки в
+ФТС не постулируются.
+
+##### 3. Кандидатное отображение У4–У6
+
+Канон задаёт:
+
+- У4 — «Вероятность / закономерная случайность»,
+  `B=(a=₂b)∧(a≠₃b)` `[карточки U_04, CH_04]`;
+- У5 — «Выбор / случайность», `Select(B)`
+  `[карточки U_05, CH_05]`;
+- У6 — «Статистика / случайная закономерность», `Agg_i(V_i)`
+  `[карточки U_06, CH_06]`;
+- последовательность
+  `U_04→has_next→U_05→has_next→U_06`
+  `[канонические триплеты]`.
+
+На одном явно заданном статистическом носителе предлагается конструкция
+
+$$
+\Theta\xrightarrow{P}X\xrightarrow{\delta}A,
+\qquad
+L:\Theta\times A\to\mathbb R,
+\qquad
+r(P,\delta,L)\in\mathbb R^\Theta.
+$$
+
+| ФТС | Внешний тип | Допустимое чтение | Статус |
+|---|---|---|---|
+| У4 | $P\in\operatorname{Stoch}(\Theta,X)$ | семейство законов удерживает альтернативные состояния до решения | кандидатный свидетель |
+| У5 | $\delta\in\operatorname{Stoch}(X,A)$ | `Select(B)` реализуется как выбор действия по наблюдению | кандидатный свидетель |
+| У6 | $r(P,\delta,L)$ или $V_\mu(P;d)$ | `Agg_i(V_i)` реализуется суммированием потерь по наблюдениям и действиям | кандидатный свидетель |
+
+Это не три определения уровней, а одна типизированная реализация их
+операциональных ролей. Особенно важно: вектор риска не заменяет М-регистр У6
+`V·V`, а является экземпляром Ч-регистра `Agg_i(V_i)`.
+
+##### 4. Почему `projects_to` не равно огрублению Блэквелла
+
+Канон фиксирует ребро
+`U_06→projects_to→U_04` и общее основание
+$\pi_{n+2\to n}(M_{n+2})=M_n^*$ `[карточка O_08]`. В построении выше У4
+представлен экспериментом, а У6 — результатом агрегации риска. Поэтому
+марковская матрица между ними была бы нетипизированной: её областью должны быть
+наблюдения, а не вектор риска.
+
+Честная проверка `projects_to` требует второго слоя:
+
+$$
+\mathcal E_6=(\Theta,X_6,P_6),\qquad
+\mathcal E_4=(\Theta,X_4,P_4),\qquad
+P_4=P_6K_{6\to4}.
+$$
+
+Только после независимого задания экспериментальных реализаций обоих уровней
+матрица $K_{6\to4}$ может быть кандидатом-свидетелем проекции. Таких
+$P_6$, $P_4$ и $K_{6\to4}$ в каноне нет. Поэтому текущий мост
+операционализирует последовательность ролей У4→У5→У6, но не доказывает
+каноническое `projects_to`.
+
+##### 5. Blackwell-остаток и `[O_14] QuestionGain`
+
+Для заранее фиксированных $\mu$ и класса задач $\mathfrak D$ определим
+
+$$
+\operatorname{Res}^{\mu,\mathfrak D}_{BW}(P,Q)
+=
+\left\{
+d\in\mathfrak D:
+V_\mu(Q;d)-V_\mu(P;d)>0
+\right\}.
+$$
+
+Это множество задач, в которых огрубление имеет строго большую оптимальную
+цену. Оно может быть операциональным кандидатом для `Res_n`, но не
+тождественно ему: `[OP_Lift]` делает остаточный вопрос объектом нового уровня,
+тогда как теорема Блэквелла только сравнивает два уже заданных эксперимента.
+Канонического отображения
+$\operatorname{Res}_{BW}\to Res_n$ нет в артефактах.
+
+Для ограниченного свидетельства `[O_14] QuestionGain` требуется одновременно:
+
+1. зафиксировать `Θ`, наблюдения, $\mu$, действия и потери до сравнения;
+2. предъявить прямое огрубление $Q=PK$;
+3. предъявить задачу $d$ со строгим разрывом
+   $V_\mu(Q;d)>V_\mu(P;d)$;
+4. исключить обратное огрубление $P=QH$;
+5. сравнивать при одинаковом классе правил и без скрытого бокового канала.
+
+Тогда в выбранной модели вопрос решения доступен на `P` с ценой, недостижимой
+на `Q` без дополнительного аппарата. Это проверяемый кандидат смысла
+QuestionGain, а не доказательство появления нового уровня ФТС.
+
+##### 6. Точный конечный пример
+
+Пусть
+
+$$
+\Theta=X=A=\{0,1\},\qquad
+P=
+\begin{pmatrix}
+1&0\\
+0&1
+\end{pmatrix},
+\qquad
+K=
+\begin{pmatrix}
+1\\
+1
+\end{pmatrix},
+\qquad
+Q=PK=
+\begin{pmatrix}
+1\\
+1
+\end{pmatrix}.
+$$
+
+Эксперимент `P` без ошибки показывает состояние, а `Q` всегда выдаёт один и
+тот же символ. Возьмём равномерное $\mu$ и потерю
+$L(\theta,a)=\mathbf1[\theta\neq a]$.
+
+- На `P` правило $\delta(a\mid x)=\mathbf1[a=x]$ даёт
+  $r(P,\delta,L)=(0,0)$ и $V_\mu(P;d)=0$.
+- На `Q` пусть действие `1` выбирается с вероятностью $t$. Тогда
+  $r(Q,\gamma,L)=(t,1-t)$, а байесовская цена этого правила для любого $t$
+  равна $\tfrac12$; следовательно, $V_\mu(Q;d)=\tfrac12$.
+- Поэтому $d\in\operatorname{Res}_{BW}^{\mu,\mathfrak D}(P,Q)$ с разрывом
+  $\tfrac12$.
+- Обратной матрицы `H` с $QH=P$ нет: обе строки $QH$ неизбежно одинаковы,
+  а строки `P` различны.
+
+Пример реализует связку «эксперимент → выбор → статистический агрегат» и
+показывает непустой операциональный остаток. Он не выводит числа пять и четыре,
+не проверяет пентадную рекурсию и не является свидетелем
+`U_06→projects_to→U_04`.
+
+##### 7. Контрпримеры против завышения моста
+
+###### 7.1. Переименование наблюдений
+
+Если $K$ — перестановочная матрица, то существуют оба канала
+$Q=PK$ и $P=QK^{-1}$. Эксперименты Blackwell-эквивалентны, остаток пуст.
+Следовательно, новая запись или новое имя наблюдения не создают QuestionGain.
+
+###### 7.2. Одна метрика не задаёт порядок
+
+Пусть состояния — пары битов `00, 01, 10, 11`. Эксперимент `P₁` показывает
+только первый бит, а `P₂` — только второй. Для задачи предсказания первого бита
+значения риска равны `0` и `1/2`; для задачи предсказания второго — `1/2` и
+`0`. Ни один эксперимент не получается огрублением другого.
+
+Значит, выигрыш ФТС-представления на одной выбранной метрике не доказывает
+порядок Блэквелла. Нужен либо явный канал, либо универсальная проверка класса
+задач, соответствующая внешней теореме.
+
+##### 8. Условия поражения
+
+Мост отзывается или ослабляется до словесной аналогии, если выполняется хотя бы
+одно условие:
+
+1. не удаётся задать типы `Θ`, наблюдений, действий и потерь;
+2. соответствие У4/У5/У6 требует менять их канонические М- или Ч-регистры;
+3. заявленное огрубление не удовлетворяет $Q=PK$;
+4. преимущество существует только после добавления скрытого признака,
+   недоступного сравниваемому представлению;
+5. обратный канал делает эксперименты эквивалентными и
+   $\operatorname{Res}_{BW}$ пуст;
+6. локальный пример используется для вывода общего порядка уровней, размера
+   окна или сдвига пентады.
+
+##### 9. Статус результата
+
+| Утверждение | Статус |
+|---|---|
+| $Q=PK$ позволяет `P` воспроизводить все процедуры `Q` | строгий внешний результат |
+| Конечный бинарный пример и два контрпримера | проверено точной рациональной арифметикой |
+| У4→У5→У6 как эксперимент→решение→риск | `candidate_external_bridge` |
+| Blackwell-остаток как кандидат `Res_n`/QuestionGain | `candidate`, требуется реальный носитель ФТС |
+| Blackwell-канал как канонический `projects_to` | не установлено |
+| Изменение `St_FTS` | отсутствует |
+
+##### Найдено → зависимости → вывод → что не закрыто
+
+**Найдено.** Для У4–У6 существует честная типизированная внешняя реализация,
+в которой вероятность задаёт эксперимент, выбор — правило решения, статистика —
+агрегат риска.
+
+**Зависимости.** Нужны конечные эксперименты, функции потерь, одинаковый бюджет
+решений и явная марковская матрица; канонические опоры —
+`[U_04]`, `[U_05]`, `[U_06]`, `[CH_04]`, `[CH_05]`, `[CH_06]`.
+
+**Вывод.** Мост укрепляет ФТС не подтверждением всей лестницы, а новым
+операциональным тестом: утверждение об информативности теперь можно победить
+контрпримером, отсутствием канала или пустым Blackwell-остатком.
+
+**Что не закрыто.** Нет экспериментальных реализаций $\mathcal E_4$ и
+$\mathcal E_6$, нет свидетеля `projects_to`, нет отображения
+$\operatorname{Res}_{BW}\to Res_n`, не завершены второй screen и adjudication
+E5.
+
+### 7.6. Отчёт точных кандидатных проверок
+
+*Источник сборки: `work/v14_rebuild/e5_literature_review/BLACKWELL_BRIDGE_REPORT.md`.*
+
+#### Отчёт проверок Blackwell-моста
+
+- Статус проверок: `candidate_probe`, не C-NN.
+- Арифметика: точные рациональные числа `Fraction`.
+- Область: конечные эксперименты и заявленные примеры.
+- Влияние на `St_FTS`: отсутствует.
+
+Команда:
+
+```powershell
+python -X utf8 work/v14_rebuild/e5_literature_review/check_blackwell_bridge.py --write-report
+```
+
+Результат:
+
+```text
+PASS BW-01 — Типы и стохастичность бинарного огрубления: P, K, Q строко-стохастичны и Q=PK.
+PASS BW-02 — Репликация процедур после огрубления: Проверены детерминированные крайние точки; общий случай следует линейно.
+PASS BW-03 — Непустой Blackwell-остаток: V(P)=0, V(Q)=1/2, разрыв=1/2.
+PASS BW-04 — Обратное огрубление невозможно: Равные строки QH не могут совпасть с различными строками P.
+PASS BW-05 — Переименование не создаёт прироста: Перестановка обратима: P и PK Blackwell-эквивалентны.
+PASS BW-06 — Одна метрика не задаёт порядок Блэквелла: Первый и второй бит выигрывают на разных задачах; каналов нет в обе стороны.
+Итог: 6 PASS / 0 FAIL из 6
+```
+
+Проверки подтверждают матричную механику примера и контрпримеров. Они не доказывают отображение уровней ФТС на эксперименты и не проверяют канонический `projects_to`.
+
+### 7.7. Исполняемый код проверок Blackwell-моста
+
+*Источник сборки: `work/v14_rebuild/e5_literature_review/check_blackwell_bridge.py`.*
+
+~~~~python
+#!/usr/bin/env python3
+"""Точные кандидатные проверки конечного Blackwell-моста У4–У6."""
+
+from __future__ import annotations
+
+import argparse
+from fractions import Fraction
+from itertools import product
+from pathlib import Path
+
+
+F = Fraction
+Matrix = tuple[tuple[Fraction, ...], ...]
+Vector = tuple[Fraction, ...]
+REPORT_PATH = Path(__file__).with_name("BLACKWELL_BRIDGE_REPORT.md")
+
+
+def matrix(rows: list[list[int | Fraction]]) -> Matrix:
+    result = tuple(tuple(F(value) for value in row) for row in rows)
+    if not result or not result[0]:
+        raise ValueError("матрица должна быть непустой")
+    width = len(result[0])
+    if any(len(row) != width for row in result):
+        raise ValueError("матрица должна быть прямоугольной")
+    return result
+
+
+def matmul(left: Matrix, right: Matrix) -> Matrix:
+    if len(left[0]) != len(right):
+        raise ValueError("несогласованные размеры матриц")
+    return tuple(
+        tuple(
+            sum((left[i][k] * right[k][j] for k in range(len(right))), F(0))
+            for j in range(len(right[0]))
+        )
+        for i in range(len(left))
+    )
+
+
+def is_row_stochastic(value: Matrix) -> bool:
+    return all(
+        all(entry >= 0 for entry in row) and sum(row, F(0)) == 1
+        for row in value
+    )
+
+
+def deterministic_rules(observations: int, actions: int) -> tuple[Matrix, ...]:
+    rules: list[Matrix] = []
+    for selected in product(range(actions), repeat=observations):
+        rules.append(
+            tuple(
+                tuple(F(int(action == chosen)) for action in range(actions))
+                for chosen in selected
+            )
+        )
+    return tuple(rules)
+
+
+def risk_vector(experiment: Matrix, rule: Matrix, loss: Matrix) -> Vector:
+    states = len(experiment)
+    observations = len(experiment[0])
+    if len(rule) != observations:
+        raise ValueError("правило не согласовано с пространством наблюдений")
+    actions = len(rule[0])
+    if len(loss) != states or any(len(row) != actions for row in loss):
+        raise ValueError("потери не согласованы с состояниями и действиями")
+    return tuple(
+        sum(
+            (
+                experiment[state][observation]
+                * rule[observation][action]
+                * loss[state][action]
+                for observation in range(observations)
+                for action in range(actions)
+            ),
+            F(0),
+        )
+        for state in range(states)
+    )
+
+
+def bayes_value(experiment: Matrix, loss: Matrix, prior: Vector) -> Fraction:
+    if len(experiment) != len(prior):
+        raise ValueError("априорное распределение не согласовано с состояниями")
+    actions = len(loss[0])
+    values = []
+    for rule in deterministic_rules(len(experiment[0]), actions):
+        risk = risk_vector(experiment, rule, loss)
+        values.append(sum((prior[i] * risk[i] for i in range(len(prior))), F(0)))
+    # В конечной линейной задаче минимум по рандомизированным правилам
+    # достигается в детерминированной крайней точке.
+    return min(values)
+
+
+def equal_row_obstruction(source: Matrix, target: Matrix, first: int, second: int) -> bool:
+    """Равные строки source не могут стать разными после правого умножения."""
+    return source[first] == source[second] and target[first] != target[second]
+
+
+def run_checks() -> list[tuple[str, str, bool, str]]:
+    checks: list[tuple[str, str, bool, str]] = []
+
+    def add(check_id: str, title: str, passed: bool, detail: str) -> None:
+        checks.append((check_id, title, passed, detail))
+
+    perfect = matrix([[1, 0], [0, 1]])
+    forget = matrix([[1], [1]])
+    constant = matmul(perfect, forget)
+    zero_one_loss = matrix([[0, 1], [1, 0]])
+    uniform_two: Vector = (F(1, 2), F(1, 2))
+
+    add(
+        "BW-01",
+        "Типы и стохастичность бинарного огрубления",
+        is_row_stochastic(perfect)
+        and is_row_stochastic(forget)
+        and is_row_stochastic(constant)
+        and constant == matrix([[1], [1]]),
+        "P, K, Q строко-стохастичны и Q=PK.",
+    )
+
+    replication_ok = True
+    for low_rule in deterministic_rules(1, 2):
+        lifted_rule = matmul(forget, low_rule)
+        if risk_vector(perfect, lifted_rule, zero_one_loss) != risk_vector(
+            constant, low_rule, zero_one_loss
+        ):
+            replication_ok = False
+    add(
+        "BW-02",
+        "Репликация процедур после огрубления",
+        replication_ok,
+        "Проверены детерминированные крайние точки; общий случай следует линейно.",
+    )
+
+    perfect_value = bayes_value(perfect, zero_one_loss, uniform_two)
+    constant_value = bayes_value(constant, zero_one_loss, uniform_two)
+    add(
+        "BW-03",
+        "Непустой Blackwell-остаток",
+        perfect_value == 0 and constant_value == F(1, 2),
+        f"V(P)={perfect_value}, V(Q)={constant_value}, разрыв={constant_value-perfect_value}.",
+    )
+
+    add(
+        "BW-04",
+        "Обратное огрубление невозможно",
+        equal_row_obstruction(constant, perfect, 0, 1),
+        "Равные строки QH не могут совпасть с различными строками P.",
+    )
+
+    swap = matrix([[0, 1], [1, 0]])
+    renamed = matmul(perfect, swap)
+    add(
+        "BW-05",
+        "Переименование не создаёт прироста",
+        matmul(renamed, swap) == perfect
+        and bayes_value(renamed, zero_one_loss, uniform_two) == perfect_value,
+        "Перестановка обратима: P и PK Blackwell-эквивалентны.",
+    )
+
+    first_bit = matrix([[1, 0], [1, 0], [0, 1], [0, 1]])
+    second_bit = matrix([[1, 0], [0, 1], [1, 0], [0, 1]])
+    first_loss = matrix([[0, 1], [0, 1], [1, 0], [1, 0]])
+    second_loss = matrix([[0, 1], [1, 0], [0, 1], [1, 0]])
+    uniform_four: Vector = (F(1, 4), F(1, 4), F(1, 4), F(1, 4))
+    first_on_first = bayes_value(first_bit, first_loss, uniform_four)
+    first_on_second = bayes_value(second_bit, first_loss, uniform_four)
+    second_on_first = bayes_value(first_bit, second_loss, uniform_four)
+    second_on_second = bayes_value(second_bit, second_loss, uniform_four)
+    incomparable = (
+        first_on_first == 0
+        and first_on_second == F(1, 2)
+        and second_on_first == F(1, 2)
+        and second_on_second == 0
+        and equal_row_obstruction(first_bit, second_bit, 0, 1)
+        and equal_row_obstruction(second_bit, first_bit, 0, 2)
+    )
+    add(
+        "BW-06",
+        "Одна метрика не задаёт порядок Блэквелла",
+        incomparable,
+        "Первый и второй бит выигрывают на разных задачах; каналов нет в обе стороны.",
+    )
+
+    return checks
+
+
+def render_report(checks: list[tuple[str, str, bool, str]]) -> str:
+    passed = sum(result for _, _, result, _ in checks)
+    failed = len(checks) - passed
+    output = []
+    for check_id, title, result, detail in checks:
+        status = "PASS" if result else "FAIL"
+        output.append(f"{status} {check_id} — {title}: {detail}")
+    output.append(f"Итог: {passed} PASS / {failed} FAIL из {len(checks)}")
+
+    return (
+        "# Отчёт проверок Blackwell-моста\n\n"
+        "- Статус проверок: `candidate_probe`, не C-NN.\n"
+        "- Арифметика: точные рациональные числа `Fraction`.\n"
+        "- Область: конечные эксперименты и заявленные примеры.\n"
+        "- Влияние на `St_FTS`: отсутствует.\n\n"
+        "Команда:\n\n"
+        "```powershell\n"
+        "python -X utf8 "
+        "work/v14_rebuild/e5_literature_review/check_blackwell_bridge.py "
+        "--write-report\n"
+        "```\n\n"
+        "Результат:\n\n"
+        "```text\n"
+        + "\n".join(output)
+        + "\n```\n\n"
+        "Проверки подтверждают матричную механику примера и контрпримеров. "
+        "Они не доказывают отображение уровней ФТС на эксперименты и не "
+        "проверяют канонический `projects_to`.\n"
+    )
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--write-report",
+        action="store_true",
+        help="перезаписать детерминированный Markdown-отчёт",
+    )
+    args = parser.parse_args()
+
+    checks = run_checks()
+    for check_id, title, passed, detail in checks:
+        status = "PASS" if passed else "FAIL"
+        print(f"{status} {check_id} — {title}: {detail}")
+    passed_count = sum(result for _, _, result, _ in checks)
+    failed_count = len(checks) - passed_count
+    print(f"Итог: {passed_count} PASS / {failed_count} FAIL из {len(checks)}")
+
+    if args.write_report:
+        REPORT_PATH.write_text(render_report(checks), encoding="utf-8", newline="\n")
+        print(f"Отчёт: {REPORT_PATH}")
+    return 1 if failed_count else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+~~~~
+
+### 7.8. Библиографический указатель
 
 Ниже приведены только библиографические метаданные и исследовательская роль.
 Полные тексты, OCR-файлы и переводческие досье в выгрузку не включены.
@@ -2805,7 +3534,7 @@ Codex и исследователь независимо оценивают од
 | E5-H12 | Awodey, Steve and Warren, Michael A. | Homotopy Theoretic Models of Identity Types | 2009 | [10.1017/s0305004108001783](https://doi.org/10.1017/s0305004108001783) | `limiting` — ограничивает сильный перенос внешнего результата в ФТС |
 | E5-H13 | Gambino, Nicola and Garner, Richard | The Identity Type Weak Factorisation System | 2008 | [10.1016/j.tcs.2008.08.030](https://doi.org/10.1016/j.tcs.2008.08.030) | `limiting` — ограничивает сильный перенос внешнего результата в ФТС |
 
-### 7.5. BibTeX для цитирования
+### 7.9. BibTeX для цитирования
 
 ~~~~bibtex
 % DOI-preserving seed set for the manual ResearchRabbit round-trip.
