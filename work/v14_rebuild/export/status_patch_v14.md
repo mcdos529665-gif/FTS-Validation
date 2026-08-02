@@ -43,6 +43,8 @@ canonical_v14 -> отдельно пройдены К1–К5 и статус з�
 | UNIT_BOUNDARY | `x²=x ⇔ x∈{0,1}` и точечные совпадения | Равенство — `formal_math_fact`; «граница ФТС» — `candidate_v14` |
 | OVERLAY_AS_CARRIER / CHI_OVERLAY_VERIFIED | Подстановка `x:=χ` и её гардрейлы | `candidate_overlay`; не повышает статусы уровней |
 | SMALL_FORM_PROJECTION / CONTRADICTION_LATTICE | Проекции и зеркальные пары | `candidate_v14`; C-57…C-59 проверяют точные частные предикаты |
+| LEVEL_RETENTION_RULE | Следствие О1+О3+О8: локально несовместимая пара до У7 удерживается в `У(2k+2)` как различимые режимы | `derived_constraint` в структурной области `k∈{1,2,3}`; **не аксиома**, не одновременная истинность и не повышение U_08 |
+| SYMMETRY_ESCALATION_HYPOTHESIS | После У7: анти-форма → симметрия оператора (`ΔF=F`, У11) → инвариант группы (У15) | `hypothesis_candidate`; A0b подтверждает только смену носителя, C-18/C-31 — локальные math-факты; общего закона нет |
 | PROPOSAL_STRICT_BAND_7 | Гипотеза о границе форм до У7 | `candidate_requires_canonization`; тип — `hypothesis_candidate`; **без** `promotes_status_of` |
 | MAP_PENTAD / MAP_PI_PROJ / RULE_P | Пентада, проекции и правило П | `candidate_v14`; границы точных C-NN указать в карточках |
 | U_13_FORMULA | `∏Bₖ=0` | `candidate_prediction`; zero-product — `formal_math_fact` |

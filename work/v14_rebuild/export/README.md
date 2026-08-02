@@ -50,10 +50,18 @@
 Провизорные поля для workbook: `path` указывает на
 `45_Статус_гипотез_v14/PROPOSAL_STRICT_BAND_7`, `internal_ref` — `V14_AUDIT_STATUS_PATCH`.
 
+`LEVEL_RETENTION_RULE` подготовлено отдельно как `derived_constraint` из
+`O_01`+`O_03`+`O_08`, **не как аксиома**. `SYMMETRY_ESCALATION_HYPOTHESIS`
+подготовлено как `hypothesis_candidate`: A0b даёт только смену носителя
+симметрии, а последовательность анти-форма→оператор→группа остаётся проверяемой
+гипотезой. Ни одна из двух карточек не имеет ребра `promotes_status_of`.
+
 ## Проверка после внешней сборки
 
 Новая выгрузка обязана пройти workbook round-trip, новый `MANIFEST.json` и SHA256-сверку.
 `tools/query.py card PROPOSAL_STRICT_BAND_7` должен показать карточку без `promotes_status_of`.
+То же ограничение действует для `LEVEL_RETENTION_RULE` и
+`SYMMETRY_ESCALATION_HYPOTHESIS`.
 До этого каталог остаётся review-пакетом, а не каноном.
 
 ## Текущий аудиторский вердикт
