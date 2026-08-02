@@ -1,6 +1,7 @@
 # Журнал внешнего литературного поиска
 
-Дата: 2026-07-13. Режим: claim-driven web search; OpenAlex MCP в текущей среде
+Дата исходного поиска: 2026-07-13. Дополнительная claim-led проверка У1–У5:
+2026-08-02. Режим: claim-driven web search; OpenAlex MCP в текущей среде
 недоступен. Язык запросов — английский и русский. Поиск не претендует на исчерпывающую
 систематическую библиографию.
 
@@ -46,6 +47,16 @@ Wikipedia, Reddit и SEO-страницы не использовались ка
 27. `Trabelsi Deep Complex Networks OpenReview H1T2hmZAb`
 28. `Representable Markov Categories Comparison Statistical Experiments DOI`
 
+### Дополнительная проверка моста У1–У5 (2026-08-02)
+
+Это не расширение exact-phrase novelty-поиска, а проверка шести конкретных
+оснований из предложенного моста: оригинал Shannon; Lean `Eq.refl`; Mathlib
+`Setoid.ker`/`quotientKerEquivOfRightInverse`; Mathlib `ProbabilityMeasure`/Dirac;
+Lean `Or` против `Sum`/decidable branch; decision rule как переход
+observation→action. Все шесть источников открыты и сверены по
+первичному/официальному тексту; записи LIT-16…LIT-21 добавлены в
+`LITERATURE_MATRIX.tsv`.
+
 ## Покрытие и решение
 
 | Направление | Отобрано | Итог для ФТС |
@@ -57,6 +68,7 @@ Wikipedia, Reddit и SEO-страницы не использовались ка
 | Complex/phase-aware models | 3 | Complex representation не нова и не доказана необходимой для ФТС |
 | RadioML/CFO | 1 первичный + локальные результаты | Benchmark не идентифицирует чистый фазовый claim без абляций |
 | Retractions / HoTT | 4 | Нужны morphisms, identity/factorization laws и typed model |
+| Нижняя цепочка У1–У5 | 6 дополнительных | У2–У5 имеют прямые component-level конструкции; У1 — только limiting identity-якорь |
 | Граница новизны | 4 exact-phrase запроса | Точного аналога всей конструкции не найдено в пределах поиска; есть смежные работы |
 
 ## Граница новизны
@@ -66,7 +78,9 @@ Wikipedia, Reddit и SEO-страницы не использовались ка
 каналы и статусная механика)».** Это отрицательный результат поиска, не доказательство
 мировой новизны. Отдельные компоненты — сравнение экспериментов, missing indicators,
 group equivariance, complex networks, categorical retracts и HoTT — имеют развитую
-предшествующую литературу. Фраза `typed absence` также встречается вне ФТС.
+предшествующую литературу. Дополнение 2026-08-02 подтверждает component-level
+formal contact нижней цепочки У2–У5 и limiting-якорь У1, но не меняет границу
+новизны всей конструкции. Фраза `typed absence` также встречается вне ФТС.
 
 Литературная матрица: `LITERATURE_MATRIX.tsv`. Ни один источник автоматически не
 изменяет `St_FTS` или канонический статус.

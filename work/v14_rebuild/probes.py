@@ -2,7 +2,7 @@
 """
 probes.py — прогон ВСЕХ кандидат-проб одной командой.
 
-Это НЕ verification.py. Сьют — печать статьи («59 PASS = каждое формальное
+Это НЕ verification.py. Сьют — печать статьи («62 PASS = каждое формальное
 утверждение статьи имеет машинного свидетеля»); его FAIL отзывает статус
 formal_math_fact. Здесь — свидетели КАНДИДАТНЫХ утверждений из заметок
 (candidate/analogy_only): их PASS ничего не повышает, их FAIL ничего у статьи
@@ -31,11 +31,14 @@ verification.py как C-NN ТОЛЬКО когда её утверждение 
                 → законы полосы 6→7→8; бит ветви — инстанс к oq-d11)
   SHADOW-1…5  — shadow_lemma.md (2026-07-09: лемма о нижней тени — карта П5;
                 Z/2-разложение тень+бит, тень = инварианты Tot)
+  EXT15-1…3   — external_bridge_u1_u5.md (2026-08-02: фактор |x|, секции
+                представителей и конечная модель условной энтропии; [внешнее])
 
 Запуск: python -X utf8 work/v14_rebuild/probes.py    (exit 0 ⟺ все PASS)
 """
 import sys
-from math import gcd
+from itertools import product
+from math import gcd, log2
 
 import numpy as np
 import sympy as sp
@@ -497,6 +500,60 @@ def shadow5():
             and qg_gate(True, True) is False    # симметричная цель: воспроизводима из тени
             and qg_gate(True, False) is True)   # антисимметричная: не воспроизводима
 run("SHADOW-5", "shadow_lemma §1/O_14", "QG-сцепка: различающий ход канала бита живёт только в антиинварианте", shadow5)
+
+
+# -------------------------------------------- EXT15 (внешний мост У1–У5)
+# external_bridge_u1_u5.md. Это конечные sanity-пробы математического ядра,
+# НЕ доказательство семантики уровней и НЕ основание для St_FTS.
+
+def ext15_1():
+    # q=|·|: ненулевой слой имеет две зеркальные ветви, нулевой — одну.
+    return (solveset(Eq(Abs(x), 2), x, S.Reals) == sp.FiniteSet(-2, 2)
+            and solveset(Eq(Abs(x), 0), x, S.Reals) == sp.FiniteSet(0)
+            and Abs(-2) == Abs(2) and -2 != 2)
+run("EXT15-1", "external_bridge §2", "q=|·|: слой r=2 есть {−2,+2}, слой 0 вырожден",
+    ext15_1)
+
+
+def ext15_2():
+    # s± — две секции q на неотрицательном кодомене; s−∘q = −|x|.
+    samples = (sp.Rational(0), sp.Rational(1, 2), sp.Rational(3))
+    sections = all(Abs(r) == r and Abs(-r) == r for r in samples)
+    selected = all(-Abs(v) == -abs(v) for v in (-3, -1, 0, 2, 5))
+    return sections and selected
+run("EXT15-2", "external_bridge §2", "s±(r)=±r — секции |·|; s−(|x|)=−|x| на пробной сетке",
+    ext15_2)
+
+
+def ext15_3():
+    # Исчерпывающая конечная модель на {-2,-1,0,1,2}: веса 0/1/2.
+    # H(X||X|)>0 должно быть эквивалентно существованию слоя ±r с обеими
+    # положительными ветвями. Это sanity-check общей формулы, не её доказательство.
+    values = (-2, -1, 0, 1, 2)
+    for raw in product(range(3), repeat=len(values)):
+        total = sum(raw)
+        if total == 0:
+            continue
+        weights = dict(zip(values, raw))
+        entropy = 0.0
+        both = False
+        for r in (1, 2):
+            wp, wm = weights[r], weights[-r]
+            layer = wp + wm
+            if wp > 0 and wm > 0:
+                both = True
+            if layer:
+                for w in (wp, wm):
+                    if w:
+                        p = w / layer
+                        entropy -= (layer / total) * p * log2(p)
+        if (entropy > 1e-12) != both:
+            return False
+        if entropy < -1e-12 or entropy > 1.0 + 1e-12:
+            return False
+    return True
+run("EXT15-3", "external_bridge §3", "На всех весах 0/1/2: H(X||X|)>0 ⇔ есть положительные ±r; H≤1 bit",
+    ext15_3)
 
 # ----------------------------------------------------------------- итог
 n_pass = sum(1 for r in RESULTS if r[3])

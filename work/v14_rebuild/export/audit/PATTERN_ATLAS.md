@@ -64,7 +64,7 @@
 | PA-C06 | комплексная сборка | Z/2→Z/4→U(1), колонка 0/4/8/12 | чистый capacity-matched RoleNec |
 | PA-C07 | Tot как group collapse | ratio-алгебра | явный операционный морфизм Tot |
 | PA-C08 | χ/stat/tensor overlays | повторные overlay-карточки | закон преобразования и абляция |
-| PA-C09 | Blackwell/category/HoTT | внешние формализмы | явные objects/morphisms/risks/laws |
+| PA-C09 | типизированные внешние мосты У1–У5/Blackwell/category/HoTT | У2–У5 имеют component-level formal contact; остальные — направления | Stable/measure/criterion и явные objects/morphisms/risks/laws |
 
 ## 4. Опровергнуто или артефакт
 
