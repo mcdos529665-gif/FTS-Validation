@@ -428,6 +428,11 @@
   literature review и внешний workbook round-trip.
 
 ## Лог сессий
+- 2026-09-05 (3) — общий протокол arXiv записан в `PROJECT_INSTRUCTIONS.md` и
+  кратком README: каждая статья живёт отдельным пакетом с неизменяемым
+  `source/`, `original.pdf` и производным `article.md`; при расхождении
+  первичен LaTeX, PDF используется для вёрстки, Markdown правится по исходнику.
+  Корневой `source/` не переопределён и остаётся каноном v13.
 - 2026-09-05 (2) — явные дополнения из внешнего исследовательского файла внесены
   как отдельный пакет `EXPLICIT_ADDITIONS_2026-09-05.md`: REFINE-MIN,
   DENSE-PARTITION, SELECT-SYMMETRY, ABS-GAIN, границы Lift/У0–У7 и ограниченная
