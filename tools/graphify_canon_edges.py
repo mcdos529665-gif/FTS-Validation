@@ -229,7 +229,10 @@ def inject(nodes, edges):
         labels[cid] = " ".join(s.split()[:5]) or str(top)
 
     questions = suggest_questions(G, communities, labels)
-    detection = {"total_files": None, "total_words": None}
+    # Graphify 0.9+ formats ``total_words`` numerically when no warning is
+    # supplied.  This deterministic overlay has no corpus scan of its own,
+    # so state that boundary explicitly instead of passing ``None``.
+    detection = {"warning": "canonical overlay — file stats not available"}
     report = generate(G, communities, cohesion, labels, gods, surprises,
                       detection, {"input": 0, "output": 0}, ".", suggested_questions=questions)
     open(os.path.join(OUT_DIR, "GRAPH_REPORT.md"), "w", encoding="utf-8").write(report)

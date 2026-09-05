@@ -554,6 +554,7 @@ def merge_fragment(
     links = list(graph.get(links_key, []))
     existing_nodes = {str(item["id"]): item for item in nodes if isinstance(item, dict) and item.get("id")}
     communities = [item.get("community") for item in nodes if isinstance(item, dict) and isinstance(item.get("community"), int)]
+    fragment_node_ids = {str(item["id"]) for item in fragment["nodes"]}  # type: ignore[index]
     fragment_communities = {
         prior.get("community")
         for item in fragment["nodes"]  # type: ignore[index]
@@ -561,8 +562,14 @@ def merge_fragment(
         and isinstance(prior.get("community"), int)
     }
     if len(fragment_communities) > 1:
-        raise ValueError("audit-навигация распределена по нескольким community")
-    nav_community = next(iter(fragment_communities), max(communities, default=-1) + 1)
+        # ``graphify update`` can re-cluster pre-existing deterministic overlay
+        # nodes.  Keep the overlay navigable as one explicitly labelled island
+        # instead of treating that mechanical re-clustering as a data conflict.
+        nav_community = max(communities, default=-1) + 1
+        for node_id in fragment_node_ids & set(existing_nodes):
+            existing_nodes[node_id]["community"] = nav_community
+    else:
+        nav_community = next(iter(fragment_communities), max(communities, default=-1) + 1)
 
     added_nodes = 0
     for item in fragment["nodes"]:  # type: ignore[index]
@@ -580,6 +587,14 @@ def merge_fragment(
 
     if ANCHOR_SYSTEM not in existing_nodes:
         raise ValueError(f"базовый Graphify-граф не содержит {ANCHOR_SYSTEM}")
+    # Базовый документный узел создан обычной Graphify-экстракцией и может
+    # сохранить старый счётчик после добавления OQ. Навигационный слой владеет
+    # точным списком якорей, поэтому синхронизирует только эту метку.
+    anchor_count = len(read_oq_anchors())
+    existing_nodes[ANCHOR_SYSTEM]["label"] = (
+        f"Система якорей {{#oq-*}}: {anchor_count} стабильных ID для всех пунктов "
+        "(инструмент: tools/oq_anchor.py, guarded)"
+    )
     known = set(existing_nodes)
     existing_edges = {edge_key(item) for item in links if isinstance(item, dict) and "source" in item and "target" in item}
     added_edges = 0
@@ -801,7 +816,7 @@ def verify(fragment: dict[str, object], summary: dict[str, object]) -> None:
         raise AssertionError(f"graph.json: отсутствуют audit-рёбра {missing_edges[:5]} (всего {len(missing_edges)})")
     if wrong_confidence:
         raise AssertionError(f"graph.json: нарушена метка доверия {wrong_confidence[:3]}")
-    expected = {"patterns": 31, "open_questions": 49, "claims": 25, "findings": 20}
+    expected = {"patterns": 31, "open_questions": 53, "claims": 25, "findings": 20}
     for key, value in expected.items():
         if summary[key] != value:
             raise AssertionError(f"неожиданное покрытие {key}: {summary[key]} != {value}")

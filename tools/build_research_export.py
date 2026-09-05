@@ -44,6 +44,9 @@ E5_TYPED_ABSENCE = E5_ROOT / "TYPED_ABSENCE_BRIDGE.md"
 E5_LIFT_TYPING = E5_ROOT / "LIFT_TYPING_PROJECT.md"
 E5_ABSENCE_LIFT_REPORT = E5_ROOT / "ABSENCE_LIFT_REPORT.md"
 E5_ABSENCE_LIFT_CHECK = E5_ROOT / "check_absence_lift_projects.py"
+E5_EXPLICIT_ADDITIONS = E5_ROOT / "EXPLICIT_ADDITIONS_2026-09-05.md"
+E5_EXPLICIT_ADDITIONS_REPORT = E5_ROOT / "EXPLICIT_ADDITIONS_REPORT.md"
+E5_EXPLICIT_ADDITIONS_CHECK = E5_ROOT / "check_explicit_additions.py"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -79,6 +82,9 @@ INPUT_PATHS = (
     E5_LIFT_TYPING,
     E5_ABSENCE_LIFT_REPORT,
     E5_ABSENCE_LIFT_CHECK,
+    E5_EXPLICIT_ADDITIONS,
+    E5_EXPLICIT_ADDITIONS_REPORT,
+    E5_EXPLICIT_ADDITIONS_CHECK,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -430,6 +436,19 @@ def render_export() -> str:
                 markdown_source(
                     "7.13. Внешний типизированный мост У1–У5",
                     EXTERNAL_BRIDGE_U1_U5,
+                ),
+                markdown_source(
+                    "7.14. Явные дополнения Deep Research 2026-09-05",
+                    E5_EXPLICIT_ADDITIONS,
+                ),
+                markdown_source(
+                    "7.15. Отчёт конечных проверок явных дополнений",
+                    E5_EXPLICIT_ADDITIONS_REPORT,
+                ),
+                fenced_source(
+                    "7.16. Исполняемый код проверок явных дополнений",
+                    E5_EXPLICIT_ADDITIONS_CHECK,
+                    "python",
                 ),
                 external_bibliography(),
             ]

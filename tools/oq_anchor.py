@@ -30,13 +30,15 @@ PLAN = [
     ("x", "oq-machine-check-done"),
     (" ", "oq-kappa-provenance"),
     ("~", "oq-o20-missing-benchmark"),
-    ("x", "oq-formulas-7-11-done"),
-    ("x", "oq-upper-12-17-done"),
+    ("~", "oq-formulas-7-11-done"),
+    ("~", "oq-upper-12-17-done"),
     ("x", "oq-chi-ladder-done"),
     (" ", "oq-phase-causal-u9"),
+    ("x", "oq-full-audit-done"),
+    (" ", "oq-systematic-literature-review"),
     # ## Новые (после пересборки v14, 2026-06-11)
-    (" ", "oq-node11-asymmetry"),
-    (" ", "oq-pi-projection-above-u7"),
+    ("~", "oq-node11-asymmetry"),
+    ("~", "oq-pi-projection-above-u7"),
     ("x", "oq-export-refs-done"),
     (" ", "oq-u8-u10-optests"),
     (" ", "oq-dict-d-completeness"),
@@ -71,6 +73,7 @@ PLAN = [
     ("x", "oq-8plus-only-refuted"),
     (" ", "oq-synthesis-c-assembly"),
     ("~", "oq-d2-sign-retrieval-remainder"),
+    (" ", "oq-graph-dep-sync"),
     (" ", "oq-roots-of-unity-z368"),
     ("~", "oq-pentad-role-cycle"),
     (" ", "oq-padic-carrier-channel"),
@@ -85,6 +88,14 @@ PLAN = [
     (" ", "oq-levy-world"),
     (" ", "oq-edgeworth-u9"),
     (" ", "oq-vieta-cubic-s3"),
+    ("x", "oq-audit-status-promotions-done"),
+    (" ", "oq-audit-semantic-repromotion"),
+    (" ", "oq-audit-canon-reference-repair"),
+    # ## Явные дополнения Deep Research 2026-09-05
+    (" ", "oq-next-question-principle"),
+    (" ", "oq-u0-u7-refinement-protocol"),
+    (" ", "oq-antitotality-diagonal-preconditions"),
+    (" ", "oq-typed-absence-provenance-benchmark"),
 ]
 
 ITEM = re.compile(r"^- \[([ x~])\] (.*)$")

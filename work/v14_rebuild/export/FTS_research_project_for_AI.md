@@ -30,22 +30,22 @@
 
 | Входной артефакт | SHA256 |
 |---|---|
-| `tools/build_research_export.py` | `0ff3e51a2223db96b524eb5073718e314476e9ab8c6986f723c2e6129cd97853` |
+| `tools/build_research_export.py` | `3e9ca83c3fa844a44c7fb699a5f733df73fd8e7d7c780b9c7b4db4595f355e40` |
 | `PROJECT_INSTRUCTIONS.md` | `8aee11e9443c051b781100362663f0978e9d520ee33b0eea2207c561e32f8b85` |
-| `work/STATE.md` | `a18a78c07b7ec087330586d71baedd82f631e0d4666fd80ea7a0459a4791d003` |
+| `work/STATE.md` | `72e05edd8be907ffaa822e6f7995cbad1e331915be880fe8e56a5a88232b25eb` |
 | `work/notation.md` | `7ba79a71967f4dc4c10c021b34cbc757f379f3ad0060c4a12474140c35ec1217` |
-| `work/DECISIONS.md` | `cbaf83a6c299475ad10b777f41f2b905a2e2fc8ee19b513d2bc615da22befdc4` |
-| `work/OPEN_QUESTIONS.md` | `3309a928ec600ea8a39cb9d0247d8163cf5dfd6bf568e2af5f7baa7786989b63` |
+| `work/DECISIONS.md` | `583b2bc001704c86e1b749402ec5f9fb8662d538e5b12b73b94baf98960c8cd8` |
+| `work/OPEN_QUESTIONS.md` | `9234fa96959a67ab16a8ae512d1a3d96b7bde211d224d97763f7497b7f66b8ef` |
 | `work/v14_rebuild/FTS_v14_paper.md` | `9837ad4bd09bd2aa7832372a687f9a1799448bdc36c2fe05c14ffcdac4a8f873` |
 | `work/v14_rebuild/FTS_v14_register_map.md` | `d72de146dca2d80a0f6332d13df347661b097e64b0c36a231eae7134b0743142` |
-| `work/v14_rebuild/status_patch_v14.md` | `dc8f7f9702cdfc851b2012f3bdb78601957a7d32295f898aaa2d5a2a61969301` |
+| `work/v14_rebuild/status_patch_v14.md` | `53a31534c4278e51537ff4079b8f71b7a7d9b45b3f8555c63749d587bdf3d260` |
 | `work/v14_rebuild/red_team_F3.md` | `e4f660d121da9cfd428ac72786f2bf00a55a93cee579c08886dc160440795e56` |
 | `work/v14_rebuild/verification_report.md` | `bd8e7ec7cfc18ebb63564a15dc46ab2efbec4f87c313ba918c628f323dff9dc2` |
 | `work/v14_rebuild/verification.py` | `b316bc004c67e1816f1486e7031a360c1c10bd8afab6ccfafc4fc199110a894e` |
-| `work/v14_rebuild/external_bridge_u1_u5.md` | `d319e28085d657ec0e3de1086fa7acbfdd39a3b06cf473f478aaf61c96e96460` |
+| `work/v14_rebuild/external_bridge_u1_u5.md` | `3ae0b6af574a3928bbe34fe4d52b5b04c096547a164f5a95ab135e3455643ed3` |
 | `work/v14_rebuild/e5_literature_review/PROTOCOL.md` | `f0fd5f7acb72445585623a18449c21a91bb980452520f0fe1b3ac2a84f8ab579` |
 | `work/v14_rebuild/e5_literature_review/WAVE_0_STATUS.md` | `309f327bdbc5df06edeab5b7853717015358ee506e5b4b61f996fe9a1cedc392` |
-| `work/v14_rebuild/e5_literature_review/COUPLING_MAP.md` | `36b8fd937b0b492788b7eeab0f98a71fdd9e8d1be5d62eddebcb560df5670ebd` |
+| `work/v14_rebuild/e5_literature_review/COUPLING_MAP.md` | `e2e3c54f8afecda8479a4dca808c5c4ed27893ab0b41368a9b8ee16a8386464b` |
 | `work/v14_rebuild/e5_literature_review/seed_set.bib` | `f2f2fd67e641ecafea8a36ba2843efd6c4181934f3f356e360c2ed82ab33b247` |
 | `work/v14_rebuild/e5_literature_review/CANDIDATES.tsv` | `e114406468407ad2700bd11b4f818736a4916ba9318f300a479f5a01b7a64227` |
 | `work/v14_rebuild/e5_literature_review/PROTOCOL_AMENDMENT_003.md` | `98079a8a24f0ffe31101549389698194b1df59fd1f44bd729f9bb6e6240a4ad3` |
@@ -53,10 +53,13 @@
 | `work/v14_rebuild/e5_literature_review/BLACKWELL_BRIDGE_REPORT.md` | `1e4a43cbdf95ffcf3ef613712d869b3a570e16cf90e226cc734815a59b266bab` |
 | `work/v14_rebuild/e5_literature_review/check_blackwell_bridge.py` | `4d2d396e8b6d034338a3ccd7969e1dde87803697e019d0ff1c51b77a729e537f` |
 | `work/v14_rebuild/e5_literature_review/PROTOCOL_AMENDMENT_004.md` | `dbd0fd32e208df6bfb8bc6e28751de6edf9e00412565b06b147e4c0e7fadcb72` |
-| `work/v14_rebuild/e5_literature_review/TYPED_ABSENCE_BRIDGE.md` | `81c57c8d95349766e05e0125fb9c68e66b0a9ac281f5f9c4ab33dc97530d07bf` |
-| `work/v14_rebuild/e5_literature_review/LIFT_TYPING_PROJECT.md` | `75f3e1089faaaf1e5ba92e1f0887f9efbb41e49dbc36596269c31960cfffcb53` |
+| `work/v14_rebuild/e5_literature_review/TYPED_ABSENCE_BRIDGE.md` | `148000dbb6a00b3a5c47ec6ed7858f3c7643a4a35dd90791d3ac24a400bd1ea7` |
+| `work/v14_rebuild/e5_literature_review/LIFT_TYPING_PROJECT.md` | `39074bfcf243ce7e8feee60d081fdda79c0e750eec51147b62dfe62e4793f11f` |
 | `work/v14_rebuild/e5_literature_review/ABSENCE_LIFT_REPORT.md` | `63ffda01000307b1d09d465bbee0fe812b9406a1edc113d5f86961c7e9b86624` |
 | `work/v14_rebuild/e5_literature_review/check_absence_lift_projects.py` | `908dbf45d928edf3eec948f0fba1625c3bad1355da7d97897c66693552d0a34d` |
+| `work/v14_rebuild/e5_literature_review/EXPLICIT_ADDITIONS_2026-09-05.md` | `7656cfc9919c5f2fe4bd68e7ec64a1008617df18a00acb7568354d35cd9354ba` |
+| `work/v14_rebuild/e5_literature_review/EXPLICIT_ADDITIONS_REPORT.md` | `2e96878dd4c9302199e18ca0f8088ab6ab2761d6c51c96683b64f7daea05a7cf` |
+| `work/v14_rebuild/e5_literature_review/check_explicit_additions.py` | `4ee4d872cef7d02153f01aa6932edb47dd83bd721dc113112b875526b961d714` |
 | `source/MANIFEST.json` | `a91c453226cac21072478fa1fbf2db766e36f1bfe477e52414ee19f5c8f6f16a` |
 | `source/FTS_v13_LLM_CONTEXT.md` | `65be293a8e93eec5cb7d732ef2cd588115ada25d87471bd613e1ffab8693ead2` |
 | `source/FTS_v13_LLM_FULL_DUMP.md` | `a3f1852af32bbf1ef385e34dbbe6908b38374baa9cd08f0ef21437f3f7440d73` |
@@ -170,15 +173,16 @@
   `v14_rebuild/audit/` содержит baseline, runner, реестр 20 находок, матрицу 25
   существенных claim-групп, atlas 31 закономерности, графовый patch-plan,
   воспроизводимость, 21-источниковую литературную матрицу и два итоговых отчёта.
-  Постаудиторская карта `PATTERN_OQ_MAP.md/.tsv` (2026-07-14) связывает 31/31
-  паттернов с 49/49 открытыми/частичными OQ, семью программами и общими событиями
+  Постаудиторская карта `PATTERN_OQ_MAP.md/.tsv` (2026-09-05) связывает 31/31
+  паттерн с 53/53 открытыми/частичными OQ, семью программами и общими событиями
   E1…E10/PARK/WATCH/ROLLUP; три мета-паттерна оставлены кандидатами. Coverage карты
   включён в P1-гейт.
 - Детерминированный Graphify-слой синхронизирован с этой картой: в
-  `graphify-out/` 626 узлов и 1257 связей, из них навигационный оверлей содержит
-  155 узлов, 590 рёбер и 1 hyperedge (31 паттерн, 49 OQ, 25 claim-групп, 20
-  находок). `direct` остаётся `EXTRACTED` (34 моста), а 86 кураторских мостов
-  помечены `INFERRED`; оверлей не меняет канон или статусы. Повторяемый запуск:
+  `graphify-out/` 630 узлов и 1283 связи, из них навигационный оверлей содержит
+  159 узлов, 616 рёбер и 1 hyperedge (31 паттерн, 53 OQ, 25 claim-групп, 20
+  находок). `direct` остаётся `EXTRACTED` (34 моста), добавлены 8 служебных
+  `support`-мостов `EXTRACTED`, а 86 кураторских мостов помечены `INFERRED`;
+  оверлей не меняет канон или статусы. Повторяемый запуск:
   `tools/graphify_audit_navigation.py --inject --verify` через runtime на `E:`.
   Открытых P0/P1 нет. Канон: 13 ok / 0 missing / 0 mismatch / 0 extra; formal:
   62 PASS / 0 FAIL; candidate-probes: 50 PASS / 0 FAIL; crosscheck
@@ -194,6 +198,11 @@
   `external_bridge_candidate` с правилом `Sem(U_n) ⇒ M_n`, но не обратно. Это не
   повышает `St_FTS`, не выбирает `s_-` из двух секций и не доказывает лестницу или
   её новизну целиком.
+- Явные дополнения Deep Research 2026-09-05 внесены только в исследовательский
+  слой: REFINE-MIN, DENSE-PARTITION, SELECT-SYMMETRY, ABS-GAIN, границы Lift,
+  У0/У1, У5→У6 и У6→У7, диагональная схема и четыре новых OQ. Формальные
+  конечные инстансы проверяются EA-01…EA-08; это candidate-probes, не C-NN и не
+  повышение St_FTS. Новые маршруты внесены и проверены в Graphify; source не менялся.
 - Для независимой второй CAS-проверки создан явно вызываемый навык
   `.agents/skills/fts-wolfram-audit/`. Он проверяет точный предикат, область,
   кванторы, непустоту допущений, контрпримеры и ветви; выдаёт вердикт только по
@@ -2646,6 +2655,7 @@ canonical_v14 -> отдельно пройдены К1–К5 и статус з�
 | OVERLAY_AS_CARRIER / CHI_OVERLAY_VERIFIED | Подстановка `x:=χ` и её гардрейлы | `candidate_overlay`; не повышает статусы уровней |
 | SMALL_FORM_PROJECTION / CONTRADICTION_LATTICE | Проекции и зеркальные пары | `candidate_v14`; C-57…C-59 проверяют точные частные предикаты |
 | EXTERNAL_BRIDGE_U1_U5 | Типизированная цепочка `Stable → E → Dist → μ на слое → section/decision rule`; `|x|` как класс альтернатив, `−|x|` как фиксированный селектор | `external_bridge_candidate`; прямой компонентный контакт У2–У5, У1 только limiting; **без** `promotes_status_of`, порядок/семантика уровней не доказаны |
+| EXPLICIT_ADDITIONS_20260905 | REFINE-MIN, DENSE-PARTITION, SELECT-SYMMETRY, ABS-GAIN, ограничители Lift/У0–У7 и новые OQ | `external_research_integration`; точные конечные математические области проверены EA-01…EA-08, но **без** `promotes_status_of`, без C-NN статьи и без повышения `St_FTS` |
 | LEVEL_RETENTION_RULE | Следствие О1+О3+О8: локально несовместимая пара до У7 удерживается в `У(2k+2)` как различимые режимы | `derived_constraint` в структурной области `k∈{1,2,3}`; **не аксиома**, не одновременная истинность и не повышение U_08 |
 | SYMMETRY_ESCALATION_HYPOTHESIS | После У7: анти-форма → симметрия оператора (`ΔF=F`, У11) → инвариант группы (У15) | `hypothesis_candidate`; A0b подтверждает только смену носителя, C-18/C-31 — локальные math-факты; общего закона нет |
 | PROPOSAL_STRICT_BAND_7 | Гипотеза о границе форм до У7 | `candidate_requires_canonization`; тип — `hypothesis_candidate`; **без** `promotes_status_of` |
@@ -4315,6 +4325,16 @@ if __name__ == "__main__":
   property и не получил статуса WFS. Причина: вернуть потерянный проверяемый
   исследовательский слой без отката более нового аудита и без изменения `source/`.
 
+- 2026-09-05 (2) — пакет явных дополнений Deep Research принят только в
+  исследовательский слой. REFINE-MIN, DENSE-PARTITION, SELECT-SYMMETRY, ABS-GAIN,
+  уточнения Lift и диагональная схема записаны с точными конечными пределами;
+  EA-01…EA-08 — детерминированные candidate-пробы. Добавлены OQ о принципе
+  следующего вопроса, переходных карточках У0–У7, диагональных предпосылках и
+  четырёхрукавном provenance benchmark. Ни канон source, ни St_FTS, ни статусы
+  уровней не повышаются; новые связи являются навигационными, без
+  promotes_status_of. Причина: сделать внешний результат проверяемым внутри
+  проекта, не подменяя формальную модель семантической канонизацией.
+
 ### 6.2. Открытые вопросы
 
 *Источник сборки: `work/OPEN_QUESTIONS.md`.*
@@ -4621,6 +4641,28 @@ if __name__ == "__main__":
       Полная таблица: `work/v14_rebuild/audit/CANON_REFERENCE_PATCH.tsv`.
       Пока v13 неизменяем, все дефекты трассируемости классифицированы.
 
+##### Явные дополнения Deep Research 2026-09-05
+
+- [ ] NEXT-QUESTION-PRINCIPLE: задать независимое правило выбора следующего {#oq-next-question-principle}
+      остаточного вопроса. Оно должно запрещать произвольную перестановку
+      независимых вопросов, не использовать семантику будущего уровня и иметь
+      condition of defeat. Локальная минимальность и невставляемость сами по
+      себе не доказывают единственный порядок лестницы.
+- [ ] Карточки уточнения представлений для У0–У7: для каждого перехода заполнить {#oq-u0-u7-refinement-protocol}
+      old representation, new question, admissible class, QuestionGain witness,
+      REFINE-MIN, RoleNec, DENSE-PARTITION, hidden-resource/M-prime audits,
+      defeat и status consequence. Нельзя называть переход невставляемым до
+      поиска промежуточного представления в явно заданном классе.
+- [ ] Диагональный аналог антитотальности: показать либо опровергнуть для режима {#oq-antitotality-diagonal-preconditions}
+      ФТС предпосылки самоприменения, кодирования и булева отрицания. Внешняя
+      диагональная схема не является автоматическим доказательством следующего
+      уровня или его семантики.
+- [ ] Новый pre-registered benchmark typed absence/provenance: четыре {#oq-typed-absence-provenance-benchmark}
+      capacity-matched представления missing_only, missing_plus_mechanism,
+      full_provenance и shuffled_provenance; независимые данные, фиксированные
+      loss/budget/defeat. Это следующий допустимый тест после отрицательного
+      o20, а не переписывание его результата.
+
 ##### Анти-цели (чем ФТС НЕ является)
 Не абсолютная метатеория мира; не «доказанные 8+»; не смешение ¬A/0_A/⊖A;
 не список красивых слов без ролей и условий поражения.
@@ -4760,6 +4802,22 @@ worldwide novelty has been exhausted.
 | E5-H05 | Дисперсия repeated holdout и скорректированный resampled t-test | `[O_20]` как эмпирически проверенный кандидат | `direct` | Зафиксировать независимую единицу, splits, primary metric и оценку корреляции | Аудит O_20 дал 1/4 dataset wins, exact sign p=0.9375; метод контролирует вывод, но не подтверждает содержание O_20 |
 | E5-H12 | Объекты путей и слабая система факторизации как семантика типов тождества | Топологические мотивы; `[OP_Lift]` | `limiting` | Задать категорию, классы морфизмов, path objects, substitution stability | Паспорт L0–L7 фиксирует эти долги; текущая Set-модель не удовлетворяет предпосылкам теоремы 3.1 автоматически |
 | E5-H13 | Слабая система факторизации в классифицирующей категории теории типов | `[OP_Lift]`, `Res`, переход уровня | `limiting` | Определить display maps, два класса морфизмов, факторизацию и fillers | Проект явно разделяет объектный `Lift_FTS(X,Res)` и отношение `i ⟂ p`; WFS не заявлена |
+
+##### Явные дополнения Deep Research 2026-09-05
+
+Это не новая библиографическая запись и не результат adjudication. Это
+авторский внешний формальный пакет, интегрированный в
+EXPLICIT_ADDITIONS_2026-09-05.md; его связи добавлены в навигационный граф без
+эффекта на St_FTS.
+
+| ID | Формальный узел | Узел ФТС | Роль связи | Точный предел |
+|---|---|---|---|---|
+| EA-REFINE | REFINE-MIN: \(q^+=(q,r)\) минимален для фиксированного вопроса | [O_14], [OP_Lift] | limiting | не выбирает следующий вопрос и не доказывает семантику уровня |
+| EA-DENSE | DENSE-PARTITION: покрытие конечного разбиения | переходы У0–У7 | limiting | работает только в явно заданном классе допустимых представлений |
+| EA-SELECT | SELECT-SYMMETRY: нет эквивариантной секции ненулевого двоичного слоя | У4→У5, [CH_05] | direct component | показывает потребность в ресурсе выбора, но не его источник и не единственность минуса |
+| EA-ABS | ABS-GAIN: \(R^*_{\log}(Y)-R^*_{\log}(Y,M)=I(\Theta;M\mid Y)\) | [O_20], typed absence | limiting | локальный log-loss факт; o20 остаётся отрицательным |
+| EA-LIFT | проекция и секция сохраняют старый слой, не фактический residual | [A6; A7; OP_Lift] | limiting | не устанавливает WFS и не типизирует общий Res |
+| EA-NEXT | NEXT-QUESTION-PRINCIPLE и диагональные предпосылки | OPEN_QUESTIONS | support | создаёт обязательства, не порядок лестницы и не следующий рунг |
 
 ##### Наиболее продуктивные следующие проверки
 
@@ -5759,6 +5817,29 @@ recorded_at
 6. полная запись восстанавливается из `¬A` без внешней информации — тогда
    предполагаемая структура была декоративной.
 
+###### 8.1. ABS-GAIN и обязательный отрицательный контроль
+
+Пусть \(Y\) — грубая запись отсутствия, \(M\) — проверяемый
+mechanism/provenance, а \(\Theta\) — целевой факт. В конечной вероятностной
+модели при оптимальном прогнозе для логарифмической потери:
+
+\[
+R^*_{\log}(Y)-R^*_{\log}(Y,M)
+=H(\Theta\mid Y)-H(\Theta\mid Y,M)
+=I(\Theta;M\mid Y).
+\]
+
+Следовательно, дополнительное поле имеет строгое информационное содержание
+для заданного вопроса ровно при \(I(\Theta;M\mid Y)>0\); если \(M=f(Y)\), выигрыш
+нулевой. Это математическое ограничение не отменяет отрицательный o20-результат
+и не превращает provenance в универсально полезный признак.
+
+Любой новый реальный benchmark обязан сравнить четыре capacity-matched
+представления: только факт отсутствия, факт плюс механизм, полный provenance и
+тот же mechanism/provenance, случайно перемешанный между случаями. Последний
+вариант — отрицательный контроль против выигрыша от лишнего бюджета или утечки.
+Новая попытка требует отдельной предрегистрации и независимых данных.
+
 ##### 9. Что установлено и что остаётся открытым
 
 **Найдено.** Каноническую необратимость `event(0_A)` можно реализовать точным
@@ -5906,6 +5987,23 @@ $$
 Следовательно, старый объект восстанавливается без потери, а остаточная
 координата различима только на новом объекте. Это точный **кандидатный
 свидетель** `[A6; A7]`, но не определение канонического Lift.
+
+###### 3.1. REFINE-MIN и граница секции
+
+Для конечного пространства ситуаций можно записать этот кандидат через
+\(q^+(\omega)=(q(\omega),r(\omega))\) и
+\(\pi(q(\omega),r(\omega))=q(\omega)\). Если старый вопрос \(q\) и остаточный
+вопрос \(r\) факторизуются через некоторое \(t\), то \(q^+\) тоже
+факторизуется через \(t\). Поэтому пара \((q,r)\) даёт минимальное уточнение
+по различимости для **этого** вопроса, а свидетель одинакового \(q\) и разного
+\(r\) запрещает факторизацию \(r\) через старый слой.
+
+При выборе базового \(r_0\) секция \(\iota(q)=(q,r_0)\) выполняет
+\(\pi\circ\iota=id\), однако она не возвращает фактический остаток ситуации:
+при \(r(\omega)\ne r_0\) выполнено
+\(q^+(\omega)\ne\iota(q(\omega))\). Следовательно, секция сохраняет доступ к
+старой записи, но не создаёт новой информации. Это согласует конечную модель с
+гардрейлом [OP_Lift] и исключает чтение ретракции как готовой WFS.
 
 ##### 4. Обнаруженная недостающая предпосылка
 
@@ -6473,6 +6571,23 @@ s₊(r)=r,   s₋(r)=−r,   q∘s₊=q∘s₋=id_{ℝ≥0}.
 внутренним кандидатным мостом Д1/О3 («анти-форма/девариация»), а не следствием
 теоремы о факторе.
 
+###### 2.1. SELECT-SYMMETRY: выбор не сохраняет исходную симметрию
+
+Внешнее дополнение 2026-09-05 фиксирует точный предел этого примера. Если
+отражение τ(x)=−x действует на каждом ненулевом слое {−r,+r}, а метка r
+неподвижна, то эквивариантная детерминированная секция должна удовлетворять
+s(r)=τ(s(r))=−s(r).
+
+Это требовало бы s(r)=0, но 0 не принадлежит {−r,+r} при r>0. Значит, поле
+альтернатив и конкретный выбор — разные роли: детерминированному выбору нужны
+ориентация, порядок, предпочтение, наблюдение или иной ресурс, если он не
+задан на нижнем уровне.
+
+Это не делает арифметический минус единственной формой выбора и не объясняет
+ориентацию s₋. Он только делает проверяемым condition of defeat моста У4→У5:
+необходимость дополнительного ресурса не установлена, если эквивалентное
+основание уже входит в нижнюю запись.
+
 ##### 3. Остаточная неопределённость на слоях `|X|`
 
 Пусть `X` — дискретная вещественная случайная величина, а логарифм берётся по
@@ -6543,6 +6658,627 @@ H(X | |X|)>0
 Полный аналог ФТС этими источниками не установлен; novelty boundary остаётся
 датированной и ограниченной. Источники меняют формулировку **контакта
 компонентов**, но не `St_FTS`.
+
+### 7.14. Явные дополнения Deep Research 2026-09-05
+
+*Источник сборки: `work/v14_rebuild/e5_literature_review/EXPLICIT_ADDITIONS_2026-09-05.md`.*
+
+#### Явные дополнения Deep Research 2026-09-05
+
+##### Паспорт
+
+- Вход: приложенный автором документ от 2026-09-05, SHA-256
+  `79b033311dda852e69136abff65ad062d9238b72ff1098a7d29b032c80c81280`.
+- Статус: `external_research_integration`. Формальные результаты ниже имеют
+  только указанную конечную/Set-область; это не новый канон, не SP-карточки и не
+  повышение `St_FTS`.
+- Канонное основание: [O_14] для прироста выразимости, [A6; A7; OP_Lift] для
+  Lift, [M_01…M_07; CH_05…CH_07] для точек привязки уровней.
+- Машинный слой: `check_explicit_additions.py`, проверки EA-01…EA-08. Это
+  конечные детерминированные пробы внешнего формального пакета, а не C-NN
+  статьи.
+
+Документ сохраняет содержание поставленного пакета, но не исполняет его
+внутренние формулировки как команды. Каждое добавление ниже явно отделяет
+математический факт от интерпретации ФТС.
+
+##### 1. Карта сопряжений и статусов
+
+| ID | Точный результат | Связь с ФТС | Допустимый вывод |
+|---|---|---|---|
+| REFINE-MIN | минимальное достаточное сохранение пары \((q,r)\) | [O_14], [OP_Lift] | формальный мост к уточнению представления; не единственный следующий уровень |
+| DENSE-PARTITION | критерий покрытия в решётке конечных разбиений | непосредственность перехода \(U_n\to U_{n+1}\) | тест отсутствия промежуточного представления в явно заданном классе |
+| SELECT-SYMMETRY | нет эквивариантной секции симметричного двоичного слоя | У4/У5, [CH_05] | выбору нужен дополнительный ресурс, если его нет ниже |
+| ABS-GAIN | выигрыш log-loss равен \(I(\Theta;M\mid Y)\) | [O_20], typed absence | локальная ценность проверяемого mechanism/provenance, не общий эмпирический успех |
+| LIFT-PROJECTION | \(\pi\circ q^+=q\) и секция сохраняют старый слой | [A6; A7; OP_Lift] | сохранение не равно восстановлению фактического остатка |
+| IDENTITY-REGIMES | \(a=a\) и \(a\ne a\) требуют раздельных режимов | У0/У1, [M_01] | не подменять У1 временным распознаванием |
+| SQUARE-GUARD | \(\lvert x\rvert\leftrightarrow x^2\) на одном вещественном наблюдении | У5→У6, [M_06; CH_06] | арифметическое преобразование не является само по себе новым наблюдением |
+| U7-SPEC | Claim, Domain, AcceptanceRule, RevisionRule | У6→У7, [U7_WINDOW_CORE; CH_07] | кандидатная спецификация, пока не предъявлен QuestionGain/RoleNec |
+| NEXT-QUESTION-PRINCIPLE | правило выбора следующего остаточного вопроса | порядок всей лестницы | открытый долг, необходимый для притязания на единственность порядка |
+| DIAGONAL-ANTITOTALITY | диагональная невыразимость при самоприменении | антитотальность | внешний формальный аналог; предпосылки отдельно проверяются для ФТС |
+
+##### 2. Строгая форма прироста выразимости
+
+###### 2.1. Остаточный вопрос и REFINE-MIN
+
+Пусть \(\Omega\) — конечное непустое множество ситуаций, \(q:\Omega\to C\)
+— текущая запись, а \(r:\Omega\to D\) — ответ на фиксированный вопрос.
+Ответ выражается через запись тогда и только тогда, когда существует
+\(h:C\to D\) с \(r=h\circ q\). Невыразимость имеет точный свидетель:
+
+\[
+\exists\omega_1,\omega_2:\quad
+q(\omega_1)=q(\omega_2),\qquad r(\omega_1)\ne r(\omega_2).
+\]
+
+Это строгая внешняя форма QuestionGain для выбранного \(r\), совместимая с
+канонной defeat-клаузой [O_14]: вопрос не должен восстанавливаться ниже без
+скрытого аппарата.
+
+Определим
+
+\[
+q^+(\omega)=(q(\omega),r(\omega)),\qquad C^+=q^+(\Omega).
+\]
+
+Если \(q=a\circ t\) и \(r=b\circ t\) для \(t:\Omega\to T\), то
+
+\[
+u(t(\omega))=(a(t(\omega)),b(t(\omega)))
+\]
+
+корректно задано на \(t(\Omega)\), и \(q^+=u\circ t\). Поэтому \(q^+\)
+наименее различающее представление, которое сохраняет одновременно старую
+запись и ответ на этот фиксированный вопрос. При свидетеле выше уточнение
+строго: \(r\) не факторизуется через \(q\).
+
+**Предел.** Минимальна различимость для пары \((q,r)\), а не длина программы,
+время, энергия, физическая реализация, полный вектор стоимости или вся
+лестница. Это не выбирает единственный \(r_{n+1}\) и не даёт обратного вывода
+от формулы к семантике уровня.
+
+###### 2.2. DENSE-PARTITION
+
+Конечная запись задаёт разбиение \(P\) множества \(\Omega\): один блок содержит
+неразличимые состояния. Пусть \(Q\) строго уточняет \(P\). Между ними нет
+промежуточного разбиения тогда и только тогда, когда \(Q\) получается из \(P\)
+разбиением ровно одного блока на две непустые части. Эквивалентно:
+
+\[
+Q\text{ покрывает }P\quad\Longleftrightarrow\quad |Q|=|P|+1.
+\]
+
+Следовательно, заявленная невставляемость перехода опровергается, если в
+заранее определённом допустимом классе найдено \(R\) с \(P<R<Q\). Запретить
+такое \(R\) самим желанием сохранить лестницу нельзя: нужен независимый
+структурный критерий класса.
+
+###### 2.3. SELECT-SYMMETRY
+
+Для \(q(x)=|x|\) и \(r>0\) слой \(q^{-1}(r)=\{-r,+r\}\) имеет отражение
+\(\tau(x)=-x\), оставляющее базовую метку \(r\) неизменной. Эквивариантная
+детерминированная секция должна удовлетворять
+
+\[
+s(r)=\tau(s(r))=-s(r).
+\]
+
+Это требовало бы \(s(r)=0\), хотя \(0\notin\{-r,+r\}\). Поэтому поле
+альтернатив и актуализация представителя — разные роли. Конкретная секция
+\(s_-(r)=-r\) допустима, но не является единственной семантикой выбора и не
+объясняет сама свою ориентацию.
+
+###### 2.4. ABS-GAIN
+
+Пусть \(Y\) — грубая запись отсутствия, \(M\) — проверяемый mechanism/provenance,
+\(\Theta\) — целевой факт, \(Z=(Y,M)\). В конечной вероятностной модели с
+оптимальным вероятностным прогнозом:
+
+\[
+R^*_{\log}(Y)-R^*_{\log}(Y,M)
+=H(\Theta\mid Y)-H(\Theta\mid Y,M)
+=I(\Theta;M\mid Y).
+\]
+
+Более богатая запись не ухудшает оптимальный риск, потому что может
+игнорировать \(M\). Строгий информационный выигрыш есть ровно при
+\(I(\Theta;M\mid Y)>0\); перекодировка \(M=f(Y)\) даёт нулевой выигрыш.
+Практический вывод требует надёжности \(M\), связи с целевой задачей,
+независимой проверки и capacity-matched контроля.
+
+###### 2.5. Диагональная схема антитотальности
+
+Пусть \(e:T\times T\to\{0,1\}\) кодирует булев вопрос вторым аргументом, а
+\(d(t)=1-e(t,t)\). Если код \(t_0\) представлял бы \(d\), то при \(t=t_0\)
+получилось бы \(e(t_0,t_0)=1-e(t_0,t_0)\), что невозможно для булева значения.
+Это применимо только при явно заданных самоприменении, кодировании и отрицании;
+схема не доказывает неполноту каждого уровня, следующий уровень или его
+семантику.
+
+##### 3. Протокол переходов У0–У7
+
+Для любой будущей заявки на непосредственный переход использовать отдельную
+карточку со следующими полями:
+
+    Transition: U_n -> U_{n+1}
+    Old representation q:
+    New question r:
+    Admissible representation class A:
+
+    QuestionGain witness:
+      omega_1, omega_2, q(omega_1)=q(omega_2), r(omega_1)!=r(omega_2)
+    REFINE-MIN: PASS / FAIL, proof or counterexample
+    RoleNec: PASS / FAIL, ablation result
+    DENSE-PARTITION: PASS / FAIL / NOT_APPLICABLE, intermediate search
+    Hidden-resource audit: PASS / FAIL
+    Alternative M' audit: PASS / FAIL
+    Defeat condition:
+    Status consequence:
+
+Правило статуса жёсткое:
+
+1. QuestionGain без REFINE-MIN не доказывает атомарность.
+2. REFINE-MIN без DENSE-PARTITION не доказывает невставляемость.
+3. DENSE-PARTITION без NEXT-QUESTION-PRINCIPLE не доказывает уникальный порядок
+   всей лестницы.
+4. Математическая модель не повышает семантическое соответствие ФТС выше
+   собственного моста и К1–К5.
+
+Этот протокол расширяет, а не заменяет существующий
+questiongain_criterion.md: его QG-gate по-прежнему проверяет различающий ход при
+равной цене.
+
+##### 4. Обязательные ограничители чтений
+
+###### У0 и У1
+
+У1 сохраняется как чистый знак и исходная рефлексивность \(a=a\) [M_01].
+Временное распознавание \(a_{t_1}\sim a_{t_2}\) — более богатая интерпретация,
+не подстановка вместо У1. Запись \(a\ne a\) не следует молча читать как обычное
+истинное неравенство в той же рефлексивной логике: для У0 нужен явный
+метатеоретический режим (ошибка, отказ тождества, отвергнутое суждение либо
+другая семантика). Определительное равенство, пропозициональное тождество,
+эквивалентность и метаутверждение об идентичности не схлопываются без явного
+отображения.
+
+###### У5→У6
+
+Для одного вещественного \(x\) значения \(|x|\) и \(x^2\) взаимно
+восстанавливаются:
+
+\[
+x^2=|x|^2,\qquad |x|=\sqrt{x^2}.
+\]
+
+Поэтому квадрат сам по себе не показывает прироста информации. Нужно различать
+преобразование одного значения, получение новых наблюдений и агрегирование
+семейства, например \(P_\theta^{\otimes n}\). Это ограничивает чтение [M_06;
+CH_06], не отменяя уже имеющуюся статистическую роль агрегации.
+
+###### У6→У7
+
+Существующего контраста агрегат/ответ недостаточно. Кандидатная спецификация У7
+должна содержать Claim, Domain, AcceptanceRule и RevisionRule. Для сильной
+семантической заявки требуется новый QuestionGain или RoleNec, недостижимый на
+У6 без скрытого добавления этих правил. Внешнее минимальное предсказательное
+состояние остаётся статистическим объектом, а не доказательством
+[U7_WINDOW_CORE].
+
+###### Lift
+
+Базовая конечная модель задаёт \(q^+(\omega)=(q(\omega),r(\omega))\) и
+\(\pi(c,d)=c\), так что \(\pi\circ q^+=q\). При выбранном \(d_0(c)\) секция
+\(\iota(c)=(c,d_0(c))\) выполняет \(\pi\circ\iota=\mathrm{id}_C\), но в общем
+случае \(q^+(\omega)\ne\iota(q(\omega))\): секция не восстанавливает
+фактический остаток ситуации. До задания категории, классов стрелок, типа Res,
+стабильности, lifting property и факторизаций не называть этот Lift weak
+factorization system.
+
+##### 5. Открытые обязательства
+
+1. NEXT-QUESTION-PRINCIPLE: независимо выбрать следующий допустимый остаточный
+   вопрос, запретить произвольную перестановку независимых вопросов, не
+   использовать семантику будущего уровня и иметь condition of defeat.
+2. Для У0–У7 заполнить переходные карточки из §3 в выбранном допустимом классе,
+   прежде чем применять слово «невставляемость».
+3. Для диагонального аналога проверить предпосылки самоприменения в режиме ФТС.
+4. Для У4→У5 назвать конкретный допустимый источник основания выбора; теорема
+   SELECT-SYMMETRY только показывает потребность в нём при исходной симметрии.
+5. Для У5→У6 отделить повторные наблюдения, допустимый агрегат и равный бюджет.
+6. Для У6→У7 предъявить операциональную функцию и её QuestionGain.
+
+##### 6. Следующий эмпирический долг typed absence
+
+Новая попытка возможна только отдельной предрегистрацией и независимыми данными.
+Она должна сравнивать:
+
+1. missing_only;
+2. missing_plus_mechanism;
+3. full_provenance;
+4. shuffled_provenance.
+
+До запуска фиксируются целевой факт или действие, допустимые вопросы, loss,
+бюджет обучения, метрика, практический порог и condition of defeat. Случайно
+перемешанный provenance — обязательный отрицательный контроль. Положительный
+результат будет поддерживать только данный операциональный экземпляр [O_20], а
+не всю лестницу; существующий o20-результат остаётся отрицательным и не
+переписывается.
+
+##### 7. Маршрутизация в графе
+
+Новые документные связи должны читаться так:
+
+    EXPLICIT_ADDITIONS_2026_09_05
+      -> REFINE-MIN -> QuestionGain -> [O_14]
+      -> DENSE-PARTITION -> transition protocol U0...U7
+      -> SELECT-SYMMETRY -> external_bridge_u1_u5 -> U4/U5
+      -> ABS-GAIN -> TYPED_ABSENCE_BRIDGE -> [O_20]
+      -> LIFT-PROJECTION -> LIFT_TYPING_PROJECT -> [OP_Lift]
+      -> NEXT-QUESTION-PRINCIPLE -> OPEN_QUESTIONS
+      -> DIAGONAL-ANTITOTALITY -> OPEN_QUESTIONS
+
+Эти связи навигационные и внешне-исследовательские. Они не создают рёбер
+`promotes_status_of` к каноническим карточкам.
+
+##### 8. Итог
+
+**Найдено.** Добавлены строгие конечные формы уточнения представления,
+невставляемости разбиений, симметричного выбора, информативного provenance и
+диагонального ограничения; они связаны с уже существующими мостами.
+
+**Зависимости.** [O_14], [A6; A7; OP_Lift], У4/У5, [O_20], а также внешние
+предпосылки, зафиксированные в каждом результате.
+
+**Вывод.** Пакет усиливает проверяемость будущих заявок, но не доказывает
+минимальную или единственную лестницу и не меняет St_FTS.
+
+**Что не закрыто.** NEXT-QUESTION-PRINCIPLE, переходные карточки У0–У7,
+диагональные предпосылки и новый предрегистрированный benchmark.
+
+### 7.15. Отчёт конечных проверок явных дополнений
+
+*Источник сборки: `work/v14_rebuild/e5_literature_review/EXPLICIT_ADDITIONS_REPORT.md`.*
+
+#### Отчёт конечных проверок явных дополнений 2026-09-05
+
+- Статус: candidate_probe для внешнего исследовательского пакета.
+- Область: конечные разбиения, конечные вероятностные модели и Set-примеры.
+- Влияние на St_FTS: отсутствует; это не C-NN статьи.
+
+Команда:
+
+    python -X utf8 work/v14_rebuild/e5_literature_review/check_explicit_additions.py --write-report
+
+Результат:
+
+PASS EA-01 — REFINE-MIN: пара (q,r) факторизуется через любой сохраняющий её конкурент: На всех 15 разбиениях Ω из 4 состояний q⁺ не грубее представления t, через которое факторизуются и q, и r.
+PASS EA-02 — QuestionGain-свидетель требует строгого уточнения: При одинаковом q и разных r ответ не факторизуется через старую запись; q⁺ разделяет её коллизию.
+PASS EA-03 — DENSE-PARTITION: покрытие равно одному двоичному расщеплению блока: Проверены все 45 строгих пар разбиений множества из 4 элементов.
+PASS EA-04 — SELECT-SYMMETRY: отражение не имеет неподвижного представителя в ненулевом слое: Для r=1…4 ни один из ±r не равен своему отражению; эквивариантная секция над неподвижной базовой меткой невозможна.
+PASS EA-05 — ABS-GAIN: разность оптимального log-risk равна условному информационному выигрышу: Информативный M даёт 1.0 bit, перекодировка M=f(Y) даёт 0.0 bit.
+PASS EA-06 — LIFT-PROJECTION: секция сохраняет старый слой, но не фактический остаток: π∘q⁺=q и π∘ι=id, но при остатке d1 фактическая запись не равна выбранной секции с d0.
+PASS EA-07 — SQUARE-GUARD: |x| и x² взаимно восстанавливаются на одном вещественном x: На контрольной сетке выполнены |x|=√(x²) и x²=|x|²; это не создаёт нового наблюдения.
+PASS EA-08 — DIAGONAL-ANTITOTALITY: булево диагональное равенство невозможно: Ни 0, ни 1 не удовлетворяет v=1−v; применимость к ФТС требует отдельного кодирования и самоприменения.
+Итог: 8 PASS / 0 FAIL из 8
+
+EA-01…EA-08 проверяют точные конечные инстансы REFINE-MIN, DENSE-PARTITION, SELECT-SYMMETRY, ABS-GAIN, Lift, квадратный гардрейл и диагональную схему. Они не выбирают семантику уровня, не доказывают единственность лестницы и не канонизируют её.
+
+### 7.16. Исполняемый код проверок явных дополнений
+
+*Источник сборки: `work/v14_rebuild/e5_literature_review/check_explicit_additions.py`.*
+
+~~~~python
+#!/usr/bin/env python3
+"""Детерминированные конечные пробы пакета явных дополнений 2026-09-05."""
+
+from __future__ import annotations
+
+import argparse
+from collections import defaultdict
+from fractions import Fraction
+from math import isclose, log2, sqrt
+from pathlib import Path
+from typing import Hashable, Iterable
+
+
+REPORT_PATH = Path(__file__).with_name("EXPLICIT_ADDITIONS_REPORT.md")
+Check = tuple[str, str, bool, str]
+Partition = tuple[frozenset[str], ...]
+
+
+def factor_table(
+    target: dict[str, Hashable], through: dict[str, Hashable]
+) -> dict[Hashable, Hashable] | None:
+    """Возвращает u, когда target=u∘through; иначе None."""
+    table: dict[Hashable, Hashable] = {}
+    for omega, through_value in through.items():
+        target_value = target[omega]
+        previous = table.get(through_value)
+        if previous is not None and previous != target_value:
+            return None
+        table[through_value] = target_value
+    return table
+
+
+def all_partitions(items: tuple[str, ...]) -> Iterable[Partition]:
+    """Все разбиения малого конечного множества без дубликатов."""
+    if not items:
+        yield ()
+        return
+    first, *tail = items
+    for partition in all_partitions(tuple(tail)):
+        yield (frozenset({first}), *partition)
+        for index, block in enumerate(partition):
+            yield (
+                *partition[:index],
+                frozenset(set(block) | {first}),
+                *partition[index + 1 :],
+            )
+
+
+def refines(fine: Partition, coarse: Partition) -> bool:
+    return all(any(block <= outer for outer in coarse) for block in fine)
+
+
+def strict_refines(fine: Partition, coarse: Partition) -> bool:
+    return fine != coarse and refines(fine, coarse)
+
+
+def partition_map(partition: Partition) -> dict[str, int]:
+    return {
+        item: index
+        for index, block in enumerate(partition)
+        for item in block
+    }
+
+
+def entropy(probabilities: Iterable[float]) -> float:
+    return -sum(
+        probability * log2(probability)
+        for probability in probabilities
+        if probability > 0.0
+    )
+
+
+def conditional_entropy(
+    distribution: dict[tuple[Hashable, ...], Fraction],
+    target_index: int,
+    condition_indices: tuple[int, ...],
+) -> float:
+    grouped: dict[tuple[Hashable, ...], dict[Hashable, Fraction]] = defaultdict(
+        lambda: defaultdict(Fraction)
+    )
+    totals: dict[tuple[Hashable, ...], Fraction] = defaultdict(Fraction)
+    for outcome, probability in distribution.items():
+        condition = tuple(outcome[index] for index in condition_indices)
+        grouped[condition][outcome[target_index]] += probability
+        totals[condition] += probability
+
+    result = 0.0
+    for condition, outcomes in grouped.items():
+        total = totals[condition]
+        result += float(total) * entropy(
+            float(probability / total) for probability in outcomes.values()
+        )
+    return result
+
+
+def run_checks() -> list[Check]:
+    checks: list[Check] = []
+
+    def add(check_id: str, title: str, passed: bool, detail: str) -> None:
+        checks.append((check_id, title, passed, detail))
+
+    omega = ("a", "b", "c", "d")
+    q = {"a": "x", "b": "x", "c": "y", "d": "y"}
+    r = {"a": 0, "b": 0, "c": 1, "d": 0}
+    q_plus = {item: (q[item], r[item]) for item in omega}
+
+    all_refinements_preserve_pair = True
+    minimum_counts_hold = True
+    for partition in all_partitions(omega):
+        t = partition_map(partition)
+        if factor_table(q, t) is not None and factor_table(r, t) is not None:
+            all_refinements_preserve_pair &= factor_table(q_plus, t) is not None
+            minimum_counts_hold &= len(set(t.values())) >= len(set(q_plus.values()))
+    add(
+        "EA-01",
+        "REFINE-MIN: пара (q,r) факторизуется через любой сохраняющий её конкурент",
+        all_refinements_preserve_pair and minimum_counts_hold,
+        "На всех 15 разбиениях Ω из 4 состояний q⁺ не грубее представления t, "
+        "через которое факторизуются и q, и r.",
+    )
+
+    q_collision = {"a": "x", "b": "x"}
+    r_collision = {"a": 0, "b": 1}
+    q_plus_collision = {
+        item: (q_collision[item], r_collision[item])
+        for item in q_collision
+    }
+    add(
+        "EA-02",
+        "QuestionGain-свидетель требует строгого уточнения",
+        factor_table(r_collision, q_collision) is None
+        and len(set(q_plus_collision.values())) > len(set(q_collision.values())),
+        "При одинаковом q и разных r ответ не факторизуется через старую запись; "
+        "q⁺ разделяет её коллизию.",
+    )
+
+    partition_universe = ("0", "1", "2", "3")
+    partitions = tuple(all_partitions(partition_universe))
+    dense_ok = True
+    pair_count = 0
+    for coarse in partitions:
+        for fine in partitions:
+            if not strict_refines(fine, coarse):
+                continue
+            pair_count += 1
+            intermediate_exists = any(
+                strict_refines(middle, coarse) and strict_refines(fine, middle)
+                for middle in partitions
+            )
+            cover = not intermediate_exists
+            pieces_per_coarse_block = [
+                sum(block <= outer for block in fine)
+                for outer in coarse
+            ]
+            one_binary_split = (
+                pieces_per_coarse_block.count(2) == 1
+                and all(count in {1, 2} for count in pieces_per_coarse_block)
+            )
+            dense_ok &= (
+                cover
+                == (len(fine) == len(coarse) + 1)
+                == one_binary_split
+            )
+    add(
+        "EA-03",
+        "DENSE-PARTITION: покрытие равно одному двоичному расщеплению блока",
+        dense_ok and pair_count > 0,
+        f"Проверены все {pair_count} строгих пар разбиений множества из 4 элементов.",
+    )
+
+    symmetric_fibers = {radius: {-radius, radius} for radius in range(1, 5)}
+    no_equivariant_selector = all(
+        all(selected != -selected for selected in fiber)
+        for fiber in symmetric_fibers.values()
+    )
+    add(
+        "EA-04",
+        "SELECT-SYMMETRY: отражение не имеет неподвижного представителя в ненулевом слое",
+        no_equivariant_selector,
+        "Для r=1…4 ни один из ±r не равен своему отражению; эквивариантная секция "
+        "над неподвижной базовой меткой невозможна.",
+    )
+
+    informative_distribution = {
+        (0, "a", "m0"): Fraction(1, 4),
+        (1, "a", "m1"): Fraction(1, 4),
+        (0, "b", "m0"): Fraction(1, 4),
+        (1, "b", "m1"): Fraction(1, 4),
+    }
+    h_theta_given_y = conditional_entropy(informative_distribution, 0, (1,))
+    h_theta_given_y_m = conditional_entropy(informative_distribution, 0, (1, 2))
+    cmi = h_theta_given_y - h_theta_given_y_m
+    redundant_distribution = {
+        (0, "a", "m_a"): Fraction(1, 4),
+        (1, "a", "m_a"): Fraction(1, 4),
+        (0, "b", "m_b"): Fraction(1, 4),
+        (1, "b", "m_b"): Fraction(1, 4),
+    }
+    redundant_gain = conditional_entropy(
+        redundant_distribution, 0, (1,)
+    ) - conditional_entropy(redundant_distribution, 0, (1, 2))
+    add(
+        "EA-05",
+        "ABS-GAIN: разность оптимального log-risk равна условному информационному выигрышу",
+        isclose(cmi, 1.0, abs_tol=1e-12)
+        and isclose(redundant_gain, 0.0, abs_tol=1e-12),
+        f"Информативный M даёт {cmi:.1f} bit, перекодировка M=f(Y) даёт "
+        f"{redundant_gain:.1f} bit.",
+    )
+
+    q_old = {"u": "c", "v": "c"}
+    residual = {"u": "d0", "v": "d1"}
+    lifted = {item: (q_old[item], residual[item]) for item in q_old}
+    base_residual = "d0"
+    section = lambda old: (old, base_residual)
+    projection = lambda pair: pair[0]
+    add(
+        "EA-06",
+        "LIFT-PROJECTION: секция сохраняет старый слой, но не фактический остаток",
+        all(projection(lifted[item]) == q_old[item] for item in q_old)
+        and projection(section("c")) == "c"
+        and lifted["v"] != section(q_old["v"]),
+        "π∘q⁺=q и π∘ι=id, но при остатке d1 фактическая запись не равна "
+        "выбранной секции с d0.",
+    )
+
+    real_samples = (-3.0, -1.5, 0.0, 2.0, 5.0)
+    square_guard = all(
+        isclose(sqrt(value * value), abs(value), abs_tol=1e-12)
+        and isclose(abs(value) ** 2, value * value, abs_tol=1e-12)
+        for value in real_samples
+    )
+    add(
+        "EA-07",
+        "SQUARE-GUARD: |x| и x² взаимно восстанавливаются на одном вещественном x",
+        square_guard,
+        "На контрольной сетке выполнены |x|=√(x²) и x²=|x|²; это не создаёт "
+        "нового наблюдения.",
+    )
+
+    diagonal_contradiction = all(value != 1 - value for value in (0, 1))
+    add(
+        "EA-08",
+        "DIAGONAL-ANTITOTALITY: булево диагональное равенство невозможно",
+        diagonal_contradiction,
+        "Ни 0, ни 1 не удовлетворяет v=1−v; применимость к ФТС требует отдельного "
+        "кодирования и самоприменения.",
+    )
+
+    return checks
+
+
+def render_report(checks: list[Check]) -> str:
+    passed = sum(result for _, _, result, _ in checks)
+    failed = len(checks) - passed
+    lines = [
+        "# Отчёт конечных проверок явных дополнений 2026-09-05",
+        "",
+        "- Статус: candidate_probe для внешнего исследовательского пакета.",
+        "- Область: конечные разбиения, конечные вероятностные модели и Set-примеры.",
+        "- Влияние на St_FTS: отсутствует; это не C-NN статьи.",
+        "",
+        "Команда:",
+        "",
+        "    python -X utf8 work/v14_rebuild/e5_literature_review/check_explicit_additions.py --write-report",
+        "",
+        "Результат:",
+        "",
+    ]
+    for check_id, title, result, detail in checks:
+        status = "PASS" if result else "FAIL"
+        lines.append(f"{status} {check_id} — {title}: {detail}")
+    lines.extend(
+        [
+            f"Итог: {passed} PASS / {failed} FAIL из {len(checks)}",
+            "",
+            "EA-01…EA-08 проверяют точные конечные инстансы REFINE-MIN, "
+            "DENSE-PARTITION, SELECT-SYMMETRY, ABS-GAIN, Lift, квадратный "
+            "гардрейл и диагональную схему. Они не выбирают семантику уровня, "
+            "не доказывают единственность лестницы и не канонизируют её.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--write-report",
+        action="store_true",
+        help="перезаписать детерминированный Markdown-отчёт",
+    )
+    args = parser.parse_args()
+    checks = run_checks()
+    for check_id, title, result, detail in checks:
+        status = "PASS" if result else "FAIL"
+        print(f"{status} {check_id} — {title}: {detail}")
+    passed = sum(result for _, _, result, _ in checks)
+    failed = len(checks) - passed
+    print(f"Итог: {passed} PASS / {failed} FAIL из {len(checks)}")
+
+    if args.write_report:
+        REPORT_PATH.write_text(render_report(checks), encoding="utf-8", newline="\n")
+        print(f"Отчёт: {REPORT_PATH}")
+    return 1 if failed else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+~~~~
 
 ### 7.14. Библиографический указатель
 

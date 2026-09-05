@@ -300,6 +300,28 @@
       Полная таблица: `work/v14_rebuild/audit/CANON_REFERENCE_PATCH.tsv`.
       Пока v13 неизменяем, все дефекты трассируемости классифицированы.
 
+## Явные дополнения Deep Research 2026-09-05
+
+- [ ] NEXT-QUESTION-PRINCIPLE: задать независимое правило выбора следующего {#oq-next-question-principle}
+      остаточного вопроса. Оно должно запрещать произвольную перестановку
+      независимых вопросов, не использовать семантику будущего уровня и иметь
+      condition of defeat. Локальная минимальность и невставляемость сами по
+      себе не доказывают единственный порядок лестницы.
+- [ ] Карточки уточнения представлений для У0–У7: для каждого перехода заполнить {#oq-u0-u7-refinement-protocol}
+      old representation, new question, admissible class, QuestionGain witness,
+      REFINE-MIN, RoleNec, DENSE-PARTITION, hidden-resource/M-prime audits,
+      defeat и status consequence. Нельзя называть переход невставляемым до
+      поиска промежуточного представления в явно заданном классе.
+- [ ] Диагональный аналог антитотальности: показать либо опровергнуть для режима {#oq-antitotality-diagonal-preconditions}
+      ФТС предпосылки самоприменения, кодирования и булева отрицания. Внешняя
+      диагональная схема не является автоматическим доказательством следующего
+      уровня или его семантики.
+- [ ] Новый pre-registered benchmark typed absence/provenance: четыре {#oq-typed-absence-provenance-benchmark}
+      capacity-matched представления missing_only, missing_plus_mechanism,
+      full_provenance и shuffled_provenance; независимые данные, фиксированные
+      loss/budget/defeat. Это следующий допустимый тест после отрицательного
+      o20, а не переписывание его результата.
+
 ## Анти-цели (чем ФТС НЕ является)
 Не абсолютная метатеория мира; не «доказанные 8+»; не смешение ¬A/0_A/⊖A;
 не список красивых слов без ролей и условий поражения.
