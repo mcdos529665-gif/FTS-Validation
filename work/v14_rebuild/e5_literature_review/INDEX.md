@@ -15,3 +15,16 @@ Wave 0: `PROTOCOL_AMENDMENT_001.md`, `PROTOCOL_AMENDMENT_002.md`,
 `SEARCH_LOG.tsv`, `CANDIDATES.tsv`, `SCREENING_CODEX.tsv`, `PROVIDER_STATUS.md`,
 `WAVE_0_STATUS.md`, and `RESEARCHRABBIT_HANDOFF.md` form the frozen pre-adjudication
 package. The researcher-only second pass begins in `SCREENING_RESEARCHER.tsv`.
+
+Восстановленные самостоятельные проекты из единой исследовательской выгрузки:
+
+- `COUPLING_MAP.md` — предварительная карта сопряжений внешних работ с ФТС;
+- `PROTOCOL_AMENDMENT_003.md`, `BLACKWELL_BRIDGE.md`,
+  `check_blackwell_bridge.py`, `BLACKWELL_BRIDGE_REPORT.md` — ограниченный
+  Blackwell-мост У4→У5→У6 (`candidate_external_bridge`);
+- `PROTOCOL_AMENDMENT_004.md`, `TYPED_ABSENCE_BRIDGE.md`,
+  `LIFT_TYPING_PROJECT.md`, `check_absence_lift_projects.py`,
+  `ABSENCE_LIFT_REPORT.md` — раздельные кандидаты для `0_A` и `[OP_Lift]`.
+
+Эти документы восстановлены как исследовательский слой. Они не завершают второй
+screening, не запускают adjudication и не меняют `St_FTS`.

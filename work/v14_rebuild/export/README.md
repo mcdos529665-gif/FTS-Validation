@@ -10,6 +10,9 @@
 - `FTS_v14_paper.md` — аудированная review-копия статьи.
 - `status_patch_v14.md` — консервативная карта статусов и условий повышения.
 - `external_bridge_u1_u5.md` — проверенный внешний типизированный мост нижней цепочки; не канон.
+- `FTS_research_project_for_AI.md` — детерминированная единая исследовательская
+  выгрузка для чтения ИИ; включает канон и рабочие слои, но сама не является
+  новым каноном.
 - `verification_report.md` — отчёт математического сьюта: 62 PASS / 0 FAIL.
 - `v14_export_cards.jsonl` — карточки в схеме `source/fts_cards.jsonl`.
 - `v14_export_triples.tsv` — рёбра в схеме `source/fts_triples.tsv`.

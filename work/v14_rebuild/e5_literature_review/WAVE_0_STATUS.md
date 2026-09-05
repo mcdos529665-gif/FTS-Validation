@@ -21,6 +21,13 @@
 - Citation expansion: not started; manual ResearchRabbit export is pending.
 - Evidence matrix, synthesis, novelty boundary, and adjudication: intentionally not
   started. A source cannot change `St_FTS` at this stage.
+- Ограниченный Blackwell-мост У4–У6 оформлен отдельно в
+  `BLACKWELL_BRIDGE.md`: BW-01…BW-06 должны давать **6 PASS / 0 FAIL**. Он не
+  отождествляет внешнее огрубление с каноническим `projects_to`.
+- `TYPED_ABSENCE_BRIDGE.md` и `LIFT_TYPING_PROJECT.md` остаются раздельными
+  кандидатами: TA-01…TA-05 и LT-01…LT-05 должны давать **10 PASS / 0 FAIL**.
+  Ни missing-indicator, ни одноимённый внешний lifting property не считаются
+  автоматически сущностями ФТС.
 
 This is a coverage and routing record, not a claim that all possible literature or
 worldwide novelty has been exhausted.
