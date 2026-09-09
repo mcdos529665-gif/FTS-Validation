@@ -20,6 +20,7 @@ STATE = Path("work/STATE.md")
 NOTATION = Path("work/notation.md")
 DECISIONS = Path("work/DECISIONS.md")
 OPEN_QUESTIONS = Path("work/OPEN_QUESTIONS.md")
+EXTERNAL_CONFLICTS = Path("work/EXTERNAL_CONFLICTS.md")
 
 V14_PAPER = Path("work/v14_rebuild/FTS_v14_paper.md")
 REGISTER_MAP = Path("work/v14_rebuild/FTS_v14_register_map.md")
@@ -28,6 +29,9 @@ RED_TEAM = Path("work/v14_rebuild/red_team_F3.md")
 VERIFICATION_REPORT = Path("work/v14_rebuild/verification_report.md")
 VERIFICATION_CODE = Path("work/v14_rebuild/verification.py")
 EXTERNAL_BRIDGE_U1_U5 = Path("work/v14_rebuild/external_bridge_u1_u5.md")
+CODE_INFORMATION_RECODE = Path("work/v14_rebuild/code_information_recode_note.md")
+NEW_CONNECTIONS_REPORT = Path("work/v14_rebuild/NEW_CONNECTIONS_REPORT.md")
+NEW_CONNECTIONS_CHECK = Path("work/v14_rebuild/check_new_connections.py")
 
 E5_ROOT = Path("work/v14_rebuild/e5_literature_review")
 E5_PROTOCOL = E5_ROOT / "PROTOCOL.md"
@@ -61,6 +65,7 @@ INPUT_PATHS = (
     NOTATION,
     DECISIONS,
     OPEN_QUESTIONS,
+    EXTERNAL_CONFLICTS,
     V14_PAPER,
     REGISTER_MAP,
     STATUS_PATCH,
@@ -68,6 +73,9 @@ INPUT_PATHS = (
     VERIFICATION_REPORT,
     VERIFICATION_CODE,
     EXTERNAL_BRIDGE_U1_U5,
+    CODE_INFORMATION_RECODE,
+    NEW_CONNECTIONS_REPORT,
+    NEW_CONNECTIONS_CHECK,
     E5_PROTOCOL,
     E5_STATUS,
     E5_COUPLING,
@@ -380,6 +388,8 @@ def render_export() -> str:
                 markdown_source("5.1. Красная команда F3", RED_TEAM),
                 markdown_source("5.2. Отчёт машинной верификации", VERIFICATION_REPORT),
                 fenced_source("5.3. Исполняемый код проверок", VERIFICATION_CODE, "python"),
+                markdown_source("5.4. Отчёт кандидатных проверок новых связей", NEW_CONNECTIONS_REPORT),
+                fenced_source("5.5. Исполняемый код кандидатных проверок", NEW_CONNECTIONS_CHECK, "python"),
             ]
         ),
         "## 6. Решения и открытые вопросы\n\n"
@@ -387,6 +397,8 @@ def render_export() -> str:
             [
                 markdown_source("6.1. Журнал значимых решений", DECISIONS),
                 markdown_source("6.2. Открытые вопросы", OPEN_QUESTIONS),
+                markdown_source("6.3. Журнал внешних коллизий", EXTERNAL_CONFLICTS),
+                markdown_source("6.4. Код, предел кода и повторное кодирование", CODE_INFORMATION_RECODE),
             ]
         ),
         "## 7. Внешний исследовательский контур E5\n\n"

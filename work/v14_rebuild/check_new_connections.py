@@ -226,6 +226,34 @@ def square_boundary() -> str:
     return "x вещественный: |x|²=x² и sqrt(x²)=|x|; взаимная восстановимость одного чтения"
 
 
+def code_limit_recode() -> str:
+    code = ("b", "b", "b", "b")
+    residual = (0, 0, 1, 1)
+    refined = joint(code, residual)
+    assert not factorable(code, residual)
+    assert factorable(refined, code) and factorable(refined, residual)
+    return "r не факторизуется через E; E+=(E,r) выражает r и проецируется обратно в E"
+
+
+def iterative_recode() -> str:
+    code = ("b", "b", "b", "b")
+    r = (0, 0, 1, 1)
+    s = (0, 1, 0, 1)
+    first, second = joint(code, r), joint(code, r, s)
+    assert not factorable(first, s)
+    assert factorable(second, first) and factorable(second, r) and factorable(second, s)
+    return "E+=(E,r) ещё не выражает s; E++=(E,r,s) сохраняет E+ и оба ответа"
+
+
+def contextual_reading() -> str:
+    token = ("b", "b")
+    context = ("literal", "sarcastic")
+    message = ("positive", "negative")
+    assert not factorable(token, message)
+    assert factorable(joint(token, context), message)
+    return "один токен не выражает сообщение; пара (токен, контекст) выражает"
+
+
 CHECKS = [
     ("NC-P01", "NC-01: перестановка уточнений", order_commutes),
     ("NC-P02", "NC-01: порядок не вынужден", order_not_unique),
@@ -242,6 +270,9 @@ CHECKS = [
     ("NC-P13", "NC-04: фактор и базовый детектор", polynomial_boundary),
     ("EC-P01", "EC-001: булева область", boolean_boundary),
     ("EC-P02", "EC-002: один вещественный скаляр", square_boundary),
+    ("CD-P01", "код → предел → уточнённый код", code_limit_recode),
+    ("CD-P02", "повторное кодирование остатка", iterative_recode),
+    ("CD-P03", "контекстное чтение кода", contextual_reading),
 ]
 
 
@@ -265,7 +296,7 @@ def main() -> int:
     if args.write:
         text = [
             "# NEW CONNECTIONS — машинные свидетели", "",
-            "Дата пакета: 2026-09-09. Связанные формулировки: NEW_CONNECTIONS_2026-09-09.md.",
+            "Дата пакета: 2026-09-09. Связанные формулировки: NEW_CONNECTIONS_2026-09-09.md и code_information_recode_note.md.",
             "Область: конечные модели Ω из четырёх состояний и указанные тождества над R/C.",
             "PASS у контрпримера подтверждает наличие контрпримера к снятой формулировке.",
             "Это самостоятельные candidate-пробы; C01–C62 и St_FTS не повышаются.", "",
