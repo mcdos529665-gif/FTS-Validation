@@ -51,6 +51,7 @@ E5_ABSENCE_LIFT_CHECK = E5_ROOT / "check_absence_lift_projects.py"
 E5_EXPLICIT_ADDITIONS = E5_ROOT / "EXPLICIT_ADDITIONS_2026-09-05.md"
 E5_EXPLICIT_ADDITIONS_REPORT = E5_ROOT / "EXPLICIT_ADDITIONS_REPORT.md"
 E5_EXPLICIT_ADDITIONS_CHECK = E5_ROOT / "check_explicit_additions.py"
+E5_DEEP_RESEARCH_REQUESTS = E5_ROOT / "DEEP_RESEARCH_REQUESTS_CONNECTIVITY.md"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -93,6 +94,7 @@ INPUT_PATHS = (
     E5_EXPLICIT_ADDITIONS,
     E5_EXPLICIT_ADDITIONS_REPORT,
     E5_EXPLICIT_ADDITIONS_CHECK,
+    E5_DEEP_RESEARCH_REQUESTS,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -461,6 +463,10 @@ def render_export() -> str:
                     "7.16. Исполняемый код проверок явных дополнений",
                     E5_EXPLICIT_ADDITIONS_CHECK,
                     "python",
+                ),
+                markdown_source(
+                    "7.17. Запросы Deep Research по основаниям связности",
+                    E5_DEEP_RESEARCH_REQUESTS,
                 ),
                 external_bibliography(),
             ]

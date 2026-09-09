@@ -18,6 +18,10 @@ package. The researcher-only second pass begins in `SCREENING_RESEARCHER.tsv`.
 
 Восстановленные самостоятельные проекты из единой исследовательской выгрузки:
 
+- `DEEP_RESEARCH_REQUESTS_CONNECTIVITY.md` — готовые задания ChatGPT Deep
+  Research для симметричного поиска подтверждений, ограничений, альтернатив и
+  опровержений каждого основания O_01…O_20; `DR-00` маршрутизирует
+  arXiv:cs/0401016v3 к O_07/O_08/O_09/O_14 без повышения статуса;
 - `COUPLING_MAP.md` — предварительная карта сопряжений внешних работ с ФТС;
 - `PROTOCOL_AMENDMENT_003.md`, `BLACKWELL_BRIDGE.md`,
   `check_blackwell_bridge.py`, `BLACKWELL_BRIDGE_REPORT.md` — ограниченный
