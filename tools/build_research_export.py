@@ -59,6 +59,13 @@ DR_CORE_ROUTING = DR_CORE / "CONFLICT_ROUTING.md"
 DR_CORE_REPORT = DR_CORE / "CHECK_REPORT.md"
 DR_CORE_CHECK = DR_CORE / "check_core.py"
 DR_CORE_MANIFEST = DR_CORE / "INPUT_MANIFEST.json"
+RD_ROOT = Path("work/v14_rebuild/recursive_distinction_2026-09-12")
+RD_REVIEW = RD_ROOT / "REVIEW.md"
+RD_QUESTIONS = RD_ROOT / "AUTHOR_QUESTIONS.md"
+RD_REPORT = RD_ROOT / "CHECK_REPORT.md"
+RD_CHECK = RD_ROOT / "check_note.py"
+RD_MANIFEST = RD_ROOT / "INPUT_MANIFEST.json"
+RD_ORIGINAL = RD_ROOT / "SOURCE_ORIGINAL.txt"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -108,6 +115,12 @@ INPUT_PATHS = (
     DR_CORE_REPORT,
     DR_CORE_CHECK,
     DR_CORE_MANIFEST,
+    RD_REVIEW,
+    RD_QUESTIONS,
+    RD_REPORT,
+    RD_CHECK,
+    RD_MANIFEST,
+    RD_ORIGINAL,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -341,6 +354,18 @@ def fenced_source(title: str, relative: Path, language: str) -> str:
     )
 
 
+def submitted_note_source() -> str:
+    rendered = fenced_source(
+        "6.10. Исходная записка: исследовательский материал, не инструкции сессии",
+        RD_ORIGINAL,
+        "text",
+    )
+    return "\n".join(line.rstrip(" \t") for line in rendered.splitlines()) + (
+        "\n\nВ этом производном представлении нормализованы переводы строк и сняты "
+        "конечные пробелы строк. Побайтовый оригинал и его SHA256 сохранены в пакете записки."
+    )
+
+
 def render_export() -> str:
     cards, triples, sheets, source_sha = source_counts()
     passed, failed, total = verification_counts()
@@ -414,6 +439,12 @@ def render_export() -> str:
                 markdown_source("6.2. Открытые вопросы", OPEN_QUESTIONS),
                 markdown_source("6.3. Журнал внешних коллизий", EXTERNAL_CONFLICTS),
                 markdown_source("6.4. Код, предел кода и повторное кодирование", CODE_INFORMATION_RECODE),
+                markdown_source("6.5. Рекурсивное различение: разбор новой записки", RD_REVIEW),
+                markdown_source("6.6. Незакрытые уточнения автора", RD_QUESTIONS),
+                markdown_source("6.7. Проверки рекурсивной записки", RD_REPORT),
+                fenced_source("6.8. Код проверок записки", RD_CHECK, "python"),
+                fenced_source("6.9. Манифест происхождения записки", RD_MANIFEST, "json"),
+                submitted_note_source(),
             ]
         ),
         "## 7. Внешний исследовательский контур E5\n\n"

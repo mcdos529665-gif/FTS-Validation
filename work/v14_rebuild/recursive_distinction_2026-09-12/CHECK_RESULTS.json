@@ -1,0 +1,114 @@
+{
+  "scope": "finite_external_models_not_FTS_status",
+  "checker_sha256": "77e4c4b2c55c3c69df13c68e798a923faa95a8ff13b66d901739992fd928cc3c",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "RN-01",
+      "predicate": "Байты исходной записки",
+      "status": "PASS",
+      "evidence": {
+        "bytes": 31284,
+        "source_sha256": "30c38293a9cbedb2770e6ed00724fbe0f9b66e0840cff967365f1200289e017b"
+      }
+    },
+    {
+      "id": "RN-02",
+      "predicate": "Активный вывод и доступный аппарат",
+      "status": "PASS",
+      "evidence": {
+        "from_active_readout": false,
+        "from_available_state": true,
+        "same_decoder_cost": 1
+      }
+    },
+    {
+      "id": "RN-03",
+      "predicate": "Операция без сохранённых исходных данных",
+      "status": "PASS",
+      "evidence": {
+        "sign_operation_available": true,
+        "original_sign_recoverable": false
+      }
+    },
+    {
+      "id": "RN-04",
+      "predicate": "Рефлексивность ядра полного наблюдателя",
+      "status": "PASS",
+      "evidence": {
+        "total_observers_checked": 16,
+        "can_have_Eq_a_a_false": false
+      }
+    },
+    {
+      "id": "RN-05",
+      "predicate": "Допустимая погрешность не обязана быть транзитивной",
+      "status": "PASS",
+      "evidence": {
+        "witness": [
+          0,
+          1,
+          2
+        ],
+        "tolerance": 1,
+        "transitive": false
+      }
+    },
+    {
+      "id": "RN-06",
+      "predicate": "Исключённое третье не даёт известного ответа",
+      "status": "PASS",
+      "evidence": {
+        "known_excluded_middle": true,
+        "known_either_answer": false
+      }
+    },
+    {
+      "id": "RN-07",
+      "predicate": "Модель двух каналов без explosion",
+      "status": "PASS",
+      "evidence": {
+        "values": 4,
+        "information_order_total": false,
+        "explosion_under_positive_designation": false,
+        "FTS_absence_semantics_proved": false
+      }
+    },
+    {
+      "id": "RN-08",
+      "predicate": "Индексное перекрытие четырёх троек",
+      "status": "PASS",
+      "evidence": {
+        "triples": [
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ],
+        "shared_boundary_levels": [
+          1,
+          3,
+          5
+        ],
+        "semantic_recursion_proved": false
+      }
+    }
+  ]
+}
