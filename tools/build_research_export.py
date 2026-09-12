@@ -52,6 +52,13 @@ E5_EXPLICIT_ADDITIONS = E5_ROOT / "EXPLICIT_ADDITIONS_2026-09-05.md"
 E5_EXPLICIT_ADDITIONS_REPORT = E5_ROOT / "EXPLICIT_ADDITIONS_REPORT.md"
 E5_EXPLICIT_ADDITIONS_CHECK = E5_ROOT / "check_explicit_additions.py"
 E5_DEEP_RESEARCH_REQUESTS = E5_ROOT / "DEEP_RESEARCH_REQUESTS_CONNECTIVITY.md"
+DR_CORE = E5_ROOT / "dr_core_2026-09-11"
+DR_CORE_REVIEW = DR_CORE / "REVIEW.md"
+DR_CORE_SOURCES = DR_CORE / "SOURCE_AUDIT.md"
+DR_CORE_ROUTING = DR_CORE / "CONFLICT_ROUTING.md"
+DR_CORE_REPORT = DR_CORE / "CHECK_REPORT.md"
+DR_CORE_CHECK = DR_CORE / "check_core.py"
+DR_CORE_MANIFEST = DR_CORE / "INPUT_MANIFEST.json"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -95,6 +102,12 @@ INPUT_PATHS = (
     E5_EXPLICIT_ADDITIONS_REPORT,
     E5_EXPLICIT_ADDITIONS_CHECK,
     E5_DEEP_RESEARCH_REQUESTS,
+    DR_CORE_REVIEW,
+    DR_CORE_SOURCES,
+    DR_CORE_ROUTING,
+    DR_CORE_REPORT,
+    DR_CORE_CHECK,
+    DR_CORE_MANIFEST,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -278,7 +291,7 @@ def safe_cell(value: str) -> str:
 def external_bibliography() -> str:
     candidates = candidate_records()
     lines = [
-        "### 7.14. Библиографический указатель",
+        "### 7.24. Библиографический указатель",
         "",
         "Ниже приведены только библиографические метаданные и исследовательская роль.",
         "Полные тексты, OCR-файлы и переводческие досье в выгрузку не включены.",
@@ -468,6 +481,12 @@ def render_export() -> str:
                     "7.17. Запросы Deep Research по основаниям связности",
                     E5_DEEP_RESEARCH_REQUESTS,
                 ),
+                markdown_source("7.18. Приёмка основного блока Deep Research", DR_CORE_REVIEW),
+                markdown_source("7.19. Первичные источники и ограничения приёмки", DR_CORE_SOURCES),
+                markdown_source("7.20. Маршрутизация предложенных коллизий", DR_CORE_ROUTING),
+                markdown_source("7.21. Проверки основного DR-блока", DR_CORE_REPORT),
+                fenced_source("7.22. Код независимых конечных проверок", DR_CORE_CHECK, "python"),
+                fenced_source("7.23. Манифест семи входных отчётов", DR_CORE_MANIFEST, "json"),
                 external_bibliography(),
             ]
         ),

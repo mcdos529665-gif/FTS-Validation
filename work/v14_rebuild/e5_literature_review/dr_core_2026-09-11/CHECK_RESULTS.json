@@ -1,0 +1,222 @@
+{
+  "scope": "finite_external_candidate_checks_not_C_NN",
+  "checker_sha256": "7a8e4910ffe2e608fe5a5c31590731890cbeaec2f902c87d39e30a1d3cc24e3b",
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "DRC-01",
+      "predicate": "Byte integrity of seven submitted reports",
+      "status": "PASS",
+      "detail": {
+        "reports": 7,
+        "hashes_match": true
+      }
+    },
+    {
+      "id": "DRC-02",
+      "predicate": "Fibre criterion and fixed-pair minimality on four states",
+      "status": "PASS",
+      "detail": {
+        "q_r_pairs": 256,
+        "carrier_size": 4,
+        "partitions_per_pair": 15
+      }
+    },
+    {
+      "id": "DRC-03",
+      "predicate": "A minimum may skip covers; first queries may be incomparable",
+      "status": "PASS",
+      "detail": {
+        "blocks": [
+          2,
+          3,
+          4
+        ],
+        "incomparable_first_queries": true
+      }
+    },
+    {
+      "id": "DRC-04",
+      "predicate": "Partition cover has an intermediate Moore domain",
+      "status": "PASS",
+      "detail": {
+        "domain_sizes": [
+          2,
+          3,
+          4
+        ],
+        "middle_closed_under_complement": false
+      }
+    },
+    {
+      "id": "DRC-05",
+      "predicate": "Set questions can grow at unchanged singleton distinguishability",
+      "status": "PASS",
+      "detail": {
+        "domain_sizes": [
+          5,
+          6,
+          8
+        ],
+        "singleton_observations_equal": true
+      }
+    },
+    {
+      "id": "DRC-06",
+      "predicate": "One extra answer does not preserve the temporal language",
+      "status": "PASS",
+      "detail": {
+        "one_question_blocks": 2,
+        "language_blocks": 3,
+        "denotations": 8
+      }
+    },
+    {
+      "id": "DRC-07",
+      "predicate": "Independent six-state quotient, all partitions and denotations",
+      "status": "PASS",
+      "detail": {
+        "partitions": 203,
+        "stable": 4,
+        "minimum_blocks": 4,
+        "minimizers": 1,
+        "all_language_denotations": 16
+      }
+    },
+    {
+      "id": "DRC-08",
+      "predicate": "Scalar reversible recoding and missing sign",
+      "status": "PASS",
+      "detail": {
+        "sample": [
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "four_scalar_kernels_equal": true,
+        "sign_recovery_from_modulus": false
+      }
+    },
+    {
+      "id": "DRC-09",
+      "predicate": "Local sections and two anchors do not ensure coherence",
+      "status": "PASS",
+      "detail": {
+        "route_mismatches": 4,
+        "states": 8,
+        "two_anchors_not_function_identity": true
+      }
+    },
+    {
+      "id": "DRC-10",
+      "predicate": "Forward and backward completeness are independent",
+      "status": "PASS",
+      "detail": {
+        "F_forward_backward": [
+          true,
+          false
+        ],
+        "G_forward_backward": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "id": "DRC-11",
+      "predicate": "A dynamic quotient need not have a dynamic section",
+      "status": "PASS",
+      "detail": {
+        "set_sections": 2,
+        "transition_preserving_sections": 0
+      }
+    },
+    {
+      "id": "DRC-12",
+      "predicate": "Statistical sufficiency does not recover an actual history",
+      "status": "PASS",
+      "detail": {
+        "channel_law_reconstructed": true,
+        "first_bit_error_from_count": "3/16"
+      }
+    },
+    {
+      "id": "DRC-13",
+      "predicate": "Copying and a fresh observation differ in decision value",
+      "status": "PASS",
+      "detail": {
+        "single_and_copy_brier": "3/16",
+        "two_fresh_brier": "3/20"
+      }
+    },
+    {
+      "id": "DRC-14",
+      "predicate": "An intermediate history record has two strict information gains",
+      "status": "PASS",
+      "detail": {
+        "outputs": [
+          2,
+          4,
+          6
+        ],
+        "FTS_early_form_excluded": false
+      }
+    },
+    {
+      "id": "DRC-15",
+      "predicate": "Full information and a restricted decoding budget differ",
+      "status": "PASS",
+      "detail": {
+        "proper_coordinate_subsets": 15,
+        "full_input_contains_answer": true,
+        "adaptive_lower_bound": "see REVIEW proof; not inferred from fixed subsets"
+      }
+    },
+    {
+      "id": "DRC-16",
+      "predicate": "Exact nonfactorization may disappear almost surely",
+      "status": "PASS",
+      "detail": {
+        "exact_decoder": false,
+        "zero_error_almost_sure_decoder": true
+      }
+    },
+    {
+      "id": "DRC-17",
+      "predicate": "Primary source compression and bounded square counterchecks",
+      "status": "PASS",
+      "detail": {
+        "compressed_source_bytes": 47514,
+        "decoded_bytes": 175032,
+        "strict_sign_zero_counterexample": 0,
+        "successive_power_witnesses": [
+          4,
+          16,
+          256,
+          65536
+        ],
+        "infinite_intersection": "analytical proof in SOURCE_AUDIT; not a finite test"
+      }
+    },
+    {
+      "id": "DRC-18",
+      "predicate": "Strictly intermediate binary statistical experiment",
+      "status": "PASS",
+      "detail": {
+        "optimal_01_risks": [
+          "0",
+          "1/4",
+          "1/2"
+        ],
+        "strict_intermediate_experiment": true
+      }
+    }
+  ]
+}

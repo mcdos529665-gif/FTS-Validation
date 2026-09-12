@@ -1,0 +1,42 @@
+{
+  "schema": "fts-dr-intake/v1",
+  "ingested_at_utc": "2026-09-11T19:28:54.734802+00:00",
+  "status": "external_reports_not_primary_evidence",
+  "files": [
+    {
+      "file": "inputs/DR-00_Ranzato_Tapparo_FTS.md",
+      "bytes": 103652,
+      "sha256": "adad2a3707c10bac2bceb68bb66aadec386323ee63b1914c3136d3429bee9cc0"
+    },
+    {
+      "file": "inputs/DR-07_O_07_Local_Noninsertability.md",
+      "bytes": 104900,
+      "sha256": "995c59d1d88462dc96e2dc944697e0340845f25980f10c39c8efc02738ac0317"
+    },
+    {
+      "file": "inputs/DR-08_O_08_Two_Step_Projection.md",
+      "bytes": 81468,
+      "sha256": "ed54278c78db18fa8a8e6365f5cffd74f1031ad08cb195fffde6aa9932dd54f8"
+    },
+    {
+      "file": "inputs/DR-09_O_09_Independent_Alternative_Mprime.md",
+      "bytes": 125032,
+      "sha256": "bff72a3062748a721cfce18e0b1cf192f60f1d2ba5075047728d1b31b1eca637"
+    },
+    {
+      "file": "inputs/DR-14_O_14_QuestionGain.md",
+      "bytes": 112037,
+      "sha256": "82a1599987ddc46f3075184ad119bff5fad1cde07cdbc664c8e032d2ed4538fa"
+    },
+    {
+      "file": "inputs/DR-X1_FTS_Insertion_Collapse.md",
+      "bytes": 117575,
+      "sha256": "a09213e218a8dd3bbfb49ea13cb0557983f54e6588f0f4e5fb2e906da8027755"
+    },
+    {
+      "file": "inputs/DR-X2_Independent_Alternative_Mprime.md",
+      "bytes": 130957,
+      "sha256": "7dd0bdab5e7f20cd14cf0b17d0c46e6c33823a95bba8fe15d2bd74b1193c4f14"
+    }
+  ]
+}
