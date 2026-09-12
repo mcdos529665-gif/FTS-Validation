@@ -66,6 +66,11 @@ RD_REPORT = RD_ROOT / "CHECK_REPORT.md"
 RD_CHECK = RD_ROOT / "check_note.py"
 RD_MANIFEST = RD_ROOT / "INPUT_MANIFEST.json"
 RD_ORIGINAL = RD_ROOT / "SOURCE_ORIGINAL.txt"
+INTERPRETATION_ROOT = Path("work/v14_rebuild/interpretation_descent_undermind_2026-09-12")
+INTERPRETATION_REVIEW = INTERPRETATION_ROOT / "REVIEW.md"
+INTERPRETATION_MATRIX = INTERPRETATION_ROOT / "EVIDENCE_MATRIX.md"
+INTERPRETATION_AUDIT = INTERPRETATION_ROOT / "SOURCE_AUDIT.md"
+INTERPRETATION_PROTOCOL = INTERPRETATION_ROOT / "PROTOCOL.md"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -121,6 +126,10 @@ INPUT_PATHS = (
     RD_CHECK,
     RD_MANIFEST,
     RD_ORIGINAL,
+    INTERPRETATION_REVIEW,
+    INTERPRETATION_MATRIX,
+    INTERPRETATION_AUDIT,
+    INTERPRETATION_PROTOCOL,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -519,6 +528,10 @@ def render_export() -> str:
                 fenced_source("7.22. Код независимых конечных проверок", DR_CORE_CHECK, "python"),
                 fenced_source("7.23. Манифест семи входных отчётов", DR_CORE_MANIFEST, "json"),
                 external_bibliography(),
+                markdown_source("7.25. Интерпретация при понижении: Undermind", INTERPRETATION_REVIEW),
+                markdown_source("7.26. Матрица внешних оснований интерпретации", INTERPRETATION_MATRIX),
+                markdown_source("7.27. Аудит источников Undermind", INTERPRETATION_AUDIT),
+                markdown_source("7.28. Протокол исследования интерпретации", INTERPRETATION_PROTOCOL),
             ]
         ),
         "## 8. Компактный контекст канона v13\n\n"

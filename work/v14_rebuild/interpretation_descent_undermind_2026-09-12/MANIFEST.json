@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-12",
+  "kind": "research_package_snapshot",
+  "workspace_id": "dc244499-d113-4273-a491-111f79a873a8",
+  "deep_search_path": "/Interpretation and abstraction/Interpretive freedom in abstraction and descending representations",
+  "note": "Provider responses and curated derivatives; no claim of full-paper archival or complete systematic coverage",
+  "files": [
+    {
+      "path": "EVIDENCE_MATRIX.md",
+      "bytes": 12649,
+      "sha256": "ba4cc5ab82cbb700d6081ebe0efb27831ffd23eab3ee809bcc83619eba1648ab"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 8960,
+      "sha256": "d7a237538952ac235b1eaf805ef0eef1ee0f39d5459fcad83e3b815a7125c9c6"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 24725,
+      "sha256": "8d8b9bb4a84b6a33c9abac4c01d875ad209f07829bbfb909f48491847adbc8ec"
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "bytes": 6123,
+      "sha256": "9e867409601ea5b405ae55d663416747c059c534458dedebf829676e27f653de"
+    },
+    {
+      "path": "TENSIONS.yaml",
+      "bytes": 3598,
+      "sha256": "036cb44251ab4ad2059540434d658b24a90217b72081a6b750a70aa5c7bd58e6"
+    },
+    {
+      "path": "UNDermind_RAW.json",
+      "bytes": 206005,
+      "sha256": "df1daf36decd5705d32363c863478d043225d9abbefd58171389b83291928422"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 3047,
+      "sha256": "713f9ce7cdb9ec8d61330e2e9b7ca064f370cbf20490f584cc79ba8367827345"
+    }
+  ]
+}
