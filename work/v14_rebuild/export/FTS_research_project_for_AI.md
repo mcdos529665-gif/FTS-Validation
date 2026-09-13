@@ -81,8 +81,8 @@
 | `work/v14_rebuild/interpretation_descent_undermind_2026-09-12/EVIDENCE_MATRIX.md` | `ba4cc5ab82cbb700d6081ebe0efb27831ffd23eab3ee809bcc83619eba1648ab` |
 | `work/v14_rebuild/interpretation_descent_undermind_2026-09-12/SOURCE_AUDIT.md` | `9e867409601ea5b405ae55d663416747c059c534458dedebf829676e27f653de` |
 | `work/v14_rebuild/interpretation_descent_undermind_2026-09-12/PROTOCOL.md` | `d7a237538952ac235b1eaf805ef0eef1ee0f39d5459fcad83e3b815a7125c9c6` |
-| `work/v14_rebuild/nonarbitrariness_dialogue_2026-09-13/REVIEW.md` | `b0246e664ec3c50a79877bb51b2aa687e65383ea190b81ca9277615dffbfc4b7` |
-| `work/v14_rebuild/nonarbitrariness_dialogue_2026-09-13/CLAIM_MAP.md` | `cddd5df3c8a5ffa2a1a3b822ac5a8d2237e1d015480968c1d4c99e155f8d6984` |
+| `work/v14_rebuild/nonarbitrariness_dialogue_2026-09-13/REVIEW.md` | `f2ea9a368f6b55b73217014d91a19f43eed1054ce29ddb66d9ea3a443737f0c5` |
+| `work/v14_rebuild/nonarbitrariness_dialogue_2026-09-13/CLAIM_MAP.md` | `3bdd85e7aa52f83c103063bddc0c1811e03c04675700a8470f79d7d84f2ca7fa` |
 | `work/v14_rebuild/nonarbitrariness_dialogue_2026-09-13/INPUT_MANIFEST.json` | `722eb3ca1e99b38d73ecef84bf0dd0e2442b81a13aec2788b5c9a1012458aa83` |
 | `work/v14_rebuild/nonarbitrariness_dialogue_2026-09-13/SOURCE_ORIGINAL.txt` | `0675e54772d40c7b34fd58d163a84c60575447308dc259ebaf12dc08d85a6b09` |
 | `source/MANIFEST.json` | `a91c453226cac21072478fa1fbf2db766e36f1bfe477e52414ee19f5c8f6f16a` |
