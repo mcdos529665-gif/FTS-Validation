@@ -3,7 +3,8 @@
 Машинная верификация формальных утверждений пересборки ФТС v14.
 Каждая проверка C-NN соответствует утверждению в FTS_v14_paper.md.
 Запуск:  python -X utf8 work/v14_rebuild/verification.py
-Выход:   work/v14_rebuild/verification_report.md  (+ код возврата 0 если все PASS)
+Выход:   краткая строка при PASS; полный verification_report.md только при FAIL
+          (+ код возврата 0 если все PASS)
 """
 import io
 import os
@@ -25,7 +26,8 @@ RESULTS = []
 
 def check(cid, claim, ok, witness=""):
     RESULTS.append((cid, claim, bool(ok), witness))
-    print(("PASS" if ok else "FAIL"), cid, "-", claim)
+    if not ok:
+        print("FAIL", cid, "-", claim)
 
 
 def parity(expr, var):
@@ -554,6 +556,7 @@ check("C62", "Булевы тождества: (a=b)∧(a≠b)=False, (a=b)∨(a
 # ---------------------------------------------------------------- отчёт
 def write_report():
     n_pass = sum(1 for _cid, _claim, ok, _witness in RESULTS if ok)
+    n_fail = len(RESULTS) - n_pass
 
     def md_cell(value):
         """Экранирует разделитель Markdown-таблицы и не оставляет пустых ячеек с пробелом."""
@@ -566,24 +569,37 @@ def write_report():
         "",
         f"**Итог: {n_pass} PASS / {len(RESULTS) - n_pass} FAIL из {len(RESULTS)}**",
         "",
-        "| ID | Утверждение | Статус | Свидетель |",
-        "|----|-------------|--------|-----------|",
     ]
-    for cid, claim, ok, witness in RESULTS:
-        lines.append(
-            f"| {cid} | {md_cell(claim)} | {'PASS' if ok else '**FAIL**'} | {md_cell(witness)} |"
-        )
-    lines += [
-        "",
-        "Каждое C-NN привязано к утверждению в `FTS_v14_paper.md`. FAIL любой проверки",
-        "означает, что соответствующее утверждение НЕ имеет права на статус formal_math_fact.",
-        "",
-    ]
+    if n_fail:
+        lines += [
+            "Полная таблица записана, потому что обнаружен FAIL.",
+            "",
+            "| ID | Утверждение | Статус | Свидетель |",
+            "|----|-------------|--------|-----------|",
+        ]
+        for cid, claim, ok, witness in RESULTS:
+            lines.append(
+                f"| {cid} | {md_cell(claim)} | {'PASS' if ok else '**FAIL**'} | {md_cell(witness)} |"
+            )
+        lines += [
+            "",
+            "Каждое C-NN привязано к утверждению в `FTS_v14_paper.md`. FAIL любой проверки",
+            "означает, что соответствующее утверждение НЕ имеет права на статус formal_math_fact.",
+        ]
+    else:
+        lines += [
+            "Подробная таблица не создаётся: все проверки прошли.",
+            "Полный отчёт автоматически появится при первом FAIL.",
+        ]
+    lines.append("")
     out = os.path.join(HERE, "verification_report.md")
     with io.open(out, "w", encoding="utf-8", newline="\n") as fh:
         fh.write("\n".join(lines))
-    print(f"\nreport: {out}")
-    return n_pass == len(RESULTS)
+    if n_fail:
+        print(f"FAIL verification: {n_pass} PASS / {n_fail} FAIL; полный отчёт: {out}")
+        return False
+    print(f"PASS verification: {n_pass} PASS / 0 FAIL")
+    return True
 
 
 if __name__ == "__main__":
