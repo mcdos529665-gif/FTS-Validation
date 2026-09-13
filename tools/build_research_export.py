@@ -36,6 +36,9 @@ NEW_CONNECTIONS_CHECK = Path("work/v14_rebuild/check_new_connections.py")
 E5_ROOT = Path("work/v14_rebuild/e5_literature_review")
 E5_PROTOCOL = E5_ROOT / "PROTOCOL.md"
 E5_STATUS = E5_ROOT / "WAVE_0_STATUS.md"
+E5_AUTHOR_CYCLE_AMENDMENT = E5_ROOT / "PROTOCOL_AMENDMENT_005_AUTHOR_CYCLE.md"
+E5_SYNTHESIS = E5_ROOT / "SYNTHESIS.md"
+E5_NOVELTY_BOUNDARY = E5_ROOT / "NOVELTY_BOUNDARY.md"
 E5_COUPLING = E5_ROOT / "COUPLING_MAP.md"
 E5_SEEDS = E5_ROOT / "seed_set.bib"
 E5_CANDIDATES = E5_ROOT / "CANDIDATES.tsv"
@@ -77,6 +80,7 @@ NONARBITRARY_CLAIMS = NONARBITRARY_ROOT / "CLAIM_MAP.md"
 NONARBITRARY_MANIFEST = NONARBITRARY_ROOT / "INPUT_MANIFEST.json"
 NONARBITRARY_ORIGINAL = NONARBITRARY_ROOT / "SOURCE_ORIGINAL.txt"
 U6_RANDOM_REGULARITY = Path("work/v14_rebuild/U6_RANDOM_REGULARITY_2026-09-13.md")
+AUTHOR_CYCLE_CHARTER = Path("work/v14_rebuild/AUTHOR_CYCLE_CHARTER_2026-09-13.md")
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -104,6 +108,9 @@ INPUT_PATHS = (
     NEW_CONNECTIONS_CHECK,
     E5_PROTOCOL,
     E5_STATUS,
+    E5_AUTHOR_CYCLE_AMENDMENT,
+    E5_SYNTHESIS,
+    E5_NOVELTY_BOUNDARY,
     E5_COUPLING,
     E5_SEEDS,
     E5_CANDIDATES,
@@ -141,6 +148,7 @@ INPUT_PATHS = (
     NONARBITRARY_MANIFEST,
     NONARBITRARY_ORIGINAL,
     U6_RANDOM_REGULARITY,
+    AUTHOR_CYCLE_CHARTER,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -465,6 +473,7 @@ def render_export() -> str:
                 fenced_source("6.8. Код проверок записки", RD_CHECK, "python"),
                 fenced_source("6.9. Манифест происхождения записки", RD_MANIFEST, "json"),
                 submitted_note_source(),
+                markdown_source("6.11. Авторский мандат ближайшего цикла", AUTHOR_CYCLE_CHARTER),
             ]
         ),
         "## 7. Внешний исследовательский контур E5\n\n"
@@ -472,6 +481,12 @@ def render_export() -> str:
             [
                 markdown_source("7.1. Протокол систематического обзора", E5_PROTOCOL),
                 markdown_source("7.2. Текущий статус волны 0", E5_STATUS),
+                markdown_source(
+                    "7.2a. Авторская поправка к текущему применению E5",
+                    E5_AUTHOR_CYCLE_AMENDMENT,
+                ),
+                markdown_source("7.2b. Предварительный синтез E5", E5_SYNTHESIS),
+                markdown_source("7.2c. Граница новизны E5", E5_NOVELTY_BOUNDARY),
                 markdown_source("7.3. Предварительная карта сопряжений", E5_COUPLING),
                 markdown_source(
                     "7.4. Поправка протокола для ограниченного Blackwell-моста",

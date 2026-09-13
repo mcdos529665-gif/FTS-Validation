@@ -16,11 +16,15 @@
 
 - Frozen candidate set for the first two screens: **38** records.
 - Codex first screen: **15 include / 5 exclude / 18 uncertain**.
-- Researcher screen: not started; `SCREENING_RESEARCHER.tsv` is intentionally empty.
+- Researcher screen: not started. По авторскому мандату 2026-09-13 это не
+  completion gate; при выполнении как независимого свидетельства он должен быть
+  слепым к первому решению, иначе маркируется `unblinded_replay`.
 - Semantic Scholar verification: unavailable for this wave; no S2 ID was inferred.
 - Citation expansion: not started; manual ResearchRabbit export is pending.
-- Evidence matrix, synthesis, novelty boundary, and adjudication: intentionally not
-  started. A source cannot change `St_FTS` at this stage.
+- Evidence matrix and adjudication: not started. `SYNTHESIS.md` и
+  `NOVELTY_BOUNDARY.md` разрешены как предварительные рабочие документы; они
+  не являются итоговым verdict. Внешний источник не меняет `St_FTS` на этой
+  стадии.
 - Ограниченный Blackwell-мост У4–У6 оформлен отдельно в
   `BLACKWELL_BRIDGE.md`: BW-01…BW-06 должны давать **6 PASS / 0 FAIL**. Он не
   отождествляет внешнее огрубление с каноническим `projects_to`.

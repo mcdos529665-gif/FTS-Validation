@@ -1,5 +1,6 @@
 oq_anchor	oq_status	research_program	meta_pattern	pattern_ids	bridge_type	common_blocker	resolution_event	resolution_kind	note
 oq-ce-canon	open	RP-5	MP-C	PA-C04	indirect	Не задан канонический функционал C(E) и его область.	E8	formalization	Паспорт и правило П дают форму требования, но не сам функционал.
+oq-cost-model-scope	open	RP-5	MP-C	PA-G04;PA-C04	indirect	Не определены общая область и сопоставимость цены для минимальности, QuestionGain и M′.	E8	author_decision	Автор оставил формальную модель стоимости на обсуждение; до решения частные цены не образуют общий F3-вердикт.
 oq-kappa-provenance	open	RP-2	MP-C	PA-C02;PA-C04	indirect	Происхождение κ не имеет отдельного семантического свидетеля К1–К5.	E7	formalization	Решается вместе с повторной семантической канонизацией У7–У11.
 oq-o20-missing-benchmark	partial	RP-4	MP-C	PA-R03	direct	Текущие датасеты не делают механизм пропущенности достаточно информативным.	E9	experiment	Исправленный отрицательный результат сохранён; нужна новая MNAR-площадка и предрегистрация.
 oq-formulas-7-11-done	partial	RP-2	MP-C	PA-C01;PA-C02;PA-R01	indirect	Формулы проверены, но их операционный смысл и необходимость не установлены.	E7	formalization	Закрыта математика, не семантическая канонизация.

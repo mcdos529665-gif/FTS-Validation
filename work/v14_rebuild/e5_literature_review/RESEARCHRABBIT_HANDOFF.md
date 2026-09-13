@@ -12,9 +12,12 @@ automated and it does not send any FTS manuscript, private note, or canon conten
    `researchrabbit_export.bib` in this directory. If ResearchRabbit only provides
    RIS or CSV, retain that raw file beside it and state its filename in the next
    handoff; do not manufacture a BibTeX conversion in place of the raw export.
-5. Do not screen against the Codex decisions yet. Complete the independent second
-   pass in `SCREENING_RESEARCHER.tsv` for the frozen set, then add graph-derived
-   records as a clearly labelled next wave.
+5. A second pass is optional in the current cycle. If it is offered as an
+   independent check, do not expose Codex decisions before completing the frozen
+   set in `SCREENING_RESEARCHER.tsv`; the same person or AI may perform that
+   blinded replay. If the first decisions are known, record the result as
+   `unblinded_replay`, not independent screening. Add graph-derived records as a
+   clearly labelled next wave.
 
 The validator will reject an export that drops any DOI from `seed_set.bib`.
 Disagreements with `SCREENING_CODEX.tsv` must remain unexamined until an explicit
