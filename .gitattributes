@@ -2,5 +2,7 @@
 source/** -text
 # Первичные LaTeX-исходники статей arXiv внутри пакета статьи также побайтово неизменяемы.
 **/source/** -text
+# Авторские входные записки с SHA256 также сохраняются побайтово.
+**/SOURCE_ORIGINAL.txt binary
 *.tsv -text
 *.jsonl -text

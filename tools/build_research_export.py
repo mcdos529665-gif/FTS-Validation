@@ -71,6 +71,11 @@ INTERPRETATION_REVIEW = INTERPRETATION_ROOT / "REVIEW.md"
 INTERPRETATION_MATRIX = INTERPRETATION_ROOT / "EVIDENCE_MATRIX.md"
 INTERPRETATION_AUDIT = INTERPRETATION_ROOT / "SOURCE_AUDIT.md"
 INTERPRETATION_PROTOCOL = INTERPRETATION_ROOT / "PROTOCOL.md"
+NONARBITRARY_ROOT = Path("work/v14_rebuild/nonarbitrariness_dialogue_2026-09-13")
+NONARBITRARY_REVIEW = NONARBITRARY_ROOT / "REVIEW.md"
+NONARBITRARY_CLAIMS = NONARBITRARY_ROOT / "CLAIM_MAP.md"
+NONARBITRARY_MANIFEST = NONARBITRARY_ROOT / "INPUT_MANIFEST.json"
+NONARBITRARY_ORIGINAL = NONARBITRARY_ROOT / "SOURCE_ORIGINAL.txt"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -130,6 +135,10 @@ INPUT_PATHS = (
     INTERPRETATION_MATRIX,
     INTERPRETATION_AUDIT,
     INTERPRETATION_PROTOCOL,
+    NONARBITRARY_REVIEW,
+    NONARBITRARY_CLAIMS,
+    NONARBITRARY_MANIFEST,
+    NONARBITRARY_ORIGINAL,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -532,6 +541,10 @@ def render_export() -> str:
                 markdown_source("7.26. Матрица внешних оснований интерпретации", INTERPRETATION_MATRIX),
                 markdown_source("7.27. Аудит источников Undermind", INTERPRETATION_AUDIT),
                 markdown_source("7.28. Протокол исследования интерпретации", INTERPRETATION_PROTOCOL),
+                markdown_source("7.29. Непроизвольность лестницы: приём диалога", NONARBITRARY_REVIEW),
+                markdown_source("7.30. Карта тезисов о непроизвольности", NONARBITRARY_CLAIMS),
+                fenced_source("7.31. Манифест диалога о непроизвольности", NONARBITRARY_MANIFEST, "json"),
+                fenced_source("7.32. Исходный диалог о непроизвольности", NONARBITRARY_ORIGINAL, "text"),
             ]
         ),
         "## 8. Компактный контекст канона v13\n\n"
