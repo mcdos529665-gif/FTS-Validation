@@ -81,6 +81,7 @@ NONARBITRARY_MANIFEST = NONARBITRARY_ROOT / "INPUT_MANIFEST.json"
 NONARBITRARY_ORIGINAL = NONARBITRARY_ROOT / "SOURCE_ORIGINAL.txt"
 U6_RANDOM_REGULARITY = Path("work/v14_rebuild/U6_RANDOM_REGULARITY_2026-09-13.md")
 AUTHOR_CYCLE_CHARTER = Path("work/v14_rebuild/AUTHOR_CYCLE_CHARTER_2026-09-13.md")
+TRAIN_REFLECTION_DRAFT = Path("work/v14_rebuild/TRAIN_REFLECTION_TEST_DRAFT_2026-09-14.md")
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -149,6 +150,7 @@ INPUT_PATHS = (
     NONARBITRARY_ORIGINAL,
     U6_RANDOM_REGULARITY,
     AUTHOR_CYCLE_CHARTER,
+    TRAIN_REFLECTION_DRAFT,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -563,6 +565,7 @@ def render_export() -> str:
                 markdown_source("7.30. Карта тезисов о непроизвольности", NONARBITRARY_CLAIMS),
                 fenced_source("7.31. Манифест диалога о непроизвольности", NONARBITRARY_MANIFEST, "json"),
                 fenced_source("7.32. Исходный диалог о непроизвольности", NONARBITRARY_ORIGINAL, "text"),
+                markdown_source("7.34. Черновик проверки рефлексии: пример поезда", TRAIN_REFLECTION_DRAFT),
             ]
         ),
         "## 8. Компактный контекст канона v13\n\n"
