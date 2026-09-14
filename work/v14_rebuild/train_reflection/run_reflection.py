@@ -176,6 +176,7 @@ class Controller:
                 self.reads += 3
                 review = True
                 self.filter_events += 1
+                self.reviews += 1
                 self.policy[context] = argmin_action(self.estimates[context])
         elif self.kind == "B_adaptive":
             # No separate event; every recommendation is an immediate table
@@ -234,6 +235,7 @@ def empty_metrics() -> dict[str, Any]:
         "max_state_cells": 0,
         "trace": [],
         "action_outcomes": [],
+        "recommendations": [],
     }
 
 
@@ -256,6 +258,7 @@ def run_controller(
         if context in previous_recommendation and previous_recommendation[context] != recommendation:
             metrics["recommendation_changes"] += 1
         previous_recommendation[context] = recommendation
+        metrics["recommendations"].append((episode, context, recommendation))
 
         if episode < EXPLORATION_EPISODES:
             action = str(row["forced_action"])
@@ -307,7 +310,7 @@ def run_controller(
         json.dumps(metrics["action_outcomes"], sort_keys=True).encode("utf-8")
     )
     metrics["recommendation_digest"] = sha256_bytes(
-        json.dumps(metrics["trace"], sort_keys=True).encode("utf-8")
+        json.dumps(metrics["recommendations"], sort_keys=True).encode("utf-8")
     )
     return metrics
 
@@ -396,6 +399,12 @@ def run_all() -> dict[str, Any]:
             "common_updates_equal": len({r["updates"] for r in r_common}) == 1,
         }
 
+    def equivalent_recommendations(arm: str, left: str, right: str) -> bool:
+        return all(
+            l["recommendation_digest"] == r["recommendation_digest"]
+            for l, r in zip(all_records[arm][left], all_records[arm][right])
+        )
+
     return {
         "protocol": {
             "path": str(PROTOCOL.relative_to(ROOT)).replace("\\", "/"),
@@ -419,6 +428,12 @@ def run_all() -> dict[str, Any]:
         },
         "invariants": {
             "common_history_action_outcomes_identical_across_controllers_and_seeds": common_history_action_outcomes_identical,
+            "R_and_B_event_recommendations_equivalent_common_history": equivalent_recommendations(
+                "common_history", "R", "B_event"
+            ),
+            "R_and_B_event_recommendations_equivalent_closed_loop": equivalent_recommendations(
+                "closed_loop", "R", "B_event"
+            ),
             "max_state_cells_within_budget": all(
                 summaries[arm][kind]["max_state_cells"] <= 8
                 for arm in summaries
