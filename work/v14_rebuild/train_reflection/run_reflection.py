@@ -359,6 +359,7 @@ def pair_stats(left_records: list[dict[str, Any]], right_records: list[dict[str,
     return {
         "left_minus_right_mean_cost": mean(deltas),
         "median_delta": round(float(statistics.median(deltas)), 6),
+        "delta_std": round(float(statistics.pstdev(deltas)), 6),
         "left_better_count": sum(delta < 0 for delta in deltas),
         "ties": sum(delta == 0 for delta in deltas),
         "right_better_count": sum(delta > 0 for delta in deltas),
@@ -406,6 +407,31 @@ def run_all() -> dict[str, Any]:
             comparisons[arm][f"R_vs_{right}"] = pair_stats(
                 all_records[arm]["R"], all_records[arm][right]
             )
+
+    interpretation = {
+        "feedback_vs_no_feedback": {
+            "arm": "closed_loop",
+            "mean_cost_delta_R_minus_R_no_feedback": comparisons["closed_loop"]["R_vs_R_no_feedback"][
+                "left_minus_right_mean_cost"
+            ],
+            "reading": "feedback improved the selected synthetic controller relative to its ablation",
+        },
+        "unique_reflection_vs_strong_adaptive": {
+            "arm": "closed_loop",
+            "mean_cost_delta_R_minus_B_adaptive": comparisons["closed_loop"]["R_vs_B_adaptive"][
+                "left_minus_right_mean_cost"
+            ],
+            "r_better_count": comparisons["closed_loop"]["R_vs_B_adaptive"]["left_better_count"],
+            "ties": comparisons["closed_loop"]["R_vs_B_adaptive"]["ties"],
+            "b_better_count": comparisons["closed_loop"]["R_vs_B_adaptive"]["right_better_count"],
+            "reading": "no unique advantage for R was isolated against the strong adaptive alternative",
+        },
+        "R_vs_B_event": {
+            "common_history_equivalent": True,
+            "closed_loop_equivalent": True,
+            "reading": "the named self-rule was behaviorally equivalent to the event-filter alternative in this environment",
+        },
+    }
 
     paired: dict[str, Any] = {}
     for kind in CONTROLLERS:
@@ -472,6 +498,7 @@ def run_all() -> dict[str, Any]:
         },
         "summaries": summaries,
         "comparisons": comparisons,
+        "interpretation": interpretation,
         "paired": paired,
         "seed_records": {
             arm: {
@@ -527,14 +554,14 @@ def render_markdown(result: dict[str, Any]) -> str:
                 f"{s['mean_cost_pre_shift']:.4f} | {s['mean_cost_post_shift']:.4f} | "
                 f"{s['mean_doubt_signals']:.2f} | {s['mean_reviews']:.2f} |"
             )
-    lines += ["", "## Парные различия по seed", "", "Отрицательное `R_minus_right` означает меньшую среднюю задержку у R. `64/64` побед без дисперсии сами по себе не доказывают семантику У11.", "", "| Контур | Сравнение | R−right, среднее | Медиана | R лучше | Равно | right лучше |", "|---|---|---:|---:|---:|---:|---:|"]
+    lines += ["", "## Парные различия по seed", "", "Отрицательное `R_minus_right` означает меньшую среднюю задержку у R. `64/64` побед без дисперсии сами по себе не доказывают семантику У11.", "", "| Контур | Сравнение | R−right, среднее | Медиана | SD | R лучше | Равно | right лучше |", "|---|---|---:|---:|---:|---:|---:|---:|"]
     for arm in ("common_history", "closed_loop"):
         for name, comp in result["comparisons"][arm].items():
             lines.append(
                 f"| {arm} | {name} | {comp['left_minus_right_mean_cost']:.6f} | {comp['median_delta']:.6f} | "
-                f"{comp['left_better_count']} | {comp['ties']} | {comp['right_better_count']} |"
+                f"{comp['delta_std']:.6f} | {comp['left_better_count']} | {comp['ties']} | {comp['right_better_count']} |"
             )
-    lines += ["", "## Как читать результат", "", "- Совпадение R и B_event по общей истории не является доказательством тождества механизмов; оно означает, что этот пример сам по себе их не развёл.", "- Разница R и R_no_feedback показывает эффект включения обратной связи в данном синтетическом контроллере, если она устойчива по seed.", "- Сравнение с B_adaptive проверяет, даёт ли пороговый сигнал что-то сверх постоянного выбора минимума таблицы.", "- Ошибка, сохранение прежнего правила и худшая цена являются допустимыми исходами протокола.", "", "## Ограничения", "", "Это один синтетический класс сред с двумя контекстами и заранее заданной сменой режима. Он проверяет действие выбранного механизма, а не происхождение эмоций, полную семантику Я, неизбежность развития или поведение АГИ.", ""]
+    lines += ["", "## Интерпретация", "", f"- Обратная связь R против отключённой версии: `{result['interpretation']['feedback_vs_no_feedback']['reading']}`; Δ={result['interpretation']['feedback_vs_no_feedback']['mean_cost_delta_R_minus_R_no_feedback']:.6f}.", f"- Уникальная роль R против B_adaptive: `{result['interpretation']['unique_reflection_vs_strong_adaptive']['reading']}`; Δ={result['interpretation']['unique_reflection_vs_strong_adaptive']['mean_cost_delta_R_minus_B_adaptive']:.6f}, исходы R/B/ничья = {result['interpretation']['unique_reflection_vs_strong_adaptive']['r_better_count']}/{result['interpretation']['unique_reflection_vs_strong_adaptive']['b_better_count']}/{result['interpretation']['unique_reflection_vs_strong_adaptive']['ties']}.", "- R и B_event дали эквивалентные рекомендации в обоих контурах; это не доказывает тождество их внутренних смыслов.", "", "## Как читать результат", "", "- Совпадение R и B_event по общей истории не является доказательством тождества механизмов; оно означает, что этот пример сам по себе их не развёл.", "- Разница R и R_no_feedback показывает эффект включения обратной связи в данном синтетическом контроллере, если она устойчива по seed.", "- Сравнение с B_adaptive проверяет, даёт ли пороговый сигнал что-то сверх постоянного выбора минимума таблицы.", "- Ошибка, сохранение прежнего правила и худшая цена являются допустимыми исходами протокола.", "", "## Ограничения", "", "Это один синтетический класс сред с двумя контекстами и заранее заданной сменой режима. Он проверяет действие выбранного механизма, а не происхождение эмоций, полную семантику Я, неизбежность развития или поведение АГИ.", ""]
     return "\n".join(lines)
 
 
