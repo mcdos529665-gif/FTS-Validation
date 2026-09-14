@@ -352,6 +352,21 @@ def summarize(records: list[dict[str, Any]]) -> dict[str, Any]:
     return result
 
 
+def pair_stats(left_records: list[dict[str, Any]], right_records: list[dict[str, Any]]) -> dict[str, Any]:
+    """Paired per-seed differences; negative means the left controller is cheaper."""
+
+    deltas = [mean(left["costs"]) - mean(right["costs"]) for left, right in zip(left_records, right_records)]
+    return {
+        "left_minus_right_mean_cost": mean(deltas),
+        "median_delta": round(float(statistics.median(deltas)), 6),
+        "left_better_count": sum(delta < 0 for delta in deltas),
+        "ties": sum(delta == 0 for delta in deltas),
+        "right_better_count": sum(delta > 0 for delta in deltas),
+        "min_delta": round(min(deltas), 6),
+        "max_delta": round(max(deltas), 6),
+    }
+
+
 def run_all() -> dict[str, Any]:
     all_records: dict[str, dict[str, list[dict[str, Any]]]] = {
         arm: {kind: [] for kind in CONTROLLERS} for arm in ("common_history", "closed_loop")
@@ -383,6 +398,14 @@ def run_all() -> dict[str, Any]:
         arm: {kind: summarize(records) for kind, records in by_kind.items()}
         for arm, by_kind in all_records.items()
     }
+
+    comparisons: dict[str, dict[str, dict[str, Any]]] = {}
+    for arm in ("common_history", "closed_loop"):
+        comparisons[arm] = {}
+        for right in ("B_event", "B_adaptive", "R_no_feedback", "R_label_only"):
+            comparisons[arm][f"R_vs_{right}"] = pair_stats(
+                all_records[arm]["R"], all_records[arm][right]
+            )
 
     paired: dict[str, Any] = {}
     for kind in CONTROLLERS:
@@ -448,6 +471,7 @@ def run_all() -> dict[str, Any]:
             "reproducibility_digest": None,
         },
         "summaries": summaries,
+        "comparisons": comparisons,
         "paired": paired,
         "seed_records": {
             arm: {
@@ -479,6 +503,7 @@ def render_markdown(result: dict[str, Any]) -> str:
         "# Результаты проверки рефлексии на примере поезда v1",
         "",
         f"Протокол SHA256: `{result['protocol']['sha256']}`.",
+        f"Программа SHA256: `{result['program']['sha256']}`.",
         "Симуляция условная и синтетическая; это не свидетельство реализации У11.",
         "",
         "## Найдено",
@@ -501,6 +526,13 @@ def render_markdown(result: dict[str, Any]) -> str:
                 f"| {arm} | {kind} | {s['mean_cost']:.4f} | {s['mean_regret']:.4f} | "
                 f"{s['mean_cost_pre_shift']:.4f} | {s['mean_cost_post_shift']:.4f} | "
                 f"{s['mean_doubt_signals']:.2f} | {s['mean_reviews']:.2f} |"
+            )
+    lines += ["", "## Парные различия по seed", "", "Отрицательное `R_minus_right` означает меньшую среднюю задержку у R. `64/64` побед без дисперсии сами по себе не доказывают семантику У11.", "", "| Контур | Сравнение | R−right, среднее | Медиана | R лучше | Равно | right лучше |", "|---|---|---:|---:|---:|---:|---:|"]
+    for arm in ("common_history", "closed_loop"):
+        for name, comp in result["comparisons"][arm].items():
+            lines.append(
+                f"| {arm} | {name} | {comp['left_minus_right_mean_cost']:.6f} | {comp['median_delta']:.6f} | "
+                f"{comp['left_better_count']} | {comp['ties']} | {comp['right_better_count']} |"
             )
     lines += ["", "## Как читать результат", "", "- Совпадение R и B_event по общей истории не является доказательством тождества механизмов; оно означает, что этот пример сам по себе их не развёл.", "- Разница R и R_no_feedback показывает эффект включения обратной связи в данном синтетическом контроллере, если она устойчива по seed.", "- Сравнение с B_adaptive проверяет, даёт ли пороговый сигнал что-то сверх постоянного выбора минимума таблицы.", "- Ошибка, сохранение прежнего правила и худшая цена являются допустимыми исходами протокола.", "", "## Ограничения", "", "Это один синтетический класс сред с двумя контекстами и заранее заданной сменой режима. Он проверяет действие выбранного механизма, а не происхождение эмоций, полную семантику Я, неизбежность развития или поведение АГИ.", ""]
     return "\n".join(lines)
