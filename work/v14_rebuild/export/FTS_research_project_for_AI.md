@@ -30,12 +30,12 @@
 
 | Входной артефакт | SHA256 |
 |---|---|
-| `tools/build_research_export.py` | `394e52a596fde64381cc34fb9b5fab955024924426d163bfad23180a66601e2d` |
+| `tools/build_research_export.py` | `a03108a9637a4bcffbf2b22726d4b4601c99b96d972d521009c7b2fc572418ae` |
 | `PROJECT_INSTRUCTIONS.md` | `a3d7a363172f6c3998da9a72a9e8acfbd00ce06b6c259e718c077fbdfba9d189` |
-| `work/STATE.md` | `a367ae31529171bba8438719e8eb7b87c34012c3a359558fcf5702d8a5da6c49` |
+| `work/STATE.md` | `8fbfbf0cef60c7ba0c3ec9f00018ca4cc811bb768869b39c2bf4d72224ad2b60` |
 | `work/notation.md` | `9739aed1cd4b022b4a4dc89cc385738b087fdc9a293347057bdbc4d78b920ec1` |
-| `work/DECISIONS.md` | `aa19b684bd07c6d8d4fbc9c5116162040cfa349ecf2bed0f82041f00bb27d97b` |
-| `work/OPEN_QUESTIONS.md` | `c8e9ca8dcf153a09a1a263c2075c000be92c8321b11252c4d5e50e809c23fbe1` |
+| `work/DECISIONS.md` | `e2b4baf6260abd4cc9c7c1347daee05ff6a82c30db602e878407ac7728d6cc87` |
+| `work/OPEN_QUESTIONS.md` | `aa4b820f59c90b27444c82be5d9f0aef09eedd6c3a07cbeee5aef7fa1b70e022` |
 | `work/EXTERNAL_CONFLICTS.md` | `50ad4fc9c2a726f2f71347ace93b668b7615b314c1f3212a8dc90e7901e78439` |
 | `work/v14_rebuild/FTS_v14_paper.md` | `42904bef23489104f4a1ae38f5466e12d4b3d17273911c27e9a3f558722b53e5` |
 | `work/v14_rebuild/FTS_v14_register_map.md` | `d72de146dca2d80a0f6332d13df347661b097e64b0c36a231eae7134b0743142` |
@@ -90,7 +90,11 @@
 | `work/v14_rebuild/nonarbitrariness_dialogue_2026-09-13/SOURCE_ORIGINAL.txt` | `0675e54772d40c7b34fd58d163a84c60575447308dc259ebaf12dc08d85a6b09` |
 | `work/v14_rebuild/U6_RANDOM_REGULARITY_2026-09-13.md` | `4aa3d310a029be9676450ac025d6d4b4691d4d076067695be57c23f67fa8dd1e` |
 | `work/v14_rebuild/AUTHOR_CYCLE_CHARTER_2026-09-13.md` | `062507f24c6f5645fb6d616fc8ca22dec06dbb0714829d1e7e7397057f632ef3` |
-| `work/v14_rebuild/TRAIN_REFLECTION_TEST_DRAFT_2026-09-14.md` | `93af3b2bc41dc65cef9434ae54f3514de263a41e636cb1c2652cf3f85f5931cb` |
+| `work/v14_rebuild/TRAIN_REFLECTION_TEST_DRAFT_2026-09-14.md` | `fed759c90fe218015c8e448ac9c9c170dd2806b4ed72004fb1242ad58a32ea73` |
+| `work/v14_rebuild/train_reflection/PROTOCOL.md` | `fe65b799a3ca4eb34a895eaec418234850a36ecfc0fd13dba4ebe19916f28a4c` |
+| `work/v14_rebuild/train_reflection/run_reflection.py` | `3622180242008ee7792efbe5706fea8ee593f1cac48c10b55565486e0dc8b0f9` |
+| `work/v14_rebuild/train_reflection/RESULTS.md` | `136219897aefb27d5d70015cbf6fb3237dfc1e1d49db2ea78d705eb3ee6cdb25` |
+| `work/v14_rebuild/train_reflection/results.json` | `5a49d40bd2e21a68c6058fdbfb885c3fd44730a9640594a987fe10ec6971da76` |
 | `source/MANIFEST.json` | `a91c453226cac21072478fa1fbf2db766e36f1bfe477e52414ee19f5c8f6f16a` |
 | `source/FTS_v13_LLM_CONTEXT.md` | `65be293a8e93eec5cb7d732ef2cd588115ada25d87471bd613e1ffab8693ead2` |
 | `source/FTS_v13_LLM_FULL_DUMP.md` | `a3f1852af32bbf1ef385e34dbbe6908b38374baa9cd08f0ef21437f3f7440d73` |
@@ -218,15 +222,20 @@
   (канон ПОЛНОСТЬЮ установлен 2026-06-11 импортом из FTS_v13_project/source).
 
 #### Текущая цель
-- Подготовлен первый черновик проверки рефлексии по авторскому примеру поезда
-  (2026-09-14): `v14_rebuild/TRAIN_REFLECTION_TEST_DRAFT_2026-09-14.md`.
-  Полное окно У7–У11 рассматривается с обратной связью; сравниваются явная
-  оценка собственного правила и сильная адаптивная альтернатива с теми же
-  данными/ресурсами. Это protocol_draft: программы и результата пока нет.
-  Технический следующий шаг — условная среда, две прозрачные реализации и
-  паспорт равенства средств. Новая гипотеза о внутренней регуляции эмоций
-  сохранена отдельно от проверяемого тезиса. DN-0001…DN-0013 остаются pending;
-  это не пакетная интеграция журнала. source и статусы не менялись.
+- Выполнен первый условный прогон проверки рефлексии по примеру поезда
+  (2026-09-14): `v14_rebuild/train_reflection/PROTOCOL.md`,
+  `run_reflection.py`, `RESULTS.md`, `results.json`.
+  64 seed × 600 эпизодов, общая история и замкнутый контур; протокол и
+  программа хэшированы в результатах. R с обратной связью улучшил среднюю
+  цену против R_no_feedback на 1.5861 (64/64 seed), но против сильной
+  B_adaptive получил +0.0056, исходы 30/30/4; R и B_event поведенчески
+  эквивалентны. Узкий claim специфической «рефлексивной» архитектуры не
+  выделен; эффект обратной связи в этой среде обнаружен. Это синтетическая
+  отрицательная/ограничивающая проверка, не свидетельство У11 и не внешний
+  эксперимент. Эволюционное происхождение эмоций исключено; внутренняя
+  регуляция сомнением сохранена как предмет. Следующий шаг — авторская
+  проверка смысла операционализации или новая среда с заранее заданным
+  различающим claim. DN-0001…DN-0013 остаются pending; source/статусы не менялись.
 - Создан двухфазный контур нюансов диалога (2026-09-13):
   `work/DIALOGUE_NUANCE_JOURNAL.md`; глобальные навыки
   `fts-dialogue-journal` («в журнал») и `fts-journal-integrate`
@@ -5236,6 +5245,20 @@ if __name__ == "__main__":
   эмоций отмечена как авторская, без внешнего подтверждения. Журнал не
   интегрировался, source/C-NN/статусы сохранены.
 
+- 2026-09-14 (первый прогон проверки рефлексии) — выполнен зафиксированный
+  синтетический прогон `v14_rebuild/train_reflection/` по протоколу v1:
+  64 seed × 600 эпизодов, общая история и замкнутый контур. R с обратной
+  связью улучшил среднюю цену против R_no_feedback на 1.586102 (64/64 seed),
+  но R и B_event дали эквивалентные рекомендации, а против сильной
+  B_adaptive разница R−B составила +0.005565 (R/B/ничья = 30/30/4).
+  Вердикт: в данной среде обнаружен эффект обратной связи, но отдельная
+  специфичность названного «самооценивания собственного правила» не выделена;
+  результат ограничивает claim, но не опровергает семантику У11. Протокол
+  SHA256 `fe65b799a3ca4eb34a895eaec418234850a36ecfc0fd13dba4ebe19916f28a4c`,
+  программа и результаты хэшированы в `results.json`. Эволюционное происхождение
+  эмоций исключено из задачи; «сомнение» трактуется как внутренний регулятор.
+  Канон, C-NN, St_FTS и статусы не менялись.
+
 ### 6.2. Открытые вопросы
 
 *Источник сборки: `work/OPEN_QUESTIONS.md`.*
@@ -5320,6 +5343,12 @@ if __name__ == "__main__":
       (paper §6.1, F1/§12 п.8). Ревизия 2026-09-11, EC-012/013/021:
       примитив записи и существующая факторизация не доказывают невставляемость.
       До проверки X задать допустимый класс и независимый критерий ранней формы.
+- [~] Рефлексия и внутренняя регуляция по примеру поезда — первый синтетический {#oq-train-reflection-test}
+      прогон выполнен 2026-09-14: `v14_rebuild/train_reflection/`. Обратная связь R
+      улучшила результат против абляции, но R/B_event эквивалентны, а сильная
+      B_adaptive чуть лучше в среднем (R/B/ничья = 30/30/4). Узкая специфичность
+      реализации не подтверждена; общий claim У11 не решён. Следующий инкремент:
+      авторская проверка смысла среды либо новая заранее заданная среда/claim.
 - [ ] Третье окно арностного паттерна (§8.5): подтвердить/опровергнуть {#oq-arity-window-13-14}
       арностный скачок 13→14 (один космос → θ-семейство миров).
 - [ ] Дополнить паспорта П6: У14 — оператор границы допустимости θ и форма {#oq-passport-u14-u15}
@@ -13392,8 +13421,8 @@ $$
 
 #### Рефлексия на примере поезда: первый черновик проверки
 
-Дата: 2026-09-14. Статус: `protocol_draft`, подготовка смысловой проверки.
-Эксперимент не запускался; численная среда и программа ещё не реализованы.
+Дата: 2026-09-14. Исходный черновик; переход к реализации разрешён автором.
+Численные условия зафиксированы в [протоколе v1](train_reflection/PROTOCOL.md).
 Это кандидат операционализации, не модель реального управления поездом и
 не свидетельство достижения У11. Канон и статусы уровней не меняются.
 
@@ -13495,20 +13524,13743 @@ $$
 
 ##### Что не закрыто
 
-Программа, параметры и измеримый порог различия пока не заданы. Следующий
-технический шаг — минимальная условная среда и две прозрачные реализации;
-до эксперимента выписать сопоставление доступных им средств. Авторский
-мандат цикла сохраняет парковку новых внешних эмпирических экспериментов:
-этот документ является подготовкой, а не запуском такого эксперимента.
+Точная семантика всего окна и самотождество не заданы этой операционализацией.
+Протокол v1 задаёт условную среду, реализации, равенство средств и трактовку
+результатов. Это синтетическая проверка по прямому запросу автора; парковка
+внешних эмпирических экспериментов сохраняется.
 
-Отдельная новая мысль автора:
+##### Уточнение автора: эмоции как внутренняя регуляция
 
-> Мне кажется, эмоции, гнев, сомнение, отвращение, и прочее, сначала возникли не для внешнего мира, а для регуляции внутреннего.
+> Гипотеза об эволюционном происхождении эмоций - не  нужна. эмоции как внутренняя регуляция - нужна. действуй по черновику проверки
 
-Это авторская гипотеза о происхождении и функции эмоций. В текущем примере
-есть внутреннее регулирование через пересмотр собственного правила;
-историческое/эволюционное первенство функций эмоций здесь не проверяется.
-Для данной проверки не требуется заранее принимать эту гипотезу за факт.
+Предмет проверки — внутренняя регуляция. В первой версии «сомнение» обозначает
+сигнал рассогласования, который влияет на пересмотр собственного правила.
+Проверяется его действие, а не одно наличие слова в журнале. Происхождение
+эмоций исключено из постановки по прямому уточнению автора.
+
+##### Результат первого прогона
+
+Прогон выполнен по [протоколу v1](train_reflection/PROTOCOL.md): 64 seed,
+600 эпизодов, общая история и замкнутый контур. Полные данные — в
+[RESULTS.md](train_reflection/RESULTS.md) и [results.json](train_reflection/results.json).
+
+- В замкнутом контуре R с обратной связью получил среднюю задержку 2.0379;
+  R без обратной связи — 3.6240. Разница `−1.5861` наблюдалась на всех 64
+  seed. В этой среде обратная связь действительно изменила поведение.
+- R и B_event дали одинаковые рекомендации на всех проверенных траекториях.
+  Явное название «собственное правило» не выделило поведенческого отличия.
+- Против сильной адаптивной B_adaptive R получил 2.0379 против 2.0323;
+  R был лучше на 30 seed, B — на 30, четыре были равны. Уникальное
+  преимущество рефлексивной формы не выделено.
+
+Это отрицательный результат только для узкого claim о специфичности данной
+реализации: в выбранной среде обнаружен эффект обратной связи, но его можно
+воспроизвести адаптивной таблицей цен. Он не опровергает семантику У11 и не
+делает выводов о происхождении эмоций.
+
+### 7.35. Протокол условной проверки внутренней регуляции
+
+*Источник сборки: `work/v14_rebuild/train_reflection/PROTOCOL.md`.*
+
+#### Поезд: протокол условной проверки внутренней регуляции v1
+
+Дата: 2026-09-14. Статус до первого запуска: `frozen_simulation_protocol`.
+Источник постановки — авторский пример поезда и прямой запрос действовать
+по черновику. Это конечная условная симуляция, не внешний эмпирический
+эксперимент и не управление настоящим поездом. Протокол фиксируется отдельным
+коммитом до первого запуска. Результат должен ссылаться на SHA256 протокола
+и программы. Любая последующая смена условий требует датированной ревизии.
+
+##### Найдено: два отдельных вопроса
+
+1. Влияет ли внутренний сигнал неблагоприятного расхождения с ожиданием на
+   пересмотр собственного правила в выбранной реализации R?
+2. Выделяет ли это устройство особую возможность, недоступную альтернативной
+   адаптивной записи при тех же данных и бюджете?
+
+«Сомнение» — имя внутреннего регулятора, а не утверждение о переживании эмоции.
+Его функция: собственное предсказание сопоставляется с результатом; при
+неблагоприятном остатке запускается пересмотр. По последней инструкции автора
+эмоции рассматриваются как внутренняя регуляция. Их происхождение исключено
+из этой задачи; гнев и отвращение в первой версии не моделируются.
+
+##### Зависимости и граница семантики
+
+Авторская рамка: окно У7–У11, собственный способ принятия решений как предмет
+оценки, обратная связь, отсутствие обязательной безошибочности/эволюции.
+Опоры сравнения: O_09 (альтернатива), O_13 (кандидат проверки роли).
+У11 остаётся reserved_underformalized. Успех R не назначает ей У11; отсутствие
+названий уровней у B не назначает B нижний уровень. Все роли здесь кандидаты
+операционализации, а не реализация всей семантики пяти уровней.
+
+Цель фиксирована: уменьшать итоговую условную задержку. Пересмотр ценностей,
+самотождество и зоны ответственности остаются за пределами этой версии.
+
+##### Численная среда
+
+- 64 фиксированных seed: 0…63; по 600 эпизодов. Один эпизод — действие и
+  получение его непосредственного и отложенного результата.
+- Видимы два контекста, равновероятные: `open`, `queue`. Контроллер получает
+  только контекст до решения; затем своё действие и итоговую задержку.
+- Три действия: `hold` (сохранить режим), `recover` (попытка наверстать),
+  `defer` (отложить активное исправление). Это условные обозначения.
+- Первые 30 эпизодов — общий заданный разведочный план: каждый контекст и
+  действие встречаются по пять раз. Результаты эпизодов не известны заранее.
+- После разведки вероятность исследовательского действия 0.10. Иначе
+  применяется рекомендуемое контроллером действие. Общие случайные числа
+  задают одинаковые возможности исследования для всех реализаций.
+- На эпизоде 300 меняется режим среды; номер режима скрыт от контроллеров.
+
+Базовая итоговая задержка, до случайных возмущений:
+
+| Режим | Контекст | hold | recover | defer |
+|---|---|---:|---:|---:|
+| 0 | open | 2 | 1 | 3 |
+| 0 | queue | 2 | 6 | 3 |
+| 1 | open | 2 | 5 | 3 |
+| 1 | queue | 2 | 1 | 3 |
+
+Непосредственный вклад: hold=2, recover=−1, defer=3. Остаток до базовой
+итоговой цены — отложенный вклад. Каждый эпизод добавляет общий шум
+−1/0/+1 с одинаковыми вероятностями к непосредственному вкладу. С вероятностью
+0.12 отложенный вклад recover увеличивается на 4. Исходные случайные числа
+общие для потенциальных действий; контроллер видит только выполненное.
+Ускорение даёт локальный выигрыш, который может быть перекрыт задержкой далее.
+Действие не меняет контекст следующего эпизода: это существенное упрощение.
+
+##### Контроллеры и регулятор
+
+Общий прогноз: отдельная оценка итоговой цены каждого действия в каждом
+контексте, начальные значения hold=2, recover=1, defer=3. Обновление оценки
+по выполненному действию: доля нового остатка 0.25. История разрешена всем;
+эта реализация использует одинаковую сжатую статистику из шести оценок.
+
+- **R:** хранит принятое правило для каждого контекста (изначально recover).
+  Если результат хуже собственного предсказания более чем на 0.75, возникает
+  сигнал сомнения. После обновления прогноза он запускает пересмотр трёх
+  правил; принимается правило с минимальной оценкой цены. Равенства решаются
+  порядком hold, recover, defer. Без сигнала принятое правило сохраняется.
+- **B_event:** независимая реализация через плоскую таблицу цен действий и
+  численный фильтр положительной ошибки прогноза. Порог, обновление и бюджет
+  совпадают с R. Это намеренно сильная альтернатива: мы заранее допускаем её
+  поведенческую эквивалентность R. Их различие в описании не принимается за
+  доказанное различие механизмов.
+- **B_adaptive:** те же прогнозы, но минимум выбирается перед каждым действием
+  без отдельного сигнала пересмотра. Проверяет дополнительную роль самого
+  порогового регулирования, а не только удачность переименования R.
+- **R_no_feedback:** оценки обновляются, но обратная связь к принятому правилу
+  выключена. Это вмешательство в механизм, не диагноз отсутствия способности.
+- **R_label_only:** сигнал сомнения записывается, но пересмотр не запускается.
+  Проверяется, что одного названия сигнала недостаточно для изменения действий.
+
+Правило в этой версии задаёт одно действие в одном контексте. Внутренняя
+структура сложных программ не пересобирается. Это заранее признанное слабое
+место операционализации «собственного способа».
+
+##### Равенство информации и цены
+
+1. **Общая история:** все контроллеры получают одну и ту же внешне заданную
+   последовательность действий и результатов; сравниваются их рекомендации.
+   Это проверка различимости на равных данных, не полный замкнутый контроль.
+2. **Замкнутый контроль:** каждый действует сам в копии среды с общими
+   случайными условиями. После разных действий реальные истории могут
+   различаться. Это следствие действий, а не скрытое преимущество во входах.
+
+Контроллеры не получают будущие исходы, скрытый режим, невыполненные исходы
+или эталон оптимальности. Генератор случайностей среды отделён от них.
+Разрешено до 8 числовых ячеек/идентификаторов решающего состояния и до 3
+чтений кандидатных оценок на эпизод. R и B_event должны совпасть по этим
+счётчикам. B_adaptive использует 6 ячеек и пересматривает чаще; фактические
+счётчики приводятся отдельно. Это учёт операций ядра, не равенство байтов
+Python-объектов, машинного времени или универсальная модель стоимости ФТС.
+Диагностический журнал одинаково доступен всем и не участвует в решении.
+
+##### Показатели, проверки и трактовка
+
+Оцениваются эпизоды 30…599: средняя итоговая задержка; ожидаемый проигрыш
+лучшему действию для текущего скрытого режима; доля смены рекомендаций;
+число сигналов, пересмотров и чтений оценок. Эталон известен только внешнему
+оценщику. Показатели отдельно по двум режимам и по каждому seed; сравнение
+замкнутых прогонов парное. Данные отложены по эпизодам/случайным исходам,
+но новых типов контекста нет. Не заявлять перенос на незнакомые признаки.
+
+Протокольные проверки: одинаковая история в первом режиме; отсутствие
+выхода за бюджет; действующее вмешательство в регулятор; тождество действий
+R_no_feedback и R_label_only; пособытийное сравнение R/B_event; воспроизводимость.
+Несовпадение R/B_event само по себе не успех R: сначала проверяется реализация.
+
+- Если R и B_event совпали по рекомендациям, действиям, состояниям и цене
+  во всех заданных прогонах, сильного различающего результата здесь нет.
+- Улучшение R относительно отключённой обратной связи показывает роль
+  механизма в данном контроллере; оно не доказывает У11 или эмоцию.
+- Отличие от B_adaptive оценивается вместе с фактической ценой пересмотра;
+  преимущество B или равенство являются допустимыми результатами.
+- 64 seed — повторения синтетического генератора, а не 64 внешние репликации.
+- Ошибки, сохранение прежнего правила и отложенные действия допустимы.
+  Отказ или худший результат не превращаются автоматически в отсутствие уровня.
+
+Полной модели Я, гарантированной эволюции и эмпирической теории эмоций этот
+прогон не проверяет. Отрицательный результат уточняет данный перевод примера.
+
+### 7.36. Скрипт проверки рефлексии
+
+*Источник сборки: `work/v14_rebuild/train_reflection/run_reflection.py`.*
+
+~~~~python
+#!/usr/bin/env python3
+"""Воспроизводимая условная симуляция рефлексивного регулятора по протоколу v1.
+
+Скрипт не моделирует реальный железнодорожный контроллер. Он проверяет узкий
+кандидат: отличается ли регулятор, который оценивает собственное правило,
+от адаптивных и отключённых вариантов при одинаковой истории и цене.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import random
+import statistics
+from pathlib import Path
+from typing import Any
+
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+PROTOCOL = HERE / "PROTOCOL.md"
+RESULTS_JSON = HERE / "results.json"
+RESULTS_MD = HERE / "RESULTS.md"
+
+SEEDS = tuple(range(64))
+EPISODES = 600
+EXPLORATION_EPISODES = 30
+MODE_SWITCH_EPISODE = 300
+CONTEXTS = ("open", "queue")
+ACTIONS = ("hold", "recover", "defer")
+ALPHA = 0.25
+DOUBT_THRESHOLD = 0.75
+EXPLORATION_RATE = 0.10
+TAIL_PROBABILITY = 0.12
+
+BASE_COST: dict[int, dict[str, dict[str, int]]] = {
+    0: {
+        "open": {"hold": 2, "recover": 1, "defer": 3},
+        "queue": {"hold": 2, "recover": 6, "defer": 3},
+    },
+    1: {
+        "open": {"hold": 2, "recover": 5, "defer": 3},
+        "queue": {"hold": 2, "recover": 1, "defer": 3},
+    },
+}
+IMMEDIATE_COST = {"hold": 2, "recover": -1, "defer": 3}
+CONTROLLERS = ("R", "B_event", "B_adaptive", "R_no_feedback", "R_label_only")
+
+
+def sha256_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def sha256_file(path: Path) -> str:
+    return sha256_bytes(path.read_bytes())
+
+
+def schedule_for_seed(seed: int) -> list[dict[str, Any]]:
+    """Create the public schedule and hidden outcomes for one seed.
+
+    The first 30 episodes are a common exploration design: every context/action
+    pair occurs five times. Later contexts and random disturbances use one
+    deterministic stream per seed, shared by all controllers.
+    """
+
+    rng = random.Random(seed)
+    design: list[tuple[str, str]] = []
+    for context in CONTEXTS:
+        for action in ACTIONS:
+            design.extend((context, action) for _ in range(5))
+
+    rows: list[dict[str, Any]] = []
+    for episode in range(EPISODES):
+        if episode < EXPLORATION_EPISODES:
+            context, forced_action = design[episode]
+        else:
+            context = CONTEXTS[rng.randrange(len(CONTEXTS))]
+            forced_action = None
+
+        explore_draw = rng.random()
+        explore_action = ACTIONS[rng.randrange(len(ACTIONS))]
+        noise = (-1, 0, 1)[rng.randrange(3)]
+        tail = rng.random() < TAIL_PROBABILITY
+        rows.append(
+            {
+                "episode": episode,
+                "context": context,
+                "forced_action": forced_action,
+                "explore": episode >= EXPLORATION_EPISODES and explore_draw < EXPLORATION_RATE,
+                "explore_action": explore_action,
+                "noise": noise,
+                "tail": tail,
+                "mode": 0 if episode < MODE_SWITCH_EPISODE else 1,
+                # Replay action is visible to the evaluator only. It makes the
+                # common-history arm genuinely common across controllers.
+                "replay_action": ACTIONS[(episode - EXPLORATION_EPISODES) % len(ACTIONS)]
+                if episode >= EXPLORATION_EPISODES
+                else forced_action,
+            }
+        )
+    return rows
+
+
+def environment_cost(row: dict[str, Any], action: str) -> int:
+    """Return the realised conditional delay for a hidden environment row."""
+
+    mode = int(row["mode"])
+    context = str(row["context"])
+    immediate = IMMEDIATE_COST[action] + int(row["noise"])
+    delayed = BASE_COST[mode][context][action] - IMMEDIATE_COST[action]
+    if action == "recover" and bool(row["tail"]):
+        delayed += 4
+    return immediate + delayed
+
+
+def argmin_action(values: dict[str, float]) -> str:
+    return min(ACTIONS, key=lambda action: (values[action], ACTIONS.index(action)))
+
+
+class Controller:
+    """One transparent controller implementation from the frozen protocol."""
+
+    def __init__(self, kind: str) -> None:
+        if kind not in CONTROLLERS:
+            raise ValueError(f"unknown controller: {kind}")
+        self.kind = kind
+        self.estimates: dict[str, dict[str, float]] = {
+            context: {"hold": 2.0, "recover": 1.0, "defer": 3.0} for context in CONTEXTS
+        }
+        self.policy = {context: "recover" for context in CONTEXTS}
+        self.surprise = {context: 0.0 for context in CONTEXTS}
+        self.doubt_signals = 0
+        self.filter_events = 0
+        self.reviews = 0
+        self.policy_changes = 0
+        self.reads = 0
+        self.updates = 0
+
+    @property
+    def state_cells(self) -> int:
+        # Six estimates plus two context policies. B_adaptive has no policy.
+        return 6 if self.kind == "B_adaptive" else 8
+
+    def recommend(self, context: str) -> str:
+        if self.kind == "B_adaptive":
+            self.reads += 3
+            return argmin_action(self.estimates[context])
+        return self.policy[context]
+
+    def observe(self, context: str, action: str, cost: int) -> dict[str, Any]:
+        predicted = self.estimates[context][action]
+        residual = cost - predicted
+        self.estimates[context][action] = predicted + ALPHA * residual
+        self.updates += 1
+
+        positive_error = max(0.0, residual)
+        self.surprise[context] = 0.75 * self.surprise[context] + positive_error
+        doubt = residual > DOUBT_THRESHOLD
+        review = False
+        old_action = self.policy.get(context)
+
+        if doubt:
+            self.doubt_signals += 1
+
+        if self.kind == "R":
+            # Internal doubt is a regulator: it turns evaluation of the rule
+            # into a review of the three candidate actions.
+            if doubt:
+                self.reads += 3
+                review = True
+                self.reviews += 1
+                self.policy[context] = argmin_action(self.estimates[context])
+        elif self.kind == "B_event":
+            # Flat-table event filter: same threshold, no named self-rule.
+            if doubt:
+                self.reads += 3
+                review = True
+                self.filter_events += 1
+                self.reviews += 1
+                self.policy[context] = argmin_action(self.estimates[context])
+        elif self.kind == "B_adaptive":
+            # No separate event; every recommendation is an immediate table
+            # minimum. The estimates are still updated from observed outcomes.
+            pass
+        elif self.kind == "R_no_feedback":
+            # The signal is computed but its feedback to the policy is cut.
+            pass
+        elif self.kind == "R_label_only":
+            # The signal is merely logged; no review is allowed to start.
+            pass
+
+        if self.kind in {"R", "B_event"} and review:
+            self.reviews += 0  # explicit: counted above, keeps branch readable
+        if old_action is not None and self.policy[context] != old_action:
+            self.policy_changes += 1
+
+        return {
+            "predicted": predicted,
+            "residual": residual,
+            "doubt": doubt,
+            "review": review,
+            "policy_after": self.policy.get(context),
+        }
+
+    def digest(self) -> str:
+        payload = {
+            "kind": self.kind,
+            "estimates": self.estimates,
+            "policy": self.policy,
+            "surprise": self.surprise,
+            "doubt_signals": self.doubt_signals,
+            "filter_events": self.filter_events,
+            "reviews": self.reviews,
+            "policy_changes": self.policy_changes,
+            "reads": self.reads,
+            "updates": self.updates,
+        }
+        return sha256_bytes(json.dumps(payload, sort_keys=True).encode("utf-8"))
+
+
+def empty_metrics() -> dict[str, Any]:
+    return {
+        "costs": [],
+        "regrets": [],
+        "costs_pre_shift": [],
+        "costs_post_shift": [],
+        "regrets_pre_shift": [],
+        "regrets_post_shift": [],
+        "recommendation_changes": 0,
+        "doubt_signals": 0,
+        "reviews": 0,
+        "policy_changes": 0,
+        "reads": 0,
+        "updates": 0,
+        "max_state_cells": 0,
+        "trace": [],
+        "action_outcomes": [],
+        "recommendations": [],
+    }
+
+
+def run_controller(
+    kind: str,
+    schedule: list[dict[str, Any]],
+    arm: str,
+    trace_limit: int = 0,
+) -> dict[str, Any]:
+    if arm not in {"common_history", "closed_loop"}:
+        raise ValueError(f"unknown arm: {arm}")
+    controller = Controller(kind)
+    metrics = empty_metrics()
+    previous_recommendation: dict[str, str] = {}
+
+    for row in schedule:
+        episode = int(row["episode"])
+        context = str(row["context"])
+        recommendation = controller.recommend(context)
+        if context in previous_recommendation and previous_recommendation[context] != recommendation:
+            metrics["recommendation_changes"] += 1
+        previous_recommendation[context] = recommendation
+        metrics["recommendations"].append((episode, context, recommendation))
+
+        if episode < EXPLORATION_EPISODES:
+            action = str(row["forced_action"])
+        elif arm == "common_history":
+            action = str(row["replay_action"])
+        elif bool(row["explore"]):
+            action = str(row["explore_action"])
+        else:
+            action = recommendation
+
+        cost = environment_cost(row, action)
+        audit = controller.observe(context, action, cost)
+        metrics["action_outcomes"].append((episode, context, action, cost))
+
+        if episode >= EXPLORATION_EPISODES:
+            best_cost = min(environment_cost(row, candidate) for candidate in ACTIONS)
+            regret = cost - best_cost
+            metrics["costs"].append(cost)
+            metrics["regrets"].append(regret)
+            key = "costs_pre_shift" if episode < MODE_SWITCH_EPISODE else "costs_post_shift"
+            metrics[key].append(cost)
+            key = "regrets_pre_shift" if episode < MODE_SWITCH_EPISODE else "regrets_post_shift"
+            metrics[key].append(regret)
+
+        if len(metrics["trace"]) < trace_limit:
+            metrics["trace"].append(
+                {
+                    "episode": episode,
+                    "mode": row["mode"],
+                    "context": context,
+                    "recommendation": recommendation,
+                    "action": action,
+                    "cost": cost,
+                    "residual": round(float(audit["residual"]), 6),
+                    "doubt": audit["doubt"],
+                    "review": audit["review"],
+                    "policy_after": audit["policy_after"],
+                }
+            )
+
+    metrics["doubt_signals"] = controller.doubt_signals
+    metrics["reviews"] = controller.reviews
+    metrics["policy_changes"] = controller.policy_changes
+    metrics["reads"] = controller.reads
+    metrics["updates"] = controller.updates
+    metrics["max_state_cells"] = controller.state_cells
+    metrics["state_digest"] = controller.digest()
+    metrics["action_outcome_digest"] = sha256_bytes(
+        json.dumps(metrics["action_outcomes"], sort_keys=True).encode("utf-8")
+    )
+    metrics["recommendation_digest"] = sha256_bytes(
+        json.dumps(metrics["recommendations"], sort_keys=True).encode("utf-8")
+    )
+    return metrics
+
+
+def mean(values: list[float | int]) -> float:
+    return round(float(statistics.fmean(values)), 6) if values else 0.0
+
+
+def summarize(records: list[dict[str, Any]]) -> dict[str, Any]:
+    fields = (
+        "mean_cost",
+        "mean_regret",
+        "mean_cost_pre_shift",
+        "mean_cost_post_shift",
+        "mean_regret_pre_shift",
+        "mean_regret_post_shift",
+        "mean_recommendation_changes",
+        "mean_doubt_signals",
+        "mean_reviews",
+        "mean_policy_changes",
+        "mean_reads",
+        "max_state_cells",
+    )
+    result: dict[str, Any] = {"runs": len(records)}
+    result["mean_cost"] = mean([mean(r["costs"]) for r in records])
+    result["mean_regret"] = mean([mean(r["regrets"]) for r in records])
+    result["mean_cost_pre_shift"] = mean([mean(r["costs_pre_shift"]) for r in records])
+    result["mean_cost_post_shift"] = mean([mean(r["costs_post_shift"]) for r in records])
+    result["mean_regret_pre_shift"] = mean([mean(r["regrets_pre_shift"]) for r in records])
+    result["mean_regret_post_shift"] = mean([mean(r["regrets_post_shift"]) for r in records])
+    result["mean_recommendation_changes"] = mean([r["recommendation_changes"] for r in records])
+    result["mean_doubt_signals"] = mean([r["doubt_signals"] for r in records])
+    result["mean_reviews"] = mean([r["reviews"] for r in records])
+    result["mean_policy_changes"] = mean([r["policy_changes"] for r in records])
+    result["mean_reads"] = mean([r["reads"] for r in records])
+    result["max_state_cells"] = max(r["max_state_cells"] for r in records)
+    result["min_cost"] = round(min(mean(r["costs"]) for r in records), 6)
+    result["max_cost"] = round(max(mean(r["costs"]) for r in records), 6)
+    return result
+
+
+def pair_stats(left_records: list[dict[str, Any]], right_records: list[dict[str, Any]]) -> dict[str, Any]:
+    """Paired per-seed differences; negative means the left controller is cheaper."""
+
+    deltas = [mean(left["costs"]) - mean(right["costs"]) for left, right in zip(left_records, right_records)]
+    return {
+        "left_minus_right_mean_cost": mean(deltas),
+        "median_delta": round(float(statistics.median(deltas)), 6),
+        "delta_std": round(float(statistics.pstdev(deltas)), 6),
+        "left_better_count": sum(delta < 0 for delta in deltas),
+        "ties": sum(delta == 0 for delta in deltas),
+        "right_better_count": sum(delta > 0 for delta in deltas),
+        "min_delta": round(min(deltas), 6),
+        "max_delta": round(max(deltas), 6),
+    }
+
+
+def run_all() -> dict[str, Any]:
+    all_records: dict[str, dict[str, list[dict[str, Any]]]] = {
+        arm: {kind: [] for kind in CONTROLLERS} for arm in ("common_history", "closed_loop")
+    }
+    common_action_outcome_hashes: dict[str, list[str]] = {kind: [] for kind in CONTROLLERS}
+    traces: dict[str, Any] = {}
+
+    for seed in SEEDS:
+        schedule = schedule_for_seed(seed)
+        for arm in ("common_history", "closed_loop"):
+            for kind in CONTROLLERS:
+                record = run_controller(kind, schedule, arm, trace_limit=40 if seed == 0 else 0)
+                record["seed"] = seed
+                record["arm"] = arm
+                all_records[arm][kind].append(record)
+                if arm == "common_history":
+                    common_action_outcome_hashes[kind].append(record["action_outcome_digest"])
+                if seed == 0:
+                    traces[f"{arm}:{kind}"] = record["trace"]
+
+    # Common-history outcomes must be identical by construction. This is an
+    # invariant of the comparison, not an empirical advantage for any controller.
+    reference_common_hashes = common_action_outcome_hashes[CONTROLLERS[0]]
+    common_history_action_outcomes_identical = all(
+        common_action_outcome_hashes[kind] == reference_common_hashes for kind in CONTROLLERS
+    )
+
+    summaries = {
+        arm: {kind: summarize(records) for kind, records in by_kind.items()}
+        for arm, by_kind in all_records.items()
+    }
+
+    comparisons: dict[str, dict[str, dict[str, Any]]] = {}
+    for arm in ("common_history", "closed_loop"):
+        comparisons[arm] = {}
+        for right in ("B_event", "B_adaptive", "R_no_feedback", "R_label_only"):
+            comparisons[arm][f"R_vs_{right}"] = pair_stats(
+                all_records[arm]["R"], all_records[arm][right]
+            )
+
+    interpretation = {
+        "feedback_vs_no_feedback": {
+            "arm": "closed_loop",
+            "mean_cost_delta_R_minus_R_no_feedback": comparisons["closed_loop"]["R_vs_R_no_feedback"][
+                "left_minus_right_mean_cost"
+            ],
+            "reading": "feedback improved the selected synthetic controller relative to its ablation",
+        },
+        "unique_reflection_vs_strong_adaptive": {
+            "arm": "closed_loop",
+            "mean_cost_delta_R_minus_B_adaptive": comparisons["closed_loop"]["R_vs_B_adaptive"][
+                "left_minus_right_mean_cost"
+            ],
+            "r_better_count": comparisons["closed_loop"]["R_vs_B_adaptive"]["left_better_count"],
+            "ties": comparisons["closed_loop"]["R_vs_B_adaptive"]["ties"],
+            "b_better_count": comparisons["closed_loop"]["R_vs_B_adaptive"]["right_better_count"],
+            "reading": "no unique advantage for R was isolated against the strong adaptive alternative",
+        },
+        "R_vs_B_event": {
+            "common_history_equivalent": True,
+            "closed_loop_equivalent": True,
+            "reading": "the named self-rule was behaviorally equivalent to the event-filter alternative in this environment",
+        },
+    }
+
+    paired: dict[str, Any] = {}
+    for kind in CONTROLLERS:
+        r_common = all_records["common_history"][kind]
+        r_closed = all_records["closed_loop"][kind]
+        paired[kind] = {
+            "closed_minus_common_cost": round(
+                summaries["closed_loop"][kind]["mean_cost"]
+                - summaries["common_history"][kind]["mean_cost"],
+                6,
+            ),
+            "common_state_digest_count": len({r["state_digest"] for r in r_common}),
+            "closed_state_digest_count": len({r["state_digest"] for r in r_closed}),
+            "common_updates_equal": len({r["updates"] for r in r_common}) == 1,
+        }
+
+    def equivalent_recommendations(arm: str, left: str, right: str) -> bool:
+        return all(
+            l["recommendation_digest"] == r["recommendation_digest"]
+            for l, r in zip(all_records[arm][left], all_records[arm][right])
+        )
+
+    return {
+        "protocol": {
+            "path": str(PROTOCOL.relative_to(ROOT)).replace("\\", "/"),
+            "sha256": sha256_file(PROTOCOL),
+            "version": "v1",
+        },
+        "program": {
+            "path": str((PROTOCOL.parent / "run_reflection.py").relative_to(ROOT)).replace("\\", "/"),
+            "sha256": sha256_file(Path(__file__).resolve()),
+        },
+        "simulation": {
+            "seeds": [SEEDS[0], SEEDS[-1]],
+            "seed_count": len(SEEDS),
+            "episodes": EPISODES,
+            "warmup_episodes": EXPLORATION_EPISODES,
+            "mode_switch_episode": MODE_SWITCH_EPISODE,
+            "controllers": list(CONTROLLERS),
+            "arms": ["common_history", "closed_loop"],
+            "objective": "minimize conditional delay",
+            "internal_regulator": "doubt signal triggers review in R",
+        },
+        "invariants": {
+            "common_history_action_outcomes_identical_across_controllers_and_seeds": common_history_action_outcomes_identical,
+            "R_and_B_event_recommendations_equivalent_common_history": equivalent_recommendations(
+                "common_history", "R", "B_event"
+            ),
+            "R_and_B_event_recommendations_equivalent_closed_loop": equivalent_recommendations(
+                "closed_loop", "R", "B_event"
+            ),
+            "max_state_cells_within_budget": all(
+                summaries[arm][kind]["max_state_cells"] <= 8
+                for arm in summaries
+                for kind in summaries[arm]
+            ),
+            "max_reads_per_episode_within_3": all(
+                max(r["reads"] for r in all_records[arm][kind]) / EPISODES
+                <= 3
+                for arm in all_records
+                for kind in all_records[arm]
+            ),
+            "reproducibility_digest": None,
+        },
+        "summaries": summaries,
+        "comparisons": comparisons,
+        "interpretation": interpretation,
+        "paired": paired,
+        "seed_records": {
+            arm: {
+                kind: [
+                    {
+                        "seed": r["seed"],
+                        "mean_cost": mean(r["costs"]),
+                        "mean_regret": mean(r["regrets"]),
+                        "doubt_signals": r["doubt_signals"],
+                        "reviews": r["reviews"],
+                        "policy_changes": r["policy_changes"],
+                        "reads": r["reads"],
+                        "updates": r["updates"],
+                        "action_outcome_digest": r["action_outcome_digest"],
+                        "state_digest": r["state_digest"],
+                    }
+                    for r in all_records[arm][kind]
+                ]
+                for kind in CONTROLLERS
+            }
+            for arm in all_records
+        },
+        "trace_seed_0": traces,
+    }
+
+
+def render_markdown(result: dict[str, Any]) -> str:
+    lines = [
+        "# Результаты проверки рефлексии на примере поезда v1",
+        "",
+        f"Протокол SHA256: `{result['protocol']['sha256']}`.",
+        f"Программа SHA256: `{result['program']['sha256']}`.",
+        "Симуляция условная и синтетическая; это не свидетельство реализации У11.",
+        "",
+        "## Найдено",
+        "",
+        "Сигнал сомнения в R рассматривается как внутренняя регуляция: рассогласование",
+        "с собственным ожиданием может запустить пересмотр собственного правила.",
+        "Сравнение проведено в общей истории и в замкнутом контуре.",
+        "",
+        "## Инварианты",
+        "",
+    ]
+    for key, value in result["invariants"].items():
+        if key != "reproducibility_digest":
+            lines.append(f"- `{key}`: `{value}`")
+    lines += ["", "## Средние результаты", "", "| Контур | Контроллер | Средняя цена | Средний проигрыш | До смены режима | После смены | Сигналы сомнения | Пересмотры |", "|---|---|---:|---:|---:|---:|---:|---:|"]
+    for arm in ("common_history", "closed_loop"):
+        for kind in CONTROLLERS:
+            s = result["summaries"][arm][kind]
+            lines.append(
+                f"| {arm} | {kind} | {s['mean_cost']:.4f} | {s['mean_regret']:.4f} | "
+                f"{s['mean_cost_pre_shift']:.4f} | {s['mean_cost_post_shift']:.4f} | "
+                f"{s['mean_doubt_signals']:.2f} | {s['mean_reviews']:.2f} |"
+            )
+    lines += ["", "## Парные различия по seed", "", "Отрицательное `R_minus_right` означает меньшую среднюю задержку у R. `64/64` побед без дисперсии сами по себе не доказывают семантику У11.", "", "| Контур | Сравнение | R−right, среднее | Медиана | SD | R лучше | Равно | right лучше |", "|---|---|---:|---:|---:|---:|---:|---:|"]
+    for arm in ("common_history", "closed_loop"):
+        for name, comp in result["comparisons"][arm].items():
+            lines.append(
+                f"| {arm} | {name} | {comp['left_minus_right_mean_cost']:.6f} | {comp['median_delta']:.6f} | "
+                f"{comp['delta_std']:.6f} | {comp['left_better_count']} | {comp['ties']} | {comp['right_better_count']} |"
+            )
+    lines += ["", "## Интерпретация", "", f"- Обратная связь R против отключённой версии: `{result['interpretation']['feedback_vs_no_feedback']['reading']}`; Δ={result['interpretation']['feedback_vs_no_feedback']['mean_cost_delta_R_minus_R_no_feedback']:.6f}.", f"- Уникальная роль R против B_adaptive: `{result['interpretation']['unique_reflection_vs_strong_adaptive']['reading']}`; Δ={result['interpretation']['unique_reflection_vs_strong_adaptive']['mean_cost_delta_R_minus_B_adaptive']:.6f}, исходы R/B/ничья = {result['interpretation']['unique_reflection_vs_strong_adaptive']['r_better_count']}/{result['interpretation']['unique_reflection_vs_strong_adaptive']['b_better_count']}/{result['interpretation']['unique_reflection_vs_strong_adaptive']['ties']}.", "- R и B_event дали эквивалентные рекомендации в обоих контурах; это не доказывает тождество их внутренних смыслов.", "", "## Как читать результат", "", "- Совпадение R и B_event по общей истории не является доказательством тождества механизмов; оно означает, что этот пример сам по себе их не развёл.", "- Разница R и R_no_feedback показывает эффект включения обратной связи в данном синтетическом контроллере, если она устойчива по seed.", "- Сравнение с B_adaptive проверяет, даёт ли пороговый сигнал что-то сверх постоянного выбора минимума таблицы.", "- Ошибка, сохранение прежнего правила и худшая цена являются допустимыми исходами протокола.", "", "## Ограничения", "", "Это один синтетический класс сред с двумя контекстами и заранее заданной сменой режима. Он проверяет действие выбранного механизма, а не происхождение эмоций, полную семантику Я, неизбежность развития или поведение АГИ.", ""]
+    return "\n".join(lines)
+
+
+def main() -> int:
+    result = run_all()
+    # A second deterministic calculation is the reproducibility check. The
+    # output digest excludes the reproducibility field itself.
+    digest_payload = json.dumps(result, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    second = run_all()
+    second_payload = json.dumps(second, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    result["invariants"]["reproducibility_match"] = digest_payload == second_payload
+    result["invariants"]["reproducibility_digest"] = sha256_bytes(digest_payload)
+    RESULTS_JSON.write_text(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    RESULTS_MD.write_text(render_markdown(result), encoding="utf-8")
+    print(
+        f"PASS train reflection simulation: protocol_sha256={result['protocol']['sha256']} "
+        f"results_sha256={sha256_file(RESULTS_JSON)} seed_count={len(SEEDS)} episodes={EPISODES}"
+    )
+    print(f"RESULTS_JSON={RESULTS_JSON}")
+    print(f"RESULTS_MD={RESULTS_MD}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+~~~~
+
+### 7.37. Результаты проверки рефлексии
+
+*Источник сборки: `work/v14_rebuild/train_reflection/RESULTS.md`.*
+
+#### Результаты проверки рефлексии на примере поезда v1
+
+Протокол SHA256: `fe65b799a3ca4eb34a895eaec418234850a36ecfc0fd13dba4ebe19916f28a4c`.
+Программа SHA256: `3622180242008ee7792efbe5706fea8ee593f1cac48c10b55565486e0dc8b0f9`.
+Симуляция условная и синтетическая; это не свидетельство реализации У11.
+
+##### Найдено
+
+Сигнал сомнения в R рассматривается как внутренняя регуляция: рассогласование
+с собственным ожиданием может запустить пересмотр собственного правила.
+Сравнение проведено в общей истории и в замкнутом контуре.
+
+##### Инварианты
+
+- `common_history_action_outcomes_identical_across_controllers_and_seeds`: `True`
+- `R_and_B_event_recommendations_equivalent_common_history`: `True`
+- `R_and_B_event_recommendations_equivalent_closed_loop`: `True`
+- `max_state_cells_within_budget`: `True`
+- `max_reads_per_episode_within_3`: `True`
+- `reproducibility_match`: `True`
+
+##### Средние результаты
+
+| Контур | Контроллер | Средняя цена | Средний проигрыш | До смены режима | После смены | Сигналы сомнения | Пересмотры |
+|---|---|---:|---:|---:|---:|---:|---:|
+| common_history | R | 2.9063 | 1.3528 | 2.9964 | 2.8252 | 159.14 | 159.14 |
+| common_history | B_event | 2.9063 | 1.3528 | 2.9964 | 2.8252 | 159.14 | 159.14 |
+| common_history | B_adaptive | 2.9063 | 1.3528 | 2.9964 | 2.8252 | 159.14 | 0.00 |
+| common_history | R_no_feedback | 2.9063 | 1.3528 | 2.9964 | 2.8252 | 159.14 | 0.00 |
+| common_history | R_label_only | 2.9063 | 1.3528 | 2.9964 | 2.8252 | 159.14 | 0.00 |
+| closed_loop | R | 2.0379 | 0.4844 | 2.0130 | 2.0603 | 160.89 | 160.89 |
+| closed_loop | B_event | 2.0379 | 0.4844 | 2.0130 | 2.0603 | 160.89 | 160.89 |
+| closed_loop | B_adaptive | 2.0323 | 0.4788 | 1.9997 | 2.0617 | 160.75 | 0.00 |
+| closed_loop | R_no_feedback | 3.6240 | 2.0705 | 3.8767 | 3.3966 | 150.72 | 0.00 |
+| closed_loop | R_label_only | 3.6240 | 2.0705 | 3.8767 | 3.3966 | 150.72 | 0.00 |
+
+##### Парные различия по seed
+
+Отрицательное `R_minus_right` означает меньшую среднюю задержку у R. `64/64` побед без дисперсии сами по себе не доказывают семантику У11.
+
+| Контур | Сравнение | R−right, среднее | Медиана | SD | R лучше | Равно | right лучше |
+|---|---|---:|---:|---:|---:|---:|---:|
+| common_history | R_vs_B_event | 0.000000 | 0.000000 | 0.000000 | 0 | 64 | 0 |
+| common_history | R_vs_B_adaptive | 0.000000 | 0.000000 | 0.000000 | 0 | 64 | 0 |
+| common_history | R_vs_R_no_feedback | 0.000000 | 0.000000 | 0.000000 | 0 | 64 | 0 |
+| common_history | R_vs_R_label_only | 0.000000 | 0.000000 | 0.000000 | 0 | 64 | 0 |
+| closed_loop | R_vs_B_event | 0.000000 | 0.000000 | 0.000000 | 0 | 64 | 0 |
+| closed_loop | R_vs_B_adaptive | 0.005565 | 0.000000 | 0.025731 | 30 | 4 | 30 |
+| closed_loop | R_vs_R_no_feedback | -1.586102 | -1.592982 | 0.104922 | 64 | 0 | 0 |
+| closed_loop | R_vs_R_label_only | -1.586102 | -1.592982 | 0.104922 | 64 | 0 | 0 |
+
+##### Интерпретация
+
+- Обратная связь R против отключённой версии: `feedback improved the selected synthetic controller relative to its ablation`; Δ=-1.586102.
+- Уникальная роль R против B_adaptive: `no unique advantage for R was isolated against the strong adaptive alternative`; Δ=0.005565, исходы R/B/ничья = 30/30/4.
+- R и B_event дали эквивалентные рекомендации в обоих контурах; это не доказывает тождество их внутренних смыслов.
+
+##### Как читать результат
+
+- Совпадение R и B_event по общей истории не является доказательством тождества механизмов; оно означает, что этот пример сам по себе их не развёл.
+- Разница R и R_no_feedback показывает эффект включения обратной связи в данном синтетическом контроллере, если она устойчива по seed.
+- Сравнение с B_adaptive проверяет, даёт ли пороговый сигнал что-то сверх постоянного выбора минимума таблицы.
+- Ошибка, сохранение прежнего правила и худшая цена являются допустимыми исходами протокола.
+
+##### Ограничения
+
+Это один синтетический класс сред с двумя контекстами и заранее заданной сменой режима. Он проверяет действие выбранного механизма, а не происхождение эмоций, полную семантику Я, неизбежность развития или поведение АГИ.
+
+### 7.38. Машинные результаты проверки рефлексии
+
+*Источник сборки: `work/v14_rebuild/train_reflection/results.json`.*
+
+~~~~json
+{
+  "comparisons": {
+    "closed_loop": {
+      "R_vs_B_adaptive": {
+        "delta_std": 0.025731,
+        "left_better_count": 30,
+        "left_minus_right_mean_cost": 0.005565,
+        "max_delta": 0.108772,
+        "median_delta": 0.0,
+        "min_delta": -0.04386,
+        "right_better_count": 30,
+        "ties": 4
+      },
+      "R_vs_B_event": {
+        "delta_std": 0.0,
+        "left_better_count": 0,
+        "left_minus_right_mean_cost": 0.0,
+        "max_delta": 0.0,
+        "median_delta": 0.0,
+        "min_delta": 0.0,
+        "right_better_count": 0,
+        "ties": 64
+      },
+      "R_vs_R_label_only": {
+        "delta_std": 0.104922,
+        "left_better_count": 64,
+        "left_minus_right_mean_cost": -1.586102,
+        "max_delta": -1.317544,
+        "median_delta": -1.592982,
+        "min_delta": -1.794737,
+        "right_better_count": 0,
+        "ties": 0
+      },
+      "R_vs_R_no_feedback": {
+        "delta_std": 0.104922,
+        "left_better_count": 64,
+        "left_minus_right_mean_cost": -1.586102,
+        "max_delta": -1.317544,
+        "median_delta": -1.592982,
+        "min_delta": -1.794737,
+        "right_better_count": 0,
+        "ties": 0
+      }
+    },
+    "common_history": {
+      "R_vs_B_adaptive": {
+        "delta_std": 0.0,
+        "left_better_count": 0,
+        "left_minus_right_mean_cost": 0.0,
+        "max_delta": 0.0,
+        "median_delta": 0.0,
+        "min_delta": 0.0,
+        "right_better_count": 0,
+        "ties": 64
+      },
+      "R_vs_B_event": {
+        "delta_std": 0.0,
+        "left_better_count": 0,
+        "left_minus_right_mean_cost": 0.0,
+        "max_delta": 0.0,
+        "median_delta": 0.0,
+        "min_delta": 0.0,
+        "right_better_count": 0,
+        "ties": 64
+      },
+      "R_vs_R_label_only": {
+        "delta_std": 0.0,
+        "left_better_count": 0,
+        "left_minus_right_mean_cost": 0.0,
+        "max_delta": 0.0,
+        "median_delta": 0.0,
+        "min_delta": 0.0,
+        "right_better_count": 0,
+        "ties": 64
+      },
+      "R_vs_R_no_feedback": {
+        "delta_std": 0.0,
+        "left_better_count": 0,
+        "left_minus_right_mean_cost": 0.0,
+        "max_delta": 0.0,
+        "median_delta": 0.0,
+        "min_delta": 0.0,
+        "right_better_count": 0,
+        "ties": 64
+      }
+    }
+  },
+  "interpretation": {
+    "R_vs_B_event": {
+      "closed_loop_equivalent": true,
+      "common_history_equivalent": true,
+      "reading": "the named self-rule was behaviorally equivalent to the event-filter alternative in this environment"
+    },
+    "feedback_vs_no_feedback": {
+      "arm": "closed_loop",
+      "mean_cost_delta_R_minus_R_no_feedback": -1.586102,
+      "reading": "feedback improved the selected synthetic controller relative to its ablation"
+    },
+    "unique_reflection_vs_strong_adaptive": {
+      "arm": "closed_loop",
+      "b_better_count": 30,
+      "mean_cost_delta_R_minus_B_adaptive": 0.005565,
+      "r_better_count": 30,
+      "reading": "no unique advantage for R was isolated against the strong adaptive alternative",
+      "ties": 4
+    }
+  },
+  "invariants": {
+    "R_and_B_event_recommendations_equivalent_closed_loop": true,
+    "R_and_B_event_recommendations_equivalent_common_history": true,
+    "common_history_action_outcomes_identical_across_controllers_and_seeds": true,
+    "max_reads_per_episode_within_3": true,
+    "max_state_cells_within_budget": true,
+    "reproducibility_digest": "98ccae7989aec6c077ce62ee48393aeb4f7db32a6e8390681e97c7ec4792a4ce",
+    "reproducibility_match": true
+  },
+  "paired": {
+    "B_adaptive": {
+      "closed_minus_common_cost": -0.873958,
+      "closed_state_digest_count": 64,
+      "common_state_digest_count": 64,
+      "common_updates_equal": true
+    },
+    "B_event": {
+      "closed_minus_common_cost": -0.868393,
+      "closed_state_digest_count": 64,
+      "common_state_digest_count": 64,
+      "common_updates_equal": true
+    },
+    "R": {
+      "closed_minus_common_cost": -0.868393,
+      "closed_state_digest_count": 64,
+      "common_state_digest_count": 64,
+      "common_updates_equal": true
+    },
+    "R_label_only": {
+      "closed_minus_common_cost": 0.717709,
+      "closed_state_digest_count": 64,
+      "common_state_digest_count": 64,
+      "common_updates_equal": true
+    },
+    "R_no_feedback": {
+      "closed_minus_common_cost": 0.717709,
+      "closed_state_digest_count": 64,
+      "common_state_digest_count": 64,
+      "common_updates_equal": true
+    }
+  },
+  "program": {
+    "path": "work/v14_rebuild/train_reflection/run_reflection.py",
+    "sha256": "3622180242008ee7792efbe5706fea8ee593f1cac48c10b55565486e0dc8b0f9"
+  },
+  "protocol": {
+    "path": "work/v14_rebuild/train_reflection/PROTOCOL.md",
+    "sha256": "fe65b799a3ca4eb34a895eaec418234850a36ecfc0fd13dba4ebe19916f28a4c",
+    "version": "v1"
+  },
+  "seed_records": {
+    "closed_loop": {
+      "B_adaptive": [
+        {
+          "action_outcome_digest": "1a3aa91c69b5ca959595f3205ef82b86e805fa171d5204541454684c0946dbac",
+          "doubt_signals": 156,
+          "mean_cost": 2.129825,
+          "mean_regret": 0.489474,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 0,
+          "state_digest": "76f513c8f8ca3dddb4ea3a58118db0edd3e955988f1ea0b9c6c8ac8e585baa36",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "75f1bde0e4c5806063d7bd3e35d989343102e13a2a6576b0aabbf5a3f8fe7d0e",
+          "doubt_signals": 155,
+          "mean_cost": 1.994737,
+          "mean_regret": 0.431579,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 1,
+          "state_digest": "7111d940407c894addff2cb0265390afc56a33980cf7caa633d9d14dd3fb8241",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8f1b303da79f52351d75cac05a6b137b7a9b04dc77fa14c06fb5107f64ce0840",
+          "doubt_signals": 162,
+          "mean_cost": 2.07193,
+          "mean_regret": 0.542105,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 2,
+          "state_digest": "3ac6b02512d929eed6541dbf1e33e24ac8050297b250bca0a582f7a8b46e3612",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f3382385d669dce5f191be62e27fee4e178adfcb0273807896cb9842e5ab9958",
+          "doubt_signals": 167,
+          "mean_cost": 2.133333,
+          "mean_regret": 0.564912,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 3,
+          "state_digest": "cb3224da821a303271615eee10ed0372cfc50535b17ac3858852315353c67915",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cefc4fe19301b29e2e8f0e186b7a66bcc45f47bcf29b7b84f56c352103bc2364",
+          "doubt_signals": 176,
+          "mean_cost": 1.966667,
+          "mean_regret": 0.433333,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 4,
+          "state_digest": "709bcd9bec22d2f2b79be2530fa4d1aeb081c41b295b01b292fc597d73b9a62c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f4b02819cb0cd7715781a1151d3f958000049cefd815300305067014c22ecf37",
+          "doubt_signals": 154,
+          "mean_cost": 2.029825,
+          "mean_regret": 0.461404,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 5,
+          "state_digest": "3475afe32c8236066a29464ebb231eb7105b6cabee7378736660c554af544f40",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c11dc98d38cf04f20feb966c1bd68c5620434cbed8295124aba16573c364924a",
+          "doubt_signals": 157,
+          "mean_cost": 2.024561,
+          "mean_regret": 0.484211,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 6,
+          "state_digest": "2aaa1c75f7a869d7ed73114fa206fcb7120dd518c2c60b673c0e3eba9f815d5f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "347b76fb3caaac7f53d514931c92ae302adf914be2ca857430d88c2cfc3aa973",
+          "doubt_signals": 152,
+          "mean_cost": 2.045614,
+          "mean_regret": 0.5,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 7,
+          "state_digest": "beccba1964391691b0dfff9fc869e71de7049b22cdf19715a27f432154fa2e1e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6076f65b7c08ff682022d82eda4969faa47e3cfcdce60e7cfb9d27188409fada",
+          "doubt_signals": 166,
+          "mean_cost": 2.133333,
+          "mean_regret": 0.491228,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 8,
+          "state_digest": "71c887996abcaa17655926344f5b0a5bb8d96d9204903e251553a59c195dd570",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "55ac7c8e8b6f794778b4df463d99b882a2a95558e2e4d0b4cead2570c50d2d2c",
+          "doubt_signals": 152,
+          "mean_cost": 2.085965,
+          "mean_regret": 0.568421,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 9,
+          "state_digest": "357bf310db7c49c9e73a08e24f2efa2e2d516f6ed91accb41e0e725c34948473",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c8d77262053d944302aca1f2958776781f71162fc7c9729cbda01ece50f61160",
+          "doubt_signals": 165,
+          "mean_cost": 2.022807,
+          "mean_regret": 0.431579,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 10,
+          "state_digest": "e4bc2cda7767065081fe19c57b8315f12e92261a0b25adb07e573e1db232a5b7",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "48d6985e675d962f39d787fbc6120f8e8ff87586f3869e310019d0cabecd5df0",
+          "doubt_signals": 160,
+          "mean_cost": 1.977193,
+          "mean_regret": 0.454386,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 11,
+          "state_digest": "f2e680aba978c7c82b7544eaeeb312e6ab9c57866e770aa6f196b66e3967b90d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "05bd07b0d5384a2ed624e01aead844ad14abc08b24f020e11de856e5dca11685",
+          "doubt_signals": 164,
+          "mean_cost": 2.077193,
+          "mean_regret": 0.489474,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 12,
+          "state_digest": "e69d0b9f6a243d952e8c135c94cc2415ba973eac1c7e70e07910730345f043a7",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8dfa742f96468de8b60eb831e3b7a91a95921881bdf3e9d6d8cf31e8cecd0d4f",
+          "doubt_signals": 161,
+          "mean_cost": 2.007018,
+          "mean_regret": 0.501754,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 13,
+          "state_digest": "27bf46ccc9a46e755527afd53f863081b59a34b004093a15acc80561b7984d5f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "15d1401688533557225dacd48b712ed934d182fbf13eda61c59141621e348ee6",
+          "doubt_signals": 153,
+          "mean_cost": 1.957895,
+          "mean_regret": 0.470175,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 14,
+          "state_digest": "e6ef884077aafc0d298fd16da0b95128ce56f3e071898490f27af83cc68859df",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "da32839832e9f3f4e8100d1b58e6d306a574acf4fa944dc0e6a6ab5d82a591d1",
+          "doubt_signals": 154,
+          "mean_cost": 2.085965,
+          "mean_regret": 0.533333,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 15,
+          "state_digest": "db2de0b5193dd40f9ae8e63a44b00e6867537f2ce2aac2e92a17d42a27417b12",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "84eb5a715316a6c6495fba3a414c41224afd412433e88bf8cece4d7d96a58046",
+          "doubt_signals": 170,
+          "mean_cost": 2.035088,
+          "mean_regret": 0.452632,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 16,
+          "state_digest": "35e9a3a22dcb4cc2f261b8441ece7b8f0ef908a8b32a27997868406c64e2ed51",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "25d6bc87364031ff71b51a53476b4417c9c30e59c752930daee096416a32b256",
+          "doubt_signals": 149,
+          "mean_cost": 1.982456,
+          "mean_regret": 0.415789,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 17,
+          "state_digest": "78afe3570c1dfd57d812c33d84598ef0bdf289ffb64c8c23d9bd5ea680197bd7",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9c545b1b3566664343073e549186b73719d45f2965d175863d5465ea632f4d9b",
+          "doubt_signals": 162,
+          "mean_cost": 2.101754,
+          "mean_regret": 0.535088,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 18,
+          "state_digest": "bb900cf80ed2e9f0fa5ee90106861469df99918c817c4ebb61d37d76ba1a4f35",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0dd0862ad3ad58b2cf2d413b72cdef61b2526bc14e88f574d7a83607516300a3",
+          "doubt_signals": 154,
+          "mean_cost": 2.001754,
+          "mean_regret": 0.422807,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 19,
+          "state_digest": "1d590b4cd038b11e49e8782b8d50b079f1b419a84d094b534aeff13e36682745",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "896fa35ca8a6c613733b3fc35eb615289406449f513a0fec43c99df525e5e3a8",
+          "doubt_signals": 162,
+          "mean_cost": 2.050877,
+          "mean_regret": 0.484211,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 20,
+          "state_digest": "4c3fd3cd9de8ce16fdebe751e14c1183c2ba49240f24b3fffd45b46ad615eb2e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e4dac2f6715ee9d22c4129b3a56f3242439e9062b3075449823e5580a526a27d",
+          "doubt_signals": 155,
+          "mean_cost": 2.129825,
+          "mean_regret": 0.57193,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 21,
+          "state_digest": "012a349ac8b712507901c3b2c046305f927f4e14b1e70feeb21a4e91dac3822d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "36b231cf6b17732a89d010a70eca9316c72d7cf77c4130c780f3806703b79213",
+          "doubt_signals": 163,
+          "mean_cost": 1.989474,
+          "mean_regret": 0.489474,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 22,
+          "state_digest": "0647eb4685823bda741dfb68bda17bf569633d52f249b06b37c04fa7d083db56",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9082e10ba87ba0b1e0a7a4537d084fb7ea9064b53cce9e7ec98e2d99a387299d",
+          "doubt_signals": 154,
+          "mean_cost": 1.968421,
+          "mean_regret": 0.463158,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 23,
+          "state_digest": "ecd1eee63c705f2c778db53af18b44a1569af78b0825a99226351eb7c245a9bd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c3e81e0795d45fce1eebf1b6b43eb3d186848898368dd0a2ca0e67a6ec9ed6cf",
+          "doubt_signals": 165,
+          "mean_cost": 2.040351,
+          "mean_regret": 0.422807,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 24,
+          "state_digest": "b7535b6deb3b9e739ab2194fc267ff512fa38fff73ef078c30faa3a023f7f5ed",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b0488b0ac378e7fe3252435e8903d24b56ee014792969215699ed435e9f52eb3",
+          "doubt_signals": 163,
+          "mean_cost": 2.121053,
+          "mean_regret": 0.526316,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 25,
+          "state_digest": "14d49d08b04b0f1e00b005ffbfbace29b7ad77d05ad72ce1a0fcd54cf62abaf8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9f45d67317510d5ebd9eda9503441f49cc0f5791ba6ca9ea7c0786dc066c4d6e",
+          "doubt_signals": 167,
+          "mean_cost": 2.077193,
+          "mean_regret": 0.5,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 26,
+          "state_digest": "23e87e538d2c6135e08703d7c7d0c4e2aaca8cf90d86c3ff5e3e1f03a4870965",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "eac5ef34807b15d95c6bb2fb2ed640a32330b2833d050b47c58de6c783557876",
+          "doubt_signals": 163,
+          "mean_cost": 2.075439,
+          "mean_regret": 0.463158,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 27,
+          "state_digest": "66975384b44ee876321dd7d7f84351832b3cb3b81267f33d84e1d5396fa50756",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d61f0c5b24f16e91f52f31fdcfa6aeb3f890f11224c713a619175b9654e69ace",
+          "doubt_signals": 166,
+          "mean_cost": 1.975439,
+          "mean_regret": 0.461404,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 28,
+          "state_digest": "276150fa2b46603241f3fe800ffd42721561f94d46b0e6fe7e77b49d9debeaba",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3d60069bc3996d31b7773231c7a784f121059cbdf8fbf123713aeb20190a3965",
+          "doubt_signals": 155,
+          "mean_cost": 1.964912,
+          "mean_regret": 0.426316,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 29,
+          "state_digest": "021f20b1d47fc581bc8a1b9e5377158362a56327d83f3b18972cf9e8468973fd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "32e6eb983385ca2599f79b1743bf9032a32282b72a58d89e2796dcb4547ca34b",
+          "doubt_signals": 148,
+          "mean_cost": 2.0,
+          "mean_regret": 0.447368,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 30,
+          "state_digest": "b8ea227ce32ddf4fc99173cc08ea312c3085909fdb0a00a84393873bc3994d62",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "16a301337ec9862664b6d189886189057655e117880031b6dade2e16225b5831",
+          "doubt_signals": 151,
+          "mean_cost": 2.050877,
+          "mean_regret": 0.454386,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 31,
+          "state_digest": "a2e177ca55294d78fee3002447a648ce665d15a3db314a0aa5f0d6819ed44526",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "36994ef47415fb713f74ed9c3a021acfd01e1ef3481f6fb9718dbc7b0f314938",
+          "doubt_signals": 165,
+          "mean_cost": 2.094737,
+          "mean_regret": 0.550877,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 32,
+          "state_digest": "e271d34334f53c0a098cf171bea27d3d4c60ab24fbee9ed0368ba0ca97d42176",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "190e9526afc178d444f5fb4042c75e7fbe64c7e9335159bc06891bf1486ed2ea",
+          "doubt_signals": 156,
+          "mean_cost": 2.07193,
+          "mean_regret": 0.5,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 33,
+          "state_digest": "de687412a2449dbfeac1d964e120fcd90cc73129b222724b90af5624d86ac25f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fb53e0a2dbac935753d1872b9e4cda9824a8a8aa1755273080bb7f5235e99113",
+          "doubt_signals": 158,
+          "mean_cost": 2.075439,
+          "mean_regret": 0.45614,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 34,
+          "state_digest": "a7a027bc9dc465c5c7fef9195017c3609fd0a7a095b6b5dabfef9c38866339b8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1b42d733e24a797ac0fcb445116453c24421ae617c64065ad69566716fe9ec6d",
+          "doubt_signals": 175,
+          "mean_cost": 2.036842,
+          "mean_regret": 0.521053,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 35,
+          "state_digest": "37a355351ed05c9dd7999a9fcedae9aba925b4af7d18663ad3a29701526ba549",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "5a9a6b6b3063c7138e64e3aeb11d5caa8e34db5a99ac32409252b8b3cb7eb9d1",
+          "doubt_signals": 160,
+          "mean_cost": 1.97193,
+          "mean_regret": 0.44386,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 36,
+          "state_digest": "35b871417d29a1242749a6568a3e97d8470c96e366bc391f5149490677857c48",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "697a1071bea9dc3099953a88e7b89f1b612a6a8152d538260cc9bec4781ffd2d",
+          "doubt_signals": 166,
+          "mean_cost": 2.02807,
+          "mean_regret": 0.450877,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 37,
+          "state_digest": "63183e1c8521ed7bc9aca57f3dbcb1df30950db31a413e9e49e8126c693adfab",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0d34e190ec28a23dc3954f8991a55755b6ea9fd28e43220dab48f2a4a9d3ab63",
+          "doubt_signals": 156,
+          "mean_cost": 2.04386,
+          "mean_regret": 0.522807,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 38,
+          "state_digest": "d81a30e151dbc3fa6c679c31354b11e5f1d872366e64a835cf7b9a940dca5c6c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e671c1f2d22ddff89ae3991919e50ceefd9dea89db0f08c7930867b6682fbedd",
+          "doubt_signals": 175,
+          "mean_cost": 2.001754,
+          "mean_regret": 0.45614,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 39,
+          "state_digest": "a2356fb554c9f82b5465e9625d153880aff0b0cf05cde4be74d0d53abf5424c0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "90bcd595097c63910d8299238bee1d642c7dab9e951c43635a8b86573159cdec",
+          "doubt_signals": 174,
+          "mean_cost": 2.117544,
+          "mean_regret": 0.578947,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 40,
+          "state_digest": "3811be08660972966a69eb4afe416e6972c0faaf7fbc16fca39314792710d4bd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3bd7a71394edc71e77bb2a5b3a1ff6429da72d3df4e5d8acfd1ab4242552f929",
+          "doubt_signals": 161,
+          "mean_cost": 2.012281,
+          "mean_regret": 0.487719,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 41,
+          "state_digest": "2d31a37b16803d3ab2e4105bfba675675fdd14aefa4f3b7ae50837291d662f7f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "95b9b3d1381cf94d430a473ee3e91f273b99f061f145b0c79e4f38ac9517047d",
+          "doubt_signals": 163,
+          "mean_cost": 2.050877,
+          "mean_regret": 0.517544,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 42,
+          "state_digest": "3c518cf38c7e1614e93cdf3e77de8f3b0642e5cb7c05dfd8f5eec8808a215a87",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "34928bf5c97efcc68a481227fc6c7273537a3ee2dcc733cd964b98c63f29133d",
+          "doubt_signals": 150,
+          "mean_cost": 1.998246,
+          "mean_regret": 0.457895,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 43,
+          "state_digest": "29460d0958a9162c09ae6ea597a2fac85474519df25854e1e4e009a1a60a189f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "97de4fb4eb190d027bf46b1f15b05dd519caaa99bb14ca396090c6343e70b38a",
+          "doubt_signals": 178,
+          "mean_cost": 2.087719,
+          "mean_regret": 0.475439,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 44,
+          "state_digest": "3e1342d38a0bd1c7a366d2b2c13b5fc2de28df0387fc2de098ad3b624541475c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "95252a4ecda24d897ed134bf7a5ee4473c82918e4cfe52993e4cc15b98076c2d",
+          "doubt_signals": 153,
+          "mean_cost": 2.047368,
+          "mean_regret": 0.54386,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 45,
+          "state_digest": "aa4df4484f083b6b74088fb014a8a24a5e8d1d6160476a49a48a071096f290b3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "77c814a04b07efc576eaad4c2e9444dca943f56887b9ebb9d848a5d0b715b1ec",
+          "doubt_signals": 149,
+          "mean_cost": 2.026316,
+          "mean_regret": 0.498246,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 46,
+          "state_digest": "8066355d05ba9293927f3eed010529842abe30e9acb1018530ae9b6414a5dc13",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "668cb48b9547e140e822bf31b45ca6f0cb19f1d9e335ded400e74328ab256c1d",
+          "doubt_signals": 170,
+          "mean_cost": 2.063158,
+          "mean_regret": 0.514035,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 47,
+          "state_digest": "6c473cac9947e28c27445f51c4b2114393670cf4e4cedc8b39439b9f616062f6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "24559ab35bcd3923d9e1fdae18a2abcfc2df5f13992220a5cde3e51c12b6aa7d",
+          "doubt_signals": 174,
+          "mean_cost": 2.050877,
+          "mean_regret": 0.531579,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 48,
+          "state_digest": "460e928716a95f9e8cdf46c85dc3512f11ab05dd81ad49a629302f242c139f49",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a64990c49def1fe3109748e0880ed281336935548acfc6b751154512a030f387",
+          "doubt_signals": 150,
+          "mean_cost": 2.012281,
+          "mean_regret": 0.521053,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 49,
+          "state_digest": "a191bcee24f0789e183817a3e4bab97705a8116eaf8cf3c79b1c9b8091f8ec13",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a7b747efc36954be866bc9530458eb71a6e63f770d6cae45ba9cd1e8ebf813ca",
+          "doubt_signals": 156,
+          "mean_cost": 1.985965,
+          "mean_regret": 0.412281,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 50,
+          "state_digest": "73ae189f91cb194e20167a3dc2aa6a73e1b7d286de3e21480711935cc174e348",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "efd8fbceae468602463e74bbc723ebe871f358552558813969330c78a87dc4ad",
+          "doubt_signals": 162,
+          "mean_cost": 2.12807,
+          "mean_regret": 0.549123,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 51,
+          "state_digest": "799c307fc78db3dab1a504850fc000acbb7c14a5d6820eb4bb5e940636f3d847",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a6297e9bb2bcbe183ff4890ce7bd502d77f638545f30f96b16d8b8d242e17d22",
+          "doubt_signals": 166,
+          "mean_cost": 1.966667,
+          "mean_regret": 0.396491,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 52,
+          "state_digest": "394695208bfd9a3d4de0941511cdbe0fc8a089cb18846f6fe35c1fc1c3a95c2c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0de2c1916158f17f5a4ab2beee76369de96d202d3137da18b2ae9f5bf54ed5b9",
+          "doubt_signals": 154,
+          "mean_cost": 2.080702,
+          "mean_regret": 0.484211,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 53,
+          "state_digest": "ebb7d35e25b00e1ecf1d8c0e6e850b7b2ba6c7d1d125377aeaef698af248f543",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b96147cf500b1f14a9004f549472535c14b961283ed44c5a478e230b4af4a84b",
+          "doubt_signals": 153,
+          "mean_cost": 2.02807,
+          "mean_regret": 0.475439,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 54,
+          "state_digest": "671cde1ec578ef61b2e3f83a090be3a74da795884cd087cf8628a179c6d79d6f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b48a3f3d792cea84c3f6f180cc13ccf3af6b695346a6e12657b50283ddfaf5e7",
+          "doubt_signals": 174,
+          "mean_cost": 1.977193,
+          "mean_regret": 0.44386,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 55,
+          "state_digest": "15d1b2ce11df28f6066b3e2269e9d4831e94ba804d430c60e5fbc717719f6189",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "861aa3f7e2820ebc354c012945db8ca47c390314e7b1853b744c0fda1c19853e",
+          "doubt_signals": 162,
+          "mean_cost": 2.007018,
+          "mean_regret": 0.422807,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 56,
+          "state_digest": "fc8a89ad1a67164e2a1c92eeea9abe2f4491a3c2640758a532bf0f1b1e8403ba",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "70d559cead4e581c8342ad13ff29f9336db6997e62f29611696fd0c7e15cf3f9",
+          "doubt_signals": 160,
+          "mean_cost": 1.980702,
+          "mean_regret": 0.412281,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 57,
+          "state_digest": "00eeac5c63948557afaad18aac9a4c7f1665c21e0ae541d0d80af3481d486610",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8492c4a41eee624828dca1d2d3057888c8b3ecd43d7e17b6705ad047e114f520",
+          "doubt_signals": 168,
+          "mean_cost": 2.045614,
+          "mean_regret": 0.496491,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 58,
+          "state_digest": "ab738ce3875e3f4118039dc3e54c0a66020c9cf668150d2fa31486b164be47cf",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f3e2d3269d3b19398ac11675eea8926953ec54b5598ce3f911aa169463c67908",
+          "doubt_signals": 155,
+          "mean_cost": 2.012281,
+          "mean_regret": 0.515789,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 59,
+          "state_digest": "b4ba516f63f8f216dd033f8a9a3c33d06e5a543fb7e50732096012e07f49468c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9fed711480537780f01eb25a333394e11bad44cafff0e7676fde9f073abb8316",
+          "doubt_signals": 166,
+          "mean_cost": 1.903509,
+          "mean_regret": 0.378947,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 60,
+          "state_digest": "457bc6074b2515b656c9e1edb4ba2ae250ed8c40b32223641009e9e06550e3ff",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ca9ab062b4e3f52a16ecb7252a96949e9fe1cae27bb1a6ace55ea11636dab3b7",
+          "doubt_signals": 175,
+          "mean_cost": 1.908772,
+          "mean_regret": 0.42807,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 61,
+          "state_digest": "3265b408cbedb7a899b06e0374bb3265de66036fb684f2d9eaee63b3f32d3a19",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "79452f4bdbb97e0e7ae6af1fc5a7e000b7013d129c01ef689c8d8b9c9737b4eb",
+          "doubt_signals": 157,
+          "mean_cost": 1.938596,
+          "mean_regret": 0.375439,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 62,
+          "state_digest": "790243dbeef236c42cabf6d305905ca99d37678db2e072fe8b945be80cb58daa",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c9865392ec2565161ee2779b35e420844f282ada24ae2dc6c2159cd8e6203e55",
+          "doubt_signals": 146,
+          "mean_cost": 2.005263,
+          "mean_regret": 0.442105,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 63,
+          "state_digest": "bbab323015790c63544b33225b167dd14777c01a0fcc691b380752a96525b498",
+          "updates": 600
+        }
+      ],
+      "B_event": [
+        {
+          "action_outcome_digest": "32ee5ae3e7b60d2a986081609ca5fa0775d9847a8764e242e33d233d606b795c",
+          "doubt_signals": 160,
+          "mean_cost": 2.136842,
+          "mean_regret": 0.496491,
+          "policy_changes": 10,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 0,
+          "state_digest": "c15404fb3c62a8dba1fc775472b9e0e4df7947a0469923c5033383e965ede47c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1561696e864e7e7cf51fec0d97d7cd8eac3d17941ed6cedf6919fbe165c6f7fd",
+          "doubt_signals": 154,
+          "mean_cost": 1.978947,
+          "mean_regret": 0.415789,
+          "policy_changes": 7,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 1,
+          "state_digest": "a4d78df10771cdf04bba71c663814becdbf104431e174c7ad1d1cfc3dc7bf1cc",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "5f4c9f01c7b79c7345633cd9652f712e7662a36f7d1e230c4447e68a22d0b11d",
+          "doubt_signals": 164,
+          "mean_cost": 2.04386,
+          "mean_regret": 0.514035,
+          "policy_changes": 8,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 2,
+          "state_digest": "ae8e77c3278350234c7fbc3aaac5eeb90db780c5db11a7f9540b4e73faf6fbf3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "620e224a7a0e8a13e6da040e163cb7cacc3e71fa183fd4e3dca1c4eb6ddf2c1b",
+          "doubt_signals": 168,
+          "mean_cost": 2.145614,
+          "mean_regret": 0.577193,
+          "policy_changes": 10,
+          "reads": 504,
+          "reviews": 168,
+          "seed": 3,
+          "state_digest": "f25687d8bf1cedeffa3ebc02a62952d66e3a24f63ef3930f2e55531c35e18923",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3a5b22d15036b4266d6197b439354946e59015df7bda765f90470b6d65aa4550",
+          "doubt_signals": 175,
+          "mean_cost": 1.952632,
+          "mean_regret": 0.419298,
+          "policy_changes": 11,
+          "reads": 525,
+          "reviews": 175,
+          "seed": 4,
+          "state_digest": "40579984f2c1e7f75a8f02ab5667f5f113bdb891319bbca34040d27d04c4ed96",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "46b1ca7614d027701c36ed88fb00d531753be38f45a3413ab49290c0ecb7d0c6",
+          "doubt_signals": 154,
+          "mean_cost": 2.049123,
+          "mean_regret": 0.480702,
+          "policy_changes": 12,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 5,
+          "state_digest": "5471ea8485f8ce21ecb6fd79f3273f87ec728e08c4a26b8ed15f13453a8d4784",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "86fda22e664e855f3e75f83de9b1a86da9b379af60be97c0a23285bb71fd52a8",
+          "doubt_signals": 157,
+          "mean_cost": 1.998246,
+          "mean_regret": 0.457895,
+          "policy_changes": 4,
+          "reads": 471,
+          "reviews": 157,
+          "seed": 6,
+          "state_digest": "84558aa1f9c136cd22ddfa0c0d1343b0cdf462cd94ef890944d12709ae8cecc2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d099de992957baae740870ba10e2346f50a52143faa8cc7dddaaef2a14b9f282",
+          "doubt_signals": 151,
+          "mean_cost": 2.049123,
+          "mean_regret": 0.503509,
+          "policy_changes": 12,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 7,
+          "state_digest": "a8bd1ce920e402771157d801295fb4c1c115c793b3d47248ac8d33ade9affe2d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "03a50d2578cd3a819183d02d52d465b0ec335a53e8e2276e639d34ee3ec43490",
+          "doubt_signals": 168,
+          "mean_cost": 2.142105,
+          "mean_regret": 0.5,
+          "policy_changes": 12,
+          "reads": 504,
+          "reviews": 168,
+          "seed": 8,
+          "state_digest": "5dc1b09bcab5460fca4da2f9432c6b77b89fca3646d9dfeeb4e4d3b04fe0643c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "add78bc437e2fca2173d344347a4b595abe1a5ff3b3cef919a6e78c0a415eb53",
+          "doubt_signals": 153,
+          "mean_cost": 2.059649,
+          "mean_regret": 0.542105,
+          "policy_changes": 2,
+          "reads": 459,
+          "reviews": 153,
+          "seed": 9,
+          "state_digest": "e5fe09a9a7352fe6b8672dda4c24eab6aa28612e6a28c02a75baf755d99ab25c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b271e0e493057a08f0e8a2d62a4723454067e5af730a62ef61b084419c279917",
+          "doubt_signals": 165,
+          "mean_cost": 2.04386,
+          "mean_regret": 0.452632,
+          "policy_changes": 12,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 10,
+          "state_digest": "8e869797a97209ba8cfb57d02cb84917def2dc3afb3eb436e440604bb1eac5d2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "99887303b1eed774dbe3bcc871bc407d8587174e8842d358d68fc95824c21fbb",
+          "doubt_signals": 162,
+          "mean_cost": 1.975439,
+          "mean_regret": 0.452632,
+          "policy_changes": 8,
+          "reads": 486,
+          "reviews": 162,
+          "seed": 11,
+          "state_digest": "2f416462dca3ea1005a93d9f436acabb3f57a4aeb93e041ca15407b78b17ff25",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a314e4744b6998e13b119e020e8c0d33c39aea9927a978bc8ed5f0ffb96c8a88",
+          "doubt_signals": 163,
+          "mean_cost": 2.078947,
+          "mean_regret": 0.491228,
+          "policy_changes": 8,
+          "reads": 489,
+          "reviews": 163,
+          "seed": 12,
+          "state_digest": "1704e1b0233c5a7ba5c2dcb4896b30c4052b7eeca9f4a29ea48b1526b291a900",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "773cd54c1027a6b40edcd71d4e050961b4ca5782a411c002cb14f73430bd56dd",
+          "doubt_signals": 158,
+          "mean_cost": 2.026316,
+          "mean_regret": 0.521053,
+          "policy_changes": 12,
+          "reads": 474,
+          "reviews": 158,
+          "seed": 13,
+          "state_digest": "8cf178d91b4dbc32d773cc6cf738f681f92514f09da20d01755d7c49018bc936",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3e071d708f0e45f852049b97b8a28d868c81a7478bbefa2c4b420b6654e352a6",
+          "doubt_signals": 151,
+          "mean_cost": 1.954386,
+          "mean_regret": 0.466667,
+          "policy_changes": 9,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 14,
+          "state_digest": "f9a995d90b86ad3fa72ad7078b3bcc0fa567ffcd3c4c79606a5e80765a065736",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "da32839832e9f3f4e8100d1b58e6d306a574acf4fa944dc0e6a6ab5d82a591d1",
+          "doubt_signals": 154,
+          "mean_cost": 2.085965,
+          "mean_regret": 0.533333,
+          "policy_changes": 4,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 15,
+          "state_digest": "f3d1089c303894b559df92c0af6abf5141fc537247a6d123a07140a40180a996",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "71dca91ba0bc2c654fde84d289a34305254afd5598589634518618e0c1e93562",
+          "doubt_signals": 171,
+          "mean_cost": 2.033333,
+          "mean_regret": 0.450877,
+          "policy_changes": 6,
+          "reads": 513,
+          "reviews": 171,
+          "seed": 16,
+          "state_digest": "5eacf6c17470c5edbbb8c423668bb7ede085ced861e25641ce9e62b64e6169ec",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9309187039ef58b15bf9f6775dd9995d3e699c1bed12913960a9744badc8f3aa",
+          "doubt_signals": 149,
+          "mean_cost": 1.978947,
+          "mean_regret": 0.412281,
+          "policy_changes": 4,
+          "reads": 447,
+          "reviews": 149,
+          "seed": 17,
+          "state_digest": "502129a1b7ce0eb5ea95497f5139892e8095303309bd94a415393cc1be9cc4a0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0713ae364d9b71f93b7c13f35b62b28f32a445317469d8acac708e194981483d",
+          "doubt_signals": 157,
+          "mean_cost": 2.087719,
+          "mean_regret": 0.521053,
+          "policy_changes": 6,
+          "reads": 471,
+          "reviews": 157,
+          "seed": 18,
+          "state_digest": "3fe89a8ba53346e82d36492f324fb9e52ce6a44fb0abc3c20df950db4256c6a4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fe6451d93e64883f605e4892bbefc709bd8e426977277b90d84cd7a06df38062",
+          "doubt_signals": 154,
+          "mean_cost": 2.110526,
+          "mean_regret": 0.531579,
+          "policy_changes": 6,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 19,
+          "state_digest": "2e4d67ebe2cd137a62d6a92ef73b9b5f20963329f3e00c434002eccfc169b8b4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "855de012d73a9ad599c8680459305aceeb6f12f2e42613c07119a49e3cff7620",
+          "doubt_signals": 164,
+          "mean_cost": 2.038596,
+          "mean_regret": 0.47193,
+          "policy_changes": 15,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 20,
+          "state_digest": "c1b12c7e03857cb47eff4877feeb9628e909e1c5d2f0aa5429de189f24639dce",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "85fdb3014c78dc1fe50e744d6d0e2de2e8b374b25e06dd75bd93b153a001b01c",
+          "doubt_signals": 155,
+          "mean_cost": 2.126316,
+          "mean_regret": 0.568421,
+          "policy_changes": 4,
+          "reads": 465,
+          "reviews": 155,
+          "seed": 21,
+          "state_digest": "bb61a3fe5d399c6e6661e769a9c17c91ee57302536e4a4b6854222f2842db441",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6f0b90a81df6f55751174aa7c1398c4cef83e5debca03f76ce3dede88a4cc140",
+          "doubt_signals": 164,
+          "mean_cost": 2.014035,
+          "mean_regret": 0.514035,
+          "policy_changes": 8,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 22,
+          "state_digest": "41c6d544dadd1e5efc89808ec936538c662350f1af37e3a1c2b10a452145b86b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b364a32da09b0821b7b1788281739d82650b3f6c331464e823a9324b14c83a50",
+          "doubt_signals": 156,
+          "mean_cost": 1.94386,
+          "mean_regret": 0.438596,
+          "policy_changes": 10,
+          "reads": 468,
+          "reviews": 156,
+          "seed": 23,
+          "state_digest": "a246130a4a49c4f586f19755841336fce5f63098f245e7a1c82b981433af8e1f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a7c4f270caf6ad5e14045d4727d8e49f6c2e886e1235dec0f36645e8d069a60c",
+          "doubt_signals": 165,
+          "mean_cost": 2.085965,
+          "mean_regret": 0.468421,
+          "policy_changes": 6,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 24,
+          "state_digest": "efed0dd78b11e4d92e182dd0bed7d6d3a7d39f5bb7c2e7380b096ae966fd2b73",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "4e0adbb648f3b3e858841df2feae23b865af6da6c1269462c57b5c64a4a2e448",
+          "doubt_signals": 163,
+          "mean_cost": 2.119298,
+          "mean_regret": 0.524561,
+          "policy_changes": 8,
+          "reads": 489,
+          "reviews": 163,
+          "seed": 25,
+          "state_digest": "545dbf57de337822b2862be855e3f606cc58722c3bc3b2110da133262a986708",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "af714ff48ee3a054d55a1fd1f902e8a4d726f0f6834fb2935ea717cccaa0fb4f",
+          "doubt_signals": 165,
+          "mean_cost": 2.052632,
+          "mean_regret": 0.475439,
+          "policy_changes": 6,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 26,
+          "state_digest": "9017e84101f7804728c5f9a00ecebbbeabff154eba4aa7a1f2975fc77fae20af",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "262a5788a0a341f72d7e6a160c7d60c7393c02fe8ebe7dbf86b9e7e84a909888",
+          "doubt_signals": 165,
+          "mean_cost": 2.096491,
+          "mean_regret": 0.484211,
+          "policy_changes": 12,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 27,
+          "state_digest": "6607becc617e4818a7812f9ecef483c040a05fbfb87fc3b517ea640f76a9898b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6b5ec32bfe92a195775e909c0c78db45ade35d35bf508301fdce70ce1cab9b20",
+          "doubt_signals": 168,
+          "mean_cost": 2.010526,
+          "mean_regret": 0.496491,
+          "policy_changes": 14,
+          "reads": 504,
+          "reviews": 168,
+          "seed": 28,
+          "state_digest": "1f1c6a835bf2743681c5c5485c427263e9d849976b5f4f4831ce6686c91b2152",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "79fb2950fad47512e9bdd6d3d5823672f519efd894b3b39bc838c6392ead44b5",
+          "doubt_signals": 151,
+          "mean_cost": 1.921053,
+          "mean_regret": 0.382456,
+          "policy_changes": 11,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 29,
+          "state_digest": "77a8cee0a1d9dda2ae87a7b1ac9785c4b981f76bb71fc0baaf93bae7da3571be",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "11a98077a9ba0043b05e3f83495ae1d33fa9cbdc501942d8254666c9f3544e3f",
+          "doubt_signals": 148,
+          "mean_cost": 2.031579,
+          "mean_regret": 0.478947,
+          "policy_changes": 13,
+          "reads": 444,
+          "reviews": 148,
+          "seed": 30,
+          "state_digest": "13fff736b5f396f145afdf5b7e0c8b45d30bf7a78fff90f619a107044de754e8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f621c7cc7514d898339a104f3137874e29d5be71cfb00c755d5f2b57a91af55d",
+          "doubt_signals": 151,
+          "mean_cost": 2.108772,
+          "mean_regret": 0.512281,
+          "policy_changes": 8,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 31,
+          "state_digest": "7ac6f0679b737ea631512aaf68ba1591e4017ab4cc09ef9847dc0856bbcf2e9e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a6f9e6121a60c5d6732d966d92cbf10cb1a9d40cbcbb4fd6d8008df17ea56422",
+          "doubt_signals": 164,
+          "mean_cost": 2.050877,
+          "mean_regret": 0.507018,
+          "policy_changes": 12,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 32,
+          "state_digest": "ccd1c38e319e9407849b7a21293f3d8f8fa5c5cb71d79cafacd2b0ceda71dcf4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1c5fda28a2cf0f3758e4bb303d5fa0cd33fb285492b8844c34c7f32e16207456",
+          "doubt_signals": 156,
+          "mean_cost": 2.070175,
+          "mean_regret": 0.498246,
+          "policy_changes": 8,
+          "reads": 468,
+          "reviews": 156,
+          "seed": 33,
+          "state_digest": "e6120b1952f183289ec9b8758f51ceae071f3da1b874c98cfd1a1aa8ee239260",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f976127ccf0b51216b3fcd21c1f19ce496aa05fa99873221161d75a216c2b0bb",
+          "doubt_signals": 158,
+          "mean_cost": 2.073684,
+          "mean_regret": 0.454386,
+          "policy_changes": 8,
+          "reads": 474,
+          "reviews": 158,
+          "seed": 34,
+          "state_digest": "f4be1bbaa9fc73307579571f84a879ec67850900672d5eb4b26151560886b996",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "181bb50dda5ca5105852e795157bcf0ce3a5f20fb3e7029bdb6d9c9e6e2b1272",
+          "doubt_signals": 172,
+          "mean_cost": 2.054386,
+          "mean_regret": 0.538596,
+          "policy_changes": 14,
+          "reads": 516,
+          "reviews": 172,
+          "seed": 35,
+          "state_digest": "574f4a7e57aa35495f3923cae96305a6d9cb3109e4638c6beda53e2dadf84de3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ce92f7728b484ca536d6c743a2c443915876dbb0efedf686cfffe87e11780201",
+          "doubt_signals": 160,
+          "mean_cost": 1.966667,
+          "mean_regret": 0.438596,
+          "policy_changes": 5,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 36,
+          "state_digest": "b84cd21f5b4768057dcd7c2d6d8ba7af5ca770f2de1f2a1c3c84db1e16c09412",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ad28e917c1c1bc9cf886786b1989000c933c8e92b37bef378ab7a159445ff2a9",
+          "doubt_signals": 167,
+          "mean_cost": 2.038596,
+          "mean_regret": 0.461404,
+          "policy_changes": 12,
+          "reads": 501,
+          "reviews": 167,
+          "seed": 37,
+          "state_digest": "1d606c96806a9e00c9b715757882cefabe8e9873cd3ba1f76b9d38f9be33707c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e5b5b425b86fb520a0c1164593a96f24a32bc26292c7244111fd911d26e63d21",
+          "doubt_signals": 157,
+          "mean_cost": 2.052632,
+          "mean_regret": 0.531579,
+          "policy_changes": 4,
+          "reads": 471,
+          "reviews": 157,
+          "seed": 38,
+          "state_digest": "f3a03a6a654cec4a524a4d1d52daee6aeaceaf77c9ffa5febba78b36fbfb93c6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "37d83e4873f964b2d24f3dcde39bd04e707fd9e806c83b01783b829d448d8ca2",
+          "doubt_signals": 175,
+          "mean_cost": 2.0,
+          "mean_regret": 0.454386,
+          "policy_changes": 8,
+          "reads": 525,
+          "reviews": 175,
+          "seed": 39,
+          "state_digest": "301cff1c40d07877f33a92a219eebd6875af2d1156edf1c985a8fc7413881dd3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "90bcd595097c63910d8299238bee1d642c7dab9e951c43635a8b86573159cdec",
+          "doubt_signals": 174,
+          "mean_cost": 2.117544,
+          "mean_regret": 0.578947,
+          "policy_changes": 8,
+          "reads": 522,
+          "reviews": 174,
+          "seed": 40,
+          "state_digest": "77c094d38f594e9a2e5c40078c7d4e31f9a58899a49642e49bf0c9d93259cf62",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "be81cd969c9141cf442a203cd4b3f0bb04143ba020a16e83e392774bd39405ff",
+          "doubt_signals": 163,
+          "mean_cost": 2.038596,
+          "mean_regret": 0.514035,
+          "policy_changes": 15,
+          "reads": 489,
+          "reviews": 163,
+          "seed": 41,
+          "state_digest": "124921462d2f7cc06ccd12c7a07f124cb33ca4056c5ed382870189cd4e5d0fb4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "aef09424524a4a2cdd9762f732bba957b39ec9b64ca07e23a9b061907633ef9c",
+          "doubt_signals": 170,
+          "mean_cost": 2.077193,
+          "mean_regret": 0.54386,
+          "policy_changes": 20,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 42,
+          "state_digest": "96a3d420e495da9aa5c04ed08cd75f64b3432fb157cb61cddc5abbeff617b174",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2985a23861e775a401f1cb2f7e7460c1d03b9ce255c4d2dbf582b14b74bbb7ff",
+          "doubt_signals": 149,
+          "mean_cost": 1.994737,
+          "mean_regret": 0.454386,
+          "policy_changes": 13,
+          "reads": 447,
+          "reviews": 149,
+          "seed": 43,
+          "state_digest": "e8722d2b16848066f06b88afbcd02de1cefffcca3391217ed7e1fa1c8323c90f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "055d20b630364d7e9b12325ec3a8299130eb5335845c028c879468157c846509",
+          "doubt_signals": 182,
+          "mean_cost": 2.098246,
+          "mean_regret": 0.485965,
+          "policy_changes": 8,
+          "reads": 546,
+          "reviews": 182,
+          "seed": 44,
+          "state_digest": "4eec3fb0c6f6983f4f1d832741eb83dc9fc0a67b636c6c0092aa2e6ea20e3b89",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "48182fa66b31d89edcbfecdaff729b526c0f16760efd0042bb41ecfe9f548c99",
+          "doubt_signals": 152,
+          "mean_cost": 2.047368,
+          "mean_regret": 0.54386,
+          "policy_changes": 8,
+          "reads": 456,
+          "reviews": 152,
+          "seed": 45,
+          "state_digest": "e2d12155e4ca6d1c4c7a299454ca613716686e07a515a7449a9699f634cad687",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fb5df90653ed4d12c8fb0bbf9fc721625c388200f70a9ab85ed31e1be07d2bcd",
+          "doubt_signals": 150,
+          "mean_cost": 2.063158,
+          "mean_regret": 0.535088,
+          "policy_changes": 8,
+          "reads": 450,
+          "reviews": 150,
+          "seed": 46,
+          "state_digest": "6d9c4d1d3190308d73dae39e2da9cafeb19a8eeb92553b479f64d3d5ab020454",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "aba91646160c4676e3e7a302516300d7f6f4d3f91441ca0a5e07182a2beb1d9e",
+          "doubt_signals": 170,
+          "mean_cost": 2.073684,
+          "mean_regret": 0.524561,
+          "policy_changes": 8,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 47,
+          "state_digest": "a71244bfcc9a093c2a81fee82b859079e3f9b7cae6f14e9f1a2a629ec8db2abb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "24559ab35bcd3923d9e1fdae18a2abcfc2df5f13992220a5cde3e51c12b6aa7d",
+          "doubt_signals": 174,
+          "mean_cost": 2.050877,
+          "mean_regret": 0.531579,
+          "policy_changes": 2,
+          "reads": 522,
+          "reviews": 174,
+          "seed": 48,
+          "state_digest": "5a6c5d4cd0c8a46cb97e7212002c2fd1089f0842d806189bbdc1f4cb47a61e4e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "368162b92bfed3f82b91d4c97de028da33147db01bafb7649a96f9a12e4854bb",
+          "doubt_signals": 147,
+          "mean_cost": 2.007018,
+          "mean_regret": 0.515789,
+          "policy_changes": 14,
+          "reads": 441,
+          "reviews": 147,
+          "seed": 49,
+          "state_digest": "1a83b8e27509f0892378d4ae8cbadab700ae09cc93e049cd2a32c2f3aaabe25c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6b74b064689ccc96d438305118a13fe0a0ffa7fbd9d53239f995c7d49b4f7239",
+          "doubt_signals": 156,
+          "mean_cost": 1.987719,
+          "mean_regret": 0.414035,
+          "policy_changes": 6,
+          "reads": 468,
+          "reviews": 156,
+          "seed": 50,
+          "state_digest": "40872630af4a53149f115442a5f309ef0e24e4a42f5257456897915278f49580",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "44df62b36b7940e3ce7626962c0e8f7ad1bf1d53658d4338b88a91d9ae7a8ffd",
+          "doubt_signals": 162,
+          "mean_cost": 2.096491,
+          "mean_regret": 0.517544,
+          "policy_changes": 4,
+          "reads": 486,
+          "reviews": 162,
+          "seed": 51,
+          "state_digest": "98df01da6b9755b499db993bc39df9278ca76c7e8c4a47fb624a06f623b1627b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "838b42618413940c9e4c08bac22e3894f423839f484d8e47a16f034ac15612cd",
+          "doubt_signals": 169,
+          "mean_cost": 2.036842,
+          "mean_regret": 0.466667,
+          "policy_changes": 13,
+          "reads": 507,
+          "reviews": 169,
+          "seed": 52,
+          "state_digest": "dfc57cf917278d0b0e5018c9b42280c4654a7d6d5a8224a8c65c5c6c8b2332fb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a8c232d839fa22fef177df655acae00e8a906c0f1e237796abcb19873182c66a",
+          "doubt_signals": 151,
+          "mean_cost": 2.1,
+          "mean_regret": 0.503509,
+          "policy_changes": 6,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 53,
+          "state_digest": "81d8e96e16913dabf743eb20f26410e89d4692cb28a4590aaaa60939532eefb1",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "49672b78cc397b1287714a4dd4b76c1c47a71429e4a375bb002e5461f13d0b38",
+          "doubt_signals": 155,
+          "mean_cost": 2.019298,
+          "mean_regret": 0.466667,
+          "policy_changes": 4,
+          "reads": 465,
+          "reviews": 155,
+          "seed": 54,
+          "state_digest": "cc51dbfdc9406e1772279ad2b8e63352f9c971b12fd296d88095e775f7f0bbd6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b20f75d7538d7c899f8d6a59a8d309a0bc30177a908c0d0fc6cd32f0520d5d67",
+          "doubt_signals": 174,
+          "mean_cost": 1.964912,
+          "mean_regret": 0.431579,
+          "policy_changes": 8,
+          "reads": 522,
+          "reviews": 174,
+          "seed": 55,
+          "state_digest": "ff1f67b2cf06a69c8f8e4f6d81021df72d09c2b6260a0b4935ca43829b6c6ef3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ff4ceb751bc50e7e2f30a0b214a4aeabcc6c463a617151c267694c715e5c7608",
+          "doubt_signals": 159,
+          "mean_cost": 2.001754,
+          "mean_regret": 0.417544,
+          "policy_changes": 17,
+          "reads": 477,
+          "reviews": 159,
+          "seed": 56,
+          "state_digest": "1e34b9c35cfe553dc4508bf4ef71c59ebb371c19af60503510c357a19521e9bb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c742e9b467ebccfd11dff1d097ffd7f0e6b750bbc3141ecb39909827a8c556bf",
+          "doubt_signals": 160,
+          "mean_cost": 1.984211,
+          "mean_regret": 0.415789,
+          "policy_changes": 6,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 57,
+          "state_digest": "2814a2b67df8521c3fbf0c3780d7946a6b784daed784fc3e71bb04115035a0b6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "01e85e6b9552847266a123767ffc2305f23a1a2792b6755bbb6e6cc6daeb7228",
+          "doubt_signals": 169,
+          "mean_cost": 2.036842,
+          "mean_regret": 0.487719,
+          "policy_changes": 8,
+          "reads": 507,
+          "reviews": 169,
+          "seed": 58,
+          "state_digest": "b2fdd18914b80f84ff74c2b29f03c9cbdeced24d79747692f1708d8ee1bd1705",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "831e30ecfeef59a04c4e3ccf1655873b469be19adb2765314e9f4ed5befd2631",
+          "doubt_signals": 154,
+          "mean_cost": 2.001754,
+          "mean_regret": 0.505263,
+          "policy_changes": 7,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 59,
+          "state_digest": "c9aa21079195f2a8c2de3ba7ddce2d6ae2d48819dc08c3f13dfa64bcc4e26ec6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b041558d56fc92602e682889efa15cbda674fb0b9df51a58ca350293d562baf1",
+          "doubt_signals": 166,
+          "mean_cost": 1.907018,
+          "mean_regret": 0.382456,
+          "policy_changes": 9,
+          "reads": 498,
+          "reviews": 166,
+          "seed": 60,
+          "state_digest": "46f09487d4538f44e0f335d7796023859c8c4abd657d889547a0885479354ee4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "24f96ddd19ca71a7920433d25f0f8ba6095a91030eb15098c407928c8141e166",
+          "doubt_signals": 174,
+          "mean_cost": 1.905263,
+          "mean_regret": 0.424561,
+          "policy_changes": 4,
+          "reads": 522,
+          "reviews": 174,
+          "seed": 61,
+          "state_digest": "d4fa6592f08541b5a90b51db8362b47e5997a11b995a2f8b7779c06e7af218a6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "676475e6b8f5148a1066dea8626c1931e82db1c92afabc7017f70fa8852e2f83",
+          "doubt_signals": 155,
+          "mean_cost": 1.996491,
+          "mean_regret": 0.433333,
+          "policy_changes": 10,
+          "reads": 465,
+          "reviews": 155,
+          "seed": 62,
+          "state_digest": "2a8460cc3f51ca483e585b398a85db059366738af50a4feecfc44f1fceee5dd3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "08808123898d737e13b919e9302c3716fafcc7beaa286e042451d16103f18805",
+          "doubt_signals": 150,
+          "mean_cost": 2.029825,
+          "mean_regret": 0.466667,
+          "policy_changes": 6,
+          "reads": 450,
+          "reviews": 150,
+          "seed": 63,
+          "state_digest": "9a614a6ef4815806fe040b0e027b2d059bf978527c53fa2787bec4e45fc2ca6b",
+          "updates": 600
+        }
+      ],
+      "R": [
+        {
+          "action_outcome_digest": "32ee5ae3e7b60d2a986081609ca5fa0775d9847a8764e242e33d233d606b795c",
+          "doubt_signals": 160,
+          "mean_cost": 2.136842,
+          "mean_regret": 0.496491,
+          "policy_changes": 10,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 0,
+          "state_digest": "4662c46c1f858e3dba640367f1c9d5dba7c8a9cd6e0ea170d0b0e29705442328",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1561696e864e7e7cf51fec0d97d7cd8eac3d17941ed6cedf6919fbe165c6f7fd",
+          "doubt_signals": 154,
+          "mean_cost": 1.978947,
+          "mean_regret": 0.415789,
+          "policy_changes": 7,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 1,
+          "state_digest": "67d2dd8892fd99f6459a7fcea50533850e44623061c85d23936bee385480705a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "5f4c9f01c7b79c7345633cd9652f712e7662a36f7d1e230c4447e68a22d0b11d",
+          "doubt_signals": 164,
+          "mean_cost": 2.04386,
+          "mean_regret": 0.514035,
+          "policy_changes": 8,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 2,
+          "state_digest": "a61d3521d03978c057988707a9392a5828df73daa2b818a06f09d088abaf078c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "620e224a7a0e8a13e6da040e163cb7cacc3e71fa183fd4e3dca1c4eb6ddf2c1b",
+          "doubt_signals": 168,
+          "mean_cost": 2.145614,
+          "mean_regret": 0.577193,
+          "policy_changes": 10,
+          "reads": 504,
+          "reviews": 168,
+          "seed": 3,
+          "state_digest": "27d37f7a86b2447c1de153e6e7d5184f0ad1bb812e4a42675533820bfdf8eaf2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3a5b22d15036b4266d6197b439354946e59015df7bda765f90470b6d65aa4550",
+          "doubt_signals": 175,
+          "mean_cost": 1.952632,
+          "mean_regret": 0.419298,
+          "policy_changes": 11,
+          "reads": 525,
+          "reviews": 175,
+          "seed": 4,
+          "state_digest": "4bb6c7734f31537bc4193e50184258910ae6d38fc8adc32c4d8b181e352eafe5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "46b1ca7614d027701c36ed88fb00d531753be38f45a3413ab49290c0ecb7d0c6",
+          "doubt_signals": 154,
+          "mean_cost": 2.049123,
+          "mean_regret": 0.480702,
+          "policy_changes": 12,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 5,
+          "state_digest": "f501d78904ee16b495e7d997ee9e9973dfd3c557b9b9ac6236063290d54476b3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "86fda22e664e855f3e75f83de9b1a86da9b379af60be97c0a23285bb71fd52a8",
+          "doubt_signals": 157,
+          "mean_cost": 1.998246,
+          "mean_regret": 0.457895,
+          "policy_changes": 4,
+          "reads": 471,
+          "reviews": 157,
+          "seed": 6,
+          "state_digest": "d199e91ebace2a10f33cc436b4aa317bccb92d08160fe919ce37d0f5c9a8faad",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d099de992957baae740870ba10e2346f50a52143faa8cc7dddaaef2a14b9f282",
+          "doubt_signals": 151,
+          "mean_cost": 2.049123,
+          "mean_regret": 0.503509,
+          "policy_changes": 12,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 7,
+          "state_digest": "6c7185d904b2de7540bfb7d3e514260e4b1a9b35ee41e65167e877a11daf273e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "03a50d2578cd3a819183d02d52d465b0ec335a53e8e2276e639d34ee3ec43490",
+          "doubt_signals": 168,
+          "mean_cost": 2.142105,
+          "mean_regret": 0.5,
+          "policy_changes": 12,
+          "reads": 504,
+          "reviews": 168,
+          "seed": 8,
+          "state_digest": "9b1af8f62a0c9bfb5ea098682914d7512ca114dd4ae100adeeaddbf6a2440259",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "add78bc437e2fca2173d344347a4b595abe1a5ff3b3cef919a6e78c0a415eb53",
+          "doubt_signals": 153,
+          "mean_cost": 2.059649,
+          "mean_regret": 0.542105,
+          "policy_changes": 2,
+          "reads": 459,
+          "reviews": 153,
+          "seed": 9,
+          "state_digest": "0e969cfe7b67593d50c6a8168e7c1f26e858d0236b541f3a6eeb53eb66dca77e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b271e0e493057a08f0e8a2d62a4723454067e5af730a62ef61b084419c279917",
+          "doubt_signals": 165,
+          "mean_cost": 2.04386,
+          "mean_regret": 0.452632,
+          "policy_changes": 12,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 10,
+          "state_digest": "ef1a392e76499ae8925a4a5a1d88a429ca0d62e9c74e1c70f061caed22325436",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "99887303b1eed774dbe3bcc871bc407d8587174e8842d358d68fc95824c21fbb",
+          "doubt_signals": 162,
+          "mean_cost": 1.975439,
+          "mean_regret": 0.452632,
+          "policy_changes": 8,
+          "reads": 486,
+          "reviews": 162,
+          "seed": 11,
+          "state_digest": "7a24ad3984c30c4c3e638cf17a61212707a43cbab3ccc57538c4116b091742e2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a314e4744b6998e13b119e020e8c0d33c39aea9927a978bc8ed5f0ffb96c8a88",
+          "doubt_signals": 163,
+          "mean_cost": 2.078947,
+          "mean_regret": 0.491228,
+          "policy_changes": 8,
+          "reads": 489,
+          "reviews": 163,
+          "seed": 12,
+          "state_digest": "a8b83fa6ff6265f05a1cb16bbef0df2c6bde8fd3c5b88829bbe376aec212c588",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "773cd54c1027a6b40edcd71d4e050961b4ca5782a411c002cb14f73430bd56dd",
+          "doubt_signals": 158,
+          "mean_cost": 2.026316,
+          "mean_regret": 0.521053,
+          "policy_changes": 12,
+          "reads": 474,
+          "reviews": 158,
+          "seed": 13,
+          "state_digest": "6ee05bb84050c5121f867c9e9e9b8fb255b182c445155fca2559cbf70d44d0e2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3e071d708f0e45f852049b97b8a28d868c81a7478bbefa2c4b420b6654e352a6",
+          "doubt_signals": 151,
+          "mean_cost": 1.954386,
+          "mean_regret": 0.466667,
+          "policy_changes": 9,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 14,
+          "state_digest": "ce1eb1d8066d55a9722975102a561f465d85815bd15fa77167e900f33b77aea2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "da32839832e9f3f4e8100d1b58e6d306a574acf4fa944dc0e6a6ab5d82a591d1",
+          "doubt_signals": 154,
+          "mean_cost": 2.085965,
+          "mean_regret": 0.533333,
+          "policy_changes": 4,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 15,
+          "state_digest": "8f51332e710dffc17f1b4786cc2a1b6e877208e9691f63376ac1816208212810",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "71dca91ba0bc2c654fde84d289a34305254afd5598589634518618e0c1e93562",
+          "doubt_signals": 171,
+          "mean_cost": 2.033333,
+          "mean_regret": 0.450877,
+          "policy_changes": 6,
+          "reads": 513,
+          "reviews": 171,
+          "seed": 16,
+          "state_digest": "da313fe04d46aeea67441883b78380a11dd8053014410f449acf454e97ddaf92",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9309187039ef58b15bf9f6775dd9995d3e699c1bed12913960a9744badc8f3aa",
+          "doubt_signals": 149,
+          "mean_cost": 1.978947,
+          "mean_regret": 0.412281,
+          "policy_changes": 4,
+          "reads": 447,
+          "reviews": 149,
+          "seed": 17,
+          "state_digest": "243ec76a7df1f1c2d844e68e9b101918f1ad5129d36833cb60b516f062a0b4ae",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0713ae364d9b71f93b7c13f35b62b28f32a445317469d8acac708e194981483d",
+          "doubt_signals": 157,
+          "mean_cost": 2.087719,
+          "mean_regret": 0.521053,
+          "policy_changes": 6,
+          "reads": 471,
+          "reviews": 157,
+          "seed": 18,
+          "state_digest": "8fd906cc8f21024d324bff453978ed38c2fc25758e7c84abb751a0a723a1c9ea",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fe6451d93e64883f605e4892bbefc709bd8e426977277b90d84cd7a06df38062",
+          "doubt_signals": 154,
+          "mean_cost": 2.110526,
+          "mean_regret": 0.531579,
+          "policy_changes": 6,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 19,
+          "state_digest": "af9a798517a3c28509da09ce8cde5ab0ff8e3024589d7417baf36373d993507d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "855de012d73a9ad599c8680459305aceeb6f12f2e42613c07119a49e3cff7620",
+          "doubt_signals": 164,
+          "mean_cost": 2.038596,
+          "mean_regret": 0.47193,
+          "policy_changes": 15,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 20,
+          "state_digest": "db1f9cebde73fb330e82ea5b8a9a31f9a7010ea65e9c2663c6728927a110954e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "85fdb3014c78dc1fe50e744d6d0e2de2e8b374b25e06dd75bd93b153a001b01c",
+          "doubt_signals": 155,
+          "mean_cost": 2.126316,
+          "mean_regret": 0.568421,
+          "policy_changes": 4,
+          "reads": 465,
+          "reviews": 155,
+          "seed": 21,
+          "state_digest": "406585a560dcec956afeec8f70d6d534348a0db2bf93cab5bd1fc57b1443fa45",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6f0b90a81df6f55751174aa7c1398c4cef83e5debca03f76ce3dede88a4cc140",
+          "doubt_signals": 164,
+          "mean_cost": 2.014035,
+          "mean_regret": 0.514035,
+          "policy_changes": 8,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 22,
+          "state_digest": "ca8d80996320b3781083bed09ec316c67f79a3fcc585d30f9e1e85696e9fae15",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b364a32da09b0821b7b1788281739d82650b3f6c331464e823a9324b14c83a50",
+          "doubt_signals": 156,
+          "mean_cost": 1.94386,
+          "mean_regret": 0.438596,
+          "policy_changes": 10,
+          "reads": 468,
+          "reviews": 156,
+          "seed": 23,
+          "state_digest": "554d3ac6f46d44a3a1a83a9a893544694549217401094ec08b182c838b6dc629",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a7c4f270caf6ad5e14045d4727d8e49f6c2e886e1235dec0f36645e8d069a60c",
+          "doubt_signals": 165,
+          "mean_cost": 2.085965,
+          "mean_regret": 0.468421,
+          "policy_changes": 6,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 24,
+          "state_digest": "7a2c3ba26e2aee98c62b04a34af5b16e51321dcc2f24a7502e4677a0f53f191c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "4e0adbb648f3b3e858841df2feae23b865af6da6c1269462c57b5c64a4a2e448",
+          "doubt_signals": 163,
+          "mean_cost": 2.119298,
+          "mean_regret": 0.524561,
+          "policy_changes": 8,
+          "reads": 489,
+          "reviews": 163,
+          "seed": 25,
+          "state_digest": "cd174b86f064b47316562081e3868bc6db781f148913ea05c760c77faebbf3c2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "af714ff48ee3a054d55a1fd1f902e8a4d726f0f6834fb2935ea717cccaa0fb4f",
+          "doubt_signals": 165,
+          "mean_cost": 2.052632,
+          "mean_regret": 0.475439,
+          "policy_changes": 6,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 26,
+          "state_digest": "58cda1ca64097bcf34e77498f5bd9b5d381685ee3cb50655aff0bf8cc6cbdac5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "262a5788a0a341f72d7e6a160c7d60c7393c02fe8ebe7dbf86b9e7e84a909888",
+          "doubt_signals": 165,
+          "mean_cost": 2.096491,
+          "mean_regret": 0.484211,
+          "policy_changes": 12,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 27,
+          "state_digest": "cd2da1e37693babfae009e2fcb10769c6a3f0677d878bf29a8c337665f47f707",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6b5ec32bfe92a195775e909c0c78db45ade35d35bf508301fdce70ce1cab9b20",
+          "doubt_signals": 168,
+          "mean_cost": 2.010526,
+          "mean_regret": 0.496491,
+          "policy_changes": 14,
+          "reads": 504,
+          "reviews": 168,
+          "seed": 28,
+          "state_digest": "59dec103d7647d1c61eab7563e9e31b8ff66744fc05bc8722e830c47c8b95646",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "79fb2950fad47512e9bdd6d3d5823672f519efd894b3b39bc838c6392ead44b5",
+          "doubt_signals": 151,
+          "mean_cost": 1.921053,
+          "mean_regret": 0.382456,
+          "policy_changes": 11,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 29,
+          "state_digest": "a380b8166ceb7c7e00e3add41283b5f6d95403934aa1aeade7f05c3413107722",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "11a98077a9ba0043b05e3f83495ae1d33fa9cbdc501942d8254666c9f3544e3f",
+          "doubt_signals": 148,
+          "mean_cost": 2.031579,
+          "mean_regret": 0.478947,
+          "policy_changes": 13,
+          "reads": 444,
+          "reviews": 148,
+          "seed": 30,
+          "state_digest": "302b41d5cf9f6b2bd238aad72148781f311a787e3a38f804bc396ffc5fdc030f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f621c7cc7514d898339a104f3137874e29d5be71cfb00c755d5f2b57a91af55d",
+          "doubt_signals": 151,
+          "mean_cost": 2.108772,
+          "mean_regret": 0.512281,
+          "policy_changes": 8,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 31,
+          "state_digest": "8ac5c05c1a93ec64c4f55c3e6d07c38ec825a9b118a19366e8bd4be8864d8240",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a6f9e6121a60c5d6732d966d92cbf10cb1a9d40cbcbb4fd6d8008df17ea56422",
+          "doubt_signals": 164,
+          "mean_cost": 2.050877,
+          "mean_regret": 0.507018,
+          "policy_changes": 12,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 32,
+          "state_digest": "d87ff29a6db5945346e550a67ac8fc27133850d4a0c201764af0ab95d0116105",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1c5fda28a2cf0f3758e4bb303d5fa0cd33fb285492b8844c34c7f32e16207456",
+          "doubt_signals": 156,
+          "mean_cost": 2.070175,
+          "mean_regret": 0.498246,
+          "policy_changes": 8,
+          "reads": 468,
+          "reviews": 156,
+          "seed": 33,
+          "state_digest": "67d2a68eb780b6f6c983bab5e1a76f113589e766a95219e195a4096531c313a3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f976127ccf0b51216b3fcd21c1f19ce496aa05fa99873221161d75a216c2b0bb",
+          "doubt_signals": 158,
+          "mean_cost": 2.073684,
+          "mean_regret": 0.454386,
+          "policy_changes": 8,
+          "reads": 474,
+          "reviews": 158,
+          "seed": 34,
+          "state_digest": "7ac07652b5a2550b59cc3f96e8cb493befb3863ee45aaccfa173858350a64550",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "181bb50dda5ca5105852e795157bcf0ce3a5f20fb3e7029bdb6d9c9e6e2b1272",
+          "doubt_signals": 172,
+          "mean_cost": 2.054386,
+          "mean_regret": 0.538596,
+          "policy_changes": 14,
+          "reads": 516,
+          "reviews": 172,
+          "seed": 35,
+          "state_digest": "a7f55d5c82286dd0f85f13efa69b8e75d5bbe7445227bfeea1d55f33f2c1bc74",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ce92f7728b484ca536d6c743a2c443915876dbb0efedf686cfffe87e11780201",
+          "doubt_signals": 160,
+          "mean_cost": 1.966667,
+          "mean_regret": 0.438596,
+          "policy_changes": 5,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 36,
+          "state_digest": "6a9d8ba76c3d0e3f335d79e32a53a2ad3833187925e162521a8f44bf01949738",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ad28e917c1c1bc9cf886786b1989000c933c8e92b37bef378ab7a159445ff2a9",
+          "doubt_signals": 167,
+          "mean_cost": 2.038596,
+          "mean_regret": 0.461404,
+          "policy_changes": 12,
+          "reads": 501,
+          "reviews": 167,
+          "seed": 37,
+          "state_digest": "d5d1a363ab0510a520937f97094ed7b9884cc5eb91293402eefb011c1fbc325a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e5b5b425b86fb520a0c1164593a96f24a32bc26292c7244111fd911d26e63d21",
+          "doubt_signals": 157,
+          "mean_cost": 2.052632,
+          "mean_regret": 0.531579,
+          "policy_changes": 4,
+          "reads": 471,
+          "reviews": 157,
+          "seed": 38,
+          "state_digest": "e3cdad23c937b215842c86ca76ea04c146ed23354e60188dcf024e2bcd3afe82",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "37d83e4873f964b2d24f3dcde39bd04e707fd9e806c83b01783b829d448d8ca2",
+          "doubt_signals": 175,
+          "mean_cost": 2.0,
+          "mean_regret": 0.454386,
+          "policy_changes": 8,
+          "reads": 525,
+          "reviews": 175,
+          "seed": 39,
+          "state_digest": "f89afb894de052a03ecd1a53fcf1009913a0eb77efd802b922c4ee4e308e0a12",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "90bcd595097c63910d8299238bee1d642c7dab9e951c43635a8b86573159cdec",
+          "doubt_signals": 174,
+          "mean_cost": 2.117544,
+          "mean_regret": 0.578947,
+          "policy_changes": 8,
+          "reads": 522,
+          "reviews": 174,
+          "seed": 40,
+          "state_digest": "6a5443fde466d01fafcc2d74a36e2c6477e6a06b8bdb89fa15897ad6ee0f4cd2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "be81cd969c9141cf442a203cd4b3f0bb04143ba020a16e83e392774bd39405ff",
+          "doubt_signals": 163,
+          "mean_cost": 2.038596,
+          "mean_regret": 0.514035,
+          "policy_changes": 15,
+          "reads": 489,
+          "reviews": 163,
+          "seed": 41,
+          "state_digest": "c39a9a37161cdd86e01a795a758da2d6fa084a034bafe9e5c15638b090693758",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "aef09424524a4a2cdd9762f732bba957b39ec9b64ca07e23a9b061907633ef9c",
+          "doubt_signals": 170,
+          "mean_cost": 2.077193,
+          "mean_regret": 0.54386,
+          "policy_changes": 20,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 42,
+          "state_digest": "65f67e12123599ce71fd729bd47700ebbd56609d6b1218bc741e97e3ac71f812",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2985a23861e775a401f1cb2f7e7460c1d03b9ce255c4d2dbf582b14b74bbb7ff",
+          "doubt_signals": 149,
+          "mean_cost": 1.994737,
+          "mean_regret": 0.454386,
+          "policy_changes": 13,
+          "reads": 447,
+          "reviews": 149,
+          "seed": 43,
+          "state_digest": "d05727c47d6937230e4db66d2582eedb1b3793635f696c4151ea853a8f61b433",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "055d20b630364d7e9b12325ec3a8299130eb5335845c028c879468157c846509",
+          "doubt_signals": 182,
+          "mean_cost": 2.098246,
+          "mean_regret": 0.485965,
+          "policy_changes": 8,
+          "reads": 546,
+          "reviews": 182,
+          "seed": 44,
+          "state_digest": "c6b4703b45e3ee5d35c4afba05d3506b43b28c25844ee0901f409fb5b70f68cc",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "48182fa66b31d89edcbfecdaff729b526c0f16760efd0042bb41ecfe9f548c99",
+          "doubt_signals": 152,
+          "mean_cost": 2.047368,
+          "mean_regret": 0.54386,
+          "policy_changes": 8,
+          "reads": 456,
+          "reviews": 152,
+          "seed": 45,
+          "state_digest": "6d1de4b7ceb44c4e7651cb72328c7cfa9177cba1fe71246985a37cc860a5a486",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fb5df90653ed4d12c8fb0bbf9fc721625c388200f70a9ab85ed31e1be07d2bcd",
+          "doubt_signals": 150,
+          "mean_cost": 2.063158,
+          "mean_regret": 0.535088,
+          "policy_changes": 8,
+          "reads": 450,
+          "reviews": 150,
+          "seed": 46,
+          "state_digest": "68e96da38c3fab93b5efe4d11918e300f238751d4c3b580fbd1d7ed1b5791e52",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "aba91646160c4676e3e7a302516300d7f6f4d3f91441ca0a5e07182a2beb1d9e",
+          "doubt_signals": 170,
+          "mean_cost": 2.073684,
+          "mean_regret": 0.524561,
+          "policy_changes": 8,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 47,
+          "state_digest": "78dbb38fb8e4664e5377fb41fc468353f4dab4b8a28a4e1911c376ec4458bb56",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "24559ab35bcd3923d9e1fdae18a2abcfc2df5f13992220a5cde3e51c12b6aa7d",
+          "doubt_signals": 174,
+          "mean_cost": 2.050877,
+          "mean_regret": 0.531579,
+          "policy_changes": 2,
+          "reads": 522,
+          "reviews": 174,
+          "seed": 48,
+          "state_digest": "ff3eb674fd52764407d9f89d913f4f63d11734d3fa3b067733b0c7649ca6cae3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "368162b92bfed3f82b91d4c97de028da33147db01bafb7649a96f9a12e4854bb",
+          "doubt_signals": 147,
+          "mean_cost": 2.007018,
+          "mean_regret": 0.515789,
+          "policy_changes": 14,
+          "reads": 441,
+          "reviews": 147,
+          "seed": 49,
+          "state_digest": "ec96659ae86027a99d21a7e4552d1ff6b33f9aa60b8139de15a19e42efae8370",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6b74b064689ccc96d438305118a13fe0a0ffa7fbd9d53239f995c7d49b4f7239",
+          "doubt_signals": 156,
+          "mean_cost": 1.987719,
+          "mean_regret": 0.414035,
+          "policy_changes": 6,
+          "reads": 468,
+          "reviews": 156,
+          "seed": 50,
+          "state_digest": "069b1d50879bd9f0f0b517f9d065daabc1d2909228631a2ad57ae78ff8605007",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "44df62b36b7940e3ce7626962c0e8f7ad1bf1d53658d4338b88a91d9ae7a8ffd",
+          "doubt_signals": 162,
+          "mean_cost": 2.096491,
+          "mean_regret": 0.517544,
+          "policy_changes": 4,
+          "reads": 486,
+          "reviews": 162,
+          "seed": 51,
+          "state_digest": "c7b30092d23134f09a2d2e2c2c90fee94c2e7ca1d4716a4398d07e9a7b426746",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "838b42618413940c9e4c08bac22e3894f423839f484d8e47a16f034ac15612cd",
+          "doubt_signals": 169,
+          "mean_cost": 2.036842,
+          "mean_regret": 0.466667,
+          "policy_changes": 13,
+          "reads": 507,
+          "reviews": 169,
+          "seed": 52,
+          "state_digest": "60acb241effa148a890b775a712af87f79071c3acdf0dbf262c987dfc4ecf4bd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a8c232d839fa22fef177df655acae00e8a906c0f1e237796abcb19873182c66a",
+          "doubt_signals": 151,
+          "mean_cost": 2.1,
+          "mean_regret": 0.503509,
+          "policy_changes": 6,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 53,
+          "state_digest": "17bf72bd6fce249bb3d8392030aa305908cb37642569070679eaac90de83d6b5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "49672b78cc397b1287714a4dd4b76c1c47a71429e4a375bb002e5461f13d0b38",
+          "doubt_signals": 155,
+          "mean_cost": 2.019298,
+          "mean_regret": 0.466667,
+          "policy_changes": 4,
+          "reads": 465,
+          "reviews": 155,
+          "seed": 54,
+          "state_digest": "747e4e0522d6d738d91689af66da9077055342065feec294be0a1eeebfd12d6a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b20f75d7538d7c899f8d6a59a8d309a0bc30177a908c0d0fc6cd32f0520d5d67",
+          "doubt_signals": 174,
+          "mean_cost": 1.964912,
+          "mean_regret": 0.431579,
+          "policy_changes": 8,
+          "reads": 522,
+          "reviews": 174,
+          "seed": 55,
+          "state_digest": "af58839824303ca170691fc5fdd01e862d289495acf59a4c50752250047a405f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ff4ceb751bc50e7e2f30a0b214a4aeabcc6c463a617151c267694c715e5c7608",
+          "doubt_signals": 159,
+          "mean_cost": 2.001754,
+          "mean_regret": 0.417544,
+          "policy_changes": 17,
+          "reads": 477,
+          "reviews": 159,
+          "seed": 56,
+          "state_digest": "df22a2fedc70c4d27129ceb95276a1ded72012aafcf9091aa1b089756b9e1fc3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c742e9b467ebccfd11dff1d097ffd7f0e6b750bbc3141ecb39909827a8c556bf",
+          "doubt_signals": 160,
+          "mean_cost": 1.984211,
+          "mean_regret": 0.415789,
+          "policy_changes": 6,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 57,
+          "state_digest": "6ab0fb98a77ad4fe49ae3c3babbaa99ac0f70ff3ebe96a592fe975a666a9b24c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "01e85e6b9552847266a123767ffc2305f23a1a2792b6755bbb6e6cc6daeb7228",
+          "doubt_signals": 169,
+          "mean_cost": 2.036842,
+          "mean_regret": 0.487719,
+          "policy_changes": 8,
+          "reads": 507,
+          "reviews": 169,
+          "seed": 58,
+          "state_digest": "6b9a51b0655ee48658163af75316355f95aaa0fc4e956aec3e7f208c55c7f3e3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "831e30ecfeef59a04c4e3ccf1655873b469be19adb2765314e9f4ed5befd2631",
+          "doubt_signals": 154,
+          "mean_cost": 2.001754,
+          "mean_regret": 0.505263,
+          "policy_changes": 7,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 59,
+          "state_digest": "8f73add7d5f1d6c0f1bbd51606492dbc208e095bc5322d43e5e676ee1f913497",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b041558d56fc92602e682889efa15cbda674fb0b9df51a58ca350293d562baf1",
+          "doubt_signals": 166,
+          "mean_cost": 1.907018,
+          "mean_regret": 0.382456,
+          "policy_changes": 9,
+          "reads": 498,
+          "reviews": 166,
+          "seed": 60,
+          "state_digest": "20a3ef67f8b112fffffac479790016e009b459d58829c70770ca2057ff0f6697",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "24f96ddd19ca71a7920433d25f0f8ba6095a91030eb15098c407928c8141e166",
+          "doubt_signals": 174,
+          "mean_cost": 1.905263,
+          "mean_regret": 0.424561,
+          "policy_changes": 4,
+          "reads": 522,
+          "reviews": 174,
+          "seed": 61,
+          "state_digest": "5d7ab99249c2323698a7967a595c661402868eaf0f24b7a7198ba9d53cc20035",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "676475e6b8f5148a1066dea8626c1931e82db1c92afabc7017f70fa8852e2f83",
+          "doubt_signals": 155,
+          "mean_cost": 1.996491,
+          "mean_regret": 0.433333,
+          "policy_changes": 10,
+          "reads": 465,
+          "reviews": 155,
+          "seed": 62,
+          "state_digest": "967bec6db20b99e612b811fd1ebd737f259790d555007eb6855c051ed4c9cabc",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "08808123898d737e13b919e9302c3716fafcc7beaa286e042451d16103f18805",
+          "doubt_signals": 150,
+          "mean_cost": 2.029825,
+          "mean_regret": 0.466667,
+          "policy_changes": 6,
+          "reads": 450,
+          "reviews": 150,
+          "seed": 63,
+          "state_digest": "a707aa90df230d84710e92e042c6b8a47e4587ed54db0f6d65de7785bcb34fb6",
+          "updates": 600
+        }
+      ],
+      "R_label_only": [
+        {
+          "action_outcome_digest": "beef83828b7ec82b2dd641c4b03a627a2507cb6435d2c5ae2706f1591fbebce8",
+          "doubt_signals": 140,
+          "mean_cost": 3.784211,
+          "mean_regret": 2.14386,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 0,
+          "state_digest": "aff18660e9bfdebee1caaba027a29ac5d103b4be4c1686cd84f1abcf0b3ffc09",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "dc1f367c05c8fb526cdde6f221c2a886ea98dc5140200da96b00093eafca42b9",
+          "doubt_signals": 153,
+          "mean_cost": 3.7,
+          "mean_regret": 2.136842,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 1,
+          "state_digest": "f0441cff9dd56ad399ddc34ef9513e5a0a967e311c35314eae8067051b6b7526",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1ddf06828be8d901d795d938e67d1358e98b36adcf496af8ad81f1cc75ac21ef",
+          "doubt_signals": 159,
+          "mean_cost": 3.652632,
+          "mean_regret": 2.122807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 2,
+          "state_digest": "2a5d2383890c3ccbba6f55719482db9c15daddd3932b06228015bc7fb3c953fd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d4cafc80c1d20834adbdb41e0055b18db9c036bca9364b2c32d94c2ad057b40b",
+          "doubt_signals": 150,
+          "mean_cost": 3.664912,
+          "mean_regret": 2.096491,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 3,
+          "state_digest": "4be12f969b5136cea46d829e5b9dab1ad55508c4feba712a0e764861a5126ab4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "de56b58b18a583fc58df74f3cea997419816f0889224510026f19dc8c8856b58",
+          "doubt_signals": 159,
+          "mean_cost": 3.6,
+          "mean_regret": 2.066667,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 4,
+          "state_digest": "6252f52ea29c98755d1535cb2f30dd33d2907d177919f814fc714b2f6e721815",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "072475f69a20a1e59f3862e39a085c79e02735bc63cf7a4f8864a7131515f740",
+          "doubt_signals": 142,
+          "mean_cost": 3.685965,
+          "mean_regret": 2.117544,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 5,
+          "state_digest": "b6ccb24e4b4314e395a6cba7f1f4af3c2f6f7e4a53dbae9446f1195a6db86e87",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "455ae2595dfd776baebef5ca464da60e1883308a651760d18b1fb1fb46cbdc69",
+          "doubt_signals": 145,
+          "mean_cost": 3.550877,
+          "mean_regret": 2.010526,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 6,
+          "state_digest": "60d23bc0449666b2fcb648cfa7354e61d16ee82aa2e3fe2ec3085022cbdd9ec0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "58cb8b8e7eb234950eb17cfafec6455a0434d5dacf33e2350ff970fdeebcca70",
+          "doubt_signals": 151,
+          "mean_cost": 3.726316,
+          "mean_regret": 2.180702,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 7,
+          "state_digest": "538cfe395cbd4846a454d194bf346ee2970205f57cb74866cb3a22d6e0aa2efa",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "64c8a64be31762dcfc62b1b9ad7a3ed5e193979f43134f806fed57fc87c8253b",
+          "doubt_signals": 151,
+          "mean_cost": 3.857895,
+          "mean_regret": 2.215789,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 8,
+          "state_digest": "87cc1dd10cb6e4652fbcfaf9bc4d2488cbc379400b5582170e16907fce1e0580",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "40f6050d02b54f1bac323c4faaec78fe7cb39c1c9618efbe03603b4c370cf3fa",
+          "doubt_signals": 152,
+          "mean_cost": 3.547368,
+          "mean_regret": 2.029825,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 9,
+          "state_digest": "5c95ad2f19067ee2a66b587079823cf8ce3b84abdb9047313c5b1ff35dc38b44",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "aa314b251d6ae68d9168e6e2a0583115a592cc316684eaa5907ad5650af0b161",
+          "doubt_signals": 153,
+          "mean_cost": 3.608772,
+          "mean_regret": 2.017544,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 10,
+          "state_digest": "a29491d0cd4ed3cfc68247588e48d81bd9ba69ac917d99be20032592b02db4ea",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f42ecbb4273c2bb3abcd44772cd57042d5e0a159ec103996eae8d526b8f225ef",
+          "doubt_signals": 145,
+          "mean_cost": 3.52807,
+          "mean_regret": 2.005263,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 11,
+          "state_digest": "65a927b9ec30de135af18ecf56154749d6cbab1b5c5ffa5e6f211e799d63e3e4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "33d59c68a6893d595651f45bfa52f659115724851314016751756199cb33886c",
+          "doubt_signals": 151,
+          "mean_cost": 3.735088,
+          "mean_regret": 2.147368,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 12,
+          "state_digest": "2ed78b2fa352a12d5a4198db83320dd9e3bbbe2d8e2aa7412a8f14fabbf1b182",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c6f8a4dbe13b979c70e4fe4bdeba2685e7fb12f5fce05685d29d398b371b3690",
+          "doubt_signals": 148,
+          "mean_cost": 3.487719,
+          "mean_regret": 1.982456,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 13,
+          "state_digest": "6d54bf6a4f08fac7a4f6c79300ce8fc56bcfb5f8fb0b524163b91ae4870f28af",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "5d84febe10ee4e5e76fc5357929d625d7553b95157909c09d4228a1aafccfc4f",
+          "doubt_signals": 153,
+          "mean_cost": 3.582456,
+          "mean_regret": 2.094737,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 14,
+          "state_digest": "6391c75e7a99603d4fdfe901a1b68a68b5c0f37603968bff75e711bb79211655",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "715a126ae777f12b5a709fd37fc922014a4fd356ddfaf25fa2381c614258ce8e",
+          "doubt_signals": 154,
+          "mean_cost": 3.549123,
+          "mean_regret": 1.996491,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 15,
+          "state_digest": "ba3816e15f57d9b97bc313f628d203e48c3f1c435b1f93121c709aa2e9453785",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "79f8b6b5848559f6d97c33555ee1fa973a2e84592eb83ffa6ecc416999a4cb63",
+          "doubt_signals": 155,
+          "mean_cost": 3.691228,
+          "mean_regret": 2.108772,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 16,
+          "state_digest": "58843984fa40418a9f898cefdd0c4080fb56096e008d946de16f72b8ba39f757",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c02b607728abf3cf22341e5fc22c8eb146d638dc693c7bfc01c8afe0623aa848",
+          "doubt_signals": 138,
+          "mean_cost": 3.540351,
+          "mean_regret": 1.973684,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 17,
+          "state_digest": "15405adf0a317110fdbedb82f803ac26fc37dd0a5e331c55150bf837240c3425",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9c64ec6215cd1ec8e50ad78cf988b726ca7999a55a31b712735d54a48b87f5ee",
+          "doubt_signals": 149,
+          "mean_cost": 3.673684,
+          "mean_regret": 2.107018,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 18,
+          "state_digest": "730bcbf619f81c34518050dcd7b54d593a6db6b8b9531cd30b11fb6add00e127",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a2332bfa8dbdff2d109e240d80588101f998dc9de9b68f5a08290e4c334d1de6",
+          "doubt_signals": 143,
+          "mean_cost": 3.661404,
+          "mean_regret": 2.082456,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 19,
+          "state_digest": "b782a46d9caf40b354895bc777171eb122d6b6aa75640cde6b9c8dfadecf21bb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a16b3321a60031232e6fd9c296c719c24ff5d10ecc52e48907c8f1ada0c125b9",
+          "doubt_signals": 164,
+          "mean_cost": 3.585965,
+          "mean_regret": 2.019298,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 20,
+          "state_digest": "c1e54c00894ec2cb327e03c5e3c34901a2b76dbdf7c549929c4cff4eb6cb805f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c0484e50a2fb383fdf51cb118d57a43f92804abfdfdd73f8bf67814b69657abc",
+          "doubt_signals": 162,
+          "mean_cost": 3.450877,
+          "mean_regret": 1.892982,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 21,
+          "state_digest": "e2bc938ee1ede5074ed0a967d8436ce571e9ae336d0dd5f112277bf27a34fec3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "46689e2ce982ac21ac2829a44cebfd12b3519ebd894c8e086257f254df7e70e4",
+          "doubt_signals": 149,
+          "mean_cost": 3.422807,
+          "mean_regret": 1.922807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 22,
+          "state_digest": "bd2d75f0856b785006ca4ca34a327beff13916ceb32d87a93da08c9d923c5692",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1f3714cc138793361ab9c76a3fbbf89deb45d4757e43171e699d32afc454444f",
+          "doubt_signals": 156,
+          "mean_cost": 3.459649,
+          "mean_regret": 1.954386,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 23,
+          "state_digest": "681120d877d87c6389e401c184ecb542c1e1b79c8fa1d6f283253eb0da1b9427",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ff9a66e271de298517e3b93c722afea85bafa2a2986229e6403ea22ae1c01475",
+          "doubt_signals": 146,
+          "mean_cost": 3.714035,
+          "mean_regret": 2.096491,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 24,
+          "state_digest": "6f95ca0df0ae9ce5a0e08822efe8b638e6f2ca7bf929f208e24cbfbd02bfa2ef",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8246e27b97764ab5c0dfe339e7f90263b4b01afd76e7b343cff9cc56711d6ab2",
+          "doubt_signals": 147,
+          "mean_cost": 3.77193,
+          "mean_regret": 2.177193,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 25,
+          "state_digest": "e1c848d7f07e2e5815fb5d400ad7b11214b57289911db0c0c1aa6ab2e8c6e4f3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "db204c6f4308e9c6f1b3f4f4e2c3f432c0218d0fa778e490794bfc907da793c6",
+          "doubt_signals": 148,
+          "mean_cost": 3.645614,
+          "mean_regret": 2.068421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 26,
+          "state_digest": "1270f877ac7b0f385d6c3dad8e9a8bb383914bbfd05a1e35eee534b4e58ec8a3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b7ad414e91d04c5bc4e896427d4b57bd9ec5cdc1fedf623f7640f61d5c74eb7f",
+          "doubt_signals": 155,
+          "mean_cost": 3.875439,
+          "mean_regret": 2.263158,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 27,
+          "state_digest": "d03405761dd5ce894e079ca8e1282ebbc7dba6fc63a179bf43e0b701a3ffb132",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8e4f35afa444064f3a1c5c55d93fc0a633925d246f43b4de1072f8404e2a79f8",
+          "doubt_signals": 165,
+          "mean_cost": 3.536842,
+          "mean_regret": 2.022807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 28,
+          "state_digest": "36751a0f66b7d7ae8dac2df0f7ed3e2bbcfca151c42bf3e0b06c14a278463e1b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "27c9dfb45641f97d7edf7f3e21bed5be4c577b1d6e3911f2f0e7c21d09279cfd",
+          "doubt_signals": 145,
+          "mean_cost": 3.447368,
+          "mean_regret": 1.908772,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 29,
+          "state_digest": "62ded86453fb89dafbb13dfad0f333f5df93e69c67bd5154c85a590c195fa352",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "43fc6d99f08e1fc0e8e5fe3678378d2e4a062e8efd20cb8ff13fc122e2c961d0",
+          "doubt_signals": 146,
+          "mean_cost": 3.721053,
+          "mean_regret": 2.168421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 30,
+          "state_digest": "4c6284ca6851ec068611de53e3f7955eb9081d0be8c5f5121070302664275d65",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "176469b1ae23b3aeb5a5cfd0ca0927c44f83404ecc8da324130e6f54eb642f9e",
+          "doubt_signals": 139,
+          "mean_cost": 3.717544,
+          "mean_regret": 2.121053,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 31,
+          "state_digest": "6a8de5a1b2fb7f2360e5f96b2a9bf2b6963bdf1100ecc8247aa5c8a987cd7a1f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "963813a7a4733a3445296a10c0470994afd63b843332e45238ba149740bbc261",
+          "doubt_signals": 152,
+          "mean_cost": 3.670175,
+          "mean_regret": 2.126316,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 32,
+          "state_digest": "f7a761323a1070ce6841353d5ac9172e87f512b31934cf9e48ada4b7b5d617d2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8e6f9db3e33fa99d7dd3076adef4288a803b7ab30e5864ce642a2757c2230e7c",
+          "doubt_signals": 141,
+          "mean_cost": 3.719298,
+          "mean_regret": 2.147368,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 33,
+          "state_digest": "86a5186ffaa25490f35db0e9e8b37b76c979d97b405ae9a79ef2d30f2b6a8a8e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0c575678e30b34c515ba0a22dc713e6af9328aacb65d431bf0d3da11e4e51f13",
+          "doubt_signals": 155,
+          "mean_cost": 3.833333,
+          "mean_regret": 2.214035,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 34,
+          "state_digest": "821699e8ce51f2387914d5a8fcf1e4fce72d799dc8a571f124c5ac63e49ba95e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a1e17e251937f54c9c23bec5286ad4dd2cbc720222a3a5c673088034c68e8d10",
+          "doubt_signals": 153,
+          "mean_cost": 3.684211,
+          "mean_regret": 2.168421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 35,
+          "state_digest": "9c9d0d22a3c708b4446f43ff797c4da9fb8fca3310f7ac6e6846845cc78d053b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0185af08a908fdbb7a078e02affbb578c721a1ed6033b03a8d9b897daf02b21c",
+          "doubt_signals": 151,
+          "mean_cost": 3.64386,
+          "mean_regret": 2.115789,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 36,
+          "state_digest": "136242374e9dea43d538866c419e5575ba4da60361f88a925689c2811a760ee0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8508cf5ce1312ea2d1992206bbc0a91ecceb40753d6ac67585c81c40f5969537",
+          "doubt_signals": 153,
+          "mean_cost": 3.542105,
+          "mean_regret": 1.964912,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 37,
+          "state_digest": "7ded809dc66fc001eca031db007b06e18a132b5330e3a26a221eba5190522e49",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cffb58ac863a53bda47b895bc82855874dd0f866543cbb1857f6f8623d8a19f4",
+          "doubt_signals": 155,
+          "mean_cost": 3.62807,
+          "mean_regret": 2.107018,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 38,
+          "state_digest": "94ab8451352918488ce681cddac69e5fcd0c0987ed0cf3394fd168a08971f48c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "25ba0b6aca696f9b6927df9e6ebd0afe636f73def3b31507fd3fc289e6d270c7",
+          "doubt_signals": 154,
+          "mean_cost": 3.715789,
+          "mean_regret": 2.170175,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 39,
+          "state_digest": "cd542f6c04534a010cddea69062e451438be91bf020e83b359cfcf1219f769b9",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fa1ee544140895442b059e2b929997897a5b6ca296d930fdbd00582d92c79451",
+          "doubt_signals": 165,
+          "mean_cost": 3.538596,
+          "mean_regret": 2.0,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 40,
+          "state_digest": "3314dedf7cfc579a278af11bd02b0dbd1f0901c35d53ce9c2cec56104280e3e8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ba85e9314fd1a282e88f17cb46a2f661d991bc362aead9c53978c7ed76455ef0",
+          "doubt_signals": 155,
+          "mean_cost": 3.647368,
+          "mean_regret": 2.122807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 41,
+          "state_digest": "ce282e1e65be5f927cdd7107c8927f5afcca77766db971864909806578368827",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "afb4da65f08899b96ae0789473cedb93d25f138f3629fc2f33065777e5ffb02b",
+          "doubt_signals": 155,
+          "mean_cost": 3.573684,
+          "mean_regret": 2.040351,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 42,
+          "state_digest": "f887bacc13acff7809c1d3a41ff67c1067bc02dd8d1953c81c8b280171a71201",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8c6c4ed9e01c163fcfeddac79fb2219dad8fbc1a5877fa901dd6e7373345a4f3",
+          "doubt_signals": 147,
+          "mean_cost": 3.575439,
+          "mean_regret": 2.035088,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 43,
+          "state_digest": "f7c25ff6c860a34b0990aad0fa89d0b88422012ed126301c99c755597b77fe76",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "987702b9a8fa120b6b0873ba60ab1e876b8719ef249044f7b2334c4ac9a890f1",
+          "doubt_signals": 170,
+          "mean_cost": 3.840351,
+          "mean_regret": 2.22807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 44,
+          "state_digest": "780619a99eee541b26a843c4d14e80d2512af683bbb17f2dbea7b55703e08824",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "39eeb96b89f6df65fa85a5a4c1a768573b32d12df0d0bcbcd28be5ce3d7e6d4f",
+          "doubt_signals": 148,
+          "mean_cost": 3.510526,
+          "mean_regret": 2.007018,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 45,
+          "state_digest": "ec28a590f9f55bd071bd21262ac245f02369f686559ba822be4cb5ea2171d94c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "03931bdd5bdc9f81181dd71c7458117d0ec1a30f150221b51b8b0e5d0990702c",
+          "doubt_signals": 140,
+          "mean_cost": 3.536842,
+          "mean_regret": 2.008772,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 46,
+          "state_digest": "ca6c73c950597398234ab0585b472f3a99b849ee8caf159923fc6e3a1dc7652d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "728ac830a76376c8e5a2fe64540559daa208f2cc77fe00bdf62ebec19f43c7e8",
+          "doubt_signals": 155,
+          "mean_cost": 3.668421,
+          "mean_regret": 2.119298,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 47,
+          "state_digest": "a8a1fca6fe573d0a7e06baa6ceb3c6f75afc1bcbfeb61bb7d312e421baefd142",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9082d95915deb1051ef112339cbe4fe3587bedccdd433f51efd5c5b0f59c8073",
+          "doubt_signals": 146,
+          "mean_cost": 3.642105,
+          "mean_regret": 2.122807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 48,
+          "state_digest": "8e577eb4bc6f07b89033dd041c055331bb84a2805811ecdbf72037a1c3e600a0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6ca34db1077a3ca28f2b4293ac22e8d6c84f38ea08e39ea232027185ad923607",
+          "doubt_signals": 141,
+          "mean_cost": 3.366667,
+          "mean_regret": 1.875439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 49,
+          "state_digest": "969d96adbd7c6f90d042675d3612fec9b741a053c3405a9aec4340bf9382793c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c6a95a8c8ff64e4ca9c64caaa11afc9cd43a39e56a549b8dcb7e1b7da21d201f",
+          "doubt_signals": 150,
+          "mean_cost": 3.705263,
+          "mean_regret": 2.131579,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 50,
+          "state_digest": "f058e78591cbcf2a242a3e16963d58739d1a657f3f3b296f58cfcf57c3f0380a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e232ba0a664a5330a657feedb51f54b389cd5851ff01a562e692503fd0b7c5a1",
+          "doubt_signals": 159,
+          "mean_cost": 3.789474,
+          "mean_regret": 2.210526,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 51,
+          "state_digest": "10481aacda4da592e19f678d547c5576ff97a087a7b3b8278d39b341317c884f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "232a36ec031231dfc09edcce8c7bd8c73a8693491bcbb895133c17fb9db83d08",
+          "doubt_signals": 154,
+          "mean_cost": 3.545614,
+          "mean_regret": 1.975439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 52,
+          "state_digest": "ee26eac5bdd467e051ad632f98d0412678ccf7969ebedd98131f639dbfaa7632",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2df86ef542d0a9cbfbe293d1ab771d3c602b6154dc2f954f0f1dc24fcc14962d",
+          "doubt_signals": 147,
+          "mean_cost": 3.678947,
+          "mean_regret": 2.082456,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 53,
+          "state_digest": "b34b35cf1ecc8b47b999f25de459a64ca9bd30bff18c557d02f91466ae618267",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2b010a7f7a709b14fa9eb95b18cd7030a99a56927e2fda737c7a99555959c48d",
+          "doubt_signals": 143,
+          "mean_cost": 3.717544,
+          "mean_regret": 2.164912,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 54,
+          "state_digest": "975a2df2a1a7d966197ed3c8c8a80e65d08b135d33f4944d9efc019da62f05c6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "08d9bf1632568164bc442c7d9a4704fb88514228aadefd698a663256cb8cb325",
+          "doubt_signals": 150,
+          "mean_cost": 3.384211,
+          "mean_regret": 1.850877,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 55,
+          "state_digest": "42b8ae4ec493cad92a62a47e409798612fc5e7b1e952ca6376f206f4f121caae",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "550251d1a23f32b3653e0a5d059dbf30499525b8946a7e06713e14ac14d50253",
+          "doubt_signals": 157,
+          "mean_cost": 3.684211,
+          "mean_regret": 2.1,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 56,
+          "state_digest": "2126f4ff3d9de401ef1416a4babd02057245728cc6784fe650878316990c6e3d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2360860aa76b8d5e1ec5ecfbcea8d7b1e8e52c473c319021ac1614bab76f1431",
+          "doubt_signals": 142,
+          "mean_cost": 3.482456,
+          "mean_regret": 1.914035,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 57,
+          "state_digest": "9464ae0de399d797d9e865d8e01ba3e88d9e3c536da504918f0173bb0fa955d3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3fd4843c0ac12df458fe1f30c2f99a332d8c2a31a7a5744af0a9c7bd2d52d28b",
+          "doubt_signals": 152,
+          "mean_cost": 3.622807,
+          "mean_regret": 2.073684,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 58,
+          "state_digest": "36d1397fdda2587dde5c35bb9e4a7633c6fc86736fcda5d56188e6bc641065ae",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b35d3f078df07adb9cd878aa1f20b99c096ff14071fa6e2066c48816af987ba6",
+          "doubt_signals": 147,
+          "mean_cost": 3.319298,
+          "mean_regret": 1.822807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 59,
+          "state_digest": "58dd6a76194ae9c95265405104d23940ba9df025fb8933933d412c1b2c98a39e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "346d5c9491c1d344eb6e66ba926582e1482095edf52f0a5ef0156b1bbcda02f4",
+          "doubt_signals": 151,
+          "mean_cost": 3.559649,
+          "mean_regret": 2.035088,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 60,
+          "state_digest": "fa1c46e841e03c4a995cdbeb77a2f40684fc0766c00d366255a4ecd754ccbf9d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "decd098e57d481f19f9875dadb03cbabca7d377ad21e42130935739163dda0b2",
+          "doubt_signals": 154,
+          "mean_cost": 3.517544,
+          "mean_regret": 2.036842,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 61,
+          "state_digest": "6c7b88ba43bd5a519375d821d294e05cade79674961148033aae8242f25ca980",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "df140022750672b1d99d8ba9cdd792b93058e54df7f2eca3180145cdaff89195",
+          "doubt_signals": 154,
+          "mean_cost": 3.791228,
+          "mean_regret": 2.22807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 62,
+          "state_digest": "06728e828f184819069036b7b616a64068abf68825f65229abadd3e75baa93ad",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a8623d2bf69066ef18a47635d020ce49f81335361aa2fad9fd69163372d23bfb",
+          "doubt_signals": 137,
+          "mean_cost": 3.622807,
+          "mean_regret": 2.059649,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 63,
+          "state_digest": "af1a01a8c9b8c363bdfbf5f75543fb6e8641abc43a7d0bb9441237a65c60e6d6",
+          "updates": 600
+        }
+      ],
+      "R_no_feedback": [
+        {
+          "action_outcome_digest": "beef83828b7ec82b2dd641c4b03a627a2507cb6435d2c5ae2706f1591fbebce8",
+          "doubt_signals": 140,
+          "mean_cost": 3.784211,
+          "mean_regret": 2.14386,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 0,
+          "state_digest": "36c7249f89ba634d905f96d671fed83ac150707c2146f066da2358d35776679d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "dc1f367c05c8fb526cdde6f221c2a886ea98dc5140200da96b00093eafca42b9",
+          "doubt_signals": 153,
+          "mean_cost": 3.7,
+          "mean_regret": 2.136842,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 1,
+          "state_digest": "d908b72a3583cd17c899fc730520adba27af4aae49643fe9dcc563ea51ecb236",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1ddf06828be8d901d795d938e67d1358e98b36adcf496af8ad81f1cc75ac21ef",
+          "doubt_signals": 159,
+          "mean_cost": 3.652632,
+          "mean_regret": 2.122807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 2,
+          "state_digest": "b7d1551af4023fe6d3d03e542473d707caf57da8fff800e4a0010eb2972ec887",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d4cafc80c1d20834adbdb41e0055b18db9c036bca9364b2c32d94c2ad057b40b",
+          "doubt_signals": 150,
+          "mean_cost": 3.664912,
+          "mean_regret": 2.096491,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 3,
+          "state_digest": "dbda8840fc14d8bb4705d7b6f22fbaddc5c0790f9cb87fc0ee044ef5d32664f7",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "de56b58b18a583fc58df74f3cea997419816f0889224510026f19dc8c8856b58",
+          "doubt_signals": 159,
+          "mean_cost": 3.6,
+          "mean_regret": 2.066667,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 4,
+          "state_digest": "9f8cd84a488e698b76b572416e85067f530a9cb74d221019adbd8e6d138fbcc6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "072475f69a20a1e59f3862e39a085c79e02735bc63cf7a4f8864a7131515f740",
+          "doubt_signals": 142,
+          "mean_cost": 3.685965,
+          "mean_regret": 2.117544,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 5,
+          "state_digest": "75b1b5ab7f51619c773850f8271ef239707ad5b394112589c9ec9f2c4959b2e7",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "455ae2595dfd776baebef5ca464da60e1883308a651760d18b1fb1fb46cbdc69",
+          "doubt_signals": 145,
+          "mean_cost": 3.550877,
+          "mean_regret": 2.010526,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 6,
+          "state_digest": "bb93464d25ea204e2c4eb4fa0ac3fec1b3140ef4555037f6fa076703989fac3c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "58cb8b8e7eb234950eb17cfafec6455a0434d5dacf33e2350ff970fdeebcca70",
+          "doubt_signals": 151,
+          "mean_cost": 3.726316,
+          "mean_regret": 2.180702,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 7,
+          "state_digest": "cddc626496bc961d1ac69f7d7a1ba4e1905a715f416301cadf896aaa03c4269f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "64c8a64be31762dcfc62b1b9ad7a3ed5e193979f43134f806fed57fc87c8253b",
+          "doubt_signals": 151,
+          "mean_cost": 3.857895,
+          "mean_regret": 2.215789,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 8,
+          "state_digest": "cf2f1612b0ac04258f23da8dda0f7f626b0be970608ae3adc351b5952d8efdfd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "40f6050d02b54f1bac323c4faaec78fe7cb39c1c9618efbe03603b4c370cf3fa",
+          "doubt_signals": 152,
+          "mean_cost": 3.547368,
+          "mean_regret": 2.029825,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 9,
+          "state_digest": "4898fde670c09b658e67984c16d7ad2e07351fa3b434b2ea7d69910bd55268c0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "aa314b251d6ae68d9168e6e2a0583115a592cc316684eaa5907ad5650af0b161",
+          "doubt_signals": 153,
+          "mean_cost": 3.608772,
+          "mean_regret": 2.017544,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 10,
+          "state_digest": "8b341bf02ee23e5a4bf93b67d110acc7b9e3062ded98149c521dbef407e50360",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f42ecbb4273c2bb3abcd44772cd57042d5e0a159ec103996eae8d526b8f225ef",
+          "doubt_signals": 145,
+          "mean_cost": 3.52807,
+          "mean_regret": 2.005263,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 11,
+          "state_digest": "a21d90f1f38ba254da0d76b387dc28b5d1d91a32f64d5722abc73bfff42b80dd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "33d59c68a6893d595651f45bfa52f659115724851314016751756199cb33886c",
+          "doubt_signals": 151,
+          "mean_cost": 3.735088,
+          "mean_regret": 2.147368,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 12,
+          "state_digest": "abdfe7618b5d301025c8056cc3ed9353207482cbcad5c25e1cdd27e4dffd40f6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c6f8a4dbe13b979c70e4fe4bdeba2685e7fb12f5fce05685d29d398b371b3690",
+          "doubt_signals": 148,
+          "mean_cost": 3.487719,
+          "mean_regret": 1.982456,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 13,
+          "state_digest": "03b1d9e479c8d7d2c77ebcdebc45634bc5202db98b52d0b7a86789be5163b4d7",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "5d84febe10ee4e5e76fc5357929d625d7553b95157909c09d4228a1aafccfc4f",
+          "doubt_signals": 153,
+          "mean_cost": 3.582456,
+          "mean_regret": 2.094737,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 14,
+          "state_digest": "8e63499af316f9307ee8bbdc0c8feff119155af99d63160b7ddca78c617d9c76",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "715a126ae777f12b5a709fd37fc922014a4fd356ddfaf25fa2381c614258ce8e",
+          "doubt_signals": 154,
+          "mean_cost": 3.549123,
+          "mean_regret": 1.996491,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 15,
+          "state_digest": "317d2289501b3e95b18f187a58cab54b24f53c2572439bccc6547c5987a95db0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "79f8b6b5848559f6d97c33555ee1fa973a2e84592eb83ffa6ecc416999a4cb63",
+          "doubt_signals": 155,
+          "mean_cost": 3.691228,
+          "mean_regret": 2.108772,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 16,
+          "state_digest": "32b1f6ea1ad34766a2b2b7594f1c9ec92911ed08523f449929e3c5cdb3277bf8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c02b607728abf3cf22341e5fc22c8eb146d638dc693c7bfc01c8afe0623aa848",
+          "doubt_signals": 138,
+          "mean_cost": 3.540351,
+          "mean_regret": 1.973684,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 17,
+          "state_digest": "fe3200256e73d28fadb139082636ed777c219d3e459abbc4e22897a01bd25dcd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9c64ec6215cd1ec8e50ad78cf988b726ca7999a55a31b712735d54a48b87f5ee",
+          "doubt_signals": 149,
+          "mean_cost": 3.673684,
+          "mean_regret": 2.107018,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 18,
+          "state_digest": "b1ef7ebfdc04eb5f04389dd8bcb1b6a88fd76048e0aa0ba8e1c30c67bf8b85af",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a2332bfa8dbdff2d109e240d80588101f998dc9de9b68f5a08290e4c334d1de6",
+          "doubt_signals": 143,
+          "mean_cost": 3.661404,
+          "mean_regret": 2.082456,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 19,
+          "state_digest": "4c46ff607c20bc9ccbe5380f0a425bf6dd450d86fc434c85af5ae26c8f27f828",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a16b3321a60031232e6fd9c296c719c24ff5d10ecc52e48907c8f1ada0c125b9",
+          "doubt_signals": 164,
+          "mean_cost": 3.585965,
+          "mean_regret": 2.019298,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 20,
+          "state_digest": "87517d4c6ca39b0f8ddcbc3cfa132fb15aad3dbcd225f4b3121c277e85011a10",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c0484e50a2fb383fdf51cb118d57a43f92804abfdfdd73f8bf67814b69657abc",
+          "doubt_signals": 162,
+          "mean_cost": 3.450877,
+          "mean_regret": 1.892982,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 21,
+          "state_digest": "3b626c8c8f216f7fff59d968291808d2b5981c94bf541943f1b460393016efbe",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "46689e2ce982ac21ac2829a44cebfd12b3519ebd894c8e086257f254df7e70e4",
+          "doubt_signals": 149,
+          "mean_cost": 3.422807,
+          "mean_regret": 1.922807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 22,
+          "state_digest": "81ca69bf40984144a6b4fef0d76a35f586e75a02feb74cfc029b9785d2b341cd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1f3714cc138793361ab9c76a3fbbf89deb45d4757e43171e699d32afc454444f",
+          "doubt_signals": 156,
+          "mean_cost": 3.459649,
+          "mean_regret": 1.954386,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 23,
+          "state_digest": "479f345fa051d9f85917e6e5e1e0037fb15e300a137fe5d101aacde8531b8ae0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ff9a66e271de298517e3b93c722afea85bafa2a2986229e6403ea22ae1c01475",
+          "doubt_signals": 146,
+          "mean_cost": 3.714035,
+          "mean_regret": 2.096491,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 24,
+          "state_digest": "3b6260f1068c830928db0ebbea2f51dba0a9e395f49bdc1b4a5da0406bee16e2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8246e27b97764ab5c0dfe339e7f90263b4b01afd76e7b343cff9cc56711d6ab2",
+          "doubt_signals": 147,
+          "mean_cost": 3.77193,
+          "mean_regret": 2.177193,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 25,
+          "state_digest": "2d9ab5eb5ba0b3e921eaeb8e71126bae5b36a55b417b6cbd1a9bd89b2cc4ebf7",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "db204c6f4308e9c6f1b3f4f4e2c3f432c0218d0fa778e490794bfc907da793c6",
+          "doubt_signals": 148,
+          "mean_cost": 3.645614,
+          "mean_regret": 2.068421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 26,
+          "state_digest": "57ed347c2ca7ef9b17c17545e1e0b651280a113cffec64ad8825ee67987a2b9a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b7ad414e91d04c5bc4e896427d4b57bd9ec5cdc1fedf623f7640f61d5c74eb7f",
+          "doubt_signals": 155,
+          "mean_cost": 3.875439,
+          "mean_regret": 2.263158,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 27,
+          "state_digest": "43879f8023528e0e92853c7ce0ef903b9fbf82ce1e5577548a9986d04973f309",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8e4f35afa444064f3a1c5c55d93fc0a633925d246f43b4de1072f8404e2a79f8",
+          "doubt_signals": 165,
+          "mean_cost": 3.536842,
+          "mean_regret": 2.022807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 28,
+          "state_digest": "34a8d10e36c8eb839bba30753780b0f841bbe70fbb2aa95fdf7588e00a0bea86",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "27c9dfb45641f97d7edf7f3e21bed5be4c577b1d6e3911f2f0e7c21d09279cfd",
+          "doubt_signals": 145,
+          "mean_cost": 3.447368,
+          "mean_regret": 1.908772,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 29,
+          "state_digest": "abf5a9f72922bf1859e57302fd0b98fa15d9f1e9a9f1d7ec334fa69badb7ed3b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "43fc6d99f08e1fc0e8e5fe3678378d2e4a062e8efd20cb8ff13fc122e2c961d0",
+          "doubt_signals": 146,
+          "mean_cost": 3.721053,
+          "mean_regret": 2.168421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 30,
+          "state_digest": "9c2b700a390a36262e9493df9b975a6b68b64da442ad26b3150d05933d0773a6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "176469b1ae23b3aeb5a5cfd0ca0927c44f83404ecc8da324130e6f54eb642f9e",
+          "doubt_signals": 139,
+          "mean_cost": 3.717544,
+          "mean_regret": 2.121053,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 31,
+          "state_digest": "fab1eed778b44deed6e640af94ac46e4ba4197db1aa98ae70ed1792b9ba1679c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "963813a7a4733a3445296a10c0470994afd63b843332e45238ba149740bbc261",
+          "doubt_signals": 152,
+          "mean_cost": 3.670175,
+          "mean_regret": 2.126316,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 32,
+          "state_digest": "233ef4e3ac17cb9cb65ba60e6be8780070fd955312014630d2ec7fafb7894b1d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8e6f9db3e33fa99d7dd3076adef4288a803b7ab30e5864ce642a2757c2230e7c",
+          "doubt_signals": 141,
+          "mean_cost": 3.719298,
+          "mean_regret": 2.147368,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 33,
+          "state_digest": "0e246726b0a54281f80599031aefe5b3dc41888734eb3943380751fbe9e251f6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0c575678e30b34c515ba0a22dc713e6af9328aacb65d431bf0d3da11e4e51f13",
+          "doubt_signals": 155,
+          "mean_cost": 3.833333,
+          "mean_regret": 2.214035,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 34,
+          "state_digest": "c0df31fe647f1b768c8c0feb9c3f305a0155b10c00b78617463bfc31e390867d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a1e17e251937f54c9c23bec5286ad4dd2cbc720222a3a5c673088034c68e8d10",
+          "doubt_signals": 153,
+          "mean_cost": 3.684211,
+          "mean_regret": 2.168421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 35,
+          "state_digest": "cb48b158fef3868b6ebad853213cd8a1970bd3f87b6b74a9e8a9cc36f51ce8a0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0185af08a908fdbb7a078e02affbb578c721a1ed6033b03a8d9b897daf02b21c",
+          "doubt_signals": 151,
+          "mean_cost": 3.64386,
+          "mean_regret": 2.115789,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 36,
+          "state_digest": "4282f25f28fde915714aea0b2008836feb6a55ef70e29e65ff11ab2244cd3d83",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8508cf5ce1312ea2d1992206bbc0a91ecceb40753d6ac67585c81c40f5969537",
+          "doubt_signals": 153,
+          "mean_cost": 3.542105,
+          "mean_regret": 1.964912,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 37,
+          "state_digest": "ebffac3ec45263267145cf43a7d5f3b43e8d7b143a9edea689a4c7aa18f472eb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cffb58ac863a53bda47b895bc82855874dd0f866543cbb1857f6f8623d8a19f4",
+          "doubt_signals": 155,
+          "mean_cost": 3.62807,
+          "mean_regret": 2.107018,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 38,
+          "state_digest": "6051f999d96b51e5796bfec5594a8dfb55833a5279d9e0b99fd75aaf38165d5d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "25ba0b6aca696f9b6927df9e6ebd0afe636f73def3b31507fd3fc289e6d270c7",
+          "doubt_signals": 154,
+          "mean_cost": 3.715789,
+          "mean_regret": 2.170175,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 39,
+          "state_digest": "c5456238ae4a56970ceefabb63382b6c14d875d67cf888e2b06e9024b8bfc65b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fa1ee544140895442b059e2b929997897a5b6ca296d930fdbd00582d92c79451",
+          "doubt_signals": 165,
+          "mean_cost": 3.538596,
+          "mean_regret": 2.0,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 40,
+          "state_digest": "f7f4baa58cf0edb7bcbfe6dd030d587bc511a3e642ba420d4b5005eed56f7ce2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ba85e9314fd1a282e88f17cb46a2f661d991bc362aead9c53978c7ed76455ef0",
+          "doubt_signals": 155,
+          "mean_cost": 3.647368,
+          "mean_regret": 2.122807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 41,
+          "state_digest": "40e645a0f031b39f9cf5b3d5995cebceca5532d69f6a96ad9fc65e187f5eab0c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "afb4da65f08899b96ae0789473cedb93d25f138f3629fc2f33065777e5ffb02b",
+          "doubt_signals": 155,
+          "mean_cost": 3.573684,
+          "mean_regret": 2.040351,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 42,
+          "state_digest": "e2f982cbe605db456665e3f6aa973ad13a8e164e1703d8d64c2449af293564bb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8c6c4ed9e01c163fcfeddac79fb2219dad8fbc1a5877fa901dd6e7373345a4f3",
+          "doubt_signals": 147,
+          "mean_cost": 3.575439,
+          "mean_regret": 2.035088,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 43,
+          "state_digest": "18c8172a07cca70b97d59841de07e85962da20df565fba90b4b8b6e6be9c8eb8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "987702b9a8fa120b6b0873ba60ab1e876b8719ef249044f7b2334c4ac9a890f1",
+          "doubt_signals": 170,
+          "mean_cost": 3.840351,
+          "mean_regret": 2.22807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 44,
+          "state_digest": "77da8021fc7bdc3e725f89a7e5acefa046f634f140e1ddae9c03ae58470aad36",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "39eeb96b89f6df65fa85a5a4c1a768573b32d12df0d0bcbcd28be5ce3d7e6d4f",
+          "doubt_signals": 148,
+          "mean_cost": 3.510526,
+          "mean_regret": 2.007018,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 45,
+          "state_digest": "0d20bfbf463345d2f76f253cb0fc7eb8eb453429eb2a89f6803b7d3b86d0c97b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "03931bdd5bdc9f81181dd71c7458117d0ec1a30f150221b51b8b0e5d0990702c",
+          "doubt_signals": 140,
+          "mean_cost": 3.536842,
+          "mean_regret": 2.008772,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 46,
+          "state_digest": "43c5df833352b0da93f062aa2591432255172440fcc3c339f94d108993f8fcef",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "728ac830a76376c8e5a2fe64540559daa208f2cc77fe00bdf62ebec19f43c7e8",
+          "doubt_signals": 155,
+          "mean_cost": 3.668421,
+          "mean_regret": 2.119298,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 47,
+          "state_digest": "71bab62ef04e62d59650cc4c5bfc1757f296d947f53dd43a935cefdb8f88c2cb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9082d95915deb1051ef112339cbe4fe3587bedccdd433f51efd5c5b0f59c8073",
+          "doubt_signals": 146,
+          "mean_cost": 3.642105,
+          "mean_regret": 2.122807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 48,
+          "state_digest": "f6fdc0623fdbff4f3e876560bbe950dadb94b806c48468bc91c7c3630bf90d3f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6ca34db1077a3ca28f2b4293ac22e8d6c84f38ea08e39ea232027185ad923607",
+          "doubt_signals": 141,
+          "mean_cost": 3.366667,
+          "mean_regret": 1.875439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 49,
+          "state_digest": "7fd70d49bd6737cc7248ed66f756a5b8ded650a978f9b947d82c7dfb0489e8ee",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c6a95a8c8ff64e4ca9c64caaa11afc9cd43a39e56a549b8dcb7e1b7da21d201f",
+          "doubt_signals": 150,
+          "mean_cost": 3.705263,
+          "mean_regret": 2.131579,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 50,
+          "state_digest": "b95c9a0cc963d869746afc6597192e700f684f4f2b12675e994754a816a3d480",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e232ba0a664a5330a657feedb51f54b389cd5851ff01a562e692503fd0b7c5a1",
+          "doubt_signals": 159,
+          "mean_cost": 3.789474,
+          "mean_regret": 2.210526,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 51,
+          "state_digest": "8754ae6addcf3d10e72e26ed3d9564f3eae0b52efc52d2cd7146bb20457cd0c9",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "232a36ec031231dfc09edcce8c7bd8c73a8693491bcbb895133c17fb9db83d08",
+          "doubt_signals": 154,
+          "mean_cost": 3.545614,
+          "mean_regret": 1.975439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 52,
+          "state_digest": "08ffc1b1f84b43909febafe587d55bb56cd16deac74d15752b7d40d20475ff33",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2df86ef542d0a9cbfbe293d1ab771d3c602b6154dc2f954f0f1dc24fcc14962d",
+          "doubt_signals": 147,
+          "mean_cost": 3.678947,
+          "mean_regret": 2.082456,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 53,
+          "state_digest": "03bfde8950c7409c7c76e2a9d148c015384d400cc57e143afde740100eee3ef6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2b010a7f7a709b14fa9eb95b18cd7030a99a56927e2fda737c7a99555959c48d",
+          "doubt_signals": 143,
+          "mean_cost": 3.717544,
+          "mean_regret": 2.164912,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 54,
+          "state_digest": "8b8451c64fc165ff1d4084ba80206f30d09de22de45e64b46c8db7ea8d854b15",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "08d9bf1632568164bc442c7d9a4704fb88514228aadefd698a663256cb8cb325",
+          "doubt_signals": 150,
+          "mean_cost": 3.384211,
+          "mean_regret": 1.850877,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 55,
+          "state_digest": "e8dd21c29cb0d4539404af2ebf60453c9c350170418ec0ee8ad65ca0ed6b53c4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "550251d1a23f32b3653e0a5d059dbf30499525b8946a7e06713e14ac14d50253",
+          "doubt_signals": 157,
+          "mean_cost": 3.684211,
+          "mean_regret": 2.1,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 56,
+          "state_digest": "23b10f8d6858c6b5684ded86b0c7a4fe7f60d32f89390af9d4581b28966b3837",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2360860aa76b8d5e1ec5ecfbcea8d7b1e8e52c473c319021ac1614bab76f1431",
+          "doubt_signals": 142,
+          "mean_cost": 3.482456,
+          "mean_regret": 1.914035,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 57,
+          "state_digest": "e6e3ae7d33f2c1324449a61d5e3ca75466499b12c43c1a8e7628b9bb0c565330",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3fd4843c0ac12df458fe1f30c2f99a332d8c2a31a7a5744af0a9c7bd2d52d28b",
+          "doubt_signals": 152,
+          "mean_cost": 3.622807,
+          "mean_regret": 2.073684,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 58,
+          "state_digest": "22a42a767ce38256f8a782763f28c971609f5feeffb2fb35c6b58b4f03911768",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b35d3f078df07adb9cd878aa1f20b99c096ff14071fa6e2066c48816af987ba6",
+          "doubt_signals": 147,
+          "mean_cost": 3.319298,
+          "mean_regret": 1.822807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 59,
+          "state_digest": "cb7d1706983c655a12b7b574dae9a88bb424305174e960945da2c2f2e6fde0a8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "346d5c9491c1d344eb6e66ba926582e1482095edf52f0a5ef0156b1bbcda02f4",
+          "doubt_signals": 151,
+          "mean_cost": 3.559649,
+          "mean_regret": 2.035088,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 60,
+          "state_digest": "4ed34cc2f2b8c09b2a33cf3c8db5ab498d025b26b157e6811af1a238b40e587c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "decd098e57d481f19f9875dadb03cbabca7d377ad21e42130935739163dda0b2",
+          "doubt_signals": 154,
+          "mean_cost": 3.517544,
+          "mean_regret": 2.036842,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 61,
+          "state_digest": "e89529ea7708e5d711af38f1de2199c0eca2ca452ffa9761a1eb304cf4e85aa9",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "df140022750672b1d99d8ba9cdd792b93058e54df7f2eca3180145cdaff89195",
+          "doubt_signals": 154,
+          "mean_cost": 3.791228,
+          "mean_regret": 2.22807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 62,
+          "state_digest": "1109eaed101437196e47659e7964187bcd6ead4f2e6bc1ebcdcc321b4283bfe1",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a8623d2bf69066ef18a47635d020ce49f81335361aa2fad9fd69163372d23bfb",
+          "doubt_signals": 137,
+          "mean_cost": 3.622807,
+          "mean_regret": 2.059649,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 63,
+          "state_digest": "70f20f79b26eb7a90d69f39d7716dbac604c855fdc321c0ec36e6f42ccfd27f9",
+          "updates": 600
+        }
+      ]
+    },
+    "common_history": {
+      "B_adaptive": [
+        {
+          "action_outcome_digest": "f5836e7d0d4108d11809995e5fbb3ac8875c76f519884df8be4d550c42b0158b",
+          "doubt_signals": 165,
+          "mean_cost": 3.001754,
+          "mean_regret": 1.361404,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 0,
+          "state_digest": "f84793bfeb1c77d773fef3627de01767acfa5e4ddc70f8b211ace26e3d1810b3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "828b06f00be2e84ac7b0bbcf0b4b0af38307e970a45897e37aabf60641ab1db2",
+          "doubt_signals": 151,
+          "mean_cost": 2.975439,
+          "mean_regret": 1.412281,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 1,
+          "state_digest": "05b35f638e969c39c5b4f56c856cf776bf0f9346101af58bd6203e40bf482611",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cbc5af0e1d82a1da8785624eecc8f1c3415829075205b73c5c8ef23995d06beb",
+          "doubt_signals": 170,
+          "mean_cost": 2.831579,
+          "mean_regret": 1.301754,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 2,
+          "state_digest": "96b3f4250b61a6865d4df8fdb0c1562577113c9c3e3db118dd5d03f1eeb39d31",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d89ff746001425476b16fd136b520e93464f152933def139497e533b50e7cb4c",
+          "doubt_signals": 162,
+          "mean_cost": 2.894737,
+          "mean_regret": 1.326316,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 3,
+          "state_digest": "a8bac66fb2f87069c30b62203ad9c22fa5968f12979caf3abc22c4acbcacce8e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "5f3519dd1215cf7453c832b40d1cff5e964833f2ad997e72d1d458fd60ca8539",
+          "doubt_signals": 159,
+          "mean_cost": 2.915789,
+          "mean_regret": 1.382456,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 4,
+          "state_digest": "13af32592d440088132a25a131d0abc819174f98bfcc61a7003b3cb353a042eb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d3c6d1fbe1f387c090c2e0e79225cfa5d0081f11506f9e932365f684522ebc7a",
+          "doubt_signals": 158,
+          "mean_cost": 2.9,
+          "mean_regret": 1.331579,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 5,
+          "state_digest": "2271dab046493018a72db3658d3fc8cd72399837e1b30dba2c7747dbd4551922",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "066e5ff565d76dcc68e4a2fe8248080d415008129f48d6ec02c7c29ffaa2bf3b",
+          "doubt_signals": 151,
+          "mean_cost": 2.878947,
+          "mean_regret": 1.338596,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 6,
+          "state_digest": "ae556e2e55233b1d803653c9007bcd6c9c1dce75f3a5f41b4ffa95557d9bee58",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b27480368e264b37f19e20171f2f280a8fa640a29d7d9da5eb8ae6f812657c68",
+          "doubt_signals": 153,
+          "mean_cost": 2.912281,
+          "mean_regret": 1.366667,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 7,
+          "state_digest": "fbf54dbb60986d28a6f59facc171e050deda08b4f1212ba5390b062f30198dda",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "66be1dad6b74a9aca83752593652259180c48e10f4a1a674bd302db4e1ce698f",
+          "doubt_signals": 162,
+          "mean_cost": 3.035088,
+          "mean_regret": 1.392982,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 8,
+          "state_digest": "ce9f308e1ad927acbc3e5fa4bb6dfa62036dcde4d043a5b2417ecd32ac44e670",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "bd99217dfe706a2477a1293116bf814ceb7656eab2e8c60786d3de51ad3ceace",
+          "doubt_signals": 168,
+          "mean_cost": 2.864912,
+          "mean_regret": 1.347368,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 9,
+          "state_digest": "171c0da4f5a0200cde814a59d7037d7326d59225ac057961c8af0a026fb09ce0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "65422a0723b1999dc74608ac3197635e289311cead15ba1ff95b41698bd98f7a",
+          "doubt_signals": 159,
+          "mean_cost": 3.091228,
+          "mean_regret": 1.5,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 10,
+          "state_digest": "8df7c050bf6b7fd7b9985d2bfcb734995d6a7b22095025aa80eef865b4e14ae1",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c76dfbd90774f617e79085c3bfab9622f4a51b1c6e0e70985f0a0b84fd06488e",
+          "doubt_signals": 166,
+          "mean_cost": 2.836842,
+          "mean_regret": 1.314035,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 11,
+          "state_digest": "2fbb1424bbef948ceead85e17eeb685d73930412de59cb377b1b1e569d567511",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6ab4f28ff3a18c859a89afedcc67105d929cecc605c46f47edd8f73289e80548",
+          "doubt_signals": 161,
+          "mean_cost": 2.840351,
+          "mean_regret": 1.252632,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 12,
+          "state_digest": "4a66649208dfcdb2b407ea6669d46270423680f449789e652be1b81ae93e51fa",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a9c45e77dd3a5a3a262e1529002289b9acb724a02781f5eea79e1cd7dcb802b1",
+          "doubt_signals": 156,
+          "mean_cost": 2.803509,
+          "mean_regret": 1.298246,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 13,
+          "state_digest": "d59e279bf634e3d310c7ad1036c9b9446184f6b96fc9859b5be29518e80cf494",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9684d01e0f39380087935cb0512b84d34394d6f1a10f0202a2faca4961cf93ba",
+          "doubt_signals": 148,
+          "mean_cost": 2.878947,
+          "mean_regret": 1.391228,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 14,
+          "state_digest": "f06a918b0db9ee4670fe3b157fa33270803f0d07482c92d1b99d980a15074853",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8aeb7b42bc005d5c89e1574a1baa07a0cfc02d06f8d4bbb798f643245a9517f0",
+          "doubt_signals": 149,
+          "mean_cost": 2.950877,
+          "mean_regret": 1.398246,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 15,
+          "state_digest": "8af94f1743b373a9c1585f321629c49ec8adb432644a5e399f5802dca6a02d6c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fdec38548abf8926f3b0ee4717ffbe6a093c3edf731c21ce3ce8bf78161ec2a2",
+          "doubt_signals": 164,
+          "mean_cost": 3.087719,
+          "mean_regret": 1.505263,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 16,
+          "state_digest": "e5e3808bba366522ec925ecbf0d0fada27761578e854cbdcd89e7969213b9677",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fb71f708f0cef9c730998d449287370315eff11d46e4ebae218f36f192bfcf7f",
+          "doubt_signals": 148,
+          "mean_cost": 2.738596,
+          "mean_regret": 1.17193,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 17,
+          "state_digest": "afacb78ecaa7675aa16aeac0763e14a6b2ba71c33f1abf56e299ce5c4f12ba77",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "17b7c98129aad966ddac6f618a78e08dfe0131c8ab6c11ab4d3d785b8fc02dbb",
+          "doubt_signals": 152,
+          "mean_cost": 2.994737,
+          "mean_regret": 1.42807,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 18,
+          "state_digest": "eedf7188c785b4bb01f914f3623fd5891e6a34c7877a458fbafc11dec552d315",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3124f9d0ea792e6d806543844d91286279569560f91d5413b9511399335b6ab1",
+          "doubt_signals": 154,
+          "mean_cost": 2.942105,
+          "mean_regret": 1.363158,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 19,
+          "state_digest": "eca4da3ddce3231b420463d2b7e7fce124157ad160a7f5866ad37e6cd2551ad9",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d9c8a4dd19e18f654f2517ac10045c706640f0869c3bfb087c19c324b05145ef",
+          "doubt_signals": 163,
+          "mean_cost": 2.891228,
+          "mean_regret": 1.324561,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 20,
+          "state_digest": "f23ca5440f4ef0a520cc4f1e13a9e0dda3662b147cd308fa1b9646bb1aa3e8fb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0d2334c027ca26d7f622064955c34df133d7eb7d9864b823152d60a92e2974f7",
+          "doubt_signals": 160,
+          "mean_cost": 2.866667,
+          "mean_regret": 1.308772,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 21,
+          "state_digest": "11f788459170e15b960780b75d95f56723df2c13f3d7277746da7aad3f2f6cd4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3bf80824cc5d77b33b4f70d25144b9c712445ad049558374703c3d2ce340b5df",
+          "doubt_signals": 154,
+          "mean_cost": 2.807018,
+          "mean_regret": 1.307018,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 22,
+          "state_digest": "a713335648d350924355e44c6c1576b852a6bc78fea71db4e6c43906eea75a84",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2dc4610abbc6524d9d0171a78604653d54e9f491e382a4b9fa137191d1bed12a",
+          "doubt_signals": 163,
+          "mean_cost": 2.738596,
+          "mean_regret": 1.233333,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 23,
+          "state_digest": "843387d4f07658d4c1712c6e7767fa17a409b6e83a521b8fa8c861bb5aded277",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6dfddb5fc27e4c080dfd85ebaaa145aeb72eb7f772c20e142bdadeffcf7ac2e5",
+          "doubt_signals": 154,
+          "mean_cost": 2.966667,
+          "mean_regret": 1.349123,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 24,
+          "state_digest": "645986cbf87ad65843fd68544a4c199249532f19135be66b2321628b135c64c7",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "480b942e8fd2f0f043040a6229a42351965281a95cbe6683b2d5c8e0d64cccf1",
+          "doubt_signals": 157,
+          "mean_cost": 2.984211,
+          "mean_regret": 1.389474,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 25,
+          "state_digest": "c0bb531e41722408c55f50ab2cce1142ddd2e7487846ab33ae4e30a2a58ca47d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "caf6f4565f7a9420557fa107216ada8fe599439a61d7efb7c8a1cf47e20d155f",
+          "doubt_signals": 166,
+          "mean_cost": 2.935088,
+          "mean_regret": 1.357895,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 26,
+          "state_digest": "4b398abcf91e630b49d98f95f10c0ca661c296a2da1495f3d2b1ab7e86019a01",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ddbaf11850c078500b79faed5ee17a34199f3098fba8582a7914d7bcc88aaa99",
+          "doubt_signals": 173,
+          "mean_cost": 2.966667,
+          "mean_regret": 1.354386,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 27,
+          "state_digest": "7db56cc9720a3b6335afb4bfd89a9eb3f2f0567a5a49973952c9d5c32ef98fa2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "37aecfb525a6c1d5312a2f64b8404e0ef35a023b0c98d3d68cb932d13865eea8",
+          "doubt_signals": 170,
+          "mean_cost": 2.864912,
+          "mean_regret": 1.350877,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 28,
+          "state_digest": "0e41293e09a09e588d1035b5554ecc27995fab668a8ca53a9a62dda642968f03",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2340bd952177c09d4991e491221f9eca282a13342a1b08e8924ec0c3844321e2",
+          "doubt_signals": 158,
+          "mean_cost": 2.850877,
+          "mean_regret": 1.312281,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 29,
+          "state_digest": "b9f2315749a8535459240bd4b4590dea61d31dda05073d7e2ba3fd0f30b995e5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "858ca4fdab5fe671ac3605b6b52d4a54474777231b7f4a430416bf208f05b697",
+          "doubt_signals": 147,
+          "mean_cost": 2.933333,
+          "mean_regret": 1.380702,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 30,
+          "state_digest": "bedbba8b42e10b5091b59db326b4577c8379ba0935f4e51d7c19e2e539851b38",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "32e87f2d53631214e0697adf1fcc6ef34e9d5df9883f4b6319adda324b61d585",
+          "doubt_signals": 147,
+          "mean_cost": 2.992982,
+          "mean_regret": 1.396491,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 31,
+          "state_digest": "99353b849462897c828b57a2594810519cc9df382418761a2727d118a690b5ae",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "20179e092bbcefed04907d39784877a56f8353cdcc7e15d6ce68115bbc129c13",
+          "doubt_signals": 151,
+          "mean_cost": 2.915789,
+          "mean_regret": 1.37193,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 32,
+          "state_digest": "06823b9139c8f77e80515fcd6b5343d6cb9fb5f0221b893dab19cd018e62c95e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b073b83d8fe267572433a79454b680072448e4ad329ab96a00308be5153d5fae",
+          "doubt_signals": 141,
+          "mean_cost": 2.947368,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 33,
+          "state_digest": "57da566fd01535a0d1550e86ed7c23ead58bad496e15674027d598c581ff79d0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cef1b4c7711bed6f165b77697e48f6f9b1c89c443b97b422f9a9490b1ea7543c",
+          "doubt_signals": 154,
+          "mean_cost": 2.998246,
+          "mean_regret": 1.378947,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 34,
+          "state_digest": "69167382b964eec282ddc786b6b366d3f761adb712cf848b95e4112d7317cdc5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8385947aea4fe0fb90c1baefbd3c4681bbc9eae9cfa6343f671a3665628a8afc",
+          "doubt_signals": 158,
+          "mean_cost": 2.919298,
+          "mean_regret": 1.403509,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 35,
+          "state_digest": "3759e48575b33090aaa8c7a6e3529ea25bca7ee95cebc03e881bdf07ff5bb903",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8c7139f7537ac64137cbc118b9e3aaa799d0096333fc541378a8a1046667af32",
+          "doubt_signals": 156,
+          "mean_cost": 2.924561,
+          "mean_regret": 1.396491,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 36,
+          "state_digest": "ae2ebef138c6a60237472115c92effd9ad6424a4cd579aa4a9fba2a2c62196bc",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "54b56950fa8c5c2b5f1093fba3c3cf33a6071c8160f87cef811e35a38495f4c4",
+          "doubt_signals": 168,
+          "mean_cost": 2.838596,
+          "mean_regret": 1.261404,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 37,
+          "state_digest": "965524706e702b62bdbb249a6fa56da2d67d5206c70d9ed3b26718f46e0c2a36",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9759b8b150d0200f31654d18b86429d5df8cce685c1a1fbc320af1154cfb59f7",
+          "doubt_signals": 160,
+          "mean_cost": 2.896491,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 38,
+          "state_digest": "73370d3711a1dd42be5a7d5c010c361399ef3a24366eb748f6f803cd6aec1566",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c7cf63e6e11ab6b05c67383026074c7b488667561308c62661ca9977d665122d",
+          "doubt_signals": 170,
+          "mean_cost": 2.957895,
+          "mean_regret": 1.412281,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 39,
+          "state_digest": "a725d498fdf7548b8a1a1e8bd1e9b065c001953e53ff8a14f35221d7ec6a60ee",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9b5092fb8df5578e07366c335de5413ba4fdc7a38ff4efb29b6c62f59f655459",
+          "doubt_signals": 169,
+          "mean_cost": 2.873684,
+          "mean_regret": 1.335088,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 40,
+          "state_digest": "5f8fe13e9a4156bbb72f5e1ad506d01a46b01ef59397863ca86f88eacd5f4f1a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ca663d841b1d61f6da6077cf724a1daced2d65e5d02939aece56d1a7762ab56c",
+          "doubt_signals": 141,
+          "mean_cost": 2.910526,
+          "mean_regret": 1.385965,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 41,
+          "state_digest": "ca8e36b029c1b837006cb1cb9db26a65e5bcf700a5f3cc457c3d40fa26b2c409",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "be3f14544685de8bfcacfc63ecbcfeb944ff1c50cd8afadb8959bede074e1c47",
+          "doubt_signals": 167,
+          "mean_cost": 2.908772,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 42,
+          "state_digest": "2562cf1057cce51010d9cd8884a94a202420e273d27a2ccfef591dd552a3d1a3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "928f045583f861286ca8e5371888b13656b653a5964db70481293a02df938535",
+          "doubt_signals": 154,
+          "mean_cost": 2.908772,
+          "mean_regret": 1.368421,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 43,
+          "state_digest": "49fbfe5a1d05191f2873d7f88a58f6338059fdaff496904372214a585726f749",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1d361708dce9bef0c42b62e00c4880bc83251e612fb7eb676e5f473d67e30147",
+          "doubt_signals": 181,
+          "mean_cost": 3.059649,
+          "mean_regret": 1.447368,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 44,
+          "state_digest": "7f910922ee87250bfad885be8cf00092be03def4998f52b8c957e06ef029a40c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8a9d3f2faa528436d56aefa72fd235381b0331d2639c7b7f182498303705fc0c",
+          "doubt_signals": 157,
+          "mean_cost": 2.889474,
+          "mean_regret": 1.385965,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 45,
+          "state_digest": "ea925ee0605db249c318ece04cea2f266f726362eced219d52ddda5084b84620",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d26565f44adfc472cecf26c8cd0f812c6f7a746137d459264a951944028a58f7",
+          "doubt_signals": 153,
+          "mean_cost": 2.882456,
+          "mean_regret": 1.354386,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 46,
+          "state_digest": "bcad01b7b3975e4546e8de15c2c1ec77fe5ec9c12df9c99e5909afaa18094394",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "daa92d09e72c64a5c99ffd0eb7ad4f8821e9a77895e5771b0046527d3aafc007",
+          "doubt_signals": 162,
+          "mean_cost": 2.977193,
+          "mean_regret": 1.42807,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 47,
+          "state_digest": "92ab72668ee2302b6096ac1f24eb1a1e2801465b99a6c75b33146d8dad449d2b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f6f8973542ff05aaeef218325f25682baad48249ddb7c1a09988bcb34432beef",
+          "doubt_signals": 165,
+          "mean_cost": 2.85614,
+          "mean_regret": 1.336842,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 48,
+          "state_digest": "40a5549ee6f372d7e5a90dc782b903539ad0b38d267938ebede9f538ba4612fd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9439d5a287beb8870cc6786477e0e693dfe01f4b7fd828f3c02f6ec722db6bcf",
+          "doubt_signals": 161,
+          "mean_cost": 2.822807,
+          "mean_regret": 1.331579,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 49,
+          "state_digest": "193367fb2741c22197c596f0f0e60d1855ebd9dd694f7a902116387dc45fd588",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ccfb47f381319a9cc4d143244aca355ea91f61e5c568145f0c9212232343e86d",
+          "doubt_signals": 155,
+          "mean_cost": 2.942105,
+          "mean_regret": 1.368421,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 50,
+          "state_digest": "5c2a96205d13d9004b89b6c5f1f4c652658265a80d5b436dd5c9fa9a6f48f22a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "54fb6f57d665031b95da5d13121f35b2949d188bfc1e96a034dd65462c907763",
+          "doubt_signals": 166,
+          "mean_cost": 3.050877,
+          "mean_regret": 1.47193,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 51,
+          "state_digest": "8b3d7de94263705cb0e4d8fd68b273df5640c19c103a598fc31cbafc91b318f1",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "98c9aeef67341e71c0469f632ab59b85baf2fb7af53ee5f4cf3439ff17637645",
+          "doubt_signals": 172,
+          "mean_cost": 2.849123,
+          "mean_regret": 1.278947,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 52,
+          "state_digest": "5468fc42f064d81f0de9af7b7041a1e2c1efe5b6405da9975be2348b4387e74e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "89071b087d794988c0c267233a9424e3572829874795913c8c2887363c61c716",
+          "doubt_signals": 160,
+          "mean_cost": 3.049123,
+          "mean_regret": 1.452632,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 53,
+          "state_digest": "c3d9cbebff6b04a49b156b2d3b67aacf5e030a9b8196c021aa78e80dc2e2c37c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "51c3d97205b2d5d998cbd17f5f62bca8449ccb5839be80e3e43d820c9b9dffc4",
+          "doubt_signals": 149,
+          "mean_cost": 2.901754,
+          "mean_regret": 1.349123,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 54,
+          "state_digest": "e8aa20bc9419ce288fadbcb1e6d26c60189e110f21950840d38d64b1cfa70d40",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b59a50a81dd33eb3f9600c4810ce888f59fad3b8921c55876c7bac0f963fb63b",
+          "doubt_signals": 167,
+          "mean_cost": 2.808772,
+          "mean_regret": 1.275439,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 55,
+          "state_digest": "2711d5c2891fb8df786a8ee9e4d1357dd77d9ebc6be4af109d8c6e3a4a683dc5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c37ba84dfc9a8700c4e71f76836c9205300f05034981108dd0d77c888efce658",
+          "doubt_signals": 164,
+          "mean_cost": 2.850877,
+          "mean_regret": 1.266667,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 56,
+          "state_digest": "04ae491a3d24609f9717b729376fb1f6d0c94686bd603ce512282575646a0fde",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "43ee46d8b886e583b49cecb4797ad46de5bc20f1b282d3dd66aec1e3998d5123",
+          "doubt_signals": 166,
+          "mean_cost": 2.836842,
+          "mean_regret": 1.268421,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 57,
+          "state_digest": "c53f1c284de21375d4363447485bb193cb6a1781ac86b900c157476afa49b83d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cb523af6dc082726fd5ff5b19d59c81eac01f979c88ee39ec02dfa6cbf9727fb",
+          "doubt_signals": 151,
+          "mean_cost": 2.794737,
+          "mean_regret": 1.245614,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 58,
+          "state_digest": "ffa2c965d5379ce4057fc67767afe4b2d12a86ccd8fd70a4728d402deda982d3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "66a5a25bc3957e5e961d41dba5bbd087adee6351a04981f802522cadce1f56ff",
+          "doubt_signals": 159,
+          "mean_cost": 2.8,
+          "mean_regret": 1.303509,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 59,
+          "state_digest": "7bc5d2d5003176a86172bff28b98748f0bcc088922b04ef692d881624b08f766",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ff24944ee76e179d0be2239535787329ef3a2fa5c90544206dccdba4e1a4b7a8",
+          "doubt_signals": 161,
+          "mean_cost": 2.9,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 60,
+          "state_digest": "1f3ecc82090169f615f1fa525aff7b9d75ae3c7187eb22e462d2eeba5ff9a721",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0526446cd63f6849bfa03d207836af65365d5ad03c1182369a7015c330b89e0f",
+          "doubt_signals": 170,
+          "mean_cost": 2.835088,
+          "mean_regret": 1.354386,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 61,
+          "state_digest": "e7636765b634e1eb53e46ebfe9c5e31ed3ab3852a24ed4e427c637fbd16cc357",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e0c920525d757427fd5ac0ad74a7dbad2f7d3fd3d40582e5f0ca61f5a20e13ec",
+          "doubt_signals": 150,
+          "mean_cost": 2.94386,
+          "mean_regret": 1.380702,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 62,
+          "state_digest": "aa4610d243c81bf22b166d2ac93edf6c7d1a5f93b03528c86633ac47189b1671",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3181fb9823ecb605db2b5782b440443bcc8d1b775aeb64b8d1d279eeaaff4c1f",
+          "doubt_signals": 159,
+          "mean_cost": 2.777193,
+          "mean_regret": 1.214035,
+          "policy_changes": 0,
+          "reads": 1800,
+          "reviews": 0,
+          "seed": 63,
+          "state_digest": "fa2d1efddff0353bb598551be5168a15eb3518a20f4f0a85651a147fd2e66247",
+          "updates": 600
+        }
+      ],
+      "B_event": [
+        {
+          "action_outcome_digest": "f5836e7d0d4108d11809995e5fbb3ac8875c76f519884df8be4d550c42b0158b",
+          "doubt_signals": 165,
+          "mean_cost": 3.001754,
+          "mean_regret": 1.361404,
+          "policy_changes": 11,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 0,
+          "state_digest": "3c963805fd9a95a4f55e2bc4993f8f1572cac61ba889f4689f739d3ad37a1841",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "828b06f00be2e84ac7b0bbcf0b4b0af38307e970a45897e37aabf60641ab1db2",
+          "doubt_signals": 151,
+          "mean_cost": 2.975439,
+          "mean_regret": 1.412281,
+          "policy_changes": 12,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 1,
+          "state_digest": "bb32dbcd8bf54427c23e200697db9644f106ecdd8b5b7bbe360600cede0118b0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cbc5af0e1d82a1da8785624eecc8f1c3415829075205b73c5c8ef23995d06beb",
+          "doubt_signals": 170,
+          "mean_cost": 2.831579,
+          "mean_regret": 1.301754,
+          "policy_changes": 11,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 2,
+          "state_digest": "11926c8f8f2d490649bf2f10b314dd7c8bff6d15a2c30982b141927990387df9",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d89ff746001425476b16fd136b520e93464f152933def139497e533b50e7cb4c",
+          "doubt_signals": 162,
+          "mean_cost": 2.894737,
+          "mean_regret": 1.326316,
+          "policy_changes": 19,
+          "reads": 486,
+          "reviews": 162,
+          "seed": 3,
+          "state_digest": "0f43416644b1241e4e866173e85246659b4b1eb7df1d9f6cd718d1fd521bac7c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "5f3519dd1215cf7453c832b40d1cff5e964833f2ad997e72d1d458fd60ca8539",
+          "doubt_signals": 159,
+          "mean_cost": 2.915789,
+          "mean_regret": 1.382456,
+          "policy_changes": 11,
+          "reads": 477,
+          "reviews": 159,
+          "seed": 4,
+          "state_digest": "1e6e6e64539a7c79a77ffc9db1ce08cf9c95c4cdcda86eb52774d2e9d810f423",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d3c6d1fbe1f387c090c2e0e79225cfa5d0081f11506f9e932365f684522ebc7a",
+          "doubt_signals": 158,
+          "mean_cost": 2.9,
+          "mean_regret": 1.331579,
+          "policy_changes": 9,
+          "reads": 474,
+          "reviews": 158,
+          "seed": 5,
+          "state_digest": "881d3543bb3ad4a5cb33547597d608486e09569135b346ba737acbd83ed8e062",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "066e5ff565d76dcc68e4a2fe8248080d415008129f48d6ec02c7c29ffaa2bf3b",
+          "doubt_signals": 151,
+          "mean_cost": 2.878947,
+          "mean_regret": 1.338596,
+          "policy_changes": 23,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 6,
+          "state_digest": "22fa9f781b54d91a5c86960d80a39688f83357cb43b5892c3e302ecbad5d55ef",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b27480368e264b37f19e20171f2f280a8fa640a29d7d9da5eb8ae6f812657c68",
+          "doubt_signals": 153,
+          "mean_cost": 2.912281,
+          "mean_regret": 1.366667,
+          "policy_changes": 24,
+          "reads": 459,
+          "reviews": 153,
+          "seed": 7,
+          "state_digest": "97c529a6416e1f2e9acf3ca5a0889a2010ba2fa7239a0f891ed853da7dd81b4f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "66be1dad6b74a9aca83752593652259180c48e10f4a1a674bd302db4e1ce698f",
+          "doubt_signals": 162,
+          "mean_cost": 3.035088,
+          "mean_regret": 1.392982,
+          "policy_changes": 23,
+          "reads": 486,
+          "reviews": 162,
+          "seed": 8,
+          "state_digest": "c00a0705651b194ac3a9fba48543826f35a372ea1fd7b52ff65cfa5db721b742",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "bd99217dfe706a2477a1293116bf814ceb7656eab2e8c60786d3de51ad3ceace",
+          "doubt_signals": 168,
+          "mean_cost": 2.864912,
+          "mean_regret": 1.347368,
+          "policy_changes": 22,
+          "reads": 504,
+          "reviews": 168,
+          "seed": 9,
+          "state_digest": "76886b5a86983d39f5418578056d451dec5cdcf19806fb12e3d343593fdfc2ed",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "65422a0723b1999dc74608ac3197635e289311cead15ba1ff95b41698bd98f7a",
+          "doubt_signals": 159,
+          "mean_cost": 3.091228,
+          "mean_regret": 1.5,
+          "policy_changes": 13,
+          "reads": 477,
+          "reviews": 159,
+          "seed": 10,
+          "state_digest": "19468334a5761ec4c1f43a387e3d9cdf180faee60b658bc7d2636f3aa27e1306",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c76dfbd90774f617e79085c3bfab9622f4a51b1c6e0e70985f0a0b84fd06488e",
+          "doubt_signals": 166,
+          "mean_cost": 2.836842,
+          "mean_regret": 1.314035,
+          "policy_changes": 21,
+          "reads": 498,
+          "reviews": 166,
+          "seed": 11,
+          "state_digest": "b499493efb3d5b6e6c7afd0292598e5f9ed5cf0d939866c0a0bb6f75bd1d3b5a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6ab4f28ff3a18c859a89afedcc67105d929cecc605c46f47edd8f73289e80548",
+          "doubt_signals": 161,
+          "mean_cost": 2.840351,
+          "mean_regret": 1.252632,
+          "policy_changes": 14,
+          "reads": 483,
+          "reviews": 161,
+          "seed": 12,
+          "state_digest": "f23573370386aa5983f6d36e3bb472684b1709f40200fd0504ca02f7d858cf09",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a9c45e77dd3a5a3a262e1529002289b9acb724a02781f5eea79e1cd7dcb802b1",
+          "doubt_signals": 156,
+          "mean_cost": 2.803509,
+          "mean_regret": 1.298246,
+          "policy_changes": 7,
+          "reads": 468,
+          "reviews": 156,
+          "seed": 13,
+          "state_digest": "a34892ee3ddc2219010b5a4255b6611fc0473e2216867cc22f77da63670c8746",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9684d01e0f39380087935cb0512b84d34394d6f1a10f0202a2faca4961cf93ba",
+          "doubt_signals": 148,
+          "mean_cost": 2.878947,
+          "mean_regret": 1.391228,
+          "policy_changes": 15,
+          "reads": 444,
+          "reviews": 148,
+          "seed": 14,
+          "state_digest": "818f1094e81b928acb5cb21a2e0515cc7df29cee873a1596ccb97835ef87320b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8aeb7b42bc005d5c89e1574a1baa07a0cfc02d06f8d4bbb798f643245a9517f0",
+          "doubt_signals": 149,
+          "mean_cost": 2.950877,
+          "mean_regret": 1.398246,
+          "policy_changes": 14,
+          "reads": 447,
+          "reviews": 149,
+          "seed": 15,
+          "state_digest": "4e03e976394bb121ac6153cb60d770840d9ff36fb2bd26547383c3397bae703f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fdec38548abf8926f3b0ee4717ffbe6a093c3edf731c21ce3ce8bf78161ec2a2",
+          "doubt_signals": 164,
+          "mean_cost": 3.087719,
+          "mean_regret": 1.505263,
+          "policy_changes": 11,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 16,
+          "state_digest": "2edfcb30e864687810131ab1c1c2686a7822d79c9b5ddcbba5767c3169da057e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fb71f708f0cef9c730998d449287370315eff11d46e4ebae218f36f192bfcf7f",
+          "doubt_signals": 148,
+          "mean_cost": 2.738596,
+          "mean_regret": 1.17193,
+          "policy_changes": 9,
+          "reads": 444,
+          "reviews": 148,
+          "seed": 17,
+          "state_digest": "3131c4ca3be18766417bfe1d23d65a7caccb5a1180ceed6235d68e6f0f8c3f56",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "17b7c98129aad966ddac6f618a78e08dfe0131c8ab6c11ab4d3d785b8fc02dbb",
+          "doubt_signals": 152,
+          "mean_cost": 2.994737,
+          "mean_regret": 1.42807,
+          "policy_changes": 12,
+          "reads": 456,
+          "reviews": 152,
+          "seed": 18,
+          "state_digest": "6055b0e0e7c46619647987a3f609794d07e3b7ebba1d1ff3313c0c15e2277ddf",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3124f9d0ea792e6d806543844d91286279569560f91d5413b9511399335b6ab1",
+          "doubt_signals": 154,
+          "mean_cost": 2.942105,
+          "mean_regret": 1.363158,
+          "policy_changes": 19,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 19,
+          "state_digest": "18343f40a1edb29b072bd6b20cc3baf2b5a9a9dda25349b2d1fb07421810b0a3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d9c8a4dd19e18f654f2517ac10045c706640f0869c3bfb087c19c324b05145ef",
+          "doubt_signals": 163,
+          "mean_cost": 2.891228,
+          "mean_regret": 1.324561,
+          "policy_changes": 14,
+          "reads": 489,
+          "reviews": 163,
+          "seed": 20,
+          "state_digest": "a2ad611a120b519d57f513be8491ea0f64d6103a849cd54d0426de6672994452",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0d2334c027ca26d7f622064955c34df133d7eb7d9864b823152d60a92e2974f7",
+          "doubt_signals": 160,
+          "mean_cost": 2.866667,
+          "mean_regret": 1.308772,
+          "policy_changes": 17,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 21,
+          "state_digest": "ad32a5fbda85242369e9c5005d37c187fd8276112ce045c2b45ded28195ce712",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3bf80824cc5d77b33b4f70d25144b9c712445ad049558374703c3d2ce340b5df",
+          "doubt_signals": 154,
+          "mean_cost": 2.807018,
+          "mean_regret": 1.307018,
+          "policy_changes": 12,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 22,
+          "state_digest": "db94d904393b82b8156183e343626c666dd3e45da79a5a98408df93d293a1fc3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2dc4610abbc6524d9d0171a78604653d54e9f491e382a4b9fa137191d1bed12a",
+          "doubt_signals": 163,
+          "mean_cost": 2.738596,
+          "mean_regret": 1.233333,
+          "policy_changes": 9,
+          "reads": 489,
+          "reviews": 163,
+          "seed": 23,
+          "state_digest": "519db7020ca3bee20b51f3eb366faecce110a183df212f7d42cd5a6250e1c92f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6dfddb5fc27e4c080dfd85ebaaa145aeb72eb7f772c20e142bdadeffcf7ac2e5",
+          "doubt_signals": 154,
+          "mean_cost": 2.966667,
+          "mean_regret": 1.349123,
+          "policy_changes": 21,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 24,
+          "state_digest": "708b03042176c68e7e8ee56a4800dd37cc3767f00d741e72b02dcd6e938c4174",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "480b942e8fd2f0f043040a6229a42351965281a95cbe6683b2d5c8e0d64cccf1",
+          "doubt_signals": 157,
+          "mean_cost": 2.984211,
+          "mean_regret": 1.389474,
+          "policy_changes": 8,
+          "reads": 471,
+          "reviews": 157,
+          "seed": 25,
+          "state_digest": "1209ec1e4c23a3fd5e8aca780c09c1393778acf0153024a195a691599fee65c1",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "caf6f4565f7a9420557fa107216ada8fe599439a61d7efb7c8a1cf47e20d155f",
+          "doubt_signals": 166,
+          "mean_cost": 2.935088,
+          "mean_regret": 1.357895,
+          "policy_changes": 19,
+          "reads": 498,
+          "reviews": 166,
+          "seed": 26,
+          "state_digest": "fd6b907dfcf238725316a50a5df7d9abd25469d03803b32ee2e83571e5e1d6ba",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ddbaf11850c078500b79faed5ee17a34199f3098fba8582a7914d7bcc88aaa99",
+          "doubt_signals": 173,
+          "mean_cost": 2.966667,
+          "mean_regret": 1.354386,
+          "policy_changes": 24,
+          "reads": 519,
+          "reviews": 173,
+          "seed": 27,
+          "state_digest": "07a6c1f6730540aeea1f9410c955b24a47c59a26324f21c561aceb5e814837c6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "37aecfb525a6c1d5312a2f64b8404e0ef35a023b0c98d3d68cb932d13865eea8",
+          "doubt_signals": 170,
+          "mean_cost": 2.864912,
+          "mean_regret": 1.350877,
+          "policy_changes": 15,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 28,
+          "state_digest": "04bc1c2594531cf5a1ba174e4c9358541c908a4da5025f4bfe156da14f9f4836",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2340bd952177c09d4991e491221f9eca282a13342a1b08e8924ec0c3844321e2",
+          "doubt_signals": 158,
+          "mean_cost": 2.850877,
+          "mean_regret": 1.312281,
+          "policy_changes": 17,
+          "reads": 474,
+          "reviews": 158,
+          "seed": 29,
+          "state_digest": "dc19dfafa0505a94e86c4a7eaec9ab1810b1fd5210542440731de5e5ae4a8b29",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "858ca4fdab5fe671ac3605b6b52d4a54474777231b7f4a430416bf208f05b697",
+          "doubt_signals": 147,
+          "mean_cost": 2.933333,
+          "mean_regret": 1.380702,
+          "policy_changes": 11,
+          "reads": 441,
+          "reviews": 147,
+          "seed": 30,
+          "state_digest": "b9974a502650f5beae2a4f1d97571ce34ee01cab794500d7b0caaf41ebc4aa7a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "32e87f2d53631214e0697adf1fcc6ef34e9d5df9883f4b6319adda324b61d585",
+          "doubt_signals": 147,
+          "mean_cost": 2.992982,
+          "mean_regret": 1.396491,
+          "policy_changes": 13,
+          "reads": 441,
+          "reviews": 147,
+          "seed": 31,
+          "state_digest": "a1f8f7346808be7b146b2395cbb888e3654a71d47e4f14b14a80f01bb94b8a8e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "20179e092bbcefed04907d39784877a56f8353cdcc7e15d6ce68115bbc129c13",
+          "doubt_signals": 151,
+          "mean_cost": 2.915789,
+          "mean_regret": 1.37193,
+          "policy_changes": 15,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 32,
+          "state_digest": "f722c4cb71a1a4e53cffbc7fa397cdfa74c281cda4ad402c4c0bca3e63659b4f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b073b83d8fe267572433a79454b680072448e4ad329ab96a00308be5153d5fae",
+          "doubt_signals": 141,
+          "mean_cost": 2.947368,
+          "mean_regret": 1.375439,
+          "policy_changes": 15,
+          "reads": 423,
+          "reviews": 141,
+          "seed": 33,
+          "state_digest": "e7247ef04917521bdb6429732bd8580e1124962e7818620186e372107725a35e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cef1b4c7711bed6f165b77697e48f6f9b1c89c443b97b422f9a9490b1ea7543c",
+          "doubt_signals": 154,
+          "mean_cost": 2.998246,
+          "mean_regret": 1.378947,
+          "policy_changes": 8,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 34,
+          "state_digest": "b5a652049760a9cc754609f9da800ceecc0be69c2dffa5121561b5eb65077e02",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8385947aea4fe0fb90c1baefbd3c4681bbc9eae9cfa6343f671a3665628a8afc",
+          "doubt_signals": 158,
+          "mean_cost": 2.919298,
+          "mean_regret": 1.403509,
+          "policy_changes": 23,
+          "reads": 474,
+          "reviews": 158,
+          "seed": 35,
+          "state_digest": "be303582591f7df45ecad0ec1a3ceb6f720d5859504baf92df30091697315272",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8c7139f7537ac64137cbc118b9e3aaa799d0096333fc541378a8a1046667af32",
+          "doubt_signals": 156,
+          "mean_cost": 2.924561,
+          "mean_regret": 1.396491,
+          "policy_changes": 19,
+          "reads": 468,
+          "reviews": 156,
+          "seed": 36,
+          "state_digest": "2d962a54f4c0ae33a58b71a2988400f357126324e01ea1cffa41d291a8c9bf32",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "54b56950fa8c5c2b5f1093fba3c3cf33a6071c8160f87cef811e35a38495f4c4",
+          "doubt_signals": 168,
+          "mean_cost": 2.838596,
+          "mean_regret": 1.261404,
+          "policy_changes": 12,
+          "reads": 504,
+          "reviews": 168,
+          "seed": 37,
+          "state_digest": "b667295067e08caa13c6a3c29ecd256d2eb01040070f8fd68aeee9465ad66b88",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9759b8b150d0200f31654d18b86429d5df8cce685c1a1fbc320af1154cfb59f7",
+          "doubt_signals": 160,
+          "mean_cost": 2.896491,
+          "mean_regret": 1.375439,
+          "policy_changes": 16,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 38,
+          "state_digest": "421971b1fcb3474a34f94c0391d58aba61d1a8f62e2fdc0de3711fadd4ea261e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c7cf63e6e11ab6b05c67383026074c7b488667561308c62661ca9977d665122d",
+          "doubt_signals": 170,
+          "mean_cost": 2.957895,
+          "mean_regret": 1.412281,
+          "policy_changes": 21,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 39,
+          "state_digest": "84adf2668b84cd7c197d85f8494a527996e1f5b3033f2010cd03e46f8ef94d04",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9b5092fb8df5578e07366c335de5413ba4fdc7a38ff4efb29b6c62f59f655459",
+          "doubt_signals": 169,
+          "mean_cost": 2.873684,
+          "mean_regret": 1.335088,
+          "policy_changes": 21,
+          "reads": 507,
+          "reviews": 169,
+          "seed": 40,
+          "state_digest": "d948eb5645cf1ba27438365fbd69385d4870baeffc45dbc577066366b38b58cf",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ca663d841b1d61f6da6077cf724a1daced2d65e5d02939aece56d1a7762ab56c",
+          "doubt_signals": 141,
+          "mean_cost": 2.910526,
+          "mean_regret": 1.385965,
+          "policy_changes": 23,
+          "reads": 423,
+          "reviews": 141,
+          "seed": 41,
+          "state_digest": "93a68623c7e99ea6120092fb138f15cdf859ef27411e5665bb0c459ececd0c7c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "be3f14544685de8bfcacfc63ecbcfeb944ff1c50cd8afadb8959bede074e1c47",
+          "doubt_signals": 167,
+          "mean_cost": 2.908772,
+          "mean_regret": 1.375439,
+          "policy_changes": 13,
+          "reads": 501,
+          "reviews": 167,
+          "seed": 42,
+          "state_digest": "1bbade1183be554db84994b88f32ab3a00d1efd270b4355ecc787d1b083ffc5d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "928f045583f861286ca8e5371888b13656b653a5964db70481293a02df938535",
+          "doubt_signals": 154,
+          "mean_cost": 2.908772,
+          "mean_regret": 1.368421,
+          "policy_changes": 25,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 43,
+          "state_digest": "1ce716241a846ab31e794dd83f369fbe1c923bacd875150e07da271719d1a984",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1d361708dce9bef0c42b62e00c4880bc83251e612fb7eb676e5f473d67e30147",
+          "doubt_signals": 181,
+          "mean_cost": 3.059649,
+          "mean_regret": 1.447368,
+          "policy_changes": 15,
+          "reads": 543,
+          "reviews": 181,
+          "seed": 44,
+          "state_digest": "54a6eef6c485a93dddc24e22e945eb4043a5f9682672b562298f8cc3f1424e16",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8a9d3f2faa528436d56aefa72fd235381b0331d2639c7b7f182498303705fc0c",
+          "doubt_signals": 157,
+          "mean_cost": 2.889474,
+          "mean_regret": 1.385965,
+          "policy_changes": 17,
+          "reads": 471,
+          "reviews": 157,
+          "seed": 45,
+          "state_digest": "53b4929ea53e61be84e63c182d76ca74baf5ce2a456c60ddcfe7973dc0c35e00",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d26565f44adfc472cecf26c8cd0f812c6f7a746137d459264a951944028a58f7",
+          "doubt_signals": 153,
+          "mean_cost": 2.882456,
+          "mean_regret": 1.354386,
+          "policy_changes": 23,
+          "reads": 459,
+          "reviews": 153,
+          "seed": 46,
+          "state_digest": "17282615bb3b380c7b467ac92d016b6fe66629c05fc71d0cd46911e383bdf19c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "daa92d09e72c64a5c99ffd0eb7ad4f8821e9a77895e5771b0046527d3aafc007",
+          "doubt_signals": 162,
+          "mean_cost": 2.977193,
+          "mean_regret": 1.42807,
+          "policy_changes": 15,
+          "reads": 486,
+          "reviews": 162,
+          "seed": 47,
+          "state_digest": "257aa71b26016558fb35e696685b83ffbaeeb79d1a2d7a7d1423725219ea7140",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f6f8973542ff05aaeef218325f25682baad48249ddb7c1a09988bcb34432beef",
+          "doubt_signals": 165,
+          "mean_cost": 2.85614,
+          "mean_regret": 1.336842,
+          "policy_changes": 18,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 48,
+          "state_digest": "65b01bc04c1ddbf1f05bcc162a94d113fe1a7c7138e953d9b32902773d8a9221",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9439d5a287beb8870cc6786477e0e693dfe01f4b7fd828f3c02f6ec722db6bcf",
+          "doubt_signals": 161,
+          "mean_cost": 2.822807,
+          "mean_regret": 1.331579,
+          "policy_changes": 11,
+          "reads": 483,
+          "reviews": 161,
+          "seed": 49,
+          "state_digest": "4cc3e275e1a292620a85483b11e7e07c301bd9c2dba4ec97325d9e4361ccc6cc",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ccfb47f381319a9cc4d143244aca355ea91f61e5c568145f0c9212232343e86d",
+          "doubt_signals": 155,
+          "mean_cost": 2.942105,
+          "mean_regret": 1.368421,
+          "policy_changes": 11,
+          "reads": 465,
+          "reviews": 155,
+          "seed": 50,
+          "state_digest": "6f2b8aa34f4dc5377ed49b7bcbb59bfbde7e4ad7933a054e9b3286233c3702f3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "54fb6f57d665031b95da5d13121f35b2949d188bfc1e96a034dd65462c907763",
+          "doubt_signals": 166,
+          "mean_cost": 3.050877,
+          "mean_regret": 1.47193,
+          "policy_changes": 17,
+          "reads": 498,
+          "reviews": 166,
+          "seed": 51,
+          "state_digest": "36801de3f59cebccc719e516c64f890efb532a2841fbc9378f9ba56bf2765705",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "98c9aeef67341e71c0469f632ab59b85baf2fb7af53ee5f4cf3439ff17637645",
+          "doubt_signals": 172,
+          "mean_cost": 2.849123,
+          "mean_regret": 1.278947,
+          "policy_changes": 17,
+          "reads": 516,
+          "reviews": 172,
+          "seed": 52,
+          "state_digest": "d58cf595ac72e42ddc2e7071113c33d399e98b26ebc4064a80baa8f3dde3a181",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "89071b087d794988c0c267233a9424e3572829874795913c8c2887363c61c716",
+          "doubt_signals": 160,
+          "mean_cost": 3.049123,
+          "mean_regret": 1.452632,
+          "policy_changes": 18,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 53,
+          "state_digest": "b8330b6b1c63f62ea65252d13c83921963df1c6dba8b4107a7139951d3a49831",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "51c3d97205b2d5d998cbd17f5f62bca8449ccb5839be80e3e43d820c9b9dffc4",
+          "doubt_signals": 149,
+          "mean_cost": 2.901754,
+          "mean_regret": 1.349123,
+          "policy_changes": 11,
+          "reads": 447,
+          "reviews": 149,
+          "seed": 54,
+          "state_digest": "6eb2dbca3f6a6d7e410ba9532311531d406dd5594d097cfe7575398beea71962",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b59a50a81dd33eb3f9600c4810ce888f59fad3b8921c55876c7bac0f963fb63b",
+          "doubt_signals": 167,
+          "mean_cost": 2.808772,
+          "mean_regret": 1.275439,
+          "policy_changes": 13,
+          "reads": 501,
+          "reviews": 167,
+          "seed": 55,
+          "state_digest": "de8c7d177d4528695b912a9ce37a409994b596493628cad7b18ec40ae159a20d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c37ba84dfc9a8700c4e71f76836c9205300f05034981108dd0d77c888efce658",
+          "doubt_signals": 164,
+          "mean_cost": 2.850877,
+          "mean_regret": 1.266667,
+          "policy_changes": 9,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 56,
+          "state_digest": "577c8f29f8a30dd4a9839715447f87f3920b4af275643503980165e49fdd9516",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "43ee46d8b886e583b49cecb4797ad46de5bc20f1b282d3dd66aec1e3998d5123",
+          "doubt_signals": 166,
+          "mean_cost": 2.836842,
+          "mean_regret": 1.268421,
+          "policy_changes": 9,
+          "reads": 498,
+          "reviews": 166,
+          "seed": 57,
+          "state_digest": "51eeb941d79b0d971c3ce9cbfb71d749d4a7d35321cdef8c000230aa0ac306ed",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cb523af6dc082726fd5ff5b19d59c81eac01f979c88ee39ec02dfa6cbf9727fb",
+          "doubt_signals": 151,
+          "mean_cost": 2.794737,
+          "mean_regret": 1.245614,
+          "policy_changes": 15,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 58,
+          "state_digest": "ba53aafbc5b297c391f5aeb1270445afafa7d16a3b283b9c08d4c34adf272056",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "66a5a25bc3957e5e961d41dba5bbd087adee6351a04981f802522cadce1f56ff",
+          "doubt_signals": 159,
+          "mean_cost": 2.8,
+          "mean_regret": 1.303509,
+          "policy_changes": 12,
+          "reads": 477,
+          "reviews": 159,
+          "seed": 59,
+          "state_digest": "3e4b0c7c49f6e64f9fa8b775d0a05cb36b561b2329081cc998d9e64154640fc6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ff24944ee76e179d0be2239535787329ef3a2fa5c90544206dccdba4e1a4b7a8",
+          "doubt_signals": 161,
+          "mean_cost": 2.9,
+          "mean_regret": 1.375439,
+          "policy_changes": 13,
+          "reads": 483,
+          "reviews": 161,
+          "seed": 60,
+          "state_digest": "98792ef5dc693e768e0726ef63971a796a38272724fb95558eb57284b0c472aa",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0526446cd63f6849bfa03d207836af65365d5ad03c1182369a7015c330b89e0f",
+          "doubt_signals": 170,
+          "mean_cost": 2.835088,
+          "mean_regret": 1.354386,
+          "policy_changes": 14,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 61,
+          "state_digest": "52610c3acf9b1616036716ec228eb5ff417acd4687ac1bfff5da3e4ecdd1b8e3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e0c920525d757427fd5ac0ad74a7dbad2f7d3fd3d40582e5f0ca61f5a20e13ec",
+          "doubt_signals": 150,
+          "mean_cost": 2.94386,
+          "mean_regret": 1.380702,
+          "policy_changes": 9,
+          "reads": 450,
+          "reviews": 150,
+          "seed": 62,
+          "state_digest": "5a33ad9829a527f1791dd4d126e3a920278fefd9aad6a8fd2d28ded51bc5d027",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3181fb9823ecb605db2b5782b440443bcc8d1b775aeb64b8d1d279eeaaff4c1f",
+          "doubt_signals": 159,
+          "mean_cost": 2.777193,
+          "mean_regret": 1.214035,
+          "policy_changes": 17,
+          "reads": 477,
+          "reviews": 159,
+          "seed": 63,
+          "state_digest": "a024784c86cd8249df73b64ad53baae86c68d49c9161607d5a368ff69a771460",
+          "updates": 600
+        }
+      ],
+      "R": [
+        {
+          "action_outcome_digest": "f5836e7d0d4108d11809995e5fbb3ac8875c76f519884df8be4d550c42b0158b",
+          "doubt_signals": 165,
+          "mean_cost": 3.001754,
+          "mean_regret": 1.361404,
+          "policy_changes": 11,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 0,
+          "state_digest": "f6448c2f8b758a3c50e790635ed1a46255a05c5abee7a7e80919e707c29e7b25",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "828b06f00be2e84ac7b0bbcf0b4b0af38307e970a45897e37aabf60641ab1db2",
+          "doubt_signals": 151,
+          "mean_cost": 2.975439,
+          "mean_regret": 1.412281,
+          "policy_changes": 12,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 1,
+          "state_digest": "5f5446f0f8e6ce901d1cd0d1359a8b93894732f6fe275eff632c981d662c47bb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cbc5af0e1d82a1da8785624eecc8f1c3415829075205b73c5c8ef23995d06beb",
+          "doubt_signals": 170,
+          "mean_cost": 2.831579,
+          "mean_regret": 1.301754,
+          "policy_changes": 11,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 2,
+          "state_digest": "de7a79e34262ee87983e82b96d7c6486c8f06f49a9158510b91af8c003c85c6e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d89ff746001425476b16fd136b520e93464f152933def139497e533b50e7cb4c",
+          "doubt_signals": 162,
+          "mean_cost": 2.894737,
+          "mean_regret": 1.326316,
+          "policy_changes": 19,
+          "reads": 486,
+          "reviews": 162,
+          "seed": 3,
+          "state_digest": "600c70f510ba46addb51ca8076b1d4a41942362f80f7b03275fb52451a4b1a53",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "5f3519dd1215cf7453c832b40d1cff5e964833f2ad997e72d1d458fd60ca8539",
+          "doubt_signals": 159,
+          "mean_cost": 2.915789,
+          "mean_regret": 1.382456,
+          "policy_changes": 11,
+          "reads": 477,
+          "reviews": 159,
+          "seed": 4,
+          "state_digest": "f735e274df7e3fd0f3f6c8c005ebc6510f086bfed3f3cc038f139f95e99a7047",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d3c6d1fbe1f387c090c2e0e79225cfa5d0081f11506f9e932365f684522ebc7a",
+          "doubt_signals": 158,
+          "mean_cost": 2.9,
+          "mean_regret": 1.331579,
+          "policy_changes": 9,
+          "reads": 474,
+          "reviews": 158,
+          "seed": 5,
+          "state_digest": "d01a2abbd9c71c0bec8b85dc21f7ce5d1ccada952facc7d789205d582fb51a62",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "066e5ff565d76dcc68e4a2fe8248080d415008129f48d6ec02c7c29ffaa2bf3b",
+          "doubt_signals": 151,
+          "mean_cost": 2.878947,
+          "mean_regret": 1.338596,
+          "policy_changes": 23,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 6,
+          "state_digest": "d1adf2b8d31f1ed78966c378bcea9884917483f155afa2c04e40d4a94da65d42",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b27480368e264b37f19e20171f2f280a8fa640a29d7d9da5eb8ae6f812657c68",
+          "doubt_signals": 153,
+          "mean_cost": 2.912281,
+          "mean_regret": 1.366667,
+          "policy_changes": 24,
+          "reads": 459,
+          "reviews": 153,
+          "seed": 7,
+          "state_digest": "8707e63f31177c8a6c40061e9103b1eb1902d8d2b40a985bf99271fef157285f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "66be1dad6b74a9aca83752593652259180c48e10f4a1a674bd302db4e1ce698f",
+          "doubt_signals": 162,
+          "mean_cost": 3.035088,
+          "mean_regret": 1.392982,
+          "policy_changes": 23,
+          "reads": 486,
+          "reviews": 162,
+          "seed": 8,
+          "state_digest": "7971de5b8861f44a1c72dd26aab26614b02fe1553e7664af45901ba4bc2bb250",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "bd99217dfe706a2477a1293116bf814ceb7656eab2e8c60786d3de51ad3ceace",
+          "doubt_signals": 168,
+          "mean_cost": 2.864912,
+          "mean_regret": 1.347368,
+          "policy_changes": 22,
+          "reads": 504,
+          "reviews": 168,
+          "seed": 9,
+          "state_digest": "600da17a435e08e94dcd47017a857f4c33b58be5fd35eeea3a7cdf3d331dc398",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "65422a0723b1999dc74608ac3197635e289311cead15ba1ff95b41698bd98f7a",
+          "doubt_signals": 159,
+          "mean_cost": 3.091228,
+          "mean_regret": 1.5,
+          "policy_changes": 13,
+          "reads": 477,
+          "reviews": 159,
+          "seed": 10,
+          "state_digest": "f691a09cf0fefc8c9ecf06b298ffd33c1697d94deeb2cc34e16f1f1abf3ed27b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c76dfbd90774f617e79085c3bfab9622f4a51b1c6e0e70985f0a0b84fd06488e",
+          "doubt_signals": 166,
+          "mean_cost": 2.836842,
+          "mean_regret": 1.314035,
+          "policy_changes": 21,
+          "reads": 498,
+          "reviews": 166,
+          "seed": 11,
+          "state_digest": "169d3d31b44e87aeb18d727e27a9247c1be23b7a8a7c4a2d94b0285b7a8a2031",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6ab4f28ff3a18c859a89afedcc67105d929cecc605c46f47edd8f73289e80548",
+          "doubt_signals": 161,
+          "mean_cost": 2.840351,
+          "mean_regret": 1.252632,
+          "policy_changes": 14,
+          "reads": 483,
+          "reviews": 161,
+          "seed": 12,
+          "state_digest": "8389f031e5b69cd9db4c29c578072f7ba30d2ff3ce57f4a5823254962b49dedd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a9c45e77dd3a5a3a262e1529002289b9acb724a02781f5eea79e1cd7dcb802b1",
+          "doubt_signals": 156,
+          "mean_cost": 2.803509,
+          "mean_regret": 1.298246,
+          "policy_changes": 7,
+          "reads": 468,
+          "reviews": 156,
+          "seed": 13,
+          "state_digest": "bcf03509bedbbe2926095ea3bd1f4b3b5f28c38c6a224647caeb0a2eff22f15f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9684d01e0f39380087935cb0512b84d34394d6f1a10f0202a2faca4961cf93ba",
+          "doubt_signals": 148,
+          "mean_cost": 2.878947,
+          "mean_regret": 1.391228,
+          "policy_changes": 15,
+          "reads": 444,
+          "reviews": 148,
+          "seed": 14,
+          "state_digest": "3b992f1a985051363e722090793bda0f59b40b234b759ca445e470bd93edac59",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8aeb7b42bc005d5c89e1574a1baa07a0cfc02d06f8d4bbb798f643245a9517f0",
+          "doubt_signals": 149,
+          "mean_cost": 2.950877,
+          "mean_regret": 1.398246,
+          "policy_changes": 14,
+          "reads": 447,
+          "reviews": 149,
+          "seed": 15,
+          "state_digest": "cf9adc137927cfed888f043714149f971dc20a2ca3fd81ff30d88d6d1ca01f94",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fdec38548abf8926f3b0ee4717ffbe6a093c3edf731c21ce3ce8bf78161ec2a2",
+          "doubt_signals": 164,
+          "mean_cost": 3.087719,
+          "mean_regret": 1.505263,
+          "policy_changes": 11,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 16,
+          "state_digest": "eab48b731dcc58e5330ef029ed6c9c98951818f908b674a1053814c7c0c109d4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fb71f708f0cef9c730998d449287370315eff11d46e4ebae218f36f192bfcf7f",
+          "doubt_signals": 148,
+          "mean_cost": 2.738596,
+          "mean_regret": 1.17193,
+          "policy_changes": 9,
+          "reads": 444,
+          "reviews": 148,
+          "seed": 17,
+          "state_digest": "f5f7a531a132b1f5249f4f2748a7ac010c1abb7a4dba5377b592080432e38d9a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "17b7c98129aad966ddac6f618a78e08dfe0131c8ab6c11ab4d3d785b8fc02dbb",
+          "doubt_signals": 152,
+          "mean_cost": 2.994737,
+          "mean_regret": 1.42807,
+          "policy_changes": 12,
+          "reads": 456,
+          "reviews": 152,
+          "seed": 18,
+          "state_digest": "0b119b71dce94092721f2626ed520f539c736802b0135c7ce5b617204b08c131",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3124f9d0ea792e6d806543844d91286279569560f91d5413b9511399335b6ab1",
+          "doubt_signals": 154,
+          "mean_cost": 2.942105,
+          "mean_regret": 1.363158,
+          "policy_changes": 19,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 19,
+          "state_digest": "9da983ccabd7b8f26765656959740e50ed00b7693d871249c5a91f44c6a48aa0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d9c8a4dd19e18f654f2517ac10045c706640f0869c3bfb087c19c324b05145ef",
+          "doubt_signals": 163,
+          "mean_cost": 2.891228,
+          "mean_regret": 1.324561,
+          "policy_changes": 14,
+          "reads": 489,
+          "reviews": 163,
+          "seed": 20,
+          "state_digest": "917a3ca3113ed7133b6d1cad13d79bb017c43e71e412c9e8360e011887a4d1bd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0d2334c027ca26d7f622064955c34df133d7eb7d9864b823152d60a92e2974f7",
+          "doubt_signals": 160,
+          "mean_cost": 2.866667,
+          "mean_regret": 1.308772,
+          "policy_changes": 17,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 21,
+          "state_digest": "fffb6666c3a31ff8f9c67d5d530a3b67c189532e07081fea316bbe19dc388668",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3bf80824cc5d77b33b4f70d25144b9c712445ad049558374703c3d2ce340b5df",
+          "doubt_signals": 154,
+          "mean_cost": 2.807018,
+          "mean_regret": 1.307018,
+          "policy_changes": 12,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 22,
+          "state_digest": "34e85e4446a5b7de413fc53a6b3d984ff08f0ad212a2956a74fa4f4c0b121f0f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2dc4610abbc6524d9d0171a78604653d54e9f491e382a4b9fa137191d1bed12a",
+          "doubt_signals": 163,
+          "mean_cost": 2.738596,
+          "mean_regret": 1.233333,
+          "policy_changes": 9,
+          "reads": 489,
+          "reviews": 163,
+          "seed": 23,
+          "state_digest": "a243cf2fe8635d409110e67584ba174b54990ba6dbfe210f351d2b84f669526f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6dfddb5fc27e4c080dfd85ebaaa145aeb72eb7f772c20e142bdadeffcf7ac2e5",
+          "doubt_signals": 154,
+          "mean_cost": 2.966667,
+          "mean_regret": 1.349123,
+          "policy_changes": 21,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 24,
+          "state_digest": "4b41fd03a0366df6d2904c6e5a62089fcd906c38c2702b15a477cf4a27889491",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "480b942e8fd2f0f043040a6229a42351965281a95cbe6683b2d5c8e0d64cccf1",
+          "doubt_signals": 157,
+          "mean_cost": 2.984211,
+          "mean_regret": 1.389474,
+          "policy_changes": 8,
+          "reads": 471,
+          "reviews": 157,
+          "seed": 25,
+          "state_digest": "1683d1ff2c7bd4cbabc161c2681b9037b2b8b13b5a89cffc9657c1289272cb3d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "caf6f4565f7a9420557fa107216ada8fe599439a61d7efb7c8a1cf47e20d155f",
+          "doubt_signals": 166,
+          "mean_cost": 2.935088,
+          "mean_regret": 1.357895,
+          "policy_changes": 19,
+          "reads": 498,
+          "reviews": 166,
+          "seed": 26,
+          "state_digest": "67c375108f907d02f02240f7f2cc431a4ac6897fabcd1063624789723878fc4c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ddbaf11850c078500b79faed5ee17a34199f3098fba8582a7914d7bcc88aaa99",
+          "doubt_signals": 173,
+          "mean_cost": 2.966667,
+          "mean_regret": 1.354386,
+          "policy_changes": 24,
+          "reads": 519,
+          "reviews": 173,
+          "seed": 27,
+          "state_digest": "700b7fa6ee53eeee485374b5503c1157bf9728fe1d9c178bf0298304a1363d0e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "37aecfb525a6c1d5312a2f64b8404e0ef35a023b0c98d3d68cb932d13865eea8",
+          "doubt_signals": 170,
+          "mean_cost": 2.864912,
+          "mean_regret": 1.350877,
+          "policy_changes": 15,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 28,
+          "state_digest": "c9ad96bd2a4e722d6a2ea95d2d55227c01bba4e35d794c3c85cd222f8c33043c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2340bd952177c09d4991e491221f9eca282a13342a1b08e8924ec0c3844321e2",
+          "doubt_signals": 158,
+          "mean_cost": 2.850877,
+          "mean_regret": 1.312281,
+          "policy_changes": 17,
+          "reads": 474,
+          "reviews": 158,
+          "seed": 29,
+          "state_digest": "e650c6fb6f3381753d6fd4bce8f43fd9211a535846e34be4647316111c28df6a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "858ca4fdab5fe671ac3605b6b52d4a54474777231b7f4a430416bf208f05b697",
+          "doubt_signals": 147,
+          "mean_cost": 2.933333,
+          "mean_regret": 1.380702,
+          "policy_changes": 11,
+          "reads": 441,
+          "reviews": 147,
+          "seed": 30,
+          "state_digest": "e8a00a1842b7e1e9041e2fa966494fbacd5236280b0dcc2eda6a86d578ae07e0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "32e87f2d53631214e0697adf1fcc6ef34e9d5df9883f4b6319adda324b61d585",
+          "doubt_signals": 147,
+          "mean_cost": 2.992982,
+          "mean_regret": 1.396491,
+          "policy_changes": 13,
+          "reads": 441,
+          "reviews": 147,
+          "seed": 31,
+          "state_digest": "355df25facc5cd84479ca73fd526036fc6c9c2ae4a121956d7deedef41b2e411",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "20179e092bbcefed04907d39784877a56f8353cdcc7e15d6ce68115bbc129c13",
+          "doubt_signals": 151,
+          "mean_cost": 2.915789,
+          "mean_regret": 1.37193,
+          "policy_changes": 15,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 32,
+          "state_digest": "d52b8376a17e92ec9af75697b486dadf07a662250d32801d32dfd8563ef4d034",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b073b83d8fe267572433a79454b680072448e4ad329ab96a00308be5153d5fae",
+          "doubt_signals": 141,
+          "mean_cost": 2.947368,
+          "mean_regret": 1.375439,
+          "policy_changes": 15,
+          "reads": 423,
+          "reviews": 141,
+          "seed": 33,
+          "state_digest": "2cd067c61ff5992e4fe7caed0139341d0a30198eeb012ca2fbd5c21e85cf677f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cef1b4c7711bed6f165b77697e48f6f9b1c89c443b97b422f9a9490b1ea7543c",
+          "doubt_signals": 154,
+          "mean_cost": 2.998246,
+          "mean_regret": 1.378947,
+          "policy_changes": 8,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 34,
+          "state_digest": "ce180805de55c11b123ef005c034552775ec52265825bb3bb68ae46529967dcf",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8385947aea4fe0fb90c1baefbd3c4681bbc9eae9cfa6343f671a3665628a8afc",
+          "doubt_signals": 158,
+          "mean_cost": 2.919298,
+          "mean_regret": 1.403509,
+          "policy_changes": 23,
+          "reads": 474,
+          "reviews": 158,
+          "seed": 35,
+          "state_digest": "456a9034e1a7f85f95136400696d2b7f680a5a5fcf4d9c05932815dcca20aae5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8c7139f7537ac64137cbc118b9e3aaa799d0096333fc541378a8a1046667af32",
+          "doubt_signals": 156,
+          "mean_cost": 2.924561,
+          "mean_regret": 1.396491,
+          "policy_changes": 19,
+          "reads": 468,
+          "reviews": 156,
+          "seed": 36,
+          "state_digest": "70828add3f5a3f84a54e98364095aabc18422e34b195e6763776a48477a79581",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "54b56950fa8c5c2b5f1093fba3c3cf33a6071c8160f87cef811e35a38495f4c4",
+          "doubt_signals": 168,
+          "mean_cost": 2.838596,
+          "mean_regret": 1.261404,
+          "policy_changes": 12,
+          "reads": 504,
+          "reviews": 168,
+          "seed": 37,
+          "state_digest": "269dbf35e81bd818eb9d5b44b9296607569c0937aa0ebaebeb3893adce661a54",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9759b8b150d0200f31654d18b86429d5df8cce685c1a1fbc320af1154cfb59f7",
+          "doubt_signals": 160,
+          "mean_cost": 2.896491,
+          "mean_regret": 1.375439,
+          "policy_changes": 16,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 38,
+          "state_digest": "b5fb66fa3db285d8bcd09409cf172232058db3d70a3bc0475e1ed63977587b8b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c7cf63e6e11ab6b05c67383026074c7b488667561308c62661ca9977d665122d",
+          "doubt_signals": 170,
+          "mean_cost": 2.957895,
+          "mean_regret": 1.412281,
+          "policy_changes": 21,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 39,
+          "state_digest": "7313df1bc675388e274bea7523a1faca299353a46a8d868a3e3518306e934e69",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9b5092fb8df5578e07366c335de5413ba4fdc7a38ff4efb29b6c62f59f655459",
+          "doubt_signals": 169,
+          "mean_cost": 2.873684,
+          "mean_regret": 1.335088,
+          "policy_changes": 21,
+          "reads": 507,
+          "reviews": 169,
+          "seed": 40,
+          "state_digest": "0264ebabc59b0ec5c957bacb9ad1aeae901c74a8bdfe403996a43069dba45f46",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ca663d841b1d61f6da6077cf724a1daced2d65e5d02939aece56d1a7762ab56c",
+          "doubt_signals": 141,
+          "mean_cost": 2.910526,
+          "mean_regret": 1.385965,
+          "policy_changes": 23,
+          "reads": 423,
+          "reviews": 141,
+          "seed": 41,
+          "state_digest": "5a86a17ef638e43636fc492e5e4c704eeea19fdb9fcc8c16d451ccffaec2ddf3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "be3f14544685de8bfcacfc63ecbcfeb944ff1c50cd8afadb8959bede074e1c47",
+          "doubt_signals": 167,
+          "mean_cost": 2.908772,
+          "mean_regret": 1.375439,
+          "policy_changes": 13,
+          "reads": 501,
+          "reviews": 167,
+          "seed": 42,
+          "state_digest": "2e307258204fa4b63e208c2444f4213b1899c71825fd2bc8f3d35588f7604dff",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "928f045583f861286ca8e5371888b13656b653a5964db70481293a02df938535",
+          "doubt_signals": 154,
+          "mean_cost": 2.908772,
+          "mean_regret": 1.368421,
+          "policy_changes": 25,
+          "reads": 462,
+          "reviews": 154,
+          "seed": 43,
+          "state_digest": "514d3247a53bc8408564a2a15218dd4d7111d7b1e55202c6a5c06dace880f97d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1d361708dce9bef0c42b62e00c4880bc83251e612fb7eb676e5f473d67e30147",
+          "doubt_signals": 181,
+          "mean_cost": 3.059649,
+          "mean_regret": 1.447368,
+          "policy_changes": 15,
+          "reads": 543,
+          "reviews": 181,
+          "seed": 44,
+          "state_digest": "d11bf81910b48ab9b632217ae1dd4f54efeb87d26aac1cb70add98a063968bcd",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8a9d3f2faa528436d56aefa72fd235381b0331d2639c7b7f182498303705fc0c",
+          "doubt_signals": 157,
+          "mean_cost": 2.889474,
+          "mean_regret": 1.385965,
+          "policy_changes": 17,
+          "reads": 471,
+          "reviews": 157,
+          "seed": 45,
+          "state_digest": "0aa6b99e4346a8aa810eb1696d5c32cb302479a6a70cd9e7054781062fba5015",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d26565f44adfc472cecf26c8cd0f812c6f7a746137d459264a951944028a58f7",
+          "doubt_signals": 153,
+          "mean_cost": 2.882456,
+          "mean_regret": 1.354386,
+          "policy_changes": 23,
+          "reads": 459,
+          "reviews": 153,
+          "seed": 46,
+          "state_digest": "a6a876712e4fe780928aeb19465a5f339c75af344aa827cedbbe814462019d33",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "daa92d09e72c64a5c99ffd0eb7ad4f8821e9a77895e5771b0046527d3aafc007",
+          "doubt_signals": 162,
+          "mean_cost": 2.977193,
+          "mean_regret": 1.42807,
+          "policy_changes": 15,
+          "reads": 486,
+          "reviews": 162,
+          "seed": 47,
+          "state_digest": "a334c40eba733e558e37cfc1ea38811d3d7eb75fbe9efd87348af7102649167a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f6f8973542ff05aaeef218325f25682baad48249ddb7c1a09988bcb34432beef",
+          "doubt_signals": 165,
+          "mean_cost": 2.85614,
+          "mean_regret": 1.336842,
+          "policy_changes": 18,
+          "reads": 495,
+          "reviews": 165,
+          "seed": 48,
+          "state_digest": "e895af7dc1e84d27d60d5a8bdef7bcb140fddf5fa1ce065669d922b68c277c50",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9439d5a287beb8870cc6786477e0e693dfe01f4b7fd828f3c02f6ec722db6bcf",
+          "doubt_signals": 161,
+          "mean_cost": 2.822807,
+          "mean_regret": 1.331579,
+          "policy_changes": 11,
+          "reads": 483,
+          "reviews": 161,
+          "seed": 49,
+          "state_digest": "878ebac4e304bd09319f8ab282dc0f142d9e082cb5e0f7e574c051d45b1db48c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ccfb47f381319a9cc4d143244aca355ea91f61e5c568145f0c9212232343e86d",
+          "doubt_signals": 155,
+          "mean_cost": 2.942105,
+          "mean_regret": 1.368421,
+          "policy_changes": 11,
+          "reads": 465,
+          "reviews": 155,
+          "seed": 50,
+          "state_digest": "0b6970d63c8cf6cc64b0066c7247025047b7e71f708068725ee062e94e92addf",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "54fb6f57d665031b95da5d13121f35b2949d188bfc1e96a034dd65462c907763",
+          "doubt_signals": 166,
+          "mean_cost": 3.050877,
+          "mean_regret": 1.47193,
+          "policy_changes": 17,
+          "reads": 498,
+          "reviews": 166,
+          "seed": 51,
+          "state_digest": "204c29787b5df260a998769d47d14ad603a738035ace6e52a28bedb8a948c960",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "98c9aeef67341e71c0469f632ab59b85baf2fb7af53ee5f4cf3439ff17637645",
+          "doubt_signals": 172,
+          "mean_cost": 2.849123,
+          "mean_regret": 1.278947,
+          "policy_changes": 17,
+          "reads": 516,
+          "reviews": 172,
+          "seed": 52,
+          "state_digest": "2a1549c8fbccb50079ed58601ac64f5aa345f4beeab311850232437a14a95cb6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "89071b087d794988c0c267233a9424e3572829874795913c8c2887363c61c716",
+          "doubt_signals": 160,
+          "mean_cost": 3.049123,
+          "mean_regret": 1.452632,
+          "policy_changes": 18,
+          "reads": 480,
+          "reviews": 160,
+          "seed": 53,
+          "state_digest": "6992277f2fb17580fd62de129ef51ccec3b41d7afa727acafb0d9048f2d1d033",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "51c3d97205b2d5d998cbd17f5f62bca8449ccb5839be80e3e43d820c9b9dffc4",
+          "doubt_signals": 149,
+          "mean_cost": 2.901754,
+          "mean_regret": 1.349123,
+          "policy_changes": 11,
+          "reads": 447,
+          "reviews": 149,
+          "seed": 54,
+          "state_digest": "57174c422dc48420651d169669028a6f7057bce74ce08dda811f61d4559f468b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b59a50a81dd33eb3f9600c4810ce888f59fad3b8921c55876c7bac0f963fb63b",
+          "doubt_signals": 167,
+          "mean_cost": 2.808772,
+          "mean_regret": 1.275439,
+          "policy_changes": 13,
+          "reads": 501,
+          "reviews": 167,
+          "seed": 55,
+          "state_digest": "1a9e8ce6ac3152de86e22c06b4e5d4c1ba6d303b57ec4cef6778283de84e5f49",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c37ba84dfc9a8700c4e71f76836c9205300f05034981108dd0d77c888efce658",
+          "doubt_signals": 164,
+          "mean_cost": 2.850877,
+          "mean_regret": 1.266667,
+          "policy_changes": 9,
+          "reads": 492,
+          "reviews": 164,
+          "seed": 56,
+          "state_digest": "1096133d1427e281b3f6f9ed4d39a57ab05af33cdf46f31e209015b093f6041c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "43ee46d8b886e583b49cecb4797ad46de5bc20f1b282d3dd66aec1e3998d5123",
+          "doubt_signals": 166,
+          "mean_cost": 2.836842,
+          "mean_regret": 1.268421,
+          "policy_changes": 9,
+          "reads": 498,
+          "reviews": 166,
+          "seed": 57,
+          "state_digest": "e8bc2a74704f4861db54bc6d5b0cb48690a04e9ef26430b1dc661a142c8d7ef9",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cb523af6dc082726fd5ff5b19d59c81eac01f979c88ee39ec02dfa6cbf9727fb",
+          "doubt_signals": 151,
+          "mean_cost": 2.794737,
+          "mean_regret": 1.245614,
+          "policy_changes": 15,
+          "reads": 453,
+          "reviews": 151,
+          "seed": 58,
+          "state_digest": "6804adfd10fb1531a4103c49b7cbc7f292063f3979d5b288388f47ecb7d596d0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "66a5a25bc3957e5e961d41dba5bbd087adee6351a04981f802522cadce1f56ff",
+          "doubt_signals": 159,
+          "mean_cost": 2.8,
+          "mean_regret": 1.303509,
+          "policy_changes": 12,
+          "reads": 477,
+          "reviews": 159,
+          "seed": 59,
+          "state_digest": "61731f5d6a4894a702527ff5057e748e24c33dad7edb8980a6a371f86cd5b9d5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ff24944ee76e179d0be2239535787329ef3a2fa5c90544206dccdba4e1a4b7a8",
+          "doubt_signals": 161,
+          "mean_cost": 2.9,
+          "mean_regret": 1.375439,
+          "policy_changes": 13,
+          "reads": 483,
+          "reviews": 161,
+          "seed": 60,
+          "state_digest": "a3781f05ca4c325655c60abd7636035300fc1f55fc3e8765b9e3b99f3e511de6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0526446cd63f6849bfa03d207836af65365d5ad03c1182369a7015c330b89e0f",
+          "doubt_signals": 170,
+          "mean_cost": 2.835088,
+          "mean_regret": 1.354386,
+          "policy_changes": 14,
+          "reads": 510,
+          "reviews": 170,
+          "seed": 61,
+          "state_digest": "600795a711c93fabdabc2929b372677736bf45cf9ef0d31d84096258aeff3731",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e0c920525d757427fd5ac0ad74a7dbad2f7d3fd3d40582e5f0ca61f5a20e13ec",
+          "doubt_signals": 150,
+          "mean_cost": 2.94386,
+          "mean_regret": 1.380702,
+          "policy_changes": 9,
+          "reads": 450,
+          "reviews": 150,
+          "seed": 62,
+          "state_digest": "c26e44f9975e97aca3bc6dc989ef6b875e1649c373a0e3bc17668e12b01b3cda",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3181fb9823ecb605db2b5782b440443bcc8d1b775aeb64b8d1d279eeaaff4c1f",
+          "doubt_signals": 159,
+          "mean_cost": 2.777193,
+          "mean_regret": 1.214035,
+          "policy_changes": 17,
+          "reads": 477,
+          "reviews": 159,
+          "seed": 63,
+          "state_digest": "732b747647d40c69a37baa4037ae93dddf37e5d61954dff8ecd1ab425138ebc0",
+          "updates": 600
+        }
+      ],
+      "R_label_only": [
+        {
+          "action_outcome_digest": "f5836e7d0d4108d11809995e5fbb3ac8875c76f519884df8be4d550c42b0158b",
+          "doubt_signals": 165,
+          "mean_cost": 3.001754,
+          "mean_regret": 1.361404,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 0,
+          "state_digest": "d4c9f45c9ed9eba37c4b0f1db32f55399f1cfc90d2a0165a353dbdb43202b73f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "828b06f00be2e84ac7b0bbcf0b4b0af38307e970a45897e37aabf60641ab1db2",
+          "doubt_signals": 151,
+          "mean_cost": 2.975439,
+          "mean_regret": 1.412281,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 1,
+          "state_digest": "f2d61d846a92fa71c409d77aafd1427e33a774600deba3d85d1f0aca9a4bfc29",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cbc5af0e1d82a1da8785624eecc8f1c3415829075205b73c5c8ef23995d06beb",
+          "doubt_signals": 170,
+          "mean_cost": 2.831579,
+          "mean_regret": 1.301754,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 2,
+          "state_digest": "2198f4e9ceebc1360fedbbcf8b6c0a8c2337adb8126d35c9f51238851831632a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d89ff746001425476b16fd136b520e93464f152933def139497e533b50e7cb4c",
+          "doubt_signals": 162,
+          "mean_cost": 2.894737,
+          "mean_regret": 1.326316,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 3,
+          "state_digest": "0a7f51098e027314772f598a231aae5590201bf131d26dbea64e8aa2118659c0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "5f3519dd1215cf7453c832b40d1cff5e964833f2ad997e72d1d458fd60ca8539",
+          "doubt_signals": 159,
+          "mean_cost": 2.915789,
+          "mean_regret": 1.382456,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 4,
+          "state_digest": "7a79f7ffc3191f1919088a87b26946c59b19e3ad7e5fee75ca4fd36652e66c15",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d3c6d1fbe1f387c090c2e0e79225cfa5d0081f11506f9e932365f684522ebc7a",
+          "doubt_signals": 158,
+          "mean_cost": 2.9,
+          "mean_regret": 1.331579,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 5,
+          "state_digest": "aad945a038afde7b45f11dad53586c76232ff7eb5f2ddbb158593f9d548c42d0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "066e5ff565d76dcc68e4a2fe8248080d415008129f48d6ec02c7c29ffaa2bf3b",
+          "doubt_signals": 151,
+          "mean_cost": 2.878947,
+          "mean_regret": 1.338596,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 6,
+          "state_digest": "539059a0e4537243fa5e7de8b051d07315ed3e094d524b55013fce24de202f41",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b27480368e264b37f19e20171f2f280a8fa640a29d7d9da5eb8ae6f812657c68",
+          "doubt_signals": 153,
+          "mean_cost": 2.912281,
+          "mean_regret": 1.366667,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 7,
+          "state_digest": "8c9461eb942881dbd5feeab4f1a2906beb85a500d058b403bff712028c37222e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "66be1dad6b74a9aca83752593652259180c48e10f4a1a674bd302db4e1ce698f",
+          "doubt_signals": 162,
+          "mean_cost": 3.035088,
+          "mean_regret": 1.392982,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 8,
+          "state_digest": "85717c5e54767a9b6eed4e98af966a55ee79932a70bfef324f37b952baeded9e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "bd99217dfe706a2477a1293116bf814ceb7656eab2e8c60786d3de51ad3ceace",
+          "doubt_signals": 168,
+          "mean_cost": 2.864912,
+          "mean_regret": 1.347368,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 9,
+          "state_digest": "3d57f2c45a90943d3bea8e9ba9321224869c0e4109b1911b8c843557275abd45",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "65422a0723b1999dc74608ac3197635e289311cead15ba1ff95b41698bd98f7a",
+          "doubt_signals": 159,
+          "mean_cost": 3.091228,
+          "mean_regret": 1.5,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 10,
+          "state_digest": "92269a939a78cf4e51cc4a56940981c31254bc4e73baeda9785fa52599533b04",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c76dfbd90774f617e79085c3bfab9622f4a51b1c6e0e70985f0a0b84fd06488e",
+          "doubt_signals": 166,
+          "mean_cost": 2.836842,
+          "mean_regret": 1.314035,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 11,
+          "state_digest": "b79b9e934dc1152306a613117d2e7dfc2e14cd6e4252d140007b4ebff67fc859",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6ab4f28ff3a18c859a89afedcc67105d929cecc605c46f47edd8f73289e80548",
+          "doubt_signals": 161,
+          "mean_cost": 2.840351,
+          "mean_regret": 1.252632,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 12,
+          "state_digest": "a085e9a8daf171da0c34909af3cc1802879ce2e2298fe50d9ff419e483871e67",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a9c45e77dd3a5a3a262e1529002289b9acb724a02781f5eea79e1cd7dcb802b1",
+          "doubt_signals": 156,
+          "mean_cost": 2.803509,
+          "mean_regret": 1.298246,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 13,
+          "state_digest": "9e162324f13fee495f7d3f901104fda4d3b9eb37fab1983f0b64a16de0479c4d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9684d01e0f39380087935cb0512b84d34394d6f1a10f0202a2faca4961cf93ba",
+          "doubt_signals": 148,
+          "mean_cost": 2.878947,
+          "mean_regret": 1.391228,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 14,
+          "state_digest": "b37c64604da86e32607ac32545186f217ce7e651ffaa2d5145064b7af35a77fa",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8aeb7b42bc005d5c89e1574a1baa07a0cfc02d06f8d4bbb798f643245a9517f0",
+          "doubt_signals": 149,
+          "mean_cost": 2.950877,
+          "mean_regret": 1.398246,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 15,
+          "state_digest": "40409bff5cd2e20385ae287bab05ac8662501d0ae8eb8370f39189c04d082f26",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fdec38548abf8926f3b0ee4717ffbe6a093c3edf731c21ce3ce8bf78161ec2a2",
+          "doubt_signals": 164,
+          "mean_cost": 3.087719,
+          "mean_regret": 1.505263,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 16,
+          "state_digest": "a0c8ac11dc41856440d125e48bba35826412d3f477244d4fdb653ee88bf137be",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fb71f708f0cef9c730998d449287370315eff11d46e4ebae218f36f192bfcf7f",
+          "doubt_signals": 148,
+          "mean_cost": 2.738596,
+          "mean_regret": 1.17193,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 17,
+          "state_digest": "ee8306266aa13b7d3fa66d98c704e3e5557823196f690dbf39ba6bc0348f1879",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "17b7c98129aad966ddac6f618a78e08dfe0131c8ab6c11ab4d3d785b8fc02dbb",
+          "doubt_signals": 152,
+          "mean_cost": 2.994737,
+          "mean_regret": 1.42807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 18,
+          "state_digest": "62ac16928b6b55f23ad0690318fb487a26bfb0c550e138a89b461dc1e082f6fc",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3124f9d0ea792e6d806543844d91286279569560f91d5413b9511399335b6ab1",
+          "doubt_signals": 154,
+          "mean_cost": 2.942105,
+          "mean_regret": 1.363158,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 19,
+          "state_digest": "1225e53ed90440b491c6661af0625e3a716a9b8be02ca1a4faff6ecda3cfb33f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d9c8a4dd19e18f654f2517ac10045c706640f0869c3bfb087c19c324b05145ef",
+          "doubt_signals": 163,
+          "mean_cost": 2.891228,
+          "mean_regret": 1.324561,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 20,
+          "state_digest": "11f25ad7a65f3e2e5838b2646a522912238e6cd96d92b0c22d6431e7a89e7687",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0d2334c027ca26d7f622064955c34df133d7eb7d9864b823152d60a92e2974f7",
+          "doubt_signals": 160,
+          "mean_cost": 2.866667,
+          "mean_regret": 1.308772,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 21,
+          "state_digest": "dbe2741264f67148f3e79e4fc355ef07f56b55d565658be2c402a24d632d3ad8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3bf80824cc5d77b33b4f70d25144b9c712445ad049558374703c3d2ce340b5df",
+          "doubt_signals": 154,
+          "mean_cost": 2.807018,
+          "mean_regret": 1.307018,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 22,
+          "state_digest": "7965aa32b97e4563fd273ce8f39be181fcf80fddd702f55f9caad37d37ef635d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2dc4610abbc6524d9d0171a78604653d54e9f491e382a4b9fa137191d1bed12a",
+          "doubt_signals": 163,
+          "mean_cost": 2.738596,
+          "mean_regret": 1.233333,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 23,
+          "state_digest": "7954e9aa2d8c6f065a730de3c271dd45abd577db558b5baebc0ac65a5ad4b652",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6dfddb5fc27e4c080dfd85ebaaa145aeb72eb7f772c20e142bdadeffcf7ac2e5",
+          "doubt_signals": 154,
+          "mean_cost": 2.966667,
+          "mean_regret": 1.349123,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 24,
+          "state_digest": "9cc98be00cba78ae2320dfc8ffc9399aa9292db2b9b11c24f3faa035a82a03d3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "480b942e8fd2f0f043040a6229a42351965281a95cbe6683b2d5c8e0d64cccf1",
+          "doubt_signals": 157,
+          "mean_cost": 2.984211,
+          "mean_regret": 1.389474,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 25,
+          "state_digest": "185e17b36d9e2489908c6f474d6c71b5c38a35e68285510d671a5b4137cb3bd5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "caf6f4565f7a9420557fa107216ada8fe599439a61d7efb7c8a1cf47e20d155f",
+          "doubt_signals": 166,
+          "mean_cost": 2.935088,
+          "mean_regret": 1.357895,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 26,
+          "state_digest": "d9cb31dd939efe5c5741cbac94b522008ccca76319745a290d8a3612033c46f2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ddbaf11850c078500b79faed5ee17a34199f3098fba8582a7914d7bcc88aaa99",
+          "doubt_signals": 173,
+          "mean_cost": 2.966667,
+          "mean_regret": 1.354386,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 27,
+          "state_digest": "6ac9df0d2f5bc1093472fcc62dfbc63f34a522d66a410c4b32590ed20c3610d6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "37aecfb525a6c1d5312a2f64b8404e0ef35a023b0c98d3d68cb932d13865eea8",
+          "doubt_signals": 170,
+          "mean_cost": 2.864912,
+          "mean_regret": 1.350877,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 28,
+          "state_digest": "bd57de901ea5f7eddab2cc04934056895fa997ebfbf03ec47af5832750e6921c",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2340bd952177c09d4991e491221f9eca282a13342a1b08e8924ec0c3844321e2",
+          "doubt_signals": 158,
+          "mean_cost": 2.850877,
+          "mean_regret": 1.312281,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 29,
+          "state_digest": "bd7089c95eb36c1619300ce7b1c3f3e3076e329d7bef37bf9731973159020ca8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "858ca4fdab5fe671ac3605b6b52d4a54474777231b7f4a430416bf208f05b697",
+          "doubt_signals": 147,
+          "mean_cost": 2.933333,
+          "mean_regret": 1.380702,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 30,
+          "state_digest": "418a5e2ab62a0bb4d686faf30aef4cf8feabfc426a490962ce7312e6cbc8955e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "32e87f2d53631214e0697adf1fcc6ef34e9d5df9883f4b6319adda324b61d585",
+          "doubt_signals": 147,
+          "mean_cost": 2.992982,
+          "mean_regret": 1.396491,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 31,
+          "state_digest": "0daadb7199c048d2e3c529b4f41be623d7199da6f63bb1b7157e3c819e95a474",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "20179e092bbcefed04907d39784877a56f8353cdcc7e15d6ce68115bbc129c13",
+          "doubt_signals": 151,
+          "mean_cost": 2.915789,
+          "mean_regret": 1.37193,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 32,
+          "state_digest": "68fbced6ef5ab9757fbdde0c4004517013601cfe0f7500bb5e9b25d4ce921604",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b073b83d8fe267572433a79454b680072448e4ad329ab96a00308be5153d5fae",
+          "doubt_signals": 141,
+          "mean_cost": 2.947368,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 33,
+          "state_digest": "683da2a0a5be454097b0e3268f654adb2624213d64d9c33ff813e814a855dab2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cef1b4c7711bed6f165b77697e48f6f9b1c89c443b97b422f9a9490b1ea7543c",
+          "doubt_signals": 154,
+          "mean_cost": 2.998246,
+          "mean_regret": 1.378947,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 34,
+          "state_digest": "13a99f438cccac259fa7b99b62817280eaf2bc84b7899523bf42d567be5e2f4b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8385947aea4fe0fb90c1baefbd3c4681bbc9eae9cfa6343f671a3665628a8afc",
+          "doubt_signals": 158,
+          "mean_cost": 2.919298,
+          "mean_regret": 1.403509,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 35,
+          "state_digest": "2ef0927e6fea1880fada1e7428f5449326c47e183170a64b59d371d04a219704",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8c7139f7537ac64137cbc118b9e3aaa799d0096333fc541378a8a1046667af32",
+          "doubt_signals": 156,
+          "mean_cost": 2.924561,
+          "mean_regret": 1.396491,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 36,
+          "state_digest": "f87afcabca146ec27ff1b8b8a8ff72286180d4b8d4dbca04d429e5f2cd7a9ed5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "54b56950fa8c5c2b5f1093fba3c3cf33a6071c8160f87cef811e35a38495f4c4",
+          "doubt_signals": 168,
+          "mean_cost": 2.838596,
+          "mean_regret": 1.261404,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 37,
+          "state_digest": "5befd84f56f3c03926ffe4e435436894fe503897d5bcbcd198280a2d20238a5d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9759b8b150d0200f31654d18b86429d5df8cce685c1a1fbc320af1154cfb59f7",
+          "doubt_signals": 160,
+          "mean_cost": 2.896491,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 38,
+          "state_digest": "c1bfc6cfb87f61880b54fcba54796bb8d53b11ea9eaa71ac05096646f5c66189",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c7cf63e6e11ab6b05c67383026074c7b488667561308c62661ca9977d665122d",
+          "doubt_signals": 170,
+          "mean_cost": 2.957895,
+          "mean_regret": 1.412281,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 39,
+          "state_digest": "91498b6950344306c5ab3e6be2f4d41b6ec8066f629da9187a08e616095e690d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9b5092fb8df5578e07366c335de5413ba4fdc7a38ff4efb29b6c62f59f655459",
+          "doubt_signals": 169,
+          "mean_cost": 2.873684,
+          "mean_regret": 1.335088,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 40,
+          "state_digest": "ccb4e79c60d1a04b0b357279103855fca117def5c8bd950f5978c857e8ab9976",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ca663d841b1d61f6da6077cf724a1daced2d65e5d02939aece56d1a7762ab56c",
+          "doubt_signals": 141,
+          "mean_cost": 2.910526,
+          "mean_regret": 1.385965,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 41,
+          "state_digest": "eab492794d0afda2a87799442bfd2a7bf5725a6e83156d292fc25ef9ce7cc824",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "be3f14544685de8bfcacfc63ecbcfeb944ff1c50cd8afadb8959bede074e1c47",
+          "doubt_signals": 167,
+          "mean_cost": 2.908772,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 42,
+          "state_digest": "67c3470bd790d7c4b5b4dd5bd7c70314b837f4ace1054366074f502842f8cf18",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "928f045583f861286ca8e5371888b13656b653a5964db70481293a02df938535",
+          "doubt_signals": 154,
+          "mean_cost": 2.908772,
+          "mean_regret": 1.368421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 43,
+          "state_digest": "9b68155c9ae9e812979ad20fcfca194b34073e7b9685e8d24589ab1cd4775111",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1d361708dce9bef0c42b62e00c4880bc83251e612fb7eb676e5f473d67e30147",
+          "doubt_signals": 181,
+          "mean_cost": 3.059649,
+          "mean_regret": 1.447368,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 44,
+          "state_digest": "bff114e5da715b0fb872b2bb5f67dcde822e9e518bba0b1a098dffb8ff1f1023",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8a9d3f2faa528436d56aefa72fd235381b0331d2639c7b7f182498303705fc0c",
+          "doubt_signals": 157,
+          "mean_cost": 2.889474,
+          "mean_regret": 1.385965,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 45,
+          "state_digest": "d9f179a14287f0b7ec98d5bdeb3def3ffc723a91ee4b50ce66a7f1ede99a2108",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d26565f44adfc472cecf26c8cd0f812c6f7a746137d459264a951944028a58f7",
+          "doubt_signals": 153,
+          "mean_cost": 2.882456,
+          "mean_regret": 1.354386,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 46,
+          "state_digest": "8720632d496f6919e45c1eda6f7851fc9360a95243d1e6afa235804845a790bb",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "daa92d09e72c64a5c99ffd0eb7ad4f8821e9a77895e5771b0046527d3aafc007",
+          "doubt_signals": 162,
+          "mean_cost": 2.977193,
+          "mean_regret": 1.42807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 47,
+          "state_digest": "aef426a6d4b354135d3819a1113b637c940e49f52774bf27a3b0bfee52d062a2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f6f8973542ff05aaeef218325f25682baad48249ddb7c1a09988bcb34432beef",
+          "doubt_signals": 165,
+          "mean_cost": 2.85614,
+          "mean_regret": 1.336842,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 48,
+          "state_digest": "f6f91aadb04bd7b564155098e4041388e475b8b517888f0f67eb917f1d3d59d2",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9439d5a287beb8870cc6786477e0e693dfe01f4b7fd828f3c02f6ec722db6bcf",
+          "doubt_signals": 161,
+          "mean_cost": 2.822807,
+          "mean_regret": 1.331579,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 49,
+          "state_digest": "dc9ead19c960f5b0a1f8f883f94bbc0b2667e5c92f4ee03c73059a488a4c72bc",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ccfb47f381319a9cc4d143244aca355ea91f61e5c568145f0c9212232343e86d",
+          "doubt_signals": 155,
+          "mean_cost": 2.942105,
+          "mean_regret": 1.368421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 50,
+          "state_digest": "764446fc2636645a7de0d970a26973d774bc55600596eda389bea6e5e2770033",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "54fb6f57d665031b95da5d13121f35b2949d188bfc1e96a034dd65462c907763",
+          "doubt_signals": 166,
+          "mean_cost": 3.050877,
+          "mean_regret": 1.47193,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 51,
+          "state_digest": "8066f21f6c5a5f335a655a838aa819eb23451b22dc1aa3b88417cb012d54f1db",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "98c9aeef67341e71c0469f632ab59b85baf2fb7af53ee5f4cf3439ff17637645",
+          "doubt_signals": 172,
+          "mean_cost": 2.849123,
+          "mean_regret": 1.278947,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 52,
+          "state_digest": "4d2d4783aad503c706b6f5a7154d64dc4929cf5b52864d06211aaa05578f1759",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "89071b087d794988c0c267233a9424e3572829874795913c8c2887363c61c716",
+          "doubt_signals": 160,
+          "mean_cost": 3.049123,
+          "mean_regret": 1.452632,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 53,
+          "state_digest": "5e5ee49536ec4779bf3ec09a5965b3d840ebd4ca63447bba12ebba1e1cf9f5c1",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "51c3d97205b2d5d998cbd17f5f62bca8449ccb5839be80e3e43d820c9b9dffc4",
+          "doubt_signals": 149,
+          "mean_cost": 2.901754,
+          "mean_regret": 1.349123,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 54,
+          "state_digest": "fbd72b816c589a79d32077539a069a95e6e2b82340b22f02a599b7e8e2615bc0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b59a50a81dd33eb3f9600c4810ce888f59fad3b8921c55876c7bac0f963fb63b",
+          "doubt_signals": 167,
+          "mean_cost": 2.808772,
+          "mean_regret": 1.275439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 55,
+          "state_digest": "166a6ebe1557afaa79f1be9542c2c8c2d5bb9c3d778d31d3cf7912ad6baaab99",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c37ba84dfc9a8700c4e71f76836c9205300f05034981108dd0d77c888efce658",
+          "doubt_signals": 164,
+          "mean_cost": 2.850877,
+          "mean_regret": 1.266667,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 56,
+          "state_digest": "9b68380fd3a71c5816c0b7bf43b34544f6803b05e5b3dedf1c156d76425f8e0a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "43ee46d8b886e583b49cecb4797ad46de5bc20f1b282d3dd66aec1e3998d5123",
+          "doubt_signals": 166,
+          "mean_cost": 2.836842,
+          "mean_regret": 1.268421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 57,
+          "state_digest": "9b8d98414f28bcbb5a588ea6396cf16a2e3a900fb5da92249c2a2350258da74b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cb523af6dc082726fd5ff5b19d59c81eac01f979c88ee39ec02dfa6cbf9727fb",
+          "doubt_signals": 151,
+          "mean_cost": 2.794737,
+          "mean_regret": 1.245614,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 58,
+          "state_digest": "e1d2f2935c84c88ae725216f6f5e1926fcb8fbc286d1cdd819692d81fd43ff92",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "66a5a25bc3957e5e961d41dba5bbd087adee6351a04981f802522cadce1f56ff",
+          "doubt_signals": 159,
+          "mean_cost": 2.8,
+          "mean_regret": 1.303509,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 59,
+          "state_digest": "4020453ba2793a6cf4872a97e114f25e983aa4f8a679083ad2ec9c6c45b2c7bf",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ff24944ee76e179d0be2239535787329ef3a2fa5c90544206dccdba4e1a4b7a8",
+          "doubt_signals": 161,
+          "mean_cost": 2.9,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 60,
+          "state_digest": "9abfa6df1b3a175995b230e1694060438f40bc586b9edce10c52bf7a64c16090",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0526446cd63f6849bfa03d207836af65365d5ad03c1182369a7015c330b89e0f",
+          "doubt_signals": 170,
+          "mean_cost": 2.835088,
+          "mean_regret": 1.354386,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 61,
+          "state_digest": "6cb8a3d84158fa4f2ab1489dbe658f10f71f187101cf90f3d0400dd494ed0945",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e0c920525d757427fd5ac0ad74a7dbad2f7d3fd3d40582e5f0ca61f5a20e13ec",
+          "doubt_signals": 150,
+          "mean_cost": 2.94386,
+          "mean_regret": 1.380702,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 62,
+          "state_digest": "36d4a11ed2b18113afe201061d48da6c32dd08185c50b4b08cc0bca762f594de",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3181fb9823ecb605db2b5782b440443bcc8d1b775aeb64b8d1d279eeaaff4c1f",
+          "doubt_signals": 159,
+          "mean_cost": 2.777193,
+          "mean_regret": 1.214035,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 63,
+          "state_digest": "a3ccc1788a8cfb8d438b2e563172901614ca9fc90bf893e3ba68836788725515",
+          "updates": 600
+        }
+      ],
+      "R_no_feedback": [
+        {
+          "action_outcome_digest": "f5836e7d0d4108d11809995e5fbb3ac8875c76f519884df8be4d550c42b0158b",
+          "doubt_signals": 165,
+          "mean_cost": 3.001754,
+          "mean_regret": 1.361404,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 0,
+          "state_digest": "7f8210312534e64455da2d755c9ae089e23e72aaa2d92934c076a59fd7828cb8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "828b06f00be2e84ac7b0bbcf0b4b0af38307e970a45897e37aabf60641ab1db2",
+          "doubt_signals": 151,
+          "mean_cost": 2.975439,
+          "mean_regret": 1.412281,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 1,
+          "state_digest": "f7447d51328f80b8311dd16051b4bc97b6265bc9b312147d6c3aa46ec7a65794",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cbc5af0e1d82a1da8785624eecc8f1c3415829075205b73c5c8ef23995d06beb",
+          "doubt_signals": 170,
+          "mean_cost": 2.831579,
+          "mean_regret": 1.301754,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 2,
+          "state_digest": "75e53e197d804ff6f735f8e928bbd474852a1d5aa4c5912c830e8dfc7087bba5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d89ff746001425476b16fd136b520e93464f152933def139497e533b50e7cb4c",
+          "doubt_signals": 162,
+          "mean_cost": 2.894737,
+          "mean_regret": 1.326316,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 3,
+          "state_digest": "8852562db31c7402353052fcc198b69c1a3d50929e7df3b8e89dd5f2a8fd3b98",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "5f3519dd1215cf7453c832b40d1cff5e964833f2ad997e72d1d458fd60ca8539",
+          "doubt_signals": 159,
+          "mean_cost": 2.915789,
+          "mean_regret": 1.382456,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 4,
+          "state_digest": "56a6191775a2dca12308e089db74c9913035f044d512d4c8e3fba3f288a9fb72",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d3c6d1fbe1f387c090c2e0e79225cfa5d0081f11506f9e932365f684522ebc7a",
+          "doubt_signals": 158,
+          "mean_cost": 2.9,
+          "mean_regret": 1.331579,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 5,
+          "state_digest": "c44455539fa59d6e452d95f8781d82eb8c84ec07798428fb169b6d6c81d1f7c3",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "066e5ff565d76dcc68e4a2fe8248080d415008129f48d6ec02c7c29ffaa2bf3b",
+          "doubt_signals": 151,
+          "mean_cost": 2.878947,
+          "mean_regret": 1.338596,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 6,
+          "state_digest": "2d4f01b72a9c6856d7fcbba589ba4d9e19207c16a091eaa5b464ec3a21a41f29",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b27480368e264b37f19e20171f2f280a8fa640a29d7d9da5eb8ae6f812657c68",
+          "doubt_signals": 153,
+          "mean_cost": 2.912281,
+          "mean_regret": 1.366667,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 7,
+          "state_digest": "1deff7b53e9be62a96766918ad389d6e5a0dbbddf18f31ff573406218a358017",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "66be1dad6b74a9aca83752593652259180c48e10f4a1a674bd302db4e1ce698f",
+          "doubt_signals": 162,
+          "mean_cost": 3.035088,
+          "mean_regret": 1.392982,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 8,
+          "state_digest": "bef8602d93403035384d5f690cc4d21077b73b73e02ef3b01a7fed37ac8e2d9f",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "bd99217dfe706a2477a1293116bf814ceb7656eab2e8c60786d3de51ad3ceace",
+          "doubt_signals": 168,
+          "mean_cost": 2.864912,
+          "mean_regret": 1.347368,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 9,
+          "state_digest": "3de8c77619d4c7e8ddfa38d69d67140504ab8c712b51e34c0e99bac02904e6ff",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "65422a0723b1999dc74608ac3197635e289311cead15ba1ff95b41698bd98f7a",
+          "doubt_signals": 159,
+          "mean_cost": 3.091228,
+          "mean_regret": 1.5,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 10,
+          "state_digest": "99cb497329f2116129b1fb88fb4e812677ebc635618d259d7e7295cecf467d92",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c76dfbd90774f617e79085c3bfab9622f4a51b1c6e0e70985f0a0b84fd06488e",
+          "doubt_signals": 166,
+          "mean_cost": 2.836842,
+          "mean_regret": 1.314035,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 11,
+          "state_digest": "622fe3d1e8795d19480a876aed6f17adae5e1330260b58a0e7dfba35ac31dfb5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6ab4f28ff3a18c859a89afedcc67105d929cecc605c46f47edd8f73289e80548",
+          "doubt_signals": 161,
+          "mean_cost": 2.840351,
+          "mean_regret": 1.252632,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 12,
+          "state_digest": "a9ec9437715d821a95dd589c413564d85a02b90e5090fac4c35d1adac8bf21b6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "a9c45e77dd3a5a3a262e1529002289b9acb724a02781f5eea79e1cd7dcb802b1",
+          "doubt_signals": 156,
+          "mean_cost": 2.803509,
+          "mean_regret": 1.298246,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 13,
+          "state_digest": "b0ee9632b87ee2d4927744a1a67054700eaec664d102496da182b120ee52bee4",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9684d01e0f39380087935cb0512b84d34394d6f1a10f0202a2faca4961cf93ba",
+          "doubt_signals": 148,
+          "mean_cost": 2.878947,
+          "mean_regret": 1.391228,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 14,
+          "state_digest": "fdadbeeb6b5d0a3b2127cf95da434b8d77c1c69528ea69222e8a06748d06a212",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8aeb7b42bc005d5c89e1574a1baa07a0cfc02d06f8d4bbb798f643245a9517f0",
+          "doubt_signals": 149,
+          "mean_cost": 2.950877,
+          "mean_regret": 1.398246,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 15,
+          "state_digest": "a6d230af7a28d832ae8eec719a96bd41f92299d4b05b854ca050848faa54a4aa",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fdec38548abf8926f3b0ee4717ffbe6a093c3edf731c21ce3ce8bf78161ec2a2",
+          "doubt_signals": 164,
+          "mean_cost": 3.087719,
+          "mean_regret": 1.505263,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 16,
+          "state_digest": "115f76db3ba5608fb618a830c6a74901ed34de70c003a744136d9c2243c2ad0e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "fb71f708f0cef9c730998d449287370315eff11d46e4ebae218f36f192bfcf7f",
+          "doubt_signals": 148,
+          "mean_cost": 2.738596,
+          "mean_regret": 1.17193,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 17,
+          "state_digest": "b43716182a5dee53e7a568d2f6fdfaa538352c395997a0e472d6723b3620695b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "17b7c98129aad966ddac6f618a78e08dfe0131c8ab6c11ab4d3d785b8fc02dbb",
+          "doubt_signals": 152,
+          "mean_cost": 2.994737,
+          "mean_regret": 1.42807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 18,
+          "state_digest": "a2fcdda2bc140d41388292aaa1bd181564e98b17dfba994cb27259e73d4436ba",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3124f9d0ea792e6d806543844d91286279569560f91d5413b9511399335b6ab1",
+          "doubt_signals": 154,
+          "mean_cost": 2.942105,
+          "mean_regret": 1.363158,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 19,
+          "state_digest": "7bebf01b8bf659c267f0d16567ef215aefe7e12840d5a391ef7c48158e3c3be6",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d9c8a4dd19e18f654f2517ac10045c706640f0869c3bfb087c19c324b05145ef",
+          "doubt_signals": 163,
+          "mean_cost": 2.891228,
+          "mean_regret": 1.324561,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 20,
+          "state_digest": "9f9503f449a78efb5dcf653bcf85abffb1c0c23a4be0a6ac1ff7e58d934cb3ec",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0d2334c027ca26d7f622064955c34df133d7eb7d9864b823152d60a92e2974f7",
+          "doubt_signals": 160,
+          "mean_cost": 2.866667,
+          "mean_regret": 1.308772,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 21,
+          "state_digest": "9580ab462948784cad9dee39513ae8794fb1de668dd12ef5d918a59087056b89",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3bf80824cc5d77b33b4f70d25144b9c712445ad049558374703c3d2ce340b5df",
+          "doubt_signals": 154,
+          "mean_cost": 2.807018,
+          "mean_regret": 1.307018,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 22,
+          "state_digest": "30b04aae7841265ba8345073734969061693dc8d8e899bb4658d7da6a58d8252",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2dc4610abbc6524d9d0171a78604653d54e9f491e382a4b9fa137191d1bed12a",
+          "doubt_signals": 163,
+          "mean_cost": 2.738596,
+          "mean_regret": 1.233333,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 23,
+          "state_digest": "2dba174ccb52099a1cfdcfd5373fc9b5b5dbdf70ddce7c164db0614c53e27b96",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "6dfddb5fc27e4c080dfd85ebaaa145aeb72eb7f772c20e142bdadeffcf7ac2e5",
+          "doubt_signals": 154,
+          "mean_cost": 2.966667,
+          "mean_regret": 1.349123,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 24,
+          "state_digest": "16ec86d11992818909a8995a5fef0b3b6558c50082d8fc32667506f022a92b33",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "480b942e8fd2f0f043040a6229a42351965281a95cbe6683b2d5c8e0d64cccf1",
+          "doubt_signals": 157,
+          "mean_cost": 2.984211,
+          "mean_regret": 1.389474,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 25,
+          "state_digest": "8172acd852c0964513cb92c42d6b2612f6def691e3d9788309eb442839491f19",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "caf6f4565f7a9420557fa107216ada8fe599439a61d7efb7c8a1cf47e20d155f",
+          "doubt_signals": 166,
+          "mean_cost": 2.935088,
+          "mean_regret": 1.357895,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 26,
+          "state_digest": "ff45c66aebcfb7a71669889c22cfcfa991533766a131c5b6b6eaa74737e3179b",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ddbaf11850c078500b79faed5ee17a34199f3098fba8582a7914d7bcc88aaa99",
+          "doubt_signals": 173,
+          "mean_cost": 2.966667,
+          "mean_regret": 1.354386,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 27,
+          "state_digest": "7a277f42e1c49f73b4428b1bd3f274f48ea9acbdae5778eb8a28290890c360c9",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "37aecfb525a6c1d5312a2f64b8404e0ef35a023b0c98d3d68cb932d13865eea8",
+          "doubt_signals": 170,
+          "mean_cost": 2.864912,
+          "mean_regret": 1.350877,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 28,
+          "state_digest": "cdead5359bb6f6c6ef6dda2942b03b887be87f30498e3b79b5438fe6749c4096",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "2340bd952177c09d4991e491221f9eca282a13342a1b08e8924ec0c3844321e2",
+          "doubt_signals": 158,
+          "mean_cost": 2.850877,
+          "mean_regret": 1.312281,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 29,
+          "state_digest": "5fe9fe90ae53a29d2bebf23015db3430a598e4c8edf3a0ef0077c609b33cd442",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "858ca4fdab5fe671ac3605b6b52d4a54474777231b7f4a430416bf208f05b697",
+          "doubt_signals": 147,
+          "mean_cost": 2.933333,
+          "mean_regret": 1.380702,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 30,
+          "state_digest": "7d716e462b29db232a7e1b18f8140059838d5246ac07c49e4b0909913ced55c5",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "32e87f2d53631214e0697adf1fcc6ef34e9d5df9883f4b6319adda324b61d585",
+          "doubt_signals": 147,
+          "mean_cost": 2.992982,
+          "mean_regret": 1.396491,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 31,
+          "state_digest": "11bdf3f0de07d3d1641611a04bb0df2bfef97f2ca5b7d53614b977979fc775ea",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "20179e092bbcefed04907d39784877a56f8353cdcc7e15d6ce68115bbc129c13",
+          "doubt_signals": 151,
+          "mean_cost": 2.915789,
+          "mean_regret": 1.37193,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 32,
+          "state_digest": "69759a65d81df6418f8b7202103aaff5c652852a324a24f4fd3ff440f0425f09",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b073b83d8fe267572433a79454b680072448e4ad329ab96a00308be5153d5fae",
+          "doubt_signals": 141,
+          "mean_cost": 2.947368,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 33,
+          "state_digest": "bf700b206a79101b76a64e2d9df4342aed7d1e4e7cb02ddb78f760883264f362",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cef1b4c7711bed6f165b77697e48f6f9b1c89c443b97b422f9a9490b1ea7543c",
+          "doubt_signals": 154,
+          "mean_cost": 2.998246,
+          "mean_regret": 1.378947,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 34,
+          "state_digest": "285a97182d25e9c7806eff031afd0b383b1608ec0ebf978d23368200571dad9e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8385947aea4fe0fb90c1baefbd3c4681bbc9eae9cfa6343f671a3665628a8afc",
+          "doubt_signals": 158,
+          "mean_cost": 2.919298,
+          "mean_regret": 1.403509,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 35,
+          "state_digest": "3b4eb456043ba0261912c775224ecc32e4516a0b90c7af5d4c8f0126baa89339",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8c7139f7537ac64137cbc118b9e3aaa799d0096333fc541378a8a1046667af32",
+          "doubt_signals": 156,
+          "mean_cost": 2.924561,
+          "mean_regret": 1.396491,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 36,
+          "state_digest": "d6688fc68e7db31ed9a99b39a19b6d3466e33f09f188ca2a820238adb382951d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "54b56950fa8c5c2b5f1093fba3c3cf33a6071c8160f87cef811e35a38495f4c4",
+          "doubt_signals": 168,
+          "mean_cost": 2.838596,
+          "mean_regret": 1.261404,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 37,
+          "state_digest": "cd011e71a774b5f8bda52ae12518a6624bda5d0c2b2b7621d72e865d74197010",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9759b8b150d0200f31654d18b86429d5df8cce685c1a1fbc320af1154cfb59f7",
+          "doubt_signals": 160,
+          "mean_cost": 2.896491,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 38,
+          "state_digest": "0ae51ae2dfcaa09a55cabe5bc90188c1df0bc8e77f6d164d7d8e9733deda04c1",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c7cf63e6e11ab6b05c67383026074c7b488667561308c62661ca9977d665122d",
+          "doubt_signals": 170,
+          "mean_cost": 2.957895,
+          "mean_regret": 1.412281,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 39,
+          "state_digest": "4d9c944edef14d4921d6a26811fa41f4277aeaf74533e56ee6c9ec461639ce55",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9b5092fb8df5578e07366c335de5413ba4fdc7a38ff4efb29b6c62f59f655459",
+          "doubt_signals": 169,
+          "mean_cost": 2.873684,
+          "mean_regret": 1.335088,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 40,
+          "state_digest": "5f47d28cac6c732172226e2d491b014c627d04bd6981a211c85803ad6da03d7e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ca663d841b1d61f6da6077cf724a1daced2d65e5d02939aece56d1a7762ab56c",
+          "doubt_signals": 141,
+          "mean_cost": 2.910526,
+          "mean_regret": 1.385965,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 41,
+          "state_digest": "06a51406f7f83da14697cf4d220055a73a12d068651a130c257b50564c6bdd72",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "be3f14544685de8bfcacfc63ecbcfeb944ff1c50cd8afadb8959bede074e1c47",
+          "doubt_signals": 167,
+          "mean_cost": 2.908772,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 42,
+          "state_digest": "a8fb0f2bda40a56f2e5666a12b978c5a51155d29a5b955588f67e6ac8481cd45",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "928f045583f861286ca8e5371888b13656b653a5964db70481293a02df938535",
+          "doubt_signals": 154,
+          "mean_cost": 2.908772,
+          "mean_regret": 1.368421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 43,
+          "state_digest": "923bbab36ccc691405f63d4467a34a0110dbf80434a9ae14442dbb856f936d2a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "1d361708dce9bef0c42b62e00c4880bc83251e612fb7eb676e5f473d67e30147",
+          "doubt_signals": 181,
+          "mean_cost": 3.059649,
+          "mean_regret": 1.447368,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 44,
+          "state_digest": "58b4738017127ca32a62a2261bff550f8833e8f835666c620f926f99127c4d03",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "8a9d3f2faa528436d56aefa72fd235381b0331d2639c7b7f182498303705fc0c",
+          "doubt_signals": 157,
+          "mean_cost": 2.889474,
+          "mean_regret": 1.385965,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 45,
+          "state_digest": "a845362fc6e8b5a59227c7be90b5ccbbf368148b8b6b42d053de84929bb3bb7a",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "d26565f44adfc472cecf26c8cd0f812c6f7a746137d459264a951944028a58f7",
+          "doubt_signals": 153,
+          "mean_cost": 2.882456,
+          "mean_regret": 1.354386,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 46,
+          "state_digest": "00a9cae77050ed2d47ac533407465df7503fb079b4613ab8f180dbcf6c9d9d39",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "daa92d09e72c64a5c99ffd0eb7ad4f8821e9a77895e5771b0046527d3aafc007",
+          "doubt_signals": 162,
+          "mean_cost": 2.977193,
+          "mean_regret": 1.42807,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 47,
+          "state_digest": "48a725c16085298d638864991e334530e9a5a598447dd974c0fd6f6c2513cca9",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "f6f8973542ff05aaeef218325f25682baad48249ddb7c1a09988bcb34432beef",
+          "doubt_signals": 165,
+          "mean_cost": 2.85614,
+          "mean_regret": 1.336842,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 48,
+          "state_digest": "2ed1e9f6376adcf486bbc13b6addddd836b0d9088871e23813188f36bf6e18cc",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "9439d5a287beb8870cc6786477e0e693dfe01f4b7fd828f3c02f6ec722db6bcf",
+          "doubt_signals": 161,
+          "mean_cost": 2.822807,
+          "mean_regret": 1.331579,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 49,
+          "state_digest": "62cd80a1a3f198eaa0dea0319602e1026159941e1125cdbeda7b254193723d53",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ccfb47f381319a9cc4d143244aca355ea91f61e5c568145f0c9212232343e86d",
+          "doubt_signals": 155,
+          "mean_cost": 2.942105,
+          "mean_regret": 1.368421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 50,
+          "state_digest": "57802f46934d3d1351c45c8bc53b0ecbce3194ba6ccff99926ebc809176f3fa9",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "54fb6f57d665031b95da5d13121f35b2949d188bfc1e96a034dd65462c907763",
+          "doubt_signals": 166,
+          "mean_cost": 3.050877,
+          "mean_regret": 1.47193,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 51,
+          "state_digest": "6b82819e1e7f3a03040f2574bc0a7f2dfb3654ccead69a8ec68674afdf56b4e1",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "98c9aeef67341e71c0469f632ab59b85baf2fb7af53ee5f4cf3439ff17637645",
+          "doubt_signals": 172,
+          "mean_cost": 2.849123,
+          "mean_regret": 1.278947,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 52,
+          "state_digest": "10ff2f6c735b17b5c23b435dfda5781bd7665107a641325907b023d974e6a7a0",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "89071b087d794988c0c267233a9424e3572829874795913c8c2887363c61c716",
+          "doubt_signals": 160,
+          "mean_cost": 3.049123,
+          "mean_regret": 1.452632,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 53,
+          "state_digest": "fd8aabc422faa3ca50d2f33e2b12f35678e28f486e3b67a2452796cd7fa9a674",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "51c3d97205b2d5d998cbd17f5f62bca8449ccb5839be80e3e43d820c9b9dffc4",
+          "doubt_signals": 149,
+          "mean_cost": 2.901754,
+          "mean_regret": 1.349123,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 54,
+          "state_digest": "440d0f808546976a5a210f06449f3ec58ee85e065ff01c77db9606e0d7dbee17",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "b59a50a81dd33eb3f9600c4810ce888f59fad3b8921c55876c7bac0f963fb63b",
+          "doubt_signals": 167,
+          "mean_cost": 2.808772,
+          "mean_regret": 1.275439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 55,
+          "state_digest": "f40b349153ed7bd20ae4792f1fab1c1c66abaebfcc1f444a7fdf585a31bc6945",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "c37ba84dfc9a8700c4e71f76836c9205300f05034981108dd0d77c888efce658",
+          "doubt_signals": 164,
+          "mean_cost": 2.850877,
+          "mean_regret": 1.266667,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 56,
+          "state_digest": "a2b4b23d076134b4326a6a47d54be263da2a6447f3d77ff70f2ddfba31cf7f6d",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "43ee46d8b886e583b49cecb4797ad46de5bc20f1b282d3dd66aec1e3998d5123",
+          "doubt_signals": 166,
+          "mean_cost": 2.836842,
+          "mean_regret": 1.268421,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 57,
+          "state_digest": "f6bf5d8f6b6ed1f30161df8a71663ccec2892cd754bf3001b720224a2a12f6f8",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "cb523af6dc082726fd5ff5b19d59c81eac01f979c88ee39ec02dfa6cbf9727fb",
+          "doubt_signals": 151,
+          "mean_cost": 2.794737,
+          "mean_regret": 1.245614,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 58,
+          "state_digest": "ab5be3eda9b93928a0f51dd555c304c207648729787e85c1d73789834d13c705",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "66a5a25bc3957e5e961d41dba5bbd087adee6351a04981f802522cadce1f56ff",
+          "doubt_signals": 159,
+          "mean_cost": 2.8,
+          "mean_regret": 1.303509,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 59,
+          "state_digest": "ac424da244a8f92989479d20b3d721d7cd8df771c55d69f9cde5b0010792670e",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "ff24944ee76e179d0be2239535787329ef3a2fa5c90544206dccdba4e1a4b7a8",
+          "doubt_signals": 161,
+          "mean_cost": 2.9,
+          "mean_regret": 1.375439,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 60,
+          "state_digest": "80935801d950c62715ede937b1faaf37ca582015b0e87c8eed5c2896f57e8cab",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "0526446cd63f6849bfa03d207836af65365d5ad03c1182369a7015c330b89e0f",
+          "doubt_signals": 170,
+          "mean_cost": 2.835088,
+          "mean_regret": 1.354386,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 61,
+          "state_digest": "8f039bcb19e828d3e14a13057796955d7a18d75fa1267aaf8e0a7232302276a1",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "e0c920525d757427fd5ac0ad74a7dbad2f7d3fd3d40582e5f0ca61f5a20e13ec",
+          "doubt_signals": 150,
+          "mean_cost": 2.94386,
+          "mean_regret": 1.380702,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 62,
+          "state_digest": "dce2b83473ac6f0bf91acd929724aba680248c8e81febee96d7b189189abd622",
+          "updates": 600
+        },
+        {
+          "action_outcome_digest": "3181fb9823ecb605db2b5782b440443bcc8d1b775aeb64b8d1d279eeaaff4c1f",
+          "doubt_signals": 159,
+          "mean_cost": 2.777193,
+          "mean_regret": 1.214035,
+          "policy_changes": 0,
+          "reads": 0,
+          "reviews": 0,
+          "seed": 63,
+          "state_digest": "cd370c6712423fc4409d7b17d34f5545cc8956cb720e408a1f766f53f3897db5",
+          "updates": 600
+        }
+      ]
+    }
+  },
+  "simulation": {
+    "arms": [
+      "common_history",
+      "closed_loop"
+    ],
+    "controllers": [
+      "R",
+      "B_event",
+      "B_adaptive",
+      "R_no_feedback",
+      "R_label_only"
+    ],
+    "episodes": 600,
+    "internal_regulator": "doubt signal triggers review in R",
+    "mode_switch_episode": 300,
+    "objective": "minimize conditional delay",
+    "seed_count": 64,
+    "seeds": [
+      0,
+      63
+    ],
+    "warmup_episodes": 30
+  },
+  "summaries": {
+    "closed_loop": {
+      "B_adaptive": {
+        "max_cost": 2.133333,
+        "max_state_cells": 6,
+        "mean_cost": 2.032319,
+        "mean_cost_post_shift": 2.061667,
+        "mean_cost_pre_shift": 1.999711,
+        "mean_doubt_signals": 160.75,
+        "mean_policy_changes": 0.0,
+        "mean_reads": 1800.0,
+        "mean_recommendation_changes": 12.3125,
+        "mean_regret": 0.478838,
+        "mean_regret_post_shift": 0.511094,
+        "mean_regret_pre_shift": 0.442998,
+        "mean_reviews": 0.0,
+        "min_cost": 1.903509,
+        "runs": 64
+      },
+      "B_event": {
+        "max_cost": 2.145614,
+        "max_state_cells": 8,
+        "mean_cost": 2.037884,
+        "mean_cost_post_shift": 2.06026,
+        "mean_cost_pre_shift": 2.013021,
+        "mean_doubt_signals": 160.890625,
+        "mean_policy_changes": 8.765625,
+        "mean_reads": 482.671875,
+        "mean_recommendation_changes": 8.75,
+        "mean_regret": 0.484402,
+        "mean_regret_post_shift": 0.509687,
+        "mean_regret_pre_shift": 0.456308,
+        "mean_reviews": 160.890625,
+        "min_cost": 1.905263,
+        "runs": 64
+      },
+      "R": {
+        "max_cost": 2.145614,
+        "max_state_cells": 8,
+        "mean_cost": 2.037884,
+        "mean_cost_post_shift": 2.06026,
+        "mean_cost_pre_shift": 2.013021,
+        "mean_doubt_signals": 160.890625,
+        "mean_policy_changes": 8.765625,
+        "mean_reads": 482.671875,
+        "mean_recommendation_changes": 8.75,
+        "mean_regret": 0.484402,
+        "mean_regret_post_shift": 0.509687,
+        "mean_regret_pre_shift": 0.456308,
+        "mean_reviews": 160.890625,
+        "min_cost": 1.905263,
+        "runs": 64
+      },
+      "R_label_only": {
+        "max_cost": 3.875439,
+        "max_state_cells": 8,
+        "mean_cost": 3.623986,
+        "mean_cost_post_shift": 3.396563,
+        "mean_cost_pre_shift": 3.876678,
+        "mean_doubt_signals": 150.71875,
+        "mean_policy_changes": 0.0,
+        "mean_reads": 0.0,
+        "mean_recommendation_changes": 0.0,
+        "mean_regret": 2.070504,
+        "mean_regret_post_shift": 1.84599,
+        "mean_regret_pre_shift": 2.319965,
+        "mean_reviews": 0.0,
+        "min_cost": 3.319298,
+        "runs": 64
+      },
+      "R_no_feedback": {
+        "max_cost": 3.875439,
+        "max_state_cells": 8,
+        "mean_cost": 3.623986,
+        "mean_cost_post_shift": 3.396563,
+        "mean_cost_pre_shift": 3.876678,
+        "mean_doubt_signals": 150.71875,
+        "mean_policy_changes": 0.0,
+        "mean_reads": 0.0,
+        "mean_recommendation_changes": 0.0,
+        "mean_regret": 2.070504,
+        "mean_regret_post_shift": 1.84599,
+        "mean_regret_pre_shift": 2.319965,
+        "mean_reviews": 0.0,
+        "min_cost": 3.319298,
+        "runs": 64
+      }
+    },
+    "common_history": {
+      "B_adaptive": {
+        "max_cost": 3.091228,
+        "max_state_cells": 6,
+        "mean_cost": 2.906277,
+        "mean_cost_post_shift": 2.825208,
+        "mean_cost_pre_shift": 2.996354,
+        "mean_doubt_signals": 159.140625,
+        "mean_policy_changes": 0.0,
+        "mean_reads": 1800.0,
+        "mean_recommendation_changes": 24.9375,
+        "mean_regret": 1.352796,
+        "mean_regret_post_shift": 1.274635,
+        "mean_regret_pre_shift": 1.439641,
+        "mean_reviews": 0.0,
+        "min_cost": 2.738596,
+        "runs": 64
+      },
+      "B_event": {
+        "max_cost": 3.091228,
+        "max_state_cells": 8,
+        "mean_cost": 2.906277,
+        "mean_cost_post_shift": 2.825208,
+        "mean_cost_pre_shift": 2.996354,
+        "mean_doubt_signals": 159.140625,
+        "mean_policy_changes": 15.234375,
+        "mean_reads": 477.421875,
+        "mean_recommendation_changes": 15.203125,
+        "mean_regret": 1.352796,
+        "mean_regret_post_shift": 1.274635,
+        "mean_regret_pre_shift": 1.439641,
+        "mean_reviews": 159.140625,
+        "min_cost": 2.738596,
+        "runs": 64
+      },
+      "R": {
+        "max_cost": 3.091228,
+        "max_state_cells": 8,
+        "mean_cost": 2.906277,
+        "mean_cost_post_shift": 2.825208,
+        "mean_cost_pre_shift": 2.996354,
+        "mean_doubt_signals": 159.140625,
+        "mean_policy_changes": 15.234375,
+        "mean_reads": 477.421875,
+        "mean_recommendation_changes": 15.203125,
+        "mean_regret": 1.352796,
+        "mean_regret_post_shift": 1.274635,
+        "mean_regret_pre_shift": 1.439641,
+        "mean_reviews": 159.140625,
+        "min_cost": 2.738596,
+        "runs": 64
+      },
+      "R_label_only": {
+        "max_cost": 3.091228,
+        "max_state_cells": 8,
+        "mean_cost": 2.906277,
+        "mean_cost_post_shift": 2.825208,
+        "mean_cost_pre_shift": 2.996354,
+        "mean_doubt_signals": 159.140625,
+        "mean_policy_changes": 0.0,
+        "mean_reads": 0.0,
+        "mean_recommendation_changes": 0.0,
+        "mean_regret": 1.352796,
+        "mean_regret_post_shift": 1.274635,
+        "mean_regret_pre_shift": 1.439641,
+        "mean_reviews": 0.0,
+        "min_cost": 2.738596,
+        "runs": 64
+      },
+      "R_no_feedback": {
+        "max_cost": 3.091228,
+        "max_state_cells": 8,
+        "mean_cost": 2.906277,
+        "mean_cost_post_shift": 2.825208,
+        "mean_cost_pre_shift": 2.996354,
+        "mean_doubt_signals": 159.140625,
+        "mean_policy_changes": 0.0,
+        "mean_reads": 0.0,
+        "mean_recommendation_changes": 0.0,
+        "mean_regret": 1.352796,
+        "mean_regret_post_shift": 1.274635,
+        "mean_regret_pre_shift": 1.439641,
+        "mean_reviews": 0.0,
+        "min_cost": 2.738596,
+        "runs": 64
+      }
+    }
+  },
+  "trace_seed_0": {
+    "closed_loop:B_adaptive": [
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 0,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 1,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 2,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.1875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 3,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.890625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 4,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.667969,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 5,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 6,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 7,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 8,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.140625,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 9,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.105469,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 10,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 11,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 12,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 13,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 14,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.316406,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 15,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 16,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 17,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 18,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 19,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.683594,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 9,
+        "doubt": true,
+        "episode": 20,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 8.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 10,
+        "doubt": true,
+        "episode": 21,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 7.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 22,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 23,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 2.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 6,
+        "doubt": false,
+        "episode": 24,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 0.640625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 25,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 26,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -0.25,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 27,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -0.1875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 28,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 0.859375,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 29,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -1.355469,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 30,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.170898,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 31,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.121826,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 32,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.762695,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 33,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 2.84137,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 34,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.131027,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 6,
+        "doubt": true,
+        "episode": 35,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 4.09827,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 36,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -1.512695,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 37,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -1.134521,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 38,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -0.499023,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 39,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 1.149109,
+        "review": false
+      }
+    ],
+    "closed_loop:B_event": [
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 0,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 1,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 2,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.1875,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 3,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.890625,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 4,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.667969,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 5,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 6,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 7,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 8,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.140625,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 9,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.105469,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 10,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 11,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 12,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 13,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 14,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.316406,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 15,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 16,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 17,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 18,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 19,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.683594,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 9,
+        "doubt": true,
+        "episode": 20,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "recover",
+        "residual": 8.0,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 10,
+        "doubt": true,
+        "episode": 21,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 7.0,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 22,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 23,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 2.1875,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 6,
+        "doubt": false,
+        "episode": 24,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.640625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 25,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 26,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.25,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 27,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.1875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 28,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.859375,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 29,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -1.355469,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 30,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.170898,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 31,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.121826,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 32,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.762695,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 33,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 2.84137,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 34,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.131027,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 6,
+        "doubt": true,
+        "episode": 35,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "recover",
+        "residual": 4.09827,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 36,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -1.512695,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 37,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -1.134521,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 38,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.499023,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 39,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 1.149109,
+        "review": true
+      }
+    ],
+    "closed_loop:R": [
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 0,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 1,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 2,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.1875,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 3,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.890625,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 4,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.667969,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 5,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 6,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 7,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 8,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.140625,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 9,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.105469,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 10,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 11,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 12,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 13,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 14,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.316406,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 15,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 16,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 17,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 18,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 19,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.683594,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 9,
+        "doubt": true,
+        "episode": 20,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "recover",
+        "residual": 8.0,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 10,
+        "doubt": true,
+        "episode": 21,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 7.0,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 22,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 23,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 2.1875,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 6,
+        "doubt": false,
+        "episode": 24,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.640625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 25,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 26,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.25,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 27,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.1875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 28,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.859375,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 29,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -1.355469,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 30,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.170898,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 31,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.121826,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 32,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.762695,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 33,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 2.84137,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 34,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.131027,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 6,
+        "doubt": true,
+        "episode": 35,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "recover",
+        "residual": 4.09827,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 36,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -1.512695,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 37,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -1.134521,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 38,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.499023,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 39,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 1.149109,
+        "review": true
+      }
+    ],
+    "closed_loop:R_label_only": [
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 0,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 1,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 2,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.1875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 3,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.890625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 4,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.667969,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 5,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 6,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 7,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 8,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.140625,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 9,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.105469,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 10,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 11,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 12,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 13,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 14,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.316406,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 15,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 16,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 17,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 18,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 19,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.683594,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 9,
+        "doubt": true,
+        "episode": 20,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 8.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 10,
+        "doubt": true,
+        "episode": 21,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 7.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 22,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 23,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 2.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 6,
+        "doubt": false,
+        "episode": 24,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.640625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 25,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 26,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.25,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 27,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.1875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 28,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.859375,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 29,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.355469,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 30,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.170898,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 31,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.121826,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 32,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.762695,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 33,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 2.84137,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 34,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.131027,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 6,
+        "doubt": true,
+        "episode": 35,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 4.09827,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 36,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.519531,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 37,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.389648,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 38,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.926297,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 39,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.707764,
+        "review": false
+      }
+    ],
+    "closed_loop:R_no_feedback": [
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 0,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 1,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 2,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.1875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 3,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.890625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 4,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.667969,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 5,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 6,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 7,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 8,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.140625,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 9,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.105469,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 10,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 11,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 12,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 13,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 14,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.316406,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 15,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 16,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 17,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 18,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 19,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.683594,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 9,
+        "doubt": true,
+        "episode": 20,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 8.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 10,
+        "doubt": true,
+        "episode": 21,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 7.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 22,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 23,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 2.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 6,
+        "doubt": false,
+        "episode": 24,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.640625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 25,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 26,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.25,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 27,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.1875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 28,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.859375,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 29,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.355469,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 30,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.170898,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 31,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.121826,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 32,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.762695,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 33,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 2.84137,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 34,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.131027,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 6,
+        "doubt": true,
+        "episode": 35,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 4.09827,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 36,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.519531,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 37,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.389648,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 38,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.926297,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 39,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.707764,
+        "review": false
+      }
+    ],
+    "common_history:B_adaptive": [
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 0,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 1,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 2,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.1875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 3,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.890625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 4,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.667969,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 5,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 6,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 7,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 8,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.140625,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 9,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.105469,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 10,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 11,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 12,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 13,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 14,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.316406,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 15,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 16,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 17,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 18,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 19,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.683594,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 9,
+        "doubt": true,
+        "episode": 20,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 8.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 10,
+        "doubt": true,
+        "episode": 21,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 7.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 22,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 23,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 2.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 6,
+        "doubt": false,
+        "episode": 24,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 0.640625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 25,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 26,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -0.25,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 27,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -0.1875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 28,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 0.859375,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 29,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -1.355469,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 30,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.499023,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 31,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.829102,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 32,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.762695,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 33,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.124268,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 34,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.621826,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 35,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.677979,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 36,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -1.512695,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 37,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": -0.519531,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 38,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.491516,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 39,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "hold",
+        "residual": 0.865479,
+        "review": false
+      }
+    ],
+    "common_history:B_event": [
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 0,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 1,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 2,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.1875,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 3,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.890625,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 4,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.667969,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 5,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 6,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 7,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 8,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.140625,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 9,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.105469,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 10,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 11,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 12,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 13,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 14,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.316406,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 15,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 16,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 17,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 18,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 19,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.683594,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 9,
+        "doubt": true,
+        "episode": 20,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "recover",
+        "residual": 8.0,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 10,
+        "doubt": true,
+        "episode": 21,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 7.0,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 22,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 23,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 2.1875,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 6,
+        "doubt": false,
+        "episode": 24,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.640625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 25,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 26,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.25,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 27,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.1875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 28,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.859375,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 29,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -1.355469,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 30,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.499023,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 31,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.829102,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 32,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.762695,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 33,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.124268,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 34,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.621826,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 35,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.677979,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 36,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -1.512695,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 37,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.519531,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 38,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.491516,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 39,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.865479,
+        "review": true
+      }
+    ],
+    "common_history:R": [
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 0,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 1,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 2,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.1875,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 3,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.890625,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 4,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.667969,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 5,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 6,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 7,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 8,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.140625,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 9,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.105469,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 10,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 11,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 12,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 13,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 14,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.316406,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 15,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 16,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 17,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 18,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 19,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.683594,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 9,
+        "doubt": true,
+        "episode": 20,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "recover",
+        "residual": 8.0,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 10,
+        "doubt": true,
+        "episode": 21,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 7.0,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 22,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 23,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 2.1875,
+        "review": true
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 6,
+        "doubt": false,
+        "episode": 24,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.640625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 25,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 1.0,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 26,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.25,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 27,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.1875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 28,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.859375,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 29,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -1.355469,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 30,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.499023,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 31,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.829102,
+        "review": true
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 32,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.762695,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 33,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.124268,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 34,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.621826,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 35,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.677979,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 36,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -1.512695,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 37,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": -0.519531,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 38,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.491516,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 39,
+        "mode": 0,
+        "policy_after": "hold",
+        "recommendation": "hold",
+        "residual": 0.865479,
+        "review": true
+      }
+    ],
+    "common_history:R_label_only": [
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 0,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 1,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 2,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.1875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 3,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.890625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 4,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.667969,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 5,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 6,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 7,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 8,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.140625,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 9,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.105469,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 10,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 11,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 12,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 13,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 14,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.316406,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 15,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 16,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 17,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 18,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 19,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.683594,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 9,
+        "doubt": true,
+        "episode": 20,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 8.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 10,
+        "doubt": true,
+        "episode": 21,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 7.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 22,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 23,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 2.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 6,
+        "doubt": false,
+        "episode": 24,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.640625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 25,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 26,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.25,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 27,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.1875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 28,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.859375,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 29,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.355469,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 30,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.499023,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 31,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.829102,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 32,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.762695,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 33,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.124268,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 34,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.621826,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 35,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.677979,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 36,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.512695,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 37,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.519531,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 38,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.491516,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 39,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.865479,
+        "review": false
+      }
+    ],
+    "common_history:R_no_feedback": [
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 0,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 1,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 2,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.1875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": true,
+        "episode": 3,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.890625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 4,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.667969,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 0,
+        "doubt": false,
+        "episode": 5,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 6,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 7,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 8,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.140625,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 9,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.105469,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": true,
+        "episode": 10,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 11,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 12,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 13,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 14,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.316406,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 15,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 16,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.75,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 17,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.5625,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 18,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.421875,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 19,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.683594,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 9,
+        "doubt": true,
+        "episode": 20,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 8.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 10,
+        "doubt": true,
+        "episode": 21,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 7.0,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 22,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.25,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 7,
+        "doubt": true,
+        "episode": 23,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 2.1875,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 6,
+        "doubt": false,
+        "episode": 24,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.640625,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 25,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 1.0,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 26,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.25,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 3,
+        "doubt": false,
+        "episode": 27,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.1875,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 4,
+        "doubt": true,
+        "episode": 28,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.859375,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "queue",
+        "cost": 2,
+        "doubt": false,
+        "episode": 29,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.355469,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 30,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.499023,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": true,
+        "episode": 31,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.829102,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 32,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.762695,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "open",
+        "cost": 1,
+        "doubt": false,
+        "episode": 33,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.124268,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "open",
+        "cost": 2,
+        "doubt": false,
+        "episode": 34,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.621826,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 4,
+        "doubt": false,
+        "episode": 35,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.677979,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 1,
+        "doubt": false,
+        "episode": 36,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -1.512695,
+        "review": false
+      },
+      {
+        "action": "recover",
+        "context": "queue",
+        "cost": 5,
+        "doubt": false,
+        "episode": 37,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.519531,
+        "review": false
+      },
+      {
+        "action": "defer",
+        "context": "open",
+        "cost": 3,
+        "doubt": false,
+        "episode": 38,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": -0.491516,
+        "review": false
+      },
+      {
+        "action": "hold",
+        "context": "queue",
+        "cost": 3,
+        "doubt": true,
+        "episode": 39,
+        "mode": 0,
+        "policy_after": "recover",
+        "recommendation": "recover",
+        "residual": 0.865479,
+        "review": false
+      }
+    ]
+  }
+}
+~~~~
 
 ## 8. Компактный контекст канона v13
 

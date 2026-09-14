@@ -82,6 +82,11 @@ NONARBITRARY_ORIGINAL = NONARBITRARY_ROOT / "SOURCE_ORIGINAL.txt"
 U6_RANDOM_REGULARITY = Path("work/v14_rebuild/U6_RANDOM_REGULARITY_2026-09-13.md")
 AUTHOR_CYCLE_CHARTER = Path("work/v14_rebuild/AUTHOR_CYCLE_CHARTER_2026-09-13.md")
 TRAIN_REFLECTION_DRAFT = Path("work/v14_rebuild/TRAIN_REFLECTION_TEST_DRAFT_2026-09-14.md")
+TRAIN_REFLECTION_ROOT = Path("work/v14_rebuild/train_reflection")
+TRAIN_REFLECTION_PROTOCOL = TRAIN_REFLECTION_ROOT / "PROTOCOL.md"
+TRAIN_REFLECTION_PROGRAM = TRAIN_REFLECTION_ROOT / "run_reflection.py"
+TRAIN_REFLECTION_RESULTS_MD = TRAIN_REFLECTION_ROOT / "RESULTS.md"
+TRAIN_REFLECTION_RESULTS_JSON = TRAIN_REFLECTION_ROOT / "results.json"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -151,6 +156,10 @@ INPUT_PATHS = (
     U6_RANDOM_REGULARITY,
     AUTHOR_CYCLE_CHARTER,
     TRAIN_REFLECTION_DRAFT,
+    TRAIN_REFLECTION_PROTOCOL,
+    TRAIN_REFLECTION_PROGRAM,
+    TRAIN_REFLECTION_RESULTS_MD,
+    TRAIN_REFLECTION_RESULTS_JSON,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -566,6 +575,10 @@ def render_export() -> str:
                 fenced_source("7.31. Манифест диалога о непроизвольности", NONARBITRARY_MANIFEST, "json"),
                 fenced_source("7.32. Исходный диалог о непроизвольности", NONARBITRARY_ORIGINAL, "text"),
                 markdown_source("7.34. Черновик проверки рефлексии: пример поезда", TRAIN_REFLECTION_DRAFT),
+                markdown_source("7.35. Протокол условной проверки внутренней регуляции", TRAIN_REFLECTION_PROTOCOL),
+                fenced_source("7.36. Скрипт проверки рефлексии", TRAIN_REFLECTION_PROGRAM, "python"),
+                markdown_source("7.37. Результаты проверки рефлексии", TRAIN_REFLECTION_RESULTS_MD),
+                fenced_source("7.38. Машинные результаты проверки рефлексии", TRAIN_REFLECTION_RESULTS_JSON, "json"),
             ]
         ),
         "## 8. Компактный контекст канона v13\n\n"
