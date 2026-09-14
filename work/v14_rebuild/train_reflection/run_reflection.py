@@ -391,7 +391,7 @@ def run_all() -> dict[str, Any]:
                 - summaries["common_history"][kind]["mean_cost"],
                 6,
             ),
-            "common_state_digest_count": len(set(common_hashes[kind])),
+            "common_state_digest_count": len({r["state_digest"] for r in r_common}),
             "closed_state_digest_count": len({r["state_digest"] for r in r_closed}),
             "common_updates_equal": len({r["updates"] for r in r_common}) == 1,
         }
