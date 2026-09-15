@@ -76,3 +76,27 @@
 До выполнения этих пунктов статус остаётся candidate functional scaffold,
 но порог «можно рассматривать» пройден.
 
+## Новый архитектурный инкремент: чередование суммирования и различения
+
+Рабочее правило DN-0003 теперь разложено в research-layer specification:
+
+    Aggregate → Normalize/Compete → Distinguish → Residual/Memory → Update
+
+Чтобы приблизить ФТС к будущей электронной нейросети, ей нужны явные:
+
+1. typed algebra of aggregators;
+2. typed algebra of distinction/competition;
+3. residual/refinement witness;
+4. recurrent memory with provenance/revision;
+5. normalization and stability law;
+6. event-driven/local hardware mapping;
+7. local or hybrid learning rule;
+8. cost model and ablation suite.
+
+Спецификация и 11 внешних мостов сохранены в:
+
+- SUM_DISTINCTION_SPEC.md
+- SUM_DISTINCTION_EVIDENCE.tsv
+- SUM_DISTINCTION_PROTOCOL.md
+
+Этот инкремент не повышает статусы и не превращает DN-0003 в новую аксиому.

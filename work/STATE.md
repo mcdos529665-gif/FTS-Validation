@@ -31,7 +31,10 @@
   1D/2D domain (0.2961–0.4075; exact parameter pairs 177/177 и 241/241).
   Consideration brief теперь фиксирует T2 candidate functional scaffold; T3/T4
   и общий benchmark с DNC/GRU-D/NeuMiss ещё не выполнены. Канон, статусы и
-  C01–C62 не менялись.
+  C01–C62 не менялись. Новый инкремент 2026-09-15 развёл DN-0003 в
+  Aggregate → Normalize/Compete → Distinguish → Residual/Memory → Update и
+  добавил 11 внешних мостов/аппаратных ограничений в
+  v14_rebuild/neural_skeleton_research_2026-09-15/SUM_DISTINCTION_*.md|tsv.
 - Автор уточнил смысл интернализации ярлыка (2026-09-15): внешние данные сначала
   заставляют пересмотреть внутреннюю модель; на них навешивается ярлык; затем
   ярлык становится самостоятельным внутренним инструментом саморефлексии,
