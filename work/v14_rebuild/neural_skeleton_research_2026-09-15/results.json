@@ -1,0 +1,305 @@
+{
+  "protocol": "FTS-Skeleton-v0.1",
+  "status": "exploratory_construct_validity",
+  "script_sha256": "272f8a171ee815e1a923e4ad7a04df9148e735ea3c0daa00d465943fc640064b",
+  "protocol_sha256": "1e385084fd222a876266447413654e2d403f7457e8edf4ce2c6a535184311083",
+  "seeds": [
+    13,
+    29,
+    47,
+    71,
+    97
+  ],
+  "train_n": 1800,
+  "test_n": 2000,
+  "rows": [
+    {
+      "task": "ABS-MECH",
+      "mechanism": "signal",
+      "seed": 13,
+      "typed_absence": {
+        "accuracy": 0.9785,
+        "brier": 0.014817135098671106
+      },
+      "value_only": {
+        "accuracy": 0.9765,
+        "brier": 0.015490373287202949
+      },
+      "delta_accuracy": 0.0020000000000000018,
+      "delta_brier": 0.0006732381885318425,
+      "typed_params": 81,
+      "value_only_params": 81
+    },
+    {
+      "task": "ABS-MECH",
+      "mechanism": "null",
+      "seed": 13,
+      "typed_absence": {
+        "accuracy": 0.904,
+        "brier": 0.0645544864592534
+      },
+      "value_only": {
+        "accuracy": 0.9035,
+        "brier": 0.06606333034763358
+      },
+      "delta_accuracy": 0.000500000000000056,
+      "delta_brier": 0.0015088438883801847,
+      "typed_params": 81,
+      "value_only_params": 81
+    },
+    {
+      "task": "COMP-QUERY",
+      "seed": 13,
+      "compositional_modules": {
+        "accuracy": 0.995,
+        "brier": 0.004165693398516862
+      },
+      "compositional_monolith": {
+        "accuracy": 0.9905,
+        "brier": 0.008550041597503522
+      },
+      "delta_accuracy": 0.0044999999999999485,
+      "delta_brier": 0.00438434819898666,
+      "modules_params": 66,
+      "monolith_params": 66
+    },
+    {
+      "task": "ABS-MECH",
+      "mechanism": "signal",
+      "seed": 29,
+      "typed_absence": {
+        "accuracy": 0.9775,
+        "brier": 0.01512189277011968
+      },
+      "value_only": {
+        "accuracy": 0.975,
+        "brier": 0.016371195344508295
+      },
+      "delta_accuracy": 0.0025000000000000577,
+      "delta_brier": 0.0012493025743886155,
+      "typed_params": 81,
+      "value_only_params": 81
+    },
+    {
+      "task": "ABS-MECH",
+      "mechanism": "null",
+      "seed": 29,
+      "typed_absence": {
+        "accuracy": 0.9055,
+        "brier": 0.06407297874671455
+      },
+      "value_only": {
+        "accuracy": 0.901,
+        "brier": 0.06625289965634472
+      },
+      "delta_accuracy": 0.0044999999999999485,
+      "delta_brier": 0.0021799209096301647,
+      "typed_params": 81,
+      "value_only_params": 81
+    },
+    {
+      "task": "COMP-QUERY",
+      "seed": 29,
+      "compositional_modules": {
+        "accuracy": 0.994,
+        "brier": 0.00556497794537002
+      },
+      "compositional_monolith": {
+        "accuracy": 0.996,
+        "brier": 0.0035447879430715304
+      },
+      "delta_accuracy": -0.0020000000000000018,
+      "delta_brier": -0.0020201900022984894,
+      "modules_params": 66,
+      "monolith_params": 66
+    },
+    {
+      "task": "ABS-MECH",
+      "mechanism": "signal",
+      "seed": 47,
+      "typed_absence": {
+        "accuracy": 0.986,
+        "brier": 0.011369452956884586
+      },
+      "value_only": {
+        "accuracy": 0.9775,
+        "brier": 0.016204533268482344
+      },
+      "delta_accuracy": 0.008499999999999952,
+      "delta_brier": 0.004835080311597758,
+      "typed_params": 81,
+      "value_only_params": 81
+    },
+    {
+      "task": "ABS-MECH",
+      "mechanism": "null",
+      "seed": 47,
+      "typed_absence": {
+        "accuracy": 0.8995,
+        "brier": 0.06449706487119483
+      },
+      "value_only": {
+        "accuracy": 0.8955,
+        "brier": 0.0730871617872097
+      },
+      "delta_accuracy": 0.0040000000000000036,
+      "delta_brier": 0.008590096916014867,
+      "typed_params": 81,
+      "value_only_params": 81
+    },
+    {
+      "task": "COMP-QUERY",
+      "seed": 47,
+      "compositional_modules": {
+        "accuracy": 0.991,
+        "brier": 0.007394215702109653
+      },
+      "compositional_monolith": {
+        "accuracy": 0.993,
+        "brier": 0.006547772107243111
+      },
+      "delta_accuracy": -0.0020000000000000018,
+      "delta_brier": -0.000846443594866542,
+      "modules_params": 66,
+      "monolith_params": 66
+    },
+    {
+      "task": "ABS-MECH",
+      "mechanism": "signal",
+      "seed": 71,
+      "typed_absence": {
+        "accuracy": 0.978,
+        "brier": 0.015491058153587848
+      },
+      "value_only": {
+        "accuracy": 0.98,
+        "brier": 0.014881850605397436
+      },
+      "delta_accuracy": -0.0020000000000000018,
+      "delta_brier": -0.000609207548190412,
+      "typed_params": 81,
+      "value_only_params": 81
+    },
+    {
+      "task": "ABS-MECH",
+      "mechanism": "null",
+      "seed": 71,
+      "typed_absence": {
+        "accuracy": 0.9,
+        "brier": 0.06386305193537344
+      },
+      "value_only": {
+        "accuracy": 0.8985,
+        "brier": 0.06565975228890286
+      },
+      "delta_accuracy": 0.0015000000000000568,
+      "delta_brier": 0.0017967003535294263,
+      "typed_params": 81,
+      "value_only_params": 81
+    },
+    {
+      "task": "COMP-QUERY",
+      "seed": 71,
+      "compositional_modules": {
+        "accuracy": 0.9945,
+        "brier": 0.005044056311238377
+      },
+      "compositional_monolith": {
+        "accuracy": 0.993,
+        "brier": 0.00593263407354178
+      },
+      "delta_accuracy": 0.0015000000000000568,
+      "delta_brier": 0.0008885777623034033,
+      "modules_params": 66,
+      "monolith_params": 66
+    },
+    {
+      "task": "ABS-MECH",
+      "mechanism": "signal",
+      "seed": 97,
+      "typed_absence": {
+        "accuracy": 0.979,
+        "brier": 0.01469034481454708
+      },
+      "value_only": {
+        "accuracy": 0.976,
+        "brier": 0.016829915206347402
+      },
+      "delta_accuracy": 0.0030000000000000027,
+      "delta_brier": 0.0021395703918003217,
+      "typed_params": 81,
+      "value_only_params": 81
+    },
+    {
+      "task": "ABS-MECH",
+      "mechanism": "null",
+      "seed": 97,
+      "typed_absence": {
+        "accuracy": 0.9135,
+        "brier": 0.059460974240019115
+      },
+      "value_only": {
+        "accuracy": 0.913,
+        "brier": 0.06029179187578522
+      },
+      "delta_accuracy": 0.0004999999999999449,
+      "delta_brier": 0.000830817635766104,
+      "typed_params": 81,
+      "value_only_params": 81
+    },
+    {
+      "task": "COMP-QUERY",
+      "seed": 97,
+      "compositional_modules": {
+        "accuracy": 0.9945,
+        "brier": 0.005138098777657659
+      },
+      "compositional_monolith": {
+        "accuracy": 0.9945,
+        "brier": 0.005185057902853413
+      },
+      "delta_accuracy": 0.0,
+      "delta_brier": 4.6959125195754e-05,
+      "modules_params": 66,
+      "monolith_params": 66
+    }
+  ],
+  "summaries": {
+    "ABS-MECH/signal": {
+      "delta_accuracy": {
+        "mean": 0.0028000000000000026,
+        "sd": 0.003751666296460795,
+        "ci95_half_width": 0.0046575621777921305
+      },
+      "delta_brier": {
+        "mean": 0.0016575967836256252,
+        "sd": 0.002037324717201617,
+        "ci95_half_width": 0.00252926721005834
+      }
+    },
+    "ABS-MECH/null": {
+      "delta_accuracy": {
+        "mean": 0.002200000000000002,
+        "sd": 0.0019235384061671145,
+        "ci95_half_width": 0.002388005494131008
+      },
+      "delta_brier": {
+        "mean": 0.0029812759406641492,
+        "sd": 0.0031739875949124063,
+        "ci95_half_width": 0.003940394322595082
+      }
+    },
+    "COMP-QUERY": {
+      "delta_accuracy": {
+        "mean": 0.00040000000000000034,
+        "sd": 0.0027248853186877297,
+        "ci95_half_width": 0.0033828495916903975
+      },
+      "delta_brier": {
+        "mean": 0.0004906502978641572,
+        "sd": 0.002429415081854235,
+        "ci95_half_width": 0.003016033651520771
+      }
+    }
+  }
+}
