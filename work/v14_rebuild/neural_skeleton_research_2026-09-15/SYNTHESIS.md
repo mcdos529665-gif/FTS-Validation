@@ -81,6 +81,12 @@
     inductive bias в синтетическом контракте, где target generator использует
     тот же gate; он не доказывает уникальность ФТС и требует symbolic-gate M'
     control.
+13. **Контроль symbolic-gate M' снял уникальность v0.2.** Обычный
+    препроцессор без FTS-имен воспроизвёл feature map с ошибкой 0.0 и дал
+    разность control минус reference 0.000000 на полном и held-out тестах для
+    всех seeds [GATE_CONTROL_RESULTS.md; внутреннее]. Поэтому v0.2 — основание
+    для рассмотрения explicit gate как scaffold-компонента, но одновременно
+    limiting evidence против necessity/uniqueness ФТС.
 
 ## Зависимости
 
@@ -128,5 +134,6 @@
 8. У верхнего контура есть только локальный эффект обратной связи и отрицательная
    typed-absence проверка; нужна заранее различающая постановка, а не повторение
    существующих seeds.
-9. Не проведён symbolic-gate M' control и не проверено, исчезает ли v0.2 effect
-   при вынесении derived fields в независимый препроцессор.
+9. Symbolic-gate M' control проведён; он подтвердил, что v0.2 effect не
+   специфичен для ФТС. Остаётся провести target-independent и cross-domain тест,
+   где gate не совпадает с генератором target.

@@ -70,3 +70,13 @@ M' с тем же symbolic gate/derived fields и тест, где gate не с�
 генератором target, чтобы проверить, не является ли положительный результат
 тривиальной утечкой inductive bias.
 
+## Контроль symbolic-gate M'
+
+GATE_CONTROL_PROTOCOL.md воспроизвёл derived fields обычным препроцессором без
+FTS-имен. Максимальная ошибка feature map равна 0; разность control минус
+reference равна 0.000000 на полном и held-out тестах для каждого seed.
+
+Это закрывает именно вопрос уникальности v0.2: положительный эффект принадлежит
+явному gate/selected-memory preprocessing, а не названию или обозначениям ФТС.
+Он остаётся основанием рассматривать ФТС как способ организовать такой scaffold,
+но одновременно является limiting evidence против claim о necessity/uniqueness.
