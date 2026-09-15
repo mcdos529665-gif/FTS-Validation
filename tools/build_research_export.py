@@ -88,6 +88,7 @@ TRAIN_REFLECTION_PROTOCOL_V2_DRAFT = TRAIN_REFLECTION_ROOT / "PROTOCOL_V2_DRAFT_
 TRAIN_REFLECTION_PROGRAM = TRAIN_REFLECTION_ROOT / "run_reflection.py"
 TRAIN_REFLECTION_RESULTS_MD = TRAIN_REFLECTION_ROOT / "RESULTS.md"
 TRAIN_REFLECTION_RESULTS_JSON = TRAIN_REFLECTION_ROOT / "results.json"
+DIALOGUE_SEMANTICS_NOTE = Path("work/v14_rebuild/dialogue_semantics_2026-09-15.md")
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -162,6 +163,7 @@ INPUT_PATHS = (
     TRAIN_REFLECTION_PROGRAM,
     TRAIN_REFLECTION_RESULTS_MD,
     TRAIN_REFLECTION_RESULTS_JSON,
+    DIALOGUE_SEMANTICS_NOTE,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -487,6 +489,7 @@ def render_export() -> str:
                 fenced_source("6.9. Манифест происхождения записки", RD_MANIFEST, "json"),
                 submitted_note_source(),
                 markdown_source("6.11. Авторский мандат ближайшего цикла", AUTHOR_CYCLE_CHARTER),
+                markdown_source("6.12. Рабочая интеграция диалога: траектория и внутренняя регуляция", DIALOGUE_SEMANTICS_NOTE),
             ]
         ),
         "## 7. Внешний исследовательский контур E5\n\n"

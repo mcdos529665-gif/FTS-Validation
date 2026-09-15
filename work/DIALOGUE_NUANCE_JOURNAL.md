@@ -23,7 +23,7 @@
 **ПОРЯДОК УРОВНЕЙ НЕ ГАРАНТИРУЕТ ВОСХОЖДЕНИЯ. ВОЗМОЖНОСТЬ ОШИБКИ — ЧАСТЬ СИСТЕМЫ.**
 
 - recorded_at: 2026-09-13
-- state: pending
+- state: integrated
 - topic: Принцип чтения всей лестницы ФТС; свобода исхода и возможность Ошибки
 - author_claim:
   > Так в этом и смысл! Ты старательно следуешь принципу, обязательной закономерной эволюции, без права на ошибку или иной исход. Но в таком случае ты принцип свободы перечеркиваешь в легкую. У нас возможность ошибки учтена системой! Она буквально часть системы! Под иным исходом я имею ввиду возможность деградации или застревании на уровне.
@@ -35,12 +35,15 @@
 - open_question: Возможность конкретной пересборки У2–У3–У4 ещё исследуется; общая поправка не доказывает её автоматически.
 - target_hints: work/notation.md — принцип чтения уровней; work/v14_rebuild/FTS_v14_paper.md — различение порядка лестницы и хода процесса; work/DECISIONS.md; work/STATE.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#1, work/notation.md#траектория-противоположности-и-внутренняя-регуляция, work/STATE.md#текущая-цель, work/DECISIONS.md
+- remaining: конкретная пересборка У2–У3–У4 не доказана
 
 <a id="dn-0002"></a>
 ## DN-0002 · Приоритет принципа в рассуждении: смысл «крупными буквами»
 
 - recorded_at: 2026-09-13
-- state: pending
+- state: integrated
 - topic: Метод чтения всей лестницы; уточнение назначения DN-0001
 - author_claim:
   > Ты понял буквально запиши крупными буквами?
@@ -52,12 +55,15 @@
 - open_question: none
 - target_hints: work/notation.md — постоянно применяемый принцип чтения всей лестницы; work/STATE.md — handoff со ссылкой на принцип; work/DECISIONS.md; интегрировать совместно с DN-0001
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/notation.md#траектория-противоположности-и-внутренняя-регуляция, work/STATE.md#текущая-цель, work/DECISIONS.md
+- remaining: none
 
 <a id="dn-0003"></a>
 ## DN-0003 · Разделение, суммирование и определённый результат
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: У1–У7; абстракция; гипотеза результата разделения
 - author_claim:
   > а различаем значит берем нашего старого друга - круг на поле свойств, и делаем его меньше, создавая из одного понятия, абстракции, два.
@@ -73,12 +79,15 @@
 - open_question: Точный оператор суммирования и критерий предполагаемой оптимизации остаются предметом исследования; смысловой вопрос о чередовании и конкретном результате разъяснён.
 - target_hints: work/v14_rebuild/code_information_recode_note.md; work/v14_rebuild/U6_RANDOM_REGULARITY_2026-09-13.md; work/v14_rebuild/FTS_v14_paper.md; work/notation.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#2, work/notation.md#траектория-противоположности-и-внутренняя-регуляция, work/DECISIONS.md
+- remaining: точный оператор суммирования и критерий оптимизации не заданы
 
 <a id="dn-0004"></a>
 ## DN-0004 · Минимальный противоположный шаг и обязательное чтение связности
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: Соседние переходы; тройки; основания связности
 - author_claim:
   > ну по идее, в первую очередь оно буквально потеряет У4.
@@ -92,12 +101,15 @@
 - open_question: Смысловой вопрос о роли промежуточного уровня закрыт; конкретные отображения соседних шагов требуют своих оснований.
 - target_hints: work/notation.md; work/v14_rebuild/FTS_v14_paper.md — O_01/O_03/O_04/O_08; work/v14_rebuild/interpretation_descent_undermind_2026-09-12/REVIEW.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#2, work/notation.md#траектория-противоположности-и-внутренняя-регуляция, work/DECISIONS.md
+- remaining: конкретные отображения соседних шагов требуют отдельного основания
 
 <a id="dn-0005"></a>
 ## DN-0005 · Различие, свидетельство, агрегат и знание с Допущением
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: У3–У7; смысл 80%/100%; гипотеза взаимного гашения
 - author_claim:
   > Для меня название для 5 уровня - беда. Я могу назвать это выбором, случайностью, главное что этот уровень имеет упрощение вида а=б or a!=б.
@@ -115,12 +127,15 @@
 - open_question: Автор спросил, возможен ли агрегат с «взаимногасящими вероятностями». Ассистент предложил иллюстрацию смеси двух противоположных режимов и поиск мешающих прогнозу связей; буквальный оператор гашения и причинная роль компонентов не установлены.
 - target_hints: work/v14_rebuild/U6_RANDOM_REGULARITY_2026-09-13.md; work/v14_rebuild/FTS_v14_paper.md — У3–У8; work/notation.md; work/EXTERNAL_CONFLICTS.md — только при выявленной коллизии интеграции
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#3, work/v14_rebuild/U6_RANDOM_REGULARITY_2026-09-13.md, work/OPEN_QUESTIONS.md#oq-u0-u7-refinement-protocol, work/DECISIONS.md
+- remaining: оператор взаимного гашения вероятностей и причинная роль компонентов не установлены
 
 <a id="dn-0006"></a>
 ## DN-0006 · Функции отказа У7+ в рабочем цикле модели
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: Забывание, Предположение, Вера; пересборка и подъём к У9
 - author_claim:
   > Но, 7+ уровни содержат противолежащие функции. Знание и (Отказ от знания) забывание. Предположение и Вера (отказ от предположения). Забывание помимо прочего помогает чистить буфер. Вера и предположение даёт возможность поверить в перспектиность той или иной модели для повторной пересборки, повторного эксперементального прогона. И поднять выше к пониманию.
@@ -132,12 +147,15 @@
 - open_question: Совместить полезные применения с имеющимися описаниями Refuse/Sever и ложного повышения, сохраняя разные роли. Вопрос ассистента о назначении отказа от ожиданий автором разъяснён.
 - target_hints: work/v14_rebuild/FTS_v14_paper.md — У7–У9 и anti-mode; work/v14_rebuild/canon_coverage_v14.md — противоположные функции; work/notation.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#4, work/notation.md#траектория-противоположности-и-внутренняя-регуляция, work/v14_rebuild/FTS_v14_paper.md#74-рабочее-уточнение-диалога-траектория-и-интернализация-ярлыка
+- remaining: точное согласование полезных отказов с Refuse/Sever ещё требует паспорта
 
 <a id="dn-0007"></a>
 ## DN-0007 · Рефлексия: генерация данных и закрытость
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: У7–У11; У9; неисчерпаемость и передача понимания
 - author_claim:
   > ты учитываешь что с 7 до 11 уровни не просто принимают на вход данные, но и генерируют новые? рефлексия же. это что-то меняет?
@@ -149,12 +167,15 @@
 - open_question: Точное соотношение рефлексии, закрытости и неисчерпаемости ещё не формализовано; вопрос о совместимости отдельного результата с продолжающимся процессом разъяснён.
 - target_hints: work/v14_rebuild/FTS_v14_paper.md — У7–У11; work/v14_rebuild/recursive_distinction_2026-09-12/AUTHOR_QUESTIONS.md — неисчерпаемость; work/notation.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#5, work/notation.md#траектория-противоположности-и-внутренняя-регуляция, work/v14_rebuild/FTS_v14_paper.md#74-рабочее-уточнение-диалога-траектория-и-интернализация-ярлыка
+- remaining: соотношение рефлексии, закрытости и неисчерпаемости не формализовано
 
 <a id="dn-0008"></a>
 ## DN-0008 · Целые окна пентад и семёрок
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: Родство операций; У7–У8–У9 на новом материале
 - author_claim:
   > нет, нет, я просто не указал полностью. В пентадах речь сопоставлении от -1 до 3 с 3 до 7 и 7 до 11. в 7 речь о сопоставлении от -1 до 5 с 5 до 11.
@@ -164,12 +185,15 @@
 - open_question: Раскрыть согласование двух аналогий на конкретных операциях; самостоятельный семантический оператор семёрочного сопоставления ещё не установлен.
 - target_hints: work/v14_rebuild/FTS_v14_paper.md — §8.2 и структурные карты; work/v14_rebuild/half_hypothesis.md; work/notation.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#5, work/v14_rebuild/FTS_v14_paper.md#74-рабочее-уточнение-диалога-траектория-и-интернализация-ярлыка, work/notation.md#траектория-противоположности-и-внутренняя-регуляция
+- remaining: самостоятельный семантический оператор семёрочного сопоставления не установлен
 
 <a id="dn-0009"></a>
 ## DN-0009 · Упрощение: передача, закрепление и замена Понимания
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: У8–У9–У10; ресурсная роль; пример одинакового ярлыка
 - author_claim:
   > Но также, упрощение, отказ от сложности, нужен не только для эволюции, но и для закрепления уровня как такового. Если есть функция понимания, то фукция упрощения её блокирует или ей противоположна.
@@ -183,12 +207,15 @@
 - open_question: Как в связке У9–У10–У11 формируется критерий сравнения упрощённых моделей понимания, если оценивающий также работает из собственной закрытой модели? Численная экономия ресурсов и эмоциональный признак не проверены как внешние эмпирические утверждения.
 - target_hints: work/v14_rebuild/FTS_v14_paper.md — У9–У11 и anti-mode; work/v14_rebuild/canon_coverage_v14.md; work/v14_rebuild/code_information_recode_note.md — выражение/содержание; work/notation.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#5, work/v14_rebuild/FTS_v14_paper.md#74-рабочее-уточнение-диалога-траектория-и-интернализация-ярлыка
+- remaining: критерий сравнения упрощённых моделей и эмоциональный признак не проверены
 
 <a id="dn-0010"></a>
 ## DN-0010 · Собственные модели, абсолютная значимость и Догматизм
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: У9–У10–У11; основание сравнения
 - author_claim:
   > Сравнение сначала работает со своими моделями, принятыми и утвержденными. Сначала появляется абсолютная ценность, (закрепленная модель), и лишь потом относительная - сравнение.
@@ -202,12 +229,15 @@
 - open_question: Значение абсолютной опоры и двойной функции Догматизма разъяснено; точная конструкция связи Веры, Догматизма и Я остаётся исследовательской.
 - target_hints: work/v14_rebuild/FTS_v14_paper.md — У9–У11; work/v14_rebuild/canon_coverage_v14.md; work/notation.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#5, work/v14_rebuild/FTS_v14_paper.md#74-рабочее-уточнение-диалога-траектория-и-интернализация-ярлыка, work/notation.md#траектория-противоположности-и-внутренняя-регуляция
+- remaining: точная конструкция связи Веры, Догматизма и Я остаётся исследовательской
 
 <a id="dn-0011"></a>
 ## DN-0011 · Общий механизм противоположностей: отсутствие и отказ
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: Вся лестница; граница У7; блокировка и синтез
 - author_claim:
   > Так все отказы так работают. они необходимы как блокираторы и как диалектические противоположности для синтеза. до 7 уровня в качестве диалектических противополдожностей выступают отсутствия уровней
@@ -217,12 +247,15 @@
 - open_question: Конкретные функции выше У11 автором не установлены; общее правило не разрешает изобретать их по аналогии (DN-0012).
 - target_hints: work/notation.md; work/v14_rebuild/FTS_v14_paper.md — O_03/O_05 и anti-mode; work/v14_rebuild/canon_coverage_v14.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#4, work/notation.md#траектория-противоположности-и-внутренняя-регуляция, work/v14_rebuild/FTS_v14_paper.md#74-рабочее-уточнение-диалога-траектория-и-интернализация-ярлыка
+- remaining: конкретные функции выше У11 не установлены
 
 <a id="dn-0012"></a>
 ## DN-0012 · Определение Я, зона ответственности и предел У12+
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: У11; кандидат возникновения конфликта У12
 - author_claim:
   > если я смог догадаться что с 7 по 11 идет отказ как противоположность и смог описать конкретные функции таких отказов то для 12 и выше - прости не могу. то есть я могу попытаться заявить что противоположностью конфликта является союз, но это очень сомнительно.
@@ -236,12 +269,15 @@
 - open_question: Полная семантика У12 и его противоположной функции остаётся открытой. Не требовать от автора готовых верхних функций как условия продолжения разбора У11.
 - target_hints: work/v14_rebuild/FTS_v14_paper.md — У11/У12; work/v14_rebuild/canon_coverage_v14.md; work/v14_rebuild/status_patch_v14.md — только согласование комментариев без автоматического повышения; work/notation.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#5, work/v14_rebuild/FTS_v14_paper.md#101-у12-конфликтсоюз-замкнутая-граница-отношения-кандидат, work/notation.md#траектория-противоположности-и-внутренняя-регуляция
+- remaining: полная семантика У12 и противоположной функции остаётся открытой
 
 <a id="dn-0013"></a>
 ## DN-0013 · Свобода ошибки, самоограничение и гипотеза коллективной ответственности
 
 - recorded_at: 2026-09-14
-- state: pending
+- state: integrated
 - topic: Общая свобода исхода; У11 и кандидат Мир-Мы
 - author_claim:
   > Мы противопоставляем появление вещей Закономерностью и Случайностью. Но это ложная дихотомия для постоянно изменяющейся системы. У нас есть как Закономерная случайность, так и случайная закономерность.
@@ -259,12 +295,15 @@
 - open_question: Различать отсутствие доступной функции и отказ от её использования при рефлексии системы. Формирование коллективной ответственности, роль У12 и прогнозы о будущем АГИ остаются гипотезами; эмпирической проверки всеобщих тезисов о людях и системах этим диалогом не проведено.
 - target_hints: work/notation.md; work/v14_rebuild/FTS_v14_paper.md — свобода исхода, O_18, У11–У13; work/STATE.md — handoff; work/OPEN_QUESTIONS.md — при интеграции
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#1, work/v14_rebuild/dialogue_semantics_2026-09-15.md#5, work/STATE.md#текущая-цель, work/DECISIONS.md
+- remaining: коллективная ответственность, роль У12 и прогнозы об АГИ остаются гипотезами
 
 <a id="dn-0014"></a>
 ## DN-0014 · Интернализация ярлыка: от внешней отметки к внутреннему инструменту
 
 - recorded_at: 2026-09-15
-- state: pending
+- state: needs_author
 - topic: Рефлексия; внешний опыт, ярлык и внутренняя работа
 - author_claim:
   > сначала мы имеем внешние данные что заставляют пересмотреть внутреннюю модель. потом на эти внешние данные навешивается "ярлык". потом этот внешний ярлык, становиться внутренним инструментом, что не зависит полностью от внешних данных, а становится самостоятельным инструментом саморефлексии. и система учится его применять по результатом внутренней работы, а не внешней.
@@ -274,12 +313,15 @@
 - open_question: Какой внутренний результат считать минимальным применением ярлыка: перестройку модели, смену правила, остановку старого правила или внутреннее объяснение?
 - target_hints: work/v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md; work/v14_rebuild/TRAIN_REFLECTION_TEST_DRAFT_2026-09-14.md; work/notation.md; work/OPEN_QUESTIONS.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#6, work/v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md, work/OPEN_QUESTIONS.md#oq-reflection-label-internalization
+- remaining: нужно выбрать минимальный наблюдаемый внутренний результат ярлыка
 
 <a id="dn-0015"></a>
 ## DN-0015 · Граница символической проверки сомнения
 
 - recorded_at: 2026-09-15
-- state: pending
+- state: needs_author
 - topic: Метод проверки; функциональная модель и полноценная эмоциональная система
 - author_claim:
   > Я не уверен, что ты сможешь построить и протестировать достаточно сложную систему, что сможет в себя вместить такую штуку как сомнение. Ты же не нейросеть строишь.
@@ -289,12 +331,15 @@
 - open_question: Нужна ли после структурного теста отдельная нейросетевая/агентная постановка, или для текущего шага достаточно функционального минимума?
 - target_hints: work/v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md; work/v14_rebuild/train_reflection/PROTOCOL.md; work/STATE.md; work/OPEN_QUESTIONS.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#6, work/v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md, work/OPEN_QUESTIONS.md#oq-reflection-label-internalization
+- remaining: нужно решить, достаточно ли функционального теста или нужна отдельная нейросетевая/агентная постановка
 
 <a id="dn-0016"></a>
 ## DN-0016 · Объём проверки эмоций: только внутренняя регуляция
 
 - recorded_at: 2026-09-15
-- state: pending
+- state: integrated
 - topic: Эмоции как внутренняя регуляция; границы исследовательской постановки
 - author_claim:
   > Гипотеза об эволюционном происхождении эмоций - не  нужна. эмоции как внутренняя регуляция - нужна. действуй по черновику проверки
@@ -304,3 +349,6 @@
 - open_question: none
 - target_hints: work/v14_rebuild/train_reflection/PROTOCOL.md; work/v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md; work/v14_rebuild/TRAIN_REFLECTION_TEST_DRAFT_2026-09-14.md; work/STATE.md
 - supersedes: none
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#6, work/v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md, work/OPEN_QUESTIONS.md#oq-reflection-label-internalization, work/STATE.md#текущая-цель
+- remaining: none
