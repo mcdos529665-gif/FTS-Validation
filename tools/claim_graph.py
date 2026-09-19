@@ -25,6 +25,7 @@ GRAPH_PATH = OUT_DIR / "claim_graph.json"
 COVERAGE_PATH = OUT_DIR / "COVERAGE.md"
 CHANGE_REPORT_PATH = OUT_DIR / "CHANGE_REPORT.md"
 SCHEMA_PATH = OUT_DIR / "SCHEMA.md"
+HTML_PATH = OUT_DIR / "claim_graph.html"
 
 CANON_CARDS = ROOT / "source" / "fts_cards.jsonl"
 CANON_TRIPLES = ROOT / "source" / "fts_triples.tsv"
@@ -857,6 +858,41 @@ def write_graph(graph: dict[str, Any]) -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     GRAPH_PATH.write_text(json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     write_markdown_reports(graph)
+    write_html_view(graph)
+
+
+def write_html_view(graph: dict[str, Any]) -> None:
+    payload = json.dumps(graph, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
+    template = r'''<!doctype html>
+<meta charset="utf-8">
+<title>FTS claim graph</title>
+<style>
+body{font:14px system-ui,sans-serif;margin:0;color:#17202a;background:#f6f7f9}
+header{padding:18px 24px;background:#17202a;color:white}
+main{display:grid;grid-template-columns:minmax(360px,1fr) minmax(420px,1fr);gap:16px;padding:16px 24px}
+input,select{padding:8px;border:1px solid #bac2cc;border-radius:5px;margin:0 6px 8px 0;background:white}
+table{width:100%;border-collapse:collapse;background:white} th,td{text-align:left;border-bottom:1px solid #e4e7eb;padding:7px;vertical-align:top}
+tr{cursor:pointer} tr:hover{background:#eef5ff} code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px}
+.muted{color:#66717f}.tag{display:inline-block;padding:2px 6px;border-radius:10px;background:#e8edf3;margin:2px}.panel{background:white;border:1px solid #d9dee5;border-radius:7px;padding:12px;overflow:auto}.edge{padding:6px 0;border-bottom:1px solid #edf0f3}
+@media(max-width:900px){main{grid-template-columns:1fr}}
+</style>
+<header><h1>FTS claim graph</h1><div id="summary" class="muted"></div></header>
+<main><section class="panel"><input id="q" placeholder="поиск ID, label, source…" style="width:55%"><select id="layer"><option value="">все слои</option></select><select id="type"><option value="">все типы</option></select><select id="relation"><option value="">все relations</option></select><div id="table"></div></section><section class="panel"><div id="detail" class="muted">Выберите узел.</div></section></main>
+<script id="graph-data" type="application/json">__GRAPH_DATA__</script>
+<script>
+const G=JSON.parse(document.getElementById('graph-data').textContent), N=Object.fromEntries(G.nodes.map(n=>[n.id,n]));
+const $=id=>document.getElementById(id), values=key=>[...new Set(G.nodes.map(n=>n[key]).filter(Boolean))].sort();
+for(const x of values('layer')) $('layer').insertAdjacentHTML('beforeend',`<option>${x}</option>`);
+for(const x of values('type')) $('type').insertAdjacentHTML('beforeend',`<option>${x}</option>`);
+for(const x of [...new Set(G.edges.map(e=>e.relation))].sort()) $('relation').insertAdjacentHTML('beforeend',`<option>${x}</option>`);
+$('summary').textContent=G.nodes.length+' узлов · '+G.edges.length+' направленных рёбер · directed multiset · provenance сохранён';
+function esc(x){return String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+function render(){const q=$('q').value.toLowerCase(), l=$('layer').value,t=$('type').value; const rows=G.nodes.filter(n=>(!q||JSON.stringify(n).toLowerCase().includes(q))&&(!l||n.layer===l)&&(!t||n.type===t)).slice(0,300); $('table').innerHTML='<table><thead><tr><th>ID</th><th>Тип</th><th>Слой</th><th>Label</th></tr></thead><tbody>'+rows.map(n=>'<tr data-id="'+esc(n.id)+'"><td><code>'+esc(n.id)+'</code></td><td>'+esc(n.type)+'</td><td>'+esc(n.layer)+'</td><td>'+esc(n.label)+'</td></tr>').join('')+'</tbody></table>'; for(const tr of document.querySelectorAll('tr[data-id]')) tr.onclick=()=>show(tr.dataset.id);}
+function show(id){const n=N[id], es=G.edges.filter(e=>e.source===id||e.target===id); $('detail').innerHTML='<h2>'+esc(n.label)+'</h2><div><span class="tag">'+esc(n.type)+'</span><span class="tag">'+esc(n.layer)+'</span></div><p><code>'+esc(n.id)+'</code><br><span class="muted">'+esc(n.source_file||'нет source_file')+(n.source_location?'#'+esc(n.source_location):'')+'</span></p><h3>Связи ('+es.length+')</h3>'+es.map(e=>'<div class="edge"><code>'+esc(e.source)+'</code> —<b>'+esc(e.relation)+'</b>→ <code>'+esc(e.target)+'</code><br><span class="muted">'+esc(e.confidence)+' · '+esc(e.source_file)+'#'+esc(e.source_location||'')+'</span></div>').join('');}
+for(const id of ['q','layer','type']) $(id).oninput=render; $('relation').onchange=()=>{const v=$('relation').value; document.querySelectorAll('.edge').forEach(x=>x.style.display=(!v||x.textContent.includes(v))?'':'none');}; render();
+</script>
+'''
+    HTML_PATH.write_text(template.replace("__GRAPH_DATA__", payload), encoding="utf-8", newline="\n")
 
 
 def load_graph() -> dict[str, Any]:

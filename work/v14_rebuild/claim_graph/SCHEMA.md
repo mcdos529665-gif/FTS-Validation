@@ -75,3 +75,7 @@ python -X utf8 tools/claim_graph.py path CM-001 evidence_verification_c01
 
 При обрыве маршрута query/path печатает последний узел и причину отсутствия
 следующего адресуемого объекта.
+
+Локальный просмотр: `claim_graph.html`. Он читает тот же JSON и показывает
+поиск по узлам и relations вместе с provenance, не преобразуя мультимножество
+в простой Graphify-граф.
