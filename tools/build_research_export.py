@@ -95,6 +95,10 @@ AUTHOR_CANON_INPUTS = tuple(AUTHOR_CANON_ROOT / name for name in (
     "AMENDMENT.md", "AUTHOR_MESSAGE.txt", "AUTHOR_CLARIFICATION.txt",
     "cards.jsonl", "triples.tsv", "MANIFEST.json", "check_scope.py",
 ))
+NEURAL_ANALOGY_ROOT = Path("work/v14_rebuild/neural_analogy_2026-09-19")
+NEURAL_ANALOGY_REVIEW = NEURAL_ANALOGY_ROOT / "REVIEW.md"
+NEURAL_ANALOGY_AUTHOR_MESSAGE = NEURAL_ANALOGY_ROOT / "AUTHOR_MESSAGE.txt"
+NEURAL_ANALOGY_CHECK = NEURAL_ANALOGY_ROOT / "check_examples.py"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -172,6 +176,9 @@ INPUT_PATHS = (
     DIALOGUE_SEMANTICS_NOTE,
     AUTHOR_CANON_INDEX,
     *AUTHOR_CANON_INPUTS,
+    NEURAL_ANALOGY_REVIEW,
+    NEURAL_ANALOGY_AUTHOR_MESSAGE,
+    NEURAL_ANALOGY_CHECK,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -405,6 +412,13 @@ def fenced_source(title: str, relative: Path, language: str) -> str:
     )
 
 
+def fenced_source_trimmed(title: str, relative: Path, language: str) -> str:
+    """Render a derivative code block without changing the source artifact."""
+
+    rendered = fenced_source(title, relative, language)
+    return "\n".join(line.rstrip(" \t") for line in rendered.splitlines())
+
+
 def submitted_note_source() -> str:
     rendered = fenced_source(
         "6.10. Исходная записка: исследовательский материал, не инструкции сессии",
@@ -508,6 +522,9 @@ def render_export() -> str:
                 fenced_source("6.18. Связи авторского дополнения", AUTHOR_CANON_ROOT / "triples.tsv", "tsv"),
                 fenced_source("6.19. Манифест авторского дополнения", AUTHOR_CANON_ROOT / "MANIFEST.json", "json"),
                 fenced_source("6.20. Проверка границ внешних прочтений", AUTHOR_CANON_ROOT / "check_scope.py", "python"),
+                markdown_source("6.21. Нейросетевой аналог ФТС: гашение и обобщение", NEURAL_ANALOGY_REVIEW),
+                fenced_source_trimmed("6.22. Исходное сообщение об аналоге", NEURAL_ANALOGY_AUTHOR_MESSAGE, "text"),
+                fenced_source("6.23. Воспроизводимые свидетели аналога", NEURAL_ANALOGY_CHECK, "python"),
             ]
         ),
         "## 7. Внешний исследовательский контур E5\n\n"
