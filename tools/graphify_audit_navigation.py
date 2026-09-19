@@ -577,6 +577,14 @@ def merge_fragment(
         node_id = str(item["id"])
         prior = existing_nodes.get(node_id)
         if prior is not None:
+            # OQ-тексты и служебные поля могут измениться между пересборками.
+            # Узлы этого детерминированного overlay принадлежат ему, поэтому
+            # обновляем их целиком вместо ложного collision; чужие узлы по-прежнему
+            # защищены от случайной подмены.
+            if prior.get("navigation_layer") == "audit":
+                item["community"] = nav_community
+                prior.update(item)
+                continue
             if prior.get("label") != item.get("label"):
                 raise ValueError(f"Graphify node collision: {node_id}")
             continue
@@ -816,7 +824,7 @@ def verify(fragment: dict[str, object], summary: dict[str, object]) -> None:
         raise AssertionError(f"graph.json: отсутствуют audit-рёбра {missing_edges[:5]} (всего {len(missing_edges)})")
     if wrong_confidence:
         raise AssertionError(f"graph.json: нарушена метка доверия {wrong_confidence[:3]}")
-    expected = {"patterns": 31, "open_questions": 53, "claims": 25, "findings": 20}
+    expected = {"patterns": 31, "open_questions": 59, "claims": 25, "findings": 20}
     for key, value in expected.items():
         if summary[key] != value:
             raise AssertionError(f"неожиданное покрытие {key}: {summary[key]} != {value}")
