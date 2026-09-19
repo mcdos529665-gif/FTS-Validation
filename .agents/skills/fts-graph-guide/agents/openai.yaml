@@ -1,0 +1,4 @@
+interface:
+  display_name: "Навигатор графа ФТС"
+  short_description: "Русские ответы по claims, evidence и уровням"
+  default_prompt: "Используй $fts-graph-guide, чтобы по-русски объяснить основания, свидетельства, ограничения и статус вопроса ФТС."

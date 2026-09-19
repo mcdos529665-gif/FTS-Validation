@@ -1054,6 +1054,55 @@ def alias_map(graph: dict[str, Any]) -> dict[str, str]:
     return aliases
 
 
+def normalize_search(value: object) -> str:
+    text = str(value or "").lower().replace("ё", "е")
+    text = re.sub(r"[^a-zа-я0-9]+", " ", text)
+    return " ".join(text.split())
+
+
+def search_graph(graph: dict[str, Any], text: str, limit: int = 10) -> str:
+    query_text = normalize_search(text)
+    terms = [term for term in query_text.split() if len(term) > 1]
+    aliases = alias_map(graph)
+    ranked: list[tuple[int, str, dict[str, Any]]] = []
+    for node in graph["nodes"]:
+        node_id = str(node["id"])
+        id_text = normalize_search(node_id)
+        label_text = normalize_search(node.get("label"))
+        source_text = normalize_search(node.get("source_file"))
+        body_text = normalize_search(json.dumps(node, ensure_ascii=False, sort_keys=True))
+        score = 0
+        if text in aliases and aliases[text] == node_id:
+            score += 200
+        if query_text and query_text == label_text:
+            score += 120
+        elif query_text and query_text in label_text:
+            score += 60
+        if query_text and query_text in id_text:
+            score += 50
+        for term in terms:
+            if term in label_text:
+                score += 18
+            if term in id_text:
+                score += 12
+            if term in source_text:
+                score += 4
+            if term in body_text:
+                score += 2
+        if score:
+            ranked.append((score, node_id, node))
+    ranked.sort(key=lambda item: (-item[0], item[1]))
+    if not ranked:
+        return f"ничего не найдено: {text}"
+    lines = []
+    for score, node_id, node in ranked[: max(1, limit)]:
+        lines.append(
+            f"{node_id}\t{node.get('type')}\t{node.get('layer')}\t"
+            f"score={score}\t{node.get('label')}\t{node.get('source_file', '')}"
+        )
+    return "\n".join(lines)
+
+
 def query(graph: dict[str, Any], target: str, depth: int = 1) -> str:
     aliases = alias_map(graph)
     node_id = aliases.get(target, aliases.get(target.upper(), target))
@@ -1124,6 +1173,9 @@ def main() -> int:
     query_parser = sub.add_parser("query")
     query_parser.add_argument("target")
     query_parser.add_argument("--depth", type=int, default=1)
+    search_parser = sub.add_parser("search")
+    search_parser.add_argument("text")
+    search_parser.add_argument("--limit", type=int, default=10)
     path_parser = sub.add_parser("path")
     path_parser.add_argument("source")
     path_parser.add_argument("target")
@@ -1143,6 +1195,9 @@ def main() -> int:
         return 0
     if args.command == "query":
         print(query(graph, args.target, depth=args.depth))
+        return 0
+    if args.command == "search":
+        print(search_graph(graph, args.text, limit=args.limit))
         return 0
     if args.command == "path":
         print(path_query(graph, args.source, args.target))

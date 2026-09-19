@@ -97,6 +97,7 @@ SP-карточек. Полный объединённый workbook пока н�
     python tools/query.py status candidate      # всё со статусом-кандидатом
     python -X utf8 tools/claim_graph.py build  # авторитетный directed claim/evidence graph
     python -X utf8 tools/claim_graph.py validate --idempotent
+    python -X utf8 tools/claim_graph.py search "не-предмет У0"
     python -X utf8 tools/claim_graph.py query CM-001 --depth 1
     python -X utf8 tools/claim_graph.py path CM-001 C01
 
