@@ -89,6 +89,12 @@ TRAIN_REFLECTION_PROGRAM = TRAIN_REFLECTION_ROOT / "run_reflection.py"
 TRAIN_REFLECTION_RESULTS_MD = TRAIN_REFLECTION_ROOT / "RESULTS.md"
 TRAIN_REFLECTION_RESULTS_JSON = TRAIN_REFLECTION_ROOT / "results.json"
 DIALOGUE_SEMANTICS_NOTE = Path("work/v14_rebuild/dialogue_semantics_2026-09-15.md")
+AUTHOR_CANON_INDEX = Path("work/AUTHOR_CANON.md")
+AUTHOR_CANON_ROOT = Path("work/author_canon/2026-09-19")
+AUTHOR_CANON_INPUTS = tuple(AUTHOR_CANON_ROOT / name for name in (
+    "AMENDMENT.md", "AUTHOR_MESSAGE.txt", "AUTHOR_CLARIFICATION.txt",
+    "cards.jsonl", "triples.tsv", "MANIFEST.json", "check_scope.py",
+))
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -164,6 +170,8 @@ INPUT_PATHS = (
     TRAIN_REFLECTION_RESULTS_MD,
     TRAIN_REFLECTION_RESULTS_JSON,
     DIALOGUE_SEMANTICS_NOTE,
+    AUTHOR_CANON_INDEX,
+    *AUTHOR_CANON_INPUTS,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -436,6 +444,8 @@ def render_export() -> str:
 ### 1.1. Жёсткие эпистемические границы
 
 - `source/` — неизменяемый канон v13.
+- Принятые автором дополнения к этому снимку перечислены в `work/AUTHOR_CANON.md`;
+  AC-2026-09-19 включено отдельно с точными сообщениями, карточками и манифестом.
 - Материалы `work/` — развитие, проверки, решения и кандидаты.
 - Внешний результат всегда остаётся `[внешнее]`.
 - `candidate`/`overlay` не равны `canonical_strict`.
@@ -490,6 +500,14 @@ def render_export() -> str:
                 submitted_note_source(),
                 markdown_source("6.11. Авторский мандат ближайшего цикла", AUTHOR_CYCLE_CHARTER),
                 markdown_source("6.12. Рабочая интеграция диалога: траектория и внутренняя регуляция", DIALOGUE_SEMANTICS_NOTE),
+                markdown_source("6.13. Реестр принятых авторских дополнений", AUTHOR_CANON_INDEX),
+                markdown_source("6.14. Авторское дополнение AC-2026-09-19", AUTHOR_CANON_ROOT / "AMENDMENT.md"),
+                fenced_source("6.15. Исходное авторское решение", AUTHOR_CANON_ROOT / "AUTHOR_MESSAGE.txt", "text"),
+                fenced_source("6.16. Уточнение трёх исходов У7", AUTHOR_CANON_ROOT / "AUTHOR_CLARIFICATION.txt", "text"),
+                fenced_source("6.17. Карточки авторского дополнения", AUTHOR_CANON_ROOT / "cards.jsonl", "jsonl"),
+                fenced_source("6.18. Связи авторского дополнения", AUTHOR_CANON_ROOT / "triples.tsv", "tsv"),
+                fenced_source("6.19. Манифест авторского дополнения", AUTHOR_CANON_ROOT / "MANIFEST.json", "json"),
+                fenced_source("6.20. Проверка границ внешних прочтений", AUTHOR_CANON_ROOT / "check_scope.py", "python"),
             ]
         ),
         "## 7. Внешний исследовательский контур E5\n\n"
