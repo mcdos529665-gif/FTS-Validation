@@ -1,0 +1,1118 @@
+"""Build, validate and query the FTS claim/evidence graph.
+
+The graph in work/v14_rebuild/claim_graph/ is the authoritative directed
+relation multiset for the second FTS structural layer. graphify-out/ remains a
+view/navigation product. This tool is stdlib-only and deliberately keeps
+canonical v13, author canon, audit, internal evidence and external research in
+separate layers.
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import hashlib
+import json
+import re
+import sys
+from collections import Counter, deque
+from pathlib import Path
+from typing import Any
+
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT_DIR = ROOT / "work" / "v14_rebuild" / "claim_graph"
+GRAPH_PATH = OUT_DIR / "claim_graph.json"
+COVERAGE_PATH = OUT_DIR / "COVERAGE.md"
+CHANGE_REPORT_PATH = OUT_DIR / "CHANGE_REPORT.md"
+SCHEMA_PATH = OUT_DIR / "SCHEMA.md"
+
+CANON_CARDS = ROOT / "source" / "fts_cards.jsonl"
+CANON_TRIPLES = ROOT / "source" / "fts_triples.tsv"
+AUTHOR_DIR = ROOT / "work" / "author_canon" / "2026-09-19"
+AUTHOR_CARDS = AUTHOR_DIR / "cards.jsonl"
+AUTHOR_TRIPLES = AUTHOR_DIR / "triples.tsv"
+AUDIT_DIR = ROOT / "work" / "v14_rebuild" / "audit"
+CLAIMS = AUDIT_DIR / "CLAIM_MATRIX.tsv"
+FINDINGS = AUDIT_DIR / "FINDINGS.tsv"
+ATLAS = AUDIT_DIR / "PATTERN_ATLAS.tsv"
+OQ_MAP = AUDIT_DIR / "PATTERN_OQ_MAP.tsv"
+OPEN_QUESTIONS = ROOT / "work" / "OPEN_QUESTIONS.md"
+VERIFICATION = ROOT / "work" / "v14_rebuild" / "verification.py"
+RESEARCH_DIR = ROOT / "work" / "v14_rebuild" / "neural_skeleton_research_2026-09-15"
+RESEARCH_CLAIMS = OUT_DIR / "RESEARCH_CLAIMS.tsv"
+RESEARCH_BRIDGES = OUT_DIR / "RESEARCH_CLAIM_BRIDGES.tsv"
+RESEARCH_EVIDENCE = OUT_DIR / "RESEARCH_EVIDENCE.tsv"
+
+NEURAL_EVIDENCE = RESEARCH_DIR / "EVIDENCE_MATRIX.tsv"
+SUM_EVIDENCE = RESEARCH_DIR / "SUM_DISTINCTION_EVIDENCE.tsv"
+E5_EVIDENCE = ROOT / "work" / "v14_rebuild" / "e5_literature_review" / "EVIDENCE_MATRIX.tsv"
+INTERNAL_EVIDENCE = RESEARCH_DIR / "INTERNAL_EVIDENCE.md"
+RESEARCH_DOCS = [
+    RESEARCH_DIR / "CONSIDERATION_BRIEF.md",
+    RESEARCH_DIR / "DEEP_RESEARCH_REPORT_10_INTEGRATION.md",
+    RESEARCH_DIR / "EXTENDED_AUDIT.md",
+    RESEARCH_DIR / "GATE_CONTROL_RESULTS.md",
+    RESEARCH_DIR / "TARGET_INDEPENDENT_AUDIT.md",
+    INTERNAL_EVIDENCE,
+]
+
+ANCHOR_RE = re.compile(r"\{#(?P<anchor>oq-[a-z0-9-]+)\}")
+CM_RE = re.compile(r"\bCM-\d{3}\b")
+C_RE = re.compile(r"\bC\d{1,2}(?:\s*[-–]\s*C\d{1,2})?\b")
+CHECK_RE = re.compile(r"check\(\s*[\"'](C\d{1,2})[\"']")
+
+RELATION_RULES: dict[str, tuple[set[str], set[str]]] = {
+    "has_status": ({"card", "author_statement", "claim", "claim_group", "finding"}, {"status_assessment"}),
+    "has_status_before": ({"claim", "claim_group"}, {"status_assessment"}),
+    "has_status_after": ({"claim", "claim_group"}, {"status_assessment"}),
+    "grounds_claim": ({"claim", "claim_group", "pattern", "author_statement"}, {"card", "source_document", "source_reference", "author_statement"}),
+    "documented_in": ({"claim", "claim_group", "author_statement", "external_evidence", "internal_evidence", "finding", "status_assessment", "verification"}, {"source_document"}),
+    "verified_by": ({"claim", "claim_group", "pattern"}, {"verification", "external_evidence", "internal_evidence"}),
+    "supported_by": ({"claim", "claim_group"}, {"external_evidence", "internal_evidence", "verification", "source_document"}),
+    "limited_by": ({"claim", "claim_group"}, {"finding", "external_evidence", "internal_evidence", "source_reference", "source_document"}),
+    "refined_by": ({"claim", "claim_group"}, {"source_document", "external_evidence", "internal_evidence"}),
+    "audits_claim": ({"finding"}, {"claim", "claim_group"}),
+    "contains": ({"source_document", "card", "author_statement"}, {"card", "author_statement", "claim", "claim_group", "finding", "pattern", "open_question", "verification", "external_evidence", "internal_evidence", "status_assessment", "source_reference", "literal", "unresolved_reference"}),
+    "opens_question": ({"pattern", "claim", "claim_group"}, {"open_question"}),
+    "directly_traced_to": ({"pattern"}, {"open_question"}),
+    "curated_bridge_to": ({"pattern"}, {"open_question"}),
+    "navigation_support_for": ({"pattern"}, {"open_question"}),
+    "belongs_to_program": ({"open_question"}, {"program"}),
+    "planned_resolution_event": ({"open_question"}, {"event"}),
+    "belongs_to_meta_pattern": ({"pattern"}, {"meta_pattern"}),
+    "grouped_by_meta_pattern": ({"open_question"}, {"meta_pattern"}),
+    "has_open_obligation": ({"author_statement", "claim"}, {"open_obligation"}),
+    "has_local_forbid": ({"author_statement"}, {"constraint"}),
+    "maps_to": ({"external_evidence", "internal_evidence"}, {"card", "claim", "claim_group"}),
+    "supports_claim": ({"external_evidence", "internal_evidence", "verification"}, {"claim", "claim_group"}),
+    "limits_claim": ({"external_evidence", "internal_evidence", "finding"}, {"claim", "claim_group"}),
+    "depends_on": ({"card", "author_statement"}, {"card", "author_statement", "literal", "unresolved_reference"}),
+}
+
+
+def rel(path: Path) -> str:
+    return path.relative_to(ROOT).as_posix()
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1 << 20), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def slug(value: str) -> str:
+    out = re.sub(r"[^A-Za-z0-9]+", "_", str(value)).strip("_").lower()
+    return out or "empty"
+
+
+def short_hash(value: str) -> str:
+    return hashlib.sha256(value.encode("utf-8")).hexdigest()[:12]
+
+
+def compact(value: object, limit: int = 180) -> str:
+    text = re.sub(r"\s+", " ", str(value or "")).strip()
+    return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
+
+
+def read_jsonl(path: Path) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    with path.open(encoding="utf-8") as handle:
+        for line_no, line in enumerate(handle, 1):
+            if line.strip():
+                item = json.loads(line)
+                item["_line"] = line_no
+                rows.append(item)
+    return rows
+
+
+def read_tsv(path: Path) -> list[dict[str, str]]:
+    with path.open(encoding="utf-8", newline="") as handle:
+        return [dict(row) for row in csv.DictReader(handle, delimiter="\t")]
+
+
+def find_line(path: Path, needle: str) -> str:
+    if not path.is_file():
+        return ""
+    for line_no, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        if needle and needle in line:
+            return f"L{line_no}"
+    return ""
+
+
+def expand_checks(value: str) -> list[str]:
+    result: list[str] = []
+    for token in C_RE.findall(value or ""):
+        token = token.replace("–", "-").replace(" ", "")
+        if "-" not in token:
+            result.append(token)
+            continue
+        left, right = token.split("-", 1)
+        a, b = int(left[1:]), int(right[1:])
+        result.extend(f"C{i:02d}" for i in range(a, b + 1))
+    return sorted(set(result), key=lambda item: int(item[1:]))
+
+
+def status_from_checkbox(line: str) -> str:
+    if "- [ ]" in line:
+        return "open"
+    if "- [~]" in line:
+        return "partial"
+    if "- [x]" in line.lower():
+        return "closed"
+    return "unknown"
+
+
+def read_oq_anchors() -> dict[str, dict[str, str]]:
+    anchors: dict[str, dict[str, str]] = {}
+    for line_no, raw in enumerate(OPEN_QUESTIONS.read_text(encoding="utf-8").splitlines(), 1):
+        for match in ANCHOR_RE.finditer(raw):
+            key = match.group("anchor")
+            text = ANCHOR_RE.sub("", raw)
+            text = re.sub(r"^\s*-\s*\[[ xX~]\]\s*", "", text).strip()
+            anchors[key] = {"status": status_from_checkbox(raw), "text": text, "line": f"L{line_no}"}
+    return anchors
+
+
+def verification_locations() -> dict[str, str]:
+    out: dict[str, str] = {}
+    for line_no, raw in enumerate(VERIFICATION.read_text(encoding="utf-8").splitlines(), 1):
+        for check_id in CHECK_RE.findall(raw):
+            out.setdefault(check_id, f"L{line_no}")
+    return out
+
+
+class GraphBuilder:
+    def __init__(self) -> None:
+        self.nodes: dict[str, dict[str, Any]] = {}
+        self.edges: list[dict[str, Any]] = []
+        self.edge_ids: set[str] = set()
+        self.inputs: set[Path] = set()
+        self.aliases: dict[str, str] = {}
+        self.counts: Counter[str] = Counter()
+
+    def input(self, path: Path) -> None:
+        if path.is_file():
+            self.inputs.add(path)
+
+    def node(self, node_id: str, node_type: str, label: str, layer: str, **attrs: Any) -> str:
+        payload: dict[str, Any] = {
+            "id": node_id,
+            "type": node_type,
+            "label": label,
+            "layer": layer,
+        }
+        payload.update({key: value for key, value in attrs.items() if value is not None})
+        prior = self.nodes.get(node_id)
+        if prior is not None:
+            if prior["type"] != node_type or prior["label"] != label:
+                raise ValueError(f"node collision: {node_id}")
+            for key, value in payload.items():
+                if key not in prior:
+                    prior[key] = value
+        else:
+            self.nodes[node_id] = payload
+        return node_id
+
+    def edge(
+        self,
+        edge_id: str,
+        source: str,
+        target: str,
+        relation: str,
+        layer: str,
+        confidence: str,
+        source_file: Path | str,
+        source_location: str = "",
+        **attrs: Any,
+    ) -> None:
+        if edge_id in self.edge_ids:
+            raise ValueError(f"duplicate edge id: {edge_id}")
+        if isinstance(source_file, Path):
+            self.input(source_file)
+            source_name = rel(source_file)
+        else:
+            source_name = source_file
+        payload: dict[str, Any] = {
+            "id": edge_id,
+            "source": source,
+            "target": target,
+            "relation": relation,
+            "layer": layer,
+            "confidence": confidence,
+            "source_file": source_name,
+            "source_location": source_location,
+        }
+        payload.update({key: value for key, value in attrs.items() if value is not None and value != ""})
+        self.edges.append(payload)
+        self.edge_ids.add(edge_id)
+        self.counts[relation] += 1
+
+    def document(self, path: Path, label: str | None = None, layer: str = "research") -> str:
+        self.input(path)
+        node_id = f"doc_{slug(rel(path))}"
+        return self.node(node_id, "source_document", label or rel(path), layer, source_file=rel(path))
+
+    def source_reference(self, raw: str, source_file: Path, row: int) -> str:
+        node_id = f"source_ref_{short_hash(raw)}"
+        return self.node(
+            node_id,
+            "source_reference",
+            raw,
+            "research",
+            raw_reference=raw,
+            resolution_state="unresolved_reference",
+            missing_reason="нет в артефактах",
+            source_file=rel(source_file),
+            source_location=f"row:{row}",
+        )
+
+    def output(self) -> dict[str, Any]:
+        inputs = [
+            {"path": rel(path), "sha256": sha256(path)}
+            for path in sorted(self.inputs, key=lambda item: rel(item))
+        ]
+        return {
+            "schema": "fts_claim_graph/v1",
+            "generator": "tools/claim_graph.py",
+            "trust_boundary": {
+                "canonical_v13": "immutable source-backed assertions",
+                "author_canon": "accepted author supplement; separate versioned layer",
+                "research": "curated claims and bridges with explicit scope",
+                "external_evidence": "bibliographic or experimental evidence; no automatic St_FTS promotion",
+                "graphify": "view/navigation only; this file preserves directed parallel edges",
+            },
+            "input_digests": inputs,
+            "nodes": [self.nodes[key] for key in sorted(self.nodes)],
+            "edges": sorted(self.edges, key=lambda item: item["id"]),
+            "coverage": dict(self.counts),
+        }
+
+
+def canonical_card_id_map(cards: list[dict[str, Any]], prefix: str) -> dict[str, str]:
+    return {str(card["id"]): f"{prefix}_{slug(str(card['id']))}" for card in cards}
+
+
+def build_graph() -> dict[str, Any]:
+    for path in [CANON_CARDS, CANON_TRIPLES, AUTHOR_CARDS, AUTHOR_TRIPLES, CLAIMS, FINDINGS, ATLAS, OQ_MAP, OPEN_QUESTIONS, VERIFICATION, RESEARCH_CLAIMS, RESEARCH_EVIDENCE, RESEARCH_BRIDGES]:
+        if not path.is_file():
+            raise FileNotFoundError(f"нет в артефактах: {rel(path)}")
+
+    canon_cards = read_jsonl(CANON_CARDS)
+    author_cards = read_jsonl(AUTHOR_CARDS)
+    canon_by_id = {str(card["id"]): card for card in canon_cards}
+    author_by_id = {str(card["id"]): card for card in author_cards}
+    card_ids = canonical_card_id_map(canon_cards, "card")
+    author_ids = canonical_card_id_map(author_cards, "author")
+    builder = GraphBuilder()
+    builder.input(CANON_CARDS)
+    builder.input(CANON_TRIPLES)
+    builder.input(AUTHOR_CARDS)
+    builder.input(AUTHOR_TRIPLES)
+
+    def ref_node(raw: str, layer: str, source_path: Path, row: int) -> str:
+        raw = str(raw).strip()
+        if raw in card_ids:
+            return card_ids[raw]
+        if raw in author_ids:
+            return author_ids[raw]
+        literal = raw.startswith("(") or raw.startswith("{") or raw.endswith(".md") or raw.startswith("scope:")
+        if literal:
+            return builder.node(
+                f"literal_{short_hash(raw)}",
+                "literal",
+                raw,
+                layer,
+                raw_value=raw,
+                resolution_state="literal",
+                source_file=rel(source_path),
+                source_location=f"row:{row}",
+            )
+        return builder.node(
+            f"ref_unresolved_{short_hash(raw)}",
+            "unresolved_reference",
+            raw,
+            layer,
+            raw_reference=raw,
+            resolution_state="unresolved_reference",
+            missing_reason="нет в артефактах",
+            source_file=rel(source_path),
+            source_location=f"row:{row}",
+        )
+
+    def card_node(card: dict[str, Any], card_id: str, layer: str, node_type: str) -> str:
+        node_id = card_id
+        builder.node(
+            node_id,
+            node_type,
+            f"{card.get('symbol', '')} {card.get('title', card.get('id', ''))}".strip(),
+            layer,
+            card_id=card.get("id"),
+            status=card.get("status"),
+            tags=card.get("tags", []),
+            text=card.get("text", ""),
+            source_file=rel(AUTHOR_CARDS if layer == "author_canon" else CANON_CARDS),
+            source_location=f"card:{card.get('id')}",
+        )
+        status_value = card.get("status") or card.get("author_status") or "unknown"
+        if layer == "author_canon":
+            status_value = card.get("author_status") or card.get("status") or "unknown"
+            status_value = f"{status_value}; evidence_status={card.get('evidence_status', 'unknown')}"
+        assessment_id = f"assessment_{slug(str(card['id']))}_status"
+        builder.node(
+            assessment_id,
+            "status_assessment",
+            f"{card['id']} status: {status_value}",
+            layer,
+            status_text=status_value,
+            status_axis="author_status" if layer == "author_canon" else "St_FTS",
+            status_effect="stored_only; no automatic promotion",
+            source_file=rel(AUTHOR_CARDS if layer == "author_canon" else CANON_CARDS),
+            source_location=f"card:{card['id']}",
+        )
+        builder.edge(
+            f"status_{slug(str(card['id']))}",
+            node_id,
+            assessment_id,
+            "has_status",
+            layer,
+            "EXTRACTED",
+            AUTHOR_CARDS if layer == "author_canon" else CANON_CARDS,
+            f"card:{card['id']}",
+            status_effect="stored_only; no automatic promotion",
+        )
+        return node_id
+
+    for card in canon_cards:
+        card_node(card, card_ids[str(card["id"])], "canonical_v13", "card")
+    for card in author_cards:
+        card_node(card, author_ids[str(card["id"])], "author_canon", "author_statement")
+
+    def add_card_dependencies(cards: list[dict[str, Any]], layer: str, source_path: Path, ids: dict[str, str]) -> None:
+        for card in cards:
+            source_id = ids[str(card["id"])]
+            for index, dependency in enumerate(card.get("depends_on") or []):
+                target_id = ref_node(str(dependency), layer, source_path, int(card.get("_line", 0) or 0))
+                builder.edge(
+                    f"{slug(layer)}_dependency_{slug(str(card['id']))}_{index:03d}",
+                    source_id,
+                    target_id,
+                    "depends_on",
+                    layer,
+                    "EXTRACTED",
+                    source_path,
+                    f"card:{card['id']}:depends_on[{index}]",
+                    assertion_kind="card_field",
+                )
+
+    def add_triples(path: Path, layer: str) -> None:
+        with path.open(encoding="utf-8", newline="") as handle:
+            reader = csv.DictReader(handle, delimiter="\t")
+            for row_no, row in enumerate(reader, 2):
+                source_id = ref_node(row.get("subject", ""), layer, path, row_no)
+                target_id = ref_node(row.get("object", ""), layer, path, row_no)
+                builder.edge(
+                    f"{slug(layer)}_triple_{row_no - 1:04d}",
+                    source_id,
+                    target_id,
+                    row.get("predicate", ""),
+                    layer,
+                    "EXTRACTED",
+                    path,
+                    f"row:{row_no}",
+                    assertion_kind="triple",
+                    raw_subject=row.get("subject", ""),
+                    raw_object=row.get("object", ""),
+                )
+
+    add_card_dependencies(canon_cards, "canonical_v13", CANON_CARDS, card_ids)
+    add_triples(CANON_TRIPLES, "canonical_v13")
+    add_card_dependencies(author_cards, "author_canon", AUTHOR_CARDS, author_ids)
+    add_triples(AUTHOR_TRIPLES, "author_canon")
+
+    for card in author_cards:
+        source_id = author_ids[str(card["id"])]
+        for field in ("source", "clarification_source"):
+            raw = str(card.get(field, "")).strip()
+            if not raw:
+                continue
+            path = AUTHOR_DIR / raw
+            if path.is_file():
+                target = builder.document(path, layer="author_canon")
+                builder.edge(
+                    f"author_source_{slug(str(card['id']))}_{slug(field)}",
+                    source_id,
+                    target,
+                    "documented_in",
+                    "author_canon",
+                    "EXTRACTED",
+                    AUTHOR_CARDS,
+                    f"card:{card['id']}:{field}",
+                )
+            else:
+                target = builder.source_reference(raw, AUTHOR_CARDS, int(card.get("_line", 0) or 0))
+                builder.edge(
+                    f"author_source_ref_{slug(str(card['id']))}_{slug(field)}",
+                    source_id,
+                    target,
+                    "grounds_claim",
+                    "author_canon",
+                    "EXTRACTED",
+                    AUTHOR_CARDS,
+                    f"card:{card['id']}:{field}",
+                )
+        for index, text in enumerate(card.get("open_obligations") or []):
+            obligation = builder.node(
+                f"obligation_{slug(str(card['id']))}_{index:02d}",
+                "open_obligation",
+                compact(text),
+                "author_canon",
+                source_file=rel(AUTHOR_CARDS),
+                source_location=f"card:{card['id']}:open_obligations[{index}]",
+            )
+            builder.edge(
+                f"obligation_{slug(str(card['id']))}_{index:02d}_edge",
+                source_id,
+                obligation,
+                "has_open_obligation",
+                "author_canon",
+                "EXTRACTED",
+                AUTHOR_CARDS,
+                f"card:{card['id']}:open_obligations[{index}]",
+            )
+        for index, text in enumerate(card.get("local_forbid") or []):
+            constraint = builder.node(
+                f"constraint_{slug(str(card['id']))}_{index:02d}",
+                "constraint",
+                compact(text),
+                "author_canon",
+                source_file=rel(AUTHOR_CARDS),
+                source_location=f"card:{card['id']}:local_forbid[{index}]",
+            )
+            builder.edge(
+                f"constraint_{slug(str(card['id']))}_{index:02d}_edge",
+                source_id,
+                constraint,
+                "has_local_forbid",
+                "author_canon",
+                "EXTRACTED",
+                AUTHOR_CARDS,
+                f"card:{card['id']}:local_forbid[{index}]",
+            )
+
+    claim_doc = builder.document(CLAIMS, label="CLAIM_MATRIX — адресуемые группы утверждений", layer="audit")
+    claims = read_tsv(CLAIMS)
+    claim_ids = {row["claim_id"]: f"claim_group_{slug(row['claim_id'])}" for row in claims}
+    verification_loc = verification_locations()
+    for row_no, row in enumerate(claims, 2):
+        claim_id = row["claim_id"]
+        node_id = builder.node(
+            claim_ids[claim_id],
+            "claim_group",
+            f"{claim_id} — {compact(row['claim'])}",
+            "audit",
+            claim_id=claim_id,
+            granularity="group",
+            domain=row["domain"],
+            verification=row["verification"],
+            status_before=row["status_before"],
+            status_after=row["status_after"],
+            verdict=row["verdict"],
+            resolution=row["resolution"],
+            source_file=rel(CLAIMS),
+            source_location=f"row:{row_no}",
+        )
+        builder.edge(f"claim_matrix_contains_{slug(claim_id)}", claim_doc, node_id, "contains", "audit", "EXTRACTED", CLAIMS, f"row:{row_no}")
+        for index, raw_source in enumerate([part.strip() for part in row["source"].split(";") if part.strip()]):
+            target = card_ids.get(raw_source) or author_ids.get(raw_source)
+            if target is None:
+                normalized = raw_source.replace("\\", "/")
+                candidate = ROOT / normalized
+                if candidate.is_file():
+                    target = builder.document(candidate, layer="audit")
+                elif "paper" in raw_source.lower() or "FTS_v14_paper" in raw_source:
+                    target = builder.document(ROOT / "work" / "v14_rebuild" / "FTS_v14_paper.md", layer="research")
+                else:
+                    target = builder.source_reference(raw_source, CLAIMS, row_no)
+            builder.edge(
+                f"claim_ground_{slug(claim_id)}_{index:02d}",
+                node_id,
+                target,
+                "grounds_claim",
+                "audit",
+                "EXTRACTED",
+                CLAIMS,
+                f"row:{row_no}:source[{index}]",
+                raw_reference=raw_source,
+                status_effect="source registry; not automatic truth",
+            )
+        for check_id in expand_checks(row["verification"]):
+            verification_id = f"verification_{check_id.lower()}"
+            builder.node(
+                verification_id,
+                "verification",
+                check_id,
+                "audit",
+                verification_id=check_id,
+                evidence_kind="formal_machine_check",
+                source_file=rel(VERIFICATION),
+                source_location=verification_loc.get(check_id, f"check:{check_id}"),
+                status_effect="math predicate only; no automatic St_FTS promotion",
+            )
+            builder.edge(
+                f"claim_verified_{slug(claim_id)}_{check_id.lower()}",
+                node_id,
+                verification_id,
+                "verified_by",
+                "audit",
+                "EXTRACTED",
+                CLAIMS,
+                f"row:{row_no}:verification",
+                scope="verification field in CLAIM_MATRIX",
+                status_effect="math predicate only; no automatic St_FTS promotion",
+            )
+        for suffix, relation, status_value in (("before", "has_status_before", row["status_before"]), ("after", "has_status_after", row["status_after"])):
+            assessment_id = f"assessment_{slug(claim_id)}_{suffix}"
+            builder.node(
+                assessment_id,
+                "status_assessment",
+                f"{claim_id} {suffix}: {compact(status_value)}",
+                "audit",
+                status_text=status_value,
+                status_axis="status_before" if suffix == "before" else "status_after",
+                status_effect="audit registry; no automatic promotion",
+                source_file=rel(CLAIMS),
+                source_location=f"row:{row_no}",
+            )
+            builder.edge(
+                f"claim_{slug(claim_id)}_{suffix}_status",
+                node_id,
+                assessment_id,
+                relation,
+                "audit",
+                "EXTRACTED",
+                CLAIMS,
+                f"row:{row_no}:status_{suffix}",
+                status_effect="audit registry; no automatic promotion",
+            )
+
+    findings_doc = builder.document(FINDINGS, label="FINDINGS — аудиторские ограничения", layer="audit")
+    findings = read_tsv(FINDINGS)
+    finding_ids: dict[str, str] = {}
+    for row_no, row in enumerate(findings, 2):
+        finding_id = row["finding_id"]
+        node_id = f"finding_{slug(finding_id)}"
+        finding_ids[finding_id] = node_id
+        builder.node(
+            node_id,
+            "finding",
+            f"{finding_id} [{row['severity']}, {row['status']}] — {compact(row['found'])}",
+            "audit",
+            finding_id=finding_id,
+            severity=row["severity"],
+            finding_status=row["status"],
+            area=row["area"],
+            conclusion=row["conclusion"],
+            unresolved=row["unresolved"],
+            source_file=rel(FINDINGS),
+            source_location=f"row:{row_no}",
+        )
+        builder.edge(f"findings_contains_{slug(finding_id)}", findings_doc, node_id, "contains", "audit", "EXTRACTED", FINDINGS, f"row:{row_no}")
+        for claim_ref in sorted(set(CM_RE.findall(" ".join(row.values())))):
+            target = claim_ids.get(claim_ref)
+            if target is None:
+                continue
+            builder.edge(f"finding_{slug(finding_id)}_audits_{slug(claim_ref)}", node_id, target, "audits_claim", "audit", "EXTRACTED", FINDINGS, f"row:{row_no}")
+            builder.edge(f"claim_{slug(claim_ref)}_limited_by_{slug(finding_id)}", target, node_id, "limited_by", "audit", "EXTRACTED", FINDINGS, f"row:{row_no}", status_effect=row["conclusion"])
+
+    atlas_doc = builder.document(ATLAS, label="PATTERN_ATLAS — проверенные паттерны", layer="audit")
+    atlas = read_tsv(ATLAS)
+    pattern_ids: dict[str, str] = {}
+    for row_no, row in enumerate(atlas, 2):
+        pattern_id = row["pattern_id"]
+        node_id = f"pattern_{slug(pattern_id)}"
+        pattern_ids[pattern_id] = node_id
+        builder.node(
+            node_id,
+            "pattern",
+            f"{pattern_id} — {compact(row['name'])}",
+            "audit",
+            pattern_id=pattern_id,
+            evidence_level=row["evidence_level"],
+            domain=row["domain"],
+            statement=row["statement"],
+            verdict=row["verdict"],
+            source_file=rel(ATLAS),
+            source_location=f"row:{row_no}",
+        )
+        builder.edge(f"atlas_contains_{slug(pattern_id)}", atlas_doc, node_id, "contains", "audit", "EXTRACTED", ATLAS, f"row:{row_no}")
+        for check_id in expand_checks(row["verification"]):
+            verification_id = f"verification_{check_id.lower()}"
+            builder.node(verification_id, "verification", check_id, "audit", verification_id=check_id, evidence_kind="formal_machine_check", source_file=rel(VERIFICATION), source_location=verification_loc.get(check_id, f"check:{check_id}"), status_effect="math predicate only; no automatic St_FTS promotion")
+            builder.edge(f"pattern_{slug(pattern_id)}_verified_{check_id.lower()}", node_id, verification_id, "verified_by", "audit", "EXTRACTED", ATLAS, f"row:{row_no}:verification")
+
+    anchors = read_oq_anchors()
+    oq_ids: dict[str, str] = {}
+    for anchor, data in anchors.items():
+        oq_id = f"oq_{slug(anchor)}"
+        oq_ids[anchor] = oq_id
+        builder.node(oq_id, "open_question", f"{anchor} — {compact(data['text'])}", "audit", anchor=anchor, oq_status=data["status"], source_file=rel(OPEN_QUESTIONS), source_location=data["line"])
+
+    map_doc = builder.document(OQ_MAP, label="PATTERN_OQ_MAP — маршруты вопросов", layer="audit")
+    mapping = read_tsv(OQ_MAP)
+    for row_no, row in enumerate(mapping, 2):
+        anchor = row["oq_anchor"]
+        oq_id = oq_ids.get(anchor)
+        if oq_id is None:
+            continue
+        builder.edge(f"oq_map_contains_{slug(anchor)}", map_doc, oq_id, "contains", "audit", "EXTRACTED", OQ_MAP, f"row:{row_no}")
+        program_id = builder.node(f"program_{slug(row['research_program'])}", "program", row["research_program"], "audit", source_file=rel(OQ_MAP), source_location=f"row:{row_no}")
+        event_id = builder.node(f"event_{slug(row['resolution_event'])}", "event", row["resolution_event"], "audit", source_file=rel(OQ_MAP), source_location=f"row:{row_no}")
+        builder.edge(f"oq_{slug(anchor)}_program", oq_id, program_id, "belongs_to_program", "audit", "EXTRACTED", OQ_MAP, f"row:{row_no}")
+        builder.edge(f"oq_{slug(anchor)}_event", oq_id, event_id, "planned_resolution_event", "audit", "EXTRACTED", OQ_MAP, f"row:{row_no}")
+        for meta in [part.strip() for part in row["meta_pattern"].split(";") if part.strip()]:
+            meta_id = builder.node(f"meta_{slug(meta)}", "meta_pattern", meta, "audit", source_file=rel(OQ_MAP), source_location=f"row:{row_no}")
+            builder.edge(f"oq_{slug(anchor)}_meta_{slug(meta)}", oq_id, meta_id, "grouped_by_meta_pattern", "audit", "EXTRACTED", OQ_MAP, f"row:{row_no}")
+        relation = {"direct": "directly_traced_to", "indirect": "curated_bridge_to", "support": "navigation_support_for"}.get(row["bridge_type"], "curated_bridge_to")
+        for pattern in [part.strip() for part in row["pattern_ids"].split(";") if part.strip()]:
+            pattern_id = pattern_ids.get(pattern)
+            if pattern_id:
+                builder.edge(f"{slug(pattern)}_{slug(anchor)}_{relation}", pattern_id, oq_id, relation, "audit", "EXTRACTED" if row["bridge_type"] in {"direct", "support"} else "INFERRED", OQ_MAP, f"row:{row_no}", scope=row["common_blocker"], status_effect="navigation only; no status change")
+
+    def add_external_evidence(path: Path, prefix: str, key_field: str) -> None:
+        if not path.is_file():
+            return
+        rows = read_tsv(path)
+        doc = builder.document(path, layer="external_research")
+        for row_no, row in enumerate(rows, 2):
+            record = row.get(key_field) or next(iter(row.values()), f"row-{row_no}")
+            node_id = f"evidence_external_{slug(prefix)}_{slug(record)}"
+            builder.node(node_id, "external_evidence", f"{record} — {compact(row.get('primary_claim') or row.get('claim') or row.get('source') or record)}", "external_research", evidence_id=record, evidence_relation=row.get("relation"), limitation=row.get("limitation") or row.get("strongest_limitation"), raw=row, source_file=rel(path), source_location=f"row:{row_no}")
+            builder.edge(f"{slug(prefix)}_doc_contains_{slug(record)}", doc, node_id, "contains", "external_research", "EXTRACTED", path, f"row:{row_no}")
+            haystack = " ".join(row.values())
+            for card_id, target in card_ids.items():
+                if re.search(rf"(?<![A-Za-z0-9_]){re.escape(card_id)}(?![A-Za-z0-9_])", haystack):
+                    builder.edge(f"{slug(prefix)}_{slug(record)}_maps_{slug(card_id)}", node_id, target, "maps_to", "external_research", "EXTRACTED", path, f"row:{row_no}", mapping_field=haystack)
+
+    add_external_evidence(NEURAL_EVIDENCE, "neural", "record_id")
+    add_external_evidence(SUM_EVIDENCE, "sumdist", "record_id")
+    add_external_evidence(E5_EVIDENCE, "e5", "record_id")
+
+    for path in dict.fromkeys([INTERNAL_EVIDENCE, *RESEARCH_DOCS]):
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for match in re.finditer(r"^##\s+(I\d+)\s*[—-]\s*(.+)$", text, re.MULTILINE):
+            evidence_id = f"evidence_internal_{slug(path.stem)}_{slug(match.group(1))}"
+            builder.node(evidence_id, "internal_evidence", f"{match.group(1)} — {compact(match.group(2))}", "internal_research", evidence_id=match.group(1), source_file=rel(path), source_location=f"L{text[:match.start()].count(chr(10)) + 1}", limitation="см. документ и локатор; результат ограничен заявленной средой")
+            doc = builder.document(path, layer="internal_research")
+            builder.edge(f"{slug(path.stem)}_contains_{slug(match.group(1))}", doc, evidence_id, "contains", "internal_research", "EXTRACTED", path, f"L{text[:match.start()].count(chr(10)) + 1}")
+
+    for row_no, row in enumerate(read_tsv(RESEARCH_EVIDENCE), 2):
+        source_path = ROOT / row["source_file"]
+        doc = builder.document(source_path, layer="internal_research")
+        evidence_id = f"evidence_internal_{slug(row['evidence_id'])}"
+        builder.node(
+            evidence_id,
+            "internal_evidence",
+            f"{row['evidence_id']} — {row['label']}",
+            "internal_research",
+            evidence_id=row["evidence_id"],
+            evidence_kind=row["evidence_kind"],
+            scope=row["scope"],
+            limitation=row["limitation"],
+            status_effect=row["status_effect"],
+            source_file=rel(source_path),
+            source_location=row["source_locator"],
+        )
+        builder.edge(f"research_evidence_contains_{slug(row['evidence_id'])}", doc, evidence_id, "contains", "internal_research", "EXTRACTED", RESEARCH_EVIDENCE, f"row:{row_no}")
+
+    research_claim_doc_paths: dict[str, Path] = {}
+    research_claims = read_tsv(RESEARCH_CLAIMS)
+    research_claim_ids: dict[str, str] = {}
+    for row_no, row in enumerate(research_claims, 2):
+        claim_id = row["claim_id"]
+        node_id = f"claim_{slug(claim_id)}"
+        research_claim_ids[claim_id] = node_id
+        source_path = ROOT / row["source_file"]
+        research_claim_doc_paths[claim_id] = source_path
+        doc = builder.document(source_path, layer="research")
+        builder.node(node_id, "claim", f"{claim_id} — {compact(row['statement'])}", "research", claim_id=claim_id, granularity=row["granularity"], scope=row["scope"], status_axis=row["status_axis"], status_text=row["status_text"], source_file=rel(source_path), source_location=row["source_locator"])
+        builder.edge(f"{slug(claim_id)}_documented_in", node_id, doc, "documented_in", "research", "EXTRACTED", source_path, row["source_locator"])
+        assessment_id = f"assessment_{slug(claim_id)}"
+        builder.node(assessment_id, "status_assessment", f"{claim_id}: {row['status_text']}", "research", status_text=row["status_text"], status_axis=row["status_axis"], status_effect="research status only; no St_FTS promotion", source_file=rel(source_path), source_location=row["source_locator"])
+        builder.edge(f"{slug(claim_id)}_has_status", node_id, assessment_id, "has_status", "research", "EXTRACTED", source_path, row["source_locator"], status_effect="research status only; no St_FTS promotion")
+
+    bridge_rows = read_tsv(RESEARCH_BRIDGES)
+    bridge_target_aliases: dict[str, str] = {}
+    for node_id, node in builder.nodes.items():
+        if node.get("evidence_id"):
+            bridge_target_aliases[str(node["evidence_id"])] = node_id
+    bridge_target_aliases.update({
+        "neural_skeleton_consideration": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_consideration_brief_md",
+        "deep_report_10_integration": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_deep_research_report_10_integration_md",
+    })
+    for row_no, row in enumerate(bridge_rows, 2):
+        source = research_claim_ids.get(row["claim_id"])
+        if source is None:
+            raise ValueError(f"bridge {row['bridge_id']} refers to unknown claim {row['claim_id']}")
+        target = bridge_target_aliases.get(row["target_ref"])
+        if target is None and row["target_type"] == "document":
+            target = builder.document(ROOT / row["source_file"], layer="research")
+        if target is None:
+            raise ValueError(f"bridge {row['bridge_id']} target not found: {row['target_ref']}")
+        bridge_source = ROOT / row["source_file"]
+        builder.edge(row["bridge_id"], source, target, row["relation"], "research_bridge", row["confidence"].upper(), bridge_source, f"row:{row_no}", scope=row["scope"], status_effect=row["status_effect"], rationale=row["rationale"])
+
+    graph = builder.output()
+    graph["coverage"] = {
+        "canonical_cards": len(canon_cards),
+        "canonical_triples": sum(1 for _ in CANON_TRIPLES.open(encoding="utf-8")) - 1,
+        "canonical_card_depends_on": sum(len(card.get("depends_on") or []) for card in canon_cards),
+        "canonical_input_assertions": sum(1 for _ in CANON_TRIPLES.open(encoding="utf-8")) - 1 + sum(len(card.get("depends_on") or []) for card in canon_cards) + sum(1 for _ in AUTHOR_TRIPLES.open(encoding="utf-8")) - 1 + sum(len(card.get("depends_on") or []) for card in author_cards),
+        "author_cards": len(author_cards),
+        "author_triples": sum(1 for _ in AUTHOR_TRIPLES.open(encoding="utf-8")) - 1,
+        "audit_claim_groups": len(claims),
+        "audit_findings": len(findings),
+        "patterns": len(atlas),
+        "open_question_anchors": len(anchors),
+        "mapped_open_questions": len(mapping),
+        "verification_nodes": len([node for node in builder.nodes.values() if node["type"] == "verification"]),
+        "external_evidence_nodes": len([node for node in builder.nodes.values() if node["type"] == "external_evidence"]),
+        "internal_evidence_nodes": len([node for node in builder.nodes.values() if node["type"] == "internal_evidence"]),
+        "research_claims": len(research_claims),
+        "curated_research_bridges": len(bridge_rows),
+        "nodes": len(builder.nodes),
+        "edges": len(builder.edges),
+        "unresolved_references": len([node for node in builder.nodes.values() if node["type"] in {"unresolved_reference", "source_reference"}]),
+    }
+    return graph
+
+
+def write_markdown_reports(graph: dict[str, Any]) -> None:
+    coverage = graph["coverage"]
+    lines = [
+        "# FTS claim graph — coverage",
+        "",
+        "Граф собран детерминированно из перечисленных в `input_digests` артефактов.",
+        "Он сохраняет канон, авторский supplement и research-layer раздельно.",
+        "",
+        "## Покрытие",
+        "",
+    ]
+    for key, value in coverage.items():
+        lines.append(f"- `{key}`: {value}")
+    lines += [
+        "",
+        "## Границы",
+        "",
+        "- `CLAIM_MATRIX.tsv` покрыт на уровне 25 групп; атомарные claims внутри групп не выдумываются.",
+        "- C01–C62 представлены как verification-evidence; их PASS не повышает St_FTS.",
+        "- Неразрешённые ссылки сохранены как `source_reference`/`unresolved_reference` с `нет в артефактах`.",
+        "- Внешние evidence-строки без явного bridge остаются evidence-узлами без поддержки конкретного claim.",
+        "- Graphify не используется как authoritative storage, поскольку его простой граф может схлопывать параллельные relation-варианты.",
+        "",
+        "## Обработанные слои",
+        "",
+        "- `canonical_v13`: карточки и все направленные триплеты/`depends_on`.",
+        "- `author_canon`: AC-2026-09-19 с отдельным provenance и статусом авторского принятия.",
+        "- `audit`: claims, findings, patterns, OQ и проверки.",
+        "- `external_research` и `internal_research`: evidence matrices и внутренние результаты.",
+        "- `research_bridge`: только явно записанные curated bridges из `RESEARCH_CLAIM_BRIDGES.tsv`.",
+        "",
+        "Основной файл: `claim_graph.json`. Схема: `SCHEMA.md`.",
+    ]
+    COVERAGE_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+
+    bridge_rows = read_tsv(RESEARCH_BRIDGES)
+    change_lines = [
+        "# Claim graph change report",
+        "",
+        "Текущий research-layer инкремент преобразован в адресуемые claims/evidence",
+        "и сохранён с provenance. Это отчёт изменения машинной карты, не решение о",
+        "повышении статуса ФТС.",
+        "",
+        "## Claims",
+        "",
+    ]
+    for node in graph["nodes"]:
+        if node["type"] == "claim" and node.get("layer") == "research":
+            change_lines.append(f"- `{node['id']}`: {node['label']} — status `{node.get('status_text')}`; scope `{node.get('scope')}`.")
+    change_lines += ["", "## Bridges", ""]
+    for row in bridge_rows:
+        change_lines.append(f"- `{row['bridge_id']}`: `{row['claim_id']}` —{row['relation']}→ `{row['target_ref']}`; scope `{row['scope']}`; status effect `{row['status_effect']}`; source `{row['source_file']}#{row['source_locator']}`.")
+    change_lines += [
+        "",
+        "## Ограничения",
+        "",
+        "- Все bridges помечены curated/extracted и не меняют `St_FTS`.",
+        "- Deep Research (10) представлен как уточнение research-layer claim и boundary, а не как новая эмпирика.",
+        "- Внутренние neural результаты остаются synthetic/internal evidence с локальной областью.",
+    ]
+    CHANGE_REPORT_PATH.write_text("\n".join(change_lines) + "\n", encoding="utf-8", newline="\n")
+
+
+def write_graph(graph: dict[str, Any]) -> None:
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    GRAPH_PATH.write_text(json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    write_markdown_reports(graph)
+
+
+def load_graph() -> dict[str, Any]:
+    if not GRAPH_PATH.is_file():
+        raise FileNotFoundError(f"нет {rel(GRAPH_PATH)} — выполни build")
+    return json.loads(GRAPH_PATH.read_text(encoding="utf-8"))
+
+
+def validate_graph(graph: dict[str, Any], idempotent: bool = False) -> dict[str, Any]:
+    nodes = {str(node["id"]): node for node in graph.get("nodes", [])}
+    edges = list(graph.get("edges", []))
+    if len(nodes) != len(graph.get("nodes", [])):
+        raise AssertionError("duplicate node IDs")
+    edge_ids = [str(edge.get("id")) for edge in edges]
+    if len(set(edge_ids)) != len(edge_ids):
+        raise AssertionError("duplicate edge IDs")
+    missing_endpoints = [edge for edge in edges if edge.get("source") not in nodes or edge.get("target") not in nodes]
+    if missing_endpoints:
+        raise AssertionError(f"missing edge endpoints: {missing_endpoints[:3]}")
+    invalid_relations: list[tuple[str, str, str, str]] = []
+    for edge in edges:
+        if edge.get("layer") in {"canonical_v13", "author_canon"} and edge.get("assertion_kind") in {"triple", "card_field"}:
+            continue
+        rule = RELATION_RULES.get(str(edge.get("relation")))
+        if rule is None:
+            # Every canonical predicate is valid if it originated in a source layer.
+            if edge.get("layer") not in {"canonical_v13", "author_canon"}:
+                invalid_relations.append((edge["id"], edge["relation"], nodes[edge["source"]]["type"], nodes[edge["target"]]["type"]))
+            continue
+        source_type = nodes[edge["source"]]["type"]
+        target_type = nodes[edge["target"]]["type"]
+        if source_type not in rule[0] or target_type not in rule[1]:
+            invalid_relations.append((edge["id"], edge["relation"], source_type, target_type))
+    if invalid_relations:
+        raise AssertionError(f"invalid relation types: {invalid_relations[:5]}")
+
+    current_inputs = {item["path"]: item["sha256"] for item in graph.get("input_digests", [])}
+    stale = []
+    for path_text, expected_hash in current_inputs.items():
+        path = ROOT / path_text
+        if not path.is_file():
+            stale.append((path_text, "missing"))
+        elif sha256(path) != expected_hash:
+            stale.append((path_text, "hash_mismatch"))
+    if stale:
+        raise AssertionError(f"stale provenance: {stale[:5]}")
+
+    for node in graph.get("nodes", []):
+        source_file = node.get("source_file")
+        if source_file and not (ROOT / source_file).is_file():
+            raise AssertionError(f"node source missing: {node['id']} -> {source_file}")
+    for edge in edges:
+        source_file = edge.get("source_file")
+        if source_file and not (ROOT / source_file).is_file():
+            raise AssertionError(f"edge source missing: {edge['id']} -> {source_file}")
+
+    # Directional canonical completeness, including parallel relation variants.
+    expected_signatures: list[tuple[str, str, str, str, str]] = []
+    for path_text, prefix in [(rel(CANON_TRIPLES), "canonical_v13"), (rel(AUTHOR_TRIPLES), "author_canon")]:
+        path = ROOT / path_text
+        with path.open(encoding="utf-8", newline="") as handle:
+            for row_no, row in enumerate(csv.DictReader(handle, delimiter="\t"), 2):
+                source = _expected_ref_id(row["subject"], prefix, graph)
+                target = _expected_ref_id(row["object"], prefix, graph)
+                expected_signatures.append((source, target, row["predicate"], path_text, f"row:{row_no}"))
+    for path_text, prefix in [(rel(CANON_CARDS), "canonical_v13"), (rel(AUTHOR_CARDS), "author_canon")]:
+        path = ROOT / path_text
+        ids = _card_ids_for_prefix(path, prefix)
+        for card in read_jsonl(path):
+            source = ids[str(card["id"])]
+            for index, dependency in enumerate(card.get("depends_on") or []):
+                target = _expected_ref_id(dependency, prefix, graph)
+                expected_signatures.append((source, target, "depends_on", path_text, f"card:{card['id']}:depends_on[{index}]"))
+    actual_signatures = {(edge["source"], edge["target"], edge["relation"], edge["source_file"], edge.get("source_location", "")) for edge in edges if edge.get("assertion_kind") in {"triple", "card_field"}}
+    missing_assertions = [signature for signature in expected_signatures if signature not in actual_signatures]
+    if missing_assertions:
+        raise AssertionError(f"lost directed assertions: {missing_assertions[:5]} (total {len(missing_assertions)})")
+    expected_parallel: dict[tuple[str, str], set[str]] = {}
+    actual_parallel: dict[tuple[str, str], set[str]] = {}
+    for source, target, relation, _path, _location in expected_signatures:
+        expected_parallel.setdefault((source, target), set()).add(relation)
+    for edge in edges:
+        if edge.get("assertion_kind") in {"triple", "card_field"}:
+            actual_parallel.setdefault((edge["source"], edge["target"]), set()).add(edge["relation"])
+    if expected_parallel != actual_parallel:
+        differences = []
+        for pair in sorted(set(expected_parallel) | set(actual_parallel)):
+            if expected_parallel.get(pair, set()) != actual_parallel.get(pair, set()):
+                differences.append((pair, sorted(expected_parallel.get(pair, set())), sorted(actual_parallel.get(pair, set()))))
+        raise AssertionError(f"lost parallel relation variants: {differences[:5]} (total {len(differences)})")
+
+    expected_research_claims = {f"claim_{slug(row['claim_id'])}" for row in read_tsv(RESEARCH_CLAIMS)}
+    actual_research_claims = {node["id"] for node in graph.get("nodes", []) if node.get("type") == "claim" and node.get("layer") == "research"}
+    if expected_research_claims != actual_research_claims:
+        raise AssertionError(f"stale or missing derived claims: expected={sorted(expected_research_claims)} actual={sorted(actual_research_claims)}")
+    expected_bridges = {row["bridge_id"] for row in read_tsv(RESEARCH_BRIDGES)}
+    actual_bridges = {edge["id"] for edge in edges if edge.get("layer") == "research_bridge"}
+    if expected_bridges != actual_bridges:
+        raise AssertionError(f"stale or missing research bridges: expected={sorted(expected_bridges)} actual={sorted(actual_bridges)}")
+
+    for node in graph.get("nodes", []):
+        if node["type"] in {"card", "author_statement", "claim", "claim_group"}:
+            outgoing = [edge for edge in edges if edge["source"] == node["id"] and edge["relation"].startswith("has_status")]
+            if not outgoing:
+                raise AssertionError(f"status without assessment edge: {node['id']}")
+
+    result = {
+        "nodes": len(nodes),
+        "edges": len(edges),
+        "canonical_assertions": len(expected_signatures),
+        "canonical_assertions_present": len(expected_signatures) - len(missing_assertions),
+        "parallel_relation_pairs": _parallel_relation_pairs(expected_signatures),
+        "unresolved_nodes": sum(node["type"] in {"unresolved_reference", "source_reference"} for node in nodes.values()),
+    }
+    if idempotent:
+        first = json.dumps(build_graph(), ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        second = json.dumps(build_graph(), ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        if first != second:
+            raise AssertionError("build is not idempotent")
+        result["idempotent"] = True
+    return result
+
+
+def _card_ids_for_prefix(path: Path, prefix: str) -> dict[str, str]:
+    return {str(card["id"]): f"card_{slug(str(card['id']))}" if prefix == "canonical_v13" else f"author_{slug(str(card['id']))}" for card in read_jsonl(path)}
+
+
+def _expected_ref_id(raw: str, layer: str, graph: dict[str, Any]) -> str:
+    raw = str(raw).strip()
+    for node in graph.get("nodes", []):
+        if node.get("card_id") == raw:
+            return str(node["id"])
+    for node in graph.get("nodes", []):
+        if node.get("raw_value") == raw or node.get("raw_reference") == raw:
+            return str(node["id"])
+    raise AssertionError(f"cannot resolve expected graph reference: {raw}")
+
+
+def _parallel_relation_pairs(signatures: list[tuple[str, str, str, str, str]]) -> int:
+    pairs: dict[tuple[str, str], set[str]] = {}
+    for source, target, relation, _path, _loc in signatures:
+        pairs.setdefault((source, target), set()).add(relation)
+    return sum(len(relations) > 1 for relations in pairs.values())
+
+
+def alias_map(graph: dict[str, Any]) -> dict[str, str]:
+    aliases: dict[str, str] = {}
+    for node in graph["nodes"]:
+        node_id = str(node["id"])
+        aliases[node_id] = node_id
+        for key in ("claim_id", "card_id", "anchor", "verification_id", "evidence_id", "finding_id", "pattern_id"):
+            if node.get(key):
+                aliases[str(node[key])] = node_id
+        if node.get("type") == "source_document" and node.get("source_file"):
+            document_stem = Path(str(node["source_file"])).stem
+            aliases[slug(document_stem)] = node_id
+            if document_stem == "DEEP_RESEARCH_REPORT_10_INTEGRATION":
+                aliases["deep_report_10_integration"] = node_id
+    return aliases
+
+
+def query(graph: dict[str, Any], target: str, depth: int = 1) -> str:
+    aliases = alias_map(graph)
+    node_id = aliases.get(target, aliases.get(target.upper(), target))
+    nodes = {node["id"]: node for node in graph["nodes"]}
+    if node_id not in nodes:
+        return f"нет узла: {target}"
+    edge_list = graph["edges"]
+    selected = {node_id: 0}
+    queue: deque[str] = deque([node_id])
+    while queue:
+        current = queue.popleft()
+        if selected[current] >= depth:
+            continue
+        for edge in edge_list:
+            if edge["source"] == current or edge["target"] == current:
+                other = edge["target"] if edge["source"] == current else edge["source"]
+                if other not in selected:
+                    selected[other] = selected[current] + 1
+                    queue.append(other)
+    lines = [f"NODE {node_id}: {nodes[node_id].get('label')}", f"  type={nodes[node_id].get('type')} layer={nodes[node_id].get('layer')} source={nodes[node_id].get('source_file', 'n/a')}" ]
+    for edge in edge_list:
+        if edge["source"] in selected and edge["target"] in selected and (edge["source"] == node_id or edge["target"] == node_id or depth > 1):
+            lines.append(f"EDGE {edge['source']} -[{edge['relation']}|{edge['confidence']}]-> {edge['target']} source={edge.get('source_file')}#{edge.get('source_location', '')}")
+    return "\n".join(lines)
+
+
+def path_query(graph: dict[str, Any], source: str, target: str) -> str:
+    aliases = alias_map(graph)
+    source_id = aliases.get(source, source)
+    target_id = aliases.get(target, target)
+    nodes = {node["id"]: node for node in graph["nodes"]}
+    if source_id not in nodes or target_id not in nodes:
+        return f"нет узла: {source if source_id not in nodes else target}"
+    outgoing: dict[str, list[dict[str, Any]]] = {}
+    for edge in graph["edges"]:
+        outgoing.setdefault(edge["source"], []).append(edge)
+    queue: deque[str] = deque([source_id])
+    previous: dict[str, tuple[str, dict[str, Any]]] = {}
+    seen = {source_id}
+    while queue:
+        current = queue.popleft()
+        if current == target_id:
+            break
+        for edge in outgoing.get(current, []):
+            other = edge["target"]
+            if other not in seen:
+                seen.add(other)
+                previous[other] = (current, edge)
+                queue.append(other)
+    if target_id not in seen:
+        return f"маршрут не найден: {source_id} → {target_id}; последний доступный подграф узлов={len(seen)}"
+    steps: list[str] = []
+    current = target_id
+    while current != source_id:
+        prior, edge = previous[current]
+        steps.append(f"{prior} -[{edge['relation']}|{edge['confidence']}]-> {current} ({edge.get('source_file')}#{edge.get('source_location', '')})")
+        current = prior
+    return "\n".join(reversed(steps))
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="FTS directed claim/evidence graph")
+    sub = parser.add_subparsers(dest="command", required=True)
+    sub.add_parser("build")
+    validate_parser = sub.add_parser("validate")
+    validate_parser.add_argument("--idempotent", action="store_true")
+    sub.add_parser("coverage")
+    query_parser = sub.add_parser("query")
+    query_parser.add_argument("target")
+    query_parser.add_argument("--depth", type=int, default=1)
+    path_parser = sub.add_parser("path")
+    path_parser.add_argument("source")
+    path_parser.add_argument("target")
+    args = parser.parse_args()
+    if args.command == "build":
+        graph = build_graph()
+        write_graph(graph)
+        print(f"CLAIM GRAPH built: {graph['coverage']['nodes']} nodes, {graph['coverage']['edges']} edges; {graph['coverage']['canonical_input_assertions']} canonical input assertions")
+        return 0
+    graph = load_graph()
+    if args.command == "validate":
+        result = validate_graph(graph, idempotent=args.idempotent)
+        print("CLAIM GRAPH validate: " + json.dumps(result, ensure_ascii=False, sort_keys=True))
+        return 0
+    if args.command == "coverage":
+        print(json.dumps(graph["coverage"], ensure_ascii=False, indent=2))
+        return 0
+    if args.command == "query":
+        print(query(graph, args.target, depth=args.depth))
+        return 0
+    if args.command == "path":
+        print(path_query(graph, args.source, args.target))
+        return 0
+    return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

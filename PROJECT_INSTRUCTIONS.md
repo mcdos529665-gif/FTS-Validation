@@ -95,9 +95,21 @@ SP-карточек. Полный объединённый workbook пока н�
     python tools/query.py deps OP_Lift          # транзитивные depends_on
     python tools/query.py find фаза             # поиск по тексту/заголовку/символу
     python tools/query.py status candidate      # всё со статусом-кандидатом
+    python -X utf8 tools/claim_graph.py build  # авторитетный directed claim/evidence graph
+    python -X utf8 tools/claim_graph.py validate --idempotent
+    python -X utf8 tools/claim_graph.py query CM-001 --depth 1
+    python -X utf8 tools/claim_graph.py path CM-001 C01
 
 Полные `FULL_DUMP.md` / `workbook_sheets.json` открывать только когда нужен
 лист целиком — и тогда конкретный лист, а не файл целиком.
+
+`work/v14_rebuild/claim_graph/claim_graph.json` — авторитетный машинный слой
+утверждений, источников, evidence, ограничений и статусных оценок. Он сохраняет
+направление и параллельные предикаты независимо от `graphify-out/`; Graphify
+используется как навигационное представление. `CLAIM_MATRIX.tsv` представлена
+групповыми claims, атомаризация без свидетеля запрещена. C01–C62 являются
+evidence формальных предикатов и сами по себе не повышают `St_FTS`. Все curated
+bridges обязаны иметь scope, provenance и `status_effect`.
 
 ## 5. Восстановление при истечении токенов
 
