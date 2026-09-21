@@ -343,7 +343,7 @@
   {
     "id": "U_06",
     "type": "level",
-    "text": "У(6): Статистика / случайная закономерность. Carrier=threshold-to-7; window=(3,4,5,6,7)",
+    "text": "У(6): Статистика / случайная закономерность. Carrier=threshold-to-7; window=(3,4,5,6,7). Активная каноническая форма: ((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))",
     "depends_on": [
       "U_05"
     ],
@@ -354,14 +354,14 @@
     ],
     "path": "03_Уровни_У/U_06",
     "status": "canonical_strict",
-    "internal_ref": "CANON_V43/CANON_EN",
+    "internal_ref": "CANON_V43/CANON_EN + AUTHOR_CORRECTION_2026-09-21",
     "symbol": "У(6)",
     "title": "Статистика / случайная закономерность"
   },
   {
     "id": "M_06",
     "type": "minimal_expression",
-    "text": "М-регистр для У(6): V*V",
+    "text": "М-регистр для У(6): ((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))",
     "depends_on": [],
     "tags": [
       "minimal",
@@ -369,8 +369,8 @@
     ],
     "path": "17_Карточки/M_06",
     "status": "canonical_strict",
-    "internal_ref": "CANON_V43 + user_current",
-    "symbol": "V*V",
+    "internal_ref": "CANON_V43 + AUTHOR_CORRECTION_2026-09-21",
+    "symbol": "((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))",
     "title": "Минимум У(6)"
   },
   {
@@ -392,7 +392,7 @@
   {
     "id": "U_07",
     "type": "level",
-    "text": "У(7): Знание/Познание/Предсказание как Answer(W)=Close(W,W); забывание как Close(W,Refuse(W)). Carrier=node-7; window=(3,4,5,6,7).",
+    "text": "У(7): Знание/Познание/Предсказание как Answer(W)=Close(W,W); забывание как Close(W,Refuse(W)). Carrier=node-7; window=(3,4,5,6,7). Активная каноническая форма: (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))",
     "depends_on": [
       "U_06"
     ],
@@ -404,14 +404,14 @@
     ],
     "path": "03_Уровни_У/U_07",
     "status": "candidate_with_operational_gate",
-    "internal_ref": "CANON_V43/CANON_EN",
+    "internal_ref": "CANON_V43/CANON_EN + AUTHOR_CORRECTION_2026-09-21",
     "symbol": "У(7)",
     "title": "Знание / Познание / Предсказание / Забывание(отказ от ожидания)"
   },
   {
     "id": "M_07",
     "type": "minimal_expression",
-    "text": "М-регистр для У(7): a=-*b*b with local_forbid a!=b*b; math analogue y=-x*x,y!=x*x.",
+    "text": "М-регистр для У(7): (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))",
     "depends_on": [
       "U_06",
       "U7_MATH_LOCAL_FORBID"
@@ -423,8 +423,8 @@
     ],
     "path": "17_Карточки/M_07",
     "status": "candidate_with_operational_gate",
-    "internal_ref": "CANON_V43 + user_current",
-    "symbol": "a=-*b*b; a!=b*b",
+    "internal_ref": "CANON_V43 + AUTHOR_CORRECTION_2026-09-21",
+    "symbol": "(((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))",
     "title": "Минимум У(7)"
   },
   {
@@ -2257,7 +2257,7 @@
   {
     "id": "U7_MATH_LOCAL_FORBID",
     "type": "constraint",
-    "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.",
+    "text": "Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму.",
     "depends_on": [
       "M_07",
       "U_06",
@@ -2266,15 +2266,14 @@
     ],
     "tags": [
       "U7",
-      "math",
-      "local_forbid",
-      "mirror_window"
+      "composition",
+      "local_forbid"
     ],
     "path": "06_Мат_аналогии/U7",
     "status": "derived_constraint",
-    "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11",
-    "symbol": "y=-x*x; y!=x*x",
-    "title": "У7: y=-x*x обязан читаться с y!=x*x"
+    "internal_ref": "AUTHOR_CORRECTION_2026-09-21 + RESEARCH_STATUS_V9",
+    "symbol": "U7_author",
+    "title": "У7: вложенная группировка обязательна"
   },
   {
     "id": "CHI_STAT_LADDER",

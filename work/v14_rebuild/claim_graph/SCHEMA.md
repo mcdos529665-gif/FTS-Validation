@@ -20,7 +20,8 @@ OpenQuestion → Claim → grounds_in / verified_by / supported_by / limited_by
 ## Узлы
 
 - `card` — карточка v13; слой `canonical_v13`.
-- `author_statement` — принятые авторские карточки AC-2026-09-19; слой
+- `author_statement` — принятые авторские карточки AC-2026-09-21 (с историей
+  AC-2026-09-19); слой
   `author_canon`, не объединённый с историческим `source/`.
 - `claim_group` — адресуемая группа утверждений из `CLAIM_MATRIX.tsv`.
   Гранулярность явно равна `group`: дочерние атомарные claims не выдумываются.

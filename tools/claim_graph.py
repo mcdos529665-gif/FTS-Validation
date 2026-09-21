@@ -29,7 +29,7 @@ HTML_PATH = OUT_DIR / "claim_graph.html"
 
 CANON_CARDS = ROOT / "source" / "fts_cards.jsonl"
 CANON_TRIPLES = ROOT / "source" / "fts_triples.tsv"
-AUTHOR_DIR = ROOT / "work" / "author_canon" / "2026-09-19"
+AUTHOR_DIR = ROOT / "work" / "author_canon" / "2026-09-21"
 AUTHOR_CARDS = AUTHOR_DIR / "cards.jsonl"
 AUTHOR_TRIPLES = AUTHOR_DIR / "triples.tsv"
 AUDIT_DIR = ROOT / "work" / "v14_rebuild" / "audit"

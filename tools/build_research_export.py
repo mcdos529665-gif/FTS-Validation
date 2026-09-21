@@ -90,9 +90,10 @@ TRAIN_REFLECTION_RESULTS_MD = TRAIN_REFLECTION_ROOT / "RESULTS.md"
 TRAIN_REFLECTION_RESULTS_JSON = TRAIN_REFLECTION_ROOT / "results.json"
 DIALOGUE_SEMANTICS_NOTE = Path("work/v14_rebuild/dialogue_semantics_2026-09-15.md")
 AUTHOR_CANON_INDEX = Path("work/AUTHOR_CANON.md")
-AUTHOR_CANON_ROOT = Path("work/author_canon/2026-09-19")
+AUTHOR_CANON_ROOT = Path("work/author_canon/2026-09-21")
 AUTHOR_CANON_INPUTS = tuple(AUTHOR_CANON_ROOT / name for name in (
-    "AMENDMENT.md", "AUTHOR_MESSAGE.txt", "AUTHOR_CLARIFICATION.txt",
+    "AMENDMENT.md", "AUTHOR_MESSAGE.txt", "INHERITED_AUTHOR_MESSAGE.txt",
+    "INHERITED_AUTHOR_CLARIFICATION.txt",
     "cards.jsonl", "triples.tsv", "MANIFEST.json", "check_scope.py",
 ))
 NEURAL_ANALOGY_ROOT = Path("work/v14_rebuild/neural_analogy_2026-09-19")
@@ -459,7 +460,8 @@ def render_export() -> str:
 
 - `source/` — неизменяемый канон v13.
 - Принятые автором дополнения к этому снимку перечислены в `work/AUTHOR_CANON.md`;
-  AC-2026-09-19 включено отдельно с точными сообщениями, карточками и манифестом.
+  AC-2026-09-21 включено отдельно с точным сообщением, унаследованными
+  материалами, карточками и манифестом; AC-2026-09-19 остаётся историей.
 - Материалы `work/` — развитие, проверки, решения и кандидаты.
 - Внешний результат всегда остаётся `[внешнее]`.
 - `candidate`/`overlay` не равны `canonical_strict`.
@@ -515,16 +517,17 @@ def render_export() -> str:
                 markdown_source("6.11. Авторский мандат ближайшего цикла", AUTHOR_CYCLE_CHARTER),
                 markdown_source("6.12. Рабочая интеграция диалога: траектория и внутренняя регуляция", DIALOGUE_SEMANTICS_NOTE),
                 markdown_source("6.13. Реестр принятых авторских дополнений", AUTHOR_CANON_INDEX),
-                markdown_source("6.14. Авторское дополнение AC-2026-09-19", AUTHOR_CANON_ROOT / "AMENDMENT.md"),
-                fenced_source("6.15. Исходное авторское решение", AUTHOR_CANON_ROOT / "AUTHOR_MESSAGE.txt", "text"),
-                fenced_source("6.16. Уточнение трёх исходов У7", AUTHOR_CANON_ROOT / "AUTHOR_CLARIFICATION.txt", "text"),
-                fenced_source("6.17. Карточки авторского дополнения", AUTHOR_CANON_ROOT / "cards.jsonl", "jsonl"),
-                fenced_source("6.18. Связи авторского дополнения", AUTHOR_CANON_ROOT / "triples.tsv", "tsv"),
-                fenced_source("6.19. Манифест авторского дополнения", AUTHOR_CANON_ROOT / "MANIFEST.json", "json"),
-                fenced_source("6.20. Проверка границ внешних прочтений", AUTHOR_CANON_ROOT / "check_scope.py", "python"),
-                markdown_source("6.21. Нейросетевой аналог ФТС: гашение и обобщение", NEURAL_ANALOGY_REVIEW),
-                fenced_source_trimmed("6.22. Исходное сообщение об аналоге", NEURAL_ANALOGY_AUTHOR_MESSAGE, "text"),
-                fenced_source("6.23. Воспроизводимые свидетели аналога", NEURAL_ANALOGY_CHECK, "python"),
+                markdown_source("6.14. Авторское дополнение AC-2026-09-21", AUTHOR_CANON_ROOT / "AMENDMENT.md"),
+                fenced_source("6.15. Новое авторское сообщение", AUTHOR_CANON_ROOT / "AUTHOR_MESSAGE.txt", "text"),
+                fenced_source("6.16. Унаследованное авторское сообщение", AUTHOR_CANON_ROOT / "INHERITED_AUTHOR_MESSAGE.txt", "text"),
+                fenced_source("6.17. Унаследованное уточнение трёх исходов У7", AUTHOR_CANON_ROOT / "INHERITED_AUTHOR_CLARIFICATION.txt", "text"),
+                fenced_source("6.18. Карточки авторского дополнения", AUTHOR_CANON_ROOT / "cards.jsonl", "jsonl"),
+                fenced_source("6.19. Связи авторского дополнения", AUTHOR_CANON_ROOT / "triples.tsv", "tsv"),
+                fenced_source("6.20. Манифест авторского дополнения", AUTHOR_CANON_ROOT / "MANIFEST.json", "json"),
+                fenced_source("6.21. Проверка границ внешних прочтений", AUTHOR_CANON_ROOT / "check_scope.py", "python"),
+                markdown_source("6.22. Нейросетевой аналог ФТС: гашение и обобщение", NEURAL_ANALOGY_REVIEW),
+                fenced_source_trimmed("6.23. Исходное сообщение об аналоге", NEURAL_ANALOGY_AUTHOR_MESSAGE, "text"),
+                fenced_source("6.24. Воспроизводимые свидетели аналога", NEURAL_ANALOGY_CHECK, "python"),
             ]
         ),
         "## 7. Внешний исследовательский контур E5\n\n"

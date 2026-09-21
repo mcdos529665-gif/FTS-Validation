@@ -21,7 +21,7 @@
 - `internal_evidence_nodes`: 6
 - `research_claims`: 3
 - `curated_research_bridges`: 7
-- `nodes`: 742
+- `nodes`: 743
 - `edges`: 1520
 - `unresolved_references`: 62
 

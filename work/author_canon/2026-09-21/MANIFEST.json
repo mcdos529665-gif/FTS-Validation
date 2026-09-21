@@ -1,0 +1,51 @@
+{
+  "version": "AC-2026-09-21",
+  "date": "2026-09-21",
+  "author_status": "accepted_into_author_canon",
+  "release_kind": "versioned_author_canon_correction",
+  "base_version": "v13_complex_branch_overlay",
+  "supersedes_version": "AC-2026-09-19",
+  "supersedes_scope": [
+    "AC_20260919_U6_LOGIC",
+    "AC_20260919_U7_LOGIC"
+  ],
+  "base_manifest_sha256": "a91c453226cac21072478fa1fbf2db766e36f1bfe477e52414ee19f5c8f6f16a",
+  "base_workbook_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
+  "merged_workbook_release": "not_issued",
+  "evidence_scope": "Авторская коррекция; исполнимая семантика, математическая проверка и внешняя эмпирическая проверка открыты. check_scope.py проверяет только внешний булевый предел.",
+  "counts": {
+    "new_statements": 2,
+    "cards_including_inherited_statements": 5,
+    "triples": 18
+  },
+  "files": {
+    "AMENDMENT.md": {
+      "sha256": "b1b8c209f98c557afff5c439ac9112abdc01ee17afd4dde164d18056eaaaae6d",
+      "bytes": 5382
+    },
+    "AUTHOR_MESSAGE.txt": {
+      "sha256": "4634997721d5c42d50765189deb9bd97114d611c075b09f513fe3b8d61c66178",
+      "bytes": 211
+    },
+    "INHERITED_AUTHOR_MESSAGE.txt": {
+      "sha256": "6ed5c7b91877969c5cae727b0e4d8dc7a587ccc47ca3c725f3f317a241ebf199",
+      "bytes": 1060
+    },
+    "INHERITED_AUTHOR_CLARIFICATION.txt": {
+      "sha256": "348f19c9f2848736e73cded6aefc33891215bc409ea51c33a9c3a5693b892881",
+      "bytes": 197
+    },
+    "cards.jsonl": {
+      "sha256": "74320ed6c55da6c8ffa046c26841e70f85d39027af176a49eafa729ea5c3ef18",
+      "bytes": 5485
+    },
+    "triples.tsv": {
+      "sha256": "8834d23f4c966ebd112207d5b2be59e218c9b8d820416162e695ef992b721b2c",
+      "bytes": 938
+    },
+    "check_scope.py": {
+      "sha256": "71617b6c320df4c536409d28fc7068b13bafba37468975c4a508d698b96a6974",
+      "bytes": 940
+    }
+  }
+}

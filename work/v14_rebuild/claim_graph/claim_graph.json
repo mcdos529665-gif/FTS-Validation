@@ -11,31 +11,35 @@
   "input_digests": [
     {
       "path": "source/fts_cards.jsonl",
-      "sha256": "149b7992e298ca286aa4d1db99161e8c2dd4d2d4bb2f2c6f967e08cb67e14771"
+      "sha256": "bf92fdeae4f7d7b781fd4dd7be6c20c738623243f0a71135fb9ee89d1c0960ab"
     },
     {
       "path": "source/fts_triples.tsv",
       "sha256": "6b23b2dff16629ebc7b85aeb2a0930048e0076272e32499c2de33b0c4b4adf0c"
     },
     {
-      "path": "work/author_canon/2026-09-19/AUTHOR_CLARIFICATION.txt",
+      "path": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
+      "sha256": "4634997721d5c42d50765189deb9bd97114d611c075b09f513fe3b8d61c66178"
+    },
+    {
+      "path": "work/author_canon/2026-09-21/INHERITED_AUTHOR_CLARIFICATION.txt",
       "sha256": "348f19c9f2848736e73cded6aefc33891215bc409ea51c33a9c3a5693b892881"
     },
     {
-      "path": "work/author_canon/2026-09-19/AUTHOR_MESSAGE.txt",
+      "path": "work/author_canon/2026-09-21/INHERITED_AUTHOR_MESSAGE.txt",
       "sha256": "6ed5c7b91877969c5cae727b0e4d8dc7a587ccc47ca3c725f3f317a241ebf199"
     },
     {
-      "path": "work/author_canon/2026-09-19/cards.jsonl",
-      "sha256": "004664d05a6ac99ff9b184ef42bac3040724a5e9a1a8e00c57ff3821244338db"
+      "path": "work/author_canon/2026-09-21/cards.jsonl",
+      "sha256": "74320ed6c55da6c8ffa046c26841e70f85d39027af176a49eafa729ea5c3ef18"
     },
     {
-      "path": "work/author_canon/2026-09-19/triples.tsv",
-      "sha256": "8a186d5546c3f9daa75d3d1aa0e89fd4d3a13f56ab8b3233ff10c27267a64842"
+      "path": "work/author_canon/2026-09-21/triples.tsv",
+      "sha256": "8834d23f4c966ebd112207d5b2be59e218c9b8d820416162e695ef992b721b2c"
     },
     {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
-      "sha256": "27c7382d8ba1fde1136a84fb43f0b6cef1c227deda45c0c0d3dcfb8a4a97b90b"
+      "sha256": "8b30a8e915718f09130c095fa14dc501e12e88b9917a0a6168445a6c6f8cfbbd"
     },
     {
       "path": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
@@ -51,7 +55,7 @@
     },
     {
       "path": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "sha256": "65306f184beee2c058ac40cf187eaa392b6b804e4613db13896331fb9206f50c"
+      "sha256": "2b9f91c55d64b0e001878855880527186b020cb340564ffa28b6b407c048cafa"
     },
     {
       "path": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
@@ -228,17 +232,6 @@
       "source_location": "card:A9"
     },
     {
-      "id": "assessment_ac_20260919_author_decision_status",
-      "type": "status_assessment",
-      "label": "AC_20260919_AUTHOR_DECISION status: accepted_into_author_canon; evidence_status=direct_author_statement",
-      "layer": "author_canon",
-      "status_text": "accepted_into_author_canon; evidence_status=direct_author_statement",
-      "status_axis": "author_status",
-      "status_effect": "stored_only; no automatic promotion",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_AUTHOR_DECISION"
-    },
-    {
       "id": "assessment_ac_20260919_expectation_speed_status",
       "type": "status_assessment",
       "label": "AC_20260919_EXPECTATION_SPEED status: accepted_into_author_canon; evidence_status=author_adopted_empirically_untested",
@@ -246,7 +239,7 @@
       "status_text": "accepted_into_author_canon; evidence_status=author_adopted_empirically_untested",
       "status_axis": "author_status",
       "status_effect": "stored_only; no automatic promotion",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_EXPECTATION_SPEED"
     },
     {
@@ -257,30 +250,41 @@
       "status_text": "accepted_into_author_canon; evidence_status=author_scope_definition",
       "status_axis": "author_status",
       "status_effect": "stored_only; no automatic promotion",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE"
     },
     {
-      "id": "assessment_ac_20260919_u6_logic_status",
+      "id": "assessment_ac_20260921_author_decision_status",
       "type": "status_assessment",
-      "label": "AC_20260919_U6_LOGIC status: accepted_into_author_canon; evidence_status=operator_semantics_not_formalized",
+      "label": "AC_20260921_AUTHOR_DECISION status: accepted_into_author_canon; evidence_status=direct_author_statement",
+      "layer": "author_canon",
+      "status_text": "accepted_into_author_canon; evidence_status=direct_author_statement",
+      "status_axis": "author_status",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_AUTHOR_DECISION"
+    },
+    {
+      "id": "assessment_ac_20260921_u6_logic_status",
+      "type": "status_assessment",
+      "label": "AC_20260921_U6_LOGIC status: accepted_into_author_canon; evidence_status=operator_semantics_not_formalized",
       "layer": "author_canon",
       "status_text": "accepted_into_author_canon; evidence_status=operator_semantics_not_formalized",
       "status_axis": "author_status",
       "status_effect": "stored_only; no automatic promotion",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC"
     },
     {
-      "id": "assessment_ac_20260919_u7_logic_status",
+      "id": "assessment_ac_20260921_u7_logic_status",
       "type": "status_assessment",
-      "label": "AC_20260919_U7_LOGIC status: accepted_into_author_canon; evidence_status=transition_semantics_not_formalized",
+      "label": "AC_20260921_U7_LOGIC status: accepted_into_author_canon; evidence_status=transition_semantics_not_formalized",
       "layer": "author_canon",
       "status_text": "accepted_into_author_canon; evidence_status=transition_semantics_not_formalized",
       "status_axis": "author_status",
       "status_effect": "stored_only; no automatic promotion",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC"
     },
     {
       "id": "assessment_add_constants_status",
@@ -2505,18 +2509,6 @@
       "source_location": "card:U_m1"
     },
     {
-      "id": "author_ac_20260919_author_decision",
-      "type": "author_statement",
-      "label": "Прямое авторское принятие дополнения",
-      "layer": "author_canon",
-      "card_id": "AC_20260919_AUTHOR_DECISION",
-      "status": "author_canonical_amendment",
-      "tags": [],
-      "text": "это идет в канон",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_AUTHOR_DECISION"
-    },
-    {
       "id": "author_ac_20260919_expectation_speed",
       "type": "author_statement",
       "label": "Модель не различает скорость и фундаментальность",
@@ -2525,7 +2517,7 @@
       "status": "author_canonical_amendment",
       "tags": [],
       "text": "Ожидание модели зависит от скорости вычисления; модель не распознаёт разницу между скоростью и фундаментальностью.",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_EXPECTATION_SPEED"
     },
     {
@@ -2537,32 +2529,44 @@
       "status": "author_canonical_amendment",
       "tags": [],
       "text": "На У0 не предмет и отсутствие предмета неразличимы, то есть равны друг другу.",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE"
     },
     {
-      "id": "author_ac_20260919_u6_logic",
+      "id": "author_ac_20260921_author_decision",
       "type": "author_statement",
-      "label": "((a=b) ∨ (a≠b)) ∧ ((a=b) ∧ (a≠b)) Вложенная логическая форма У6",
+      "label": "Прямая авторская коррекция форм У6/У7",
       "layer": "author_canon",
-      "card_id": "AC_20260919_U6_LOGIC",
+      "card_id": "AC_20260921_AUTHOR_DECISION",
       "status": "author_canonical_amendment",
       "tags": [],
-      "text": "Внутренний AND-блок отражает гасящие друг друга фазы, которые на У6 выявить нельзя.",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC"
+      "text": "Изменить авторское каноническое чтение: У7 получает указанную вложенную формулу, У6 получает указанную формулу вместо V*V.",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_AUTHOR_DECISION"
     },
     {
-      "id": "author_ac_20260919_u7_logic",
+      "id": "author_ac_20260921_u6_logic",
       "type": "author_statement",
-      "label": "((a=b) ∨ (a≠b)) ∨ ((a=b) ∧ (a≠b)) Вложенная логическая форма У7 и три исхода",
+      "label": "((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b)) Актуализированная авторская форма У6 вместо V*V",
       "layer": "author_canon",
-      "card_id": "AC_20260919_U7_LOGIC",
+      "card_id": "AC_20260921_U6_LOGIC",
       "status": "author_canonical_amendment",
       "tags": [],
-      "text": "На У7 фазы уже видны. Автор уточняет доступные исходы: a=b; a≠b; (a=b)∧(a≠b).",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC"
+      "text": "В актуальном авторском чтении У6 получает эту форму вместо прежней записи V*V; активная карточка M_06 обновлена.",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC"
+    },
+    {
+      "id": "author_ac_20260921_u7_logic",
+      "type": "author_statement",
+      "label": "(((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b))) Актуализированная вложенная форма У7",
+      "layer": "author_canon",
+      "card_id": "AC_20260921_U7_LOGIC",
+      "status": "author_canonical_amendment",
+      "tags": [],
+      "text": "У7 получает указанную автором вложенную формулу; сохранённое авторское уточнение допускает исходы a=b, a!=b и составной исход (a=b) and (a!=b).",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC"
     },
     {
       "id": "card_a0",
@@ -3697,7 +3701,7 @@
     {
       "id": "card_m_06",
       "type": "card",
-      "label": "V*V Минимум У(6)",
+      "label": "((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b)) Минимум У(6)",
       "layer": "canonical_v13",
       "card_id": "M_06",
       "status": "canonical_strict",
@@ -3705,14 +3709,14 @@
         "minimal",
         "U6"
       ],
-      "text": "М-регистр для У(6): V*V",
+      "text": "М-регистр для У(6): ((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:M_06"
     },
     {
       "id": "card_m_07",
       "type": "card",
-      "label": "a=-*b*b; a!=b*b Минимум У(7)",
+      "label": "(((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b))) Минимум У(7)",
       "layer": "canonical_v13",
       "card_id": "M_07",
       "status": "candidate_with_operational_gate",
@@ -3721,7 +3725,7 @@
         "U7",
         "local_forbid"
       ],
-      "text": "М-регистр для У(7): a=-*b*b with local_forbid a!=b*b; math analogue y=-x*x,y!=x*x.",
+      "text": "М-регистр для У(7): (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:M_07"
     },
@@ -4796,17 +4800,16 @@
     {
       "id": "card_u7_math_local_forbid",
       "type": "card",
-      "label": "y=-x*x; y!=x*x У7: y=-x*x обязан читаться с y!=x*x",
+      "label": "U7_author У7: вложенная группировка обязательна",
       "layer": "canonical_v13",
       "card_id": "U7_MATH_LOCAL_FORBID",
       "status": "derived_constraint",
       "tags": [
         "U7",
-        "math",
-        "local_forbid",
-        "mirror_window"
+        "composition",
+        "local_forbid"
       ],
-      "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.",
+      "text": "Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму.",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:U7_MATH_LOCAL_FORBID"
     },
@@ -4954,7 +4957,7 @@
         "canonical_strict",
         "threshold-to-7"
       ],
-      "text": "У(6): Статистика / случайная закономерность. Carrier=threshold-to-7; window=(3,4,5,6,7)",
+      "text": "У(6): Статистика / случайная закономерность. Carrier=threshold-to-7; window=(3,4,5,6,7). Активная каноническая форма: ((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:U_06"
     },
@@ -4971,7 +4974,7 @@
         "node-7",
         "window_cycle"
       ],
-      "text": "У(7): Знание/Познание/Предсказание как Answer(W)=Close(W,W); забывание как Close(W,Refuse(W)). Carrier=node-7; window=(3,4,5,6,7).",
+      "text": "У(7): Знание/Познание/Предсказание как Answer(W)=Close(W,W); забывание как Close(W,Refuse(W)). Carrier=node-7; window=(3,4,5,6,7). Активная каноническая форма: (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:U_07"
     },
@@ -5599,7 +5602,7 @@
       "type": "constraint",
       "label": "Не превращать чтение самой модели в объективный закон о фундаментальности.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_EXPECTATION_SPEED:local_forbid[0]"
     },
     {
@@ -5607,7 +5610,7 @@
       "type": "constraint",
       "label": "Не делать равенство глобальным для всех уровней.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE:local_forbid[0]"
     },
     {
@@ -5615,54 +5618,61 @@
       "type": "constraint",
       "label": "Метазапись =_{У0} не отождествлять с Eq₀ из CH_00.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE:local_forbid[1]"
     },
     {
-      "id": "constraint_ac_20260919_u6_logic_00",
+      "id": "constraint_ac_20260921_u6_logic_00",
       "type": "constraint",
-      "label": "Не заменять авторскую форму её булевой тенью.",
+      "label": "Не смешивать историческую карточку M_06=V*V из canon_history с активной карточкой M_06.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC:local_forbid[0]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC:local_forbid[0]"
     },
     {
-      "id": "constraint_ac_20260919_u6_logic_01",
+      "id": "constraint_ac_20260921_u6_logic_01",
       "type": "constraint",
-      "label": "Не отождествлять гашение амплитуд с суммой энергий.",
+      "label": "Не заменять авторскую вложенную форму её обычной булевой тенью.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC:local_forbid[1]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC:local_forbid[1]"
     },
     {
-      "id": "constraint_ac_20260919_u7_logic_00",
+      "id": "constraint_ac_20260921_u7_logic_00",
       "type": "constraint",
-      "label": "Не выводить доступ к отдельным фазам только из смены Q на -Q.",
+      "label": "Не схлопывать вложенную композицию в обычную булеву формулу как определение ФТС.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC:local_forbid[0]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC:local_forbid[0]"
     },
     {
-      "id": "constraint_ac_20260919_u7_logic_01",
+      "id": "constraint_ac_20260921_u7_logic_01",
       "type": "constraint",
-      "label": "Не требовать обязательного успешного выбора.",
+      "label": "Не считать формулу автоматически арифметическим отображением или formal_math_fact.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC:local_forbid[1]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC:local_forbid[1]"
     },
     {
-      "id": "doc_work_author_canon_2026_09_19_author_clarification_txt",
+      "id": "doc_work_author_canon_2026_09_21_author_message_txt",
       "type": "source_document",
-      "label": "work/author_canon/2026-09-19/AUTHOR_CLARIFICATION.txt",
+      "label": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/AUTHOR_CLARIFICATION.txt"
+      "source_file": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt"
     },
     {
-      "id": "doc_work_author_canon_2026_09_19_author_message_txt",
+      "id": "doc_work_author_canon_2026_09_21_inherited_author_clarification_txt",
       "type": "source_document",
-      "label": "work/author_canon/2026-09-19/AUTHOR_MESSAGE.txt",
+      "label": "work/author_canon/2026-09-21/INHERITED_AUTHOR_CLARIFICATION.txt",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/AUTHOR_MESSAGE.txt"
+      "source_file": "work/author_canon/2026-09-21/INHERITED_AUTHOR_CLARIFICATION.txt"
+    },
+    {
+      "id": "doc_work_author_canon_2026_09_21_inherited_author_message_txt",
+      "type": "source_document",
+      "label": "work/author_canon/2026-09-21/INHERITED_AUTHOR_MESSAGE.txt",
+      "layer": "author_canon",
+      "source_file": "work/author_canon/2026-09-21/INHERITED_AUTHOR_MESSAGE.txt"
     },
     {
       "id": "doc_work_v14_rebuild_audit_claim_matrix_tsv",
@@ -6806,7 +6816,7 @@
       "type": "open_obligation",
       "label": "Уровневая область, мера скорости, наблюдаемое ожидание, критерий различения.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_EXPECTATION_SPEED:open_obligations[0]"
     },
     {
@@ -6814,24 +6824,24 @@
       "type": "open_obligation",
       "label": "Первый уровень, на котором роли различаются, данным сообщением не определён.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE:open_obligations[0]"
     },
     {
-      "id": "obligation_ac_20260919_u6_logic_00",
+      "id": "obligation_ac_20260921_u6_logic_00",
       "type": "open_obligation",
-      "label": "Операторы, сохраняющие роль композиции; мост к V*V/CH_06.",
+      "label": "Точный мост к историческому CH_06 и операторная семантика композиции.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC:open_obligations[0]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC:open_obligations[0]"
     },
     {
-      "id": "obligation_ac_20260919_u7_logic_00",
+      "id": "obligation_ac_20260921_u7_logic_00",
       "type": "open_obligation",
-      "label": "Условия и механизм доступности трёх исходов.",
+      "label": "Условия и механизм доступности трёх исходов; исполнимая семантика вложенности.",
       "layer": "author_canon",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC:open_obligations[0]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC:open_obligations[0]"
     },
     {
       "id": "oq_oq_8plus_only_refuted",
@@ -6841,7 +6851,7 @@
       "anchor": "oq-8plus-only-refuted",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L286"
+      "source_location": "L287"
     },
     {
       "id": "oq_oq_antitotality_diagonal_preconditions",
@@ -6851,7 +6861,7 @@
       "anchor": "oq-antitotality-diagonal-preconditions",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L450"
+      "source_location": "L451"
     },
     {
       "id": "oq_oq_arity_window_13_14",
@@ -6861,7 +6871,7 @@
       "anchor": "oq-arity-window-13-14",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L121"
+      "source_location": "L122"
     },
     {
       "id": "oq_oq_audit_canon_reference_repair",
@@ -6871,7 +6881,7 @@
       "anchor": "oq-audit-canon-reference-repair",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L375"
+      "source_location": "L376"
     },
     {
       "id": "oq_oq_audit_semantic_repromotion",
@@ -6881,7 +6891,7 @@
       "anchor": "oq-audit-semantic-repromotion",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L372"
+      "source_location": "L373"
     },
     {
       "id": "oq_oq_audit_status_promotions_done",
@@ -6891,7 +6901,7 @@
       "anchor": "oq-audit-status-promotions-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L369"
+      "source_location": "L370"
     },
     {
       "id": "oq_oq_canon_star_fate",
@@ -6901,7 +6911,7 @@
       "anchor": "oq-canon-star-fate",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L263"
+      "source_location": "L264"
     },
     {
       "id": "oq_oq_ce_canon",
@@ -6921,7 +6931,7 @@
       "anchor": "oq-ce-weights-proof",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L234"
+      "source_location": "L235"
     },
     {
       "id": "oq_oq_chi_ladder_done",
@@ -6941,7 +6951,7 @@
       "anchor": "oq-clt-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L351"
+      "source_location": "L352"
     },
     {
       "id": "oq_oq_const_statistics_code",
@@ -6951,7 +6961,7 @@
       "anchor": "oq-const-statistics-code",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L157"
+      "source_location": "L158"
     },
     {
       "id": "oq_oq_cost_model_scope",
@@ -6961,7 +6971,7 @@
       "anchor": "oq-cost-model-scope",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L236"
+      "source_location": "L237"
     },
     {
       "id": "oq_oq_d10_phase_test",
@@ -6971,7 +6981,7 @@
       "anchor": "oq-d10-phase-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L167"
+      "source_location": "L168"
     },
     {
       "id": "oq_oq_d11_branch_bit_test",
@@ -6981,7 +6991,7 @@
       "anchor": "oq-d11-branch-bit-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L133"
+      "source_location": "L134"
     },
     {
       "id": "oq_oq_d2_half_overlay",
@@ -6991,7 +7001,7 @@
       "anchor": "oq-d2-half-overlay",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L278"
+      "source_location": "L279"
     },
     {
       "id": "oq_oq_d2_sign_retrieval_remainder",
@@ -7001,7 +7011,7 @@
       "anchor": "oq-d2-sign-retrieval-remainder",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L292"
+      "source_location": "L293"
     },
     {
       "id": "oq_oq_d4_column_precision",
@@ -7011,7 +7021,7 @@
       "anchor": "oq-d4-column-precision",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L281"
+      "source_location": "L282"
     },
     {
       "id": "oq_oq_ddelta_weights",
@@ -7021,7 +7031,7 @@
       "anchor": "oq-ddelta-weights",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L261"
+      "source_location": "L262"
     },
     {
       "id": "oq_oq_dict_d_completeness",
@@ -7031,7 +7041,7 @@
       "anchor": "oq-dict-d-completeness",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L108"
+      "source_location": "L109"
     },
     {
       "id": "oq_oq_divorce_cases_genre",
@@ -7041,7 +7051,7 @@
       "anchor": "oq-divorce-cases-genre",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L354"
+      "source_location": "L355"
     },
     {
       "id": "oq_oq_edgeworth_u9",
@@ -7051,7 +7061,7 @@
       "anchor": "oq-edgeworth-u9",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L364"
+      "source_location": "L365"
     },
     {
       "id": "oq_oq_expectation_speed_fundamentality",
@@ -7061,7 +7071,7 @@
       "anchor": "oq-expectation-speed-fundamentality",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L71"
+      "source_location": "L72"
     },
     {
       "id": "oq_oq_export_refs_done",
@@ -7071,7 +7081,7 @@
       "anchor": "oq-export-refs-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L90"
+      "source_location": "L91"
     },
     {
       "id": "oq_oq_forms8plus_ratio",
@@ -7081,7 +7091,7 @@
       "anchor": "oq-forms8plus-ratio",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L144"
+      "source_location": "L145"
     },
     {
       "id": "oq_oq_formulas_7_11_done",
@@ -7101,7 +7111,7 @@
       "anchor": "oq-fourier-questiongain",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L342"
+      "source_location": "L343"
     },
     {
       "id": "oq_oq_full_audit_done",
@@ -7121,7 +7131,7 @@
       "anchor": "oq-graph-dep-sync",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L305"
+      "source_location": "L306"
     },
     {
       "id": "oq_oq_kappa_provenance",
@@ -7141,7 +7151,7 @@
       "anchor": "oq-levy-world",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L362"
+      "source_location": "L363"
     },
     {
       "id": "oq_oq_machine_check_done",
@@ -7161,7 +7171,7 @@
       "anchor": "oq-mprime-audit",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L243"
+      "source_location": "L244"
     },
     {
       "id": "oq_oq_next_question_principle",
@@ -7171,7 +7181,7 @@
       "anchor": "oq-next-question-principle",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L381"
+      "source_location": "L382"
     },
     {
       "id": "oq_oq_node11_asymmetry",
@@ -7181,7 +7191,7 @@
       "anchor": "oq-node11-asymmetry",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L81"
+      "source_location": "L82"
     },
     {
       "id": "oq_oq_o20_missing_benchmark",
@@ -7201,7 +7211,7 @@
       "anchor": "oq-o3-twolists",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L148"
+      "source_location": "L149"
     },
     {
       "id": "oq_oq_padic_carrier_channel",
@@ -7211,7 +7221,7 @@
       "anchor": "oq-padic-carrier-channel",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L316"
+      "source_location": "L317"
     },
     {
       "id": "oq_oq_parity_witness_done",
@@ -7221,7 +7231,7 @@
       "anchor": "oq-parity-witness-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L152"
+      "source_location": "L153"
     },
     {
       "id": "oq_oq_passport_u14_u15",
@@ -7231,7 +7241,7 @@
       "anchor": "oq-passport-u14-u15",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L123"
+      "source_location": "L124"
     },
     {
       "id": "oq_oq_pentad_role_cycle",
@@ -7241,7 +7251,7 @@
       "anchor": "oq-pentad-role-cycle",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L312"
+      "source_location": "L313"
     },
     {
       "id": "oq_oq_phase_causal_u9",
@@ -7261,7 +7271,7 @@
       "anchor": "oq-pi-projection-above-u7",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L84"
+      "source_location": "L85"
     },
     {
       "id": "oq_oq_redteam_dependent_guards",
@@ -7271,7 +7281,7 @@
       "anchor": "oq-redteam-dependent-guards",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L131"
+      "source_location": "L132"
     },
     {
       "id": "oq_oq_redteam_f3_done",
@@ -7281,7 +7291,7 @@
       "anchor": "oq-redteam-f3-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L125"
+      "source_location": "L126"
     },
     {
       "id": "oq_oq_reflection_label_internalization",
@@ -7291,7 +7301,7 @@
       "anchor": "oq-reflection-label-internalization",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L98"
+      "source_location": "L99"
     },
     {
       "id": "oq_oq_roots_of_unity_z368",
@@ -7301,7 +7311,7 @@
       "anchor": "oq-roots-of-unity-z368",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L310"
+      "source_location": "L311"
     },
     {
       "id": "oq_oq_sphere_u6_carrier",
@@ -7311,7 +7321,7 @@
       "anchor": "oq-sphere-u6-carrier",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L335"
+      "source_location": "L336"
     },
     {
       "id": "oq_oq_strict_band_7_export",
@@ -7321,7 +7331,7 @@
       "anchor": "oq-strict-band-7-export",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L268"
+      "source_location": "L269"
     },
     {
       "id": "oq_oq_synthesis_c_assembly",
@@ -7331,7 +7341,7 @@
       "anchor": "oq-synthesis-c-assembly",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L287"
+      "source_location": "L288"
     },
     {
       "id": "oq_oq_systematic_literature_review",
@@ -7351,7 +7361,7 @@
       "anchor": "oq-third-boundary",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L150"
+      "source_location": "L151"
     },
     {
       "id": "oq_oq_tot_groups_8_11",
@@ -7361,7 +7371,7 @@
       "anchor": "oq-tot-groups-8-11",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L146"
+      "source_location": "L147"
     },
     {
       "id": "oq_oq_train_reflection_test",
@@ -7371,7 +7381,7 @@
       "anchor": "oq-train-reflection-test",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L112"
+      "source_location": "L113"
     },
     {
       "id": "oq_oq_txp_verif_done",
@@ -7381,7 +7391,7 @@
       "anchor": "oq-txp-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L339"
+      "source_location": "L340"
     },
     {
       "id": "oq_oq_typed_absence_provenance_benchmark",
@@ -7391,7 +7401,7 @@
       "anchor": "oq-typed-absence-provenance-benchmark",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L454"
+      "source_location": "L455"
     },
     {
       "id": "oq_oq_u0_absence_distinction_boundary",
@@ -7401,7 +7411,7 @@
       "anchor": "oq-u0-absence-distinction-boundary",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L77"
+      "source_location": "L78"
     },
     {
       "id": "oq_oq_u0_u7_refinement_protocol",
@@ -7411,7 +7421,7 @@
       "anchor": "oq-u0-u7-refinement-protocol",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L389"
+      "source_location": "L390"
     },
     {
       "id": "oq_oq_u12_antimode_authorfix",
@@ -7421,7 +7431,7 @@
       "anchor": "oq-u12-antimode-authorfix",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L165"
+      "source_location": "L166"
     },
     {
       "id": "oq_oq_u12_antimode_gate",
@@ -7431,7 +7441,7 @@
       "anchor": "oq-u12-antimode-gate",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L129"
+      "source_location": "L130"
     },
     {
       "id": "oq_oq_u12_radius_r",
@@ -7441,7 +7451,7 @@
       "anchor": "oq-u12-radius-r",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L127"
+      "source_location": "L128"
     },
     {
       "id": "oq_oq_u13_boundary_union_op",
@@ -7451,7 +7461,7 @@
       "anchor": "oq-u13-boundary-union-op",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L161"
+      "source_location": "L162"
     },
     {
       "id": "oq_oq_u14_worlds_agg_op",
@@ -7461,12 +7471,12 @@
       "anchor": "oq-u14-worlds-agg-op",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L164"
+      "source_location": "L165"
     },
     {
       "id": "oq_oq_u6_u7_compositional_semantics",
       "type": "open_question",
-      "label": "oq-u6-u7-compositional-semantics — Исполнимая композиционная семантика принятых L6/L7.",
+      "label": "oq-u6-u7-compositional-semantics — Исполнимая композиционная семантика актуальных форм У6/У7.",
       "layer": "audit",
       "anchor": "oq-u6-u7-compositional-semantics",
       "oq_status": "open",
@@ -7481,7 +7491,7 @@
       "anchor": "oq-u8-u10-optests",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L95"
+      "source_location": "L96"
     },
     {
       "id": "oq_oq_unit_circle_z15",
@@ -7491,7 +7501,7 @@
       "anchor": "oq-unit-circle-z15",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L159"
+      "source_location": "L160"
     },
     {
       "id": "oq_oq_upper_12_17_done",
@@ -7511,7 +7521,7 @@
       "anchor": "oq-vieta-cubic-s3",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L365"
+      "source_location": "L366"
     },
     {
       "id": "oq_oq_witnesses_verif_done",
@@ -7521,7 +7531,7 @@
       "anchor": "oq-witnesses-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L283"
+      "source_location": "L284"
     },
     {
       "id": "oq_oq_zero_classes_chi_e",
@@ -7531,7 +7541,7 @@
       "anchor": "oq-zero-classes-chi-e",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L344"
+      "source_location": "L345"
     },
     {
       "id": "pattern_pa_c01",
@@ -9766,7 +9776,7 @@
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_EXPECTATION_SPEED:depends_on[0]",
       "assertion_kind": "card_field"
     },
@@ -9777,7 +9787,7 @@
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE:depends_on[0]",
       "assertion_kind": "card_field"
     },
@@ -9788,142 +9798,142 @@
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE:depends_on[1]",
       "assertion_kind": "card_field"
     },
     {
-      "id": "author_canon_dependency_ac_20260919_u6_logic_000",
-      "source": "author_ac_20260919_u6_logic",
+      "id": "author_canon_dependency_ac_20260921_u6_logic_000",
+      "source": "author_ac_20260921_u6_logic",
       "target": "card_m_04",
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC:depends_on[0]",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC:depends_on[0]",
       "assertion_kind": "card_field"
     },
     {
-      "id": "author_canon_dependency_ac_20260919_u6_logic_001",
-      "source": "author_ac_20260919_u6_logic",
+      "id": "author_canon_dependency_ac_20260921_u6_logic_001",
+      "source": "author_ac_20260921_u6_logic",
       "target": "card_m_05",
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC:depends_on[1]",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC:depends_on[1]",
       "assertion_kind": "card_field"
     },
     {
-      "id": "author_canon_dependency_ac_20260919_u6_logic_002",
-      "source": "author_ac_20260919_u6_logic",
+      "id": "author_canon_dependency_ac_20260921_u6_logic_002",
+      "source": "author_ac_20260921_u6_logic",
       "target": "card_u_06",
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC:depends_on[2]",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC:depends_on[2]",
       "assertion_kind": "card_field"
     },
     {
-      "id": "author_canon_dependency_ac_20260919_u7_logic_000",
-      "source": "author_ac_20260919_u7_logic",
-      "target": "author_ac_20260919_u6_logic",
+      "id": "author_canon_dependency_ac_20260921_u7_logic_000",
+      "source": "author_ac_20260921_u7_logic",
+      "target": "author_ac_20260921_u6_logic",
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC:depends_on[0]",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC:depends_on[0]",
       "assertion_kind": "card_field"
     },
     {
-      "id": "author_canon_dependency_ac_20260919_u7_logic_001",
-      "source": "author_ac_20260919_u7_logic",
+      "id": "author_canon_dependency_ac_20260921_u7_logic_001",
+      "source": "author_ac_20260921_u7_logic",
       "target": "card_u_07",
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC:depends_on[1]",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC:depends_on[1]",
       "assertion_kind": "card_field"
     },
     {
       "id": "author_canon_triple_0001",
-      "source": "author_ac_20260919_author_decision",
-      "target": "author_ac_20260919_u6_logic",
+      "source": "author_ac_20260921_author_decision",
+      "target": "author_ac_20260921_u6_logic",
       "relation": "adopts",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:2",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_AUTHOR_DECISION",
-      "raw_object": "AC_20260919_U6_LOGIC"
+      "raw_subject": "AC_20260921_AUTHOR_DECISION",
+      "raw_object": "AC_20260921_U6_LOGIC"
     },
     {
       "id": "author_canon_triple_0002",
-      "source": "author_ac_20260919_author_decision",
-      "target": "author_ac_20260919_u7_logic",
+      "source": "author_ac_20260921_author_decision",
+      "target": "author_ac_20260921_u7_logic",
       "relation": "adopts",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:3",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_AUTHOR_DECISION",
-      "raw_object": "AC_20260919_U7_LOGIC"
+      "raw_subject": "AC_20260921_AUTHOR_DECISION",
+      "raw_object": "AC_20260921_U7_LOGIC"
     },
     {
       "id": "author_canon_triple_0003",
-      "source": "author_ac_20260919_author_decision",
+      "source": "author_ac_20260921_author_decision",
       "target": "author_ac_20260919_u0_absence",
       "relation": "adopts",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:4",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_AUTHOR_DECISION",
+      "raw_subject": "AC_20260921_AUTHOR_DECISION",
       "raw_object": "AC_20260919_U0_ABSENCE"
     },
     {
       "id": "author_canon_triple_0004",
-      "source": "author_ac_20260919_author_decision",
+      "source": "author_ac_20260921_author_decision",
       "target": "author_ac_20260919_expectation_speed",
       "relation": "adopts",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:5",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_AUTHOR_DECISION",
+      "raw_subject": "AC_20260921_AUTHOR_DECISION",
       "raw_object": "AC_20260919_EXPECTATION_SPEED"
     },
     {
       "id": "author_canon_triple_0005",
       "source": "card_u_06",
-      "target": "author_ac_20260919_u6_logic",
+      "target": "author_ac_20260921_u6_logic",
       "relation": "has_author_logical_expression",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:6",
       "assertion_kind": "triple",
       "raw_subject": "U_06",
-      "raw_object": "AC_20260919_U6_LOGIC"
+      "raw_object": "AC_20260921_U6_LOGIC"
     },
     {
       "id": "author_canon_triple_0006",
       "source": "card_u_07",
-      "target": "author_ac_20260919_u7_logic",
+      "target": "author_ac_20260921_u7_logic",
       "relation": "has_author_logical_expression",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:7",
       "assertion_kind": "triple",
       "raw_subject": "U_07",
-      "raw_object": "AC_20260919_U7_LOGIC"
+      "raw_object": "AC_20260921_U7_LOGIC"
     },
     {
       "id": "author_canon_triple_0007",
@@ -9932,7 +9942,7 @@
       "relation": "has_author_scope_clarification",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:8",
       "assertion_kind": "triple",
       "raw_subject": "U_00",
@@ -9945,7 +9955,7 @@
       "relation": "has_author_expectation_clarification",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:9",
       "assertion_kind": "triple",
       "raw_subject": "U7_WINDOW_CORE",
@@ -9953,67 +9963,67 @@
     },
     {
       "id": "author_canon_triple_0009",
-      "source": "author_ac_20260919_u6_logic",
+      "source": "author_ac_20260921_u6_logic",
       "target": "card_m_04",
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:10",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_U6_LOGIC",
+      "raw_subject": "AC_20260921_U6_LOGIC",
       "raw_object": "M_04"
     },
     {
       "id": "author_canon_triple_0010",
-      "source": "author_ac_20260919_u6_logic",
+      "source": "author_ac_20260921_u6_logic",
       "target": "card_m_05",
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:11",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_U6_LOGIC",
+      "raw_subject": "AC_20260921_U6_LOGIC",
       "raw_object": "M_05"
     },
     {
       "id": "author_canon_triple_0011",
-      "source": "author_ac_20260919_u6_logic",
+      "source": "author_ac_20260921_u6_logic",
       "target": "card_u_06",
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:12",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_U6_LOGIC",
+      "raw_subject": "AC_20260921_U6_LOGIC",
       "raw_object": "U_06"
     },
     {
       "id": "author_canon_triple_0012",
-      "source": "author_ac_20260919_u7_logic",
-      "target": "author_ac_20260919_u6_logic",
+      "source": "author_ac_20260921_u7_logic",
+      "target": "author_ac_20260921_u6_logic",
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:13",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_U7_LOGIC",
-      "raw_object": "AC_20260919_U6_LOGIC"
+      "raw_subject": "AC_20260921_U7_LOGIC",
+      "raw_object": "AC_20260921_U6_LOGIC"
     },
     {
       "id": "author_canon_triple_0013",
-      "source": "author_ac_20260919_u7_logic",
+      "source": "author_ac_20260921_u7_logic",
       "target": "card_u_07",
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:14",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_U7_LOGIC",
+      "raw_subject": "AC_20260921_U7_LOGIC",
       "raw_object": "U_07"
     },
     {
@@ -10023,7 +10033,7 @@
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:15",
       "assertion_kind": "triple",
       "raw_subject": "AC_20260919_U0_ABSENCE",
@@ -10036,7 +10046,7 @@
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:16",
       "assertion_kind": "triple",
       "raw_subject": "AC_20260919_U0_ABSENCE",
@@ -10049,7 +10059,7 @@
       "relation": "depends_on",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:17",
       "assertion_kind": "triple",
       "raw_subject": "AC_20260919_EXPECTATION_SPEED",
@@ -10057,89 +10067,89 @@
     },
     {
       "id": "author_canon_triple_0017",
-      "source": "author_ac_20260919_u6_logic",
+      "source": "author_ac_20260921_u6_logic",
       "target": "card_m_06",
       "relation": "requires_mapping_to",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:18",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_U6_LOGIC",
+      "raw_subject": "AC_20260921_U6_LOGIC",
       "raw_object": "M_06"
     },
     {
       "id": "author_canon_triple_0018",
-      "source": "author_ac_20260919_u7_logic",
+      "source": "author_ac_20260921_u7_logic",
       "target": "card_m_07",
       "relation": "requires_mapping_to",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/triples.tsv",
+      "source_file": "work/author_canon/2026-09-21/triples.tsv",
       "source_location": "row:19",
       "assertion_kind": "triple",
-      "raw_subject": "AC_20260919_U7_LOGIC",
+      "raw_subject": "AC_20260921_U7_LOGIC",
       "raw_object": "M_07"
-    },
-    {
-      "id": "author_source_ac_20260919_author_decision_source",
-      "source": "author_ac_20260919_author_decision",
-      "target": "doc_work_author_canon_2026_09_19_author_message_txt",
-      "relation": "documented_in",
-      "layer": "author_canon",
-      "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_AUTHOR_DECISION:source"
     },
     {
       "id": "author_source_ac_20260919_expectation_speed_source",
       "source": "author_ac_20260919_expectation_speed",
-      "target": "doc_work_author_canon_2026_09_19_author_message_txt",
+      "target": "doc_work_author_canon_2026_09_21_inherited_author_message_txt",
       "relation": "documented_in",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_EXPECTATION_SPEED:source"
     },
     {
       "id": "author_source_ac_20260919_u0_absence_source",
       "source": "author_ac_20260919_u0_absence",
-      "target": "doc_work_author_canon_2026_09_19_author_message_txt",
+      "target": "doc_work_author_canon_2026_09_21_inherited_author_message_txt",
       "relation": "documented_in",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE:source"
     },
     {
-      "id": "author_source_ac_20260919_u6_logic_source",
-      "source": "author_ac_20260919_u6_logic",
-      "target": "doc_work_author_canon_2026_09_19_author_message_txt",
+      "id": "author_source_ac_20260921_author_decision_source",
+      "source": "author_ac_20260921_author_decision",
+      "target": "doc_work_author_canon_2026_09_21_author_message_txt",
       "relation": "documented_in",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC:source"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_AUTHOR_DECISION:source"
     },
     {
-      "id": "author_source_ac_20260919_u7_logic_clarification_source",
-      "source": "author_ac_20260919_u7_logic",
-      "target": "doc_work_author_canon_2026_09_19_author_clarification_txt",
+      "id": "author_source_ac_20260921_u6_logic_source",
+      "source": "author_ac_20260921_u6_logic",
+      "target": "doc_work_author_canon_2026_09_21_author_message_txt",
       "relation": "documented_in",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC:clarification_source"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC:source"
     },
     {
-      "id": "author_source_ac_20260919_u7_logic_source",
-      "source": "author_ac_20260919_u7_logic",
-      "target": "doc_work_author_canon_2026_09_19_author_message_txt",
+      "id": "author_source_ac_20260921_u7_logic_clarification_source",
+      "source": "author_ac_20260921_u7_logic",
+      "target": "doc_work_author_canon_2026_09_21_inherited_author_clarification_txt",
       "relation": "documented_in",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC:source"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC:clarification_source"
+    },
+    {
+      "id": "author_source_ac_20260921_u7_logic_source",
+      "source": "author_ac_20260921_u7_logic",
+      "target": "doc_work_author_canon_2026_09_21_author_message_txt",
+      "relation": "documented_in",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC:source"
     },
     {
       "id": "canonical_v13_dependency_add_constants_000",
@@ -18200,7 +18210,7 @@
       "relation": "has_local_forbid",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_EXPECTATION_SPEED:local_forbid[0]"
     },
     {
@@ -18210,7 +18220,7 @@
       "relation": "has_local_forbid",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE:local_forbid[0]"
     },
     {
@@ -18220,48 +18230,48 @@
       "relation": "has_local_forbid",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE:local_forbid[1]"
     },
     {
-      "id": "constraint_ac_20260919_u6_logic_00_edge",
-      "source": "author_ac_20260919_u6_logic",
-      "target": "constraint_ac_20260919_u6_logic_00",
+      "id": "constraint_ac_20260921_u6_logic_00_edge",
+      "source": "author_ac_20260921_u6_logic",
+      "target": "constraint_ac_20260921_u6_logic_00",
       "relation": "has_local_forbid",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC:local_forbid[0]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC:local_forbid[0]"
     },
     {
-      "id": "constraint_ac_20260919_u6_logic_01_edge",
-      "source": "author_ac_20260919_u6_logic",
-      "target": "constraint_ac_20260919_u6_logic_01",
+      "id": "constraint_ac_20260921_u6_logic_01_edge",
+      "source": "author_ac_20260921_u6_logic",
+      "target": "constraint_ac_20260921_u6_logic_01",
       "relation": "has_local_forbid",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC:local_forbid[1]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC:local_forbid[1]"
     },
     {
-      "id": "constraint_ac_20260919_u7_logic_00_edge",
-      "source": "author_ac_20260919_u7_logic",
-      "target": "constraint_ac_20260919_u7_logic_00",
+      "id": "constraint_ac_20260921_u7_logic_00_edge",
+      "source": "author_ac_20260921_u7_logic",
+      "target": "constraint_ac_20260921_u7_logic_00",
       "relation": "has_local_forbid",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC:local_forbid[0]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC:local_forbid[0]"
     },
     {
-      "id": "constraint_ac_20260919_u7_logic_01_edge",
-      "source": "author_ac_20260919_u7_logic",
-      "target": "constraint_ac_20260919_u7_logic_01",
+      "id": "constraint_ac_20260921_u7_logic_01_edge",
+      "source": "author_ac_20260921_u7_logic",
+      "target": "constraint_ac_20260921_u7_logic_01",
       "relation": "has_local_forbid",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC:local_forbid[1]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC:local_forbid[1]"
     },
     {
       "id": "dr10_qg_witness_documented_in",
@@ -18823,7 +18833,7 @@
       "relation": "has_open_obligation",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_EXPECTATION_SPEED:open_obligations[0]"
     },
     {
@@ -18833,28 +18843,28 @@
       "relation": "has_open_obligation",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE:open_obligations[0]"
     },
     {
-      "id": "obligation_ac_20260919_u6_logic_00_edge",
-      "source": "author_ac_20260919_u6_logic",
-      "target": "obligation_ac_20260919_u6_logic_00",
+      "id": "obligation_ac_20260921_u6_logic_00_edge",
+      "source": "author_ac_20260921_u6_logic",
+      "target": "obligation_ac_20260921_u6_logic_00",
       "relation": "has_open_obligation",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC:open_obligations[0]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC:open_obligations[0]"
     },
     {
-      "id": "obligation_ac_20260919_u7_logic_00_edge",
-      "source": "author_ac_20260919_u7_logic",
-      "target": "obligation_ac_20260919_u7_logic_00",
+      "id": "obligation_ac_20260921_u7_logic_00_edge",
+      "source": "author_ac_20260921_u7_logic",
+      "target": "obligation_ac_20260921_u7_logic_00",
       "relation": "has_open_obligation",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC:open_obligations[0]"
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC:open_obligations[0]"
     },
     {
       "id": "oq_map_contains_oq_antitotality_diagonal_preconditions",
@@ -21543,7 +21553,7 @@
       "confidence": "INFERRED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:58",
-      "scope": "Принятые L6/L7 не имеют исполнимой семантики, сохраняющей составной исход.",
+      "scope": "Принятые актуальные формы У6/У7 не имеют исполнимой семантики, сохраняющей составной исход.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -21723,7 +21733,7 @@
       "confidence": "INFERRED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:58",
-      "scope": "Принятые L6/L7 не имеют исполнимой семантики, сохраняющей составной исход.",
+      "scope": "Принятые актуальные формы У6/У7 не имеют исполнимой семантики, сохраняющей составной исход.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -22563,7 +22573,7 @@
       "confidence": "INFERRED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:58",
-      "scope": "Принятые L6/L7 не имеют исполнимой семантики, сохраняющей составной исход.",
+      "scope": "Принятые актуальные формы У6/У7 не имеют исполнимой семантики, сохраняющей составной исход.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -24587,24 +24597,13 @@
       "status_effect": "stored_only; no automatic promotion"
     },
     {
-      "id": "status_ac_20260919_author_decision",
-      "source": "author_ac_20260919_author_decision",
-      "target": "assessment_ac_20260919_author_decision_status",
-      "relation": "has_status",
-      "layer": "author_canon",
-      "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_AUTHOR_DECISION",
-      "status_effect": "stored_only; no automatic promotion"
-    },
-    {
       "id": "status_ac_20260919_expectation_speed",
       "source": "author_ac_20260919_expectation_speed",
       "target": "assessment_ac_20260919_expectation_speed_status",
       "relation": "has_status",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_EXPECTATION_SPEED",
       "status_effect": "stored_only; no automatic promotion"
     },
@@ -24615,30 +24614,41 @@
       "relation": "has_status",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260919_U0_ABSENCE",
       "status_effect": "stored_only; no automatic promotion"
     },
     {
-      "id": "status_ac_20260919_u6_logic",
-      "source": "author_ac_20260919_u6_logic",
-      "target": "assessment_ac_20260919_u6_logic_status",
+      "id": "status_ac_20260921_author_decision",
+      "source": "author_ac_20260921_author_decision",
+      "target": "assessment_ac_20260921_author_decision_status",
       "relation": "has_status",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U6_LOGIC",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_AUTHOR_DECISION",
       "status_effect": "stored_only; no automatic promotion"
     },
     {
-      "id": "status_ac_20260919_u7_logic",
-      "source": "author_ac_20260919_u7_logic",
-      "target": "assessment_ac_20260919_u7_logic_status",
+      "id": "status_ac_20260921_u6_logic",
+      "source": "author_ac_20260921_u6_logic",
+      "target": "assessment_ac_20260921_u6_logic_status",
       "relation": "has_status",
       "layer": "author_canon",
       "confidence": "EXTRACTED",
-      "source_file": "work/author_canon/2026-09-19/cards.jsonl",
-      "source_location": "card:AC_20260919_U7_LOGIC",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U6_LOGIC",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_ac_20260921_u7_logic",
+      "source": "author_ac_20260921_u7_logic",
+      "target": "assessment_ac_20260921_u7_logic_status",
+      "relation": "has_status",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-09-21/cards.jsonl",
+      "source_location": "card:AC_20260921_U7_LOGIC",
       "status_effect": "stored_only; no automatic promotion"
     },
     {
@@ -26441,7 +26451,7 @@
     "internal_evidence_nodes": 6,
     "research_claims": 3,
     "curated_research_bridges": 7,
-    "nodes": 742,
+    "nodes": 743,
     "edges": 1520,
     "unresolved_references": 62
   }

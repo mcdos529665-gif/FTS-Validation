@@ -3,11 +3,11 @@
   "kind": "deterministic_navigation_overlay",
   "inputs": {
     "work/v14_rebuild/audit/PATTERN_ATLAS.tsv": "2adfe76f27fdf5a58bcf1622b1e2bc1b6acbbad376f9ee4b249c0571e10b9e2a",
-    "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv": "65306f184beee2c058ac40cf187eaa392b6b804e4613db13896331fb9206f50c",
+    "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv": "2b9f91c55d64b0e001878855880527186b020cb340564ffa28b6b407c048cafa",
     "work/v14_rebuild/audit/CLAIM_MATRIX.tsv": "cfa581bd026d7b31935575bb3bc641733ef476a88a0f622b22d0abdb0b01baac",
     "work/v14_rebuild/audit/FINDINGS.tsv": "305017c0267883d361689177d785df576a01dd2c2b5695cbc32974c2be9bf646",
     "work/v14_rebuild/audit/REVIEW_CONCLUSION.md": "a9bca28add191dbe4a58590229fa138e0b738b2eba85f55a7541c81afe6b8245",
-    "work/OPEN_QUESTIONS.md": "78c8a06d9afebd9c1e42228602eab5b9974db51b06bdc81a31b184023a8ae700"
+    "work/OPEN_QUESTIONS.md": "922933d41ec6d1ee7c6ba4ad78bc1fbb433689edd2f7bc5f20db0274fae55ec5"
   },
   "counts": {
     "patterns": 31,
@@ -28,7 +28,7 @@
   "community": 47,
   "graph_nodes": 636,
   "graph_edges": 1325,
-  "built_at_commit": "c377ec4144efcc747412a2e2ae23ca3d644a9729",
+  "built_at_commit": "359bbbcf857a934a64833ab329a0d3bf880c647d",
   "trust_boundary": {
     "EXTRACTED": "буквальные связи TSV/Markdown",
     "INFERRED": "курируемые indirect и непрямой фрагмент mixed",
