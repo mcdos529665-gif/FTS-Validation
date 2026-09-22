@@ -13,6 +13,9 @@
 - `claim_dr10_qg_witness`: DR10_QG_WITNESS — Для q и r условие q(a)=q(b) и r(a)≠r(b) эквивалентно строгому уточнению ~(q,r) ⊊ ~q в объявленной математической области. — status `research_layer_derived; role_sufficiency_not_proved`; scope `research-layer; фиксированные q,r; не St_FTS`.
 - `claim_neural_t2_scaffold`: NEURAL_T2_SCAFFOLD — ФТС имеет достаточные компонентные и первые интегральные основания, чтобы рассматриваться как кандидатный функциональный scaffold для искусственных нейронных архитектур. — status `candidate_functional_scaffold`; scope `искусственные обучаемые нейронные архитектуры; synthetic scope`.
 - `claim_neural_t3_not_verified`: NEURAL_T3_NOT_VERIFIED — Поддержанный архитектурный claim T3 и биологическая модель пока не установлены. — status `T3_not_verified; biological_model_not_established`; scope `единый benchmark contract; capacity-matched evidence; отдельный neuroscience protocol`.
+- `claim_u4_u7_typed_candidate`: U4_U7_TYPED_CANDIDATE — Переходы У4→У5→У6→У7 имеют совместную конечную candidate-реализацию на типизированном поле, следе выбора, семействе и агрегате при допущениях D1–D6. — status `candidate_model_consistent; assumptions_explicit; no St_FTS promotion`; scope `конечные двухсобытийные трассы; исследовательская модель; не определение ФТС`.
+- `claim_u6_q_not_sufficient_for_u7`: U6_Q_NOT_SUFFICIENT_FOR_U7 — В объявленной конечной модели три исхода У7 не факторизуются через одну сводку У6 Q: следы EE и NN имеют Q=4 и разные исходы. — status `formal_model_counterexample; semantic_scope_limited`; scope `конечная модель D1–D6; Q=(Σ_i v_i)^2`.
+- `claim_u6_vstar_bridge_underdetermined`: U6_VSTAR_BRIDGE_UNDERDETERMINED — Историческое V*V не задаёт единственный мост к активной У6: квадрат суммы и сумма квадратов оба теряют общий знак, но расходятся на совместном следе. — status `bridge_underdetermined; author_choice_and_typing_required`; scope `исторический M_06; конечные знаковые трассы; внешний математический перевод`.
 
 ## Bridges
 
@@ -23,6 +26,13 @@
 - `NB-005`: `NEURAL_T2_SCAFFOLD` —limited_by→ `neural_typed_absence_nonconfirmation`; scope `one limited internal test`; status effect `limits one component claim`; source `work/v14_rebuild/neural_skeleton_research_2026-09-15/INTERNAL_EVIDENCE.md#I2 — O_20 typed-absence test`.
 - `NB-006`: `NEURAL_T3_NOT_VERIFIED` —limited_by→ `neural_skeleton_consideration`; scope `benchmark, cost, ablations and independent prediction`; status effect `T3 remains unverified`; source `work/v14_rebuild/neural_skeleton_research_2026-09-15/CONSIDERATION_BRIEF.md#Что нужно для следующего уровня T3`.
 - `NB-007`: `DR10_QG_WITNESS` —refined_by→ `deep_report_10_integration`; scope `fixed q,r mathematical scope`; status effect `no St_FTS change`; source `work/v14_rebuild/neural_skeleton_research_2026-09-15/DEEP_RESEARCH_REPORT_10_INTEGRATION.md#Уже определённые конструкции рабочего слоя`.
+- `UB-001`: `U4_U7_TYPED_CANDIDATE` —supported_by→ `u4_u7_probe_20260922`; scope `finite declared model only`; status effect `candidate support only`; source `work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py#P01–P12`.
+- `UB-002`: `U6_Q_NOT_SUFFICIENT_FOR_U7` —supported_by→ `u4_u7_probe_20260922`; scope `Q=(Σ_i v_i)^2 on declared traces`; status effect `formal counterexample in model only`; source `work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py#P05–P07`.
+- `UB-003`: `U6_VSTAR_BRIDGE_UNDERDETERMINED` —supported_by→ `u4_u7_probe_20260922`; scope `two explicit sign-blind translations`; status effect `limits historical bridge`; source `work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py#P08–P09`.
+- `UB-004`: `U4_U7_TYPED_CANDIDATE` —grounds_claim→ `M_04`; scope `active U4 minimum`; status effect `no St_FTS change`; source `work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md#§1; §3`.
+- `UB-005`: `U4_U7_TYPED_CANDIDATE` —grounds_claim→ `M_05`; scope `active U5 minimum`; status effect `no St_FTS change`; source `work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md#§1; §3`.
+- `UB-006`: `U4_U7_TYPED_CANDIDATE` —grounds_claim→ `M_06`; scope `active U6 minimum`; status effect `no St_FTS change`; source `work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md#§1; §3`.
+- `UB-007`: `U4_U7_TYPED_CANDIDATE` —grounds_claim→ `M_07`; scope `active U7 minimum`; status effect `no St_FTS change`; source `work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md#§1; §3`.
 
 ## Ограничения
 

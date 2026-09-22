@@ -750,6 +750,11 @@ def build_graph() -> dict[str, Any]:
     for node_id, node in builder.nodes.items():
         if node.get("evidence_id"):
             bridge_target_aliases[str(node["evidence_id"])] = node_id
+    # Explicit research bridges may point back to an exact canonical or author
+    # card.  The TSV remains the curated assertion; this aliasing only resolves
+    # the already existing graph node and does not infer a relation by name.
+    bridge_target_aliases.update(card_ids)
+    bridge_target_aliases.update(author_ids)
     bridge_target_aliases.update({
         "neural_skeleton_consideration": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_consideration_brief_md",
         "deep_report_10_integration": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_deep_research_report_10_integration_md",

@@ -18,11 +18,11 @@
 - `mapped_open_questions`: 59
 - `verification_nodes`: 62
 - `external_evidence_nodes`: 21
-- `internal_evidence_nodes`: 6
-- `research_claims`: 7
-- `curated_research_bridges`: 7
-- `nodes`: 741
-- `edges`: 1530
+- `internal_evidence_nodes`: 7
+- `research_claims`: 10
+- `curated_research_bridges`: 14
+- `nodes`: 750
+- `edges`: 1544
 - `unresolved_references`: 34
 
 ## Границы

@@ -83,7 +83,7 @@
     },
     {
       "path": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
-      "sha256": "04a4ca931ffd5b819a7c8016338b1677c57d1153cac5187cc11744f91e9728d3"
+      "sha256": "7125a9b021215d1e32130819f32d8107c144ac06cd346bcddf5ca5d24a4b6d38"
     },
     {
       "path": "work/v14_rebuild/d2_sign/PREREGISTRATION.md",
@@ -115,7 +115,7 @@
     },
     {
       "path": "work/v14_rebuild/neural_skeleton_research_2026-09-15/DEEP_RESEARCH_REPORT_10_INTEGRATION.md",
-      "sha256": "40508a83228c61ae691c907f33658fd903ad1fc46ec0dcbb8572147f4666628c"
+      "sha256": "d1e8e9f16cf198bdcae5f32b30946b6763e9b9dfb486b00f9d87414690a51394"
     },
     {
       "path": "work/v14_rebuild/neural_skeleton_research_2026-09-15/EVIDENCE_MATRIX.tsv",
@@ -160,6 +160,14 @@
     {
       "path": "work/v14_rebuild/status_patch_v14.md",
       "sha256": "736a3f3bfd69ca3701828113a5683c4320d73603d2a55f3187c8b3cad73b7724"
+    },
+    {
+      "path": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "sha256": "a4fcb71edcd4d04b8c58a8ec040da70ac4813a92c734db8f769e69591198b3d7"
+    },
+    {
+      "path": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
+      "sha256": "f7d0923328e7ed61198c7a4cbcb3e5771de3f82d3b56e7e11bf5058a44a94a2b"
     }
   ],
   "nodes": [
@@ -2351,6 +2359,39 @@
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:U12_CHI_PI_COMPLEX_BOUNDARY"
+    },
+    {
+      "id": "assessment_u4_u7_typed_candidate",
+      "type": "status_assessment",
+      "label": "U4_U7_TYPED_CANDIDATE: candidate_model_consistent; assumptions_explicit; no St_FTS promotion",
+      "layer": "research",
+      "status_text": "candidate_model_consistent; assumptions_explicit; no St_FTS promotion",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§3. Минимальная кандидатная конструкция и её допущения"
+    },
+    {
+      "id": "assessment_u6_q_not_sufficient_for_u7",
+      "type": "status_assessment",
+      "label": "U6_Q_NOT_SUFFICIENT_FOR_U7: formal_model_counterexample; semantic_scope_limited",
+      "layer": "research",
+      "status_text": "formal_model_counterexample; semantic_scope_limited",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§3. Паспорт У6→У7; §5"
+    },
+    {
+      "id": "assessment_u6_vstar_bridge_underdetermined",
+      "type": "status_assessment",
+      "label": "U6_VSTAR_BRIDGE_UNDERDETERMINED: bridge_underdetermined; author_choice_and_typing_required",
+      "layer": "research",
+      "status_text": "bridge_underdetermined; author_choice_and_typing_required",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§4. Исторический V*V"
     },
     {
       "id": "assessment_u7_agentic_gate_layer_status",
@@ -5758,6 +5799,45 @@
       "source_location": "Итоговый статус и Что нужно для следующего уровня T3"
     },
     {
+      "id": "claim_u4_u7_typed_candidate",
+      "type": "claim",
+      "label": "U4_U7_TYPED_CANDIDATE — Переходы У4→У5→У6→У7 имеют совместную конечную candidate-реализацию на типизированном поле, следе выбора, семействе и агрегате при допущениях D1–D6.",
+      "layer": "research",
+      "claim_id": "U4_U7_TYPED_CANDIDATE",
+      "granularity": "statement",
+      "scope": "конечные двухсобытийные трассы; исследовательская модель; не определение ФТС",
+      "status_axis": "research_status",
+      "status_text": "candidate_model_consistent; assumptions_explicit; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§3. Минимальная кандидатная конструкция и её допущения"
+    },
+    {
+      "id": "claim_u6_q_not_sufficient_for_u7",
+      "type": "claim",
+      "label": "U6_Q_NOT_SUFFICIENT_FOR_U7 — В объявленной конечной модели три исхода У7 не факторизуются через одну сводку У6 Q: следы EE и NN имеют Q=4 и разные исходы.",
+      "layer": "research",
+      "claim_id": "U6_Q_NOT_SUFFICIENT_FOR_U7",
+      "granularity": "statement",
+      "scope": "конечная модель D1–D6; Q=(Σ_i v_i)^2",
+      "status_axis": "research_status",
+      "status_text": "formal_model_counterexample; semantic_scope_limited",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§3. Паспорт У6→У7; §5"
+    },
+    {
+      "id": "claim_u6_vstar_bridge_underdetermined",
+      "type": "claim",
+      "label": "U6_VSTAR_BRIDGE_UNDERDETERMINED — Историческое V*V не задаёт единственный мост к активной У6: квадрат суммы и сумма квадратов оба теряют общий знак, но расходятся на совместном следе.",
+      "layer": "research",
+      "claim_id": "U6_VSTAR_BRIDGE_UNDERDETERMINED",
+      "granularity": "limitation_claim",
+      "scope": "исторический M_06; конечные знаковые трассы; внешний математический перевод",
+      "status_axis": "research_status",
+      "status_text": "bridge_underdetermined; author_choice_and_typing_required",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§4. Исторический V*V"
+    },
+    {
       "id": "constraint_ac_20260919_expectation_speed_00",
       "type": "constraint",
       "label": "Не превращать чтение самой модели в объективный закон о фундаментальности.",
@@ -6057,6 +6137,20 @@
       "label": "work/v14_rebuild/status_patch_v14.md",
       "layer": "audit",
       "source_file": "work/v14_rebuild/status_patch_v14.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_u4_u7_bridge_2026_09_22_probe_py",
+      "type": "source_document",
+      "label": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
+      "layer": "internal_research",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py"
+    },
+    {
+      "id": "doc_work_v14_rebuild_u4_u7_bridge_2026_09_22_review_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md"
     },
     {
       "id": "event_e1",
@@ -6726,6 +6820,19 @@
       "source_location": "v0.3"
     },
     {
+      "id": "evidence_internal_u4_u7_probe_20260922",
+      "type": "internal_evidence",
+      "label": "u4_u7_probe_20260922 — P01–P12 finite U4→U7 candidate probe",
+      "layer": "internal_research",
+      "evidence_id": "u4_u7_probe_20260922",
+      "evidence_kind": "internal_formal_probe",
+      "scope": "finite two-event signed traces and two explicit U7 resource variants",
+      "limitation": "checks only declared predicates; does not establish FTS semantics, randomness, uniqueness, or St_FTS",
+      "status_effect": "candidate model support and limits",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
+      "source_location": "P01–P12"
+    },
+    {
       "id": "finding_af_001",
       "type": "finding",
       "label": "AF-001 [P1, resolved] — C28 содержал ветвь `or True` и потому не проверял zero-product predicate.",
@@ -7137,7 +7244,7 @@
       "anchor": "oq-8plus-only-refuted",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L283"
+      "source_location": "L292"
     },
     {
       "id": "oq_oq_antitotality_diagonal_preconditions",
@@ -7147,7 +7254,7 @@
       "anchor": "oq-antitotality-diagonal-preconditions",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L447"
+      "source_location": "L456"
     },
     {
       "id": "oq_oq_arity_window_13_14",
@@ -7157,7 +7264,7 @@
       "anchor": "oq-arity-window-13-14",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L121"
+      "source_location": "L130"
     },
     {
       "id": "oq_oq_audit_canon_reference_repair",
@@ -7167,7 +7274,7 @@
       "anchor": "oq-audit-canon-reference-repair",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L372"
+      "source_location": "L381"
     },
     {
       "id": "oq_oq_audit_semantic_repromotion",
@@ -7177,7 +7284,7 @@
       "anchor": "oq-audit-semantic-repromotion",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L369"
+      "source_location": "L378"
     },
     {
       "id": "oq_oq_audit_status_promotions_done",
@@ -7187,7 +7294,7 @@
       "anchor": "oq-audit-status-promotions-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L366"
+      "source_location": "L375"
     },
     {
       "id": "oq_oq_canon_star_fate",
@@ -7197,7 +7304,7 @@
       "anchor": "oq-canon-star-fate",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L260"
+      "source_location": "L269"
     },
     {
       "id": "oq_oq_ce_canon",
@@ -7217,7 +7324,7 @@
       "anchor": "oq-ce-weights-proof",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L234"
+      "source_location": "L243"
     },
     {
       "id": "oq_oq_chi_ladder_done",
@@ -7237,7 +7344,7 @@
       "anchor": "oq-clt-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L348"
+      "source_location": "L357"
     },
     {
       "id": "oq_oq_const_statistics_code",
@@ -7247,7 +7354,7 @@
       "anchor": "oq-const-statistics-code",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L157"
+      "source_location": "L166"
     },
     {
       "id": "oq_oq_cost_model_scope",
@@ -7257,7 +7364,7 @@
       "anchor": "oq-cost-model-scope",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L236"
+      "source_location": "L245"
     },
     {
       "id": "oq_oq_d10_phase_test",
@@ -7267,7 +7374,7 @@
       "anchor": "oq-d10-phase-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L167"
+      "source_location": "L176"
     },
     {
       "id": "oq_oq_d11_branch_bit_test",
@@ -7277,7 +7384,7 @@
       "anchor": "oq-d11-branch-bit-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L133"
+      "source_location": "L142"
     },
     {
       "id": "oq_oq_d2_half_overlay",
@@ -7287,7 +7394,7 @@
       "anchor": "oq-d2-half-overlay",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L275"
+      "source_location": "L284"
     },
     {
       "id": "oq_oq_d2_sign_retrieval_remainder",
@@ -7297,7 +7404,7 @@
       "anchor": "oq-d2-sign-retrieval-remainder",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L289"
+      "source_location": "L298"
     },
     {
       "id": "oq_oq_d4_column_precision",
@@ -7307,7 +7414,7 @@
       "anchor": "oq-d4-column-precision",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L278"
+      "source_location": "L287"
     },
     {
       "id": "oq_oq_ddelta_weights",
@@ -7317,7 +7424,7 @@
       "anchor": "oq-ddelta-weights",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L258"
+      "source_location": "L267"
     },
     {
       "id": "oq_oq_dict_d_completeness",
@@ -7327,7 +7434,7 @@
       "anchor": "oq-dict-d-completeness",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L108"
+      "source_location": "L117"
     },
     {
       "id": "oq_oq_divorce_cases_genre",
@@ -7337,7 +7444,7 @@
       "anchor": "oq-divorce-cases-genre",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L351"
+      "source_location": "L360"
     },
     {
       "id": "oq_oq_edgeworth_u9",
@@ -7347,7 +7454,7 @@
       "anchor": "oq-edgeworth-u9",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L361"
+      "source_location": "L370"
     },
     {
       "id": "oq_oq_expectation_speed_fundamentality",
@@ -7357,7 +7464,7 @@
       "anchor": "oq-expectation-speed-fundamentality",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L71"
+      "source_location": "L80"
     },
     {
       "id": "oq_oq_export_refs_done",
@@ -7367,7 +7474,7 @@
       "anchor": "oq-export-refs-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L90"
+      "source_location": "L99"
     },
     {
       "id": "oq_oq_forms8plus_ratio",
@@ -7377,7 +7484,7 @@
       "anchor": "oq-forms8plus-ratio",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L144"
+      "source_location": "L153"
     },
     {
       "id": "oq_oq_formulas_7_11_done",
@@ -7397,7 +7504,7 @@
       "anchor": "oq-fourier-questiongain",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L339"
+      "source_location": "L348"
     },
     {
       "id": "oq_oq_full_audit_done",
@@ -7417,7 +7524,7 @@
       "anchor": "oq-graph-dep-sync",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L302"
+      "source_location": "L311"
     },
     {
       "id": "oq_oq_kappa_provenance",
@@ -7437,7 +7544,7 @@
       "anchor": "oq-levy-world",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L359"
+      "source_location": "L368"
     },
     {
       "id": "oq_oq_machine_check_done",
@@ -7457,7 +7564,7 @@
       "anchor": "oq-mprime-audit",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L240"
+      "source_location": "L249"
     },
     {
       "id": "oq_oq_next_question_principle",
@@ -7467,7 +7574,7 @@
       "anchor": "oq-next-question-principle",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L378"
+      "source_location": "L387"
     },
     {
       "id": "oq_oq_node11_asymmetry",
@@ -7477,7 +7584,7 @@
       "anchor": "oq-node11-asymmetry",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L81"
+      "source_location": "L90"
     },
     {
       "id": "oq_oq_o20_missing_benchmark",
@@ -7497,7 +7604,7 @@
       "anchor": "oq-o3-twolists",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L148"
+      "source_location": "L157"
     },
     {
       "id": "oq_oq_padic_carrier_channel",
@@ -7507,7 +7614,7 @@
       "anchor": "oq-padic-carrier-channel",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L313"
+      "source_location": "L322"
     },
     {
       "id": "oq_oq_parity_witness_done",
@@ -7517,7 +7624,7 @@
       "anchor": "oq-parity-witness-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L152"
+      "source_location": "L161"
     },
     {
       "id": "oq_oq_passport_u14_u15",
@@ -7527,7 +7634,7 @@
       "anchor": "oq-passport-u14-u15",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L123"
+      "source_location": "L132"
     },
     {
       "id": "oq_oq_pentad_role_cycle",
@@ -7537,7 +7644,7 @@
       "anchor": "oq-pentad-role-cycle",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L309"
+      "source_location": "L318"
     },
     {
       "id": "oq_oq_phase_causal_u9",
@@ -7557,7 +7664,7 @@
       "anchor": "oq-pi-projection-above-u7",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L84"
+      "source_location": "L93"
     },
     {
       "id": "oq_oq_redteam_dependent_guards",
@@ -7567,7 +7674,7 @@
       "anchor": "oq-redteam-dependent-guards",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L131"
+      "source_location": "L140"
     },
     {
       "id": "oq_oq_redteam_f3_done",
@@ -7577,7 +7684,7 @@
       "anchor": "oq-redteam-f3-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L125"
+      "source_location": "L134"
     },
     {
       "id": "oq_oq_reflection_label_internalization",
@@ -7587,7 +7694,7 @@
       "anchor": "oq-reflection-label-internalization",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L98"
+      "source_location": "L107"
     },
     {
       "id": "oq_oq_roots_of_unity_z368",
@@ -7597,7 +7704,7 @@
       "anchor": "oq-roots-of-unity-z368",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L307"
+      "source_location": "L316"
     },
     {
       "id": "oq_oq_sphere_u6_carrier",
@@ -7607,7 +7714,7 @@
       "anchor": "oq-sphere-u6-carrier",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L332"
+      "source_location": "L341"
     },
     {
       "id": "oq_oq_strict_band_7_export",
@@ -7617,7 +7724,7 @@
       "anchor": "oq-strict-band-7-export",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L265"
+      "source_location": "L274"
     },
     {
       "id": "oq_oq_synthesis_c_assembly",
@@ -7627,7 +7734,7 @@
       "anchor": "oq-synthesis-c-assembly",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L284"
+      "source_location": "L293"
     },
     {
       "id": "oq_oq_systematic_literature_review",
@@ -7647,7 +7754,7 @@
       "anchor": "oq-third-boundary",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L150"
+      "source_location": "L159"
     },
     {
       "id": "oq_oq_tot_groups_8_11",
@@ -7657,7 +7764,7 @@
       "anchor": "oq-tot-groups-8-11",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L146"
+      "source_location": "L155"
     },
     {
       "id": "oq_oq_train_reflection_test",
@@ -7667,7 +7774,7 @@
       "anchor": "oq-train-reflection-test",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L112"
+      "source_location": "L121"
     },
     {
       "id": "oq_oq_txp_verif_done",
@@ -7677,7 +7784,7 @@
       "anchor": "oq-txp-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L336"
+      "source_location": "L345"
     },
     {
       "id": "oq_oq_typed_absence_provenance_benchmark",
@@ -7687,7 +7794,7 @@
       "anchor": "oq-typed-absence-provenance-benchmark",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L451"
+      "source_location": "L460"
     },
     {
       "id": "oq_oq_u0_absence_distinction_boundary",
@@ -7697,7 +7804,7 @@
       "anchor": "oq-u0-absence-distinction-boundary",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L77"
+      "source_location": "L86"
     },
     {
       "id": "oq_oq_u0_u7_refinement_protocol",
@@ -7707,7 +7814,7 @@
       "anchor": "oq-u0-u7-refinement-protocol",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L386"
+      "source_location": "L395"
     },
     {
       "id": "oq_oq_u12_antimode_authorfix",
@@ -7717,7 +7824,7 @@
       "anchor": "oq-u12-antimode-authorfix",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L165"
+      "source_location": "L174"
     },
     {
       "id": "oq_oq_u12_antimode_gate",
@@ -7727,7 +7834,7 @@
       "anchor": "oq-u12-antimode-gate",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L129"
+      "source_location": "L138"
     },
     {
       "id": "oq_oq_u12_radius_r",
@@ -7737,7 +7844,7 @@
       "anchor": "oq-u12-radius-r",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L127"
+      "source_location": "L136"
     },
     {
       "id": "oq_oq_u13_boundary_union_op",
@@ -7747,7 +7854,7 @@
       "anchor": "oq-u13-boundary-union-op",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L161"
+      "source_location": "L170"
     },
     {
       "id": "oq_oq_u14_worlds_agg_op",
@@ -7757,15 +7864,15 @@
       "anchor": "oq-u14-worlds-agg-op",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L164"
+      "source_location": "L173"
     },
     {
       "id": "oq_oq_u6_u7_compositional_semantics",
       "type": "open_question",
-      "label": "oq-u6-u7-compositional-semantics — Исполнимая композиционная семантика принятых L6/L7.",
+      "label": "oq-u6-u7-compositional-semantics — Исполнимая композиционная семантика актуальных форм У6/У7.",
       "layer": "audit",
       "anchor": "oq-u6-u7-compositional-semantics",
-      "oq_status": "open",
+      "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L60"
     },
@@ -7777,7 +7884,7 @@
       "anchor": "oq-u8-u10-optests",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L95"
+      "source_location": "L104"
     },
     {
       "id": "oq_oq_unit_circle_z15",
@@ -7787,7 +7894,7 @@
       "anchor": "oq-unit-circle-z15",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L159"
+      "source_location": "L168"
     },
     {
       "id": "oq_oq_upper_12_17_done",
@@ -7807,7 +7914,7 @@
       "anchor": "oq-vieta-cubic-s3",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L362"
+      "source_location": "L371"
     },
     {
       "id": "oq_oq_witnesses_verif_done",
@@ -7817,7 +7924,7 @@
       "anchor": "oq-witnesses-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L280"
+      "source_location": "L289"
     },
     {
       "id": "oq_oq_zero_classes_chi_e",
@@ -7827,7 +7934,7 @@
       "anchor": "oq-zero-classes-chi-e",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L341"
+      "source_location": "L350"
     },
     {
       "id": "pattern_pa_c01",
@@ -9436,6 +9543,97 @@
       "scope": "fixed q,r mathematical scope",
       "status_effect": "no St_FTS change",
       "rationale": "The integration report narrows the statement and preserves its research-layer status."
+    },
+    {
+      "id": "UB-001",
+      "source": "claim_u4_u7_typed_candidate",
+      "target": "evidence_internal_u4_u7_probe_20260922",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
+      "source_location": "row:9",
+      "scope": "finite declared model only",
+      "status_effect": "candidate support only",
+      "rationale": "Проверка подтверждает совместность и границы одной модели, а не семантику ФТС."
+    },
+    {
+      "id": "UB-002",
+      "source": "claim_u6_q_not_sufficient_for_u7",
+      "target": "evidence_internal_u4_u7_probe_20260922",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
+      "source_location": "row:10",
+      "scope": "Q=(Σ_i v_i)^2 on declared traces",
+      "status_effect": "formal counterexample in model only",
+      "rationale": "EE и NN дают одинаковое Q и разные исходы; без дополнительного ресурса факторизации нет."
+    },
+    {
+      "id": "UB-003",
+      "source": "claim_u6_vstar_bridge_underdetermined",
+      "target": "evidence_internal_u4_u7_probe_20260922",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
+      "source_location": "row:11",
+      "scope": "two explicit sign-blind translations",
+      "status_effect": "limits historical bridge",
+      "rationale": "Два перевода выполняют потерю общего знака и расходятся на joint-трассе."
+    },
+    {
+      "id": "UB-004",
+      "source": "claim_u4_u7_typed_candidate",
+      "target": "card_m_04",
+      "relation": "grounds_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "row:12",
+      "scope": "active U4 minimum",
+      "status_effect": "no St_FTS change",
+      "rationale": "Кандидат сохраняет точную исходную М-форму У4 и отдельно добавляет исполнимый носитель."
+    },
+    {
+      "id": "UB-005",
+      "source": "claim_u4_u7_typed_candidate",
+      "target": "card_m_05",
+      "relation": "grounds_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "row:13",
+      "scope": "active U5 minimum",
+      "status_effect": "no St_FTS change",
+      "rationale": "Кандидат сохраняет точную исходную М-форму У5 и не отождествляет OR с булевым сокращением."
+    },
+    {
+      "id": "UB-006",
+      "source": "claim_u4_u7_typed_candidate",
+      "target": "card_m_06",
+      "relation": "grounds_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "row:14",
+      "scope": "active U6 minimum",
+      "status_effect": "no St_FTS change",
+      "rationale": "Кандидат использует активную группировку У6 буквально; D1–D4 остаются дополнительными допущениями."
+    },
+    {
+      "id": "UB-007",
+      "source": "claim_u4_u7_typed_candidate",
+      "target": "card_m_07",
+      "relation": "grounds_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "row:15",
+      "scope": "active U7 minimum",
+      "status_effect": "no St_FTS change",
+      "rationale": "Кандидат использует активную группировку У7 буквально; ресурс D5 не содержится в самой карточке."
     },
     {
       "id": "atlas_contains_pa_c01",
@@ -24551,6 +24749,16 @@
       "source_location": "row:3"
     },
     {
+      "id": "research_evidence_contains_u4_u7_probe_20260922",
+      "source": "doc_work_v14_rebuild_u4_u7_bridge_2026_09_22_probe_py",
+      "target": "evidence_internal_u4_u7_probe_20260922",
+      "relation": "contains",
+      "layer": "internal_research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
+      "source_location": "row:6"
+    },
+    {
       "id": "status_a0",
       "source": "card_a0",
       "target": "assessment_a0_status",
@@ -26518,6 +26726,69 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/neural_skeleton_research_2026-09-15/SUM_DISTINCTION_EVIDENCE.tsv",
       "source_location": "row:12"
+    },
+    {
+      "id": "u4_u7_typed_candidate_documented_in",
+      "source": "claim_u4_u7_typed_candidate",
+      "target": "doc_work_v14_rebuild_u4_u7_bridge_2026_09_22_review_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§3. Минимальная кандидатная конструкция и её допущения"
+    },
+    {
+      "id": "u4_u7_typed_candidate_has_status",
+      "source": "claim_u4_u7_typed_candidate",
+      "target": "assessment_u4_u7_typed_candidate",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§3. Минимальная кандидатная конструкция и её допущения",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "u6_q_not_sufficient_for_u7_documented_in",
+      "source": "claim_u6_q_not_sufficient_for_u7",
+      "target": "doc_work_v14_rebuild_u4_u7_bridge_2026_09_22_review_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§3. Паспорт У6→У7; §5"
+    },
+    {
+      "id": "u6_q_not_sufficient_for_u7_has_status",
+      "source": "claim_u6_q_not_sufficient_for_u7",
+      "target": "assessment_u6_q_not_sufficient_for_u7",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§3. Паспорт У6→У7; §5",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "u6_vstar_bridge_underdetermined_documented_in",
+      "source": "claim_u6_vstar_bridge_underdetermined",
+      "target": "doc_work_v14_rebuild_u4_u7_bridge_2026_09_22_review_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§4. Исторический V*V"
+    },
+    {
+      "id": "u6_vstar_bridge_underdetermined_has_status",
+      "source": "claim_u6_vstar_bridge_underdetermined",
+      "target": "assessment_u6_vstar_bridge_underdetermined",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
+      "source_location": "§4. Исторический V*V",
+      "status_effect": "research status only; no St_FTS promotion"
     }
   ],
   "coverage": {
@@ -26534,11 +26805,11 @@
     "mapped_open_questions": 59,
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
-    "internal_evidence_nodes": 6,
-    "research_claims": 7,
-    "curated_research_bridges": 7,
-    "nodes": 741,
-    "edges": 1530,
+    "internal_evidence_nodes": 7,
+    "research_claims": 10,
+    "curated_research_bridges": 14,
+    "nodes": 750,
+    "edges": 1544,
     "unresolved_references": 34
   }
 }
