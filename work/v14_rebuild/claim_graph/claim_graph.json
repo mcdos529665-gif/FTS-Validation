@@ -43,11 +43,11 @@
     },
     {
       "path": "work/notation.md",
-      "sha256": "ffb0ed6bf1131929743ccd3cef4613a9a274bd72dec08e3a80e9fbfc3ad0f924"
+      "sha256": "444f584288d3581aa1c0911b83cf235534bd6176f145f5f94cb17368616b842d"
     },
     {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
-      "sha256": "8b30a8e915718f09130c095fa14dc501e12e88b9917a0a6168445a6c6f8cfbbd"
+      "sha256": "b732d988a536e47c92852d4cbe1fdb7918a9275d47b80a611044601430d633d8"
     },
     {
       "path": "work/v14_rebuild/audit/BASELINE.md",
@@ -98,6 +98,10 @@
       "sha256": "fcdd155e166912d65c1fe8416f939d535d333dca5d89967851107daa23128969"
     },
     {
+      "path": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "sha256": "2365684bf7368e22face78f74d15a7cb43fe2dea19293dd5fa07064b170e1da8"
+    },
+    {
       "path": "work/v14_rebuild/e5_literature_review/EVIDENCE_MATRIX.tsv",
       "sha256": "2a3f5953495818610b23ca3aaf3d984a464e4ef9aeba7485eb7c134db7125bf7"
     },
@@ -107,7 +111,7 @@
     },
     {
       "path": "work/v14_rebuild/neural_skeleton_research_2026-09-15/CONSIDERATION_BRIEF.md",
-      "sha256": "f8000546733f0dfc3ab06e035c0414dec90773d98e0b03993a78e7cef3c5433b"
+      "sha256": "c07fc3d3a9bb0ac57d54da61224046dbcf9ea9b33d4d0b8c16e6a08b25059477"
     },
     {
       "path": "work/v14_rebuild/neural_skeleton_research_2026-09-15/DEEP_RESEARCH_REPORT_10_INTEGRATION.md",
@@ -1412,6 +1416,50 @@
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:COMPLEX_LADDER_U9"
+    },
+    {
+      "id": "assessment_dn_20260922_absence_lift",
+      "type": "status_assessment",
+      "label": "DN_20260922_ABSENCE_LIFT: author_clarification; working_layer; no St_FTS promotion",
+      "layer": "research",
+      "status_text": "author_clarification; working_layer; no St_FTS promotion",
+      "status_axis": "author_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0017 / DN-0020"
+    },
+    {
+      "id": "assessment_dn_20260922_geometry_self",
+      "type": "status_assessment",
+      "label": "DN_20260922_GEOMETRY_SELF: candidate_analogy_only; carrier_and_role_unresolved",
+      "layer": "research",
+      "status_text": "candidate_analogy_only; carrier_and_role_unresolved",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0026 / DN-0027"
+    },
+    {
+      "id": "assessment_dn_20260922_internal_contour",
+      "type": "status_assessment",
+      "label": "DN_20260922_INTERNAL_CONTOUR: author_clarification; candidate bridge; no St_FTS promotion",
+      "layer": "research",
+      "status_text": "author_clarification; candidate bridge; no St_FTS promotion",
+      "status_axis": "author_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0018 / DN-0019 / DN-0021 / DN-0022 / DN-0025"
+    },
+    {
+      "id": "assessment_dn_20260922_sensitivity_residual",
+      "type": "status_assessment",
+      "label": "DN_20260922_SENSITIVITY_RESIDUAL: external_candidate; typed_scope_required; no St_FTS promotion",
+      "layer": "research",
+      "status_text": "external_candidate; typed_scope_required; no St_FTS promotion",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0023 / DN-0024"
     },
     {
       "id": "assessment_dr10_qg_witness",
@@ -5219,6 +5267,58 @@
       "source_location": "card:U_m1"
     },
     {
+      "id": "claim_dn_20260922_absence_lift",
+      "type": "claim",
+      "label": "DN_20260922_ABSENCE_LIFT — В рабочем авторском чтении внутреннее отсутствие связано с отказом выполнять функцию, а включение отсутствия в собственный контур является необходимым, но не достаточным условием…",
+      "layer": "research",
+      "claim_id": "DN_20260922_ABSENCE_LIFT",
+      "granularity": "statement",
+      "scope": "рабочий слой ФТС; DN-0017 и DN-0020",
+      "status_axis": "author_status",
+      "status_text": "author_clarification; working_layer; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0017 / DN-0020"
+    },
+    {
+      "id": "claim_dn_20260922_geometry_self",
+      "type": "claim",
+      "label": "DN_20260922_GEOMETRY_SELF — Линия У6–У12 и тороидальная опора Я остаются candidate/analogy_only: совпадение формул не устанавливает переходы, носитель, Я или сознание.",
+      "layer": "research",
+      "claim_id": "DN_20260922_GEOMETRY_SELF",
+      "granularity": "limitation_claim",
+      "scope": "рабочий слой ФТС; DN-0026 и DN-0027",
+      "status_axis": "research_status",
+      "status_text": "candidate_analogy_only; carrier_and_role_unresolved",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0026 / DN-0027"
+    },
+    {
+      "id": "claim_dn_20260922_internal_contour",
+      "type": "claim",
+      "label": "DN_20260922_INTERNAL_CONTOUR — В рабочем чтении вопрос, Вера, проекция, внутренний мотиватор, свобода инструмента и скорость/фундаментальность образуют кандидатный внутренний контур без единой выбранной метрики.",
+      "layer": "research",
+      "claim_id": "DN_20260922_INTERNAL_CONTOUR",
+      "granularity": "statement",
+      "scope": "рабочий слой ФТС; DN-0018, DN-0019, DN-0021, DN-0022, DN-0025",
+      "status_axis": "author_status",
+      "status_text": "author_clarification; candidate bridge; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0018 / DN-0019 / DN-0021 / DN-0022 / DN-0025"
+    },
+    {
+      "id": "claim_dn_20260922_sensitivity_residual",
+      "type": "claim",
+      "label": "DN_20260922_SENSITIVITY_RESIDUAL — Формулы sensitivity и residual из приложенных разборов сохраняются как внешние кандидатные предложения и не устанавливают новый уровень, Lift или early exit.",
+      "layer": "research",
+      "claim_id": "DN_20260922_SENSITIVITY_RESIDUAL",
+      "granularity": "limitation_claim",
+      "scope": "research-layer; external attachments; DN-0023 и DN-0024",
+      "status_axis": "research_status",
+      "status_text": "external_candidate; typed_scope_required; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0023 / DN-0024"
+    },
+    {
       "id": "claim_dr10_qg_witness",
       "type": "claim",
       "label": "DR10_QG_WITNESS — Для q и r условие q(a)=q(b) и r(a)≠r(b) эквивалентно строгому уточнению ~(q,r) ⊊ ~q в объявленной математической области.",
@@ -5838,6 +5938,13 @@
       "label": "work/v14_rebuild/d2_sign/run_d2.py",
       "layer": "audit",
       "source_file": "work/v14_rebuild/d2_sign/run_d2.py"
+    },
+    {
+      "id": "doc_work_v14_rebuild_dialogue_integration_2026_09_22_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md"
     },
     {
       "id": "doc_work_v14_rebuild_e5_literature_review_evidence_matrix_tsv",
@@ -7030,7 +7137,7 @@
       "anchor": "oq-8plus-only-refuted",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L287"
+      "source_location": "L283"
     },
     {
       "id": "oq_oq_antitotality_diagonal_preconditions",
@@ -7040,7 +7147,7 @@
       "anchor": "oq-antitotality-diagonal-preconditions",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L451"
+      "source_location": "L447"
     },
     {
       "id": "oq_oq_arity_window_13_14",
@@ -7050,7 +7157,7 @@
       "anchor": "oq-arity-window-13-14",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L122"
+      "source_location": "L121"
     },
     {
       "id": "oq_oq_audit_canon_reference_repair",
@@ -7060,7 +7167,7 @@
       "anchor": "oq-audit-canon-reference-repair",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L376"
+      "source_location": "L372"
     },
     {
       "id": "oq_oq_audit_semantic_repromotion",
@@ -7070,7 +7177,7 @@
       "anchor": "oq-audit-semantic-repromotion",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L373"
+      "source_location": "L369"
     },
     {
       "id": "oq_oq_audit_status_promotions_done",
@@ -7080,7 +7187,7 @@
       "anchor": "oq-audit-status-promotions-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L370"
+      "source_location": "L366"
     },
     {
       "id": "oq_oq_canon_star_fate",
@@ -7090,7 +7197,7 @@
       "anchor": "oq-canon-star-fate",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L264"
+      "source_location": "L260"
     },
     {
       "id": "oq_oq_ce_canon",
@@ -7110,7 +7217,7 @@
       "anchor": "oq-ce-weights-proof",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L235"
+      "source_location": "L234"
     },
     {
       "id": "oq_oq_chi_ladder_done",
@@ -7130,7 +7237,7 @@
       "anchor": "oq-clt-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L352"
+      "source_location": "L348"
     },
     {
       "id": "oq_oq_const_statistics_code",
@@ -7140,7 +7247,7 @@
       "anchor": "oq-const-statistics-code",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L158"
+      "source_location": "L157"
     },
     {
       "id": "oq_oq_cost_model_scope",
@@ -7150,7 +7257,7 @@
       "anchor": "oq-cost-model-scope",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L237"
+      "source_location": "L236"
     },
     {
       "id": "oq_oq_d10_phase_test",
@@ -7160,7 +7267,7 @@
       "anchor": "oq-d10-phase-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L168"
+      "source_location": "L167"
     },
     {
       "id": "oq_oq_d11_branch_bit_test",
@@ -7170,7 +7277,7 @@
       "anchor": "oq-d11-branch-bit-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L134"
+      "source_location": "L133"
     },
     {
       "id": "oq_oq_d2_half_overlay",
@@ -7180,7 +7287,7 @@
       "anchor": "oq-d2-half-overlay",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L279"
+      "source_location": "L275"
     },
     {
       "id": "oq_oq_d2_sign_retrieval_remainder",
@@ -7190,7 +7297,7 @@
       "anchor": "oq-d2-sign-retrieval-remainder",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L293"
+      "source_location": "L289"
     },
     {
       "id": "oq_oq_d4_column_precision",
@@ -7200,7 +7307,7 @@
       "anchor": "oq-d4-column-precision",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L282"
+      "source_location": "L278"
     },
     {
       "id": "oq_oq_ddelta_weights",
@@ -7210,7 +7317,7 @@
       "anchor": "oq-ddelta-weights",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L262"
+      "source_location": "L258"
     },
     {
       "id": "oq_oq_dict_d_completeness",
@@ -7220,7 +7327,7 @@
       "anchor": "oq-dict-d-completeness",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L109"
+      "source_location": "L108"
     },
     {
       "id": "oq_oq_divorce_cases_genre",
@@ -7230,7 +7337,7 @@
       "anchor": "oq-divorce-cases-genre",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L355"
+      "source_location": "L351"
     },
     {
       "id": "oq_oq_edgeworth_u9",
@@ -7240,7 +7347,7 @@
       "anchor": "oq-edgeworth-u9",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L365"
+      "source_location": "L361"
     },
     {
       "id": "oq_oq_expectation_speed_fundamentality",
@@ -7250,7 +7357,7 @@
       "anchor": "oq-expectation-speed-fundamentality",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L72"
+      "source_location": "L71"
     },
     {
       "id": "oq_oq_export_refs_done",
@@ -7260,7 +7367,7 @@
       "anchor": "oq-export-refs-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L91"
+      "source_location": "L90"
     },
     {
       "id": "oq_oq_forms8plus_ratio",
@@ -7270,7 +7377,7 @@
       "anchor": "oq-forms8plus-ratio",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L145"
+      "source_location": "L144"
     },
     {
       "id": "oq_oq_formulas_7_11_done",
@@ -7290,7 +7397,7 @@
       "anchor": "oq-fourier-questiongain",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L343"
+      "source_location": "L339"
     },
     {
       "id": "oq_oq_full_audit_done",
@@ -7310,7 +7417,7 @@
       "anchor": "oq-graph-dep-sync",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L306"
+      "source_location": "L302"
     },
     {
       "id": "oq_oq_kappa_provenance",
@@ -7330,7 +7437,7 @@
       "anchor": "oq-levy-world",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L363"
+      "source_location": "L359"
     },
     {
       "id": "oq_oq_machine_check_done",
@@ -7350,7 +7457,7 @@
       "anchor": "oq-mprime-audit",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L244"
+      "source_location": "L240"
     },
     {
       "id": "oq_oq_next_question_principle",
@@ -7360,7 +7467,7 @@
       "anchor": "oq-next-question-principle",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L382"
+      "source_location": "L378"
     },
     {
       "id": "oq_oq_node11_asymmetry",
@@ -7370,7 +7477,7 @@
       "anchor": "oq-node11-asymmetry",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L82"
+      "source_location": "L81"
     },
     {
       "id": "oq_oq_o20_missing_benchmark",
@@ -7390,7 +7497,7 @@
       "anchor": "oq-o3-twolists",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L149"
+      "source_location": "L148"
     },
     {
       "id": "oq_oq_padic_carrier_channel",
@@ -7400,7 +7507,7 @@
       "anchor": "oq-padic-carrier-channel",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L317"
+      "source_location": "L313"
     },
     {
       "id": "oq_oq_parity_witness_done",
@@ -7410,7 +7517,7 @@
       "anchor": "oq-parity-witness-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L153"
+      "source_location": "L152"
     },
     {
       "id": "oq_oq_passport_u14_u15",
@@ -7420,7 +7527,7 @@
       "anchor": "oq-passport-u14-u15",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L124"
+      "source_location": "L123"
     },
     {
       "id": "oq_oq_pentad_role_cycle",
@@ -7430,7 +7537,7 @@
       "anchor": "oq-pentad-role-cycle",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L313"
+      "source_location": "L309"
     },
     {
       "id": "oq_oq_phase_causal_u9",
@@ -7450,7 +7557,7 @@
       "anchor": "oq-pi-projection-above-u7",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L85"
+      "source_location": "L84"
     },
     {
       "id": "oq_oq_redteam_dependent_guards",
@@ -7460,7 +7567,7 @@
       "anchor": "oq-redteam-dependent-guards",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L132"
+      "source_location": "L131"
     },
     {
       "id": "oq_oq_redteam_f3_done",
@@ -7470,7 +7577,7 @@
       "anchor": "oq-redteam-f3-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L126"
+      "source_location": "L125"
     },
     {
       "id": "oq_oq_reflection_label_internalization",
@@ -7480,7 +7587,7 @@
       "anchor": "oq-reflection-label-internalization",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L99"
+      "source_location": "L98"
     },
     {
       "id": "oq_oq_roots_of_unity_z368",
@@ -7490,7 +7597,7 @@
       "anchor": "oq-roots-of-unity-z368",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L311"
+      "source_location": "L307"
     },
     {
       "id": "oq_oq_sphere_u6_carrier",
@@ -7500,7 +7607,7 @@
       "anchor": "oq-sphere-u6-carrier",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L336"
+      "source_location": "L332"
     },
     {
       "id": "oq_oq_strict_band_7_export",
@@ -7510,7 +7617,7 @@
       "anchor": "oq-strict-band-7-export",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L269"
+      "source_location": "L265"
     },
     {
       "id": "oq_oq_synthesis_c_assembly",
@@ -7520,7 +7627,7 @@
       "anchor": "oq-synthesis-c-assembly",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L288"
+      "source_location": "L284"
     },
     {
       "id": "oq_oq_systematic_literature_review",
@@ -7540,7 +7647,7 @@
       "anchor": "oq-third-boundary",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L151"
+      "source_location": "L150"
     },
     {
       "id": "oq_oq_tot_groups_8_11",
@@ -7550,7 +7657,7 @@
       "anchor": "oq-tot-groups-8-11",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L147"
+      "source_location": "L146"
     },
     {
       "id": "oq_oq_train_reflection_test",
@@ -7560,7 +7667,7 @@
       "anchor": "oq-train-reflection-test",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L113"
+      "source_location": "L112"
     },
     {
       "id": "oq_oq_txp_verif_done",
@@ -7570,7 +7677,7 @@
       "anchor": "oq-txp-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L340"
+      "source_location": "L336"
     },
     {
       "id": "oq_oq_typed_absence_provenance_benchmark",
@@ -7580,7 +7687,7 @@
       "anchor": "oq-typed-absence-provenance-benchmark",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L455"
+      "source_location": "L451"
     },
     {
       "id": "oq_oq_u0_absence_distinction_boundary",
@@ -7590,7 +7697,7 @@
       "anchor": "oq-u0-absence-distinction-boundary",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L78"
+      "source_location": "L77"
     },
     {
       "id": "oq_oq_u0_u7_refinement_protocol",
@@ -7600,7 +7707,7 @@
       "anchor": "oq-u0-u7-refinement-protocol",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L390"
+      "source_location": "L386"
     },
     {
       "id": "oq_oq_u12_antimode_authorfix",
@@ -7610,7 +7717,7 @@
       "anchor": "oq-u12-antimode-authorfix",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L166"
+      "source_location": "L165"
     },
     {
       "id": "oq_oq_u12_antimode_gate",
@@ -7620,7 +7727,7 @@
       "anchor": "oq-u12-antimode-gate",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L130"
+      "source_location": "L129"
     },
     {
       "id": "oq_oq_u12_radius_r",
@@ -7630,7 +7737,7 @@
       "anchor": "oq-u12-radius-r",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L128"
+      "source_location": "L127"
     },
     {
       "id": "oq_oq_u13_boundary_union_op",
@@ -7640,7 +7747,7 @@
       "anchor": "oq-u13-boundary-union-op",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L162"
+      "source_location": "L161"
     },
     {
       "id": "oq_oq_u14_worlds_agg_op",
@@ -7650,12 +7757,12 @@
       "anchor": "oq-u14-worlds-agg-op",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L165"
+      "source_location": "L164"
     },
     {
       "id": "oq_oq_u6_u7_compositional_semantics",
       "type": "open_question",
-      "label": "oq-u6-u7-compositional-semantics — Исполнимая композиционная семантика актуальных форм У6/У7.",
+      "label": "oq-u6-u7-compositional-semantics — Исполнимая композиционная семантика принятых L6/L7.",
       "layer": "audit",
       "anchor": "oq-u6-u7-compositional-semantics",
       "oq_status": "open",
@@ -7670,7 +7777,7 @@
       "anchor": "oq-u8-u10-optests",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L96"
+      "source_location": "L95"
     },
     {
       "id": "oq_oq_unit_circle_z15",
@@ -7680,7 +7787,7 @@
       "anchor": "oq-unit-circle-z15",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L160"
+      "source_location": "L159"
     },
     {
       "id": "oq_oq_upper_12_17_done",
@@ -7700,7 +7807,7 @@
       "anchor": "oq-vieta-cubic-s3",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L366"
+      "source_location": "L362"
     },
     {
       "id": "oq_oq_witnesses_verif_done",
@@ -7710,7 +7817,7 @@
       "anchor": "oq-witnesses-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L284"
+      "source_location": "L280"
     },
     {
       "id": "oq_oq_zero_classes_chi_e",
@@ -7720,7 +7827,7 @@
       "anchor": "oq-zero-classes-chi-e",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L345"
+      "source_location": "L341"
     },
     {
       "id": "pattern_pa_c01",
@@ -18169,6 +18276,90 @@
       "source_location": "card:AC_20260921_U7_LOGIC:local_forbid[1]"
     },
     {
+      "id": "dn_20260922_absence_lift_documented_in",
+      "source": "claim_dn_20260922_absence_lift",
+      "target": "doc_work_v14_rebuild_dialogue_integration_2026_09_22_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0017 / DN-0020"
+    },
+    {
+      "id": "dn_20260922_absence_lift_has_status",
+      "source": "claim_dn_20260922_absence_lift",
+      "target": "assessment_dn_20260922_absence_lift",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0017 / DN-0020",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "dn_20260922_geometry_self_documented_in",
+      "source": "claim_dn_20260922_geometry_self",
+      "target": "doc_work_v14_rebuild_dialogue_integration_2026_09_22_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0026 / DN-0027"
+    },
+    {
+      "id": "dn_20260922_geometry_self_has_status",
+      "source": "claim_dn_20260922_geometry_self",
+      "target": "assessment_dn_20260922_geometry_self",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0026 / DN-0027",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "dn_20260922_internal_contour_documented_in",
+      "source": "claim_dn_20260922_internal_contour",
+      "target": "doc_work_v14_rebuild_dialogue_integration_2026_09_22_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0018 / DN-0019 / DN-0021 / DN-0022 / DN-0025"
+    },
+    {
+      "id": "dn_20260922_internal_contour_has_status",
+      "source": "claim_dn_20260922_internal_contour",
+      "target": "assessment_dn_20260922_internal_contour",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0018 / DN-0019 / DN-0021 / DN-0022 / DN-0025",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "dn_20260922_sensitivity_residual_documented_in",
+      "source": "claim_dn_20260922_sensitivity_residual",
+      "target": "doc_work_v14_rebuild_dialogue_integration_2026_09_22_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0023 / DN-0024"
+    },
+    {
+      "id": "dn_20260922_sensitivity_residual_has_status",
+      "source": "claim_dn_20260922_sensitivity_residual",
+      "target": "assessment_dn_20260922_sensitivity_residual",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
+      "source_location": "DN-0023 / DN-0024",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
       "id": "dr10_qg_witness_documented_in",
       "source": "claim_dr10_qg_witness",
       "target": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_deep_research_report_10_integration_md",
@@ -26344,10 +26535,10 @@
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
     "internal_evidence_nodes": 6,
-    "research_claims": 3,
+    "research_claims": 7,
     "curated_research_bridges": 7,
-    "nodes": 732,
-    "edges": 1522,
+    "nodes": 741,
+    "edges": 1530,
     "unresolved_references": 34
   }
 }
