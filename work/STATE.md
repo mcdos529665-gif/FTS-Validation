@@ -10,6 +10,20 @@
   (канон ПОЛНОСТЬЮ установлен 2026-06-11 импортом из FTS_v13_project/source).
 
 ## Текущая цель
+- 2026-09-22: завершён инкремент аудита claim/evidence-цепочек. Baseline:
+  25 claim-групп и 62 unresolved-ссылки. Созданы
+  `v14_rebuild/audit/CLAIM_TRACEABILITY.tsv`,
+  `UNRESOLVED_REFERENCE_AUDIT.tsv` и `CHAIN_AUDIT_SUMMARY.md`; в рабочем слое
+  исправлены 28 однозначных путей/алиасов. Производный граф пересобран:
+  732 узла / 1522 ребра / 34 unresolved (30 canonical_v13 + 4 оставшихся
+  source-level shorthand), 420/420 canonical assertions, 10 parallel relation
+  pairs, `idempotent=true`. Проверки: канон 13/0/0, formal 62/0, traceability
+  blockers=0; P2 drift review-копий paper и PATTERN_OQ_MAP предшествовал этому
+  инкременту. `source/` не изменялся.
+- Следующий приоритет: авторский workbook round-trip для 30 канонических
+  ссылок из `audit/CANON_REFERENCE_PATCH.tsv`, затем отдельные role/defeat-
+  гейты семантики У7–У12. Не выбирать `TA1`, `NODE_SIGNATURES`, wildcard
+  result families или O_20/D2/D10 по тематическому сходству.
 - 2026-09-19: проанализирован новый нейросетевой аналог диалектического и
   обычного обобщения: `v14_rebuild/neural_analogy_2026-09-19/REVIEW.md`.
   Сильнейший ограниченный контакт — нулевая сумма ненулевых противоположных

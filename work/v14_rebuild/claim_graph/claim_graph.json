@@ -10,6 +10,10 @@
   },
   "input_digests": [
     {
+      "path": "source/FTS_v13_LLM_FULL_DUMP.md",
+      "sha256": "038f8f19772a43167687aa14593816279aa67e7262b02219213bf640c6a615cb"
+    },
+    {
       "path": "source/fts_cards.jsonl",
       "sha256": "bf92fdeae4f7d7b781fd4dd7be6c20c738623243f0a71135fb9ee89d1c0960ab"
     },
@@ -38,16 +42,32 @@
       "sha256": "8834d23f4c966ebd112207d5b2be59e218c9b8d820416162e695ef992b721b2c"
     },
     {
+      "path": "work/notation.md",
+      "sha256": "ffb0ed6bf1131929743ccd3cef4613a9a274bd72dec08e3a80e9fbfc3ad0f924"
+    },
+    {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
       "sha256": "8b30a8e915718f09130c095fa14dc501e12e88b9917a0a6168445a6c6f8cfbbd"
     },
     {
+      "path": "work/v14_rebuild/audit/BASELINE.md",
+      "sha256": "c4c90ea5d5deebe80940afcb54d435a2a8393b4349ca44144ef84bb3605c63f0"
+    },
+    {
+      "path": "work/v14_rebuild/audit/CANON_REFERENCE_PATCH.tsv",
+      "sha256": "4fee4c4c8296944e2e9980dbab769efa4bb03dc7d3eb1172b02ff89312121a79"
+    },
+    {
       "path": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "sha256": "cfa581bd026d7b31935575bb3bc641733ef476a88a0f622b22d0abdb0b01baac"
+      "sha256": "2707fdcc3d5f85594678573f76f56419eb6ed67823c50582eef19dc7678b0804"
     },
     {
       "path": "work/v14_rebuild/audit/FINDINGS.tsv",
       "sha256": "305017c0267883d361689177d785df576a01dd2c2b5695cbc32974c2be9bf646"
+    },
+    {
+      "path": "work/v14_rebuild/audit/LITERATURE_MATRIX.tsv",
+      "sha256": "11649c9f7d891f65cf74d4527bc1da8e161a05d8c47e5034261e6cd1100425d4"
     },
     {
       "path": "work/v14_rebuild/audit/PATTERN_ATLAS.tsv",
@@ -58,12 +78,32 @@
       "sha256": "2b9f91c55d64b0e001878855880527186b020cb340564ffa28b6b407c048cafa"
     },
     {
+      "path": "work/v14_rebuild/audit/REPRODUCIBILITY.md",
+      "sha256": "81c88feec1c834f324a88c0fc4d9d409ba9021ad2f4a7704223faf79049f7dbd"
+    },
+    {
       "path": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
       "sha256": "04a4ca931ffd5b819a7c8016338b1677c57d1153cac5187cc11744f91e9728d3"
     },
     {
+      "path": "work/v14_rebuild/d2_sign/PREREGISTRATION.md",
+      "sha256": "dd841948bcf4775161e6e4cf2bfb36eb24609278cc6a0203ac59e63f878604cc"
+    },
+    {
+      "path": "work/v14_rebuild/d2_sign/results.json",
+      "sha256": "f0e8eedc2fd24f11d9e15eba7b99101889a30466381096e69bceb21e8770a621"
+    },
+    {
+      "path": "work/v14_rebuild/d2_sign/run_d2.py",
+      "sha256": "fcdd155e166912d65c1fe8416f939d535d333dca5d89967851107daa23128969"
+    },
+    {
       "path": "work/v14_rebuild/e5_literature_review/EVIDENCE_MATRIX.tsv",
       "sha256": "2a3f5953495818610b23ca3aaf3d984a464e4ef9aeba7485eb7c134db7125bf7"
+    },
+    {
+      "path": "work/v14_rebuild/external_bridge_u1_u5.md",
+      "sha256": "3ae0b6af574a3928bbe34fe4d52b5b04c096547a164f5a95ab135e3455643ed3"
     },
     {
       "path": "work/v14_rebuild/neural_skeleton_research_2026-09-15/CONSIDERATION_BRIEF.md",
@@ -96,6 +136,26 @@
     {
       "path": "work/v14_rebuild/neural_skeleton_research_2026-09-15/TARGET_INDEPENDENT_AUDIT.md",
       "sha256": "02fb90b7dd0b283ad06c02cab28ce8e734751d199d902982ea846ab97bb7318e"
+    },
+    {
+      "path": "work/v14_rebuild/o20/PREREGISTRATION.md",
+      "sha256": "cbcc3f8ff8b4c6e1637211e58ae5039f8401848dec95bc8cbe9c84a083d7e00f"
+    },
+    {
+      "path": "work/v14_rebuild/o20/RESULTS.md",
+      "sha256": "ea10e150abc751a27c587d797d8d93b3cc9ab4ed584c94c78d527d6424366e31"
+    },
+    {
+      "path": "work/v14_rebuild/o20/results.json",
+      "sha256": "9b97d5a0f510253128a334e253bea750a07ef79936cdd6bbe385b1a03f739ab4"
+    },
+    {
+      "path": "work/v14_rebuild/red_team_F3.md",
+      "sha256": "0ed37c74e2c80ff46d8c292df45539767f636445ba9f8a1d9fa1016cd35a6139"
+    },
+    {
+      "path": "work/v14_rebuild/status_patch_v14.md",
+      "sha256": "736a3f3bfd69ca3701828113a5683c4320d73603d2a55f3187c8b3cad73b7724"
     }
   ],
   "nodes": [
@@ -5654,6 +5714,27 @@
       "source_location": "card:AC_20260921_U7_LOGIC:local_forbid[1]"
     },
     {
+      "id": "doc_source_fts_cards_jsonl",
+      "type": "source_document",
+      "label": "source/fts_cards.jsonl",
+      "layer": "audit",
+      "source_file": "source/fts_cards.jsonl"
+    },
+    {
+      "id": "doc_source_fts_triples_tsv",
+      "type": "source_document",
+      "label": "source/fts_triples.tsv",
+      "layer": "audit",
+      "source_file": "source/fts_triples.tsv"
+    },
+    {
+      "id": "doc_source_fts_v13_llm_full_dump_md",
+      "type": "source_document",
+      "label": "source/FTS_v13_LLM_FULL_DUMP.md",
+      "layer": "audit",
+      "source_file": "source/FTS_v13_LLM_FULL_DUMP.md"
+    },
+    {
       "id": "doc_work_author_canon_2026_09_21_author_message_txt",
       "type": "source_document",
       "label": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
@@ -5675,6 +5756,27 @@
       "source_file": "work/author_canon/2026-09-21/INHERITED_AUTHOR_MESSAGE.txt"
     },
     {
+      "id": "doc_work_notation_md",
+      "type": "source_document",
+      "label": "work/notation.md",
+      "layer": "audit",
+      "source_file": "work/notation.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_audit_baseline_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/audit/BASELINE.md",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/audit/BASELINE.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_audit_canon_reference_patch_tsv",
+      "type": "source_document",
+      "label": "work/v14_rebuild/audit/CANON_REFERENCE_PATCH.tsv",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/audit/CANON_REFERENCE_PATCH.tsv"
+    },
+    {
       "id": "doc_work_v14_rebuild_audit_claim_matrix_tsv",
       "type": "source_document",
       "label": "CLAIM_MATRIX — адресуемые группы утверждений",
@@ -5687,6 +5789,13 @@
       "label": "FINDINGS — аудиторские ограничения",
       "layer": "audit",
       "source_file": "work/v14_rebuild/audit/FINDINGS.tsv"
+    },
+    {
+      "id": "doc_work_v14_rebuild_audit_literature_matrix_tsv",
+      "type": "source_document",
+      "label": "work/v14_rebuild/audit/LITERATURE_MATRIX.tsv",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/audit/LITERATURE_MATRIX.tsv"
     },
     {
       "id": "doc_work_v14_rebuild_audit_pattern_atlas_tsv",
@@ -5703,11 +5812,46 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv"
     },
     {
+      "id": "doc_work_v14_rebuild_audit_reproducibility_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/audit/REPRODUCIBILITY.md",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/audit/REPRODUCIBILITY.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_d2_sign_preregistration_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/d2_sign/PREREGISTRATION.md",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/d2_sign/PREREGISTRATION.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_d2_sign_results_json",
+      "type": "source_document",
+      "label": "work/v14_rebuild/d2_sign/results.json",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/d2_sign/results.json"
+    },
+    {
+      "id": "doc_work_v14_rebuild_d2_sign_run_d2_py",
+      "type": "source_document",
+      "label": "work/v14_rebuild/d2_sign/run_d2.py",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/d2_sign/run_d2.py"
+    },
+    {
       "id": "doc_work_v14_rebuild_e5_literature_review_evidence_matrix_tsv",
       "type": "source_document",
       "label": "work/v14_rebuild/e5_literature_review/EVIDENCE_MATRIX.tsv",
       "layer": "external_research",
       "source_file": "work/v14_rebuild/e5_literature_review/EVIDENCE_MATRIX.tsv"
+    },
+    {
+      "id": "doc_work_v14_rebuild_external_bridge_u1_u5_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/external_bridge_u1_u5.md",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/external_bridge_u1_u5.md"
     },
     {
       "id": "doc_work_v14_rebuild_fts_v14_paper_md",
@@ -5771,6 +5915,41 @@
       "label": "work/v14_rebuild/neural_skeleton_research_2026-09-15/TARGET_INDEPENDENT_AUDIT.md",
       "layer": "internal_research",
       "source_file": "work/v14_rebuild/neural_skeleton_research_2026-09-15/TARGET_INDEPENDENT_AUDIT.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_o20_preregistration_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/o20/PREREGISTRATION.md",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/o20/PREREGISTRATION.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_o20_results_json",
+      "type": "source_document",
+      "label": "work/v14_rebuild/o20/results.json",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/o20/results.json"
+    },
+    {
+      "id": "doc_work_v14_rebuild_o20_results_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/o20/RESULTS.md",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/o20/RESULTS.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_red_team_f3_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/red_team_F3.md",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/red_team_F3.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_status_patch_v14_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/status_patch_v14.md",
+      "layer": "audit",
+      "source_file": "work/v14_rebuild/status_patch_v14.md"
     },
     {
       "id": "event_e1",
@@ -8333,83 +8512,6 @@
       "source_location": "row:221"
     },
     {
-      "id": "source_ref_055795b9c057",
-      "type": "source_reference",
-      "label": "red_team_F3 A5",
-      "layer": "research",
-      "raw_reference": "red_team_F3 A5",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:13"
-    },
-    {
-      "id": "source_ref_08669e816fd7",
-      "type": "source_reference",
-      "label": "o20/results.json",
-      "layer": "research",
-      "raw_reference": "o20/results.json",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:21"
-    },
-    {
-      "id": "source_ref_11221566484e",
-      "type": "source_reference",
-      "label": "отсутствующие SP_U10/SP_U11",
-      "layer": "research",
-      "raw_reference": "отсутствующие SP_U10/SP_U11",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:18"
-    },
-    {
-      "id": "source_ref_154c2d17d516",
-      "type": "source_reference",
-      "label": "external_bridge_u1_u5.md",
-      "layer": "research",
-      "raw_reference": "external_bridge_u1_u5.md",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:26"
-    },
-    {
-      "id": "source_ref_159275ad562f",
-      "type": "source_reference",
-      "label": "U10_TO_U12",
-      "layer": "research",
-      "raw_reference": "U10_TO_U12",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:11"
-    },
-    {
-      "id": "source_ref_1a3bb55933fd",
-      "type": "source_reference",
-      "label": "fts_cards.jsonl",
-      "layer": "research",
-      "raw_reference": "fts_cards.jsonl",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:19"
-    },
-    {
-      "id": "source_ref_1f1d95443542",
-      "type": "source_reference",
-      "label": "O_13…O_19",
-      "layer": "research",
-      "raw_reference": "O_13…O_19",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:24"
-    },
-    {
       "id": "source_ref_27c376d4b062",
       "type": "source_reference",
       "label": "results*.json",
@@ -8419,105 +8521,6 @@
       "missing_reason": "нет в артефактах",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:23"
-    },
-    {
-      "id": "source_ref_3341c638178b",
-      "type": "source_reference",
-      "label": "audit/REPRODUCIBILITY.md",
-      "layer": "research",
-      "raw_reference": "audit/REPRODUCIBILITY.md",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:26"
-    },
-    {
-      "id": "source_ref_33ea23dae519",
-      "type": "source_reference",
-      "label": "UNIT_BOUNDARY proposal",
-      "layer": "research",
-      "raw_reference": "UNIT_BOUNDARY proposal",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:15"
-    },
-    {
-      "id": "source_ref_46a3d28d7b30",
-      "type": "source_reference",
-      "label": "CANON_REFERENCE_PATCH.tsv",
-      "layer": "research",
-      "raw_reference": "CANON_REFERENCE_PATCH.tsv",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:19"
-    },
-    {
-      "id": "source_ref_4924cb5f78b8",
-      "type": "source_reference",
-      "label": "CONTRADICTION_LATTICE",
-      "layer": "research",
-      "raw_reference": "CONTRADICTION_LATTICE",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:17"
-    },
-    {
-      "id": "source_ref_50419faaae3c",
-      "type": "source_reference",
-      "label": "run_d2.py",
-      "layer": "research",
-      "raw_reference": "run_d2.py",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:22"
-    },
-    {
-      "id": "source_ref_5d6901105200",
-      "type": "source_reference",
-      "label": "fts_triples.tsv",
-      "layer": "research",
-      "raw_reference": "fts_triples.tsv",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:10"
-    },
-    {
-      "id": "source_ref_5ef27b62f3d0",
-      "type": "source_reference",
-      "label": "ratio channel",
-      "layer": "research",
-      "raw_reference": "ratio channel",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:14"
-    },
-    {
-      "id": "source_ref_6343d3fb9e20",
-      "type": "source_reference",
-      "label": "MAP_PENTAD",
-      "layer": "research",
-      "raw_reference": "MAP_PENTAD",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:25"
-    },
-    {
-      "id": "source_ref_6ad770502b4e",
-      "type": "source_reference",
-      "label": "SYMMETRY_ESCALATION_HYPOTHESIS",
-      "layer": "research",
-      "raw_reference": "SYMMETRY_ESCALATION_HYPOTHESIS",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:25"
     },
     {
       "id": "source_ref_6b59a7b708ce",
@@ -8542,50 +8545,6 @@
       "source_location": "row:23"
     },
     {
-      "id": "source_ref_7619854050ca",
-      "type": "source_reference",
-      "label": "o20/PREREGISTRATION.md",
-      "layer": "research",
-      "raw_reference": "o20/PREREGISTRATION.md",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:21"
-    },
-    {
-      "id": "source_ref_879ebcd4f0e8",
-      "type": "source_reference",
-      "label": "RadioML SHA256 в BASELINE.md",
-      "layer": "research",
-      "raw_reference": "RadioML SHA256 в BASELINE.md",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:23"
-    },
-    {
-      "id": "source_ref_89fe3f589c3f",
-      "type": "source_reference",
-      "label": "complex overlay",
-      "layer": "research",
-      "raw_reference": "complex overlay",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:9"
-    },
-    {
-      "id": "source_ref_8bf7b7cdeb4b",
-      "type": "source_reference",
-      "label": "o20/RESULTS.md",
-      "layer": "research",
-      "raw_reference": "o20/RESULTS.md",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:21"
-    },
-    {
       "id": "source_ref_8d9f8498e4cd",
       "type": "source_reference",
       "label": "O_20/D2/D10",
@@ -8595,94 +8554,6 @@
       "missing_reason": "нет в артефактах",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:26"
-    },
-    {
-      "id": "source_ref_9405975cea25",
-      "type": "source_reference",
-      "label": "U_13_FORMULA proposal",
-      "layer": "research",
-      "raw_reference": "U_13_FORMULA proposal",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:8"
-    },
-    {
-      "id": "source_ref_97e1274a173a",
-      "type": "source_reference",
-      "label": "d2_sign/PREREGISTRATION.md",
-      "layer": "research",
-      "raw_reference": "d2_sign/PREREGISTRATION.md",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:22"
-    },
-    {
-      "id": "source_ref_9b90500714a0",
-      "type": "source_reference",
-      "label": "SP_U8/SP_U9/SP_U12",
-      "layer": "research",
-      "raw_reference": "SP_U8/SP_U9/SP_U12",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:18"
-    },
-    {
-      "id": "source_ref_a0bb7ceac320",
-      "type": "source_reference",
-      "label": "SMALL_FORM_PROJECTION",
-      "layer": "research",
-      "raw_reference": "SMALL_FORM_PROJECTION",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:17"
-    },
-    {
-      "id": "source_ref_abd81662a7c0",
-      "type": "source_reference",
-      "label": "audit/LITERATURE_MATRIX.tsv",
-      "layer": "research",
-      "raw_reference": "audit/LITERATURE_MATRIX.tsv",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:26"
-    },
-    {
-      "id": "source_ref_c64ec5a51056",
-      "type": "source_reference",
-      "label": "d2_sign/results.json",
-      "layer": "research",
-      "raw_reference": "d2_sign/results.json",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:22"
-    },
-    {
-      "id": "source_ref_e132ce32a362",
-      "type": "source_reference",
-      "label": "U12_QUAD_CONTACT",
-      "layer": "research",
-      "raw_reference": "U12_QUAD_CONTACT",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:11"
-    },
-    {
-      "id": "source_ref_fd6e3954665f",
-      "type": "source_reference",
-      "label": "PROPOSAL_STRICT_BAND_7",
-      "layer": "research",
-      "raw_reference": "PROPOSAL_STRICT_BAND_7",
-      "resolution_state": "unresolved_reference",
-      "missing_reason": "нет в артефактах",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:17"
     },
     {
       "id": "verification_c01",
@@ -15814,19 +15685,7 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:8:source[0]",
-      "raw_reference": "paper §10.2",
-      "status_effect": "source registry; not automatic truth"
-    },
-    {
-      "id": "claim_ground_cm_007_01",
-      "source": "claim_group_cm_007",
-      "target": "source_ref_9405975cea25",
-      "relation": "grounds_claim",
-      "layer": "audit",
-      "confidence": "EXTRACTED",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:8:source[1]",
-      "raw_reference": "U_13_FORMULA proposal",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -15844,13 +15703,13 @@
     {
       "id": "claim_ground_cm_008_01",
       "source": "claim_group_cm_008",
-      "target": "source_ref_89fe3f589c3f",
+      "target": "doc_work_notation_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:9:source[1]",
-      "raw_reference": "complex overlay",
+      "raw_reference": "work/notation.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -15862,19 +15721,19 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:9:source[2]",
-      "raw_reference": "paper §10.4",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_009_00",
       "source": "claim_group_cm_009",
-      "target": "source_ref_5d6901105200",
+      "target": "doc_source_fts_triples_tsv",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:10:source[0]",
-      "raw_reference": "fts_triples.tsv",
+      "raw_reference": "source/fts_triples.tsv",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -15898,7 +15757,7 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:10:source[2]",
-      "raw_reference": "paper §3.3/§8.2",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -15910,31 +15769,19 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:11:source[0]",
-      "raw_reference": "paper §6/§10.1",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_010_01",
       "source": "claim_group_cm_010",
-      "target": "source_ref_e132ce32a362",
+      "target": "doc_source_fts_v13_llm_full_dump_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:11:source[1]",
-      "raw_reference": "U12_QUAD_CONTACT",
-      "status_effect": "source registry; not automatic truth"
-    },
-    {
-      "id": "claim_ground_cm_010_02",
-      "source": "claim_group_cm_010",
-      "target": "source_ref_159275ad562f",
-      "relation": "grounds_claim",
-      "layer": "audit",
-      "confidence": "EXTRACTED",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:11:source[2]",
-      "raw_reference": "U10_TO_U12",
+      "raw_reference": "source/FTS_v13_LLM_FULL_DUMP.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -15946,31 +15793,31 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:12:source[0]",
-      "raw_reference": "paper §3.2a/Д10",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_011_01",
       "source": "claim_group_cm_011",
-      "target": "source_ref_89fe3f589c3f",
+      "target": "doc_work_notation_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:12:source[1]",
-      "raw_reference": "complex overlay",
+      "raw_reference": "work/notation.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_012_00",
       "source": "claim_group_cm_012",
-      "target": "source_ref_055795b9c057",
+      "target": "doc_work_v14_rebuild_red_team_f3_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:13:source[0]",
-      "raw_reference": "red_team_F3 A5",
+      "raw_reference": "work/v14_rebuild/red_team_F3.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -15982,7 +15829,7 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:13:source[1]",
-      "raw_reference": "paper §10/приложение A",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -15994,19 +15841,19 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:14:source[0]",
-      "raw_reference": "paper Д11",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_013_01",
       "source": "claim_group_cm_013",
-      "target": "source_ref_5ef27b62f3d0",
+      "target": "doc_work_notation_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:14:source[1]",
-      "raw_reference": "ratio channel",
+      "raw_reference": "work/notation.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -16018,19 +15865,7 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:15:source[0]",
-      "raw_reference": "paper §3.6/§8.2",
-      "status_effect": "source registry; not automatic truth"
-    },
-    {
-      "id": "claim_ground_cm_014_01",
-      "source": "claim_group_cm_014",
-      "target": "source_ref_33ea23dae519",
-      "relation": "grounds_claim",
-      "layer": "audit",
-      "confidence": "EXTRACTED",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:15:source[1]",
-      "raw_reference": "UNIT_BOUNDARY proposal",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -16066,223 +15901,223 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:17:source[0]",
-      "raw_reference": "paper §8",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_016_01",
       "source": "claim_group_cm_016",
-      "target": "source_ref_a0bb7ceac320",
+      "target": "doc_work_v14_rebuild_status_patch_v14_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:17:source[1]",
-      "raw_reference": "SMALL_FORM_PROJECTION",
-      "status_effect": "source registry; not automatic truth"
-    },
-    {
-      "id": "claim_ground_cm_016_02",
-      "source": "claim_group_cm_016",
-      "target": "source_ref_4924cb5f78b8",
-      "relation": "grounds_claim",
-      "layer": "audit",
-      "confidence": "EXTRACTED",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:17:source[2]",
-      "raw_reference": "CONTRADICTION_LATTICE",
-      "status_effect": "source registry; not automatic truth"
-    },
-    {
-      "id": "claim_ground_cm_016_03",
-      "source": "claim_group_cm_016",
-      "target": "source_ref_fd6e3954665f",
-      "relation": "grounds_claim",
-      "layer": "audit",
-      "confidence": "EXTRACTED",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:17:source[3]",
-      "raw_reference": "PROPOSAL_STRICT_BAND_7",
+      "raw_reference": "work/v14_rebuild/status_patch_v14.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_017_00",
       "source": "claim_group_cm_017",
-      "target": "source_ref_9b90500714a0",
+      "target": "card_sp_u8",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:18:source[0]",
-      "raw_reference": "SP_U8/SP_U9/SP_U12",
+      "raw_reference": "SP_U8",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_017_01",
       "source": "claim_group_cm_017",
-      "target": "source_ref_11221566484e",
+      "target": "card_sp_u9",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:18:source[1]",
-      "raw_reference": "отсутствующие SP_U10/SP_U11",
+      "raw_reference": "SP_U9",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_017_02",
+      "source": "claim_group_cm_017",
+      "target": "card_sp_u12",
+      "relation": "grounds_claim",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
+      "source_location": "row:18:source[2]",
+      "raw_reference": "SP_U12",
+      "status_effect": "source registry; not automatic truth"
+    },
+    {
+      "id": "claim_ground_cm_017_03",
+      "source": "claim_group_cm_017",
+      "target": "doc_work_v14_rebuild_status_patch_v14_md",
+      "relation": "grounds_claim",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
+      "source_location": "row:18:source[3]",
+      "raw_reference": "work/v14_rebuild/status_patch_v14.md",
+      "status_effect": "source registry; not automatic truth"
+    },
+    {
+      "id": "claim_ground_cm_017_04",
       "source": "claim_group_cm_017",
       "target": "doc_work_v14_rebuild_fts_v14_paper_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:18:source[2]",
-      "raw_reference": "paper §11",
+      "source_location": "row:18:source[4]",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_018_00",
       "source": "claim_group_cm_018",
-      "target": "source_ref_5d6901105200",
+      "target": "doc_source_fts_triples_tsv",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:19:source[0]",
-      "raw_reference": "fts_triples.tsv",
+      "raw_reference": "source/fts_triples.tsv",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_018_01",
       "source": "claim_group_cm_018",
-      "target": "source_ref_1a3bb55933fd",
+      "target": "doc_source_fts_cards_jsonl",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:19:source[1]",
-      "raw_reference": "fts_cards.jsonl",
+      "raw_reference": "source/fts_cards.jsonl",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_018_02",
       "source": "claim_group_cm_018",
-      "target": "source_ref_46a3d28d7b30",
+      "target": "doc_work_v14_rebuild_audit_canon_reference_patch_tsv",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:19:source[2]",
-      "raw_reference": "CANON_REFERENCE_PATCH.tsv",
+      "raw_reference": "work/v14_rebuild/audit/CANON_REFERENCE_PATCH.tsv",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_019_00",
       "source": "claim_group_cm_019",
-      "target": "source_ref_1a3bb55933fd",
+      "target": "doc_source_fts_cards_jsonl",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:20:source[0]",
-      "raw_reference": "fts_cards.jsonl",
+      "raw_reference": "source/fts_cards.jsonl",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_019_01",
       "source": "claim_group_cm_019",
-      "target": "source_ref_5d6901105200",
+      "target": "doc_source_fts_triples_tsv",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:20:source[1]",
-      "raw_reference": "fts_triples.tsv",
+      "raw_reference": "source/fts_triples.tsv",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_019_02",
       "source": "claim_group_cm_019",
-      "target": "source_ref_46a3d28d7b30",
+      "target": "doc_work_v14_rebuild_audit_canon_reference_patch_tsv",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:20:source[2]",
-      "raw_reference": "CANON_REFERENCE_PATCH.tsv",
+      "raw_reference": "work/v14_rebuild/audit/CANON_REFERENCE_PATCH.tsv",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_020_00",
       "source": "claim_group_cm_020",
-      "target": "source_ref_7619854050ca",
+      "target": "doc_work_v14_rebuild_o20_preregistration_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:21:source[0]",
-      "raw_reference": "o20/PREREGISTRATION.md",
+      "raw_reference": "work/v14_rebuild/o20/PREREGISTRATION.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_020_01",
       "source": "claim_group_cm_020",
-      "target": "source_ref_08669e816fd7",
+      "target": "doc_work_v14_rebuild_o20_results_json",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:21:source[1]",
-      "raw_reference": "o20/results.json",
+      "raw_reference": "work/v14_rebuild/o20/results.json",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_020_02",
       "source": "claim_group_cm_020",
-      "target": "source_ref_8bf7b7cdeb4b",
+      "target": "doc_work_v14_rebuild_o20_results_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:21:source[2]",
-      "raw_reference": "o20/RESULTS.md",
+      "raw_reference": "work/v14_rebuild/o20/RESULTS.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_021_00",
       "source": "claim_group_cm_021",
-      "target": "source_ref_97e1274a173a",
+      "target": "doc_work_v14_rebuild_d2_sign_preregistration_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:22:source[0]",
-      "raw_reference": "d2_sign/PREREGISTRATION.md",
+      "raw_reference": "work/v14_rebuild/d2_sign/PREREGISTRATION.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_021_01",
       "source": "claim_group_cm_021",
-      "target": "source_ref_c64ec5a51056",
+      "target": "doc_work_v14_rebuild_d2_sign_results_json",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:22:source[1]",
-      "raw_reference": "d2_sign/results.json",
+      "raw_reference": "work/v14_rebuild/d2_sign/results.json",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_021_02",
       "source": "claim_group_cm_021",
-      "target": "source_ref_50419faaae3c",
+      "target": "doc_work_v14_rebuild_d2_sign_run_d2_py",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:22:source[2]",
-      "raw_reference": "run_d2.py",
+      "raw_reference": "work/v14_rebuild/d2_sign/run_d2.py",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -16312,13 +16147,13 @@
     {
       "id": "claim_ground_cm_022_02",
       "source": "claim_group_cm_022",
-      "target": "source_ref_879ebcd4f0e8",
+      "target": "doc_work_v14_rebuild_audit_baseline_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:23:source[2]",
-      "raw_reference": "RadioML SHA256 в BASELINE.md",
+      "raw_reference": "work/v14_rebuild/audit/BASELINE.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -16336,25 +16171,97 @@
     {
       "id": "claim_ground_cm_023_01",
       "source": "claim_group_cm_023",
-      "target": "source_ref_1f1d95443542",
+      "target": "card_o_13",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:24:source[1]",
-      "raw_reference": "O_13…O_19",
+      "raw_reference": "O_13",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_023_02",
+      "source": "claim_group_cm_023",
+      "target": "card_o_14",
+      "relation": "grounds_claim",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
+      "source_location": "row:24:source[2]",
+      "raw_reference": "O_14",
+      "status_effect": "source registry; not automatic truth"
+    },
+    {
+      "id": "claim_ground_cm_023_03",
+      "source": "claim_group_cm_023",
+      "target": "card_o_15",
+      "relation": "grounds_claim",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
+      "source_location": "row:24:source[3]",
+      "raw_reference": "O_15",
+      "status_effect": "source registry; not automatic truth"
+    },
+    {
+      "id": "claim_ground_cm_023_04",
+      "source": "claim_group_cm_023",
+      "target": "card_o_16",
+      "relation": "grounds_claim",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
+      "source_location": "row:24:source[4]",
+      "raw_reference": "O_16",
+      "status_effect": "source registry; not automatic truth"
+    },
+    {
+      "id": "claim_ground_cm_023_05",
+      "source": "claim_group_cm_023",
+      "target": "card_o_17",
+      "relation": "grounds_claim",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
+      "source_location": "row:24:source[5]",
+      "raw_reference": "O_17",
+      "status_effect": "source registry; not automatic truth"
+    },
+    {
+      "id": "claim_ground_cm_023_06",
+      "source": "claim_group_cm_023",
+      "target": "card_o_18",
+      "relation": "grounds_claim",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
+      "source_location": "row:24:source[6]",
+      "raw_reference": "O_18",
+      "status_effect": "source registry; not automatic truth"
+    },
+    {
+      "id": "claim_ground_cm_023_07",
+      "source": "claim_group_cm_023",
+      "target": "card_o_19",
+      "relation": "grounds_claim",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
+      "source_location": "row:24:source[7]",
+      "raw_reference": "O_19",
+      "status_effect": "source registry; not automatic truth"
+    },
+    {
+      "id": "claim_ground_cm_023_08",
       "source": "claim_group_cm_023",
       "target": "doc_work_v14_rebuild_fts_v14_paper_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:24:source[2]",
-      "raw_reference": "paper §6.1/§8.4",
+      "source_location": "row:24:source[8]",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -16366,19 +16273,19 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:25:source[0]",
-      "raw_reference": "paper §8.2–8.3",
+      "raw_reference": "work/v14_rebuild/FTS_v14_paper.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_024_01",
       "source": "claim_group_cm_024",
-      "target": "source_ref_6343d3fb9e20",
+      "target": "doc_work_v14_rebuild_status_patch_v14_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:25:source[1]",
-      "raw_reference": "MAP_PENTAD",
+      "raw_reference": "work/v14_rebuild/status_patch_v14.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -16391,18 +16298,6 @@
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:25:source[2]",
       "raw_reference": "NODE_SIGNATURES",
-      "status_effect": "source registry; not automatic truth"
-    },
-    {
-      "id": "claim_ground_cm_024_03",
-      "source": "claim_group_cm_024",
-      "target": "source_ref_6ad770502b4e",
-      "relation": "grounds_claim",
-      "layer": "audit",
-      "confidence": "EXTRACTED",
-      "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
-      "source_location": "row:25:source[3]",
-      "raw_reference": "SYMMETRY_ESCALATION_HYPOTHESIS",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -16420,37 +16315,37 @@
     {
       "id": "claim_ground_cm_025_01",
       "source": "claim_group_cm_025",
-      "target": "source_ref_154c2d17d516",
+      "target": "doc_work_v14_rebuild_external_bridge_u1_u5_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:26:source[1]",
-      "raw_reference": "external_bridge_u1_u5.md",
+      "raw_reference": "work/v14_rebuild/external_bridge_u1_u5.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_025_02",
       "source": "claim_group_cm_025",
-      "target": "source_ref_abd81662a7c0",
+      "target": "doc_work_v14_rebuild_audit_literature_matrix_tsv",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:26:source[2]",
-      "raw_reference": "audit/LITERATURE_MATRIX.tsv",
+      "raw_reference": "work/v14_rebuild/audit/LITERATURE_MATRIX.tsv",
       "status_effect": "source registry; not automatic truth"
     },
     {
       "id": "claim_ground_cm_025_03",
       "source": "claim_group_cm_025",
-      "target": "source_ref_3341c638178b",
+      "target": "doc_work_v14_rebuild_audit_reproducibility_md",
       "relation": "grounds_claim",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/CLAIM_MATRIX.tsv",
       "source_location": "row:26:source[3]",
-      "raw_reference": "audit/REPRODUCIBILITY.md",
+      "raw_reference": "work/v14_rebuild/audit/REPRODUCIBILITY.md",
       "status_effect": "source registry; not automatic truth"
     },
     {
@@ -26451,8 +26346,8 @@
     "internal_evidence_nodes": 6,
     "research_claims": 3,
     "curated_research_bridges": 7,
-    "nodes": 743,
-    "edges": 1520,
-    "unresolved_references": 62
+    "nodes": 732,
+    "edges": 1522,
+    "unresolved_references": 34
   }
 }

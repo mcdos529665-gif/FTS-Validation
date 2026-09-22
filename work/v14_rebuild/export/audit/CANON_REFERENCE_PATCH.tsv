@@ -30,3 +30,14 @@ SP_PHI	triple_subject	SP_PHI	Recover the status/support card before relying on i
 SP_EPI	triple_subject	SP_EPI	Recover the ceiling card before relying on its edge	missing_exported_entity
 SP_LIMITS	triple_subject	SP_LIMITS	Recover the ceiling card before relying on its edge	missing_exported_entity
 CHI_STAT_LADDER	triple_object	OP_ChiOverlayMap	Recover or create the missing operator card referenced by has_operator	missing_exported_entity
+ADD_ZERO_BOUNDARY	triple_object	O(17)	Normalize to the existing card O_17 in the future workbook/export; preserve the original triple until round-trip	alias_normalization
+ADD_PARITY_TOPOLOGY	triple_object	O(8)	Normalize to the existing card O_08 in the future workbook/export; preserve the original triple until round-trip	alias_normalization
+ADD_RESEARCH_FORMAT	exports_to	fts_cards_research_v8.jsonl	No current artifact with this name; recover the historical export provenance or replace the edge in a future export	missing_exported_entity
+ADD_RESEARCH_FORMAT	exports_to	fts_triples_research_v8.tsv	No current artifact with this name; recover the historical export provenance or replace the edge in a future export	missing_exported_entity
+F1	defeats_or_tests	FTS_core	Recover a dedicated core-test bundle card or retain the exact source block at source/FTS_v13_LLM_FULL_DUMP.md:940-947; do not infer a new entity from the label	missing_exported_entity
+O_01	supports	U_m1_to_U_07	Recover the historical connectivity grouping card or retain the exact source block at source/FTS_v13_LLM_FULL_DUMP.md:886-905; do not promote candidate O_13+	missing_exported_entity
+A0	supports	core_grammar	Recover a dedicated grammar card or retain the exact source block at source/FTS_v13_LLM_FULL_DUMP.md:928-939; no semantic expansion from the label	missing_exported_entity
+U_07	has_antimode	minusA	Retain as a literal anti-mode reference with the exact source block at source/FTS_v13_LLM_FULL_DUMP.md:825-885; do not equate it with ¬A, 0_A, or a new card	literal_source_reference
+SP_LIMITS	does_not_promote_above	U_13_to_U_17	Recover the grouping/ceiling card or retain the exact source block at source/FTS_v13_LLM_FULL_DUMP.md:981 and FTS_v14_paper.md:1470; preserve the no-promotion guard	missing_exported_entity
+CHI_LADDER_U9	requires	causal_counterfactual_decomposition	No standalone model artifact is present; keep the guardrail unresolved and link it only after a working artifact or author decision exists	missing_exported_entity
+COMPLEX_LADDER_U9	requires	causal_counterfactual_phase_model	No standalone model artifact is present; keep the guardrail unresolved and link it only after a working artifact or author decision exists	missing_exported_entity

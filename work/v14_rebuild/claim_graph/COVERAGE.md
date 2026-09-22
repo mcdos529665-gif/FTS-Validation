@@ -21,9 +21,9 @@
 - `internal_evidence_nodes`: 6
 - `research_claims`: 3
 - `curated_research_bridges`: 7
-- `nodes`: 743
-- `edges`: 1520
-- `unresolved_references`: 62
+- `nodes`: 732
+- `edges`: 1522
+- `unresolved_references`: 34
 
 ## Границы
 
