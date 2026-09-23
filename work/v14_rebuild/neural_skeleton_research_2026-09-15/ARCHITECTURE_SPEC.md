@@ -34,12 +34,20 @@
 W/0_W или κ; каждое такое отождествление должно пройти отдельный
 mapping-аудит.
 
+`residual` и identity shortcut в этом интерфейсе — представительные операции,
+а не обещание раннего выхода: запись `y=x+F(x)` обычно требует вычислить
+`F(x)`. Computational fast path / early exit является отдельным механизмом
+управления потоком и должен быть задан и измерен отдельно. Аналогично,
+`Anti(W)=(W-W^T)/2` допустима только для совместимых типов (прежде всего
+эндоморфизм `W:U→U` с заданной структурой сопряжения); для общего
+`W:U_i→U_j` без дополнительной идентификации это не типизированная операция.
+
 ## FTS mapping passport
 
 | Рабочая роль | Кандидатная связь с ФТС | Что обязано быть доказано |
 |---|---|---|
 | nested context | O_01 | нижний носитель действительно нужен для данного вопроса, а не просто выбран дизайнером |
-| residual/refinement | Res_n, O_03, O_14 | остаток сохраняется и создаёт новый выразимый вопрос, а не только новый слой |
+| residual/refinement | Res_n, O_03, O_14 | остаток сохраняется и создаёт строгий witness уточнения, а не только новый слой |
 | projection | O_08 | commuting/section law для конкретного интерфейса |
 | typed absence | 0_A | механизм не сливает structured absence с ¬A, NaN или false |
 | expectation/memory loop | W/0_W, U7 candidate | закрытие окна отличимо от confidence или внешнего label |
@@ -80,4 +88,3 @@ capacity-matched baselines, минимум 5 независимых seeds, за�
 - error taxonomy: collapse, false promotion, absence conflation, provenance loss;
 - устойчивость к distribution shift и controlled missingness;
 - ablation effect с доверительным интервалом, а не только лучший seed.
-

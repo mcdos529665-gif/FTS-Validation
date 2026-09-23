@@ -307,6 +307,9 @@ def build_graph() -> dict[str, Any]:
     card_ids = canonical_card_id_map(canon_cards, "card")
     author_ids = canonical_card_id_map(author_cards, "author")
     builder = GraphBuilder()
+    # OQ nodes and their statuses are extracted below; retain the file digest so
+    # validation catches a stale graph after an OQ edit.
+    builder.input(OPEN_QUESTIONS)
     builder.input(CANON_CARDS)
     builder.input(CANON_TRIPLES)
     builder.input(AUTHOR_CARDS)
@@ -944,6 +947,23 @@ def validate_graph(graph: dict[str, Any], idempotent: bool = False) -> dict[str,
             stale.append((path_text, "hash_mismatch"))
     if stale:
         raise AssertionError(f"stale provenance: {stale[:5]}")
+
+    expected_inputs = {
+        item["path"]: item["sha256"]
+        for item in build_graph().get("input_digests", [])
+    }
+    if current_inputs != expected_inputs:
+        added = sorted(set(expected_inputs) - set(current_inputs))
+        removed = sorted(set(current_inputs) - set(expected_inputs))
+        changed = sorted(
+            path_text
+            for path_text in set(current_inputs) & set(expected_inputs)
+            if current_inputs[path_text] != expected_inputs[path_text]
+        )
+        raise AssertionError(
+            "input digest manifest drift: "
+            f"added={added[:5]} removed={removed[:5]} changed={changed[:5]}"
+        )
 
     for node in graph.get("nodes", []):
         source_file = node.get("source_file")

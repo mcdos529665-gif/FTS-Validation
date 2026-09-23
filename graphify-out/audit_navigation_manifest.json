@@ -3,11 +3,11 @@
   "kind": "deterministic_navigation_overlay",
   "inputs": {
     "work/v14_rebuild/audit/PATTERN_ATLAS.tsv": "2adfe76f27fdf5a58bcf1622b1e2bc1b6acbbad376f9ee4b249c0571e10b9e2a",
-    "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv": "2b9f91c55d64b0e001878855880527186b020cb340564ffa28b6b407c048cafa",
-    "work/v14_rebuild/audit/CLAIM_MATRIX.tsv": "cfa581bd026d7b31935575bb3bc641733ef476a88a0f622b22d0abdb0b01baac",
+    "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv": "71a7312472fb1f1701a6919bf4c0256c753741fdae8e73eaf7fc2b4ce68fcec0",
+    "work/v14_rebuild/audit/CLAIM_MATRIX.tsv": "2707fdcc3d5f85594678573f76f56419eb6ed67823c50582eef19dc7678b0804",
     "work/v14_rebuild/audit/FINDINGS.tsv": "305017c0267883d361689177d785df576a01dd2c2b5695cbc32974c2be9bf646",
     "work/v14_rebuild/audit/REVIEW_CONCLUSION.md": "a9bca28add191dbe4a58590229fa138e0b738b2eba85f55a7541c81afe6b8245",
-    "work/OPEN_QUESTIONS.md": "922933d41ec6d1ee7c6ba4ad78bc1fbb433689edd2f7bc5f20db0274fae55ec5"
+    "work/OPEN_QUESTIONS.md": "b86e31e56443e91f421be7381c3fdc7f9eeb222d72882cf83e911819ce60ef5f"
   },
   "counts": {
     "patterns": 31,
@@ -28,7 +28,7 @@
   "community": 47,
   "graph_nodes": 636,
   "graph_edges": 1325,
-  "built_at_commit": "359bbbcf857a934a64833ab329a0d3bf880c647d",
+  "built_at_commit": "32fad1acfa6b9a1be412477c7f4ef906779ef1b4",
   "trust_boundary": {
     "EXTRACTED": "буквальные связи TSV/Markdown",
     "INFERRED": "курируемые indirect и непрямой фрагмент mixed",
