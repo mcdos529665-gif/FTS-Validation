@@ -14,6 +14,34 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_PATH = ROOT / "work" / "v14_rebuild" / "export" / "FTS_research_project_for_AI.md"
+EXPORT_DIR = OUTPUT_PATH.parent
+CHECKSUMS_PATH = EXPORT_DIR / "CHECKSUMS.sha256"
+
+# These review-package copies have a working-layer source.  The two staged
+# v14 card/triple files and README are intentionally not copied here: they are
+# separately authored export material, but are included in CHECKSUMS.sha256.
+PACKAGE_COPIES = (
+    (Path("work/v14_rebuild/FTS_v14_paper.md"), Path("FTS_v14_paper.md")),
+    (Path("work/v14_rebuild/status_patch_v14.md"), Path("status_patch_v14.md")),
+    (Path("work/v14_rebuild/verification_report.md"), Path("verification_report.md")),
+    (Path("work/v14_rebuild/external_bridge_u1_u5.md"), Path("external_bridge_u1_u5.md")),
+    (Path("work/v14_rebuild/audit/AUDIT_REPORT.md"), Path("audit/AUDIT_REPORT.md")),
+    (Path("work/v14_rebuild/audit/BASELINE.md"), Path("audit/BASELINE.md")),
+    (Path("work/v14_rebuild/audit/CANON_REFERENCE_PATCH.tsv"), Path("audit/CANON_REFERENCE_PATCH.tsv")),
+    (Path("work/v14_rebuild/audit/CLAIM_MATRIX.tsv"), Path("audit/CLAIM_MATRIX.tsv")),
+    (Path("work/v14_rebuild/audit/FINDINGS.tsv"), Path("audit/FINDINGS.tsv")),
+    (Path("work/v14_rebuild/audit/GRAPH_AUDIT.md"), Path("audit/GRAPH_AUDIT.md")),
+    (Path("work/v14_rebuild/audit/GRAPH_RELATION_PATCH.tsv"), Path("audit/GRAPH_RELATION_PATCH.tsv")),
+    (Path("work/v14_rebuild/audit/LITERATURE_MATRIX.tsv"), Path("audit/LITERATURE_MATRIX.tsv")),
+    (Path("work/v14_rebuild/audit/PATTERN_ATLAS.md"), Path("audit/PATTERN_ATLAS.md")),
+    (Path("work/v14_rebuild/audit/PATTERN_ATLAS.tsv"), Path("audit/PATTERN_ATLAS.tsv")),
+    (Path("work/v14_rebuild/audit/PATTERN_OQ_MAP.md"), Path("audit/PATTERN_OQ_MAP.md")),
+    (Path("work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv"), Path("audit/PATTERN_OQ_MAP.tsv")),
+    (Path("work/v14_rebuild/audit/REPRODUCIBILITY.md"), Path("audit/REPRODUCIBILITY.md")),
+    (Path("work/v14_rebuild/audit/requirements-audit.txt"), Path("audit/requirements-audit.txt")),
+    (Path("work/v14_rebuild/audit/REVIEW_CONCLUSION.md"), Path("audit/REVIEW_CONCLUSION.md")),
+    (Path("work/v14_rebuild/audit/SEARCH_LOG.md"), Path("audit/SEARCH_LOG.md")),
+)
 
 PROJECT_INSTRUCTIONS = Path("PROJECT_INSTRUCTIONS.md")
 STATE = Path("work/STATE.md")
@@ -235,8 +263,12 @@ def read_text(relative: Path) -> str:
 
 
 def file_sha256(relative: Path) -> str:
+    return path_sha256(ROOT / relative)
+
+
+def path_sha256(path: Path) -> str:
     digest = hashlib.sha256()
-    with (ROOT / relative).open("rb") as handle:
+    with path.open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
@@ -729,6 +761,32 @@ def check_output(expected: bytes) -> int:
     return 0
 
 
+def rebuild_package(expected: bytes) -> tuple[int, int]:
+    """Explicitly refresh derived review copies and their recursive checksum list."""
+    EXPORT_DIR.mkdir(parents=True, exist_ok=True)
+    OUTPUT_PATH.write_bytes(expected)
+    copied = 0
+    for source_relative, destination_relative in PACKAGE_COPIES:
+        source = ROOT / source_relative
+        if not source.is_file():
+            raise ExportError(f"отсутствует обязательный источник review-пакета: {source_relative.as_posix()}")
+        destination = EXPORT_DIR / destination_relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(source.read_bytes())
+        copied += 1
+
+    package_files = sorted(
+        (path for path in EXPORT_DIR.rglob("*") if path.is_file() and path != CHECKSUMS_PATH),
+        key=lambda path: path.relative_to(EXPORT_DIR).as_posix(),
+    )
+    checksum_lines = [
+        f"{path_sha256(path)}  {path.relative_to(EXPORT_DIR).as_posix()}"
+        for path in package_files
+    ]
+    CHECKSUMS_PATH.write_text("\n".join(checksum_lines) + "\n", encoding="utf-8", newline="\n")
+    return copied, len(package_files)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -736,11 +794,26 @@ def main() -> int:
         action="store_true",
         help="проверить существующую выгрузку без перезаписи",
     )
+    parser.add_argument(
+        "--rebuild-package",
+        action="store_true",
+        help="явно обновить review-копии, единую выгрузку и CHECKSUMS.sha256",
+    )
     args = parser.parse_args()
+    if args.check and args.rebuild_package:
+        parser.error("--check и --rebuild-package нельзя применять вместе")
     try:
         expected = build_bytes()
         if args.check:
             return check_output(expected)
+        if args.rebuild_package:
+            copied, checksummed = rebuild_package(expected)
+            print(
+                "PASS review-пакет пересобран: "
+                f"copies={copied} checksummed={checksummed} "
+                f"export_sha256={bytes_sha256(expected)}"
+            )
+            return 0
         OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT_PATH.write_bytes(expected)
         print(

@@ -5,5 +5,7 @@ source/** -text
 # Авторские входные записки с SHA256 также сохраняются побайтово.
 **/SOURCE_ORIGINAL.txt binary
 work/v14_rebuild/neural_analogy_2026-09-19/AUTHOR_MESSAGE.txt binary
+# Архивы STATE сохраняют прежний handoff побайтно, включая переводы строк.
+work/state_history/** binary
 *.tsv -text
 *.jsonl -text
