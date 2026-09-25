@@ -1,0 +1,69 @@
+{
+  "scope": "assistant-proposed outcome projection; AND keeps an entire tree, OR takes set union; original trees retained",
+  "given_longer_is_expand_of_shorter": true,
+  "trees_differ": true,
+  "both_read_as_three_author_outcomes": true,
+  "outcome_projection_is_not_injective": true,
+  "roundtrip_also_works_on_B": true,
+  "B_expansion_also_preserves_its_outcomes": true,
+  "arbitrary_formula_need_not_have_three_outcomes": true,
+  "active_M7_differs_from_given_expansion": true,
+  "active_M7_outcomes_count_under_this_candidate_only": 4,
+  "finite_samples": [
+    {
+      "expansions": 0,
+      "atomic_occurrences": 4,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 1,
+      "atomic_occurrences": 6,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 2,
+      "atomic_occurrences": 8,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 3,
+      "atomic_occurrences": 10,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 4,
+      "atomic_occurrences": 12,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 5,
+      "atomic_occurrences": 14,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 6,
+      "atomic_occurrences": 16,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 7,
+      "atomic_occurrences": 18,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 8,
+      "atomic_occurrences": 20,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    }
+  ],
+  "status_effect": "none; no FTS level assignment or correspondence with Close is established"
+}
