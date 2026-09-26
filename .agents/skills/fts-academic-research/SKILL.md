@@ -54,4 +54,4 @@ Read [records-and-gates.md](references/records-and-gates.md) for schemas and che
 6. Run `python -X utf8 .agents/skills/fts-academic-research/scripts/validate_e5_workspace.py work/v14_rebuild/e5_literature_review`.
 7. Synthesize only adjudicated inclusions, include negative and limiting evidence, and state a bounded novelty boundary rather than world novelty.
 
-Return findings in project form: `Найдено → зависимости → вывод → что не закрыто.`
+Return findings in Russian in the project form: `Найдено → зависимости → вывод → что не закрыто.`

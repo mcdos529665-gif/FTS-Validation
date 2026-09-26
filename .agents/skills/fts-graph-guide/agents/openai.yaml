@@ -1,4 +1,4 @@
 interface:
-  display_name: "Навигатор графа ФТС"
-  short_description: "Русские ответы по claims, evidence и уровням"
-  default_prompt: "Используй $fts-graph-guide, чтобы по-русски объяснить основания, свидетельства, ограничения и статус вопроса ФТС."
+  display_name: "FTS Graph Guide"
+  short_description: "Explain FTS claims, evidence, and levels in Russian"
+  default_prompt: "Use $fts-graph-guide to explain the grounds, evidence, limits, and status of an FTS question in Russian."

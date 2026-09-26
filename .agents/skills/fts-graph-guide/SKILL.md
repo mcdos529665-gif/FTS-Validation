@@ -1,58 +1,38 @@
 ---
 name: fts-graph-guide
-description: Русскоязычная навигация по графу ФТС для вопросов об утверждениях, уровнях, основаниях, evidence, ограничениях, статусах и открытых проблемах. Использовать, когда пользователь хочет понять структуру теории обычными словами и не должен знать команды или ID графа.
+description: Navigate the FTS claim graph in Russian for questions about claims, levels, grounds, evidence, limits, statuses, and open problems. Use when the user wants to understand the theory in ordinary language without knowing graph commands or IDs.
 ---
 
-# Навигатор графа ФТС
+# FTS Graph Guide
 
-Отвечай по-русски и скрывай командную механику, если пользователь сам её не
-запрашивает. Пользователь может говорить обычными фразами: «где находится этот
-вопрос», «что подтверждает У7», «почему статус кандидатный», «что ограничивает
-нейросетевой claim», «что добавил отчёт».
+Answer in Russian and hide command details unless the user asks for them. The user may ask in ordinary language where a question sits in the theory, what supports U7, why a status is candidate, what limits a neural claim, or what a report contributed.
 
-## Рабочий контур
+## Workflow
 
-1. Работай из корня проекта. Авторитетный машинный слой —
-   `work/v14_rebuild/claim_graph/claim_graph.json`; Graphify служит обзорной
-   навигацией.
-2. Для актуального ответа сначала выполни
-   `python -X utf8 tools/claim_graph.py validate`. Если граф устарел, сообщи об
-   этом. Пересобирай через `build` только при просьбе обновить/починить граф.
-3. Если ID неизвестен, найди кандидатов:
-   `python -X utf8 tools/claim_graph.py search "<слова пользователя>" --limit 8`.
-   Выбирай узел по смыслу, слою и source; при реальной неоднозначности покажи
-   несколько кратких вариантов и задай один вопрос.
-4. Для выбранного узла используй `query <ID> --depth 1`. Для проверки конкретной
-   цепочки используй `path <FROM> <TO>`.
-5. Открывай точный `source_file`/`source_location`, когда нужен полный смысл,
-   формулировка области или проверка вывода. Граф маршрутизирует к источнику, а
-   не заменяет его.
+1. Work from the project root. The authoritative machine layer is `work/v14_rebuild/claim_graph/claim_graph.json`; Graphify is a navigation view.
+2. For a current answer, first run `python -X utf8 tools/claim_graph.py validate`. If the graph is stale, say so. Run `build` only when asked to update or repair the graph.
+3. If the ID is unknown, find candidates with `python -X utf8 tools/claim_graph.py search "<user terms>" --limit 8`. Select by meaning, layer, and source. For genuine ambiguity, show a few concise options and ask one question.
+4. Use `query <ID> --depth 1` for the selected node. Use `path <FROM> <TO>` to check a specific chain.
+5. Open the exact `source_file` and `source_location` when the full meaning, scope, or inference needs checking. The graph routes to the source; it does not replace it.
 
-## Как читать результат
+## Interpret the result
 
-- `grounds_claim` — заявленное основание из реестра;
-- `verified_by` — конкретная проверка, обычно только её формальный предикат;
-- `supported_by` — ограниченная поддержка в записанной области;
-- `limited_by` — свидетельство или finding, ограничивающее силу claim;
-- `has_status*` — адресуемая статусная оценка с provenance;
-- `EXTRACTED` — связь буквально записана в источнике;
-- `CURATED`/`INFERRED` — связь сопоставлена исследовательским слоем.
+- `grounds_claim`: a ground stated in the register;
+- `verified_by`: a specific check, usually limited to its formal predicate;
+- `supported_by`: limited support within the recorded scope;
+- `limited_by`: evidence or a finding that limits claim strength;
+- `has_status*`: an addressable status assessment with provenance;
+- `EXTRACTED`: the relation is stated literally in the source;
+- `CURATED`/`INFERRED`: the research layer established the mapping.
 
-Метка происхождения ребра не равна истинности. Различай `St_math`, `St_FTS`,
-авторское принятие и эмпирическую поддержку. PASS C-NN не доказывает уровневое
-чтение. Внешнее evidence не повышает `St_FTS` автоматически. Если ссылка не
-разрешена, говори `нет в артефактах`.
+An edge provenance label does not establish truth. Keep `St_math`, `St_FTS`, author acceptance, and empirical support distinct. A passing C-NN check does not prove a level interpretation. External evidence does not automatically raise `St_FTS`. If a reference cannot be resolved, say exactly `нет в артефактах`.
 
-## Ответ пользователю
+## User-facing answer
 
-Дай понятный рассказ в порядке:
+Give a clear Russian account in this order:
 
 `Найдено → основания → свидетельства → ограничения → статус → что не закрыто`.
 
-Не выгружай все технические поля. Показывай только связи, влияющие на вопрос,
-и добавляй кликабельные ссылки на исходные файлы. При нескольких conflicting
-evidence покажи обе стороны и их области. Не называй `contains`, тематическую
-близость или общий документ цепочкой обоснования.
+Show only links that matter to the question and include clickable links to source files. If evidence conflicts, present both sides and their scopes. Do not treat `contains`, topical proximity, or a shared document as a chain of justification.
 
-Для просьбы «обнови граф» выполни `build`, затем `validate --idempotent` и кратко
-сообщи изменения покрытия. `source/`, авторские решения и статусы не редактируй.
+When asked to update the graph, run `build`, then `validate --idempotent`, and briefly report changes in coverage. Do not edit `source/`, author decisions, or statuses.

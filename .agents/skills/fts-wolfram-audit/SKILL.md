@@ -1,62 +1,51 @@
 ---
 name: fts-wolfram-audit
-description: Независимо проверять точные математические утверждения ФТС через Wolfram Language, искать контрпримеры и сверять результаты с локальными C-NN/SymPy. Использовать, когда просят проверить C-NN, formal_math_fact, формулу, область, кванторы, ноль, полюс, периодичность, ветви или вырожденный случай, либо провести независимую CAS-сверку. Не использовать для литературного поиска, эмпирики, толкования смысла уровней или автоматического повышения статуса ФТС.
+description: Independently check exact FTS mathematical claims with Wolfram Language, search for counterexamples, and compare with local C-NN/SymPy checks. Use when explicitly asked to audit a C-NN, formal_math_fact, formula, domain, quantifiers, zero, pole, periodicity, branch, degenerate case, or independent CAS result. Do not use for literature search, empirical work, interpretation of level meanings, or automatic FTS status promotion.
 ---
 
 # FTS Wolfram Audit
 
-## Контракт
+## Contract
 
-Работать только с явно сформулированным математическим предикатом. Разводить:
+Work only from an explicitly stated mathematical predicate. Keep separate:
 
-- математическое утверждение;
-- его предполагаемое чтение в ФТС;
-- текущий `St_math`;
-- текущий `St_FTS`.
+- the mathematical claim;
+- its proposed FTS interpretation;
+- current `St_math`;
+- current `St_FTS`.
 
-Считать Wolfram внешним независимым CAS-свидетельством. Не считать его источником
-канона, семантики уровня или статусного повышения. Не менять `source/`.
+Treat Wolfram as independent external CAS evidence. It is not a source of canon, level semantics, or automatic status promotion. Do not edit `source/`.
 
-Навык запускать только явно. Советующий гейт в корневом `AGENTS.md` может предложить
-запуск, но не имеет права вызывать Wolfram без решения пользователя.
+Invoke this skill only explicitly. The advisory gate in the root `AGENTS.md` may suggest it but does not authorize a Wolfram call without the user's decision.
 
-## Разделить роли
+## Divide responsibilities
 
-Основному агенту оставить:
+The primary agent retains responsibility for:
 
-- извлечение claim из канона и аудиторских матриц;
-- формулировку области, кванторов, допущений и условия поражения;
-- сопоставление с C-NN;
-- интерпретацию результата и любое решение по `St_math`/`St_FTS`.
+- extracting the claim from canon and audit matrices;
+- stating the domain, quantifiers, assumptions, and defeat condition;
+- comparing the predicate with C-NN;
+- interpreting the result and deciding anything about `St_math` or `St_FTS`.
 
-Если доступен проектный агент `fts_wolfram_worker` и пакет задачи полон,
-делегировать ему только механический Wolfram-шаг. Дешёвому агенту разрешить:
+If the project agent `fts_wolfram_worker` is available and the task packet is complete, delegate only the mechanical Wolfram step. That worker may:
 
-- проверить полноту пакета;
-- собрать самодостаточный Wolfram Language-код по шаблонам ниже;
-- вызвать Wolfram и вернуть код, сырой результат и свидетеля.
+- check packet completeness;
+- assemble self-contained Wolfram Language code using the templates below;
+- call Wolfram and return the code, raw result, and witness.
 
-Не разрешать работнику восстанавливать недостающую область, толковать ФТС, назначать
-финальный вердикт, изменять файлы или повышать статус. Если работник недоступен или
-вернул ошибку, не маскировать это: основной агент фиксирует `inconclusive` либо явно
-решает, повторять ли вычисление текущей моделью.
+Do not let the worker supply a missing domain, interpret FTS, assign the final verdict, edit files, or promote status. If the worker is unavailable or reports an error, record `inconclusive` or make an explicit decision on whether the primary model should retry the computation.
 
-Основному агенту вести watchdog: одна попытка `wolframcontext`, один вызов evaluator
-и не более 60 секунд суммарного ожидания внешнего провайдера. После лимита остановить
-работника и записать `provider_timeout → inconclusive`; не делать скрытый повтор.
+The primary agent maintains a watchdog: one `wolframcontext` attempt, one evaluator call, and at most 60 seconds total waiting for the external provider. After the limit, stop the worker and record `provider_timeout → inconclusive`; do not retry silently.
 
-## Подготовить точную задачу
+## Prepare an exact task
 
-1. Выполнить обязательный стартовый ритуал из корневого `AGENTS.md`.
-2. Найти утверждение по `claim_id`, `C-NN`, `PA-*` или OQ в:
-   `CLAIM_MATRIX.tsv`, `PATTERN_ATLAS.tsv`, `PATTERN_OQ_MAP.tsv`, статье и
-   `verification.py`.
-3. Записать переменные, область, кванторы, допущения, предикат и условие поражения.
-4. Отдельно записать смысловую интерпретацию ФТС. Не включать её в CAS-предикат.
-5. Если область или соответствие термина не заданы артефактами, остановиться с
-   вердиктом `inconclusive`; не подставлять привычный математический смысл.
+1. Complete the mandatory startup procedure in the root `AGENTS.md`.
+2. Locate the claim by `claim_id`, `C-NN`, `PA-*`, or OQ in `CLAIM_MATRIX.tsv`, `PATTERN_ATLAS.tsv`, `PATTERN_OQ_MAP.tsv`, the paper, and `verification.py`.
+3. Record variables, domain, quantifiers, assumptions, predicate, and defeat condition.
+4. Record the FTS interpretation separately. Do not include it in the CAS predicate.
+5. If the domain or term mapping is absent from artifacts, stop with `inconclusive`; do not import a conventional mathematical meaning.
 
-Перед делегированием собрать пакет без свободного пересказа:
+Before delegation, assemble a packet without free-form paraphrase:
 
 ```text
 claim_id:
@@ -69,120 +58,105 @@ predicate:
 defeat_condition:
 ```
 
-Отсутствие любого смыслового поля считать `incomplete_packet`.
+Missing any semantic field means `incomplete_packet`.
 
-## Вызвать Wolfram безопасно
+## Call Wolfram safely
 
-1. Проверить наличие инструментов приложения Wolfram.
-2. При первом вызове или смене темы вызвать `wolframcontext` с подробным контекстом.
-   Использовать его только для навигации: семантическая выдача может быть нерелевантна
-   и не является доказательством. Не повторять зависший или ошибочный context-вызов.
-3. Основную проверку выполнять через `wolframlanguageevaluator` явным Wolfram
-   Language-кодом. Делать каждый вызов самодостаточным: kernel stateless.
-4. Использовать `wolframalpha` только как вспомогательную sanity-check линию, не
-   как основание формального вердикта.
-5. Использовать точные числа (`1/3`, `Pi`, `Sqrt[2]`), а не машинные десятичные.
+1. Check whether Wolfram app tools are available.
+2. On the first call or a topic change, call `wolframcontext` with detailed context. Use it only for navigation: semantic retrieval may be irrelevant and is not proof. Do not repeat a hung or failed context call.
+3. Perform the main check through `wolframlanguageevaluator` with explicit Wolfram Language code. Make every call self-contained because the kernel is stateless.
+4. Use `wolframalpha` only as a supplementary sanity check, never as the basis of a formal verdict.
+5. Use exact values (`1/3`, `Pi`, `Sqrt[2]`) instead of machine decimals.
 
-Если Wolfram недоступен или вернул provider error, timeout либо невычисленное
-выражение, поставить `inconclusive`. Не заменять независимую проверку локальным CAS
-и не выдавать сбой провайдера за отрицательный результат.
+If Wolfram is unavailable or returns a provider error, timeout, or unevaluated expression, record `inconclusive`. Do not substitute a local CAS for the independent check or misreport provider failure as a negative result.
 
-## Провести четыре проверки
+## Perform four checks
 
-### 1. Непустота допущений
+### 1. Satisfiable assumptions
 
-Проверить, что область задачи не пуста:
+Check that the task domain is nonempty:
 
 ```wl
 Reduce[assumptions, vars, domain]
 Resolve[Exists[vars, assumptions], domain]
 ```
 
-Если допущения несовместны, поставить `vacuous_assumptions`, а не PASS.
+If assumptions are inconsistent, record `vacuous_assumptions`, not PASS.
 
-### 2. Универсальная формулировка
+### 2. Universal formulation
 
-Проверить ровно заявленные кванторы:
+Check exactly the stated quantifiers:
 
 ```wl
 Resolve[ForAll[vars, Implies[assumptions, predicate]], domain]
 ```
 
-Не заменять универсальное утверждение конечной выборкой.
+Do not replace a universal claim with a finite sample.
 
-### 3. Контрпримерная линия
+### 3. Counterexample search
 
-Искать нарушение независимо от доказательной линии:
+Search for a violation independently of the proof path:
 
 ```wl
 Reduce[assumptions && Not[predicate], vars, domain]
 FindInstance[assumptions && Not[predicate], vars, domain]
 ```
 
-Отсутствие результата `FindInstance` не считать доказательством. Явный свидетель
-проверить обратной подстановкой в исходный предикат.
+Failure of `FindInstance` to return an instance is not a proof. Check an explicit witness by substitution into the original predicate.
 
-### 4. Границы области
+### 4. Domain boundaries
 
-Отдельно проверить применимые случаи:
+Check applicable cases separately:
 
-- нули знаменателей и полюса;
-- ноль, единицу и точки склейки;
-- периодичность и выбор фундаментального интервала;
-- главные ветви `Sqrt`, `Log`, дробных степеней и обратных функций;
-- вырожденные параметры и пустые множества решений;
-- вещественную, комплексную, целую и конечную области без молчаливого переноса;
-- кольца с делителями нуля или характеристикой 2, если claim выходит за поле.
+- denominator zeros and poles;
+- zero, one, and junction points;
+- periodicity and choice of fundamental interval;
+- principal branches of `Sqrt`, `Log`, fractional powers, and inverse functions;
+- degenerate parameters and empty solution sets;
+- real, complex, integer, and finite domains without silently transferring results;
+- rings with zero divisors or characteristic 2 if the claim extends beyond a field.
 
-Запретить `PowerExpand` и `GenerateConditions -> False`. Не снимать условия,
-созданные `Reduce`, `FunctionDomain`, `Assuming` или `FullSimplify`.
+Do not use `PowerExpand` or `GenerateConditions -> False`. Do not strip conditions produced by `Reduce`, `FunctionDomain`, `Assuming`, or `FullSimplify`.
 
-## Сверить с проектом
+## Compare with the project
 
-1. Сопоставить проверенный предикат с текстом claim и текущим C-NN построчно.
-2. Если C-NN существует, запускать полный `verification.py`, а не имитировать
-   одиночный тест.
-3. При согласии Wolfram и локального сьюта поставить `confirmed_math` только для
-   точного предиката и области.
-4. При контрпримере поставить `refuted`.
-5. При расхождении CAS поставить `cas_disagreement` и оставить ручной разбор.
-6. Не переносить ни один из этих вердиктов автоматически на `St_FTS`.
+1. Compare the checked predicate line by line with the claim text and current C-NN.
+2. If a C-NN exists, run the complete `verification.py` suite rather than imitating a single check.
+3. When Wolfram and the local suite agree, assign `confirmed_math` only to the exact predicate and domain.
+4. For a counterexample, assign `refuted`.
+5. For disagreement between CAS results, assign `cas_disagreement` and leave the issue for manual analysis.
+6. Do not transfer any of these verdicts automatically to `St_FTS`.
 
-Финальный вердикт назначает только основной агент:
+Only the primary agent assigns the final verdict:
 
-- `confirmed_math` — точный предикат подтверждён в заявленной области;
-- `refuted` — найден и перепроверен контрпример;
-- `inconclusive` — вычисление или постановка не дают строгого ответа;
-- `vacuous_assumptions` — допущения несовместны или область пуста;
-- `cas_disagreement` — Wolfram и локальная проверка расходятся.
+- `confirmed_math`: the exact predicate is confirmed in the stated domain;
+- `refuted`: a counterexample was found and checked again;
+- `inconclusive`: the computation or formulation gives no rigorous answer;
+- `vacuous_assumptions`: assumptions are inconsistent or the domain is empty;
+- `cas_disagreement`: Wolfram and the local check disagree.
 
-Любой новый или статусно значимый `confirmed_math`, а также все остальные исходы
-обязательно разбирать основной моделью. Рабочий агент не является рецензентом.
+The primary model must analyze every new or status-significant `confirmed_math` and every other outcome. The worker is not a reviewer.
 
-## Записать результат
+## Record the result
 
-Выдать результат в формате проекта:
+Answer in Russian using the project form:
 
 `Найдено → зависимости → вывод → что не закрыто.`
 
-Всегда включить:
+Always include:
 
-- `WF-NNN`, дату и связанный `claim_id`/`C-NN`/`PA-*`/OQ;
-- точную формулу, область, кванторы и допущения;
-- полный исполнявшийся Wolfram Language-код;
-- сырой результат и, при наличии, контрпример;
-- сверку с локальным C-NN;
-- один допустимый вердикт, назначенный основной моделью;
-- влияние только на `St_math`;
-- явный список того, что результат не устанавливает в ФТС.
+- `WF-NNN`, date, and related `claim_id`/`C-NN`/`PA-*`/OQ;
+- exact formula, domain, quantifiers, and assumptions;
+- complete Wolfram Language code that was executed;
+- raw result and counterexample when present;
+- comparison with local C-NN;
+- one permitted verdict assigned by the primary model;
+- impact on `St_math` only;
+- an explicit list of what the result does not establish in FTS.
 
-При запросе только на анализ вернуть запись в ответе. При явном запросе сохранить
-или интегрировать результат — добавить датированную запись в
-`work/v14_rebuild/audit/WOLFRAM_CHECKS.md`, не переписывая историю. Новый тест
-сначала держать отдельно от основного C-сьюта. Переносить его в `verification.py`
-только отдельным решением с точной трассой claim → predicate → check.
+For an analysis-only request, return the record in the answer. When explicitly asked to save or integrate the result, append a dated record to `work/v14_rebuild/audit/WOLFRAM_CHECKS.md` without rewriting history. Keep a new test separate from the main C suite initially. Move it into `verification.py` only by a separate decision with an exact claim → predicate → check trace.
 
-Если проектные файлы изменены, проверить:
+If project files changed, check:
 
 ```text
 python -X utf8 tools/verify.py
@@ -190,4 +164,4 @@ python -X utf8 work/v14_rebuild/verification.py
 python -X utf8 work/v14_rebuild/audit/run_audit.py traceability
 ```
 
-Убедиться, что diff в `source/` пуст.
+Ensure the diff under `source/` is empty.

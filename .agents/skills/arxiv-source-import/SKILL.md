@@ -3,43 +3,31 @@ name: arxiv-source-import
 description: Download a requested arXiv paper into the FTS project with its immutable TeX source package, official versioned PDF, and a source-backed Markdown workspace. Use when the user asks to locally obtain or archive a specific arXiv article; do not use for literature discovery, citation analysis, or PDF-to-Markdown conversion.
 ---
 
-# Импорт первоисточника arXiv
+# Import an arXiv Primary Source
 
-Сохраняй статью как воспроизводимый локальный пакет, а не как распознанный PDF.
-Результат для каждой статьи имеет вид:
+Preserve each paper as a reproducible local package instead of treating PDF extraction as the source. Each paper produces:
 
 ```text
-<каталог-статей>/<arxiv-id>/
-├── source/                 # точные файлы, выданные arXiv; не редактировать
-├── original.pdf            # PDF той же версии
-├── article.md              # рабочая Markdown-версия или её явный source-backed scaffold
-├── provenance.json          # версия, URL, время и SHA-256 загрузок
-└── source_manifest.sha256   # контрольная сумма каждого файла source/
+<papers-directory>/<arxiv-id>/
+├── source/                 # exact files supplied by arXiv; do not edit
+├── original.pdf            # PDF of the same version
+├── article.md              # working Markdown version or explicit source-backed scaffold
+├── provenance.json         # version, URLs, download times, and SHA-256 hashes
+└── source_manifest.sha256   # checksum of each file in source/
 ```
 
-Корневой `source/` проекта — канон ФТС v13 и не является местом для статей.
-Внешние источники остаются `[внешнее]`: импорт не создаёт связи с карточками и не
-меняет статусы ФТС.
+The project's root `source/` is the FTS canon, not a location for papers. External sources remain `[внешнее]`: importing a paper creates no link to canon cards and changes no FTS status.
 
-## Версия и границы запроса
+## Version and request boundaries
 
-- По умолчанию требуй идентификатор с версией: `2301.12345v2` (принимаются также
-  URL вида `https://arxiv.org/abs/2301.12345v2`). Это связывает исходники и PDF с
-  одной фиксированной ревизией.
-- Если пользователь осознанно просит актуальную версию, разрешён
-  `--allow-latest`: скрипт сначала фиксирует найденную версию в `provenance.json` и
-  в ответе. Не выдавай неверсированный идентификатор за воспроизводимую версию.
-- По умолчанию каталог статей —
-  `work/v14_rebuild/e5_literature_review/arxiv/`. Для другого расположения передай
-  `--dest`; не создавай пакет поверх уже существующей статьи.
-- Не подменяй этот навык литературным поиском, оценкой достоверности статьи или
-  OCR. Для поиска и внешних оснований действует отдельный `$fts-academic-research`.
+- Require a versioned identifier by default, such as `2301.12345v2`. A versioned URL such as `https://arxiv.org/abs/2301.12345v2` is also accepted. This binds the source package and PDF to one fixed revision.
+- If the user explicitly requests the latest version, `--allow-latest` is permitted. The script records the resolved version in `provenance.json`; report that version to the user. Do not describe an unversioned identifier as a reproducible version.
+- The default paper directory is `work/v14_rebuild/e5_literature_review/arxiv/`. Pass `--dest` for another location. Do not overwrite an existing paper package.
+- Do not use this skill for literature search, assessing the paper's credibility, or OCR. Use the separate `$fts-academic-research` workflow for discovery and external grounds.
 
-## Импорт и проверка
+## Import and verify
 
-Запускай скрипт из корня проекта. Он скачивает только официальные URL arXiv,
-безопасно извлекает архив в staging-каталог, проверяет PDF и переносит готовый
-пакет одним переименованием. Архив с опасными путями или ссылками не извлекается.
+Run the script from the project root. It downloads only official arXiv URLs, safely extracts the archive into a staging directory, checks the PDF, and moves the finished package into place with one rename. Archives containing unsafe paths or links are rejected.
 
 ```text
 python -X utf8 .agents/skills/arxiv-source-import/scripts/fetch_arxiv.py import 2301.12345v2
@@ -48,18 +36,12 @@ python -X utf8 .agents/skills/arxiv-source-import/scripts/fetch_arxiv.py import 
 python -X utf8 .agents/skills/arxiv-source-import/scripts/fetch_arxiv.py verify work/v14_rebuild/e5_literature_review/arxiv/2301.12345v2
 ```
 
-После успешного импорта выполни `verify` и проверь `git diff --check`. Если пакет
-должен войти в историю проекта, добавь все его файлы как единый снимок; `source/`
-внутри пакета больше не редактируй.
+After a successful import, run `verify` and check `git diff --check`. If the package belongs in project history, stage all its files as one snapshot. Do not edit the nested `source/` afterward.
 
 ## Markdown
 
-Скрипт создаёт `article.md` со статусом `pending`, когда пользователь не просил
-отдельно конвертировать LaTeX. Это намеренно: он не притворяется статьёй и не
-получается из PDF. При явном запросе на Markdown создавай или исправляй его только
-по файлам `source/`, сохраняя ссылку на исходный `.tex`; `original.pdf` служит лишь
-визуальной сверкой формул, таблиц, рисунков и структуры страниц.
+Unless the user separately requests LaTeX conversion, the script creates `article.md` with `pending` status. This file is intentionally a scaffold: it does not pretend to be the paper and is not derived from PDF extraction. When Markdown is explicitly requested, create or correct it using only the files in the nested `source/`, keeping a reference to the originating `.tex`. Use `original.pdf` only to visually check formulas, tables, figures, and page structure.
 
-При любом расхождении приоритет такой: `source/` (LaTeX) → `original.pdf` для
-визуальной проверки → исправление `article.md` по исходникам. Никогда не
-переписывай LaTeX по Markdown.
+For discrepancies, follow this order: nested `source/` (LaTeX) → `original.pdf` for visual checking → correct `article.md` against the source. Never rewrite LaTeX based on Markdown.
+
+Report the result in Russian.
