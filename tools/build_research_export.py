@@ -46,6 +46,7 @@ PACKAGE_COPIES = (
 PROJECT_INSTRUCTIONS = Path("PROJECT_INSTRUCTIONS.md")
 STATE = Path("work/STATE.md")
 NOTATION = Path("work/notation.md")
+NOTATION_EXTENDED = Path("work/notation_extended_2026-09-26.md")
 DECISIONS = Path("work/DECISIONS.md")
 OPEN_QUESTIONS = Path("work/OPEN_QUESTIONS.md")
 EXTERNAL_CONFLICTS = Path("work/EXTERNAL_CONFLICTS.md")
@@ -141,6 +142,7 @@ INPUT_PATHS = (
     PROJECT_INSTRUCTIONS,
     STATE,
     NOTATION,
+    NOTATION_EXTENDED,
     DECISIONS,
     OPEN_QUESTIONS,
     EXTERNAL_CONFLICTS,
@@ -521,6 +523,7 @@ def render_export() -> str:
         + "\n\n".join(
             [
                 markdown_source("4.1. Словарь нотации", NOTATION),
+                markdown_source("4.1а. Развёрнутые рабочие пояснения", NOTATION_EXTENDED),
                 markdown_source("4.2. Регистровая карта", REGISTER_MAP),
                 markdown_source("4.3. Патч-таблица статусов", STATUS_PATCH),
             ]
