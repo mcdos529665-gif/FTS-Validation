@@ -9,6 +9,8 @@ Answer in Russian and hide command details unless the user asks for them. The us
 
 ## Workflow
 
+For a substantial batch of independent graph lookups, use the project `fts-routine` agent (`gpt-6-luna`, low reasoning) for its permitted `tools/query.py` commands, or `skill_routine` (`gpt-6-luna`, medium reasoning) for read-only claim-graph retrieval. Supply exact queries and requested source fields. Delegate only when the parent can perform useful independent work; keep a single lookup local. The parent selects ambiguous nodes, interprets grounds and limitations, and writes the final answer. Do not pass graph rebuilding to a read-only worker.
+
 1. Work from the project root. The authoritative machine layer is `work/v14_rebuild/claim_graph/claim_graph.json`; Graphify is a navigation view.
 2. For a current answer, first run `python -X utf8 tools/claim_graph.py validate`. If the graph is stale, say so. Run `build` only when asked to update or repair the graph.
 3. If the ID is unknown, find candidates with `python -X utf8 tools/claim_graph.py search "<user terms>" --limit 8`. Select by meaning, layer, and source. For genuine ambiguity, show a few concise options and ask one question.

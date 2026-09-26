@@ -27,6 +27,8 @@ The project's root `source/` is the FTS canon, not a location for papers. Extern
 
 ## Import and verify
 
+Use the existing import and verification script directly. A routine download does not need a separate model call. If an explicitly requested source-to-Markdown conversion contains substantial independent sections, a GPT-6 Luna worker may draft a bounded section from supplied TeX and rules; the parent checks formulas, source references, and completeness before writing it. Do not delegate archive mutations to a read-only worker.
+
 Run the script from the project root. It downloads only official arXiv URLs, safely extracts the archive into a staging directory, checks the PDF, and moves the finished package into place with one rename. Archives containing unsafe paths or links are rejected.
 
 ```text
