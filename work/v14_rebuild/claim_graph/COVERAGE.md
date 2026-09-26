@@ -14,15 +14,15 @@
 - `audit_claim_groups`: 25
 - `audit_findings`: 20
 - `patterns`: 31
-- `open_question_anchors`: 70
-- `mapped_open_questions`: 59
+- `open_question_anchors`: 71
+- `mapped_open_questions`: 60
 - `verification_nodes`: 62
 - `external_evidence_nodes`: 21
 - `internal_evidence_nodes`: 7
 - `research_claims`: 10
 - `curated_research_bridges`: 14
-- `nodes`: 750
-- `edges`: 1544
+- `nodes`: 751
+- `edges`: 1550
 - `unresolved_references`: 34
 
 ## Границы

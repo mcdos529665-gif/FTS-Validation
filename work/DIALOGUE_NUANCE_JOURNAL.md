@@ -610,7 +610,7 @@
 <a id="dn-0028"></a>
 ## DN-0028 · Краткое и развёрнутое чтение формы знания
 - recorded_at: 2026-09-26
-- state: pending
+- state: integrated
 - topic: У7; цикл, свёртка, развёртка, скорость и фундаментальность
 - author_claim:
   > если я правильно понимаю, У7 ((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)) уже может считаться 7 уровнем, потому как уже может работать с циклами.
@@ -622,11 +622,14 @@
 - open_question: Какая операция и какой доступ делают двустороннее чтение именно работой У7; как проверяется различение скорости и основания.
 - target_hints: work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md; work/OPEN_QUESTIONS.md#oq-u6-u7-compositional-semantics
 - supersedes: none
+- integrated_at: 2026-09-26
+- targets: work/v14_rebuild/m_register_grammar_2026-09-25/CYCLE_CLARIFICATION.md; work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md; work/OPEN_QUESTIONS.md#oq-u6-u7-compositional-semantics
+- remaining: операция и свидетель её первой доступности на У7; критерий отделения скорости от основания
 
 <a id="dn-0029"></a>
 ## DN-0029 · Исправленная сложная форма и особое равенство уровня
 - recorded_at: 2026-09-26
-- state: pending
+- state: integrated
 - topic: Сложный М-регистр У5–У7; включение предыдущих форм; равенство уровня
 - author_claim:
   > Если писать их так, то они наследуют свойство вероятности по включению предыдущих уровней напрямую - раз. два - в такой записи на 7У появляется возможность прописать все типы равенств на одной стороне, то есть 7 вместо  ∧/∨. то есть то что выглядит как ∨ и ∧ на одном уровне, на другом может выглядеть как "равенство".
@@ -639,11 +642,14 @@
 - open_question: Критерий особого равенства, область его действия, способ проекции сложной формы в минимум и первый доступ к операции.
 - target_hints: work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md; work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md
 - supersedes: none
+- integrated_at: 2026-09-26
+- targets: work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md; work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md; work/OPEN_QUESTIONS.md#oq-u6-u7-compositional-semantics
+- remaining: закон особого равенства, семантическое наследование и связь с активным минимумом М_07
 
 <a id="dn-0030"></a>
 ## DN-0030 · Уровневое равенство отражается в неравенстве
 - recorded_at: 2026-09-26
-- state: pending
+- state: integrated
 - topic: У1–У7; виды равенства и необходимое отражение
 - author_claim:
   > разве у аксиомы, кода, информации, вероятности, выбора, и статистики не свой вид равенства?
@@ -655,11 +661,14 @@
 - open_question: Как задаётся отражение каждого уровневого равенства и их совместная работа в композиции У7.
 - target_hints: work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md; work/notation.md
 - supersedes: none
+- integrated_at: 2026-09-26
+- targets: work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md#6-поправка-равенство-уровня-и-способы-соотнесения-у1у6; work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md#7-уточнение-автора-неравенство-как-вид-равенства; work/notation.md#уровневое-равенство-рабочее-авторское-уточнение-2026-09-26
+- remaining: общий закон отражения для каждого уровня не определён
 
 <a id="dn-0031"></a>
 ## DN-0031 · Отсутствие различения и кодовое ведение
 - recorded_at: 2026-09-26
-- state: pending
+- state: integrated
 - topic: У2→У3; отсутствие различения как равенство; кодовое соответствие
 - author_claim:
   > отсутствие различение также можно рассматривать как вид равенства. в коде нет различия между а=б и а ведет к б, верно? ведь в противном случае понадобилось неравенство с информации.
@@ -669,3 +678,6 @@
 - open_question: Различает ли собственный аппарат У2 кодовое соответствие и направленное «ведёт к»; какой именно новый свидетель даёт У3 для различения отношений.
 - target_hints: work/notation.md; work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md; work/OPEN_QUESTIONS.md
 - supersedes: none
+- integrated_at: 2026-09-26
+- targets: work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md#8-отсутствие-различения-в-коде-и-два-смысла-ведёт-к; work/notation.md#уровневое-равенство-рабочее-авторское-уточнение-2026-09-26; work/OPEN_QUESTIONS.md#oq-code-link-vs-leads-to
+- remaining: нет свидетеля различения самих отношений на У3 и закона причинного «ведёт к»
