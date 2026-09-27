@@ -9,6 +9,8 @@ work/v14_rebuild/neural_analogy_2026-09-19/AUTHOR_MESSAGE.txt binary
 work/state_history/** binary
 # Снимки нотации сохраняют прежний текст и переводы строк побайтово.
 work/notation_history/**/notation*.md binary
+# Оригинальные снимки инструкций сохраняются побайтово.
+work/instruction_history/**/*.before.md binary
 # Raw-входы интеграции Report-10 хранятся побайтно по указанному SHA256.
 work/deep-research-report* binary
 *.tsv -text

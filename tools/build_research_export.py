@@ -43,6 +43,7 @@ PACKAGE_COPIES = (
     (Path("work/v14_rebuild/audit/SEARCH_LOG.md"), Path("audit/SEARCH_LOG.md")),
 )
 
+AGENT_RULES = Path("AGENTS.md")
 PROJECT_INSTRUCTIONS = Path("PROJECT_INSTRUCTIONS.md")
 STATE = Path("work/STATE.md")
 NOTATION = Path("work/notation.md")
@@ -143,6 +144,7 @@ CANON_TRIPLES = Path("source/fts_triples.tsv")
 
 INPUT_PATHS = (
     Path("tools/build_research_export.py"),
+    AGENT_RULES,
     PROJECT_INSTRUCTIONS,
     STATE,
     NOTATION,
@@ -490,7 +492,7 @@ def render_export() -> str:
 ## 1. Паспорт выгрузки и правила чтения
 
 - Формат сборки: `FTS_RESEARCH_EXPORT_V1`.
-- Канон: `v13_complex_branch_overlay`.
+- Версия активного канона: `source/MANIFEST.json`.
 - Source SHA256: `{source_sha}`.
 - Покрытие канона: **{cards} карточка / {triples} триплетов / {sheets} листа**.
 - Машинная верификация текущего v14: **{passed} PASS / {failed} FAIL из {total}**.
@@ -499,24 +501,20 @@ def render_export() -> str:
 - Полные сторонние тексты, OCR, изображения и переводческие досье исключены.
 - Сборка детерминирована: в ней нет текущего времени или локального git-хеша.
 
-### 1.1. Жёсткие эпистемические границы
+### 1.1. Правила чтения
 
-- `source/` — неизменяемый канон v13.
-- Принятые автором дополнения к этому снимку перечислены в `work/AUTHOR_CANON.md`;
-  AC-2026-09-21 включено отдельно с точным сообщением, унаследованными
-  материалами, карточками и манифестом; AC-2026-09-19 остаётся историей.
-- Материалы `work/` — развитие, проверки, решения и кандидаты.
-- Внешний результат всегда остаётся `[внешнее]`.
-- `candidate`/`overlay` не равны `canonical_strict`.
-- `¬A ≠ 0_A ≠ −A`; `phase ≠ −A`; `branch access ≠ Lift`;
-  `array ≠ tensor` без закона преобразования.
-- При отсутствии локального основания следует писать `нет в артефактах`.
+Краткий действующий контракт включён в §1.3, процедуры по задаче — в §1.4.
+Они собираются из рабочих инструкций без отдельного пересказа правил.
+Принятые поправки перечислены в `work/AUTHOR_CANON.md`; исторические
+версии сохраняют свою дату и не заменяют активные карточки.
 
 ### 1.2. Манифест входных артефактов
 
 {input_manifest_table()}
 
-{markdown_source("1.3. Полные проектные инструкции", PROJECT_INSTRUCTIONS)}
+{markdown_source("1.3. Краткий рабочий контракт", AGENT_RULES)}
+
+{markdown_source("1.4. Процедуры по задаче", PROJECT_INSTRUCTIONS)}
 """
 
     parts = [
