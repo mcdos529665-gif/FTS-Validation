@@ -46,7 +46,11 @@ PACKAGE_COPIES = (
 PROJECT_INSTRUCTIONS = Path("PROJECT_INSTRUCTIONS.md")
 STATE = Path("work/STATE.md")
 NOTATION = Path("work/notation.md")
-NOTATION_EXTENDED = Path("work/notation_extended_2026-09-26.md")
+DOCUMENT_MAP = Path("work/DOCUMENT_MAP.md")
+M_GRAMMAR_ROOT = Path("work/v14_rebuild/m_register_grammar_2026-09-25")
+EQUALITY_PROPOSAL = M_GRAMMAR_ROOT / "PROPOSAL_2026-09-26.md"
+EQUALITY_REVIEW = M_GRAMMAR_ROOT / "EQUALITY_REVIEW_2026-09-26.md"
+BIDIRECTIONAL_READING = M_GRAMMAR_ROOT / "BIDIRECTIONAL_READING.md"
 DECISIONS = Path("work/DECISIONS.md")
 OPEN_QUESTIONS = Path("work/OPEN_QUESTIONS.md")
 EXTERNAL_CONFLICTS = Path("work/EXTERNAL_CONFLICTS.md")
@@ -142,7 +146,10 @@ INPUT_PATHS = (
     PROJECT_INSTRUCTIONS,
     STATE,
     NOTATION,
-    NOTATION_EXTENDED,
+    DOCUMENT_MAP,
+    EQUALITY_PROPOSAL,
+    EQUALITY_REVIEW,
+    BIDIRECTIONAL_READING,
     DECISIONS,
     OPEN_QUESTIONS,
     EXTERNAL_CONFLICTS,
@@ -523,9 +530,12 @@ def render_export() -> str:
         + "\n\n".join(
             [
                 markdown_source("4.1. Словарь нотации", NOTATION),
-                markdown_source("4.1а. Развёрнутые рабочие пояснения", NOTATION_EXTENDED),
+                markdown_source("4.1а. Карта документов", DOCUMENT_MAP),
                 markdown_source("4.2. Регистровая карта", REGISTER_MAP),
                 markdown_source("4.3. Патч-таблица статусов", STATUS_PATCH),
+                markdown_source("4.4. Предложение сложных форм и равенства", EQUALITY_PROPOSAL),
+                markdown_source("4.5. Исследование уровневого равенства", EQUALITY_REVIEW),
+                markdown_source("4.6. Краткое и развёрнутое чтение", BIDIRECTIONAL_READING),
             ]
         ),
         "## 5. Критика и машинная верификация\n\n"

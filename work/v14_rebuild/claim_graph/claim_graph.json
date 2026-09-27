@@ -47,11 +47,11 @@
     },
     {
       "path": "work/notation.md",
-      "sha256": "7684001c1672e661252f541661c5185471dd79c394e7a4ed7d41d149535d5d45"
+      "sha256": "dbf941d3f1454613b1115675d9ed9214ab8c4da22fc2256594cc3c84b14f0377"
     },
     {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
-      "sha256": "c2ce4cf74d8f6cc09f72b9109da91aaa7fb7c0b7e4802cb7c53b763a86d04de7"
+      "sha256": "bbf75c92a17da869fa309b9fb5001bd5eab44b7505b2e5fd03fd21f9ca1d305c"
     },
     {
       "path": "work/v14_rebuild/audit/BASELINE.md",
@@ -103,7 +103,7 @@
     },
     {
       "path": "work/v14_rebuild/dialogue_integration_2026-09-22.md",
-      "sha256": "2365684bf7368e22face78f74d15a7cb43fe2dea19293dd5fa07064b170e1da8"
+      "sha256": "3eb31f0e4e7c3ca118e91dafefb8e0bb14ab1ed95b4eeb43b14403ca8479f8c3"
     },
     {
       "path": "work/v14_rebuild/e5_literature_review/EVIDENCE_MATRIX.tsv",
