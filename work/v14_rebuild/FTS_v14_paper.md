@@ -1086,7 +1086,7 @@ U7_author := (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠
 
 Этот раздел продолжает рабочую, а не каноническую линию §7.4–§7.5. Точные
 авторские формулировки сохранены в
-[`DIALOGUE_NUANCE_JOURNAL.md`](../DIALOGUE_NUANCE_JOURNAL.md#dn-0017), а
+[`DIALOGUE_NUANCE_SOURCES.md`](../DIALOGUE_NUANCE_SOURCES.md#dn-0017), а
 поштучная сверка, источники и остатки — в
 [`dialogue_integration_2026-09-22.md`](dialogue_integration_2026-09-22.md).
 Ниже не повышаются `St_FTS`, `St_math`, эмпирические статусы или статусы
