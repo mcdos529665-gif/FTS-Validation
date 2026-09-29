@@ -155,6 +155,14 @@
 - integrated_at: 2026-09-15
 - targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#1, work/v14_rebuild/dialogue_semantics_2026-09-15.md#5, work/STATE.md#текущая-цель, work/DECISIONS.md
 
+<a id="dn-0014"></a>
+## DN-0014 · Интернализация ярлыка: от внешней отметки к внутреннему инструменту
+- recorded_at: 2026-09-15
+- author_claim:
+  > сначала мы имеем внешние данные что заставляют пересмотреть внутреннюю модель. потом на эти внешние данные навешивается "ярлык". потом этот внешний ярлык, становиться внутренним инструментом, что не зависит полностью от внешних данных, а становится самостоятельным инструментом саморефлексии. и система учится его применять по результатом внутренней работы, а не внешней.
+- integrated_at: 2026-09-29
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#6, work/v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md, work/OPEN_QUESTIONS.md#oq-reflection-label-internalization
+
 <a id="dn-0015"></a>
 ## DN-0015 · Граница символической проверки сомнения
 - recorded_at: 2026-09-15
@@ -339,3 +347,11 @@
   > отсутствие различение также можно рассматривать как вид равенства. в коде нет различия между а=б и а ведет к б, верно? ведь в противном случае понадобилось неравенство с информации.
 - integrated_at: 2026-09-26
 - targets: work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md#8-отсутствие-различения-в-коде-и-два-смысла-ведёт-к; work/notation.md#уровневое-равенство-рабочее-авторское-уточнение-2026-09-26; work/OPEN_QUESTIONS.md#oq-code-link-vs-leads-to
+
+<a id="dn-0032"></a>
+## DN-0032 · Окраска входит в смысл ярлыка
+- recorded_at: 2026-09-29
+- author_claim:
+  > ярлык на то и ярлык чтобы быть "окрашенным".
+- integrated_at: 2026-09-29
+- targets: work/v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md; work/v14_rebuild/dialogue_semantics_2026-09-15.md#6; work/OPEN_QUESTIONS.md#oq-reflection-label-internalization
