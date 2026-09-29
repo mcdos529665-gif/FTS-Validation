@@ -155,6 +155,14 @@
 - integrated_at: 2026-09-15
 - targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#1, work/v14_rebuild/dialogue_semantics_2026-09-15.md#5, work/STATE.md#текущая-цель, work/DECISIONS.md
 
+<a id="dn-0015"></a>
+## DN-0015 · Граница символической проверки сомнения
+- recorded_at: 2026-09-15
+- author_claim:
+  > Я не уверен, что ты сможешь построить и протестировать достаточно сложную систему, что сможет в себя вместить такую штуку как сомнение. Ты же не нейросеть строишь.
+- integrated_at: 2026-09-15
+- targets: work/v14_rebuild/dialogue_semantics_2026-09-15.md#6, work/v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md, work/OPEN_QUESTIONS.md#oq-reflection-label-internalization
+
 <a id="dn-0016"></a>
 ## DN-0016 · Объём проверки эмоций: только внутренняя регуляция
 - recorded_at: 2026-09-15
