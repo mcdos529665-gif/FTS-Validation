@@ -30,7 +30,7 @@
 | `tools/build_research_export.py` | `c2e2b1a8702ffdcb17d8241eafed3c807f228aa0d2bb943c9903f4303b1d34f8` |
 | `AGENTS.md` | `c94ebdf085a288980f12836e89ae1e8b99b95f4db60c9504dfe9dd3d4827fbbf` |
 | `PROJECT_INSTRUCTIONS.md` | `15bc22d42d39a5047dc1329b989b6e5367475bd489ede63d70205aa0598db93b` |
-| `work/STATE.md` | `e741c672df52df28e29eabe7a171865ec07feede5cd74ab28c26411bc763f06d` |
+| `work/STATE.md` | `9b7e94983abab821ad28deba94f05539762327b0bafab412e809d3017a978b10` |
 | `work/notation.md` | `dbf941d3f1454613b1115675d9ed9214ab8c4da22fc2256594cc3c84b14f0377` |
 | `work/DOCUMENT_MAP.md` | `3de8b6be0460b8c7c75cb54550b9513fc586cd25b9d8d073f4021530a7d25fff` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
@@ -400,7 +400,7 @@ bridges обязаны иметь scope, provenance и `status_effect`.
 журналов; проверки объединяются. STATE и notation нужны для содержательной
 работы с ФТС. Процедуры — `PROJECT_INSTRUCTIONS.md`, адреса —
 [DOCUMENT_MAP.md](DOCUMENT_MAP.md). Локальная настройка Codex: сжатие истории
-при 100 тыс. токенов; автоматическая память отключена. Подхват настроек —
+при 300 тыс. токенов; автоматическая память отключена. Подхват настроек —
 после перезапуска; далее поддерживать короткий старт.
 
 #### Активный канон и последняя проверка
