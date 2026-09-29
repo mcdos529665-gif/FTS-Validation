@@ -1,6 +1,6 @@
 ---
 name: arxiv-source-import
-description: Download a requested arXiv paper into the FTS project with its immutable TeX source package, official versioned PDF, and a source-backed Markdown workspace. Use when the user asks to locally obtain or archive a specific arXiv article; do not use for literature discovery, citation analysis, or PDF-to-Markdown conversion.
+description: Archive a specified arXiv paper in FTS with its original TeX, versioned PDF, and source-backed Markdown. Use for local import, not literature search or PDF conversion.
 ---
 
 # Import an arXiv Primary Source
