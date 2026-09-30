@@ -32,7 +32,7 @@
 | `PROJECT_INSTRUCTIONS.md` | `15bc22d42d39a5047dc1329b989b6e5367475bd489ede63d70205aa0598db93b` |
 | `work/STATE.md` | `f77219a4d00fd96497ecde39c30fd10e68efa6a3065a0a4f1dd1db553a2c05f5` |
 | `work/notation.md` | `dbf941d3f1454613b1115675d9ed9214ab8c4da22fc2256594cc3c84b14f0377` |
-| `work/DOCUMENT_MAP.md` | `0fcb8a649458c5c1ad0bf770cd0986665a37c159da58fa0c269719282eaf5979` |
+| `work/DOCUMENT_MAP.md` | `4cb695c222912accff181bbd1e74cc3b61c2f8ffeb613c9585dd5e9f1ffca01a` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
@@ -2540,6 +2540,7 @@ DN-0017–DN-0027: [разбор по каждой записи](v14_rebuild/dia
 | Исследование конкретного вопроса | Тематический пакет в `v14_rebuild/` | Основания, анализ, модель, свидетель, ограничения; сначала искать существующий пакет |
 | Обобщённое изложение теории | [FTS_v14_paper.md](v14_rebuild/FTS_v14_paper.md) | Согласованный результат со ссылками и статусом; подробные промежуточные разборы остаются в пакетах |
 | Незакрытый вопрос | [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) | Нерешённый пункт, нужный свидетель, следующий шаг; по возможности дополнять существующий OQ |
+| Ответы автора на вопросы графа | [AUTHOR_ANSWERS_60.md](AUTHOR_ANSWERS_60.md) | 60 уникальных связанных OQ с кратким текстом, ссылкой на контекст и полем для ответа |
 | Принятое решение о работе | [DECISIONS.md](DECISIONS.md) | Что выбрано, почему и ссылка на полный разбор |
 | Опровергнутый рабочий вывод | [REFUTED.md](REFUTED.md) | Какой claim не выдержал проверку, свидетель и остаток |
 | Конфликт с внешним источником | [EXTERNAL_CONFLICTS.md](EXTERNAL_CONFLICTS.md#правило-внесения) | Обе стороны, область сравнения и решение; правило ведения находится в самом журнале |
