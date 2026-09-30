@@ -1,15 +1,18 @@
 ---
 name: fts-academic-research
-description: Explicit FTS router for externally grounded academic research using Consensus, Semantic Scholar, a manual ResearchRabbit citation-graph round-trip, and optional separate Wolfram audit. Use only when the user explicitly invokes $fts-academic-research with a claim or OQ and mode quick, fact-check, lit-review, or systematic-review; apply it to prior-art searches, novelty checks, external evidence claims, systematic reviews, citation-network coverage, or proposed FTS status changes based on publications. Do not use it for local canon checks, editing, exports, or purely mathematical claims.
+description: Route externally grounded FTS research into supporting, contradicting, or limiting evidence for a claim or OQ. Use when invoked or when literature verification, prior art, novelty, or a review is needed within an assigned investigation. Do not use for local canon checks, editing, exports, or purely mathematical claims.
 ---
 
 # FTS Academic Research
 
-Route external evidence into FTS without importing external terminology or authority into the canon. Keep `source/` immutable and treat every publication as `[внешнее]` until the author makes a separate status decision.
+Route external evidence into FTS without importing external terminology or authority into the canon. Treat every publication as `[внешнее]`; a separately grounded SP decision must stay within the author's authorized scope. Follow `PROJECT_INSTRUCTIONS.md#canon` for any explicitly authorized canon revision.
 
 ## Required input
 
-Require both an exact `claim` or OQ anchor and mode `quick`, `fact-check`, `lit-review`, or `systematic-review`. If either is missing, ask for it. Do not silently widen the question.
+Identify an exact `claim` or OQ anchor from the task. Choose the smallest sufficient
+mode (`quick`, `fact-check`, `lit-review`, `systematic-review`) within the assigned
+scope and budget; state it in a progress update. Ask only when a missing fact changes
+the object of research or the task cannot be scoped from available context.
 
 ## Select the workflow
 
@@ -29,7 +32,7 @@ Read [provider-routing.md](references/provider-routing.md) before making provide
 3. Deduplicate by normalized DOI, then S2 ID, then normalized title and year.
 4. Export verified seeds to `seed_set.bib`. Ask the researcher to explore citations, references, and similar papers in ResearchRabbit and return BibTeX, RIS, or CSV.
 5. Treat ResearchRabbit as discovery only, never as existence verification.
-6. For an exact formula, domain, quantifier, branch, pole, or statistical expression, stop the literature route and advise a separate `$fts-wolfram-audit` call with a full claim/C-NN package.
+6. Route an exact mathematical predicate to `$fts-wolfram-audit` when an independent CAS check is needed. Prepare a full claim/C-NN packet within the assigned scope; no separate invocation is required.
 
 Send only search strings and bibliographic metadata to external services by default. Do not send manuscripts, private notes, or the corpus without separate consent.
 
@@ -39,7 +42,7 @@ Send only search strings and bibliographic metadata to external services by defa
 - Never raise `St_FTS`, `St_math`, or a claim status from a publication alone.
 - Never equate an external term with an overloaded FTS term without a separately argued mapping.
 - Record `нет в артефактах` when the local grounding is absent.
-- Preserve `¬A ≠ 0_A ≠ −A`, register/channel/overlay distinctions, and all status gates from project instructions.
+- Preserve typed absence, register/channel/overlay distinctions. State the domain and witness of a local equivalence; follow the current status procedure in `PROJECT_INSTRUCTIONS.md#status`.
 - Write active outputs only under `work/v14_rebuild/e5_literature_review/`; do not rewrite `work/v14_rebuild/audit/` or its historical `LITERATURE_MATRIX.tsv`.
 
 ## Record and screen

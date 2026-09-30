@@ -3,4 +3,4 @@ interface:
   short_description: "External evidence and reviews for FTS"
   default_prompt: "Use $fts-academic-research to assess a specified claim or OQ in quick, fact-check, lit-review, or systematic-review mode. Reply in Russian."
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

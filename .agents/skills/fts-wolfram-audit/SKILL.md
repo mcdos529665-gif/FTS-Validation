@@ -1,6 +1,6 @@
 ---
 name: fts-wolfram-audit
-description: Independently check exact FTS mathematical claims with Wolfram Language, search for counterexamples, and compare with local C-NN/SymPy checks. Use when explicitly asked to audit a C-NN, formal_math_fact, formula, domain, quantifiers, zero, pole, periodicity, branch, degenerate case, or independent CAS result. Do not use for literature search, empirical work, interpretation of level meanings, or automatic FTS status promotion.
+description: Independently check exact FTS mathematical claims with Wolfram Language, search for counterexamples, and compare with local C-NN/SymPy checks when requested or needed within an assigned mathematical investigation. Do not use for literature search, empirical work, interpretation of level meanings, or automatic FTS status promotion.
 ---
 
 # FTS Wolfram Audit
@@ -16,7 +16,9 @@ Work only from an explicitly stated mathematical predicate. Keep separate:
 
 Treat Wolfram as independent external CAS evidence. It is not a source of canon, level semantics, or automatic status promotion. Do not edit `source/`.
 
-Invoke this skill only explicitly. The advisory gate in the root `AGENTS.md` may suggest it but does not authorize a Wolfram call without the user's decision.
+Use this skill when explicitly invoked or when an independent CAS check is needed
+within the user's assigned investigation. Follow the scope and budget in
+`PROJECT_INSTRUCTIONS.md#wolfram`; a separate command naming the skill is unnecessary.
 
 ## Divide responsibilities
 
@@ -121,7 +123,7 @@ Do not use `PowerExpand` or `GenerateConditions -> False`. Do not strip conditio
 ## Compare with the project
 
 1. Compare the checked predicate line by line with the claim text and current C-NN.
-2. If a C-NN exists, run the complete `verification.py` suite rather than imitating a single check.
+2. If a C-NN exists, use `verification.py --only Cnn` for diagnosis with its dependencies. Run the full suite before completing formal changes; label a partial result as diagnostic.
 3. When Wolfram and the local suite agree, assign `confirmed_math` only to the exact predicate and domain.
 4. For a counterexample, assign `refuted`.
 5. For disagreement between CAS results, assign `cas_disagreement` and leave the issue for manual analysis.

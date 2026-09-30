@@ -19,7 +19,7 @@ python -X utf8 tools/check_project_consistency.py
 |---|---|---|---|
 | `canon_manifest` | `python -X utf8 tools/verify.py --strict` | SHA256 и размер всех файлов активного `source/`, отсутствие неучтённых файлов | `0` — всё учтено; `1` — missing/mismatch/extra; `2` — нет MANIFEST. Ничего не создаёт. |
 | `claim_graph` | `python -X utf8 tools/claim_graph.py validate --idempotent` | направленные рёбра, типы, локаторы, полный набор SHA256-входов (включая `OPEN_QUESTIONS.md`), полнота канонных assertions и параллельных предикатов, research claims/bridges, детерминизм сборки | `0` — PASS; ненулевой — структурная ошибка, пропавший/изменённый или неучтённый вход. Ничего не создаёт. |
-| `formal_suite` | `python -X utf8 work/v14_rebuild/verification.py` | точные формальные предикаты C01–C62 статьи | `0` — все PASS; `1` — FAIL. При FAIL обновляет диагностический `verification_report.md`; при PASS не пересобирает производные. |
+| `formal_suite` | `python -X utf8 work/v14_rebuild/verification.py` | точные формальные предикаты C01–C62 статьи | `0` — все PASS; `1` — FAIL; `2` — ERROR/NOT_RUN. Записывает краткий `verification_report.md` при PASS и подробную диагностику при отрицательном исходе. |
 | `audit` | `python -X utf8 work/v14_rebuild/audit/run_audit.py all` | схема и связи канона, трассируемость claim/OQ/article, контроль review-копий и checksum, статическая защита сьюта и исторические артефакты | `0` — нет необработанных P0/P1; `1` — P0/P1; `2` — неверный режим. Ничего не создаёт. |
 | `research_export` | `python -X utf8 tools/build_research_export.py --check` | существующая объединённая выгрузка побайтно равна детерминированной сборке из текущих входов | `0` — актуальна; `1` — отсутствует/устарела/сборка невалидна. Ничего не создаёт. |
 
@@ -30,6 +30,12 @@ python -X utf8 tools/check_project_consistency.py
 отдельно и не маскирует их как успех.
 
 ## Существующие вспомогательные средства вне verdict
+
+`verification.py --only C06 C29` выполняет выбранные предикаты и необходимые
+зависимости. Результат и `verification_diagnostic.md` помечены как частичные;
+полный отчёт не подменяется. Перед завершением формальных изменений нужен полный
+прогон. Причина FAIL/ERROR и её статусное действие определяются по
+[действующей процедуре](../PROJECT_INSTRUCTIONS.md#status).
 
 `work/v14_rebuild/crosscheck.py grounds|levels|sp|fails` выводит выбранные
 канонные карточки для ручного чтения и не имеет fail-семантики для ссылок

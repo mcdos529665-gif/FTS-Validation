@@ -4,4 +4,4 @@ interface:
   default_prompt: "Use $fts-wolfram-audit to independently verify a precise FTS mathematical claim and search for counterexamples."
 
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true
