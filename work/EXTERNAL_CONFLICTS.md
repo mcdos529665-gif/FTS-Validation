@@ -1,72 +1,73 @@
-# EXTERNAL_CONFLICTS — журнал расхождений канона и внешних оснований
+# EXTERNAL_CONFLICTS — canon and external-grounding conflicts
 
-Создан 2026-09-09 по запросу автора. Рабочее правило: **при конфликте с внешними
-данными сохранять канон и явно записывать, что именно расходится**. Приоритет
-канона определяет содержание и статус ФТС; он не превращает отрицательный
-результат во внешнее подтверждение и не отменяет математический контрпример.
+Created 2026-09-09 at the author's request. **When external data conflicts with
+the canon, preserve the canon and record the discrepancy explicitly.** Canon
+priority determines FTS content and status; it does not turn negative results
+into external confirmation or invalidate mathematical counterexamples.
 
-Журнал включает расхождения самого канона, его внешних интерпретаций и производных
-рабочих утверждений. Поле «слой» обязательно: ошибка заметки не объявляется
-ошибкой `source/`. `REFUTED.md` по-прежнему хранит отказы/опровержения; этот журнал
-хранит **обе стороны расхождения**, условия сопоставления и решение.
+This log covers discrepancies in the canon, external interpretations, and derived
+working claims. The layer field is required: an error in a note is not an error
+in `source/`. `REFUTED.md` stores rejections/refutations; this log stores both
+sides, comparison conditions, and the decision.
 
-## Правило внесения
+<a id="правило-внесения"></a>
+## Entry rules
 
-1. Завести запись в той же рабочей сессии, как только обнаружено содержательное
-   расхождение. Новый ID — следующий `EC-NNN`; одна проверяемая коллизия на запись.
-   Сначала искать существующую запись, чтобы не создавать дубликат.
-2. Точно указать сторону ФТС: ID карточки/триплет либо лист и строку, версию,
-   канонический статус и регистр. Для производного текста — файл и раздел,
-   связь с каноном и собственный статус. Отсутствующее основание писать буквально
-   `нет в артефактах`.
-3. Указать внешнюю сторону: первоисточник с URL/DOI, датой обращения и точным
-   местом, либо локальный пакет внешнего эксперимента с данными/протоколом,
-   либо полностью воспроизводимый математический свидетель. Поисковый сниппет,
-   пересказ LLM и имя теоремы без проверяемого содержания недостаточны.
-4. Выписать мост сопоставления: **что отождествили**, на каком носителе, в каком
-   регистре, при каких кванторах, области и допущениях. Для данных дополнительно
-   указать цель, метрику, baseline, бюджет и единицу независимой репликации.
-   Незаполненный мост означает `unresolved`, а не доказанное противоречие.
-5. Выбрать тип из таблицы ниже. `direct_contradiction` допустим только после
-   проверки, что стороны действительно утверждают P и не-P об одном объекте
-   при одинаковых предпосылках. Не превращать p>α в доказательство равенства
-   или ложности универсального положения.
-6. Записать свидетель, допустимый вывод, сохранённый остаток и следующий
-   различающий шаг. `source/` не править. При поражении рабочего математического
-   claim снять/сузить именно этот claim и внести строку в `REFUTED.md`.
-   Причину FAIL/ERROR установить по [статусной процедуре](../PROJECT_INSTRUCTIONS.md#status):
-   проверенный контрпример отзывает/сужает соответствующий мат-факт; ошибка
-   проверки или среды оставляет вычислительное свидетельство непроверенным.
-7. Не повышать `St_FTS` по внешнему совпадению. Изменение канонической версии —
-   отдельный SP/К1–К5 и workbook/MANIFEST-процесс. Записать статус до/после,
-   даже если он не изменился; значимое решение — в `DECISIONS.md`, указатель —
-   в `STATE.md`/существующем OQ.
-8. Историю не стирать. Исправление/новое доказательство добавлять датированной
-   ревизией внутри записи, сохраняя исходные стороны и прежний вердикт.
-   Закрытие требует свидетельства разведения областей, исправления производного
-   текста или отдельного принятого решения; молчание источника не закрывает запись.
-9. При приёме внешних отчётов сохранить исходники и контрольные суммы, отделить
-   предлагаемые автором отчёта записи от принятого решения. Временные ID
-   перенумеровать через таблицу соответствия; совпадающие коллизии объединять
-   ревизией. Повтор одного источника в нескольких отчётах не является независимой
-   репликацией. Дефект внешней публикации без противоречащего claim ФТС вести
-   в аудите источников, не объявляя его конфликтом канона.
+1. Record substantive discrepancies in the session where they are found. Use the
+   next `EC-NNN` ID and one verifiable conflict per entry. Search existing entries
+   first to avoid duplicates.
+2. Identify the FTS side precisely: card/triple ID or sheet and row, version,
+   canonical status, and register. For derived text, state its file/section,
+   canon link, and own status. Missing grounding: `нет в артефактах`.
+3. Identify the external side: a primary source with URL/DOI, access date, and
+   exact location; a local experiment package with data/protocol; or a fully
+   reproducible mathematical witness. Search snippets, LLM summaries, or theorem
+   names without checkable content are insufficient.
+4. State the comparison bridge: what is identified, carrier, register, quantifiers,
+   domain, and assumptions. For data, include objective, metric, baseline, budget,
+   and independent-replication unit. An incomplete bridge means `unresolved`,
+   not a proven contradiction.
+5. Select a type below. Use `direct_contradiction` only when the sides assert P
+   and not-P about the same object under identical assumptions. Do not treat
+   p>α as proof of equality or falsity of a universal claim.
+6. Record the witness, warranted conclusion, retained remainder, and next
+   distinguishing step. Do not edit `source/`. Withdraw/narrow a defeated working
+   mathematical claim and record it in `REFUTED.md`. Diagnose FAIL/ERROR through
+   the [status procedure](../PROJECT_INSTRUCTIONS.md#status): a verified
+   counterexample withdraws/narrows the affected math fact; a check/environment
+   error leaves its computational evidence unverified.
+7. External agreement does not raise `St_FTS`. Canon revision requires a separate
+   SP/К1–К5 and workbook/MANIFEST process. Record status before/after even if
+   unchanged; put substantive decisions in `DECISIONS.md` and a pointer in
+   `STATE.md` or the existing OQ.
+8. Preserve history. Add corrections/new proofs as dated revisions within an
+   entry, retaining the original sides and previous verdict. Closure needs
+   evidence separating domains, a derived-text correction, or an accepted
+   decision; a source's silence does not close a conflict.
+9. Preserve received reports and checksums; distinguish proposed entries from
+   accepted decisions. Remap temporary IDs through a correspondence table and
+   merge duplicate conflicts by revision. Repeated use of one source is not
+   independent replication. Publication defects without a conflicting FTS claim
+   belong in the source audit, not the canon-conflict log.
 
-| Тип | Когда применять |
+| Type | Use when |
 |---|---|
-| `direct_contradiction` | P и не-P в согласованной области и при одних предпосылках |
-| `formal_counterexample` | воспроизводимый контрпример к точной математической формулировке; слой обязателен |
-| `interpretation_mismatch` | одинаковые слова/знаки прочитаны в разных логиках или регистрах |
-| `domain_mismatch` | различаются носитель, объект считывания, область, кванторы или доступные операции |
-| `empirical_nonconfirmation` | корректно ограниченный тест не подтвердил операционализацию |
-| `method_inconclusive` | дизайн/конфаунд/артефакт не позволяет вынести содержательный вердикт |
-| `unresolved` | одна из сторон, мост или проверка пока недостаточны |
+| `direct_contradiction` | P and not-P in the same domain under the same assumptions |
+| `formal_counterexample` | Reproducible counterexample to an exact mathematical claim; layer required |
+| `interpretation_mismatch` | The same words/signs are read in different logics/registers |
+| `domain_mismatch` | Carrier, readout object, domain, quantifiers, or available operations differ |
+| `empirical_nonconfirmation` | A properly scoped test did not confirm the operationalization |
+| `method_inconclusive` | Design, confound, or artifact prevents a substantive verdict |
+| `unresolved` | A side, bridge, or check remains insufficient |
 
-Состояния записи: `open`, `scoped_open` (коллизия локализована, содержательный
-долг остаётся), `resolved_by_scope`, `resolved_working_correction`, `superseded`.
-Это состояния журнала, не статусы карточек ФТС.
+Entry states: `open`, `scoped_open` (localized conflict, unresolved substantive
+work), `resolved_by_scope`, `resolved_working_correction`, `superseded`.
+These are log states, not FTS card statuses.
 
-### Шаблон записи
+<a id="шаблон-записи"></a>
+### Entry template
+
+Keep the record's required Russian fields:
 
 ```text
 ## EC-NNN · Название

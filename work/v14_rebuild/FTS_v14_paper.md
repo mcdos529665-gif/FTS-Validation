@@ -73,63 +73,66 @@ C-01, C-02), вторая — правилом Д2 (C-03, C-04) и аудито�
 
 ---
 
-## 2. Метод: критерии канонизации и статусная шкала
+<a id="2-метод-критерии-канонизации-и-статусная-шкала"></a>
+## 2. Method: canonization criteria and status scale
 
-### 2.1. Критерии К1–К5
+<a id="21-критерии-к1к5"></a>
+### 2.1. Criteria К1–К5
 
-Утверждение проходит в канон v14, только если выполняются все пять критериев:
+A claim enters canon v14 only when all five criteria hold:
 
-| Критерий | Содержание |
+| Criterion | Requirement |
 |---|---|
-| **К1. Подходящее свидетельство** | Основание соответствует типу claim: доказательство точного математического предиката; эмпирический протокол и данные; явное согласованное определение; различающий тест операциональной роли. C-NN — машинное свидетельство в его проверенной области. |
-| **К2. Основания и зависимости** | Указать применимые О1–О5 (§4) и зависимости; расхождение требует обоснованной ревизии с последствиями и отдельного решения о новой версии. |
-| **К3. Область различий** | Сохранять типы отсутствий, регистры и оверлеи; `Rot`, минус, branch access и Lift различать. Локальную эквивалентность обосновывать с носителем, проекцией и областью; `Q(χ)` читать по определению модели. |
-| **К4. Объяснительная согласованность** | Проверить нижние уровни (−1…6) и зависимые результаты. Обоснованный пересмотр допустим; перечислить затронутые положения и согласованно принять новую версию. |
-| **К5. Условие пересмотра** | Задать контрпример, различающий тест либо условие несогласованности определения, при котором утверждение снимается/сужается. |
+| **К1. Appropriate evidence** | Match evidence to claim type: proof of an exact mathematical predicate; empirical protocol and data; explicit consistent definition; distinguishing test of an operational role. C-NN witnesses machine verification within its checked scope. |
+| **К2. Grounds and dependencies** | Identify applicable О1–О5 (§4) and dependencies. A discrepancy requires a justified revision, its consequences, and a separate decision on the new version. |
+| **К3. Scope of distinctions** | Preserve absence types, registers, and overlays; distinguish `Rot`, arithmetic negation, branch access, and Lift. Justify local equivalence with a carrier, projection, and domain; read `Q(χ)` according to its model definition. |
+| **К4. Explanatory consistency** | Check lower levels (−1…6) and dependent results. Justified revision is allowed; list affected claims and accept a consistent new version. |
+| **К5. Revision condition** | Specify a counterexample, distinguishing test, or definition-inconsistency condition under which the claim is withdrawn/narrowed. |
 
-Действующая процедура и обработка FAIL — [PROJECT_INSTRUCTIONS, status](../../PROJECT_INSTRUCTIONS.md#status)
-(редакция автора 2026-09-30). Принятие определения, математическая доказанность
-и эмпирическое подтверждение учитываются раздельно.
+Current procedure and FAIL handling: [PROJECT_INSTRUCTIONS, status](../../PROJECT_INSTRUCTIONS.md#status)
+(author's 2026-09-30 policy). Definition acceptance, mathematical proof, and
+empirical confirmation are assessed separately.
 
-Решающее правило:
-
-```text
-канон v14        = К1 ∧ К2 ∧ К3 ∧ К4 ∧ К5
-кандидат v14     = К1 ∧ К3 ∧ К5 (К2/К4 частично)
-отброшено v14    = провал К1 или К3, либо потребность в ad-hoc подпорках
-```
-
-### 2.2. Статусная шкала v14
+Decision rule:
 
 ```text
-formal_math_fact     — математический факт с проверяемым доказательством/формальным свидетелем; C-NN фиксирует вычислительную часть
-canonical_v14        — интерпретация, прошедшая К1–К5
-candidate_v14        — держится, но канонизация преждевременна
-candidate_prediction — формула, предсказанная правилом П, ждёт проверки
-projected / speculative — направление без формулы / без оператора
-discarded_v14        — отброшено (с указанием причины)
+canon v14       = К1 ∧ К2 ∧ К3 ∧ К4 ∧ К5
+candidate v14   = К1 ∧ К3 ∧ К5 (К2/К4 partial)
+discarded v14   = failure of К1 or К3, or reliance on ad-hoc support
 ```
 
-Важно: `formal_math_fact` — статус математического факта, а не его чтения.
-`√(x²)=|x|` — факт; «вопрос к агрегату возвращает удержание» — интерпретация,
-которая канонизируется отдельно. Смешение этих статусов — главный путь
-инфляции, и он здесь перекрыт.
+<a id="22-статусная-шкала-v14"></a>
+### 2.2. Status scale v14
 
-**Двухосевой статус (явно, лист 46).** Это перекрытие формализуется как
-`St(H) = (St_math(H), St_FTS(H))` [лист 46]: один узел несёт строгий
-математический статус И отдельный, обычно более низкий, ФТС-статус. В v14 ось
-St_math опирается на доказательство/формальный свидетель (PASS `C-NN` относится к точному проверенному предикату), ось St_FTS — полями
-статуса (`canonical_v14` / `candidate_v14` / …). Правило повышения:
+```text
+formal_math_fact     — mathematical fact with a checkable proof/formal witness; C-NN records the computational part
+canonical_v14        — interpretation satisfying К1–К5
+candidate_v14        — supported, but canonization is premature
+candidate_prediction — formula predicted by rule П, awaiting verification
+projected / speculative — direction without a formula / without an operator
+discarded_v14        — rejected with a stated reason
+```
+
+`formal_math_fact` describes a mathematical fact, not its FTS reading.
+`√(x²)=|x|` is a fact; «вопрос к агрегату возвращает удержание» is an interpretation
+requiring separate canonization. Conflating these statuses causes status inflation.
+
+**Two-axis status (sheet 46).** `St(H) = (St_math(H), St_FTS(H))` [лист 46]:
+one node can have a rigorous mathematical status and a separate, usually lower,
+FTS status. In v14, St_math rests on proof/formal evidence (PASS `C-NN` concerns
+the exact checked predicate); St_FTS is recorded in status fields
+(`canonical_v14` / `candidate_v14` / …). Promotion rule:
 `EvidenceForClaimType ∧ GroundingOrAcceptedRevision ∧ BoundaryGain ∧ DefeatCond`
-(для операционных — плюс OperationalTest); для математического claim
-`EvidenceForClaimType = MathKernel`. Условие поражения политики — смешение осей.
+(plus OperationalTest for operational claims). For mathematical claims,
+`EvidenceForClaimType = MathKernel`. Conflating the axes defeats this policy.
 
-### 2.3. Дисциплина источников
+<a id="23-дисциплина-источников"></a>
+### 2.3. Source discipline
 
-Каждый нетривиальный шаг помечен источником: [3.txt гл. N] — авторский документ,
-[триплет s→p→o] — граф канона v13, [дополнение] — рабочий файл дополнения,
-[внешнее] — общематематическое знание, [C-NN] — машинная проверка.
-Утверждения, отсутствующие в артефактах, помечены явно.
+Ground each substantive step: [3.txt гл. N] — author's document;
+[триплет s→p→o] — v13 canon graph; [дополнение] — working supplement;
+[внешнее] — external/general mathematical knowledge; [C-NN] — machine check.
+Explicitly label claims absent from the artifacts.
 
 ---
 

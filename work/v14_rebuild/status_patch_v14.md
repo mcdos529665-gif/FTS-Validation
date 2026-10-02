@@ -1,94 +1,93 @@
-# Аудированная патч-таблица статусов v14
+# Audited v14 status patch
 
-Это консервативное предложение к будущему workbook-экспорту v14.
-Канон v13 в `source/` не редактируется. Аудит подтвердил целостность канона
-(`13 ok / 0 missing / 0 mismatch`) и 62 математические проверки, но не новые
-семантические повышения. Правило двух осей обязательно:
+This is a conservative proposal for a future v14 workbook export. It does not
+edit the v13 canon in `source/`. The audit confirmed canon integrity
+(`13 ok / 0 missing / 0 mismatch`) and 62 mathematical checks, but no new semantic
+promotions. The two-axis rule is mandatory:
 
 ```text
-PASS C-NN -> вычислительное свидетельство только точного предиката в проверенной области
-canonical_v14 -> отдельно пройдены К1–К5 и статус закодирован в целевой SP-карточке
+PASS C-NN -> computational evidence only for the exact predicate in the checked domain
+canonical_v14 -> К1–К5 passed separately and status encoded in the target SP card
 ```
 
-Действующая [статусная процедура](../../PROJECT_INSTRUCTIONS.md#status) принята
-2026-09-30: К1 выбирается по типу claim, пересмотр нижних уровней допустим с
-основанием и последствиями, FAIL требует установления причины. Таблицы ниже
-сохраняют результаты прежнего аудита; новое решение требует новой SP-записи.
+The [current status procedure](../../PROJECT_INSTRUCTIONS.md#status), adopted
+2026-09-30, selects К1 by claim type, allows justified lower-level revision with
+consequences, and requires diagnosing FAIL. These tables preserve earlier audit
+results; a new decision requires a new SP record.
 
-## 1. Аудит заявленных повышений
+## 1. Audit of proposed promotions
 
-| Сущность | Статус v13 / опора | Ранее заявлялось | Вердикт аудита | Условие повторного повышения |
+| Entity | v13 status / grounding | Earlier claim | Audit verdict | Requirement for reconsideration |
 |---|---|---|---|---|
-| U_07 / M_07 | `candidate_with_operational_gate` | формы до У7 — `canonical_strict` | **Не повышать**. C-35/C-60 показывают формальный паттерн, но не вынужденность рунга и не смысл «Знание» | Новая SP-карточка с раздельными целями формы/семантики, К1–К5 и операционный тест |
-| U_08 | SP_U8 и U_08: `candidate_with_operational_gate` | `canonical_v14` | **Оставить `candidate_with_operational_gate`**. Ребро `promotes_status_of` переносит кандидатный, а не канонический статус | Абляция вопросной роли и новая SP со статусом `canonical_v14` |
-| U_09 | SP_U9 и U_09: `FTS_candidate` | `canonical_v14` | **Оставить `FTS_candidate`**; C-10…C-12 проверяют куб, не «Понимание» | Независимый тест роли причинного основания и новая SP |
-| U_10 | `reserved_underformalized`; SP_U10 нет | `canonical_v14` из единственности cos | **Оставить `reserved_underformalized`**; ОДУ/ряд/нули — `formal_math_fact`, интерпретация — candidate | Операционный тест шкалы/оценки и SP_U10 |
-| U_11 | `reserved_underformalized`; SP_U11 нет | `canonical_v14` из ОДУ `F'=F` | **Оставить `reserved_underformalized`**; экспонента — `formal_math_fact`, самость ФТС не доказана | К1–К5 для самости и SP_U11 |
-| U_12 | SP_U12/U_12: `candidate_requires_formalization + canonical_alignment` | `canonical_v14` | **Сохранить составной статус**. Геометрия класса — `formal_math_fact`; «Конфликт/Союз» и gate остаются кандидатными | Формализация семантики, gate и новая SP с полным К1–К5 |
+| U_07 / M_07 | `candidate_with_operational_gate` | Forms through У7: `canonical_strict` | **Do not promote**. C-35/C-60 show a formal pattern, not a forced rung or the meaning «Знание» | New SP card with separate form/semantic targets, К1–К5, operational test |
+| U_08 | SP_U8 and U_08: `candidate_with_operational_gate` | `canonical_v14` | **Keep `candidate_with_operational_gate`**. `promotes_status_of` transfers a candidate, not canonical, status | Question-role ablation and new SP with `canonical_v14` |
+| U_09 | SP_U9 and U_09: `FTS_candidate` | `canonical_v14` | **Keep `FTS_candidate`**; C-10…C-12 check the cube, not «Понимание» | Independent causal-grounding role test and new SP |
+| U_10 | `reserved_underformalized`; no SP_U10 | `canonical_v14` from cos uniqueness | **Keep `reserved_underformalized`**; ODE/series/zeros are `formal_math_fact`, interpretation is candidate | Operational scale/assessment test and SP_U10 |
+| U_11 | `reserved_underformalized`; no SP_U11 | `canonical_v14` from ODE `F'=F` | **Keep `reserved_underformalized`**; exponential is `formal_math_fact`, FTS selfhood unproven | К1–К5 for selfhood and SP_U11 |
+| U_12 | SP_U12/U_12: `candidate_requires_formalization + canonical_alignment` | `canonical_v14` | **Keep the compound status**. Class geometry is `formal_math_fact`; «Конфликт/Союз» and gate remain candidate | Formalize semantics/gate and new SP satisfying all К1–К5 |
 
-## 2. Открытые вопросы и дефекты трассируемости
+## 2. Open questions and traceability defects
 
-| Узел | Найдено | Вердикт |
+| Node | Finding | Verdict |
 |---|---|---|
-| Q_LOGIC_7_11 | §7.3 даёт кандидатный object-language, но полнота словаря Д и операционные тесты не доказаны | Не закрывать |
-| U12_CIRCLE | C-23 доказывает «не график функции»; это новая математическая выразимость, но не операционная роль ФТС | Математическая часть закрыта, семантическая — нет |
-| SP_PARITY | В `fts_triples.tsv` есть субъект `SP_PARITY`, но в `fts_cards.jsonl` нет карточки | Битая ссылка v13; не использовать для повышения; восстановить или удалить в workbook v14 |
-| O2/O12 и прочие отсутствующие ID | `depends_on` содержит алиасы и невосстановленные сущности | Полный патч — `audit/CANON_REFERENCE_PATCH.tsv`; зависящие утверждения не канонизировать |
-| O_20 | Предрегистрированная операционализация не подтверждена; аудит: 1/4 dataset wins, sign `p=0.9375`, mean ΔAUC=-0.0079 | Отрицательный результат сохранить; pooled fold-level p не использовать как междатасетное доказательство |
-| D2 sign/phase | Исходный scaler видел полный X; train-only reanalysis: HistGB 2/4, sign `p=0.6875`, mean ΔAUC=-0.0012 | Strong external role не подтверждена; внутренняя роль У8/У9 не тестировалась |
-| Д10 / SP_COMPLEX | Пять вариантов воспроизведены byte-equal, но имеют representation/CFO/target confounds | Чистого фазового вердикта нет; SP_COMPLEX не повышать |
-| Внешний контакт / новизна | После дополнительной проверки 2026-08-02 подтверждён компонентный формальный контакт У2–У5 (У1 — ограничивающий); полного аналога не найдено только в пределах 28 исходных запросов | На 2026-09-13 не присваивать статус новизны и не объявлять внешнюю валидацию всей лестницы. Будущий заранее заданный SP/K1–K5 evidence threshold может дать `promotion_ready`, но до него литература не меняет `St_FTS` |
+| Q_LOGIC_7_11 | §7.3 proposes an object-language; completeness of dictionary Д and operational tests unproven | Do not close |
+| U12_CIRCLE | C-23 proves “not a function graph”: mathematical expressivity, not an operational FTS role | Math part closed; semantics open |
+| SP_PARITY | Subject `SP_PARITY` exists in `fts_triples.tsv` but no card in `fts_cards.jsonl` | Broken v13 reference; do not use for promotion; restore/remove in workbook v14 |
+| O2/O12 and other missing IDs | `depends_on` has aliases/unresolved entities | Full patch: `audit/CANON_REFERENCE_PATCH.tsv`; do not canonize dependent claims |
+| O_20 | Preregistered operationalization unconfirmed; audit: 1/4 dataset wins, sign `p=0.9375`, mean ΔAUC=-0.0079 | Preserve negative result; pooled fold-level p is not cross-dataset evidence |
+| D2 sign/phase | Original scaler saw full X; train-only reanalysis: HistGB 2/4, sign `p=0.6875`, mean ΔAUC=-0.0012 | Strong external role unconfirmed; internal У8/У9 role not tested |
+| Д10 / SP_COMPLEX | Five variants reproduced byte-equal, with representation/CFO/target confounds | No clean phase verdict; do not promote SP_COMPLEX |
+| External contact / novelty | Additional 2026-08-02 check confirmed component-level contact У2–У5 (У1 limiting); absence of a full analogue is bounded to 28 original queries | As of 2026-09-13, do not assign novelty or claim external validation of the full ladder. A future predefined SP/K1–K5 evidence threshold may yield `promotion_ready`; until then literature does not change `St_FTS` |
 
-## 3. Новые карточки для будущего v14-экспорта
+## 3. Proposed cards for a future v14 export
 
-| ID | Содержание | Допустимый статус после аудита |
+| ID | Content | Allowed status after audit |
 |---|---|---|
-| DICT_D1…D11 | Словарь конвертации §5 | `candidate_v14`; указанные в C-NN математические ядра — `formal_math_fact`; Д3 отдельно `canon-grounded` в области U_06 |
-| NOTATION_ANTIFORM | Разведение `−F`, `Rot_θ`, `⊖A` | `proposed_note`; не повышает уровни |
-| UNIT_BOUNDARY | `x²=x ⇔ x∈{0,1}` и точечные совпадения | Равенство — `formal_math_fact`; «граница ФТС» — `candidate_v14` |
-| OVERLAY_AS_CARRIER / CHI_OVERLAY_VERIFIED | Подстановка `x:=χ` и её гардрейлы | `candidate_overlay`; не повышает статусы уровней |
-| SMALL_FORM_PROJECTION / CONTRADICTION_LATTICE | Проекции и зеркальные пары | `candidate_v14`; C-57…C-59 проверяют точные частные предикаты |
-| EXTERNAL_BRIDGE_U1_U5 | Типизированная цепочка `Stable → E → Dist → μ на слое → section/decision rule`; `|x|` как класс альтернатив, `−|x|` как фиксированный селектор | `external_bridge_candidate`; прямой компонентный контакт У2–У5, У1 только limiting; **без** `promotes_status_of`, порядок/семантика уровней не доказаны |
-| EXPLICIT_ADDITIONS_20260905 | REFINE-MIN, DENSE-PARTITION, SELECT-SYMMETRY, ABS-GAIN, ограничители Lift/У0–У7 и новые OQ | `external_research_integration`; точные конечные математические области проверены EA-01…EA-08, но **без** `promotes_status_of`, без C-NN статьи и без повышения `St_FTS` |
-| LEVEL_RETENTION_RULE | Следствие О1+О3+О8: локально несовместимая пара до У7 удерживается в `У(2k+2)` как различимые режимы | `derived_constraint` в структурной области `k∈{1,2,3}`; **не аксиома**, не одновременная истинность и не повышение U_08 |
-| SYMMETRY_ESCALATION_HYPOTHESIS | После У7: анти-форма → симметрия оператора (`ΔF=F`, У11) → инвариант группы (У15) | `hypothesis_candidate`; A0b подтверждает только смену носителя, C-18/C-31 — локальные math-факты; общего закона нет |
-| PROPOSAL_STRICT_BAND_7 | Гипотеза о границе форм до У7 | `candidate_requires_canonization`; тип — `hypothesis_candidate`; **без** `promotes_status_of` |
-| MAP_PENTAD / MAP_PI_PROJ / RULE_P | Пентада, проекции и правило П | `candidate_v14`; границы точных C-NN указать в карточках |
-| U_13_FORMULA | `∏Bₖ=0` | `candidate_prediction`; zero-product — `formal_math_fact` |
+| DICT_D1…D11 | Conversion dictionary §5 | `candidate_v14`; specified C-NN math kernels: `formal_math_fact`; Д3 separately `canon-grounded` within U_06 |
+| NOTATION_ANTIFORM | Distinguish `−F`, `Rot_θ`, `⊖A` | `proposed_note`; no level promotion |
+| UNIT_BOUNDARY | `x²=x ⇔ x∈{0,1}` and pointwise coincidences | Equality: `formal_math_fact`; FTS boundary: `candidate_v14` |
+| OVERLAY_AS_CARRIER / CHI_OVERLAY_VERIFIED | `x:=χ` substitution and guards | `candidate_overlay`; no level-status promotion |
+| SMALL_FORM_PROJECTION / CONTRADICTION_LATTICE | Projections/mirror pairs | `candidate_v14`; C-57…C-59 check exact special-case predicates |
+| EXTERNAL_BRIDGE_U1_U5 | Typed chain `Stable → E → Dist → μ на слое → section/decision rule`; `|x|` as alternative class, `−|x|` as fixed selector | `external_bridge_candidate`; direct component contact У2–У5, У1 limiting only; no `promotes_status_of`, level order/semantics unproven |
+| EXPLICIT_ADDITIONS_20260905 | REFINE-MIN, DENSE-PARTITION, SELECT-SYMMETRY, ABS-GAIN, Lift/У0–У7 limits, new OQs | `external_research_integration`; exact finite math scopes checked EA-01…EA-08; no `promotes_status_of`, paper C-NN, or `St_FTS` increase |
+| LEVEL_RETENTION_RULE | Consequence of О1+О3+О8: locally incompatible pairs through У7 retained in `У(2k+2)` as distinguishable modes | `derived_constraint` within `k∈{1,2,3}`; not an axiom or simultaneous truth; no U_08 promotion |
+| SYMMETRY_ESCALATION_HYPOTHESIS | After У7: antiform → operator symmetry (`ΔF=F`, У11) → group invariant (У15) | `hypothesis_candidate`; A0b confirms only carrier change, C-18/C-31 local math facts; no general law |
+| PROPOSAL_STRICT_BAND_7 | Hypothesis about the boundary of forms through У7 | `candidate_requires_canonization`; type `hypothesis_candidate`; no `promotes_status_of` |
+| MAP_PENTAD / MAP_PI_PROJ / RULE_P | Pentad, projections, rule П | `candidate_v14`; state exact C-NN scopes in cards |
+| U_13_FORMULA | `∏Bₖ=0` | `candidate_prediction`; zero-product: `formal_math_fact` |
 | U_14_FORMULA | `F(x,y;θ)=0` | `projected_candidate` |
-| U_15_FORMULA | `z=e^{iθ}` | `projected_candidate`; свойства C-31 — `formal_math_fact` |
+| U_15_FORMULA | `z=e^{iθ}` | `projected_candidate`; C-31 properties: `formal_math_fact` |
 
-## 4. Отброшено / понижено
+## 4. Discarded or downgraded
 
-| Утверждение | Вердикт |
+| Claim | Verdict |
 |---|---|
-| `y=−x²` «описывает мнимые числа» | `discarded_v14`: нарушение `Rot ≠ −` |
-| «3-мерный крест / поле мерностей» для У4 | `discarded_v14`: нет свидетеля К1 |
-| `χ³` как ядро У9 | `overlay_only`: канон требует causal/counterfactual decomposition |
-| Чтение У10 «периодическое сравнение» как определение | `discarded_v14`: декоративно; ОДУ-характеризация сохранена как math fact, но не канонизирует смысл |
-| Жёсткие формулы У16–У17 | `discarded_v14` для прежнего предложения: нет свидетеля К1; новые исследовательские кандидаты допустимы |
-| Статусы `canonical_v14` для U_07…U_12 из одних C-NN | Отозваны как смешение осей `St_math`/`St_FTS` |
+| `y=−x²` «описывает мнимые числа» | `discarded_v14`: violates `Rot ≠ −` |
+| «3-мерный крест / поле мерностей» for У4 | `discarded_v14`: no К1 witness |
+| `χ³` as У9 core | `overlay_only`: canon requires causal/counterfactual decomposition |
+| Reading У10 «периодическое сравнение» as definition | `discarded_v14`: decorative; ODE characterization retained as math fact, without canonizing meaning |
+| Fixed У16–У17 formulas | `discarded_v14` for the earlier proposal: no К1 witness; new research candidates allowed |
+| `canonical_v14` for U_07…U_12 from C-NN alone | Withdrawn as conflation of `St_math`/`St_FTS` |
 
-## 5. Неизменные границы
+## 5. Current boundaries
 
-- У−1…У6: текущие `canonical_strict` сохранены; обоснованный пересмотр допускается новой согласованной версией.
-- χ-лестница, комплексный и тензорный слои: overlay/candidate, не канон уровней.
-- SP_EPI и SP_LIMITS фиксируют текущие долги; их закрытие допускает SP/К1–К5-пересмотр. Пока У13–У15 — prediction/projected, У16–У17 — speculative.
-- Предрегистрации и первичные результаты O_20, D2 и D10 не переписываются; коррекции выпускаются как датированная аудиторская реанализация.
+- У−1…У6: current `canonical_strict` retained; justified revision allowed in a new coherent version.
+- χ ladder, complex/tensor layers: overlay/candidate, not canonical levels.
+- SP_EPI/SP_LIMITS record current gaps; closing them permits SP/К1–К5 review. For now, У13–У15 remain prediction/projected; У16–У17 speculative.
+- Preserve O_20, D2, D10 preregistrations and primary results; issue corrections as dated audit reanalyses.
 
-Этот патч становится каноном только после внешнего workbook round-trip, нового
-`MANIFEST.json` и успешной SHA256-сверки. До того это только review-артефакт.
+This patch becomes canon only after an external workbook round-trip, a new
+`MANIFEST.json`, and successful SHA256 verification. Until then it is a review artifact.
 
-## 6. Отдельное авторское принятие 2026-09-19
+## 6. Separate author acceptance, 2026-09-19
 
-По прямому решению автора опубликовано
-[AC-2026-09-21](../author_canon/2026-09-21/AMENDMENT.md): актуальные формы У6/У7;
-AC-2026-09-19 сохраняется для области равенства не-предмета и отсутствия на У0,
-связи ожидания со скоростью и неразличимости скорости/фундаментальности для
-модели. Для этих новых записей
-`author_status=accepted_into_author_canon`; это не прежние исследовательские
-кандидаты AND/OR. Их `evidence_status` отдельно фиксирует формальные и
-эмпирические долги. Исходное сообщение связано с каждой записью ребром `adopts`.
-Исторические статусы U_07/M_07, SP-карточки и C-NN не повышаются; полный
-объединённый workbook ещё не выпущен. При его сборке переносить дополнение
-с сохранением обеих осей статуса.
+The author's direct decision published
+[AC-2026-09-21](../author_canon/2026-09-21/AMENDMENT.md): current У6/У7 forms.
+AC-2026-09-19 remains for local non-object/absence equality at У0, expectation's
+link to speed, and the model's indistinguishability of speed/fundamentality.
+These new records have `author_status=accepted_into_author_canon`; they are not
+the earlier AND/OR research candidates. Their `evidence_status` separately records
+formal/empirical gaps. Each record links to the original message through `adopts`.
+Historical U_07/M_07 and SP statuses and C-NN are not promoted. The combined
+workbook is not yet released; when assembling it, transfer the supplement with
+both status axes preserved.

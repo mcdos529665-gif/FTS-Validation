@@ -1,58 +1,57 @@
-# AGENTS — рабочий контракт ФТС
+# AGENTS — FTS working contract
 
-Проект развивает теорию ФТС в `work/`; основной текст —
-`work/v14_rebuild/FTS_v14_paper.md`. Python здесь служит доступу и проверкам.
-Рабочий язык — русский; объяснять просто, с примерами по необходимости.
+FTS research lives in `work/`; the main text is
+`work/v14_rebuild/FTS_v14_paper.md`. Python provides access and checks.
+Reply in plain Russian, with examples when useful. Follow explicit language requests.
 
-## Короткий старт
+## Startup
 
-- Для содержательной работы с ФТС один раз прочитать `work/STATE.md`.
-- Перед содержательным анализом ФТС прочитать `work/notation.md`.
-- Эти правила уже переданы в контексте: повторно читать `AGENTS.md` не нужно.
-  Повторять чтение других файлов только при изменении нужного места или
-  утрате необходимого контекста. Простые вопросы, ссылки, точечные редакторские
-  правки и настройка приложения не требуют STATE, notation или справочника.
-- Подробности выбирать по таблице ниже. Не обходить ссылки рекурсивно.
+- Read `work/STATE.md` once before substantive FTS work and `work/notation.md`
+  before substantive analysis.
+- These rules are already supplied in context; do not reread `AGENTS.md`.
+  Reread other files only if relevant content changed or needed context was lost.
+  Simple questions, links, small editorial changes, and app configuration do not
+  require STATE, notation, or the procedure reference.
+- Select further reading from the table; do not recursively follow links.
 
-## Постоянные правила
+## Standing rules
 
-1. `source/` — активный канон. Для исследования писать в `work/`.
-   Прямая команда автора исправить/заменить канон разрешает реальную замену
-   без повторного согласования; выполнять процедуру `PROJECT_INSTRUCTIONS.md#canon`.
-2. Значение терминов брать из артефактов ФТС. Нетривиальный вывод снабжать
-   карточкой/триплетом/листом или пометкой `[внешнее]`. При конфликте канон
-   определяет содержание ФТС; расхождение записывать в `work/EXTERNAL_CONFLICTS.md`.
-   Отсутствующее основание: `нет в артефактах`.
-3. М-регистр — минимальная проекция выражения; Ч-регистр — операциональное
-   чтение (Dist₃, Select, Agg, K). Сохранять точные формулы и группировку.
-   `branch access ≠ Lift`, `array ≠ tensor` без закона преобразования;
-   регистр и оверлей различать; локальные эквивалентности обосновывать с областью.
-4. Авторское принятие, математическое доказательство и `St_FTS` различны.
-   Повышение требует SP/К1–К5 с основанием по типу claim и записью в графе.
-   `SP_LIMITS` — пересматриваемые долги; проверенный контрпример отзывает соответствующий
-   мат-факт, технический FAIL требует диагностики. Процедура — `status`.
-5. Сохранять байты канона и первоисточников: не включать `core.autocrlf`,
-   не снимать `-text` с `source/`, TSV и JSONL. Python запускать с `-X utf8`.
-6. Сохранять работу на диск; согласованный результат — коммитом файлов задачи.
-   В `STATE.md` оставлять текущую точку и ссылки, без пересказа истории.
-   Назначение и размеры документов — `work/DOCUMENT_MAP.md`.
-   Для мелкой правки достаточно одного просмотра diff и проверки затронутого
-   результата; независимые проверки объединять. STATE и журналы обновлять,
-   только если меняется текущая задача, вывод или следующий шаг.
+1. `source/` is the active canon; write research in `work/`. An explicit author
+   instruction to correct/replace the canon authorizes the actual replacement
+   without repeated approval; follow `PROJECT_INSTRUCTIONS.md#canon`.
+2. Take FTS terms from its artifacts. Ground substantive conclusions in a
+   card/triple/sheet or mark them `[внешнее]`. In a conflict, canon defines FTS
+   content; record the discrepancy in `work/EXTERNAL_CONFLICTS.md`.
+   Missing grounding: `нет в артефактах`.
+3. The M-register is the minimal expression projection; the Ch-register is
+   operational reading (Dist₃, Select, Agg, K). Preserve exact formulas and grouping.
+   `branch access ≠ Lift`; `array ≠ tensor` without a transformation law.
+   Distinguish registers from overlays; justify local equivalences within a stated scope.
+4. Author acceptance, mathematical proof, and `St_FTS` are distinct. Promotion
+   requires SP/К1–К5 with evidence appropriate to the claim type and a graph record.
+   `SP_LIMITS` records revisable evidence gaps. A verified counterexample withdraws
+   the affected math fact; a technical FAIL needs diagnosis. See procedure `status`.
+5. Preserve canon and primary-source bytes: do not enable `core.autocrlf` or remove
+   `-text` from `source/`, TSV, or JSONL. Run Python with `-X utf8`.
+6. Save work to disk; commit coherent results using only task files. Keep `STATE.md`
+   to the current point and links, without retelling history. File roles and size
+   guidelines: `work/DOCUMENT_MAP.md`. For a small edit, review the diff and affected
+   result once; batch independent checks. Update STATE/journals only when the task,
+   conclusion, or next step changes.
 
-## Подробности по ситуации
+## Task-specific reading
 
-| Когда | Что открыть |
+| Task | Read |
 |---|---|
-| Правка канона | [Процедура замены](PROJECT_INSTRUCTIONS.md#canon) |
-| Основание / статус / FAIL | [Статусная процедура](PROJECT_INSTRUCTIONS.md#status) |
-| Существенный математический вывод | [Проверка Wolfram](PROJECT_INSTRUCTIONS.md#wolfram) |
-| Внешнее научное основание | [Академическое исследование](PROJECT_INSTRUCTIONS.md#academic) |
-| Нужна команда или проверка | [Команды](PROJECT_INSTRUCTIONS.md#commands), [проверки](PROJECT_INSTRUCTIONS.md#checks) |
-| Граф / arXiv / завершение шага | Разделы `graph` / `arxiv` / `save` в `PROJECT_INSTRUCTIONS.md` |
-| Куда записать новый материал | [Карта документов](work/DOCUMENT_MAP.md) |
+| Canon revision | [Replacement procedure](PROJECT_INSTRUCTIONS.md#canon) |
+| Evidence / status / FAIL | [Status procedure](PROJECT_INSTRUCTIONS.md#status) |
+| Substantive mathematical conclusion | [Wolfram check](PROJECT_INSTRUCTIONS.md#wolfram) |
+| External scientific grounding | [Academic research](PROJECT_INSTRUCTIONS.md#academic) |
+| Commands or verification | [Commands](PROJECT_INSTRUCTIONS.md#commands), [checks](PROJECT_INSTRUCTIONS.md#checks) |
+| Graph / arXiv / completing work | Sections `graph` / `arxiv` / `save` in `PROJECT_INSTRUCTIONS.md` |
+| Where to write new material | [Document map](work/DOCUMENT_MAP.md) |
 
-## Ответ
+## Responses
 
-Для анализа: **Найдено → зависимости → вывод → что не закрыто.**
-Успешную проверку сообщать кратко; полный отчёт давать при сбое.
+For analysis: **Найдено → зависимости → вывод → что не закрыто.**
+Report successful checks briefly; provide details on failure.

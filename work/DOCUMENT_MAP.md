@@ -1,84 +1,87 @@
-# Где читать и хранить материалы ФТС
+<a id="где-читать-и-хранить-материалы-фтс"></a>
+# Where to read and store FTS material
 
-Этот указатель открывается по задаче. При старте достаточно файлов,
-перечисленных в `AGENTS.md`; переход по ссылке не означает загрузку всех
-соседних документов.
+Use this index by task. Startup needs only the files listed in `AGENTS.md`;
+following a link does not require loading neighbouring documents.
 
-## Назначение файлов
+<a id="назначение-файлов"></a>
+## File roles
 
-| Материал | Основное место | Когда читать / что записывать |
+| Material | Main location | When to read / what to write |
 |---|---|---|
-| Обязательный краткий контракт | [AGENTS.md](../AGENTS.md) | Старт и постоянно действующие правила; передаётся агенту автоматически |
-| Процедуры по задаче | [PROJECT_INSTRUCTIONS.md](../PROJECT_INSTRUCTIONS.md) | Открывать нужный раздел: канон, гейты, команды, граф, arXiv, сохранение |
-| Текущее состояние | [STATE.md](STATE.md) | Один раз перед содержательной работой с ФТС; цель, следующий шаг, препятствия и ссылки; история — в отдельном снимке |
-| Краткие значения символов | [notation.md](notation.md) | Читать перед содержательным анализом ФТС; обозначение → смысл → источник |
-| Активные канонические формы и статусы | `source/fts_cards.jsonl`, доступ через `tools/query.py` | Читать конкретные карточки; изменение — по прямому авторскому поручению |
-| Принятые автором поправки | [AUTHOR_CANON.md](AUTHOR_CANON.md), `author_canon/` | Точная формулировка, область принятия и provenance; новые предложения сначала фиксировать в журнале |
-| Новая реплика автора | [DIALOGUE_NUANCE_JOURNAL.md](DIALOGUE_NUANCE_JOURNAL.md) | Рабочая очередь: только `pending` и `needs_author`; цитата, прочтение и адрес интеграции |
-| Обработанная реплика автора | [DIALOGUE_NUANCE_SOURCES.md](DIALOGUE_NUANCE_SOURCES.md) | Точная цитата и адрес результата; полный прежний разбор доступен в истории Git |
-| Исследование конкретного вопроса | Тематический пакет в `v14_rebuild/` | Основания, анализ, модель, свидетель, ограничения; сначала искать существующий пакет |
-| Обобщённое изложение теории | [FTS_v14_paper.md](v14_rebuild/FTS_v14_paper.md) | Согласованный результат со ссылками и статусом; подробные промежуточные разборы остаются в пакетах |
-| Незакрытый вопрос | [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) | Нерешённый пункт, нужный свидетель, следующий шаг; по возможности дополнять существующий OQ |
-| Ответы автора на вопросы графа | [AUTHOR_ANSWERS_60.md](AUTHOR_ANSWERS_60.md) | 60 уникальных связанных OQ с кратким текстом, ссылкой на контекст и полем для ответа |
-| Исследовательские ответы на 60 OQ | [Разбор через Undermind](v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md) | Дословный вопрос, рабочий ответ ассистента, оставшиеся основания; источники и протокол — в том же пакете |
-| Дополнительное семёрочное окно | [Тор и группа Клейна](v14_rebuild/seven_window_torus_klein_2026-09-30.md) | Авторские цитаты, модель фаз ℤ₄ × ℤ₆, группа отражений V₄, ограничения соответствия ФТС и отдельная запись Wolfram |
-| Принятое решение о работе | [DECISIONS.md](DECISIONS.md) | Что выбрано, почему и ссылка на полный разбор |
-| Опровергнутый рабочий вывод | [REFUTED.md](REFUTED.md) | Какой claim не выдержал проверку, свидетель и остаток |
-| Конфликт с внешним источником | [EXTERNAL_CONFLICTS.md](EXTERNAL_CONFLICTS.md#правило-внесения) | Обе стороны, область сравнения и решение; правило ведения находится в самом журнале |
-| Статусное повышение | [status_patch_v14.md](v14_rebuild/status_patch_v14.md) и SP-карточка | Условия повышения, математическая и смысловая оси отдельно |
-| Машинные производные | `claim_graph/`, `export/` | Обновлять штатными генераторами после правок исходных рабочих документов |
-| Старое представление документа | `state_history/`, `notation_history/`, `instruction_history/`, Git | История переноса и восстановления; читать при проверке прежней версии |
+| Required short contract | [AGENTS.md](../AGENTS.md) | Startup and standing rules; supplied to the agent automatically |
+| Task procedures | [PROJECT_INSTRUCTIONS.md](../PROJECT_INSTRUCTIONS.md) | Relevant section only: canon, gates, commands, graph, arXiv, saving |
+| Current state | [STATE.md](STATE.md) | Once before substantive FTS work; goal, next step, blockers, links; history in a separate snapshot |
+| Concise symbol meanings | [notation.md](notation.md) | Before substantive FTS analysis; symbol → meaning → source |
+| Active canonical forms/statuses | `source/fts_cards.jsonl`, via `tools/query.py` | Read specific cards; changes require an explicit author instruction |
+| Author-accepted amendments | [AUTHOR_CANON.md](AUTHOR_CANON.md), `author_canon/` | Exact wording, acceptance scope, provenance; journal new proposals first |
+| New author contribution | [DIALOGUE_NUANCE_JOURNAL.md](DIALOGUE_NUANCE_JOURNAL.md) | Working queue: `pending`/`needs_author` only; quotation, reading, integration destination |
+| Processed author contribution | [DIALOGUE_NUANCE_SOURCES.md](DIALOGUE_NUANCE_SOURCES.md) | Exact quotation and result location; full previous analysis in Git history |
+| Research on a specific question | Thematic package in `v14_rebuild/` | Grounds, analysis, model, witness, limits; look for an existing package first |
+| General theory presentation | [FTS_v14_paper.md](v14_rebuild/FTS_v14_paper.md) | Coherent result, links, status; intermediate detail stays in research packages |
+| Open question | [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) | Unresolved issue, needed witness, next step; extend existing OQ where possible |
+| Author answers to graph questions | [AUTHOR_ANSWERS_60.md](AUTHOR_ANSWERS_60.md) | 60 unique linked OQs: short text, context link, answer field |
+| Research answers to 60 OQs | [Undermind review](v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md) | Verbatim question, working assistant answer, missing grounds; sources/protocol in the same package |
+| Additional seven-element window | [Torus and Klein group](v14_rebuild/seven_window_torus_klein_2026-09-30.md) | Author quotations, phase model ℤ₄ × ℤ₆, reflection group V₄, FTS correspondence limits, separate Wolfram record |
+| Accepted work decision | [DECISIONS.md](DECISIONS.md) | Choice, reason, full-analysis link |
+| Refuted working conclusion | [REFUTED.md](REFUTED.md) | Refuted claim, witness, remainder |
+| External-source conflict | [EXTERNAL_CONFLICTS.md](EXTERNAL_CONFLICTS.md#правило-внесения) | Both sides, comparison domain, decision; procedure in the log |
+| Status promotion | [status_patch_v14.md](v14_rebuild/status_patch_v14.md) and SP card | Promotion conditions; separate mathematical/semantic axes |
+| Machine derivatives | `claim_graph/`, `export/` | Update with standard generators after changes to working source documents |
+| Earlier document versions | `state_history/`, `notation_history/`, `instruction_history/`, Git | Transfer/recovery history; read when verifying an earlier version |
 
-## Куда отнесены разделы прежней нотации
+<a id="куда-отнесены-разделы-прежней-нотации"></a>
+## Locations of former notation sections
 
-Проверено при разборе 2026-09-26. «Уже раскрыто» означает, что в указанном
-документе найдено содержательное изложение и создавать ещё одну копию не нужно.
-Предыдущее содержимое сохранено в [истории переноса](notation_history/2026-09-26/README.md).
+Checked 2026-09-26. “Covered” means the substantive explanation already exists
+at the listed location; no duplicate is needed. Earlier content:
+[transfer history](notation_history/2026-09-26/README.md).
 
-| Тема прежнего раздела | Рабочий адрес | Результат сверки |
+| Former topic | Working location | Review result |
 |---|---|---|
-| М/Ч/А, уровни, `window`, имена статусов | [Краткий словарь](notation.md), процедура — [патч-таблица](v14_rebuild/status_patch_v14.md) | Короткие определения и порядок обозначений сохранены в словаре |
-| Конфликт с внешним чтением | [EXTERNAL_CONFLICTS.md](EXTERNAL_CONFLICTS.md#правило-внесения) | Правило уже раскрыто; убран его пересказ из словаря |
-| `¬A`, `0_A`, `⊖A`, `−`, `Rot` | Кратко — [словарь](notation.md); подробно — статья [§3.2–3.2a](v14_rebuild/FTS_v14_paper.md#notation-signs) | Определения оставлены; связи C-01/C-38/C-39 уже раскрыты в статье |
-| Равенство не-предмета и отсутствия на У0 | [Принятая поправка У0](author_canon/2026-09-19/AMENDMENT.md#u0) | Сохранён указатель на локальную область равенства |
-| Границы `x=0` и `x=1` | Статья [§3.5–3.6](v14_rebuild/FTS_v14_paper.md#notation-boundaries) | Математическое исследование уже раскрыто; исключено из стартового словаря |
-| Каналы Q/R и полюс отношения | [Регистровая карта §2](v14_rebuild/FTS_v14_register_map.md#readout-channels), статья §5.1b | Уже раскрыто; в словаре остаются имена каналов |
-| v11, χ-, комплексный и тензорный оверлеи | [Регистровая карта §3](v14_rebuild/FTS_v14_register_map.md#overlays), актуальная `CH_07` | Добавлена короткая привязка исторических v11–v13; статусы читаются по карточкам |
-| Четыре смысла произвольности | [Разбор непроизвольности](v14_rebuild/nonarbitrariness_dialogue_2026-09-13/REVIEW.md#четыре-смысла-произвольности) | Уже раскрыто; старые М-формы в этом датированном разборе помечены историческими |
-| Активные формы У6/У7 | [Поправка 2026-09-21](author_canon/2026-09-21/AMENDMENT.md#найдено-точная-замена-форм-у6у7), карточки `M_06`, `M_07` | Полные формулы читаются из активного источника |
-| Скорость и фундаментальность | [Принятая формулировка](author_canon/2026-09-19/AMENDMENT.md#expectation); [новое двустороннее чтение](v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md) | Разделены принятое положение и последующее исследовательское предложение |
-| Минимум, доступность, применение, `Tri_k` | [Исследование наследования, §5–6](v14_rebuild/recursive_distinction_2026-09-12/REVIEW.md#minimum-capability) | Уже раскрыто; `Cap_n`, `Act_n` — вспомогательные обозначения |
-| «Локально абсолютно, глобально относительно» и чтение отсутствий | [Уточнения автора 2026-09-12](v14_rebuild/recursive_distinction_2026-09-12/AUTHOR_QUESTIONS.md) | Цитата и её ревизии уже сохранены |
-| У3→У2 и У2→У1 | [Исследование понижения](v14_rebuild/interpretation_descent_undermind_2026-09-12/REVIEW.md#interpretation-descent) | Уже раскрыто; потеря степени интерпретации отделена от потери самого кодового хода |
-| Траектория, разделение/суммирование, отказы, верхние окна и рефлексия | [Интеграция DN-0001–DN-0016](v14_rebuild/dialogue_semantics_2026-09-15.md#trajectory) | Все восемь пунктов прежней сводки покрыты разделами 1–6 |
-| Уточнения DN-0017–DN-0027 | [Пакетная интеграция](v14_rebuild/dialogue_integration_2026-09-22.md#результаты) | Уже есть разбор по каждому DN-ID; повторная сводка из словаря исключена |
-| Уровневое равенство, отражение и кодовое «ведёт к» | [Разбор равенства, §6–8](v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md#types-of-equality), DN-0030/0031 | Уже раскрыто; сохранены точная авторская позиция и открытый вопрос |
+| М/Ч/А, levels, `window`, status names | [Dictionary](notation.md); procedure: [status patch](v14_rebuild/status_patch_v14.md) | Concise meanings and notation order preserved |
+| External-reading conflict | [EXTERNAL_CONFLICTS.md](EXTERNAL_CONFLICTS.md#правило-внесения) | Rule covered there; duplicate removed from dictionary |
+| `¬A`, `0_A`, `⊖A`, `−`, `Rot` | Brief: [dictionary](notation.md); detail: paper [§3.2–3.2a](v14_rebuild/FTS_v14_paper.md#notation-signs) | Definitions retained; C-01/C-38/C-39 links covered in paper |
+| Non-object/absence equality at У0 | [Accepted У0 amendment](author_canon/2026-09-19/AMENDMENT.md#u0) | Pointer to the equality's local scope preserved |
+| Boundaries `x=0`, `x=1` | Paper [§3.5–3.6](v14_rebuild/FTS_v14_paper.md#notation-boundaries) | Mathematical analysis covered; excluded from startup dictionary |
+| Q/R channels and relation pole | [Register map §2](v14_rebuild/FTS_v14_register_map.md#readout-channels), paper §5.1b | Covered; channel names remain in dictionary |
+| v11, χ-, complex/tensor overlays | [Register map §3](v14_rebuild/FTS_v14_register_map.md#overlays), current `CH_07` | Brief v11–v13 history reference added; read statuses from cards |
+| Four meanings of arbitrariness | [Non-arbitrariness review](v14_rebuild/nonarbitrariness_dialogue_2026-09-13/REVIEW.md#четыре-смысла-произвольности) | Covered; old M-forms in the dated review marked historical |
+| Active У6/У7 forms | [2026-09-21 amendment](author_canon/2026-09-21/AMENDMENT.md#найдено-точная-замена-форм-у6у7), `M_06`, `M_07` | Read full formulas from active source |
+| Speed and fundamentality | [Accepted wording](author_canon/2026-09-19/AMENDMENT.md#expectation); [bidirectional reading](v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md) | Accepted claim distinguished from later research proposal |
+| Minimum, access, application, `Tri_k` | [Inheritance study §5–6](v14_rebuild/recursive_distinction_2026-09-12/REVIEW.md#minimum-capability) | Covered; `Cap_n`, `Act_n` are auxiliary notation |
+| «Локально абсолютно, глобально относительно» and absence readings | [2026-09-12 author clarifications](v14_rebuild/recursive_distinction_2026-09-12/AUTHOR_QUESTIONS.md) | Quotation and revisions preserved |
+| У3→У2, У2→У1 | [Descent study](v14_rebuild/interpretation_descent_undermind_2026-09-12/REVIEW.md#interpretation-descent) | Loss of interpretation degree distinguished from loss of the code move |
+| Trajectory, separation/summation, refusals, upper windows, reflection | [DN-0001–DN-0016 integration](v14_rebuild/dialogue_semantics_2026-09-15.md#trajectory) | All eight former summary points covered in sections 1–6 |
+| DN-0017–DN-0027 clarifications | [Batch integration](v14_rebuild/dialogue_integration_2026-09-22.md#результаты) | Each DN-ID has an analysis; duplicate dictionary summary removed |
+| Level equality, reflection, code «ведёт к» | [Equality review §6–8](v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md#types-of-equality), DN-0030/0031 | Exact author position and open question preserved |
 
-## Правило следующей записи
+<a id="правило-следующей-записи"></a>
+## Where to add the next entry
 
-1. Найти строку назначения и существующий тематический документ.
-2. Записать полное содержание в одном основном месте с источником и статусом.
-3. В `notation.md` добавлять только новое обозначение и краткое значение;
-   в `STATE.md` — только текущий шаг и ссылку; в `DECISIONS.md` — выбор и причину.
-4. Если материал уже раскрыт, поставить прямую ссылку на его раздел.
-   Точную авторскую цитату хранить в журнале или авторском пакете, модель
-   ассистента — в исследовательском разборе с собственной пометкой.
-5. У каждого правила одно основное место: постоянное правило — `AGENTS.md`,
-   его процедура — нужный раздел `PROJECT_INSTRUCTIONS.md`. В других файлах
-   ставить ссылку. Результаты исследований и завершённую историю размещать
-   в тематических документах, без пересказов в стартовых файлах.
+1. Find the destination row and existing thematic document.
+2. Store full content in one main location, with source and status.
+3. Add only a new symbol and concise meaning to `notation.md`; the current step
+   and link to `STATE.md`; the decision and reason to `DECISIONS.md`.
+4. If material is already explained, link directly to its section. Keep exact
+   author quotations in the journal/author packet; put the assistant's model in
+   the research analysis with its own label.
+5. Each rule has one main location: standing rules in `AGENTS.md`, procedures in
+   the relevant `PROJECT_INSTRUCTIONS.md` section. Other files link there. Keep
+   research results and completed history in thematic documents, without
+   retelling them in startup files.
 
-## Бюджет стартового чтения
+<a id="бюджет-стартового-чтения"></a>
+## Startup reading budget
 
-| Файл | Ориентир знаков | Что делать при росте |
+| File | Character guideline | If it grows |
 |---|---:|---|
-| `AGENTS.md` | 3 500 | Переносить команды, редкие процедуры и подробности в справочник |
-| `STATE.md` | 2 500 | Сохранять снимок; оставлять текущую цель, следующий шаг, препятствия и адреса |
-| `notation.md` | 4 000 | Сохранять краткие значения; подробные разборы заменять ссылками |
+| `AGENTS.md` | 3 500 | Move commands, rare procedures, and detail to the reference |
+| `STATE.md` | 2 500 | Save a snapshot; keep the current goal, next step, blockers, and locations |
+| `notation.md` | 4 000 | Keep concise meanings; replace detailed explanations with links |
 
-Объёмы — редакторские ориентиры. При росте уплотнять или переносить материал
-с сохранением истории; нужное правило не удалять ради числа знаков. Ссылка не
-означает обязательного чтения всего документа. Набор для работы с проектом:
-контракт; перед содержательной работой с ФТС добавляются STATE и notation; дальнейшее
-чтение выбирается по вопросу. Оригинальные снимки и сравнение размеров:
-[оптимизация 2026-09-27](instruction_history/2026-09-27/README.md).
+Sizes are editorial guidelines. Condense/move content while preserving history;
+do not delete a needed rule to meet a character count. A link does not require
+reading the entire document. Start with the contract; add STATE and notation for
+substantive FTS work, then choose further reading by task. Original snapshots and
+size comparison: [2026-09-27 optimization](instruction_history/2026-09-27/README.md).

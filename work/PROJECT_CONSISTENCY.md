@@ -1,54 +1,49 @@
-# Воспроизводимая проверка согласованности ФТС
+# Reproducible FTS project consistency check
 
-## Одна команда
+## One command
 
-Из корня проекта:
+From the project root:
 
 ```text
 python -X utf8 tools/check_project_consistency.py
 ```
 
-Команда только читает проект. Она не исправляет `source/`, не пересобирает
-граф, review-пакет или навигационный Graphify. Код `0` означает, что все пять
-обязательных проверок завершились успешно; код `1` означает хотя бы одну
-ошибку или непроведённую обязательную проверку. `--verbose` печатает полный
-вывод, `--json` — тот же собранный результат в JSON. `--only <id>` годится
-только для частичной диагностики и не является полным verdict.
+The command reads the project without repairing `source/` or rebuilding the graph,
+review package, or Graphify navigation. Exit `0` means all five required checks
+passed; exit `1` means an error or a required check not run. `--verbose` shows full
+output; `--json` returns the same collected result as JSON. `--only <id>` is partial
+diagnosis, not a full verdict.
 
-| ID маршрута | Существующая команда | Проверяемое свойство | Код и создаваемые файлы |
+| Route ID | Command | Property checked | Exit code and outputs |
 |---|---|---|---|
-| `canon_manifest` | `python -X utf8 tools/verify.py --strict` | SHA256 и размер всех файлов активного `source/`, отсутствие неучтённых файлов | `0` — всё учтено; `1` — missing/mismatch/extra; `2` — нет MANIFEST. Ничего не создаёт. |
-| `claim_graph` | `python -X utf8 tools/claim_graph.py validate --idempotent` | направленные рёбра, типы, локаторы, полный набор SHA256-входов (включая `OPEN_QUESTIONS.md`), полнота канонных assertions и параллельных предикатов, research claims/bridges, детерминизм сборки | `0` — PASS; ненулевой — структурная ошибка, пропавший/изменённый или неучтённый вход. Ничего не создаёт. |
-| `formal_suite` | `python -X utf8 work/v14_rebuild/verification.py` | точные формальные предикаты C01–C62 статьи | `0` — все PASS; `1` — FAIL; `2` — ERROR/NOT_RUN. Записывает краткий `verification_report.md` при PASS и подробную диагностику при отрицательном исходе. |
-| `audit` | `python -X utf8 work/v14_rebuild/audit/run_audit.py all` | схема и связи канона, трассируемость claim/OQ/article, контроль review-копий и checksum, статическая защита сьюта и исторические артефакты | `0` — нет необработанных P0/P1; `1` — P0/P1; `2` — неверный режим. Ничего не создаёт. |
-| `research_export` | `python -X utf8 tools/build_research_export.py --check` | существующая объединённая выгрузка побайтно равна детерминированной сборке из текущих входов | `0` — актуальна; `1` — отсутствует/устарела/сборка невалидна. Ничего не создаёт. |
+| `canon_manifest` | `python -X utf8 tools/verify.py --strict` | SHA256/size of every active `source/` file; no unaccounted files | 0: all accounted for; 1: missing/mismatch/extra; 2: no MANIFEST. Writes nothing. |
+| `claim_graph` | `python -X utf8 tools/claim_graph.py validate --idempotent` | Directed edges, types, locators, all SHA256 inputs including `OPEN_QUESTIONS.md`, canonical assertion/parallel-predicate coverage, research claims/bridges, deterministic build | 0: PASS; nonzero: structural error or missing/changed/unaccounted input. Writes nothing. |
+| `formal_suite` | `python -X utf8 work/v14_rebuild/verification.py` | Exact paper predicates C01–C62 | `0`: all PASS; `1`: FAIL; `2`: ERROR/NOT_RUN. Writes a short `verification_report.md` on PASS and detailed diagnostics for negative outcomes. |
+| `audit` | `python -X utf8 work/v14_rebuild/audit/run_audit.py all` | Canon schema/links, claim/OQ/article traceability, review copies/checksums, static suite safeguards, historical artifacts | 0: no unresolved P0/P1; 1: P0/P1; 2: invalid mode. Writes nothing. |
+| `research_export` | `python -X utf8 tools/build_research_export.py --check` | Combined export equals the deterministic build from current inputs byte-for-byte | 0: current; 1: missing/stale/invalid build. Writes nothing. |
 
-`PASS_WITH_DOCUMENTED_LIMITATIONS` означает, что соответствующая команда
-вернула `0`, но её вывод содержит документированный P2. `FAIL` — обязательная
-ошибка, `NOT_RUN` — обязательная проверка не была выполнена. Оба последних
-состояния делают общий код ненулевым. Полный маршрут всегда показывает P2
-отдельно и не маскирует их как успех.
+`PASS_WITH_DOCUMENTED_LIMITATIONS` means exit 0 with a documented P2.
+`FAIL` means a failed required check; `NOT_RUN` means a required check was not
+performed. Both make the overall exit nonzero. The full route reports P2 separately
+without masking them as unconditional success.
 
-## Существующие вспомогательные средства вне verdict
+## Auxiliary tools outside the verdict
 
-`verification.py --only C06 C29` выполняет выбранные предикаты и необходимые
-зависимости. Результат и `verification_diagnostic.md` помечены как частичные;
-полный отчёт не подменяется. Перед завершением формальных изменений нужен полный
-прогон. Причина FAIL/ERROR и её статусное действие определяются по
-[действующей процедуре](../PROJECT_INSTRUCTIONS.md#status).
+`verification.py --only C06 C29` runs selected predicates and prerequisites. Its
+result and `verification_diagnostic.md` are explicitly partial and do not replace
+the full report. Run the full suite before completing formal changes. Diagnose
+FAIL/ERROR and its status effect under the [current procedure](../PROJECT_INSTRUCTIONS.md#status).
 
-`work/v14_rebuild/crosscheck.py grounds|levels|sp|fails` выводит выбранные
-канонные карточки для ручного чтения и не имеет fail-семантики для ссылок
-статьи; поэтому его нельзя выдавать за проверку трассируемости. Эту роль в
-read-only маршруте выполняет `run_audit.py all`. `graphify_audit_navigation.py
---verify` перед проверкой пишет фрагмент navigation-слоя, поэтому он также не
-входит в чистый verdict и оставлен явным действием восстановления ниже.
+`work/v14_rebuild/crosscheck.py grounds|levels|sp|fails` displays selected canon
+cards for manual reading; it has no reference-failure semantics and is not a
+paper traceability check. `run_audit.py all` performs that role in the read-only
+route. `graphify_audit_navigation.py --verify` writes a navigation fragment before
+checking, so it belongs to explicit recovery rather than the read-only verdict.
 
-## Явное восстановление производных
+## Explicit derivative recovery
 
-После изменения входных артефактов выполняйте только нужные действия, каждое
-отдельно; история обнаруженных и уже разрешённых P1 находится в
-`work/project_consistency/BLOCKERS_2026-09-23.md`:
+After input changes, run only necessary actions, each separately. Discovered and
+resolved P1 history: `work/project_consistency/BLOCKERS_2026-09-23.md`.
 
 ```text
 python -X utf8 tools/claim_graph.py build
@@ -57,26 +52,23 @@ E:\Codex\mcp\graphify\tools\graphifyy\Scripts\python.exe -X utf8 tools/graphify_
 python -X utf8 tools/check_project_consistency.py
 ```
 
-Первое действие переписывает только авторитетные производные claim-графа
-(`claim_graph.json`, coverage/change report и HTML). Второе обновляет явный
-список review-копий, единую выгрузку и `CHECKSUMS.sha256`; staging-файлы
-`v14_export_cards.jsonl`, `v14_export_triples.tsv` и `README.md` не
-подменяются. Третье необязательно для verdict: Graphify — навигационная
-проекция, не источник истины; оно пишет фрагмент/граф/отчёт и потому вынесено
-из read-only маршрута. Ни одно из этих действий не заменяет активный канон.
-Перед `claim_graph.py build` все его входы должны быть в выбранном,
-отслеживаемом состоянии: сборка не является способом выбрать версию
-исследовательского source-артефакта. После любой правки OQ граф также требует
-пересборки: OQ теперь записан в его `input_digests`.
+The first action rewrites authoritative claim-graph derivatives only
+(`claim_graph.json`, coverage/change report, HTML). The second updates the explicit
+review-copy list, combined export, and `CHECKSUMS.sha256`; it preserves staging
+`v14_export_cards.jsonl`, `v14_export_triples.tsv`, and `README.md`. The third is
+optional: Graphify is a navigation projection, not the source of truth. It writes
+a fragment/graph/report and is therefore outside the read-only route. None
+replaces the active canon. Before `claim_graph.py build`, select and track its
+input versions; the build must not choose a research source-artifact version.
+Any OQ change also requires a graph rebuild because OQ is in `input_digests`.
 
-## Границы автоматической проверки
+## Limits of automatic checks
 
-Маршрут не доказывает семантику ФТС, авторское принятие, `St_FTS`, глобальную
-математическую истинность, биологическую релевантность, полноту внешней
-литературы или результаты новых экспериментов. Он также не выбирает между
-конфликтующими содержательными статусами OQ. C01–C62 свидетельствуют лишь о
-точно записанных формальных предикатах; структурный PASS графа хранит
-provenance, но не заменяет основания или решение автора.
+The route does not prove FTS semantics, author acceptance, `St_FTS`, global
+mathematical truth, biological relevance, external-literature completeness, or
+new experimental results. It does not choose between conflicting substantive OQ
+statuses. C01–C62 witness only their exact formal predicates; structural graph
+PASS preserves provenance without replacing grounds or the author's decision.
 
-Исходные чужие незавершённые изменения и граница будущего коммита указаны в
+Pre-existing unfinished work by others and the intended future commit boundary:
 `work/project_consistency/BASELINE_UNFINISHED_2026-09-23.md`.

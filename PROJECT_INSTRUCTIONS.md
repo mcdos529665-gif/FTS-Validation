@@ -1,262 +1,238 @@
-# PROJECT_INSTRUCTIONS — процедуры ФТС по задаче
+# PROJECT_INSTRUCTIONS — FTS task procedures
 
-Обязательный краткий контракт находится в [AGENTS.md](AGENTS.md).
-Этот справочник читать по нужному разделу. Состояние — в [STATE](work/STATE.md),
-адреса теоретических материалов — в [карте документов](work/DOCUMENT_MAP.md).
+[AGENTS.md](AGENTS.md) is the required short contract. Read only the relevant
+section here. Current point: [STATE](work/STATE.md); research locations:
+[document map](work/DOCUMENT_MAP.md).
 
-| Ситуация | Раздел |
+| Task | Section |
 |---|---|
-| Замена активного канона по поручению автора | [Исправление канона](#canon) |
-| Основание, статус, потолок или FAIL | [Статусная процедура](#status) |
-| Независимая математическая проверка | [Wolfram](#wolfram) |
-| Внешние научные основания | [Академический контур](#academic) |
-| Доступ к карточкам, запуск инструментов | [Команды](#commands) |
-| Проверка и обновление производных | [Проверки](#checks) |
-| Работа с графом утверждений | [Граф](#graph) |
-| Загрузка статьи arXiv | [Источники arXiv](#arxiv) |
-| Завершение содержательного шага | [Сохранение](#save) |
+| Author-requested active canon replacement | [Canon revision](#canon) |
+| Evidence, status, ceiling, or FAIL | [Status procedure](#status) |
+| Independent mathematical verification | [Wolfram](#wolfram) |
+| External scientific grounding | [Academic research](#academic) |
+| Card access and tools | [Commands](#commands) |
+| Verification and derived outputs | [Checks](#checks) |
+| Claim graph | [Graph](#graph) |
+| arXiv article import | [arXiv sources](#arxiv) |
+| Completing substantive work | [Saving](#save) |
 
 <a id="canon"></a>
-## Явная команда на исправление канона
+## Explicit canon revision
 
-Если пользователь прямо пишет «исправь», «замени канон», «исправь канон»,
-«замени формулу в каноне» или равнозначную команду, это является прямым
-разрешением **выполнить замену**, а не подготовить предложение, supplement или
-кандидатный патч. Нельзя переинтерпретировать такую команду как просьбу только
-обновить `work/` и нельзя повторно спрашивать разрешение на саму замену.
+An explicit instruction such as «исправь», «замени канон», «исправь канон»,
+«замени формулу в каноне», or an equivalent author request authorizes
+**actual replacement**. Do not substitute a proposal, supplement, candidate patch,
+or an update confined to `work/` for the requested replacement; do not ask for approval again.
 
-Порядок исполнения:
+1. Preserve the previous active release in `work/canon_history/<release-id>/`
+   or another location specified by the user.
+2. Make the smallest coherent replacement in the active `source/` release.
+   If a historical version was specified, issue a new active release based on it
+   rather than modifying the historical original.
+3. Update all canon derivatives and `source/MANIFEST.json`, recording the base
+   release, date, provenance, and release type. An author supplement may preserve
+   history but does not replace the actual canonical change.
+4. Run `tools/verify.py`, targeted `tools/query.py`, and relevant tests. If the user
+   also said «заверши незавершённые изменения», complete all unfinished changes
+   belonging to the request and identify unrelated work separately.
 
-1. Сохранить предыдущий активный релиз в `work/canon_history/<release-id>/` или
-   в другом явно указанном пользователем месте.
-2. Внести минимальную согласованную замену в активный `source/` релиз; если
-   пользователь назвал конкретную историческую версию, менять именно её не
-   следует — выпускается новый активный релиз на её основе.
-3. Обновить все производные файлы канона и `source/MANIFEST.json`, указав
-   базовый релиз, дату, provenance и тип выпуска. Отдельный author supplement
-   может сохранять историю, но не заменяет фактическую каноническую правку.
-4. Проверить `tools/verify.py`, точечный `tools/query.py` и релевантные тесты.
-   Если пользователь также сказал «заверши незавершённые изменения», довести
-   до проверенного состояния все незавершённые изменения, относящиеся к этой
-   команде, и явно перечислить чужие/несвязанные остатки.
-
-По умолчанию канон не меняется. Это явное исключение для прямой команды
-пользователя; оно не даёт права молча менять статусы, основания или несвязанные
-карточки.
+Canon changes require an explicit author request. Such authorization does not
+permit silent changes to unrelated statuses, grounds, or cards.
 
 <a id="status"></a>
-## Основания, пересмотр и статус
+## Evidence, revision, and status
 
-Редакция принята по поручению автора 2026-09-30. Она заменяет прежние
-процедурные требования, в том числе встроенные инструкции релиза v13.
-Канонические формулы и зафиксированные статусы читать по активным карточкам;
-источники прежних требований сохраняют provenance.
+The author-approved 2026-09-30 policy supersedes earlier procedural requirements,
+including instructions embedded in release v13. Read canonical formulas and
+recorded statuses from active cards; preserve the provenance of earlier rules.
 
-К1–К5 применяются по типу утверждения:
+Apply К1–К5 according to claim type:
 
-- **К1 — подходящее свидетельство.** Для математического claim — проверяемое
-  доказательство или формальный свидетель точного предиката с областью и
-  кванторами; C-NN фиксирует машинную проверку в её фактической области.
-  Для эмпирического claim — протокол, данные, метрика, baseline, бюджет и
-  независимые репликации. Для определения — явная область, согласованность
-  и разобранные границы применения; для операциональной интерпретации —
-  различающий тест роли, включая альтернативу/абляцию. Принятие определения
-  не доказывает его эмпирические следствия.
-- **К2 — основания.** Указать применимые основания и зависимости. При
-  расхождении представить обоснованную ревизию с последствиями; до принятия
-  новой версии сохранять прежний статус и явно отмечать расхождение.
-- **К3 — область различий.** Сохранять типы, регистры и оверлеи. Локальная
-  эквивалентность допустима с указанными носителем, проекцией, условиями и
-  свидетелем; она не переносится автоматически на исходные объекты.
-- **К4 — объяснительная согласованность.** Проверить нижние уровни и зависимые
-  результаты. Их пересмотр допустим с основанием, областью и перечнем
-  последствий; новая версия принимается согласованно с этими зависимостями.
-- **К5 — условие пересмотра.** Указать контрпример, различающий тест либо
-  условие несогласованности определения, при котором claim снимается/сужается.
+- **К1 — appropriate evidence.** Mathematical claims need a checkable proof or
+  formal witness for the exact predicate, domain, and quantifiers; C-NN records
+  machine verification within its actual scope. Empirical claims need a protocol,
+  data, metric, baseline, budget, and independent replications. Definitions need
+  an explicit domain, consistency, and examined boundaries of application.
+  Operational interpretations need a distinguishing role test, including an
+  alternative/ablation. Accepting a definition does not prove its empirical consequences.
+- **К2 — grounds.** Identify applicable grounds and dependencies. A discrepancy
+  requires a justified revision and its consequences; retain the previous status
+  and record the discrepancy until the new version is accepted.
+- **К3 — scope of distinctions.** Preserve types, registers, and overlays. Local
+  equivalence needs a stated carrier, projection, conditions, and witness; it
+  does not automatically transfer to the original objects.
+- **К4 — explanatory consistency.** Check lower levels and dependent results.
+  Revision is allowed with grounds, scope, and a list of consequences; accept
+  the new version consistently with those dependencies.
+- **К5 — revision condition.** Specify a counterexample, distinguishing test,
+  or definition-inconsistency condition under which the claim is withdrawn/narrowed.
 
-Повышение `St_FTS` требует отдельной SP-записи: тип claim, точный scope,
-свидетельство, К1–К5, статус до/после и обоснованное решение в пределах поручения
-автора. Уже порученное решение не требует отдельного повторного согласования.
-Отразить результат в
-карточках и графе; для активного канона выполнить `canon`. Математическая
-доказанность, авторское принятие и эмпирическое подтверждение — отдельные оси.
+Raising `St_FTS` requires a separate SP record: claim type, exact scope, evidence,
+К1–К5, status before/after, and a justified decision within the author's assigned
+scope. An already delegated decision needs no repeated approval. Record the result
+in cards and the graph; follow `canon` for an active canon revision. Mathematical
+proof, author acceptance, and empirical confirmation are separate axes.
 
-`SP_LIMITS`, `SP_EPI` и другие потолки фиксируют текущие недостающие основания.
-Исследовать и предлагать новые формулы разрешено на любом уровне. Снятие
-потолка требует адресно закрыть долги и пройти SP/К1–К5; номер уровня и прежний
-потолок сами по себе не блокируют новое свидетельство. Эта редакция правил
-не повышает статусы существующих карточек.
+`SP_LIMITS`, `SP_EPI`, and other ceilings record current missing grounds.
+Research and proposed formulas are allowed at every level. To lift a ceiling,
+address its specific gaps and pass SP/К1–К5. Neither the level number nor an old
+ceiling blocks new evidence by itself. This policy does not promote existing cards.
 
-При отрицательном результате сначала установить причину:
+Diagnose negative outcomes before making a status decision:
 
-| Причина | Решение |
+| Cause | Action |
 |---|---|
-| Воспроизводимый контрпример к точному claim в его области | Отозвать/сузить соответствующий математический claim; записать свидетель в `REFUTED.md` |
-| Проверка отвечает другому предикату/области | Исправить трассировку; прежнюю проверку не использовать как свидетельство этого claim |
-| Ошибка реализации, данных или среды | Исправить проверку; затронутое вычислительное свидетельство считать непроверенным до восстановления |
-| CAS не решил задачу, расхождение CAS, timeout | `inconclusive`; указать нерешённый пункт |
+| Reproducible counterexample to the exact claim within its domain | Withdraw/narrow the affected mathematical claim; record the witness in `REFUTED.md` |
+| Check evaluates a different predicate/domain | Repair traceability; do not use that check as evidence for this claim |
+| Implementation, data, or environment error | Repair the check; treat the affected computational evidence as unverified until restored |
+| Unresolved CAS computation, CAS disagreement, or timeout | `inconclusive`; identify the unresolved issue |
 
-Сам FAIL не является контрпримером. Не использовать сомнительное свидетельство
-для повышения статуса; независимое корректное доказательство оценивать отдельно.
-Необработанный FAIL/ERROR блокирует итог «проверено» для затронутого результата.
+FAIL alone is not a counterexample. Do not promote from doubtful evidence;
+assess an independent valid proof separately. An unresolved FAIL/ERROR prevents
+the affected result from being reported as verified.
 
 <a id="wolfram"></a>
-## Независимая проверка Wolfram
+## Independent Wolfram check
 
-Перед существенным математическим выводом проверять, нужен ли независимый
-Wolfram-аудит. В рамках уже порученного исследования агент выбирает необходимые
-проверки самостоятельно, без отдельной команды на навык. Использовать
-`$fts-wolfram-audit`, если независимый CAS-свидетель нужен для вывода и выполняется
-хотя бы одно условие:
+Before a substantive mathematical conclusion, assess whether independent Wolfram
+verification is needed. Within assigned research, select necessary checks without
+requiring a separate skill invocation. Use `$fts-wolfram-audit` when an independent
+CAS witness is needed for the conclusion and at least one condition applies:
 
-- вводится или меняется `formal_math_fact`, C-NN либо сильная формула статьи;
-- вывод зависит от области, кванторов, совместности допущений, нуля, полюса,
-  периодичности, главной ветви или вырожденного случая;
-- найденный контрпример способен изменить `St_math`, finding P0/P1 или условие
-  статусного повышения;
-- текст claim и локальная SymPy/C-NN-проверка могут проверять разные предикаты;
-- локальные CAS-линии расходятся или результат остаётся `inconclusive`.
+- adding/changing `formal_math_fact`, C-NN, or a strong formula in the paper;
+- dependence on domain, quantifiers, compatible assumptions, zero, poles,
+  periodicity, principal branches, or degenerate cases;
+- a counterexample may change `St_math`, a P0/P1 finding, or a promotion condition;
+- the claim text and local SymPy/C-NN check may evaluate different predicates;
+- local CAS results disagree or remain `inconclusive`.
 
-Не запускать Wolfram для чистой редакторской правки, буквальной проверки наличия
-данных, литературного поиска, эмпирической статистики без символического claim или
-повторного чтения уже проверенного неизменившегося предиката. Основной агент
-формирует полный пакет задачи и делегирует только механический CAS-шаг
-агенту `fts_wolfram_worker`; смысл ФТС, трассировка и статус остаются у основной
-модели. Если пакет неполон, дешёвому агенту задачу не передавать. Основной агент
-ждёт внешний Wolfram-вызов не более 60 секунд суммарно; затем останавливает работника
-и фиксирует `provider_timeout → inconclusive`, не повторяя вызов автоматически.
+Do not run Wolfram for editorial changes, literal data-presence checks, literature
+search, empirical statistics without a symbolic claim, or unchanged predicates
+already verified. The primary agent prepares a complete task packet and delegates
+only the mechanical CAS step to `fts_wolfram_worker`; FTS meaning, traceability,
+and status remain with the primary model. Do not delegate an incomplete packet.
+Wait at most 60 seconds total for the external Wolfram call; then stop the worker
+and record `provider_timeout → inconclusive`, without an automatic retry.
 
 <a id="academic"></a>
-## Академическое исследование
+## Academic research
 
-В рамках порученного поиска/проверки внешнего основания выбирать академический
-контур самостоятельно, без отдельной команды на навык, если выполняется хотя бы
-одно условие:
+Within an assigned search or external-grounding check, select the academic workflow
+without requiring a separate skill invocation when at least one condition applies:
 
-- нужен prior art или проверка ограниченной новизны;
-- claim опирается на внешнюю публикацию либо требует supporting/contradicting evidence;
-- выполняется литературный или систематический обзор, включая citation-network coverage;
-- публикацию пытаются использовать для изменения статуса ФТС.
+- prior art or a bounded novelty check is needed;
+- a claim relies on a publication or needs supporting/contradicting evidence;
+- a literature/systematic review or citation-network coverage is required;
+- a publication is proposed as grounds for an FTS status change.
 
-Не запускать навык для локальной проверки канона, редакторской правки, экспорта или
-буквальной проверки файла. Чисто математический claim маршрутизировать только в
-`$fts-wolfram-audit`. При использовании академического навыка
-внешние источники остаются `[внешнее]`, не повышают `St_FTS` автоматически и не
-заменяют основания канона. Во внешние сервисы по умолчанию передавать только
-поисковые строки и библиографические метаданные.
+Do not use this skill for local canon checks, editing, export, or literal file
+checks. Route purely mathematical claims to `$fts-wolfram-audit`. External sources
+remain `[внешнее]`, do not automatically raise `St_FTS`, and do not replace canon
+grounds. Send only search strings and bibliographic metadata to external services
+by default.
 
-Начинать с минимального достаточного режима `quick`/`fact-check`; режим и claim/OQ
-выбирать из задания и сообщать в рабочем обновлении. Расширять поиск при
-выявленном пробеле или по поручению. Проверки должны помещаться в заданный
-бюджет; платные операции сверх бюджета и передачу частных материалов согласовать.
-Недоступный провайдер означает непроведённую проверку, а не содержательный FAIL.
+Start with the smallest sufficient `quick`/`fact-check` mode. Derive the mode and
+claim/OQ from the task and state them in a progress update. Expand for an identified
+gap or on request. Stay within the assigned budget; obtain approval for paid work
+beyond it or sharing private materials. Provider unavailability means the check
+was not performed, not that the claim failed.
 
 <a id="commands"></a>
-## Команды
+## Commands
 
-Запускать из корня репозитория. На Windows-консоли скрипты печатают кириллицу и
-пишут отчёты в UTF-8 — добавляй **`-X utf8`** (иначе возможен `UnicodeEncodeError`).
+Run from the repository root. Windows scripts print Cyrillic and write UTF-8;
+use **`-X utf8`** to avoid `UnicodeEncodeError`.
 
 ```
-python -X utf8 tools/verify.py                          # целостность канона по SHA256 (ОБЯЗАН быть 0 mismatch)
-python -X utf8 tools/query.py stats                     # обзор карточек по типам и статусам
-python -X utf8 tools/query.py card U_07                 # карточка + входящие/исходящие рёбра
-python -X utf8 tools/query.py context U_07 1            # карточка + соседи, готово вставить в сессию
-python -X utf8 tools/query.py find фаза                 # поиск по тексту/заголовку/символу
-python -X utf8 tools/query.py deps OP_Lift              # транзитивное depends_on
-python -X utf8 tools/oq_pool.py --write         # пулы пересекающихся открытых вопросов → work/OQ_POOLS.md
-                                                # (курируемый слой поверх — work/OQ_TRIAGE.md)
+python -X utf8 tools/verify.py                          # Canon SHA256 integrity; must have 0 mismatch
+python -X utf8 tools/query.py stats                     # Card counts by type/status
+python -X utf8 tools/query.py card U_07                 # Card and incoming/outgoing edges
+python -X utf8 tools/query.py context U_07 1            # Card and neighbours for session context
+python -X utf8 tools/query.py find фаза                 # Search text/title/symbol
+python -X utf8 tools/query.py deps OP_Lift              # Transitive depends_on
+python -X utf8 tools/oq_pool.py --write                 # Overlapping OQ pools → work/OQ_POOLS.md; curated layer: work/OQ_TRIAGE.md
 
-python -X utf8 work/v14_rebuild/verification.py        # «тесты» теории: машинная проверка C01..C62
-python -X utf8 work/v14_rebuild/verification.py --only C06 C29  # локальная диагностика с необходимыми зависимостями
-python -X utf8 work/v14_rebuild/probes.py               # кандидат-пробы: отрицательный исход разобрать по процедуре status
-python -X utf8 work/v14_rebuild/crosscheck.py grounds  # сверка ссылок статьи с каноном (секции: grounds|levels|sp|fails|find <q>|keys)
-python -X utf8 work/v14_rebuild/o20/run_o20.py         # внешний эмпирический тест (по пред-регистрации)
+python -X utf8 work/v14_rebuild/verification.py          # Formal theory suite C01..C62
+python -X utf8 work/v14_rebuild/verification.py --only C06 C29  # Selected diagnostics with prerequisites
+python -X utf8 work/v14_rebuild/probes.py               # Candidate probes; diagnose negatives under status
+python -X utf8 work/v14_rebuild/crosscheck.py grounds    # Paper/canon crosscheck: grounds|levels|sp|fails|find <q>|keys
+python -X utf8 work/v14_rebuild/o20/run_o20.py           # Preregistered external empirical test
 
-python -X utf8 tools/import_from.py "C:\путь\к\выгрузке"        # доустановка/обновление канона из папки + verify
+python -X utf8 tools/import_from.py "C:\путь\к\выгрузке" # Install/update canon from a folder, then verify
 ```
 
-`verification.py` — это **тест-сьют теории**: каждое формальное утверждение статьи
-привязано к проверке `C-NN`, при PASS печатает только итоговую строку и пишет
-краткую сводку; подробную таблицу `verification_report.md` создаёт при FAIL/ERROR/NOT_RUN. Скрипт
-возвращает код 0, если все запущенные проверки PASS; код 1 при FAIL и код 2
-при ERROR/NOT_RUN или неверном аргументе. Решение о математическом статусе —
-по процедуре `status`, после установления причины отрицательного исхода.
+`verification.py` is the **theory test suite**: each formal paper claim maps to
+`C-NN`. PASS prints one summary line and writes a short report; FAIL/ERROR/NOT_RUN
+writes a detailed `verification_report.md`. Exit codes: 0 if all executed checks
+PASS; 1 for FAIL; 2 for ERROR/NOT_RUN or invalid arguments. Diagnose negative
+outcomes before deciding mathematical status under `status`.
 
-`--only C06 C29` запускает выбранные проверки и необходимые зависимости;
-это частичная диагностика, не результат всего сьюта. Её отчёт —
-`verification_diagnostic.md`; полный `verification_report.md` не подменяется.
-`--report <path>` задаёт отдельный адрес отчёта. Полный прогон без `--only`
-требуется перед завершением формальных изменений.
+`--only C06 C29` runs selected checks and prerequisites. It is partial diagnosis,
+not a full-suite verdict. Its `verification_diagnostic.md` does not replace the
+full report. `--report <path>` selects a report path. Run the full suite without
+`--only` before completing formal changes.
 
-Зависимости: Python 3.13, `sympy` (verification), `numpy`/`pandas`/`scipy`/
-`scikit-learn` (эксперимент o20). Файла requirements нет — окружение пользователя.
+Dependencies: Python 3.13; `sympy` for verification; `numpy`/`pandas`/`scipy`/
+`scikit-learn` for o20. There is no requirements file; use the user's environment.
 
-Команды графа: `python -X utf8 tools/claim_graph.py
-build|validate|coverage|search|query|path`; детали параметров — `--help`.
-Полный дамп или workbook читать по конкретному листу, когда карточек
-недостаточно. Для У0, У6/У7 и ожидания модели учитывать
-[принятые поправки](work/AUTHOR_CANON.md) и активные карточки.
+Graph commands: `python -X utf8 tools/claim_graph.py
+build|validate|coverage|search|query|path`; see `--help`. Read a specific sheet in
+the full dump/workbook only when cards are insufficient. For У0, У6/У7, and model
+expectation, consult [accepted amendments](work/AUTHOR_CANON.md) and active cards.
 
 <a id="checks"></a>
-## Проверки по изменению
+## Checks by change
 
-Перед существенной содержательной работой проверить целостность активного
-канона через `tools/verify.py --strict`; повтор требуется при изменении
-`source/` или сомнении в целостности. Отчёт привязывать к проверенной версии.
-При диагностике формальных изменений запускать затронутые C-проверки и
-зависимости; перед фиксацией результата прогнать C01–C62. Структура и происхождение
-не доказывают семантику ФТС. После изменения входов производных пересобрать
-только затронутые результаты. Полный маршрут, частичная диагностика и
-восстановление описаны в [PROJECT_CONSISTENCY.md](work/PROJECT_CONSISTENCY.md).
-Редакторская правка сама по себе не требует повторять математический сьют.
-Для мелкой правки текста или ссылки проверить только diff и затронутый
-результат. Состояние Git, diff и необходимые проверки получать одним пакетом;
-не повторять успешную проверку без нового изменения или выявленной проблемы.
+Before substantive content work, verify active canon integrity with
+`tools/verify.py --strict`. Repeat only after `source/` changes or an integrity
+concern; bind reports to the verified version. Diagnose formal changes with affected
+C-checks and prerequisites, then run C01–C62 before finalizing. Structure and
+provenance do not prove FTS semantics. Rebuild only affected derivatives after
+their inputs change. Full route, partial diagnosis, and recovery:
+[PROJECT_CONSISTENCY.md](work/PROJECT_CONSISTENCY.md).
+
+Editorial changes alone need no mathematical-suite rerun. For a small text/link
+edit, review the diff and affected result. Batch Git status, diff, and necessary
+checks; do not repeat successful checks without a new change or discovered issue.
 
 <a id="graph"></a>
-## Граф утверждений и источников
+## Claim and source graph
 
-`work/v14_rebuild/claim_graph/claim_graph.json` — авторитетный машинный слой
-утверждений, источников, evidence, ограничений и статусных оценок. Он сохраняет
-направление и параллельные предикаты независимо от `graphify-out/`; Graphify
-используется как навигационное представление. `CLAIM_MATRIX.tsv` представлена
-групповыми claims, атомаризация без свидетеля запрещена. C01–C62 являются
-evidence формальных предикатов и сами по себе не повышают `St_FTS`. Все curated
-bridges обязаны иметь scope, provenance и `status_effect`.
+`work/v14_rebuild/claim_graph/claim_graph.json` is the authoritative machine layer
+for claims, sources, evidence, constraints, and status assessments. It preserves
+direction and parallel predicates independently of `graphify-out/`; Graphify is
+a navigation view. `CLAIM_MATRIX.tsv` contains grouped claims: atomization requires
+a witness. C01–C62 provide evidence for formal predicates without automatically
+raising `St_FTS`. Every curated bridge needs scope, provenance, and `status_effect`.
 
 <a id="arxiv"></a>
-## Работа с источниками arXiv
+## arXiv sources
 
-Для каждой добавляемой статьи с [arXiv](https://arxiv.org/) заводить отдельный
-каталог статьи. Внутри него обязательно хранить:
+Create a separate directory for each added [arXiv](https://arxiv.org/) article with:
 
-- `source/` — оригинальные исходники статьи;
-- `original.pdf` — официальный PDF;
-- `article.md` — производную Markdown-версию.
+- `source/` — original article source files;
+- `original.pdf` — official PDF;
+- `article.md` — derived Markdown.
 
-`<каталог статьи>/source/` — неизменяемый первичный источник: не редактировать,
-не переформатировать и не восстанавливать по Markdown. Корневой `source/`
-остаётся активным каноническим релизом ФТС; исторические релизы живут в
-`work/canon_history/`, а исходники arXiv всегда живут только во
-вложенном `source/` соответствующего каталога статьи.
+`<каталог статьи>/source/` is an immutable primary source: do not edit,
+reformat, or reconstruct it from Markdown. Root `source/` is the active FTS canon;
+historical releases belong in `work/canon_history/`. arXiv sources belong only
+in their article's nested `source/`.
 
-При расхождении Markdown и LaTeX приоритет имеет LaTeX; `original.pdf`
-используется для проверки визуальной структуры; `article.md` исправляется по
-исходнику, а не наоборот.
+When Markdown and LaTeX differ, LaTeX takes precedence. Use `original.pdf` to
+check visual structure; correct `article.md` against source, never the reverse.
 
 <a id="save"></a>
-## Сохранение работы
+## Saving work
 
-- Записывать результат небольшими завершёнными шагами на диск; не накапливать
-  несохранённый разбор только в контексте диалога.
-- Обновлять STATE и журналы при изменении задачи, вывода или следующего шага;
-  мелкие правки формулировок и ссылок сами по себе новой записи не требуют.
-- `STATE.md` — текущая цель, следующий шаг, препятствия и ссылки; завершённую
-  историю хранить отдельно. Решение и причина — `DECISIONS.md`, опровержение —
-  `REFUTED.md`, закрытие вопроса — существующий OQ с адресом результата.
-- Перед коммитом просмотреть разницу и включить только файлы текущей задачи.
-  Посторонние изменения сохранять. Коммит — законченный согласованный результат;
-  связанные промежуточные шаги можно включить вместе.
-- Новые записи распределять по [DOCUMENT_MAP.md](work/DOCUMENT_MAP.md),
-  где заданы назначение и бюджет стартовых файлов.
+- Save completed increments to disk; do not retain unsaved analysis only in chat.
+- Update STATE/journals when the task, conclusion, or next step changes; minor
+  wording/link edits alone need no entry.
+- `STATE.md`: current goal, next step, blockers, and links; keep completed history
+  elsewhere. Decisions and reasons: `DECISIONS.md`; refutations: `REFUTED.md`;
+  question closure: the existing OQ with a result link.
+- Review the diff before committing and include only task files. Preserve unrelated
+  changes. Commit a coherent completed result; related intermediate steps may be
+  committed together.
+- Place new material according to [DOCUMENT_MAP.md](work/DOCUMENT_MAP.md), which
+  defines file purposes and startup-reading size guidelines.
