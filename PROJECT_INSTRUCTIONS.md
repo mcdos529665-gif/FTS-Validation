@@ -4,6 +4,24 @@
 section here. Current point: [STATE](work/STATE.md); research locations:
 [document map](work/DOCUMENT_MAP.md).
 
+## Research objective and scope
+
+[PROJECT.json](PROJECT.json) is the persistent project entity (`FTS`;
+`project_fts` in the claim graph); [README](README.md#задача-проекта) gives its
+human-readable objective. Investigate and justify the connectivity of elementary
+abstractions at the stated structural complexity, the minimal expressions of
+levels, their order, interlevel relations, and the applicable domain.
+
+Every substantive research assertion needs at least one explicit address:
+connectivity ground, whole ladder, a level, or an interlevel relation. Record what
+it defines, assumes, supports, refines, limits, or refutes, with source/location,
+scope/register, and an appropriate witness or an open obligation. An analogy or
+hypothesis retains that label. Sources and methods serve an identified assertion.
+References, document membership, shared evidence, and structural graph PASS do
+not establish semantic connectivity or truth. Project scope edges declare the
+objective; they do not assign claims to it or promote status. Audit documents
+outside the graph and state the granularity/limits of coverage.
+
 | Task | Section |
 |---|---|
 | Active canon revision | [Canon revision](#canon) |

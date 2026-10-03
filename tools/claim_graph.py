@@ -31,6 +31,7 @@ COVERAGE_PATH = OUT_DIR / "COVERAGE.md"
 CHANGE_REPORT_PATH = OUT_DIR / "CHANGE_REPORT.md"
 SCHEMA_PATH = OUT_DIR / "SCHEMA.md"
 HTML_PATH = OUT_DIR / "claim_graph.html"
+PROJECT_ENTITY = ROOT / "PROJECT.json"
 
 CANON_CARDS = ROOT / "source" / "fts_cards.jsonl"
 CANON_TRIPLES = ROOT / "source" / "fts_triples.tsv"
@@ -71,11 +72,13 @@ C_RE = re.compile(r"\bC\d{1,2}(?:\s*[-–]\s*C\d{1,2})?\b")
 CHECK_RE = re.compile(r"check\(\s*[\"'](C\d{1,2})[\"']")
 
 RELATION_RULES: dict[str, tuple[set[str], set[str]]] = {
+    "has_research_scope": ({"project"}, {"scope"}),
+    "addresses_object": ({"scope"}, {"card"}),
     "has_status": ({"card", "author_statement", "claim", "claim_group", "finding"}, {"status_assessment"}),
     "has_status_before": ({"claim", "claim_group"}, {"status_assessment"}),
     "has_status_after": ({"claim", "claim_group"}, {"status_assessment"}),
     "grounds_claim": ({"claim", "claim_group", "pattern", "author_statement"}, {"card", "source_document", "source_fragment", "scope", "source_reference", "author_statement"}),
-    "documented_in": ({"claim", "claim_group", "author_statement", "external_evidence", "internal_evidence", "finding", "status_assessment", "verification"}, {"source_document"}),
+    "documented_in": ({"project", "claim", "claim_group", "author_statement", "external_evidence", "internal_evidence", "finding", "status_assessment", "verification"}, {"source_document"}),
     "verified_by": ({"claim", "claim_group", "pattern"}, {"verification", "external_evidence", "internal_evidence"}),
     "supported_by": ({"claim", "claim_group"}, {"external_evidence", "internal_evidence", "verification", "source_document"}),
     "limited_by": ({"claim", "claim_group"}, {"finding", "external_evidence", "internal_evidence", "source_reference", "source_document"}),
@@ -365,6 +368,7 @@ class GraphBuilder:
             "schema": "fts_claim_graph/v1",
             "generator": "tools/claim_graph.py",
             "trust_boundary": {
+                "project_definition": "user-defined research objective and scope; no evidence or status promotion",
                 "canonical_v13": "active editable canon; versioned source-backed assertions",
                 "author_canon": "accepted author supplement; separate versioned layer",
                 "research": "curated claims and bridges with explicit scope",
@@ -380,6 +384,64 @@ class GraphBuilder:
 
 def canonical_card_id_map(cards: list[dict[str, Any]], prefix: str) -> dict[str, str]:
     return {str(card["id"]): f"{prefix}_{slug(str(card['id']))}" for card in cards}
+
+
+def add_project_entity(builder: GraphBuilder, card_ids: dict[str, str]) -> None:
+    """Record the research objective without assigning evidence or claim status."""
+    data = json.loads(PROJECT_ENTITY.read_text(encoding="utf-8"))
+    required = {"grounds", "ladder", "level", "interlevel"}
+    categories = data.get("scope_categories", [])
+    category_ids = [item.get("id") for item in categories]
+    if data.get("schema") != "fts_project/v1" or data.get("project_id") != "FTS":
+        raise ValueError("Invalid FTS project entity schema or ID")
+    if set(category_ids) != required or len(category_ids) != len(required):
+        raise ValueError("Project must declare all four distinct research scopes")
+    if not data.get("objective") or not data.get("assertion_requirements"):
+        raise ValueError("Project objective or assertion requirements missing")
+    requirements = data["assertion_requirements"]
+    if {item.get("id") for item in requirements} != {f"R{i}" for i in range(1, 7)} or len(requirements) != 6:
+        raise ValueError("Project assertion requirements R1-R6 missing or duplicated")
+    if any(not item.get("requirement") for item in requirements):
+        raise ValueError("Empty project assertion requirement")
+    description = ROOT / data["description_file"]
+    if not description.resolve().is_relative_to(ROOT.resolve()) or not description.is_file():
+        raise ValueError("Project description missing")
+    builder.input(PROJECT_ENTITY)
+    project = builder.node(
+        "project_fts", "project", data["name"], "project_definition",
+        project_id=data["project_id"], objective=data["objective"],
+        complexity_meaning=data["complexity_meaning"], acceptance=data["acceptance"],
+        assertion_requirements=data["assertion_requirements"],
+        status_policy=data["status_policy"], provenance=data["provenance"],
+        recorded_on=data["recorded_on"], source_file=rel(PROJECT_ENTITY),
+        source_location="project_id:FTS", status_effect="research objective only; no status promotion",
+    )
+    for category in categories:
+        anchors = category.get("anchor_card_ids", [])
+        if not anchors or len(anchors) != len(set(anchors)) or set(anchors) - set(card_ids):
+            raise ValueError(f"Invalid project anchors: {category['id']}")
+        scope = builder.node(
+            f"research_scope_{category['id']}", "scope", category["name"], "project_definition",
+            scope_kind=category["id"], question=category["question"], members=anchors,
+            source_file=rel(PROJECT_ENTITY), source_location=f"scope_categories:{category['id']}",
+            status_effect="research address only; not evidence of connectivity",
+        )
+        builder.edge(
+            f"project_scope_{category['id']}", project, scope, "has_research_scope",
+            "project_definition", "EXTRACTED", PROJECT_ENTITY, f"scope_categories:{category['id']}",
+            status_effect="declared objective; no automatic claim assignment",
+        )
+        for card_id in anchors:
+            builder.edge(
+                f"project_anchor_{category['id']}_{slug(card_id)}", scope, card_ids[card_id],
+                "addresses_object", "project_definition", "EXTRACTED", PROJECT_ENTITY,
+                f"scope_categories:{category['id']}:anchor:{card_id}",
+                status_effect="declared research object; not a proof or prerequisite",
+            )
+    doc = builder.document(description, layer="project_definition")
+    builder.edge("project_description", project, doc, "documented_in", "project_definition",
+                 "EXTRACTED", PROJECT_ENTITY, "description_file",
+                 status_effect="project description provenance only")
 
 
 def build_graph() -> dict[str, Any]:
@@ -895,6 +957,7 @@ def build_graph() -> dict[str, Any]:
         bridge_source = ROOT / row["source_file"]
         builder.edge(row["bridge_id"], source, target, row["relation"], "research_bridge", row["confidence"].upper(), bridge_source, f"row:{row_no}", scope=row["scope"], status_effect=row["status_effect"], rationale=row["rationale"])
 
+    add_project_entity(builder, card_ids)
     graph = builder.output()
     canonical_triple_count = len(read_tsv(CANON_TRIPLES))
     graph["coverage"] = {
@@ -914,6 +977,8 @@ def build_graph() -> dict[str, Any]:
         "internal_evidence_nodes": len([node for node in builder.nodes.values() if node["type"] == "internal_evidence"]),
         "research_claims": len(research_claims),
         "curated_research_bridges": len(bridge_rows),
+        "project_entities": 1,
+        "declared_research_scopes": 4,
         "nodes": len(builder.nodes),
         "edges": len(builder.edges),
         "unresolved_references": len([node for node in builder.nodes.values() if node["type"] in {"unresolved_reference", "source_reference"}]),
@@ -1073,9 +1138,10 @@ def validate_graph(graph: dict[str, Any], idempotent: bool = False) -> dict[str,
     if stale:
         raise AssertionError(f"stale provenance: {stale[:5]}")
 
+    rebuilt_graph = build_graph()
     expected_inputs = {
         item["path"]: item["sha256"]
-        for item in build_graph().get("input_digests", [])
+        for item in rebuilt_graph.get("input_digests", [])
     }
     if current_inputs != expected_inputs:
         added = sorted(set(expected_inputs) - set(current_inputs))
@@ -1089,6 +1155,17 @@ def validate_graph(graph: dict[str, Any], idempotent: bool = False) -> dict[str,
             "input digest manifest drift: "
             f"added={added[:5]} removed={removed[:5]} changed={changed[:5]}"
         )
+
+    expected_project_nodes = {node["id"]: node for node in rebuilt_graph["nodes"]
+                              if node.get("layer") == "project_definition"}
+    actual_project_nodes = {node["id"]: node for node in graph["nodes"]
+                            if node.get("layer") == "project_definition"}
+    expected_project_edges = {edge["id"]: edge for edge in rebuilt_graph["edges"]
+                              if edge.get("layer") == "project_definition"}
+    actual_project_edges = {edge["id"]: edge for edge in edges
+                            if edge.get("layer") == "project_definition"}
+    if expected_project_nodes != actual_project_nodes or expected_project_edges != actual_project_edges:
+        raise AssertionError("Project entity/scope projection is missing or stale")
 
     for node in graph.get("nodes", []):
         source_file = node.get("source_file")
@@ -1207,7 +1284,7 @@ def alias_map(graph: dict[str, Any]) -> dict[str, str]:
     for node in graph["nodes"]:
         node_id = str(node["id"])
         aliases[node_id] = node_id
-        for key in ("claim_id", "card_id", "anchor", "verification_id", "evidence_id", "finding_id", "pattern_id"):
+        for key in ("project_id", "claim_id", "card_id", "anchor", "verification_id", "evidence_id", "finding_id", "pattern_id"):
             if node.get(key):
                 aliases[str(node[key])] = node_id
         if node.get("type") == "source_document" and node.get("source_file"):

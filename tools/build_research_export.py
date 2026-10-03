@@ -47,6 +47,8 @@ PACKAGE_COPIES = (
 )
 
 AGENT_RULES = Path("AGENTS.md")
+PROJECT_ENTITY = Path("PROJECT.json")
+RESEARCH_SCOPE_AUDIT = Path("work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md")
 PROJECT_INSTRUCTIONS = Path("PROJECT_INSTRUCTIONS.md")
 STATE = Path("work/STATE.md")
 NOTATION = Path("work/notation.md")
@@ -149,6 +151,8 @@ CANON_TRIPLES = Path("source/fts_triples.tsv")
 INPUT_PATHS = (
     Path("tools/build_research_export.py"),
     AGENT_RULES,
+    PROJECT_ENTITY,
+    RESEARCH_SCOPE_AUDIT,
     PROJECT_INSTRUCTIONS,
     STATE,
     NOTATION,
@@ -519,6 +523,10 @@ def render_export() -> str:
 {markdown_source("1.3. Краткий рабочий контракт", AGENT_RULES)}
 
 {markdown_source("1.4. Процедуры по задаче", PROJECT_INSTRUCTIONS)}
+
+{fenced_source("1.5. Сущность проекта, задача и критерии содержания", PROJECT_ENTITY, "json")}
+
+{markdown_source("1.6. Проверка соответствия задаче проекта", RESEARCH_SCOPE_AUDIT)}
 """
 
     parts = [

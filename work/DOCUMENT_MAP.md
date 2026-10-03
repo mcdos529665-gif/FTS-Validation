@@ -9,6 +9,7 @@ following a link does not require loading neighbouring documents.
 
 | Material | Main location | When to read / what to write |
 |---|---|---|
+| Project objective and scope criteria | [PROJECT.json](../PROJECT.json), [README](../README.md#задача-проекта) | Persistent entity `FTS`; four research addresses, roles, evidence obligations and separate proof/status axes |
 | Required short contract | [AGENTS.md](../AGENTS.md) | Startup and standing rules; supplied to the agent automatically |
 | Task procedures | [PROJECT_INSTRUCTIONS.md](../PROJECT_INSTRUCTIONS.md) | Relevant section only: canon, gates, commands, graph, arXiv, saving |
 | Current state | [STATE.md](STATE.md) | Once before substantive FTS work; goal, next step, blockers, links; history in a separate snapshot |

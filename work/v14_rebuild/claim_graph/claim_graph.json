@@ -2,6 +2,7 @@
   "schema": "fts_claim_graph/v1",
   "generator": "tools/claim_graph.py",
   "trust_boundary": {
+    "project_definition": "user-defined research objective and scope; no evidence or status promotion",
     "canonical_v13": "active editable canon; versioned source-backed assertions",
     "author_canon": "accepted author supplement; separate versioned layer",
     "research": "curated claims and bridges with explicit scope",
@@ -9,6 +10,14 @@
     "graphify": "view/navigation only; this file preserves directed parallel edges"
   },
   "input_digests": [
+    {
+      "path": "PROJECT.json",
+      "sha256": "50a69c83bc9985f555012aa5a5ec9611bc86edec42c88bed523e4ad3e8d8cfcc"
+    },
+    {
+      "path": "README.md",
+      "sha256": "56c7837aa5f9babc099679d9c088f39f08e33806abf30c73f4e7699646b0a8dc"
+    },
     {
       "path": "source/FTS_v13_LLM_FULL_DUMP.md",
       "sha256": "fa59ae8d76f505b0e6be7268e4102a0c02561575f6e742a0b442981fda501173"
@@ -6294,6 +6303,13 @@
       "source_location": "card:AC_20261003_WINDOW_FAMILIES:local_forbid[2]"
     },
     {
+      "id": "doc_readme_md",
+      "type": "source_document",
+      "label": "README.md",
+      "layer": "project_definition",
+      "source_file": "README.md"
+    },
+    {
       "id": "doc_source_fts_cards_jsonl",
       "type": "source_document",
       "label": "source/fts_cards.jsonl",
@@ -9173,6 +9189,52 @@
       "source_location": "row:18"
     },
     {
+      "id": "project_fts",
+      "type": "project",
+      "label": "ФТС — исследование лестницы элементарных абстракций",
+      "layer": "project_definition",
+      "project_id": "FTS",
+      "objective": "Исследовать и обосновать связность элементарных абстракций в заявленной структурной сложности: установить минимальные выражения уровней, основания их порядка и связи, необходимость переходов и область применимости лестницы ФТС.",
+      "complexity_meaning": "Ступень лестницы выражает определённую структурную сложность различения. Соответствие сложности ступени, минимальность и необходимость новой роли подлежат адресному обоснованию в указанной области и при объявленной модели стоимости.",
+      "acceptance": "Результат исследования может подтвердить, уточнить, ограничить или опровергнуть заявленную связь. Связность, локальная необходимость переходов и глобальная единственность лестницы проверяются отдельно.",
+      "assertion_requirements": [
+        {
+          "id": "R1",
+          "requirement": "Каждое содержательное исследовательское утверждение имеет явный адрес хотя бы в одной из четырёх областей задачи; допустима обоснованная цепочка через другие утверждения."
+        },
+        {
+          "id": "R2",
+          "requirement": "Для связи указано, что результат определяет, предполагает, обосновывает, уточняет, ограничивает или опровергает. Аналогия и гипотеза обозначаются явно."
+        },
+        {
+          "id": "R3",
+          "requirement": "Адрес и роль снабжены источником и точным местом, областью действия, регистром и подходящим свидетельством либо явно записанным незакрытым обязательством."
+        },
+        {
+          "id": "R4",
+          "requirement": "Соответствие сложности уровню проверяется через минимальную форму, необходимую роль, условия и стоимость; математическая формула и её интерпретация ФТС обосновываются раздельно."
+        },
+        {
+          "id": "R5",
+          "requirement": "Внешние источники, методы и проверки имеют явную роль относительно исследовательского утверждения. Исторические версии, оригиналы источников и производные выгрузки учитываются по своему назначению."
+        },
+        {
+          "id": "R6",
+          "requirement": "Проверка соответствия учитывает документы вне графа и гранулярность записей. Наличие ссылки, общий файл, тематическая близость и полнота зарегистрированных рёбер сами по себе не доказывают содержательную связность всех утверждений."
+        }
+      ],
+      "status_policy": "Задача проекта и адресация исследования не повышают St_FTS или St_math. Действуют отдельные оси авторского принятия, математического доказательства и эмпирического подтверждения, SP/К1–К5 и пересматриваемые обязательства SP_LIMITS.",
+      "provenance": {
+        "authority": "explicit_user_instruction",
+        "source": "Диалог 2026-10-03; пользователь подтвердил запись в файлах и графе проекта.",
+        "quotation": "его задача доказать связность элементарных абстракций в указанной сложности. каждый уровень сложности соответствует уровню. так что все утверждения должны быть связанны либо с основаниями связности, со всей лестницей, или с конкретным уровнем или переходом между уровнями."
+      },
+      "recorded_on": "2026-10-03",
+      "source_file": "PROJECT.json",
+      "source_location": "project_id:FTS",
+      "status_effect": "research objective only; no status promotion"
+    },
+    {
       "id": "ref_resolved_0a3be6be33ad",
       "type": "source_fragment",
       "label": "SP_PHI",
@@ -9517,6 +9579,103 @@
       "next_step": "Recover or define the real boundary, domain, readout and continuation into the complex branch",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "row:147"
+    },
+    {
+      "id": "research_scope_grounds",
+      "type": "scope",
+      "label": "Основания связности",
+      "layer": "project_definition",
+      "scope_kind": "grounds",
+      "question": "Почему уровни связаны и какие условия обеспечивают связь?",
+      "members": [
+        "O_01",
+        "O_02",
+        "O_03",
+        "O_04",
+        "O_05",
+        "O_06",
+        "O_07",
+        "O_08",
+        "O_09",
+        "O_10",
+        "O_11",
+        "O_12",
+        "O_13",
+        "O_14",
+        "O_15",
+        "O_16",
+        "O_17",
+        "O_18",
+        "O_19",
+        "O_20"
+      ],
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds",
+      "status_effect": "research address only; not evidence of connectivity"
+    },
+    {
+      "id": "research_scope_interlevel",
+      "type": "scope",
+      "label": "Переход или связь между уровнями",
+      "layer": "project_definition",
+      "scope_kind": "interlevel",
+      "question": "Что сохраняется и появляется при переходе; как устроены окна, проекции и другие межуровневые связи?",
+      "members": [
+        "OP_Lift",
+        "OP_pi",
+        "OP_iota",
+        "O_08"
+      ],
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:interlevel",
+      "status_effect": "research address only; not evidence of connectivity"
+    },
+    {
+      "id": "research_scope_ladder",
+      "type": "scope",
+      "label": "Лестница в целом",
+      "layer": "project_definition",
+      "scope_kind": "ladder",
+      "question": "Как обосновываются порядок, минимальность, полнота, общие закономерности и область лестницы?",
+      "members": [
+        "A0",
+        "A0b"
+      ],
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:ladder",
+      "status_effect": "research address only; not evidence of connectivity"
+    },
+    {
+      "id": "research_scope_level",
+      "type": "scope",
+      "label": "Конкретный уровень",
+      "layer": "project_definition",
+      "scope_kind": "level",
+      "question": "Каковы минимальное выражение, роль различения, носитель и границы указанной ступени?",
+      "members": [
+        "U_m1",
+        "U_00",
+        "U_01",
+        "U_02",
+        "U_03",
+        "U_04",
+        "U_05",
+        "U_06",
+        "U_07",
+        "U_08",
+        "U_09",
+        "U_10",
+        "U_11",
+        "U_12",
+        "U_13",
+        "U_14",
+        "U_15",
+        "U_16",
+        "U_17"
+      ],
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level",
+      "status_effect": "research address only; not evidence of connectivity"
     },
     {
       "id": "source_ref_6b59a7b708ce",
@@ -29629,6 +29788,556 @@
       "source_location": "row:27:verification"
     },
     {
+      "id": "project_anchor_grounds_o_01",
+      "source": "research_scope_grounds",
+      "target": "card_o_01",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_01",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_02",
+      "source": "research_scope_grounds",
+      "target": "card_o_02",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_02",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_03",
+      "source": "research_scope_grounds",
+      "target": "card_o_03",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_03",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_04",
+      "source": "research_scope_grounds",
+      "target": "card_o_04",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_04",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_05",
+      "source": "research_scope_grounds",
+      "target": "card_o_05",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_05",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_06",
+      "source": "research_scope_grounds",
+      "target": "card_o_06",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_06",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_07",
+      "source": "research_scope_grounds",
+      "target": "card_o_07",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_07",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_08",
+      "source": "research_scope_grounds",
+      "target": "card_o_08",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_08",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_09",
+      "source": "research_scope_grounds",
+      "target": "card_o_09",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_09",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_10",
+      "source": "research_scope_grounds",
+      "target": "card_o_10",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_10",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_11",
+      "source": "research_scope_grounds",
+      "target": "card_o_11",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_11",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_12",
+      "source": "research_scope_grounds",
+      "target": "card_o_12",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_12",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_13",
+      "source": "research_scope_grounds",
+      "target": "card_o_13",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_13",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_14",
+      "source": "research_scope_grounds",
+      "target": "card_o_14",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_14",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_15",
+      "source": "research_scope_grounds",
+      "target": "card_o_15",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_15",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_16",
+      "source": "research_scope_grounds",
+      "target": "card_o_16",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_16",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_17",
+      "source": "research_scope_grounds",
+      "target": "card_o_17",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_17",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_18",
+      "source": "research_scope_grounds",
+      "target": "card_o_18",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_18",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_19",
+      "source": "research_scope_grounds",
+      "target": "card_o_19",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_19",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_grounds_o_20",
+      "source": "research_scope_grounds",
+      "target": "card_o_20",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds:anchor:O_20",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_interlevel_o_08",
+      "source": "research_scope_interlevel",
+      "target": "card_o_08",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:interlevel:anchor:O_08",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_interlevel_op_iota",
+      "source": "research_scope_interlevel",
+      "target": "card_op_iota",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:interlevel:anchor:OP_iota",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_interlevel_op_lift",
+      "source": "research_scope_interlevel",
+      "target": "card_op_lift",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:interlevel:anchor:OP_Lift",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_interlevel_op_pi",
+      "source": "research_scope_interlevel",
+      "target": "card_op_pi",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:interlevel:anchor:OP_pi",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_ladder_a0",
+      "source": "research_scope_ladder",
+      "target": "card_a0",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:ladder:anchor:A0",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_ladder_a0b",
+      "source": "research_scope_ladder",
+      "target": "card_a0b",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:ladder:anchor:A0b",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_00",
+      "source": "research_scope_level",
+      "target": "card_u_00",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_00",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_01",
+      "source": "research_scope_level",
+      "target": "card_u_01",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_01",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_02",
+      "source": "research_scope_level",
+      "target": "card_u_02",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_02",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_03",
+      "source": "research_scope_level",
+      "target": "card_u_03",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_03",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_04",
+      "source": "research_scope_level",
+      "target": "card_u_04",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_04",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_05",
+      "source": "research_scope_level",
+      "target": "card_u_05",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_05",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_06",
+      "source": "research_scope_level",
+      "target": "card_u_06",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_06",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_07",
+      "source": "research_scope_level",
+      "target": "card_u_07",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_07",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_08",
+      "source": "research_scope_level",
+      "target": "card_u_08",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_08",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_09",
+      "source": "research_scope_level",
+      "target": "card_u_09",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_09",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_10",
+      "source": "research_scope_level",
+      "target": "card_u_10",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_10",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_11",
+      "source": "research_scope_level",
+      "target": "card_u_11",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_11",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_12",
+      "source": "research_scope_level",
+      "target": "card_u_12",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_12",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_13",
+      "source": "research_scope_level",
+      "target": "card_u_13",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_13",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_14",
+      "source": "research_scope_level",
+      "target": "card_u_14",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_14",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_15",
+      "source": "research_scope_level",
+      "target": "card_u_15",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_15",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_16",
+      "source": "research_scope_level",
+      "target": "card_u_16",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_16",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_17",
+      "source": "research_scope_level",
+      "target": "card_u_17",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_17",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_anchor_level_u_m1",
+      "source": "research_scope_level",
+      "target": "card_u_m1",
+      "relation": "addresses_object",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level:anchor:U_m1",
+      "status_effect": "declared research object; not a proof or prerequisite"
+    },
+    {
+      "id": "project_description",
+      "source": "project_fts",
+      "target": "doc_readme_md",
+      "relation": "documented_in",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "description_file",
+      "status_effect": "project description provenance only"
+    },
+    {
+      "id": "project_scope_grounds",
+      "source": "project_fts",
+      "target": "research_scope_grounds",
+      "relation": "has_research_scope",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:grounds",
+      "status_effect": "declared objective; no automatic claim assignment"
+    },
+    {
+      "id": "project_scope_interlevel",
+      "source": "project_fts",
+      "target": "research_scope_interlevel",
+      "relation": "has_research_scope",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:interlevel",
+      "status_effect": "declared objective; no automatic claim assignment"
+    },
+    {
+      "id": "project_scope_ladder",
+      "source": "project_fts",
+      "target": "research_scope_ladder",
+      "relation": "has_research_scope",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:ladder",
+      "status_effect": "declared objective; no automatic claim assignment"
+    },
+    {
+      "id": "project_scope_level",
+      "source": "project_fts",
+      "target": "research_scope_level",
+      "relation": "has_research_scope",
+      "layer": "project_definition",
+      "confidence": "EXTRACTED",
+      "source_file": "PROJECT.json",
+      "source_location": "scope_categories:level",
+      "status_effect": "declared objective; no automatic claim assignment"
+    },
+    {
       "id": "research_evidence_contains_neural_symbolic_gate_control",
       "source": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_gate_control_results_md",
       "target": "evidence_internal_neural_symbolic_gate_control",
@@ -32125,8 +32834,10 @@
     "internal_evidence_nodes": 7,
     "research_claims": 10,
     "curated_research_bridges": 14,
-    "nodes": 795,
-    "edges": 1827,
+    "project_entities": 1,
+    "declared_research_scopes": 4,
+    "nodes": 801,
+    "edges": 1877,
     "unresolved_references": 4
   }
 }

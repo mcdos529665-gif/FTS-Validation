@@ -19,6 +19,10 @@ OpenQuestion → Claim → grounds_in / verified_by / supported_by / limited_by
 
 ## Узлы
 
+- `project` — постоянная сущность проекта `FTS` из корневого `PROJECT.json`;
+  слой `project_definition`. Содержит задачу, смысл сложности и требования R1–R6.
+  Четыре `scope` того же слоя описывают основания, лестницу, уровень и межуровневые
+  связи. Статусы научных утверждений задаются в своих слоях.
 - `card` — карточка v13; слой `canonical_v13`.
 - `author_statement` — принятые авторские карточки AC-2026-09-21 (с историей
   AC-2026-09-19); слой
@@ -76,6 +80,12 @@ OpenQuestion → Claim → grounds_in / verified_by / supported_by / limited_by
 - `documented_in` — claim/evidence/assessment имеет точный документальный источник;
 - `opens_question`, `directly_traced_to`, `curated_bridge_to` — исследовательская
   навигация, а не доказательство.
+
+`has_research_scope` связывает проект с четырьмя областями задачи;
+`addresses_object` указывает их существующие канонические объекты.
+Эти рёбра задают предмет исследования и не доказывают принадлежность отдельного
+утверждения, связность лестницы или необходимость перехода. Их нельзя использовать
+как обходной путь при проверке содержательной адресации claims.
 
 Каждое inferred или curated-ребро содержит `confidence`, `scope`, `status_effect`
 и provenance. `EXTRACTED` означает наличие буквальной записи в источнике; это не

@@ -1,0 +1,74 @@
+{
+  "project_id": "FTS",
+  "graph_sha256": "44bbb871844211b19211655cd3e12b77e3d908cd717c5b2e18075e9a4435c979",
+  "generator": "tools/audit_research_scope.py",
+  "generator_sha256": "a8602fe82c2fb03dcb8a197f668f7a2551363cf7484722b6edee7aa44704f0d9",
+  "project_entity_sha256": "50a69c83bc9985f555012aa5a5ec9611bc86edec42c88bed523e4ad3e8d8cfcc",
+  "assertion_records": 212,
+  "by_type": {
+    "author_statement": {
+      "recorded_route": 7,
+      "no_recorded_route": 1
+    },
+    "card": {
+      "recorded_route": 162,
+      "no_recorded_route": 5,
+      "auxiliary_record": 2
+    },
+    "claim": {
+      "no_recorded_route": 8,
+      "recorded_route": 2
+    },
+    "claim_group": {
+      "recorded_route": 11,
+      "no_recorded_route": 13,
+      "auxiliary_record": 1
+    }
+  },
+  "documents": 235,
+  "document_kinds": {
+    "procedure_or_provenance": 16,
+    "project_description_or_procedure": 10,
+    "derived_or_navigation": 24,
+    "active_research": 138,
+    "historical": 14,
+    "audit_support": 9,
+    "graph_support": 3,
+    "external_source": 21
+  },
+  "active_research_documents": 138,
+  "active_research_documents_outside_graph_inputs": 113,
+  "unrouted_records": [
+    "AC_20260921_AUTHOR_DECISION",
+    "A1",
+    "A3",
+    "A5",
+    "A5a",
+    "ADDENDUM_V3",
+    "DN_20260922_ABSENCE_LIFT",
+    "DN_20260922_GEOMETRY_SELF",
+    "DN_20260922_INTERNAL_CONTOUR",
+    "DN_20260922_SENSITIVITY_RESIDUAL",
+    "DR10_QG_WITNESS",
+    "CM-007",
+    "CM-010",
+    "CM-011",
+    "CM-012",
+    "CM-013",
+    "CM-014",
+    "CM-016",
+    "CM-018",
+    "CM-020",
+    "CM-021",
+    "CM-022",
+    "CM-024",
+    "CM-025",
+    "NEURAL_T3_NOT_VERIFIED",
+    "U6_Q_NOT_SUFFICIENT_FOR_U7",
+    "U6_VSTAR_BRIDGE_UNDERDETERMINED"
+  ],
+  "groups_require_atomization": 25,
+  "scope_of_verdict": "recorded address traces plus document inventory; not all atomic propositions",
+  "full_semantic_conformance_proved": false,
+  "shared_check_document_status_or_project_edges_used_as_ground": false
+}
