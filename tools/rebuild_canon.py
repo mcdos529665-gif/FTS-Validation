@@ -52,7 +52,8 @@ def update_sheet(sheet: dict, values: list[list]) -> None:
     sheet['cols'] = max(map(len, values), default=1)
     sheet['range'] = f"A1:{column_letter(sheet['cols'])}{sheet['rows']}"
 
-def rebuild(release: str, date: str, description: str) -> None:
+def rebuild(release: str, date: str, description: str,
+            release_kind: str = 'integrated_author_amendment_and_register_repair') -> None:
     manifest_path = SOURCE / 'MANIFEST.json'
     before = manifest_path.read_bytes()
     manifest = json.loads(before)
@@ -96,7 +97,10 @@ def rebuild(release: str, date: str, description: str) -> None:
         if row is None:
             while f'G_{next_id:04d}' in used_ids: next_id += 1
             row = {key: '' for key in graph_fields}
-            row.update(triple, graph_id=f'G_{next_id:04d}', evidence_id='integration_2026-10-03', internal_ref=by_id.get(triple['subject'], {}).get('internal_ref', release), status=by_id.get(triple['subject'], {}).get('status', 'stored_assertion'), comment='Explicit author integration / register repair')
+            row.update(triple, graph_id=f'G_{next_id:04d}', evidence_id=release_kind,
+                       internal_ref=by_id.get(triple['subject'], {}).get('internal_ref', release),
+                       status=by_id.get(triple['subject'], {}).get('status', 'stored_assertion'),
+                       comment=description)
             used_ids.add(row['graph_id']); next_id += 1
         graph_rows.append(row)
     write_text(graph_path, tsv(graph_rows, graph_fields))
@@ -122,11 +126,11 @@ def rebuild(release: str, date: str, description: str) -> None:
         if row[0] in [6,7]: row[3] = by_id[f'M_0{row[0]}']['symbol']
     timestamp = manifest.get('exported_at_utc') if old_release == release else datetime.now(timezone.utc).isoformat().replace('+00:00','Z')
     if old_release != release:
-        sheets['38_Changelog']['values'].append([release,date,'author_integration_register_repair',description,'17/18/34/35/36 and active renderings','active'])
+        sheets['38_Changelog']['values'].append([release,date,release_kind,description,'17/18/34/35/36 and active renderings','active'])
         update_sheet(sheets['38_Changelog'], sheets['38_Changelog']['values'])
     for row in sheets['02_Паспорт']['values']:
         if row[0]=='Версия': row[1]=release; row[2]='Active export; historical workbook remains a provenance input.'
-    book.update(version=release,exported_at_utc=timestamp,release_kind='integrated_author_amendment_and_register_repair',source_workbook_status='historical_input_not_reissued')
+    book.update(version=release,exported_at_utc=timestamp,release_kind=release_kind,source_workbook_status='historical_input_not_reissued')
     write_text(SOURCE / 'fts_v13_workbook_sheets.json', json.dumps(book,ensure_ascii=False,indent=2)+'\n')
     index_fields=['index','sheet','range','rows','cols']
     index_rows=[{'index':sheet['index'],'sheet':sheet['name'],**{key:sheet[key] for key in ['range','rows','cols']}} for sheet in book['sheets']]
@@ -178,7 +182,7 @@ Cards: {len(cards)}. Triples: {len(triples)}. Sheets: {len(book['sheets'])}.
         manifest['base_release']=old_release
         manifest['base_manifest_sha256']=digest(before)
         manifest['base_git_commit']=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
-    manifest.update(package=release,release_kind='integrated_author_amendment_and_register_repair',canonical_update_date=date,canonical_update=description,exported_at_utc=timestamp,source_workbook_status='historical_input_not_reissued',active_cards_sha256=digest((SOURCE/'fts_cards.jsonl').read_bytes()),active_triples_sha256=digest((SOURCE/'fts_triples.tsv').read_bytes()))
+    manifest.update(package=release,release_kind=release_kind,canonical_update_date=date,canonical_update=description,exported_at_utc=timestamp,source_workbook_status='historical_input_not_reissued',active_cards_sha256=digest((SOURCE/'fts_cards.jsonl').read_bytes()),active_triples_sha256=digest((SOURCE/'fts_triples.tsv').read_bytes()))
     manifest['counts']={'cards':len(cards),'triples':len(triples),'yaml_lines':len(yaml_text.splitlines()),'sheets':len(book['sheets'])}
     for item in manifest['files']:
         data=(SOURCE/item['path']).read_bytes(); item.update(size=len(data),sha256=digest(data))
@@ -190,7 +194,8 @@ def main() -> None:
     parser.add_argument('--release',required=True)
     parser.add_argument('--date',required=True)
     parser.add_argument('--description',required=True)
+    parser.add_argument('--kind', default='integrated_author_amendment_and_register_repair')
     args=parser.parse_args()
-    rebuild(args.release,args.date,args.description)
+    rebuild(args.release,args.date,args.description,args.kind)
 
 if __name__=='__main__': main()

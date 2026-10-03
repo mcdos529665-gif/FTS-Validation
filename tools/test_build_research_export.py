@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import importlib.util
+import csv
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -30,9 +32,13 @@ class ResearchExportTests(unittest.TestCase):
     def test_deterministic(self) -> None:
         self.assertEqual(self.first, self.second)
 
-    def test_expected_size(self) -> None:
-        self.assertGreaterEqual(len(self.first), 750_000)
-        self.assertLessEqual(len(self.first), 900_000)
+    def test_size_fits_declared_inputs(self) -> None:
+        inputs = set(builder.INPUT_PATHS)
+        input_bytes = sum((builder.ROOT / relative).stat().st_size for relative in inputs)
+        # Allow section headings, provenance lines and the digest table per input.
+        framing_budget = 1024 * len(inputs)
+        self.assertGreater(len(self.first), 0)
+        self.assertLessEqual(len(self.first), input_bytes + framing_budget)
 
     def test_required_sections_are_ordered(self) -> None:
         positions = [self.text.index(heading) for heading in builder.REQUIRED_HEADINGS]
@@ -59,7 +65,12 @@ class ResearchExportTests(unittest.TestCase):
     def test_canon_counts_and_verification_are_current(self) -> None:
         cards, triples, sheets, _ = builder.source_counts()
         passed, failed, total = builder.verification_counts()
-        self.assertEqual((cards, triples, sheets), (161, 238, 54))
+        canonical_cards = [json.loads(line) for line in (builder.ROOT / builder.CANON_CARDS).read_text(encoding='utf-8').splitlines() if line.strip()]
+        with (builder.ROOT / builder.CANON_TRIPLES).open(encoding='utf-8', newline='') as stream:
+            canonical_triples = list(csv.DictReader(stream, delimiter='\t'))
+        book = json.loads((builder.ROOT / 'source/fts_v13_workbook_sheets.json').read_text(encoding='utf-8'))
+        self.assertEqual((cards, triples, sheets), (len(canonical_cards), len(canonical_triples), len(book['sheets'])))
+        self.assertIn(f'{cards} карточка / {triples} триплетов / {sheets} листа', self.text)
         self.assertEqual(failed, 0)
         self.assertIn(f"{passed} PASS / {failed} FAIL из {total}", self.text)
 

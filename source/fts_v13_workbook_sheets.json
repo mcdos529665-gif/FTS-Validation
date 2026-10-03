@@ -1,8 +1,8 @@
 {
   "source": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-10-03T10:50:19.536997Z",
-  "version": "v13_active_integrated_2026-10-03",
+  "exported_at_utc": "2026-10-03T13:03:44.108277Z",
+  "version": "v13_active_graph_reconciled_2026-10-03",
   "sheet_count": 54,
   "sheets": [
     {
@@ -1350,7 +1350,7 @@
         ],
         [
           "Версия",
-          "v13_active_integrated_2026-10-03",
+          "v13_active_graph_reconciled_2026-10-03",
           "Active export; historical workbook remains a provenance input.",
           "38_Changelog"
         ],
@@ -4975,7 +4975,7 @@
           null,
           "operator",
           "CANON_V43/CANON_EN",
-          "O2;O12;A4",
+          "O_02;O_12;A4",
           "operator;Tot",
           "25_Операторы/OP_Tot",
           "патология: ложная тотализация"
@@ -4990,7 +4990,7 @@
           null,
           "operator",
           "CANON_V43/CANON_EN",
-          "O2",
+          "O_02",
           "operator;Tot⁺",
           "25_Операторы/OP_TotPlus",
           "опасность: превращение в Tot⁻"
@@ -5005,7 +5005,7 @@
           null,
           "operator",
           "CANON_V43/CANON_EN",
-          "O2;O12",
+          "O_02;O_12",
           "operator;Tot⁻",
           "25_Операторы/OP_TotMinus",
           "патология ядра"
@@ -5020,7 +5020,7 @@
           null,
           "operator",
           "CANON_V43/CANON_EN",
-          "O3;O7;O8;A6",
+          "O_03;O_07;O_08;A6",
           "operator;Lift",
           "25_Операторы/OP_Lift",
           "если нет definability gain — Promote"
@@ -5035,7 +5035,7 @@
           null,
           "operator",
           "CANON_V43/CANON_EN",
-          "O12;A9",
+          "O_12;A9",
           "operator;Promote",
           "25_Операторы/OP_Promote",
           "часто через Tot/Refuse/Sever"
@@ -5080,7 +5080,7 @@
           null,
           "operator",
           "CANON_V43/CANON_EN",
-          "O15",
+          "O_15",
           "operator;κ",
           "25_Операторы/OP_kappa",
           "underformalized, но нужен для У7"
@@ -5110,7 +5110,7 @@
           null,
           "operator",
           "CANON_V43/CANON_EN",
-          "O9;O12",
+          "O_09;O_12",
           "operator;Unpack",
           "25_Операторы/OP_Unpack",
           "анти-blackbox"
@@ -5125,7 +5125,7 @@
           null,
           "operator",
           "CANON_V43/CANON_EN",
-          "O8",
+          "O_08",
           "operator;Compress₂",
           "25_Операторы/OP_Compress2",
           "проекция вниз"
@@ -5140,7 +5140,7 @@
           null,
           "operator",
           "CANON_V43/CANON_EN",
-          "O8",
+          "O_08",
           "operator;Expand₂",
           "25_Операторы/OP_Expand2",
           "проекция вверх"
@@ -5500,7 +5500,7 @@
           "all",
           "export",
           "ADDENDUM_V3",
-          "ADDENDUM_V3",
+          null,
           "notation;export;markdown",
           "43_Добавка_v3/ADD_NOTATION_ABS",
           "В Excel можно сохранять |x| как визуальную запись"
@@ -5530,7 +5530,7 @@
           "generic",
           "boundary",
           "ADDENDUM_V3",
-          "ADD_MIRROR_WINDOW",
+          null,
           "zero_boundary;absence;mirror_window",
           "43_Добавка_v3/ADD_ZERO_BOUNDARY",
           "Повышено v9: F=-F iff F=0 — math fact; ZeroBoundary — derived constraint."
@@ -5635,7 +5635,7 @@
           "all",
           "export",
           "workbook",
-          "ADDENDUM_V3",
+          null,
           "export;research;markdown;jsonl;tsv;yaml",
           "42_Экспорт_GPT/ADD_RESEARCH_FORMAT",
           "XLSX остаётся редактором, не оптимальным исследовательским носителем"
@@ -5725,7 +5725,7 @@
           "7",
           "CH-register/core",
           "USER_DIALOG_V11 + CANON_HABR",
-          "U_07;M_07;OP_WindowClose",
+          "U_07;M_07",
           "U7;expectation_window;answer;prediction;knowledge",
           "U7_Window_Cycles/U7_WINDOW_CORE",
           "Новая центральная карточка v11"
@@ -5800,7 +5800,7 @@
           "7",
           "composition",
           "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03",
-          "A_07;U_06;SP_WINDOW;SP_ZERO",
+          "U_06;SP_WINDOW;SP_ZERO",
           "U7;math;local_forbid;mirror_window",
           "06_Мат_аналогии/U7",
           "Группировка является локальной границей"
@@ -6350,8 +6350,8 @@
     {
       "name": "18_Граф",
       "index": 18,
-      "range": "A1:H272",
-      "rows": 272,
+      "range": "A1:H379",
+      "rows": 379,
       "cols": 8,
       "values": [
         [
@@ -7607,7 +7607,7 @@
         [
           "OP_Tot",
           "depends_on",
-          "O2",
+          "O_02",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7617,7 +7617,7 @@
         [
           "OP_Tot",
           "depends_on",
-          "O12",
+          "O_12",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7637,7 +7637,7 @@
         [
           "OP_TotPlus",
           "depends_on",
-          "O2",
+          "O_02",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7647,7 +7647,7 @@
         [
           "OP_TotMinus",
           "depends_on",
-          "O2",
+          "O_02",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7657,7 +7657,7 @@
         [
           "OP_TotMinus",
           "depends_on",
-          "O12",
+          "O_12",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7667,7 +7667,7 @@
         [
           "OP_Lift",
           "depends_on",
-          "O3",
+          "O_03",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7677,7 +7677,7 @@
         [
           "OP_Lift",
           "depends_on",
-          "O7",
+          "O_07",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7687,7 +7687,7 @@
         [
           "OP_Lift",
           "depends_on",
-          "O8",
+          "O_08",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7707,7 +7707,7 @@
         [
           "OP_Promote",
           "depends_on",
-          "O12",
+          "O_12",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7747,7 +7747,7 @@
         [
           "OP_kappa",
           "depends_on",
-          "O15",
+          "O_15",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7767,7 +7767,7 @@
         [
           "OP_Unpack",
           "depends_on",
-          "O9",
+          "O_09",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7777,7 +7777,7 @@
         [
           "OP_Unpack",
           "depends_on",
-          "O12",
+          "O_12",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7787,7 +7787,7 @@
         [
           "OP_Compress2",
           "depends_on",
-          "O8",
+          "O_08",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -7797,7 +7797,7 @@
         [
           "OP_Expand2",
           "depends_on",
-          "O8",
+          "O_08",
           "operator_dependency",
           "CANON_V43/CANON_EN",
           "canonical",
@@ -8167,7 +8167,7 @@
         [
           "ADD_ZERO_BOUNDARY",
           "supports",
-          "O(17)",
+          "O_17",
           "boundary_gain",
           "ADDENDUM_V3",
           "candidate",
@@ -8177,7 +8177,7 @@
         [
           "ADD_PARITY_TOPOLOGY",
           "supports",
-          "O(8)",
+          "O_08",
           "two_step_projection",
           "ADDENDUM_V3",
           "candidate",
@@ -8187,7 +8187,7 @@
         [
           "ADD_TOPO_INVARIANTS",
           "supports",
-          "O(17)",
+          "O_17",
           "boundary_gain",
           "ADDENDUM_V3",
           "candidate",
@@ -8226,12 +8226,12 @@
         ],
         [
           "ADD_U12_CIRCLE",
-          "depends_on",
+          "uses_analogy",
           "U_10",
           "structural_link",
           "ADDENDUM_V3",
           "candidate",
-          "cos period becomes circle coordinate",
+          "cos period becomes circle coordinate; Relation reviewed as uses_analogy; see GRAPH_RECONCILIATION_2026-10-03.md",
           "G_0187"
         ],
         [
@@ -9036,12 +9036,12 @@
         ],
         [
           "U7_MATH_LOCAL_FORBID",
-          "depends_on",
+          "applies_to",
           "A_07",
           "integration_2026-10-03",
           "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03",
           "derived_constraint",
-          "Explicit author integration / register repair",
+          "Explicit author integration / register repair; Relation reviewed as applies_to; see GRAPH_RECONCILIATION_2026-10-03.md",
           "G_0269"
         ],
         [
@@ -9073,6 +9073,1076 @@
           "derived_constraint",
           "Explicit author integration / register repair",
           "G_0272"
+        ],
+        [
+          "ADD_ZERO_BOUNDARY",
+          "applies_to",
+          "ADD_MIRROR_WINDOW",
+          "graph_dependency_reference_reconciliation",
+          "ADDENDUM_V3",
+          "formal_math_fact / derived_constraint",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0273"
+        ],
+        [
+          "ADDENDUM_V3",
+          "contains",
+          "ADD_RESEARCH_FORMAT",
+          "graph_dependency_reference_reconciliation",
+          "ADDENDUM_V3",
+          "candidate_bundle",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0274"
+        ],
+        [
+          "M_07",
+          "depends_on",
+          "U_06",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43 + AUTHOR_CORRECTION_2026-09-21",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0275"
+        ],
+        [
+          "CH_07",
+          "depends_on",
+          "U7_WINDOW_CORE",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0276"
+        ],
+        [
+          "CH_07",
+          "depends_on",
+          "OP_WindowClose",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0277"
+        ],
+        [
+          "CH_07",
+          "depends_on",
+          "OP_AgenticGate",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0278"
+        ],
+        [
+          "F1",
+          "depends_on",
+          "O_12",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "canonical",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0279"
+        ],
+        [
+          "F2",
+          "depends_on",
+          "O_12",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "canonical",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0280"
+        ],
+        [
+          "F3",
+          "depends_on",
+          "O_12",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "canonical",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0281"
+        ],
+        [
+          "F4",
+          "depends_on",
+          "O_12",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "canonical",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0282"
+        ],
+        [
+          "F5",
+          "depends_on",
+          "O_12",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "canonical",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0283"
+        ],
+        [
+          "T7A",
+          "depends_on",
+          "O_12",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "canonical",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0284"
+        ],
+        [
+          "T7B",
+          "depends_on",
+          "O_12",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "canonical",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0285"
+        ],
+        [
+          "T7C",
+          "depends_on",
+          "O_12",
+          "graph_dependency_reference_reconciliation",
+          "CANON_V43/CANON_EN",
+          "canonical",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0286"
+        ],
+        [
+          "ADD_PARITY_TOPOLOGY",
+          "depends_on",
+          "ADD_MIRROR_WINDOW",
+          "graph_dependency_reference_reconciliation",
+          "ADDENDUM_V3",
+          "canonical_alignment",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0287"
+        ],
+        [
+          "ADD_TOPO_INVARIANTS",
+          "depends_on",
+          "ADD_ZERO_BOUNDARY",
+          "graph_dependency_reference_reconciliation",
+          "ADDENDUM_V3",
+          "candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0288"
+        ],
+        [
+          "ADD_HALF_PHI",
+          "depends_on",
+          "ADD_PARITY_TOPOLOGY",
+          "graph_dependency_reference_reconciliation",
+          "ADDENDUM_V3",
+          "candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0289"
+        ],
+        [
+          "ADD_CONSTANTS",
+          "depends_on",
+          "ADD_ZERO_BOUNDARY",
+          "graph_dependency_reference_reconciliation",
+          "ADDENDUM_V3",
+          "candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0290"
+        ],
+        [
+          "ADD_U11_EPI",
+          "depends_on",
+          "ADD_CONSTANTS",
+          "graph_dependency_reference_reconciliation",
+          "ADDENDUM_V3",
+          "candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0291"
+        ],
+        [
+          "ADD_U12_CIRCLE",
+          "depends_on",
+          "ADD_ZERO_BOUNDARY",
+          "graph_dependency_reference_reconciliation",
+          "ADDENDUM_V3",
+          "candidate_requires_formalization",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0292"
+        ],
+        [
+          "SP_WINDOW",
+          "depends_on",
+          "ADD_MIRROR_WINDOW",
+          "graph_dependency_reference_reconciliation",
+          "RESEARCH_STATUS_V9",
+          "derived_constraint",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0293"
+        ],
+        [
+          "SP_ZERO",
+          "depends_on",
+          "ADD_ZERO_BOUNDARY",
+          "graph_dependency_reference_reconciliation",
+          "RESEARCH_STATUS_V9",
+          "formal_math_fact / derived_constraint",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0294"
+        ],
+        [
+          "SP_U8",
+          "depends_on",
+          "U_08",
+          "graph_dependency_reference_reconciliation",
+          "RESEARCH_STATUS_V9",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0295"
+        ],
+        [
+          "SP_U8",
+          "depends_on",
+          "M_08",
+          "graph_dependency_reference_reconciliation",
+          "RESEARCH_STATUS_V9",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0296"
+        ],
+        [
+          "SP_U9",
+          "depends_on",
+          "U_09",
+          "graph_dependency_reference_reconciliation",
+          "RESEARCH_STATUS_V9",
+          "FTS_candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0297"
+        ],
+        [
+          "SP_U9",
+          "depends_on",
+          "M_09",
+          "graph_dependency_reference_reconciliation",
+          "RESEARCH_STATUS_V9",
+          "FTS_candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0298"
+        ],
+        [
+          "SP_U12",
+          "depends_on",
+          "U_12",
+          "graph_dependency_reference_reconciliation",
+          "RESEARCH_STATUS_V9",
+          "candidate_requires_formalization + canonical_alignment",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0299"
+        ],
+        [
+          "SP_U12",
+          "depends_on",
+          "ADD_U12_CIRCLE",
+          "graph_dependency_reference_reconciliation",
+          "RESEARCH_STATUS_V9",
+          "candidate_requires_formalization + canonical_alignment",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0300"
+        ],
+        [
+          "U7_WINDOW_CORE",
+          "depends_on",
+          "U_07",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V11 + CANON_HABR",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0301"
+        ],
+        [
+          "U7_WINDOW_CORE",
+          "depends_on",
+          "M_07",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V11 + CANON_HABR",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0302"
+        ],
+        [
+          "OP_WindowClose",
+          "depends_on",
+          "U7_WINDOW_CORE",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V11",
+          "candidate_core",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0303"
+        ],
+        [
+          "OP_WindowClose",
+          "depends_on",
+          "OP_Window",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V11",
+          "candidate_core",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0304"
+        ],
+        [
+          "U7_FORGET_CLOSE",
+          "depends_on",
+          "U7_WINDOW_CORE",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V11 + CANON_EN",
+          "candidate_core",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0305"
+        ],
+        [
+          "U7_FORGET_CLOSE",
+          "depends_on",
+          "OP_Refuse",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V11 + CANON_EN",
+          "candidate_core",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0306"
+        ],
+        [
+          "U7_FORGET_CLOSE",
+          "depends_on",
+          "OP_Sever",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V11 + CANON_EN",
+          "candidate_core",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0307"
+        ],
+        [
+          "U7_U8_ANSWER_QUESTION_BOUNDARY",
+          "depends_on",
+          "U_07",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V11",
+          "candidate_boundary",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0308"
+        ],
+        [
+          "U7_U8_ANSWER_QUESTION_BOUNDARY",
+          "depends_on",
+          "U_08",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V11",
+          "candidate_boundary",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0309"
+        ],
+        [
+          "U7_U8_ANSWER_QUESTION_BOUNDARY",
+          "depends_on",
+          "U7_WINDOW_CORE",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V11",
+          "candidate_boundary",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0310"
+        ],
+        [
+          "U7_AGENTIC_GATE_LAYER",
+          "depends_on",
+          "OP_kappa",
+          "graph_dependency_reference_reconciliation",
+          "CANON_EN + USER_DIALOG_V11",
+          "operational_diagnostic_layer",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0311"
+        ],
+        [
+          "U7_AGENTIC_GATE_LAYER",
+          "depends_on",
+          "T7A",
+          "graph_dependency_reference_reconciliation",
+          "CANON_EN + USER_DIALOG_V11",
+          "operational_diagnostic_layer",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0312"
+        ],
+        [
+          "U7_AGENTIC_GATE_LAYER",
+          "depends_on",
+          "T7B",
+          "graph_dependency_reference_reconciliation",
+          "CANON_EN + USER_DIALOG_V11",
+          "operational_diagnostic_layer",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0313"
+        ],
+        [
+          "U7_AGENTIC_GATE_LAYER",
+          "depends_on",
+          "T7C",
+          "graph_dependency_reference_reconciliation",
+          "CANON_EN + USER_DIALOG_V11",
+          "operational_diagnostic_layer",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0314"
+        ],
+        [
+          "U7_AGENTIC_GATE_LAYER",
+          "depends_on",
+          "U7_WINDOW_CORE",
+          "graph_dependency_reference_reconciliation",
+          "CANON_EN + USER_DIALOG_V11",
+          "operational_diagnostic_layer",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0315"
+        ],
+        [
+          "CHI_STAT_LADDER",
+          "depends_on",
+          "OP_ChiCarrier",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "statistical_overlay_candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0316"
+        ],
+        [
+          "CHI_STAT_LADDER",
+          "depends_on",
+          "OP_ChiOverlayMap",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "statistical_overlay_candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0317"
+        ],
+        [
+          "CHI_STAT_LADDER",
+          "depends_on",
+          "OP_ChiSquareDiagnostic",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "statistical_overlay_candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0318"
+        ],
+        [
+          "CHI_CARRIER",
+          "depends_on",
+          "U_06",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "statistical_overlay_candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0319"
+        ],
+        [
+          "CHI_CARRIER",
+          "depends_on",
+          "U7_WINDOW_CORE",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "statistical_overlay_candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0320"
+        ],
+        [
+          "OP_ChiCarrier",
+          "depends_on",
+          "OP_ChiSquareDiagnostic",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "statistical_overlay_candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0321"
+        ],
+        [
+          "CHI_LADDER_U6",
+          "depends_on",
+          "U_06",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "strong_statistical_analog",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0322"
+        ],
+        [
+          "CHI_LADDER_U6",
+          "depends_on",
+          "CHI_CARRIER",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "strong_statistical_analog",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0323"
+        ],
+        [
+          "CHI_LADDER_U6",
+          "depends_on",
+          "OP_ChiSquareDiagnostic",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "strong_statistical_analog",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0324"
+        ],
+        [
+          "CHI_LADDER_U7",
+          "depends_on",
+          "U_07",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "candidate_bridge",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0325"
+        ],
+        [
+          "CHI_LADDER_U7",
+          "depends_on",
+          "U7_WINDOW_CORE",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "candidate_bridge",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0326"
+        ],
+        [
+          "CHI_LADDER_U7",
+          "depends_on",
+          "CHI_LADDER_U6",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "candidate_bridge",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0327"
+        ],
+        [
+          "CHI_LADDER_U8",
+          "depends_on",
+          "U_08",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0328"
+        ],
+        [
+          "CHI_LADDER_U8",
+          "depends_on",
+          "U7_U8_ANSWER_QUESTION_BOUNDARY",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0329"
+        ],
+        [
+          "CHI_LADDER_U8",
+          "depends_on",
+          "CHI_CARRIER",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "candidate_with_operational_gate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0330"
+        ],
+        [
+          "CHI_LADDER_U9",
+          "depends_on",
+          "U_09",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "FTS_candidate_guarded",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0331"
+        ],
+        [
+          "CHI_LADDER_U9",
+          "depends_on",
+          "SP_U9",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "FTS_candidate_guarded",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0332"
+        ],
+        [
+          "CHI_LADDER_U9",
+          "depends_on",
+          "CHI_LADDER_U8",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "FTS_candidate_guarded",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0333"
+        ],
+        [
+          "CHI_LADDER_U10",
+          "depends_on",
+          "U_10",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "reserved_underformalized_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0334"
+        ],
+        [
+          "CHI_LADDER_U10",
+          "depends_on",
+          "OP_dDelta",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "reserved_underformalized_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0335"
+        ],
+        [
+          "CHI_LADDER_U10",
+          "depends_on",
+          "CHI_LADDER_U9",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "reserved_underformalized_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0336"
+        ],
+        [
+          "CHI_LADDER_U11",
+          "depends_on",
+          "U_11",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "reserved_underformalized_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0337"
+        ],
+        [
+          "CHI_LADDER_U11",
+          "depends_on",
+          "CHI_LADDER_U10",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V12",
+          "reserved_underformalized_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0338"
+        ],
+        [
+          "COMPLEX_BRANCH_OVERLAY",
+          "depends_on",
+          "CHI_CARRIER",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13/access_axes_layer",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0339"
+        ],
+        [
+          "COMPLEX_BRANCH_OVERLAY",
+          "depends_on",
+          "U7_WINDOW_CORE",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13/access_axes_layer",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0340"
+        ],
+        [
+          "COMPLEX_CARRIER",
+          "depends_on",
+          "CHI_CARRIER",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0341"
+        ],
+        [
+          "OP_ComplexNormReadout",
+          "depends_on",
+          "OP_ChiCarrier",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0342"
+        ],
+        [
+          "OP_ComplexBranchAccess",
+          "depends_on",
+          "M_08",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0343"
+        ],
+        [
+          "OP_ComplexBranchAccess",
+          "depends_on",
+          "TA1",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0344"
+        ],
+        [
+          "OP_ComplexBoundaryBranch",
+          "depends_on",
+          "SP_U12",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_U12_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0345"
+        ],
+        [
+          "OP_ComplexBoundaryBranch",
+          "depends_on",
+          "U12_CHI_PI_BOUNDARY",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_U12_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0346"
+        ],
+        [
+          "COMPLEX_LADDER_U6",
+          "depends_on",
+          "U_06",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "strong_overlay_for_U6",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0347"
+        ],
+        [
+          "COMPLEX_LADDER_U6",
+          "depends_on",
+          "CHI_LADDER_U6",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "strong_overlay_for_U6",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0348"
+        ],
+        [
+          "COMPLEX_LADDER_U7",
+          "depends_on",
+          "U_07",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_bridge",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0349"
+        ],
+        [
+          "COMPLEX_LADDER_U7",
+          "depends_on",
+          "U7_WINDOW_CORE",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_bridge",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0350"
+        ],
+        [
+          "COMPLEX_LADDER_U7",
+          "depends_on",
+          "COMPLEX_LADDER_U6",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_bridge",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0351"
+        ],
+        [
+          "COMPLEX_LADDER_U8",
+          "depends_on",
+          "U_08",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0352"
+        ],
+        [
+          "COMPLEX_LADDER_U8",
+          "depends_on",
+          "OP_ComplexBranchAccess",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0353"
+        ],
+        [
+          "COMPLEX_LADDER_U9",
+          "depends_on",
+          "U_09",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "FTS_candidate_guarded",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0354"
+        ],
+        [
+          "COMPLEX_LADDER_U9",
+          "depends_on",
+          "SP_U9",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "FTS_candidate_guarded",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0355"
+        ],
+        [
+          "COMPLEX_LADDER_U9",
+          "depends_on",
+          "COMPLEX_LADDER_U8",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "FTS_candidate_guarded",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0356"
+        ],
+        [
+          "COMPLEX_LADDER_U10",
+          "depends_on",
+          "U_10",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "reserved_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0357"
+        ],
+        [
+          "COMPLEX_LADDER_U10",
+          "depends_on",
+          "CHI_LADDER_U10",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "reserved_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0358"
+        ],
+        [
+          "COMPLEX_LADDER_U11",
+          "depends_on",
+          "U_11",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "reserved_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0359"
+        ],
+        [
+          "COMPLEX_LADDER_U11",
+          "depends_on",
+          "CHI_LADDER_U11",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "reserved_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0360"
+        ],
+        [
+          "COMPLEX_LADDER_U12",
+          "depends_on",
+          "U_12",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_U12_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0361"
+        ],
+        [
+          "COMPLEX_LADDER_U12",
+          "depends_on",
+          "SP_U12",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_U12_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0362"
+        ],
+        [
+          "COMPLEX_LADDER_U12",
+          "depends_on",
+          "OP_ComplexBoundaryBranch",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_U12_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0363"
+        ],
+        [
+          "U12_CHI_PI_COMPLEX_BOUNDARY",
+          "depends_on",
+          "U12_CHI_PI_BOUNDARY",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_requires_formalization",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0364"
+        ],
+        [
+          "U12_CHI_PI_COMPLEX_BOUNDARY",
+          "depends_on",
+          "COMPLEX_LADDER_U12",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_requires_formalization",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0365"
+        ],
+        [
+          "TENSOR_CONTEXT_OVERLAY",
+          "depends_on",
+          "U_10",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0366"
+        ],
+        [
+          "TENSOR_CONTEXT_OVERLAY",
+          "depends_on",
+          "U_11",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0367"
+        ],
+        [
+          "TENSOR_CONTEXT_OVERLAY",
+          "depends_on",
+          "U_12",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0368"
+        ],
+        [
+          "TENSOR_CARRIER",
+          "depends_on",
+          "CHI_CARRIER",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0369"
+        ],
+        [
+          "TENSOR_CARRIER",
+          "depends_on",
+          "Lambda_link",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0370"
+        ],
+        [
+          "OP_TensorContextMap",
+          "depends_on",
+          "Lambda_link",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0371"
+        ],
+        [
+          "OP_TensorContextMap",
+          "depends_on",
+          "U_10",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0372"
+        ],
+        [
+          "OP_TensorContextMap",
+          "depends_on",
+          "U_11",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0373"
+        ],
+        [
+          "TENSOR_LADDER_U10",
+          "depends_on",
+          "U_10",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0374"
+        ],
+        [
+          "TENSOR_LADDER_U10",
+          "depends_on",
+          "OP_TensorContextMap",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0375"
+        ],
+        [
+          "TENSOR_LADDER_U11",
+          "depends_on",
+          "U_11",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0376"
+        ],
+        [
+          "TENSOR_LADDER_U11",
+          "depends_on",
+          "TENSOR_LADDER_U10",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0377"
+        ],
+        [
+          "TENSOR_LADDER_U12",
+          "depends_on",
+          "U_12",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_U12_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0378"
+        ],
+        [
+          "TENSOR_LADDER_U12",
+          "depends_on",
+          "U12_CHI_PI_COMPLEX_BOUNDARY",
+          "graph_dependency_reference_reconciliation",
+          "USER_DIALOG_V13",
+          "candidate_U12_overlay",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
+          "G_0379"
         ]
       ]
     },
@@ -12768,23 +13838,23 @@
         ],
         [
           78,
-          "{\"id\": \"OP_Tot\", \"type\": \"operator\", \"text\": \"Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация\", \"depends_on\": [\"O2\", \"O12\", \"A4\"], \"tags\": [\"operator\", \"Tot\"], \"path\": \"25_Операторы/OP_Tot\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"Tot(0_A)=event(0_A)=¬A\", \"title\": \"Tot\"}"
+          "{\"id\": \"OP_Tot\", \"type\": \"operator\", \"text\": \"Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация\", \"depends_on\": [\"O_02\", \"O_12\", \"A4\"], \"tags\": [\"operator\", \"Tot\"], \"path\": \"25_Операторы/OP_Tot\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"Tot(0_A)=event(0_A)=¬A\", \"title\": \"Tot\"}"
         ],
         [
           79,
-          "{\"id\": \"OP_TotPlus\", \"type\": \"operator\", \"text\": \"рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻\", \"depends_on\": [\"O2\"], \"tags\": [\"operator\", \"Tot⁺\"], \"path\": \"25_Операторы/OP_TotPlus\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"рабочая упаковка без потери Res_n\", \"title\": \"Tot⁺\"}"
+          "{\"id\": \"OP_TotPlus\", \"type\": \"operator\", \"text\": \"рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻\", \"depends_on\": [\"O_02\"], \"tags\": [\"operator\", \"Tot⁺\"], \"path\": \"25_Операторы/OP_TotPlus\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"рабочая упаковка без потери Res_n\", \"title\": \"Tot⁺\"}"
         ],
         [
           80,
-          "{\"id\": \"OP_TotMinus\", \"type\": \"operator\", \"text\": \"редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра\", \"depends_on\": [\"O2\", \"O12\"], \"tags\": [\"operator\", \"Tot⁻\"], \"path\": \"25_Операторы/OP_TotMinus\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"редукционистская тотализация\", \"title\": \"Tot⁻\"}"
+          "{\"id\": \"OP_TotMinus\", \"type\": \"operator\", \"text\": \"редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра\", \"depends_on\": [\"O_02\", \"O_12\"], \"tags\": [\"operator\", \"Tot⁻\"], \"path\": \"25_Операторы/OP_TotMinus\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"редукционистская тотализация\", \"title\": \"Tot⁻\"}"
         ],
         [
           81,
-          "{\"id\": \"OP_Lift\", \"type\": \"operator\", \"text\": \"X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote\", \"depends_on\": [\"O3\", \"O7\", \"O8\", \"A6\"], \"tags\": [\"operator\", \"Lift\"], \"path\": \"25_Операторы/OP_Lift\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"X_{n+1}=Lift(X_n,Res_n)\", \"title\": \"Lift\"}"
+          "{\"id\": \"OP_Lift\", \"type\": \"operator\", \"text\": \"X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote\", \"depends_on\": [\"O_03\", \"O_07\", \"O_08\", \"A6\"], \"tags\": [\"operator\", \"Lift\"], \"path\": \"25_Операторы/OP_Lift\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"X_{n+1}=Lift(X_n,Res_n)\", \"title\": \"Lift\"}"
         ],
         [
           82,
-          "{\"id\": \"OP_Promote\", \"type\": \"operator\", \"text\": \"label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever\", \"depends_on\": [\"O12\", \"A9\"], \"tags\": [\"operator\", \"Promote\"], \"path\": \"25_Операторы/OP_Promote\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"label n→n+1 без новой выразимости\", \"title\": \"Promote\"}"
+          "{\"id\": \"OP_Promote\", \"type\": \"operator\", \"text\": \"label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever\", \"depends_on\": [\"O_12\", \"A9\"], \"tags\": [\"operator\", \"Promote\"], \"path\": \"25_Операторы/OP_Promote\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"label n→n+1 без новой выразимости\", \"title\": \"Promote\"}"
         ],
         [
           83,
@@ -12796,7 +13866,7 @@
         ],
         [
           85,
-          "{\"id\": \"OP_kappa\", \"type\": \"operator\", \"text\": \"κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7\", \"depends_on\": [\"O15\"], \"tags\": [\"operator\", \"κ\"], \"path\": \"25_Операторы/OP_kappa\", \"status\": \"candidate_with_operational_gate\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"κ(S,0_S,Prov,Rev)\", \"title\": \"κ\"}"
+          "{\"id\": \"OP_kappa\", \"type\": \"operator\", \"text\": \"κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7\", \"depends_on\": [\"O_15\"], \"tags\": [\"operator\", \"κ\"], \"path\": \"25_Операторы/OP_kappa\", \"status\": \"candidate_with_operational_gate\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"κ(S,0_S,Prov,Rev)\", \"title\": \"κ\"}"
         ],
         [
           86,
@@ -12804,15 +13874,15 @@
         ],
         [
           87,
-          "{\"id\": \"OP_Unpack\", \"type\": \"operator\", \"text\": \"C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox\", \"depends_on\": [\"O9\", \"O12\"], \"tags\": [\"operator\", \"Unpack\"], \"path\": \"25_Операторы/OP_Unpack\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"C(x)=C(Unpack(x))\", \"title\": \"Unpack\"}"
+          "{\"id\": \"OP_Unpack\", \"type\": \"operator\", \"text\": \"C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox\", \"depends_on\": [\"O_09\", \"O_12\"], \"tags\": [\"operator\", \"Unpack\"], \"path\": \"25_Операторы/OP_Unpack\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"C(x)=C(Unpack(x))\", \"title\": \"Unpack\"}"
         ],
         [
           88,
-          "{\"id\": \"OP_Compress2\", \"type\": \"operator\", \"text\": \"M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз\", \"depends_on\": [\"O8\"], \"tags\": [\"operator\", \"Compress₂\"], \"path\": \"25_Операторы/OP_Compress2\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"M_n*=Compress₂(M_{n+2})\", \"title\": \"Compress₂\"}"
+          "{\"id\": \"OP_Compress2\", \"type\": \"operator\", \"text\": \"M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз\", \"depends_on\": [\"O_08\"], \"tags\": [\"operator\", \"Compress₂\"], \"path\": \"25_Операторы/OP_Compress2\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"M_n*=Compress₂(M_{n+2})\", \"title\": \"Compress₂\"}"
         ],
         [
           89,
-          "{\"id\": \"OP_Expand2\", \"type\": \"operator\", \"text\": \"M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх\", \"depends_on\": [\"O8\"], \"tags\": [\"operator\", \"Expand₂\"], \"path\": \"25_Операторы/OP_Expand2\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)\", \"title\": \"Expand₂\"}"
+          "{\"id\": \"OP_Expand2\", \"type\": \"operator\", \"text\": \"M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх\", \"depends_on\": [\"O_08\"], \"tags\": [\"operator\", \"Expand₂\"], \"path\": \"25_Операторы/OP_Expand2\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)\", \"title\": \"Expand₂\"}"
         ],
         [
           90,
@@ -12908,7 +13978,7 @@
         ],
         [
           113,
-          "{\"id\": \"ADD_NOTATION_ABS\", \"type\": \"notation_rule\", \"text\": \"В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо |x|, чтобы не ломать pipe-таблицы.\", \"depends_on\": [\"ADDENDUM_V3\"], \"tags\": [\"notation\", \"export\", \"markdown\"], \"path\": \"43_Добавка_v3/ADD_NOTATION_ABS\", \"status\": \"canonical_note\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"abs(x)\", \"title\": \"Правило abs(x) для Markdown/TSV\"}"
+          "{\"id\": \"ADD_NOTATION_ABS\", \"type\": \"notation_rule\", \"text\": \"В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо |x|, чтобы не ломать pipe-таблицы.\", \"depends_on\": [], \"tags\": [\"notation\", \"export\", \"markdown\"], \"path\": \"43_Добавка_v3/ADD_NOTATION_ABS\", \"status\": \"canonical_note\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"abs(x)\", \"title\": \"Правило abs(x) для Markdown/TSV\"}"
         ],
         [
           114,
@@ -12916,7 +13986,7 @@
         ],
         [
           115,
-          "{\"id\": \"ADD_ZERO_BOUNDARY\", \"type\": \"boundary_candidate\", \"text\": \"F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.\", \"depends_on\": [\"ADD_MIRROR_WINDOW\"], \"tags\": [\"zero_boundary\", \"absence\", \"mirror_window\"], \"path\": \"43_Добавка_v3/ADD_ZERO_BOUNDARY\", \"status\": \"formal_math_fact / derived_constraint\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"ZeroBoundary(F_n)={x:F_n(x)=0}\", \"title\": \"Нулевая граница зеркального окна\"}"
+          "{\"id\": \"ADD_ZERO_BOUNDARY\", \"type\": \"boundary_candidate\", \"text\": \"F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.\", \"depends_on\": [], \"tags\": [\"zero_boundary\", \"absence\", \"mirror_window\"], \"path\": \"43_Добавка_v3/ADD_ZERO_BOUNDARY\", \"status\": \"formal_math_fact / derived_constraint\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"ZeroBoundary(F_n)={x:F_n(x)=0}\", \"title\": \"Нулевая граница зеркального окна\"}"
         ],
         [
           116,
@@ -12944,7 +14014,7 @@
         ],
         [
           122,
-          "{\"id\": \"ADD_RESEARCH_FORMAT\", \"type\": \"export_instruction\", \"text\": \"Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.\", \"depends_on\": [\"ADDENDUM_V3\"], \"tags\": [\"export\", \"research\", \"markdown\", \"jsonl\", \"tsv\", \"yaml\"], \"path\": \"42_Экспорт_GPT/ADD_RESEARCH_FORMAT\", \"status\": \"active_instruction\", \"internal_ref\": \"workbook\", \"symbol\": \"Markdown+JSONL+TSV+YAML\", \"title\": \"Research-friendly формат для GPT\"}"
+          "{\"id\": \"ADD_RESEARCH_FORMAT\", \"type\": \"export_instruction\", \"text\": \"Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.\", \"depends_on\": [], \"tags\": [\"export\", \"research\", \"markdown\", \"jsonl\", \"tsv\", \"yaml\"], \"path\": \"42_Экспорт_GPT/ADD_RESEARCH_FORMAT\", \"status\": \"active_instruction\", \"internal_ref\": \"workbook\", \"symbol\": \"Markdown+JSONL+TSV+YAML\", \"title\": \"Research-friendly формат для GPT\"}"
         ],
         [
           123,
@@ -12968,7 +14038,7 @@
         ],
         [
           128,
-          "{\"id\": \"U7_WINDOW_CORE\", \"type\": \"definition\", \"text\": \"У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.\", \"depends_on\": [\"U_07\", \"M_07\", \"OP_WindowClose\"], \"tags\": [\"U7\", \"expectation_window\", \"answer\", \"prediction\", \"knowledge\"], \"path\": \"U7_Window_Cycles/U7_WINDOW_CORE\", \"status\": \"candidate_with_operational_gate\", \"internal_ref\": \"USER_DIALOG_V11 + CANON_HABR\", \"symbol\": \"Answer(W)=Close(W,W)\", \"title\": \"У7: окно ожидания как самозамыкающийся ответ\"}"
+          "{\"id\": \"U7_WINDOW_CORE\", \"type\": \"definition\", \"text\": \"У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.\", \"depends_on\": [\"U_07\", \"M_07\"], \"tags\": [\"U7\", \"expectation_window\", \"answer\", \"prediction\", \"knowledge\"], \"path\": \"U7_Window_Cycles/U7_WINDOW_CORE\", \"status\": \"candidate_with_operational_gate\", \"internal_ref\": \"USER_DIALOG_V11 + CANON_HABR\", \"symbol\": \"Answer(W)=Close(W,W)\", \"title\": \"У7: окно ожидания как самозамыкающийся ответ\"}"
         ],
         [
           129,
@@ -12988,7 +14058,7 @@
         ],
         [
           133,
-          "{\"id\": \"U7_MATH_LOCAL_FORBID\", \"type\": \"constraint\", \"text\": \"Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.\", \"depends_on\": [\"A_07\", \"U_06\", \"SP_WINDOW\", \"SP_ZERO\"], \"tags\": [\"U7\", \"math\", \"local_forbid\", \"mirror_window\"], \"path\": \"06_Мат_аналогии/U7\", \"status\": \"derived_constraint\", \"internal_ref\": \"RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03\", \"symbol\": \"y=-x*x; y!=x*x\", \"title\": \"У7: y=-x*x обязан читаться с y!=x*x\"}"
+          "{\"id\": \"U7_MATH_LOCAL_FORBID\", \"type\": \"constraint\", \"text\": \"Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.\", \"depends_on\": [\"U_06\", \"SP_WINDOW\", \"SP_ZERO\"], \"tags\": [\"U7\", \"math\", \"local_forbid\", \"mirror_window\"], \"path\": \"06_Мат_аналогии/U7\", \"status\": \"derived_constraint\", \"internal_ref\": \"RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03\", \"symbol\": \"y=-x*x; y!=x*x\", \"title\": \"У7: y=-x*x обязан читаться с y!=x*x\"}"
         ],
         [
           134,
@@ -13139,8 +14209,8 @@
     {
       "name": "35_Export_tsv",
       "index": 35,
-      "range": "A1:B272",
-      "rows": 272,
+      "range": "A1:B379",
+      "rows": 379,
       "cols": 2,
       "values": [
         [
@@ -13645,11 +14715,11 @@
         ],
         [
           125,
-          "OP_Tot\tdepends_on\tO2"
+          "OP_Tot\tdepends_on\tO_02"
         ],
         [
           126,
-          "OP_Tot\tdepends_on\tO12"
+          "OP_Tot\tdepends_on\tO_12"
         ],
         [
           127,
@@ -13657,27 +14727,27 @@
         ],
         [
           128,
-          "OP_TotPlus\tdepends_on\tO2"
+          "OP_TotPlus\tdepends_on\tO_02"
         ],
         [
           129,
-          "OP_TotMinus\tdepends_on\tO2"
+          "OP_TotMinus\tdepends_on\tO_02"
         ],
         [
           130,
-          "OP_TotMinus\tdepends_on\tO12"
+          "OP_TotMinus\tdepends_on\tO_12"
         ],
         [
           131,
-          "OP_Lift\tdepends_on\tO3"
+          "OP_Lift\tdepends_on\tO_03"
         ],
         [
           132,
-          "OP_Lift\tdepends_on\tO7"
+          "OP_Lift\tdepends_on\tO_07"
         ],
         [
           133,
-          "OP_Lift\tdepends_on\tO8"
+          "OP_Lift\tdepends_on\tO_08"
         ],
         [
           134,
@@ -13685,7 +14755,7 @@
         ],
         [
           135,
-          "OP_Promote\tdepends_on\tO12"
+          "OP_Promote\tdepends_on\tO_12"
         ],
         [
           136,
@@ -13701,7 +14771,7 @@
         ],
         [
           139,
-          "OP_kappa\tdepends_on\tO15"
+          "OP_kappa\tdepends_on\tO_15"
         ],
         [
           140,
@@ -13709,19 +14779,19 @@
         ],
         [
           141,
-          "OP_Unpack\tdepends_on\tO9"
+          "OP_Unpack\tdepends_on\tO_09"
         ],
         [
           142,
-          "OP_Unpack\tdepends_on\tO12"
+          "OP_Unpack\tdepends_on\tO_12"
         ],
         [
           143,
-          "OP_Compress2\tdepends_on\tO8"
+          "OP_Compress2\tdepends_on\tO_08"
         ],
         [
           144,
-          "OP_Expand2\tdepends_on\tO8"
+          "OP_Expand2\tdepends_on\tO_08"
         ],
         [
           145,
@@ -13869,15 +14939,15 @@
         ],
         [
           181,
-          "ADD_ZERO_BOUNDARY\tsupports\tO(17)"
+          "ADD_ZERO_BOUNDARY\tsupports\tO_17"
         ],
         [
           182,
-          "ADD_PARITY_TOPOLOGY\tsupports\tO(8)"
+          "ADD_PARITY_TOPOLOGY\tsupports\tO_08"
         ],
         [
           183,
-          "ADD_TOPO_INVARIANTS\tsupports\tO(17)"
+          "ADD_TOPO_INVARIANTS\tsupports\tO_17"
         ],
         [
           184,
@@ -13893,7 +14963,7 @@
         ],
         [
           187,
-          "ADD_U12_CIRCLE\tdepends_on\tU_10"
+          "ADD_U12_CIRCLE\tuses_analogy\tU_10"
         ],
         [
           188,
@@ -14217,7 +15287,7 @@
         ],
         [
           268,
-          "U7_MATH_LOCAL_FORBID\tdepends_on\tA_07"
+          "U7_MATH_LOCAL_FORBID\tapplies_to\tA_07"
         ],
         [
           269,
@@ -14230,6 +15300,434 @@
         [
           271,
           "U7_MATH_LOCAL_FORBID\tdepends_on\tSP_ZERO"
+        ],
+        [
+          272,
+          "ADD_ZERO_BOUNDARY\tapplies_to\tADD_MIRROR_WINDOW"
+        ],
+        [
+          273,
+          "ADDENDUM_V3\tcontains\tADD_RESEARCH_FORMAT"
+        ],
+        [
+          274,
+          "M_07\tdepends_on\tU_06"
+        ],
+        [
+          275,
+          "CH_07\tdepends_on\tU7_WINDOW_CORE"
+        ],
+        [
+          276,
+          "CH_07\tdepends_on\tOP_WindowClose"
+        ],
+        [
+          277,
+          "CH_07\tdepends_on\tOP_AgenticGate"
+        ],
+        [
+          278,
+          "F1\tdepends_on\tO_12"
+        ],
+        [
+          279,
+          "F2\tdepends_on\tO_12"
+        ],
+        [
+          280,
+          "F3\tdepends_on\tO_12"
+        ],
+        [
+          281,
+          "F4\tdepends_on\tO_12"
+        ],
+        [
+          282,
+          "F5\tdepends_on\tO_12"
+        ],
+        [
+          283,
+          "T7A\tdepends_on\tO_12"
+        ],
+        [
+          284,
+          "T7B\tdepends_on\tO_12"
+        ],
+        [
+          285,
+          "T7C\tdepends_on\tO_12"
+        ],
+        [
+          286,
+          "ADD_PARITY_TOPOLOGY\tdepends_on\tADD_MIRROR_WINDOW"
+        ],
+        [
+          287,
+          "ADD_TOPO_INVARIANTS\tdepends_on\tADD_ZERO_BOUNDARY"
+        ],
+        [
+          288,
+          "ADD_HALF_PHI\tdepends_on\tADD_PARITY_TOPOLOGY"
+        ],
+        [
+          289,
+          "ADD_CONSTANTS\tdepends_on\tADD_ZERO_BOUNDARY"
+        ],
+        [
+          290,
+          "ADD_U11_EPI\tdepends_on\tADD_CONSTANTS"
+        ],
+        [
+          291,
+          "ADD_U12_CIRCLE\tdepends_on\tADD_ZERO_BOUNDARY"
+        ],
+        [
+          292,
+          "SP_WINDOW\tdepends_on\tADD_MIRROR_WINDOW"
+        ],
+        [
+          293,
+          "SP_ZERO\tdepends_on\tADD_ZERO_BOUNDARY"
+        ],
+        [
+          294,
+          "SP_U8\tdepends_on\tU_08"
+        ],
+        [
+          295,
+          "SP_U8\tdepends_on\tM_08"
+        ],
+        [
+          296,
+          "SP_U9\tdepends_on\tU_09"
+        ],
+        [
+          297,
+          "SP_U9\tdepends_on\tM_09"
+        ],
+        [
+          298,
+          "SP_U12\tdepends_on\tU_12"
+        ],
+        [
+          299,
+          "SP_U12\tdepends_on\tADD_U12_CIRCLE"
+        ],
+        [
+          300,
+          "U7_WINDOW_CORE\tdepends_on\tU_07"
+        ],
+        [
+          301,
+          "U7_WINDOW_CORE\tdepends_on\tM_07"
+        ],
+        [
+          302,
+          "OP_WindowClose\tdepends_on\tU7_WINDOW_CORE"
+        ],
+        [
+          303,
+          "OP_WindowClose\tdepends_on\tOP_Window"
+        ],
+        [
+          304,
+          "U7_FORGET_CLOSE\tdepends_on\tU7_WINDOW_CORE"
+        ],
+        [
+          305,
+          "U7_FORGET_CLOSE\tdepends_on\tOP_Refuse"
+        ],
+        [
+          306,
+          "U7_FORGET_CLOSE\tdepends_on\tOP_Sever"
+        ],
+        [
+          307,
+          "U7_U8_ANSWER_QUESTION_BOUNDARY\tdepends_on\tU_07"
+        ],
+        [
+          308,
+          "U7_U8_ANSWER_QUESTION_BOUNDARY\tdepends_on\tU_08"
+        ],
+        [
+          309,
+          "U7_U8_ANSWER_QUESTION_BOUNDARY\tdepends_on\tU7_WINDOW_CORE"
+        ],
+        [
+          310,
+          "U7_AGENTIC_GATE_LAYER\tdepends_on\tOP_kappa"
+        ],
+        [
+          311,
+          "U7_AGENTIC_GATE_LAYER\tdepends_on\tT7A"
+        ],
+        [
+          312,
+          "U7_AGENTIC_GATE_LAYER\tdepends_on\tT7B"
+        ],
+        [
+          313,
+          "U7_AGENTIC_GATE_LAYER\tdepends_on\tT7C"
+        ],
+        [
+          314,
+          "U7_AGENTIC_GATE_LAYER\tdepends_on\tU7_WINDOW_CORE"
+        ],
+        [
+          315,
+          "CHI_STAT_LADDER\tdepends_on\tOP_ChiCarrier"
+        ],
+        [
+          316,
+          "CHI_STAT_LADDER\tdepends_on\tOP_ChiOverlayMap"
+        ],
+        [
+          317,
+          "CHI_STAT_LADDER\tdepends_on\tOP_ChiSquareDiagnostic"
+        ],
+        [
+          318,
+          "CHI_CARRIER\tdepends_on\tU_06"
+        ],
+        [
+          319,
+          "CHI_CARRIER\tdepends_on\tU7_WINDOW_CORE"
+        ],
+        [
+          320,
+          "OP_ChiCarrier\tdepends_on\tOP_ChiSquareDiagnostic"
+        ],
+        [
+          321,
+          "CHI_LADDER_U6\tdepends_on\tU_06"
+        ],
+        [
+          322,
+          "CHI_LADDER_U6\tdepends_on\tCHI_CARRIER"
+        ],
+        [
+          323,
+          "CHI_LADDER_U6\tdepends_on\tOP_ChiSquareDiagnostic"
+        ],
+        [
+          324,
+          "CHI_LADDER_U7\tdepends_on\tU_07"
+        ],
+        [
+          325,
+          "CHI_LADDER_U7\tdepends_on\tU7_WINDOW_CORE"
+        ],
+        [
+          326,
+          "CHI_LADDER_U7\tdepends_on\tCHI_LADDER_U6"
+        ],
+        [
+          327,
+          "CHI_LADDER_U8\tdepends_on\tU_08"
+        ],
+        [
+          328,
+          "CHI_LADDER_U8\tdepends_on\tU7_U8_ANSWER_QUESTION_BOUNDARY"
+        ],
+        [
+          329,
+          "CHI_LADDER_U8\tdepends_on\tCHI_CARRIER"
+        ],
+        [
+          330,
+          "CHI_LADDER_U9\tdepends_on\tU_09"
+        ],
+        [
+          331,
+          "CHI_LADDER_U9\tdepends_on\tSP_U9"
+        ],
+        [
+          332,
+          "CHI_LADDER_U9\tdepends_on\tCHI_LADDER_U8"
+        ],
+        [
+          333,
+          "CHI_LADDER_U10\tdepends_on\tU_10"
+        ],
+        [
+          334,
+          "CHI_LADDER_U10\tdepends_on\tOP_dDelta"
+        ],
+        [
+          335,
+          "CHI_LADDER_U10\tdepends_on\tCHI_LADDER_U9"
+        ],
+        [
+          336,
+          "CHI_LADDER_U11\tdepends_on\tU_11"
+        ],
+        [
+          337,
+          "CHI_LADDER_U11\tdepends_on\tCHI_LADDER_U10"
+        ],
+        [
+          338,
+          "COMPLEX_BRANCH_OVERLAY\tdepends_on\tCHI_CARRIER"
+        ],
+        [
+          339,
+          "COMPLEX_BRANCH_OVERLAY\tdepends_on\tU7_WINDOW_CORE"
+        ],
+        [
+          340,
+          "COMPLEX_CARRIER\tdepends_on\tCHI_CARRIER"
+        ],
+        [
+          341,
+          "OP_ComplexNormReadout\tdepends_on\tOP_ChiCarrier"
+        ],
+        [
+          342,
+          "OP_ComplexBranchAccess\tdepends_on\tM_08"
+        ],
+        [
+          343,
+          "OP_ComplexBranchAccess\tdepends_on\tTA1"
+        ],
+        [
+          344,
+          "OP_ComplexBoundaryBranch\tdepends_on\tSP_U12"
+        ],
+        [
+          345,
+          "OP_ComplexBoundaryBranch\tdepends_on\tU12_CHI_PI_BOUNDARY"
+        ],
+        [
+          346,
+          "COMPLEX_LADDER_U6\tdepends_on\tU_06"
+        ],
+        [
+          347,
+          "COMPLEX_LADDER_U6\tdepends_on\tCHI_LADDER_U6"
+        ],
+        [
+          348,
+          "COMPLEX_LADDER_U7\tdepends_on\tU_07"
+        ],
+        [
+          349,
+          "COMPLEX_LADDER_U7\tdepends_on\tU7_WINDOW_CORE"
+        ],
+        [
+          350,
+          "COMPLEX_LADDER_U7\tdepends_on\tCOMPLEX_LADDER_U6"
+        ],
+        [
+          351,
+          "COMPLEX_LADDER_U8\tdepends_on\tU_08"
+        ],
+        [
+          352,
+          "COMPLEX_LADDER_U8\tdepends_on\tOP_ComplexBranchAccess"
+        ],
+        [
+          353,
+          "COMPLEX_LADDER_U9\tdepends_on\tU_09"
+        ],
+        [
+          354,
+          "COMPLEX_LADDER_U9\tdepends_on\tSP_U9"
+        ],
+        [
+          355,
+          "COMPLEX_LADDER_U9\tdepends_on\tCOMPLEX_LADDER_U8"
+        ],
+        [
+          356,
+          "COMPLEX_LADDER_U10\tdepends_on\tU_10"
+        ],
+        [
+          357,
+          "COMPLEX_LADDER_U10\tdepends_on\tCHI_LADDER_U10"
+        ],
+        [
+          358,
+          "COMPLEX_LADDER_U11\tdepends_on\tU_11"
+        ],
+        [
+          359,
+          "COMPLEX_LADDER_U11\tdepends_on\tCHI_LADDER_U11"
+        ],
+        [
+          360,
+          "COMPLEX_LADDER_U12\tdepends_on\tU_12"
+        ],
+        [
+          361,
+          "COMPLEX_LADDER_U12\tdepends_on\tSP_U12"
+        ],
+        [
+          362,
+          "COMPLEX_LADDER_U12\tdepends_on\tOP_ComplexBoundaryBranch"
+        ],
+        [
+          363,
+          "U12_CHI_PI_COMPLEX_BOUNDARY\tdepends_on\tU12_CHI_PI_BOUNDARY"
+        ],
+        [
+          364,
+          "U12_CHI_PI_COMPLEX_BOUNDARY\tdepends_on\tCOMPLEX_LADDER_U12"
+        ],
+        [
+          365,
+          "TENSOR_CONTEXT_OVERLAY\tdepends_on\tU_10"
+        ],
+        [
+          366,
+          "TENSOR_CONTEXT_OVERLAY\tdepends_on\tU_11"
+        ],
+        [
+          367,
+          "TENSOR_CONTEXT_OVERLAY\tdepends_on\tU_12"
+        ],
+        [
+          368,
+          "TENSOR_CARRIER\tdepends_on\tCHI_CARRIER"
+        ],
+        [
+          369,
+          "TENSOR_CARRIER\tdepends_on\tLambda_link"
+        ],
+        [
+          370,
+          "OP_TensorContextMap\tdepends_on\tLambda_link"
+        ],
+        [
+          371,
+          "OP_TensorContextMap\tdepends_on\tU_10"
+        ],
+        [
+          372,
+          "OP_TensorContextMap\tdepends_on\tU_11"
+        ],
+        [
+          373,
+          "TENSOR_LADDER_U10\tdepends_on\tU_10"
+        ],
+        [
+          374,
+          "TENSOR_LADDER_U10\tdepends_on\tOP_TensorContextMap"
+        ],
+        [
+          375,
+          "TENSOR_LADDER_U11\tdepends_on\tU_11"
+        ],
+        [
+          376,
+          "TENSOR_LADDER_U11\tdepends_on\tTENSOR_LADDER_U10"
+        ],
+        [
+          377,
+          "TENSOR_LADDER_U12\tdepends_on\tU_12"
+        ],
+        [
+          378,
+          "TENSOR_LADDER_U12\tdepends_on\tU12_CHI_PI_COMPLEX_BOUNDARY"
         ]
       ]
     },
@@ -14246,7 +15744,7 @@
         ],
         [
           1,
-          "version: v13_active_integrated_2026-10-03"
+          "version: v13_active_graph_reconciled_2026-10-03"
         ],
         [
           2,
@@ -14710,23 +16208,23 @@
         ],
         [
           117,
-          "  - {\"id\": \"OP_Tot\", \"type\": \"operator\", \"text\": \"Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация\", \"depends_on\": [\"O2\", \"O12\", \"A4\"], \"tags\": [\"operator\", \"Tot\"], \"path\": \"25_Операторы/OP_Tot\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"Tot(0_A)=event(0_A)=¬A\", \"title\": \"Tot\"}"
+          "  - {\"id\": \"OP_Tot\", \"type\": \"operator\", \"text\": \"Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация\", \"depends_on\": [\"O_02\", \"O_12\", \"A4\"], \"tags\": [\"operator\", \"Tot\"], \"path\": \"25_Операторы/OP_Tot\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"Tot(0_A)=event(0_A)=¬A\", \"title\": \"Tot\"}"
         ],
         [
           118,
-          "  - {\"id\": \"OP_TotPlus\", \"type\": \"operator\", \"text\": \"рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻\", \"depends_on\": [\"O2\"], \"tags\": [\"operator\", \"Tot⁺\"], \"path\": \"25_Операторы/OP_TotPlus\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"рабочая упаковка без потери Res_n\", \"title\": \"Tot⁺\"}"
+          "  - {\"id\": \"OP_TotPlus\", \"type\": \"operator\", \"text\": \"рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻\", \"depends_on\": [\"O_02\"], \"tags\": [\"operator\", \"Tot⁺\"], \"path\": \"25_Операторы/OP_TotPlus\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"рабочая упаковка без потери Res_n\", \"title\": \"Tot⁺\"}"
         ],
         [
           119,
-          "  - {\"id\": \"OP_TotMinus\", \"type\": \"operator\", \"text\": \"редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра\", \"depends_on\": [\"O2\", \"O12\"], \"tags\": [\"operator\", \"Tot⁻\"], \"path\": \"25_Операторы/OP_TotMinus\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"редукционистская тотализация\", \"title\": \"Tot⁻\"}"
+          "  - {\"id\": \"OP_TotMinus\", \"type\": \"operator\", \"text\": \"редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра\", \"depends_on\": [\"O_02\", \"O_12\"], \"tags\": [\"operator\", \"Tot⁻\"], \"path\": \"25_Операторы/OP_TotMinus\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"редукционистская тотализация\", \"title\": \"Tot⁻\"}"
         ],
         [
           120,
-          "  - {\"id\": \"OP_Lift\", \"type\": \"operator\", \"text\": \"X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote\", \"depends_on\": [\"O3\", \"O7\", \"O8\", \"A6\"], \"tags\": [\"operator\", \"Lift\"], \"path\": \"25_Операторы/OP_Lift\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"X_{n+1}=Lift(X_n,Res_n)\", \"title\": \"Lift\"}"
+          "  - {\"id\": \"OP_Lift\", \"type\": \"operator\", \"text\": \"X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote\", \"depends_on\": [\"O_03\", \"O_07\", \"O_08\", \"A6\"], \"tags\": [\"operator\", \"Lift\"], \"path\": \"25_Операторы/OP_Lift\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"X_{n+1}=Lift(X_n,Res_n)\", \"title\": \"Lift\"}"
         ],
         [
           121,
-          "  - {\"id\": \"OP_Promote\", \"type\": \"operator\", \"text\": \"label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever\", \"depends_on\": [\"O12\", \"A9\"], \"tags\": [\"operator\", \"Promote\"], \"path\": \"25_Операторы/OP_Promote\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"label n→n+1 без новой выразимости\", \"title\": \"Promote\"}"
+          "  - {\"id\": \"OP_Promote\", \"type\": \"operator\", \"text\": \"label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever\", \"depends_on\": [\"O_12\", \"A9\"], \"tags\": [\"operator\", \"Promote\"], \"path\": \"25_Операторы/OP_Promote\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"label n→n+1 без новой выразимости\", \"title\": \"Promote\"}"
         ],
         [
           122,
@@ -14738,7 +16236,7 @@
         ],
         [
           124,
-          "  - {\"id\": \"OP_kappa\", \"type\": \"operator\", \"text\": \"κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7\", \"depends_on\": [\"O15\"], \"tags\": [\"operator\", \"κ\"], \"path\": \"25_Операторы/OP_kappa\", \"status\": \"candidate_with_operational_gate\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"κ(S,0_S,Prov,Rev)\", \"title\": \"κ\"}"
+          "  - {\"id\": \"OP_kappa\", \"type\": \"operator\", \"text\": \"κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7\", \"depends_on\": [\"O_15\"], \"tags\": [\"operator\", \"κ\"], \"path\": \"25_Операторы/OP_kappa\", \"status\": \"candidate_with_operational_gate\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"κ(S,0_S,Prov,Rev)\", \"title\": \"κ\"}"
         ],
         [
           125,
@@ -14746,15 +16244,15 @@
         ],
         [
           126,
-          "  - {\"id\": \"OP_Unpack\", \"type\": \"operator\", \"text\": \"C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox\", \"depends_on\": [\"O9\", \"O12\"], \"tags\": [\"operator\", \"Unpack\"], \"path\": \"25_Операторы/OP_Unpack\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"C(x)=C(Unpack(x))\", \"title\": \"Unpack\"}"
+          "  - {\"id\": \"OP_Unpack\", \"type\": \"operator\", \"text\": \"C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox\", \"depends_on\": [\"O_09\", \"O_12\"], \"tags\": [\"operator\", \"Unpack\"], \"path\": \"25_Операторы/OP_Unpack\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"C(x)=C(Unpack(x))\", \"title\": \"Unpack\"}"
         ],
         [
           127,
-          "  - {\"id\": \"OP_Compress2\", \"type\": \"operator\", \"text\": \"M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз\", \"depends_on\": [\"O8\"], \"tags\": [\"operator\", \"Compress₂\"], \"path\": \"25_Операторы/OP_Compress2\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"M_n*=Compress₂(M_{n+2})\", \"title\": \"Compress₂\"}"
+          "  - {\"id\": \"OP_Compress2\", \"type\": \"operator\", \"text\": \"M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз\", \"depends_on\": [\"O_08\"], \"tags\": [\"operator\", \"Compress₂\"], \"path\": \"25_Операторы/OP_Compress2\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"M_n*=Compress₂(M_{n+2})\", \"title\": \"Compress₂\"}"
         ],
         [
           128,
-          "  - {\"id\": \"OP_Expand2\", \"type\": \"operator\", \"text\": \"M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх\", \"depends_on\": [\"O8\"], \"tags\": [\"operator\", \"Expand₂\"], \"path\": \"25_Операторы/OP_Expand2\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)\", \"title\": \"Expand₂\"}"
+          "  - {\"id\": \"OP_Expand2\", \"type\": \"operator\", \"text\": \"M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх\", \"depends_on\": [\"O_08\"], \"tags\": [\"operator\", \"Expand₂\"], \"path\": \"25_Операторы/OP_Expand2\", \"status\": \"canonical\", \"internal_ref\": \"CANON_V43/CANON_EN\", \"symbol\": \"M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)\", \"title\": \"Expand₂\"}"
         ],
         [
           129,
@@ -14850,7 +16348,7 @@
         ],
         [
           152,
-          "  - {\"id\": \"ADD_NOTATION_ABS\", \"type\": \"notation_rule\", \"text\": \"В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо |x|, чтобы не ломать pipe-таблицы.\", \"depends_on\": [\"ADDENDUM_V3\"], \"tags\": [\"notation\", \"export\", \"markdown\"], \"path\": \"43_Добавка_v3/ADD_NOTATION_ABS\", \"status\": \"canonical_note\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"abs(x)\", \"title\": \"Правило abs(x) для Markdown/TSV\"}"
+          "  - {\"id\": \"ADD_NOTATION_ABS\", \"type\": \"notation_rule\", \"text\": \"В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо |x|, чтобы не ломать pipe-таблицы.\", \"depends_on\": [], \"tags\": [\"notation\", \"export\", \"markdown\"], \"path\": \"43_Добавка_v3/ADD_NOTATION_ABS\", \"status\": \"canonical_note\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"abs(x)\", \"title\": \"Правило abs(x) для Markdown/TSV\"}"
         ],
         [
           153,
@@ -14858,7 +16356,7 @@
         ],
         [
           154,
-          "  - {\"id\": \"ADD_ZERO_BOUNDARY\", \"type\": \"boundary_candidate\", \"text\": \"F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.\", \"depends_on\": [\"ADD_MIRROR_WINDOW\"], \"tags\": [\"zero_boundary\", \"absence\", \"mirror_window\"], \"path\": \"43_Добавка_v3/ADD_ZERO_BOUNDARY\", \"status\": \"formal_math_fact / derived_constraint\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"ZeroBoundary(F_n)={x:F_n(x)=0}\", \"title\": \"Нулевая граница зеркального окна\"}"
+          "  - {\"id\": \"ADD_ZERO_BOUNDARY\", \"type\": \"boundary_candidate\", \"text\": \"F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.\", \"depends_on\": [], \"tags\": [\"zero_boundary\", \"absence\", \"mirror_window\"], \"path\": \"43_Добавка_v3/ADD_ZERO_BOUNDARY\", \"status\": \"formal_math_fact / derived_constraint\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"ZeroBoundary(F_n)={x:F_n(x)=0}\", \"title\": \"Нулевая граница зеркального окна\"}"
         ],
         [
           155,
@@ -14886,7 +16384,7 @@
         ],
         [
           161,
-          "  - {\"id\": \"ADD_RESEARCH_FORMAT\", \"type\": \"export_instruction\", \"text\": \"Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.\", \"depends_on\": [\"ADDENDUM_V3\"], \"tags\": [\"export\", \"research\", \"markdown\", \"jsonl\", \"tsv\", \"yaml\"], \"path\": \"42_Экспорт_GPT/ADD_RESEARCH_FORMAT\", \"status\": \"active_instruction\", \"internal_ref\": \"workbook\", \"symbol\": \"Markdown+JSONL+TSV+YAML\", \"title\": \"Research-friendly формат для GPT\"}"
+          "  - {\"id\": \"ADD_RESEARCH_FORMAT\", \"type\": \"export_instruction\", \"text\": \"Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.\", \"depends_on\": [], \"tags\": [\"export\", \"research\", \"markdown\", \"jsonl\", \"tsv\", \"yaml\"], \"path\": \"42_Экспорт_GPT/ADD_RESEARCH_FORMAT\", \"status\": \"active_instruction\", \"internal_ref\": \"workbook\", \"symbol\": \"Markdown+JSONL+TSV+YAML\", \"title\": \"Research-friendly формат для GPT\"}"
         ],
         [
           162,
@@ -14910,7 +16408,7 @@
         ],
         [
           167,
-          "  - {\"id\": \"U7_WINDOW_CORE\", \"type\": \"definition\", \"text\": \"У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.\", \"depends_on\": [\"U_07\", \"M_07\", \"OP_WindowClose\"], \"tags\": [\"U7\", \"expectation_window\", \"answer\", \"prediction\", \"knowledge\"], \"path\": \"U7_Window_Cycles/U7_WINDOW_CORE\", \"status\": \"candidate_with_operational_gate\", \"internal_ref\": \"USER_DIALOG_V11 + CANON_HABR\", \"symbol\": \"Answer(W)=Close(W,W)\", \"title\": \"У7: окно ожидания как самозамыкающийся ответ\"}"
+          "  - {\"id\": \"U7_WINDOW_CORE\", \"type\": \"definition\", \"text\": \"У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.\", \"depends_on\": [\"U_07\", \"M_07\"], \"tags\": [\"U7\", \"expectation_window\", \"answer\", \"prediction\", \"knowledge\"], \"path\": \"U7_Window_Cycles/U7_WINDOW_CORE\", \"status\": \"candidate_with_operational_gate\", \"internal_ref\": \"USER_DIALOG_V11 + CANON_HABR\", \"symbol\": \"Answer(W)=Close(W,W)\", \"title\": \"У7: окно ожидания как самозамыкающийся ответ\"}"
         ],
         [
           168,
@@ -14930,7 +16428,7 @@
         ],
         [
           172,
-          "  - {\"id\": \"U7_MATH_LOCAL_FORBID\", \"type\": \"constraint\", \"text\": \"Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.\", \"depends_on\": [\"A_07\", \"U_06\", \"SP_WINDOW\", \"SP_ZERO\"], \"tags\": [\"U7\", \"math\", \"local_forbid\", \"mirror_window\"], \"path\": \"06_Мат_аналогии/U7\", \"status\": \"derived_constraint\", \"internal_ref\": \"RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03\", \"symbol\": \"y=-x*x; y!=x*x\", \"title\": \"У7: y=-x*x обязан читаться с y!=x*x\"}"
+          "  - {\"id\": \"U7_MATH_LOCAL_FORBID\", \"type\": \"constraint\", \"text\": \"Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.\", \"depends_on\": [\"U_06\", \"SP_WINDOW\", \"SP_ZERO\"], \"tags\": [\"U7\", \"math\", \"local_forbid\", \"mirror_window\"], \"path\": \"06_Мат_аналогии/U7\", \"status\": \"derived_constraint\", \"internal_ref\": \"RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03\", \"symbol\": \"y=-x*x; y!=x*x\", \"title\": \"У7: y=-x*x обязан читаться с y!=x*x\"}"
         ],
         [
           173,
@@ -15850,8 +17348,8 @@
     {
       "name": "38_Changelog",
       "index": 38,
-      "range": "A1:F15",
-      "rows": 15,
+      "range": "A1:F16",
+      "rows": 16,
       "cols": 6,
       "values": [
         [
@@ -15971,6 +17469,14 @@
           "2026-10-03",
           "author_integration_register_repair",
           "Integrate AC-2026-10-03 window families and restore separate U7 mathematical and logical constraints; preserve AC-2026-09-21 and existing evidence statuses.",
+          "17/18/34/35/36 and active renderings",
+          "active"
+        ],
+        [
+          "v13_active_graph_reconciled_2026-10-03",
+          "2026-10-03",
+          "graph_dependency_reference_reconciliation",
+          "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
           "17/18/34/35/36 and active renderings",
           "active"
         ]
@@ -19622,6 +21128,6 @@
       ]
     }
   ],
-  "release_kind": "integrated_author_amendment_and_register_repair",
+  "release_kind": "graph_dependency_reference_reconciliation",
   "source_workbook_status": "historical_input_not_reissued"
 }

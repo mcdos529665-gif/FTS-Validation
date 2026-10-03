@@ -1,0 +1,92 @@
+{
+  "workspace": "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project",
+  "scope": "full",
+  "checks": [
+    {
+      "identifier": "canon_manifest",
+      "title": "активный канон: MANIFEST, SHA256 и неучтённые файлы",
+      "command": [
+        "C:\\Users\\Mcdos\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\tools\\verify.py",
+        "--strict"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "summary": "summary: 13 ok, 0 missing, 0 mismatch, 13 in manifest, 0 extra",
+      "limitations": [],
+      "output": "package: v13_active_graph_reconciled_2026-10-03  exported: 2026-10-03T13:03:44.108277Z\nSTATUS         SIZE  FILE\nOK            89272  FTS.yaml\nOK            68908  FTS_v13_LLM_CONTEXT.md\nOK           814998  FTS_v13_LLM_FULL_DUMP.md\nOK              340  INSTALL.md\nOK              473  LLM_IMPORT_PROMPT.txt\nOK             1684  START_HERE.md\nOK            97144  fts_cards.json\nOK            81668  fts_cards.jsonl\nOK            70086  fts_cards_table.tsv\nOK            72684  fts_graph_full.tsv\nOK            13188  fts_triples.tsv\nOK          1044046  fts_v13_workbook_sheets.json\nOK             1865  sheet_index.tsv\n\nsummary: 13 ok, 0 missing, 0 mismatch, 13 in manifest, 0 extra"
+    },
+    {
+      "identifier": "claim_graph",
+      "title": "граф утверждений: источники, направленные рёбра и идемпотентность",
+      "command": [
+        "C:\\Users\\Mcdos\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\tools\\claim_graph.py",
+        "validate",
+        "--idempotent"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "summary": "CLAIM GRAPH validate: {\"canonical_assertions\": 595, \"canonical_assertions_present\": 595, \"edges\": 1827, \"idempotent\": true, \"nodes\": 795, \"parallel_relation_pairs\": 19, \"unresolved_nodes\": 4}",
+      "limitations": [],
+      "output": "CLAIM GRAPH validate: {\"canonical_assertions\": 595, \"canonical_assertions_present\": 595, \"edges\": 1827, \"idempotent\": true, \"nodes\": 795, \"parallel_relation_pairs\": 19, \"unresolved_nodes\": 4}"
+    },
+    {
+      "identifier": "formal_suite",
+      "title": "формальные предикаты статьи C01–C62",
+      "command": [
+        "C:\\Users\\Mcdos\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\work\\v14_rebuild\\verification.py"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "summary": "PASS verification: 62 PASS / 0 FAIL",
+      "limitations": [],
+      "output": "PASS verification: 62 PASS / 0 FAIL"
+    },
+    {
+      "identifier": "audit",
+      "title": "аудит схемы, трассируемости, статических формальных и исторических артефактов",
+      "command": [
+        "C:\\Users\\Mcdos\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\work\\v14_rebuild\\audit\\run_audit.py",
+        "all"
+      ],
+      "status": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+      "exit_code": 0,
+      "summary": "AUDIT all: findings=1 blockers=0",
+      "limitations": [
+        "P2 REFERENCE_DEFINITION_GAPS: Explicitly unresolved definitions: ['Lambda_link', 'NODE_SIGNATURES', 'TA1', 'U12_CHI_PI_BOUNDARY']; see REFERENCE_RESOLUTIONS.tsv"
+      ],
+      "output": "P2 REFERENCE_DEFINITION_GAPS: Explicitly unresolved definitions: ['Lambda_link', 'NODE_SIGNATURES', 'TA1', 'U12_CHI_PI_BOUNDARY']; see REFERENCE_RESOLUTIONS.tsv\nAUDIT all: findings=1 blockers=0"
+    },
+    {
+      "identifier": "research_export",
+      "title": "исследовательская выгрузка: побайтовая воспроизводимость",
+      "command": [
+        "C:\\Users\\Mcdos\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\tools\\build_research_export.py",
+        "--check"
+      ],
+      "status": "PASS",
+      "exit_code": 0,
+      "summary": "PASS выгрузка актуальна: bytes=2737781 sha256=ef7b4e3bb6f2a7bd672f51b8df8a0a34fbf269ad179de72dbbd93c58774ba840",
+      "limitations": [],
+      "output": "PASS выгрузка актуальна: bytes=2737781 sha256=ef7b4e3bb6f2a7bd672f51b8df8a0a34fbf269ad179de72dbbd93c58774ba840"
+    }
+  ],
+  "failed_mandatory_checks": [],
+  "documented_limitations": [
+    "P2 REFERENCE_DEFINITION_GAPS: Explicitly unresolved definitions: ['Lambda_link', 'NODE_SIGNATURES', 'TA1', 'U12_CHI_PI_BOUNDARY']; see REFERENCE_RESOLUTIONS.tsv"
+  ]
+}

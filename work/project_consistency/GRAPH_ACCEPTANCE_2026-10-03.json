@@ -1,0 +1,239 @@
+{
+  "objective": "Выполнить PLAN_GRAPH_RECONCILIATION_2026-10-03.md",
+  "release": "v13_active_graph_reconciled_2026-10-03",
+  "baseline_commit": "01914f7ca38d5b9f94baec8c2340d82192850a11",
+  "requirements": [
+    {
+      "requirement": "Основной каталог используется для всех результатов",
+      "passed": true,
+      "evidence": "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project"
+    },
+    {
+      "requirement": "Исходная точка подтверждена Git и исходным MANIFEST",
+      "passed": true,
+      "evidence": "01914f7ca38d5b9f94baec8c2340d82192850a11"
+    },
+    {
+      "requirement": "Все исходные ID, типы, тексты, символы и статусы сохранены",
+      "passed": true,
+      "evidence": {
+        "cards": 169,
+        "allowed_changed_field": "depends_on"
+      }
+    },
+    {
+      "requirement": "Каждое исходное расхождение 97 + 1 имеет решение",
+      "passed": true,
+      "evidence": {
+        "entity_card_only": 97,
+        "entity_triple_only": 1
+      }
+    },
+    {
+      "requirement": "Все дополнительные 12 некарточных расхождений также согласованы",
+      "passed": true,
+      "evidence": {
+        "additional_noncard_discrepancies": 12
+      }
+    },
+    {
+      "requirement": "Решения применены и имеют область, свидетельство и эффект статуса",
+      "passed": true,
+      "evidence": {
+        "ledger_rows": 111
+      }
+    },
+    {
+      "requirement": "Полные depends_on-представления совпадают",
+      "passed": true,
+      "evidence": {
+        "card_dependencies": 167,
+        "triple_dependencies": 167,
+        "card_only": 0,
+        "triple_only": 0
+      }
+    },
+    {
+      "requirement": "Граф всех предпосылок ацикличен",
+      "passed": true,
+      "evidence": {
+        "cycles": []
+      }
+    },
+    {
+      "requirement": "Оба направления всех трёх исходных циклов разобраны",
+      "passed": true,
+      "evidence": {
+        "reviewed_pairs": 3,
+        "reviewed_directions": 6
+      }
+    },
+    {
+      "requirement": "Все исходные триплеты сохраняются через объявленную нормализацию и типизацию",
+      "passed": true,
+      "evidence": {
+        "preserved_input_triples": 271,
+        "current_triples": 378
+      }
+    },
+    {
+      "requirement": "Исходные graph_id сохранены",
+      "passed": true,
+      "evidence": {
+        "preserved_graph_ids": 271
+      }
+    },
+    {
+      "requirement": "Все исходные 34 узла получили адресное решение",
+      "passed": true,
+      "evidence": {
+        "reviewed_references": 34
+      }
+    },
+    {
+      "requirement": "Все оставшиеся неразрешённые узлы явно описаны",
+      "passed": true,
+      "evidence": {
+        "unresolved_objects": [
+          "Lambda_link",
+          "NODE_SIGNATURES",
+          "TA1",
+          "U12_CHI_PI_BOUNDARY"
+        ]
+      }
+    },
+    {
+      "requirement": "Подтверждённые алиасы исправлены в исходных ссылках",
+      "passed": true,
+      "evidence": {
+        "O(17)": "O_17",
+        "O3": "O_03",
+        "O12": "O_12",
+        "O2": "O_02",
+        "O9": "O_09",
+        "O8": "O_08",
+        "O7": "O_07",
+        "O15": "O_15",
+        "O(8)": "O_08"
+      }
+    },
+    {
+      "requirement": "Девять записей книги имеют точные проверяемые адреса",
+      "passed": true,
+      "evidence": {
+        "source_fragments": 9
+      }
+    },
+    {
+      "requirement": "Все исторические листы вне активных производных сохранены",
+      "passed": true,
+      "evidence": {
+        "changed_sheets": [
+          "02_Паспорт",
+          "17_Карточки",
+          "18_Граф",
+          "34_Export_jsonl",
+          "35_Export_tsv",
+          "36_Export_yaml",
+          "38_Changelog"
+        ]
+      }
+    },
+    {
+      "requirement": "SHA256 исторического workbook и происхождение сохранены",
+      "passed": true,
+      "evidence": {
+        "source_workbook_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
+        "base_release": "v13_active_integrated_2026-10-03"
+      }
+    },
+    {
+      "requirement": "Авторские пакеты и исходные экспериментальные материалы сохранены",
+      "passed": true,
+      "evidence": {
+        "verified_files": 57,
+        "changed_originals": []
+      }
+    },
+    {
+      "requirement": "Полный маршрут текущего проекта пройден",
+      "passed": true,
+      "evidence": {
+        "checks": {
+          "canon_manifest": "PASS",
+          "claim_graph": "PASS",
+          "formal_suite": "PASS",
+          "audit": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+          "research_export": "PASS"
+        },
+        "documented_limitations": [
+          "P2 REFERENCE_DEFINITION_GAPS: Explicitly unresolved definitions: ['Lambda_link', 'NODE_SIGNATURES', 'TA1', 'U12_CHI_PI_BOUNDARY']; see REFERENCE_RESOLUTIONS.tsv"
+        ]
+      }
+    },
+    {
+      "requirement": "C01–C62 действительно выполнены без FAIL",
+      "passed": true,
+      "evidence": {
+        "formal_pass": 62,
+        "formal_fail": 0
+      }
+    },
+    {
+      "requirement": "Регрессионные проверки нового механизма и выгрузки проходят на текущих данных",
+      "passed": true,
+      "evidence": {
+        "tests": 17,
+        "modules": 2
+      }
+    },
+    {
+      "requirement": "Повторная пересборка канона побайтово идемпотентна",
+      "passed": true,
+      "evidence": {
+        "verified_files": 14
+      }
+    },
+    {
+      "requirement": "Итоговый документ и STATE ссылаются на существующие результаты",
+      "passed": true,
+      "evidence": {
+        "checked_documents": [
+          "work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md",
+          "work/STATE.md"
+        ],
+        "broken_links": []
+      }
+    }
+  ],
+  "tests": [
+    {
+      "file": "tools/test_graph_reconciliation.py",
+      "exit_code": 0,
+      "test_count": 9,
+      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 1.058s\n\nOK\n"
+    },
+    {
+      "file": "tools/test_build_research_export.py",
+      "exit_code": 0,
+      "test_count": 8,
+      "output": "test_all_seed_dois_are_preserved (__main__.ResearchExportTests.test_all_seed_dois_are_preserved) ... ok\ntest_canon_counts_and_verification_are_current (__main__.ResearchExportTests.test_canon_counts_and_verification_are_current) ... ok\ntest_deterministic (__main__.ResearchExportTests.test_deterministic) ... ok\ntest_external_fulltexts_are_not_inputs (__main__.ResearchExportTests.test_external_fulltexts_are_not_inputs) ... ok\ntest_forbidden_markers_are_absent (__main__.ResearchExportTests.test_forbidden_markers_are_absent) ... ok\ntest_only_current_state_is_included (__main__.ResearchExportTests.test_only_current_state_is_included) ... ok\ntest_required_sections_are_ordered (__main__.ResearchExportTests.test_required_sections_are_ordered) ... ok\ntest_size_fits_declared_inputs (__main__.ResearchExportTests.test_size_fits_declared_inputs) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.381s\n\nOK\n"
+    }
+  ],
+  "input_sha256": {
+    "source/MANIFEST.json": "e691c20efcab517a39664943e25948967496303cfca57f91d2694c003f4b24a0",
+    "source/fts_cards.jsonl": "9c9836bc66c5d2e07dca065252697dd07e9766d2fa9ebdd51e2be81fcab86861",
+    "source/fts_triples.tsv": "aee1780e6d4ed85894056cc49df054de4a660b6f5a7ef076eb488e8786fe7a9c",
+    "work/v14_rebuild/claim_graph/claim_graph.json": "c7ca5de687ce3ef84a8998328a8cc03a390411a3d2c8f7e2adfa2fbdd35ffa01",
+    "work/v14_rebuild/audit/REFERENCE_RESOLUTIONS.tsv": "a4853fa43cbcf297a42ffd24f40a32cfd31f1afe301c7381b50f610ab2f61d9e",
+    "work/v14_rebuild/audit/GRAPH_RELATION_PATCH.tsv": "a7045379d80527a11d567defd5ec3a62a02d01ca8c4e173ee64ceab92f6c2ec9",
+    "work/v14_rebuild/audit/DEPENDENCY_CYCLE_REVIEW.tsv": "4e47e87c50403c34adf3f7899937a7e3bf4d4e95cc9ee7f738f3808ee85f56c5",
+    "tools/reference_resolution.py": "48a4ebc196a5ff83ea7b64119ca77713d8d8714b2c06549dc130967cf3958a54",
+    "tools/claim_graph.py": "46902ee9da6a0ed356a8a23f20c6f24a365c224343e8b4c21841011867f87005",
+    "tools/rebuild_canon.py": "35f0d2dd3e9fb5b09b4b1034f937c0f6926bed5da37768766bf64b2897b6db99",
+    "tools/test_graph_reconciliation.py": "6eecbbd1ed66c5ae7dccd0532240a9235e2f5844aa93614cb603c17e86555d41",
+    "tools/test_build_research_export.py": "7ff7694ddeeba0399c202091c9c59bc84ba3380a199b1500da94f311623c6193",
+    "work/v14_rebuild/audit/run_audit.py": "ae81cc6033de252d4723c39c1bd876da1c1ba0c49b6c3ae7c8357d5872741cc7"
+  },
+  "overall": "PASS"
+}

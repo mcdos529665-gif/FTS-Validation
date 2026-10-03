@@ -1,8 +1,8 @@
 # FTS claim graph v1
 
 Этот файл описывает авторитетный машинный слой в `claim_graph.json`. Он является
-производным от карточек, таблиц и документов проекта. `source/` остаётся
-неизменяемым источником канона v13; граф не повышает статусы и не заменяет
+производным от карточек, таблиц и документов проекта. `source/` содержит
+редактируемый активный канон; граф не повышает статусы и не заменяет
 человеческую аргументацию.
 
 ## Основная цепочка
@@ -30,6 +30,13 @@ OpenQuestion → Claim → grounds_in / verified_by / supported_by / limited_by
 - `source_reference` — буквальная, но пока не разрешённая ссылка из реестра.
   В таком случае `resolution_state=unresolved_reference` и
   `missing_reason=нет в артефактах`.
+- `source_fragment` — точная запись существующего источника, найденная по
+  листу и уникальному ключу либо по уникальному фрагменту. `fragment_record`
+  сохраняет свидетельство; это документальный объект, а не новая карточка.
+- `scope` — явно заданная область с существующими участниками. Исходная
+  связь с областью сохраняет группировку; `contains` задаёт только членство.
+- `literal` — буквальное значение с уточнённым типом, включая имена экспортов,
+  метки области и требования. Требование не означает наличия реализующей модели.
 - `verification` — адресуемая C-проверка или другой формальный протокол.
 - `external_evidence` / `internal_evidence` — строка evidence-матрицы или
   внутренний результат с provenance и ограничением.
@@ -44,6 +51,19 @@ OpenQuestion → Claim → grounds_in / verified_by / supported_by / limited_by
 `depends_on`, `has_next`, `projects_to`, `has_minimal_expression`,
 `has_private_expression`, `supports`, `promotes_status_of` и остальные
 канонные предикаты переносятся буквально из исходных TSV/JSONL.
+
+`depends_on` задаёт явные предпосылки в собственной области записи; их наличие
+не доказывает следствий. JSONL и TSV согласуются по всем адресатам. Цикл этих
+предпосылок требует диагноза и вызывает P1. `applies_to` адресует применение
+ограничения к выражению/оператору; `has_operator` задаёт представление;
+`uses_analogy` сохраняет математическую аналогию в явно указанном регистре.
+Обратные связи этих типов не служат доказательными предпосылками.
+
+Реестр разрешения: `audit/REFERENCE_RESOLUTIONS.tsv`. Для отсутствующего или
+неоднозначного объекта сохраняются результаты поиска, область и `next_step`.
+Статусные фрагменты SP сохраняют историческую оценку и не выполняют нового
+повышения. Файлы реестров решений входят в `input_digests` графа; проверка
+фрагментов повторно сверяет точный адрес и текст с текущим источником.
 
 Для второго слоя используются:
 
@@ -84,7 +104,7 @@ python -X utf8 tools/claim_graph.py path CM-001 evidence_verification_c01
 ## Active author integration — 2026-10-03
 
 The compatibility layer name `canonical_v13` denotes active canonical records
-from source/, currently release `v13_active_integrated_2026-10-03`.
+from source/, currently release `v13_active_graph_reconciled_2026-10-03`.
 Author inputs include both 2026-09-21 and 2026-10-03 packages. Canonical and
 author-provenance nodes remain separate even when they share a card ID;
 status assessment IDs are disambiguated by layer. Bare card-ID queries select

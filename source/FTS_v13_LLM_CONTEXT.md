@@ -1,4 +1,4 @@
-# FTS active canonical release — v13_active_integrated_2026-10-03
+# FTS active canonical release — v13_active_graph_reconciled_2026-10-03
 
 Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
@@ -15,14 +15,14 @@ release was produced by a new workbook round-trip.
 
 ## Active changes
 
-Integrate AC-2026-10-03 window families and restore separate U7 mathematical and logical constraints; preserve AC-2026-09-21 and existing evidence statuses.
+Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
 AC-2026-10-03 adds the exact finite triple/five/seven window families, with author
 and editorial statuses retained. Intersections do not automatically define carriers.
 
-Cards: 169. Triples: 271. Sheets: 54.
+Cards: 169. Triples: 378. Sheets: 54.
 
 ## Counts by card type
 

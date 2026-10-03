@@ -1281,8 +1281,8 @@
     "type": "operator",
     "text": "Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация",
     "depends_on": [
-      "O2",
-      "O12",
+      "O_02",
+      "O_12",
       "A4"
     ],
     "tags": [
@@ -1300,7 +1300,7 @@
     "type": "operator",
     "text": "рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻",
     "depends_on": [
-      "O2"
+      "O_02"
     ],
     "tags": [
       "operator",
@@ -1317,8 +1317,8 @@
     "type": "operator",
     "text": "редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра",
     "depends_on": [
-      "O2",
-      "O12"
+      "O_02",
+      "O_12"
     ],
     "tags": [
       "operator",
@@ -1335,9 +1335,9 @@
     "type": "operator",
     "text": "X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote",
     "depends_on": [
-      "O3",
-      "O7",
-      "O8",
+      "O_03",
+      "O_07",
+      "O_08",
       "A6"
     ],
     "tags": [
@@ -1355,7 +1355,7 @@
     "type": "operator",
     "text": "label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever",
     "depends_on": [
-      "O12",
+      "O_12",
       "A9"
     ],
     "tags": [
@@ -1407,7 +1407,7 @@
     "type": "operator",
     "text": "κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7",
     "depends_on": [
-      "O15"
+      "O_15"
     ],
     "tags": [
       "operator",
@@ -1441,8 +1441,8 @@
     "type": "operator",
     "text": "C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox",
     "depends_on": [
-      "O9",
-      "O12"
+      "O_09",
+      "O_12"
     ],
     "tags": [
       "operator",
@@ -1459,7 +1459,7 @@
     "type": "operator",
     "text": "M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз",
     "depends_on": [
-      "O8"
+      "O_08"
     ],
     "tags": [
       "operator",
@@ -1476,7 +1476,7 @@
     "type": "operator",
     "text": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх",
     "depends_on": [
-      "O8"
+      "O_08"
     ],
     "tags": [
       "operator",
@@ -1866,9 +1866,7 @@
     "id": "ADD_NOTATION_ABS",
     "type": "notation_rule",
     "text": "В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо |x|, чтобы не ломать pipe-таблицы.",
-    "depends_on": [
-      "ADDENDUM_V3"
-    ],
+    "depends_on": [],
     "tags": [
       "notation",
       "export",
@@ -1902,9 +1900,7 @@
     "id": "ADD_ZERO_BOUNDARY",
     "type": "boundary_candidate",
     "text": "F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.",
-    "depends_on": [
-      "ADD_MIRROR_WINDOW"
-    ],
+    "depends_on": [],
     "tags": [
       "zero_boundary",
       "absence",
@@ -2032,9 +2028,7 @@
     "id": "ADD_RESEARCH_FORMAT",
     "type": "export_instruction",
     "text": "Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.",
-    "depends_on": [
-      "ADDENDUM_V3"
-    ],
+    "depends_on": [],
     "tags": [
       "export",
       "research",
@@ -2149,8 +2143,7 @@
     "text": "У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.",
     "depends_on": [
       "U_07",
-      "M_07",
-      "OP_WindowClose"
+      "M_07"
     ],
     "tags": [
       "U7",
@@ -2258,7 +2251,6 @@
     "type": "constraint",
     "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.",
     "depends_on": [
-      "A_07",
       "U_06",
       "SP_WINDOW",
       "SP_ZERO"

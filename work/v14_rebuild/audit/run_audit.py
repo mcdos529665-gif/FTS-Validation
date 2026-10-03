@@ -9,8 +9,8 @@ Usage:
     python -X utf8 work/v14_rebuild/audit/run_audit.py all
 
 The runner never edits source/. P0/P1 findings make the process fail. Known
-immutable-v13 reference defects are accepted only when explicitly classified in
-CANON_REFERENCE_PATCH.tsv.
+active-canon reference gaps are accepted only when explicitly witnessed and
+classified in REFERENCE_RESOLUTIONS.tsv and CANON_REFERENCE_PATCH.tsv.
 """
 
 from __future__ import annotations
@@ -34,13 +34,15 @@ from data_paths import (
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
+sys.path.insert(0, str(ROOT / 'tools'))
+from reference_resolution import dependency_cycles, dependency_sets, load_resolutions, validate_resolutions
 SOURCE = ROOT / "source"
 REBUILD = ROOT / "work" / "v14_rebuild"
 PAPER = REBUILD / "FTS_v14_paper.md"
 EXPORT = REBUILD / "export"
 
 ALLOWED_PREDICATES = {
-    "adopts", "has_family", "requires_mapping_to", "has_math_expression",
+    "adopts", "has_family", "requires_mapping_to", "has_math_expression", "applies_to", "uses_analogy",
     "asks_branch_of", "candidate_supports", "contains", "contrasts_with",
     "defeats_or_tests", "depends_on", "does_not_promote_above", "exports_to",
     "has_agentic_gate", "has_antimode", "has_antimode_detail", "has_boundary",
@@ -139,6 +141,11 @@ def check_integrity() -> None:
             add("P1", "TRIPLE_EMPTY", f"Malformed triple: {row}")
 
     card_ids = set(ids)
+    resolutions = load_resolutions()
+    try:
+        validate_resolutions(ROOT, resolutions, card_ids)
+    except (ValueError, KeyError, TypeError) as error:
+        add('P1', 'REFERENCE_RESOLUTION', str(error))
     patch = read_reference_patch()
     for card in cards:
         for dep in card.get("depends_on", []):
@@ -156,70 +163,28 @@ def check_integrity() -> None:
         if entity_required and obj not in card_ids and not classified_object:
             add("P1", "UNCLASSIFIED_OBJECT", f"{subject} {predicate} missing entity {obj}")
 
-    card_deps = {
-        (card["id"], dep)
-        for card in cards
-        for dep in card.get("depends_on", [])
-        if dep in card_ids
-    }
-    triple_deps = {
-        (row["subject"], row["object"])
-        for row in triples
-        if row["predicate"] == "depends_on" and row["subject"] in card_ids and row["object"] in card_ids
-    }
+    card_deps, triple_deps = dependency_sets(cards, triples)
     if card_deps != triple_deps:
         add(
-            "P2",
+            "P1",
             "DEP_REPRESENTATION_DRIFT",
             f"card-only={len(card_deps-triple_deps)}, triple-only={len(triple_deps-card_deps)}; "
             "see GRAPH_RELATION_PATCH.tsv",
         )
 
-    graph = {identifier: set() for identifier in card_ids}
-    for source, target in card_deps:
-        graph[source].add(target)
-    index = 0
-    stack: list[str] = []
-    on_stack: set[str] = set()
-    indices: dict[str, int] = {}
-    low: dict[str, int] = {}
-    cycles: list[tuple[str, ...]] = []
-
-    def visit(node: str) -> None:
-        nonlocal index
-        indices[node] = low[node] = index
-        index += 1
-        stack.append(node)
-        on_stack.add(node)
-        for neighbour in graph[node]:
-            if neighbour not in indices:
-                visit(neighbour)
-                low[node] = min(low[node], low[neighbour])
-            elif neighbour in on_stack:
-                low[node] = min(low[node], indices[neighbour])
-        if low[node] == indices[node]:
-            component = []
-            while True:
-                item = stack.pop()
-                on_stack.remove(item)
-                component.append(item)
-                if item == node:
-                    break
-            if len(component) > 1 or node in graph[node]:
-                cycles.append(tuple(sorted(component)))
-
-    for identifier in sorted(card_ids):
-        if identifier not in indices:
-            visit(identifier)
-    expected_cycles = {
-        ("ADD_MIRROR_WINDOW", "ADD_ZERO_BOUNDARY"),
-        ("A_07" if "A_07" in card_ids else "M_07", "U7_MATH_LOCAL_FORBID"),
-        ("OP_WindowClose", "U7_WINDOW_CORE"),
-    }
-    if set(cycles) != expected_cycles:
-        add("P1", "DEPENDENCY_CYCLE_DRIFT", f"Unexpected SCC set: {sorted(cycles)}")
-    elif cycles:
-        add("P2", "DEPENDENCY_CYCLES", f"Three documented SCCs: {sorted(cycles)}")
+    cycles = dependency_cycles(card_deps | triple_deps)
+    if cycles:
+        add('P1', 'DEPENDENCY_CYCLE_DRIFT', f'Circular prerequisites: {cycles}; see GRAPH_RECONCILIATION_2026-10-03.md')
+    active_references = {dep for _, dep in card_deps} | {row[field] for row in triples for field in ('subject', 'object')}
+    with (HERE / 'CLAIM_MATRIX.tsv').open(encoding='utf-8', newline='') as stream:
+        for row in csv.DictReader(stream, delimiter='\t'):
+            active_references.update(part.strip() for part in row['source'].split(';') if part.strip())
+    aliases = sorted(raw for raw in active_references if resolutions.get(raw, {}).get('resolution') == 'card_alias')
+    if aliases:
+        add('P1', 'UNNORMALIZED_ALIAS', f'Canonical references require exact IDs: {aliases}')
+    gaps = sorted(raw for raw in active_references if resolutions.get(raw, {}).get('resolution') in {'missing', 'ambiguous'})
+    if gaps:
+        add('P2', 'REFERENCE_DEFINITION_GAPS', f'Explicitly unresolved definitions: {gaps}; see REFERENCE_RESOLUTIONS.tsv')
 
     for required_audit in (HERE / "GRAPH_AUDIT.md", HERE / "GRAPH_RELATION_PATCH.tsv"):
         if not required_audit.exists():

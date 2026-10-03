@@ -9,7 +9,7 @@
 - Формат сборки: `FTS_RESEARCH_EXPORT_V1`.
 - Версия активного канона: `source/MANIFEST.json` (включая интегрированные авторские поправки).
 - Source SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6`.
-- Покрытие канона: **169 карточка / 271 триплетов / 54 листа**.
+- Покрытие канона: **169 карточка / 378 триплетов / 54 листа**.
 - Машинная верификация текущего v14: **62 PASS / 0 FAIL из 62**.
 - Исследовательская статья: v14 rebuild.
 - Внешние публикации: только библиографические метаданные и краткая роль.
@@ -27,17 +27,17 @@
 
 | Входной артефакт | SHA256 |
 |---|---|
-| `tools/build_research_export.py` | `7ab603eea6aa5fec315a196ac2e3881cd5dfc6d3cb98ae28d4bd9f655b17ecb8` |
+| `tools/build_research_export.py` | `fe8591ea63a86092322788b819a67c69108f82c9f663d1cea3d66b4be05e3ff9` |
 | `AGENTS.md` | `382c79ffd6f2eee96c581c6f4c0ab3b6e79eb05ce743c9ba1ef695ff082be295` |
 | `PROJECT_INSTRUCTIONS.md` | `c6f0ea29a03108b45daa6dc3542e7afe9f8eadca70cf6301ff5e2a3ff86c12c7` |
-| `work/STATE.md` | `0419b6ad27f0bafb5119d684b462c37f634aa0b1f0d3930bc80b8e9e8370e0a6` |
+| `work/STATE.md` | `d0c50ee1c9332eb392fea85e101e485b1cea2ffd514f3f74f2b35f1fe4cba264` |
 | `work/notation.md` | `e0b5f3f18833104f694c54a863c555d948e0f9ca5ce0701f7ec3fbd671a61b6c` |
 | `work/DOCUMENT_MAP.md` | `c55ccab0a7a5e476b4144a0ca9e7b4d47d3e2b07668c912951e32c65aa028d39` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
-| `work/DECISIONS.md` | `1e8b8a83b60a4956794889a87c36ae933f3d4678456cc7c7c60536f2876a6746` |
-| `work/OPEN_QUESTIONS.md` | `798bac570c4295a673441da548cc3f430e414bcee8547b506c65ec7fa1071479` |
+| `work/DECISIONS.md` | `250befeb6c06d7a9d4a48b9b9c97ba3dc8db6fe99470a2c588839b8c0f0b5424` |
+| `work/OPEN_QUESTIONS.md` | `888546701f744f028fb9cecbf9cd1bd48033d443dfc5b5e1059f9499007df79d` |
 | `work/EXTERNAL_CONFLICTS.md` | `0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a` |
 | `work/v14_rebuild/FTS_v14_paper.md` | `d6da08e3b4fb49eba1451e7c782b173ca47727110c4713f87fca15ee0dada916` |
 | `work/v14_rebuild/FTS_v14_register_map.md` | `710ec5be63957527ec5baae8e43d3040179bdf243152d02d64208c520e28aa12` |
@@ -112,11 +112,11 @@
 | `work/v14_rebuild/neural_analogy_2026-09-19/REVIEW.md` | `9d5e0df0301712671d4597d936b2c8893c4b0f7a3fb7387ae0ad2510c5556ec0` |
 | `work/v14_rebuild/neural_analogy_2026-09-19/AUTHOR_MESSAGE.txt` | `63f03b5a4a98232bd431bf6f559e1adcd752eead82f9cf9760c9ed3c144332fe` |
 | `work/v14_rebuild/neural_analogy_2026-09-19/check_examples.py` | `0ec19822598e81717dfe67541a32e0147185675e976746a25a25ee1fd2b6829d` |
-| `source/MANIFEST.json` | `e71c458b30fff6b0ac25eed7d55829003717fd013b1d5cdd4d0a9a2ffb2b7ee3` |
-| `source/FTS_v13_LLM_CONTEXT.md` | `92b908e81e9fbc2c24db9a743e856a78baffc4d50d321117d05b1fdb165db123` |
-| `source/FTS_v13_LLM_FULL_DUMP.md` | `9ff4f0896a57c97669ae05449c05e513da45367001d3356966f279657b8f635c` |
-| `source/fts_cards.jsonl` | `2b90ce6c7cba31cdc07fd6f4fb38228112463b0e7d4c64d5b842cae377178fa8` |
-| `source/fts_triples.tsv` | `5d0818fadbbfeca82467c92467f4736eaedec1e74170a5f8d14411c081e8ee82` |
+| `source/MANIFEST.json` | `e691c20efcab517a39664943e25948967496303cfca57f91d2694c003f4b24a0` |
+| `source/FTS_v13_LLM_CONTEXT.md` | `789c58200887f48bcdd23e15a174ecf579c51c46e5068e037cc60e517560fbed` |
+| `source/FTS_v13_LLM_FULL_DUMP.md` | `fa59ae8d76f505b0e6be7268e4102a0c02561575f6e742a0b442981fda501173` |
+| `source/fts_cards.jsonl` | `9c9836bc66c5d2e07dca065252697dd07e9766d2fa9ebdd51e2be81fcab86861` |
+| `source/fts_triples.tsv` | `aee1780e6d4ed85894056cc49df054de4a660b6f5a7ef076eb488e8786fe7a9c` |
 
 ### 1.3. Краткий рабочий контракт
 
@@ -450,48 +450,45 @@ check visual structure; correct `article.md` against source, never the reverse.
 
 ### STATE — текущая точка
 
-Обновлено 2026-10-03. История исходных деревьев сохранена в Git и по ссылкам ниже.
+Обновлено 2026-10-03. Единое место работы:
+`C:/Users/Mcdos/Desktop/FTS_v13_project`.
 
-#### Текущая цель
+#### Текущая работа
 
-Ветки основной разработки и рабочего дерева объединены и перенесены в `master`.
-Единое место работы: `C:/Users/Mcdos/Desktop/FTS_v13_project`.
-Действует редактируемый канон и английский контракт; ответы пользователю — по-русски.
-Отчёт выполнения и сохранность материалов: [MERGE_2026-10-03](project_consistency/MERGE_2026-10-03.md).
+Выполнение плана согласования зависимостей и ссылок:
+[результат](project_consistency/GRAPH_RECONCILIATION_2026-10-03.md),
+[полный маршрут](project_consistency/GRAPH_CHECKS_2026-10-03.json),
+[проверка требований](project_consistency/GRAPH_ACCEPTANCE_2026-10-03.json).
 
-Следующий содержательный шаг — адресная работа с выбранным паспортом из
-[ответов Undermind на 60 OQ](v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md)
-и [AUTHOR_ANSWERS_60.md](AUTHOR_ANSWERS_60.md). Исследовательские результаты E5
-обеих веток сохранены; предварительные выводы не стали доказательствами ФТС.
+Активный релиз: `v13_active_graph_reconciled_2026-10-03`;
+169 карточек, 378 триплетов, 54 листа. Тексты, символы и статусы сохранены.
+Карточки и TSV содержат одинаковые 167 зависимостей; расхождение — 0 / 0,
+циклов предпосылок — 0. Взаимосвязи сохраняются с уточнёнными типами.
+Все 34 исходные ссылки разобраны; четыре точных объекта остаются без определения:
+`Lambda_link`, `TA1`, `U12_CHI_PI_BOUNDARY`, `NODE_SIGNATURES`.
 
-#### Активный канон и последняя проверка
+#### Следующий содержательный шаг
 
-- Релиз: `v13_active_integrated_2026-10-03`; 169 карточек, 271 связь, 54 листа.
-- AC-2026-10-03 включена в активный канон; [границы интеграции](author_canon/2026-10-03/INTEGRATION.md).
-- Логические формы У6/У7 сохраняют AC-2026-09-21. Математическое чтение У7:
-  `A_07` / `U7_MATH_LOCAL_FORBID`; логическая группировка: `U7_LOGIC_GROUPING`.
-- Полный маршрут 2026-10-03: 5/5 PASS; C01–C62 — 62 PASS; 493/493 assertions.
-  Проверки: Python 3.11.9, SymPy 1.14.0. [Маршрут и окружение](PROJECT_CONSISTENCY.md).
-- Сохраняются два P2: расхождение представлений зависимостей (97 card-only,
-  1 triple-only) и три SCC. Неразрешённых узлов графа — 34, как до слияния.
+[Определения для четырёх ссылок](OPEN_QUESTIONS.md#oq-graph-reference-definitions)
+требуют адресной реконструкции и свидетелей своей области. Сам факт наличия
+строки или её адресное исправление не повышает St_FTS. Далее сохраняется
+работа с выбранным паспортом из [ответов на 60 OQ](v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md)
+и [AUTHOR_ANSWERS_60.md](AUTHOR_ANSWERS_60.md).
 
-#### Открытые содержательные нити
+Открыты [мост У6/У7](OPEN_QUESTIONS.md#oq-u6-u7-compositional-semantics),
+[роли окон](OPEN_QUESTIONS.md#oq-window-family-roles),
+[Blackwell](OPEN_QUESTIONS.md#oq-blackwell-canonical-projection),
+[Lift](OPEN_QUESTIONS.md#oq-lift-section-and-category),
+[код / «ведёт к»](OPEN_QUESTIONS.md#oq-code-link-vs-leads-to) и
+[интернализация ярлыка](OPEN_QUESTIONS.md#oq-reflection-label-internalization).
 
-- У6/У7: [композиционная семантика](OPEN_QUESTIONS.md#oq-u6-u7-compositional-semantics);
-  логический/математический/операциональный мост остаётся открытым.
-- Семейства окон: роли, пересечение/носитель, продолжение —
-  [открытые вопросы](OPEN_QUESTIONS.md#oq-window-family-roles).
-- [Blackwell-проекция](OPEN_QUESTIONS.md#oq-blackwell-canonical-projection) и
-  [категория/секция Lift](OPEN_QUESTIONS.md#oq-lift-section-and-category).
-- Код / «ведёт к»: [различающий свидетель](OPEN_QUESTIONS.md#oq-code-link-vs-leads-to).
-- Интернализация ярлыка: [наблюдаемый след и обучение](OPEN_QUESTIONS.md#oq-reflection-label-internalization).
+#### Происхождение и история
 
-#### История и адреса
-
-- [STATE основной ветки до слияния](state_history/STATE_master_before_merge_2026-10-03.md).
-- История рабочего дерева до слияния: коммит `930878a`; merge-коммит `f863a38`.
-- [Решения](DECISIONS.md), [авторские поправки](AUTHOR_CANON.md), [карта документов](DOCUMENT_MAP.md).
-- Резервная копия 21 локального файла: `E:/Codex/backups/fts-merge-20261003/`.
+[Слияние и резервные копии](project_consistency/MERGE_2026-10-03.md);
+[интеграция AC-2026-10-03](author_canon/2026-10-03/INTEGRATION.md).
+Математическое У7 — A_07/U7_MATH_LOCAL_FORBID, логическое — M_07/U7_LOGIC_GROUPING;
+операциональное чтение остаётся отдельным. История сохранена в Git,
+[решениях](DECISIONS.md) и [авторских поправках](AUTHOR_CANON.md).
 
 ## 3. Основной исследовательский текст v14
 
@@ -5046,6 +5043,16 @@ if __name__ == "__main__":
 
 Формат: дата — решение — почему. Дописывать строкой при каждом нетривиальном выборе.
 
+- 2026-10-03 — Согласованы все формы `depends_on` в активном каноне, включая
+  некарточные адресаты. Обратные ссылки применения ограничения и представления
+  оператором типизированы; три цикла предпосылок устранены с сохранением смысла
+  взаимосвязей. Точные записи книги адресованы как фрагменты; четыре отсутствующих
+  определения сохранены с условиями разрешения. Тексты, формулы, ID и статусы
+  карточек сохранены. Основания и решения по каждому ребру:
+  [GRAPH_RECONCILIATION_2026-10-03](project_consistency/GRAPH_RECONCILIATION_2026-10-03.md).
+  Причина: выполнение плана согласования графа; происхождение и область связи
+  должны быть явно отделены от её доказательной роли.
+
 - 2026-10-03 — Merged research branches and incorporated AC-2026-10-03 into
   `v13_active_integrated_2026-10-03`. Restored U7 mathematical constraints under
   `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping is `U7_LOGIC_GROUPING`.
@@ -6697,11 +6704,11 @@ if __name__ == "__main__":
       exact sign p=0.6875, mean ΔAUC=-0.0012; LogReg-эффект ionosphere вторичен,
       T3 не capacity-matched. Сильный статус не подтверждён.
 
-- [ ] Синхронизировать два представления `depends_on` при workbook round-trip v14: {#oq-graph-dep-sync}
-      JSONL содержит 102 entity-ребра, отсутствующих в TSV; одно TSV-ребро
-      `ADD_U12_CIRCLE→U_10` отсутствует в карточке; три SCC требуют авторского
-      решения. Patch-план: `v14_rebuild/audit/GRAPH_RELATION_PATCH.tsv`. `source/`
-      не менять; закрытие только новой выгрузкой и MANIFEST.
+- [x] Согласованы два представления `depends_on` активного канона. {#oq-graph-dep-sync}
+      2026-10-03: все 167 зависимостей совпадают, расхождение 0/0; циклов
+      предпосылок 0. Смысл взаимосвязей сохранён в уточнённых типах. Прямое
+      редактирование канона разрешено действующей процедурой; производные и
+      MANIFEST обновлены. [Результат](project_consistency/GRAPH_RECONCILIATION_2026-10-03.md).
 - [ ] Промежуточные корни единицы `Z/3,Z/6,Z/8` (нить C) — analogy_only; есть ли роль, {#oq-roots-of-unity-z368}
       или это U12_PI? `Z/2`/`i`/`U(1)` — грунтованы.
 - [~] Цикл ролей пентады (§8): RoleNec-абляция ПРОЙДЕНА (§8.1) — имена выживают для {#oq-pentad-role-cycle}
@@ -6767,9 +6774,11 @@ if __name__ == "__main__":
 - [ ] Повторная канонизация U_07…U_12 после К1–К5. {#oq-audit-semantic-repromotion}
       Для каждого уровня нужны раздельный свидетель семантики, operational/ablation test,
       defeat condition и SP-карточка с точным целевым статусом. C-NN недостаточны.
-- [ ] Восстановить битые ID/алиасы v13 в будущем workbook v14. {#oq-audit-canon-reference-repair}
-      Полная таблица: `work/v14_rebuild/audit/CANON_REFERENCE_PATCH.tsv`.
-      Пока v13 неизменяем, все дефекты трассируемости классифицированы.
+- [x] Нормализованы подтверждённые ID/алиасы активного канона. {#oq-audit-canon-reference-repair}
+      2026-10-03: исправлены девять алиасов; точные записи книги и буквальные
+      адресаты типизированы. [Реестр](v14_rebuild/audit/REFERENCE_RESOLUTIONS.tsv).
+      Четыре отсутствующих определения выделены в oq-graph-reference-definitions;
+      получение этих определений и их семантических свидетелей остаётся открытым.
 
 ##### Явные дополнения Deep Research 2026-09-05
 
@@ -6927,6 +6936,21 @@ if __name__ == "__main__":
       из факта пересечения не следует.
 - [ ] Задать правило продолжения авторских перечней окон. {#oq-window-family-continuation}
       Нынешние конечные перечни не дают основания достраивать следующие окна.
+
+##### Определения после согласования графа — 2026-10-03
+
+- [ ] Восстановить точные объекты четырёх оставшихся ссылок. {#oq-graph-reference-definitions}
+      `Lambda_link`: носители, связь и закон преобразования для тензорного контекста;
+      `TA1`: исходное определение и однозначная карта ID/осей доступа;
+      `U12_CHI_PI_BOUNDARY`: самостоятельная вещественная χ/π-граница и область
+      комплексного продолжения; `NODE_SIGNATURES`: спецификация сигнатур и её
+      собственное основание. Упоминания и зависимые объекты сохраняются как
+      свидетельства поиска; точные определения — «нет в артефактах».
+      [Разбор всех ссылок](project_consistency/GRAPH_RECONCILIATION_2026-10-03.md)
+      и [реестр решений](v14_rebuild/audit/REFERENCE_RESOLUTIONS.tsv).
+      Условие закрытия: точный существующий источник или согласованное определение
+      с областью, направленными основаниями и проверяемым свидетелем; новый статус
+      требует отдельного SP/К1–К5. Адресная починка сама по себе статус не повышает.
 
 ### 6.3. Журнал внешних коллизий
 
@@ -30221,7 +30245,7 @@ if __name__ == "__main__":
 
 ## 8. Компактный контекст канона v13
 
-### FTS active canonical release — v13_active_integrated_2026-10-03
+### FTS active canonical release — v13_active_graph_reconciled_2026-10-03
 
 Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
@@ -30238,14 +30262,14 @@ release was produced by a new workbook round-trip.
 
 #### Active changes
 
-Integrate AC-2026-10-03 window families and restore separate U7 mathematical and logical constraints; preserve AC-2026-09-21 and existing evidence statuses.
+Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
 AC-2026-10-03 adds the exact finite triple/five/seven window families, with author
 and editorial statuses retained. Intersections do not automatically define carriers.
 
-Cards: 169. Triples: 271. Sheets: 54.
+Cards: 169. Triples: 378. Sheets: 54.
 
 #### Counts by card type
 
@@ -30610,7 +30634,7 @@ Cards: 169. Triples: 271. Sheets: 54.
 
 ## 9. Полный 54-листовый дамп канона v13
 
-### FTS active canonical release — v13_active_integrated_2026-10-03
+### FTS active canonical release — v13_active_graph_reconciled_2026-10-03
 
 Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
@@ -30627,14 +30651,14 @@ release was produced by a new workbook round-trip.
 
 #### Active changes
 
-Integrate AC-2026-10-03 window families and restore separate U7 mathematical and logical constraints; preserve AC-2026-09-21 and existing evidence statuses.
+Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
 AC-2026-10-03 adds the exact finite triple/five/seven window families, with author
 and editorial statuses retained. Intersections do not automatically define carriers.
 
-Cards: 169. Triples: 271. Sheets: 54.
+Cards: 169. Triples: 378. Sheets: 54.
 
 #### Sheet index
 
@@ -30658,7 +30682,7 @@ Cards: 169. Triples: 271. Sheets: 54.
 | 15 | 15_Внутр_архив | A1:G11 | 11 | 7 |
 | 16 | 16_TODO | A1:E15 | 15 | 5 |
 | 17 | 17_Карточки | A1:M170 | 170 | 13 |
-| 18 | 18_Граф | A1:H272 | 272 | 8 |
+| 18 | 18_Граф | A1:H379 | 379 | 8 |
 | 19 | 19_Канон_текст | A1:I80 | 80 | 9 |
 | 20 | 20_CE_метрика | A1:H16 | 16 | 8 |
 | 21 | 21_Переходы | A1:L9 | 9 | 12 |
@@ -30675,10 +30699,10 @@ Cards: 169. Triples: 271. Sheets: 54.
 | 32 | 32_Integrity | A1:J11 | 11 | 10 |
 | 33 | 33_Validation | A1:F43 | 43 | 6 |
 | 34 | 34_Export_jsonl | A1:B170 | 170 | 2 |
-| 35 | 35_Export_tsv | A1:B272 | 272 | 2 |
+| 35 | 35_Export_tsv | A1:B379 | 379 | 2 |
 | 36 | 36_Export_yaml | A1:B337 | 337 | 2 |
 | 37 | 37_Export_md | A1:F31 | 31 | 6 |
-| 38 | 38_Changelog | A1:F15 | 15 | 6 |
+| 38 | 38_Changelog | A1:F16 | 16 | 6 |
 | 39 | 39_Status_Dict | A1:E21 | 21 | 5 |
 | 40 | 40_Reader_View | A1:B12 | 12 | 2 |
 | 41 | 41_Самодостаточность | A1:D9 | 9 | 4 |
@@ -30864,7 +30888,7 @@ Cards: 169. Triples: 271. Sheets: 54.
 
 | Поле | Значение | Комментарий | Внутренний лист |
 | --- | --- | --- | --- |
-| Версия | v13_active_integrated_2026-10-03 | Active export; historical workbook remains a provenance input. | 38_Changelog |
+| Версия | v13_active_graph_reconciled_2026-10-03 | Active export; historical workbook remains a provenance input. | 38_Changelog |
 | Дата | 2026-06-10 | America/New_York current session date |  |
 | Назначение | self-contained Excel canon + U7 window cycles + χ statistical + complex branch/tensor overlays | карточки + граф + встроенный канон + U7/χ + complex/tensor overlays | 17–41 + overlays |
 | Статус | candidate replacement; not machine-checked proof | ядро −1..7 сильнее 8+; О(13..20) candidate-модуль | 39_Status_Dict |
@@ -31258,18 +31282,18 @@ Cards: 169. Triples: 271. Sheets: 54.
 | O_18 | connectivity_ground | Смена режима ошибки | О(18) | ErrTypeGain: новый уровень делает видимой новую ошибку. Падает, если ошибка выражается ниже. | candidate | 18 | O-register | CANON_V43 |  | ground;connectivity;O18 | 07_Основания_О/O18 | Падает, если ошибка выражается ниже. |
 | O_19 | connectivity_ground | Арностный переход | О(19) | Select имеет арность 1; Agg требует семейства i. Падает, если статистика строится из одного выбора без скрытого индекса. | candidate | 19 | O-register | CANON_V43 |  | ground;connectivity;O19 | 07_Основания_О/O19 | Падает, если статистика строится из одного выбора без скрытого индекса. |
 | O_20 | connectivity_ground | Лестница не-события как данных | О(20) | AbsDataGain: типизированное отсутствие улучшает missing/OOD/provenance. Падает, если typed absence не даёт выигрыша. | candidate_requires_empirical_test | 20 | O-register | CANON_V43 |  | ground;connectivity;O20 | 07_Основания_О/O20 | Падает, если typed absence не даёт выигрыша. |
-| OP_Tot | operator | Tot | Tot(0_A)=event(0_A)=¬A | Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация | canonical |  | operator | CANON_V43/CANON_EN | O2;O12;A4 | operator;Tot | 25_Операторы/OP_Tot | патология: ложная тотализация |
-| OP_TotPlus | operator | Tot⁺ | рабочая упаковка без потери Res_n | рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻ | canonical |  | operator | CANON_V43/CANON_EN | O2 | operator;Tot⁺ | 25_Операторы/OP_TotPlus | опасность: превращение в Tot⁻ |
-| OP_TotMinus | operator | Tot⁻ | редукционистская тотализация | редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра | canonical |  | operator | CANON_V43/CANON_EN | O2;O12 | operator;Tot⁻ | 25_Операторы/OP_TotMinus | патология ядра |
-| OP_Lift | operator | Lift | X_{n+1}=Lift(X_n,Res_n) | X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote | canonical |  | operator | CANON_V43/CANON_EN | O3;O7;O8;A6 | operator;Lift | 25_Операторы/OP_Lift | если нет definability gain — Promote |
-| OP_Promote | operator | Promote | label n→n+1 без новой выразимости | label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever | canonical |  | operator | CANON_V43/CANON_EN | O12;A9 | operator;Promote | 25_Операторы/OP_Promote | часто через Tot/Refuse/Sever |
+| OP_Tot | operator | Tot | Tot(0_A)=event(0_A)=¬A | Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация | canonical |  | operator | CANON_V43/CANON_EN | O_02;O_12;A4 | operator;Tot | 25_Операторы/OP_Tot | патология: ложная тотализация |
+| OP_TotPlus | operator | Tot⁺ | рабочая упаковка без потери Res_n | рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻ | canonical |  | operator | CANON_V43/CANON_EN | O_02 | operator;Tot⁺ | 25_Операторы/OP_TotPlus | опасность: превращение в Tot⁻ |
+| OP_TotMinus | operator | Tot⁻ | редукционистская тотализация | редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра | canonical |  | operator | CANON_V43/CANON_EN | O_02;O_12 | operator;Tot⁻ | 25_Операторы/OP_TotMinus | патология ядра |
+| OP_Lift | operator | Lift | X_{n+1}=Lift(X_n,Res_n) | X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote | canonical |  | operator | CANON_V43/CANON_EN | O_03;O_07;O_08;A6 | operator;Lift | 25_Операторы/OP_Lift | если нет definability gain — Promote |
+| OP_Promote | operator | Promote | label n→n+1 без новой выразимости | label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever | canonical |  | operator | CANON_V43/CANON_EN | O_12;A9 | operator;Promote | 25_Операторы/OP_Promote | часто через Tot/Refuse/Sever |
 | OP_Refuse | operator | Refuse | фильтр обновлений g(e) | фильтр обновлений g(e): отказ допустить опыт/контрданные. 7+ anti-mode | canonical |  | operator | CANON_V43/CANON_EN | A8 | operator;Refuse | 25_Операторы/OP_Refuse | 7+ anti-mode |
 | OP_Sever | operator | Sever | обрыв Λ/provenance/transfer | обрыв Λ/provenance/transfer: разрывает перенос оснований и контрсвидетельств. патологическое забывание | canonical |  | operator | CANON_V43/CANON_EN | A8 | operator;Sever | 25_Операторы/OP_Sever | патологическое забывание |
-| OP_kappa | operator | κ | κ(S,0_S,Prov,Rev) | κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7 | candidate_with_operational_gate |  | operator | CANON_V43/CANON_EN | O15 | operator;κ | 25_Операторы/OP_kappa | underformalized, но нужен для У7 |
+| OP_kappa | operator | κ | κ(S,0_S,Prov,Rev) | κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7 | candidate_with_operational_gate |  | operator | CANON_V43/CANON_EN | O_15 | operator;κ | 25_Операторы/OP_kappa | underformalized, но нужен для У7 |
 | OP_event0A | operator | event(0_A) | event(0_A)=¬A | event(0_A)=¬A: булева проекция структурированного отсутствия. обратный вывод ¬A→0_A запрещён | canonical |  | operator | CANON_V43/CANON_EN | A2 | operator;event(0_A) | 25_Операторы/OP_event0A | обратный вывод ¬A→0_A запрещён |
-| OP_Unpack | operator | Unpack | C(x)=C(Unpack(x)) | C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox | canonical |  | operator | CANON_V43/CANON_EN | O9;O12 | operator;Unpack | 25_Операторы/OP_Unpack | анти-blackbox |
-| OP_Compress2 | operator | Compress₂ | M_n*=Compress₂(M_{n+2}) | M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз | canonical |  | operator | CANON_V43/CANON_EN | O8 | operator;Compress₂ | 25_Операторы/OP_Compress2 | проекция вниз |
-| OP_Expand2 | operator | Expand₂ | M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n) | M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх | canonical |  | operator | CANON_V43/CANON_EN | O8 | operator;Expand₂ | 25_Операторы/OP_Expand2 | проекция вверх |
+| OP_Unpack | operator | Unpack | C(x)=C(Unpack(x)) | C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox | canonical |  | operator | CANON_V43/CANON_EN | O_09;O_12 | operator;Unpack | 25_Операторы/OP_Unpack | анти-blackbox |
+| OP_Compress2 | operator | Compress₂ | M_n*=Compress₂(M_{n+2}) | M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз | canonical |  | operator | CANON_V43/CANON_EN | O_08 | operator;Compress₂ | 25_Операторы/OP_Compress2 | проекция вниз |
+| OP_Expand2 | operator | Expand₂ | M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n) | M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх | canonical |  | operator | CANON_V43/CANON_EN | O_08 | operator;Expand₂ | 25_Операторы/OP_Expand2 | проекция вверх |
 | OP_pi | operator | π | π_n:X_{n+1}↠X_n | π_n:X_{n+1}↠X_n: проекция старого слоя. должна сохранять старое | canonical |  | operator | CANON_V43/CANON_EN | A7 | operator;π | 25_Операторы/OP_pi | должна сохранять старое |
 | OP_iota | operator | ι | ι_n:X_n↪X_{n+1} | ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id | canonical |  | operator | CANON_V43/CANON_EN | A7 | operator;ι | 25_Операторы/OP_iota | π∘ι=id |
 | A0 | axiom | Ladder-first ontology of distinction | A0 | Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary | canonical |  | axiom | CANON_EN |  | axiom;A0 | 26_Аксиомы_A0_A9/A0 | Imported from English canon layer |
@@ -31293,27 +31317,27 @@ Cards: 169. Triples: 271. Sheets: 54.
 | T7B | test | Counterfactual self-control test | T7B | интервенция в g(e) или Λ предсказуемо меняет поведение | canonical |  | test/failure | CANON_V43/CANON_EN | O_12 | test;defeat;test | 24_MPrime_Audit/T7B | интервенция в g(e) или Λ предсказуемо меняет поведение |
 | T7C | test | Provenance continuity test | T7C | контрсвидетельства переносятся между контекстами, если Sever не применён | canonical |  | test/failure | CANON_V43/CANON_EN | O_12 | test;defeat;test | 24_MPrime_Audit/T7C | контрсвидетельства переносятся между контекстами, если Sever не применён |
 | ADDENDUM_V3 | candidate_bundle | Добавка v3 к табличному канону | ADDENDUM_V3 | Встроенная candidate-добавка: локальное зеркало, ZeroBoundary, чётно/нечётная топология, вещественные константы, e^pi, У12 circle, research export. | candidate_bundle | upper/research | addendum | ADDENDUM_V3 |  | addendum;candidate;research_export | 43_Добавка_v3/ADDENDUM_V3 | Не внешний файл; встроенный архивный блок |
-| ADD_NOTATION_ABS | notation_rule | Правило abs(x) для Markdown/TSV | abs(x) | В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо \|x\|, чтобы не ломать pipe-таблицы. | canonical_note | all | export | ADDENDUM_V3 | ADDENDUM_V3 | notation;export;markdown | 43_Добавка_v3/ADD_NOTATION_ABS | В Excel можно сохранять \|x\| как визуальную запись |
+| ADD_NOTATION_ABS | notation_rule | Правило abs(x) для Markdown/TSV | abs(x) | В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо \|x\|, чтобы не ломать pipe-таблицы. | canonical_note | all | export | ADDENDUM_V3 |  | notation;export;markdown | 43_Добавка_v3/ADD_NOTATION_ABS | В Excel можно сохранять \|x\| как визуальную запись |
 | ADD_MIRROR_WINDOW | operator_candidate | Локальное зеркальное окно | Window(F_n)={F_n,-F_n} | Уровень задаётся разрешённой формой, запрещённой зеркальной формой и нулевой boundary; запрет действует локально, не глобально. | derived_constraint | generic | operator | ADDENDUM_V3 | ADD_ZERO_BOUNDARY | mirror_window;boundary;operator | 43_Добавка_v3/ADD_MIRROR_WINDOW | Повышено v9: локальное зеркало доказуемо как constraint при условии Window(F) и F!=0. |
-| ADD_ZERO_BOUNDARY | boundary_candidate | Нулевая граница зеркального окна | ZeroBoundary(F_n)={x:F_n(x)=0} | F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы. | formal_math_fact / derived_constraint | generic | boundary | ADDENDUM_V3 | ADD_MIRROR_WINDOW | zero_boundary;absence;mirror_window | 43_Добавка_v3/ADD_ZERO_BOUNDARY | Повышено v9: F=-F iff F=0 — math fact; ZeroBoundary — derived constraint. |
+| ADD_ZERO_BOUNDARY | boundary_candidate | Нулевая граница зеркального окна | ZeroBoundary(F_n)={x:F_n(x)=0} | F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы. | formal_math_fact / derived_constraint | generic | boundary | ADDENDUM_V3 |  | zero_boundary;absence;mirror_window | 43_Добавка_v3/ADD_ZERO_BOUNDARY | Повышено v9: F=-F iff F=0 — math fact; ZeroBoundary — derived constraint. |
 | ADD_PARITY_TOPOLOGY | topology_candidate | Чётная и нечётная топология уровней | EvenSpace/OddSpace | Чётные и нечётные уровни рассматриваются как разные топологические слои; запреты локальны и не уничтожают соседний уровень. | canonical_alignment | U2-U11 | math_analogy | ADDENDUM_V3 | ADD_MIRROR_WINDOW | even_odd;topology;projection | 43_Добавка_v3/ADD_PARITY_TOPOLOGY | Повышено v9: чётно/нечётная топология согласована с каноном, но не заменяет carrier nodes. |
 | ADD_TOPO_INVARIANTS | invariant_candidate | Топологические инварианты после запретов | Gamma(F), Gamma(-F), Z_n | Классы нулевых узлов: один ноль, бесконечно много нулей, нет нулей; e^x требует отдельной boundary/gate. | candidate | U2-U11 | math_analogy | ADDENDUM_V3 | ADD_ZERO_BOUNDARY | topology;invariants;zero_boundary | 43_Добавка_v3/ADD_TOPO_INVARIANTS | Обычной топологии недостаточно без C(E)/Lift/Promote |
 | ADD_HALF_PHI | hypothesis_candidate | Половина, кубический избыток и phi | x*x*x-x=x*x | phi появляется как условие границы, где кубический избыток после удаления факторной оси возвращает квадратный агрегат. | candidate | U9/11+ | math_analogy | ADDENDUM_V3 | ADD_PARITY_TOPOLOGY | phi;half;boundary;U9 | 43_Добавка_v3/ADD_HALF_PHI | Не универсальное тождество; boundary condition |
 | ADD_CONSTANTS | classification_candidate | Вещественные константы как следы операций | 0,1,-1,2,1/2,phi,e,pi,sqrt(2) | Константы ФТС-релевантны только как следы операций, инварианты, границы, нормировки, симметрии или несоизмеримости. | candidate | all/upper | classification | ADDENDUM_V3 | ADD_ZERO_BOUNDARY | constants;invariants;criteria | 43_Добавка_v3/ADD_CONSTANTS | Не включать поздние константы без оператора/boundary/failure condition |
 | ADD_U11_EPI | level_variant_candidate | У11: e^x и e^pi как два чтения | e^x / e^pi | e^x — динамический оператор У11; e^pi — оконная константа 11–15, не полный уровень и не замена e^x. | candidate | U10-U11-U15 | math_analogy | ADDENDUM_V3 | ADD_CONSTANTS | U11;e;pi;window_constant | 43_Добавка_v3/ADD_U11_EPI | e^(i*pi)+1=0 требует отдельного оператора поворота |
 | ADD_U12_CIRCLE | level_candidate | У12: окружность и замкнутая boundary | x*x+(y-2)*(y-2)=4 | У12 как closed relation: окружность с центром (0,2), радиусом 2, касанием нуля и pi-boundary. | candidate_requires_formalization | U12 | math_analogy | ADDENDUM_V3 | ADD_U11_EPI;ADD_ZERO_BOUNDARY | U12;circle;pi;closed_boundary | 43_Добавка_v3/ADD_U12_CIRCLE | Не график y=F(x); требует оператора и condition_of_defeat |
-| ADD_RESEARCH_FORMAT | export_instruction | Research-friendly формат для GPT | Markdown+JSONL+TSV+YAML | Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона. | active_instruction | all | export | workbook | ADDENDUM_V3 | export;research;markdown;jsonl;tsv;yaml | 42_Экспорт_GPT/ADD_RESEARCH_FORMAT | XLSX остаётся редактором, не оптимальным исследовательским носителем |
+| ADD_RESEARCH_FORMAT | export_instruction | Research-friendly формат для GPT | Markdown+JSONL+TSV+YAML | Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона. | active_instruction | all | export | workbook |  | export;research;markdown;jsonl;tsv;yaml | 42_Экспорт_GPT/ADD_RESEARCH_FORMAT | XLSX остаётся редактором, не оптимальным исследовательским носителем |
 | SP_WINDOW | status_promotion | Повышение статуса локального зеркального окна | Window(F)={F,-F} | Window(F) получает статус derived_constraint: в локальном двухветвевом окне при F!=0 исключение одной ветви выбирает другую. | derived_constraint | generic | status_patch | RESEARCH_STATUS_V9 | ADD_MIRROR_WINDOW | status;mirror_window;derived_constraint | 45_Статус_гипотез_v9/SP_WINDOW | Вне окна y!=-F не выбирает F. |
 | SP_ZERO | status_promotion | Повышение статуса ZeroBoundary | F=-F iff F=0 | Математический факт: F=-F iff F=0; ФТС-слой: ZeroBoundary как derived constraint локального зеркала. | formal_math_fact / derived_constraint | generic | status_patch | RESEARCH_STATUS_V9 | ADD_ZERO_BOUNDARY | status;zero_boundary;formal_math_fact | 45_Статус_гипотез_v9/SP_ZERO | Не редуцировать 0_A к числовому нулю. |
 | SP_U8 | status_promotion | У8 как полу-восстановление | sqrt(abs(x)) | У8 повышен до candidate_with_operational_gate за счёт math kernel sqrt(abs(x)) как partial inverse of square on sign quotient. | candidate_with_operational_gate | 8 | status_patch | RESEARCH_STATUS_V9 | U_08;M_08 | status;U8;hypothesis;formal_math_fact | 45_Статус_гипотез_v9/SP_U8 | Нужны operator/trace/question/defeat/test. |
 | SP_U9 | status_promotion | У9 как кубический избыток | x*x*x | У9 повышен до FTS_candidate: x*x*x=x*(x*x), минимальный multiplicative surplus над квадратом. | FTS_candidate | 9 | status_patch | RESEARCH_STATUS_V9 | U_09;M_09 | status;U9;cubic_surplus | 45_Статус_гипотез_v9/SP_U9 | Не canonical_strict без object-language понимания. |
 | SP_U12 | status_promotion | У12 как closed boundary | x*x+(y-2)*(y-2)=4 | У12 получает formal_math_fact по геометрии и canonical_alignment как closed boundary candidate. | candidate_requires_formalization + canonical_alignment | 12 | status_patch | RESEARCH_STATUS_V9 | U_12;ADD_U12_CIRCLE | status;U12;closed_boundary | 45_Статус_гипотез_v9/SP_U12 | Нужны anti-mode/operator/test/defeat. |
-| U7_WINDOW_CORE | definition | У7: окно ожидания как самозамыкающийся ответ | Answer(W)=Close(W,W) | У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект. | candidate_with_operational_gate | 7 | CH-register/core | USER_DIALOG_V11 + CANON_HABR | U_07;M_07;OP_WindowClose | U7;expectation_window;answer;prediction;knowledge | U7_Window_Cycles/U7_WINDOW_CORE | Новая центральная карточка v11 |
+| U7_WINDOW_CORE | definition | У7: окно ожидания как самозамыкающийся ответ | Answer(W)=Close(W,W) | У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект. | candidate_with_operational_gate | 7 | CH-register/core | USER_DIALOG_V11 + CANON_HABR | U_07;M_07 | U7;expectation_window;answer;prediction;knowledge | U7_Window_Cycles/U7_WINDOW_CORE | Новая центральная карточка v11 |
 | OP_WindowClose | operator | Оператор самозакрытия окна ожидания | Close(W,W) | Close(W,W) фиксирует ответ как сам акт закрытия ожидания ожиданием; продуктивная тавтология У7, не плоское a=a. | candidate_core | 7 | operator | USER_DIALOG_V11 | U7_WINDOW_CORE;OP_Window | operator;U7;answer;cycle | 25_Операторы/OP_WindowClose | Не читать как внешний A, вставленный в W |
 | U7_FORGET_CLOSE | anti_mode | Забывание как закрытие ожидания отказом от ожидания | Close(W,Refuse(W)) | Забывание: W закрывается Refuse(W), то есть отказом от ожидания; это не простое отсутствие памяти и не честное незнание. | candidate_core | 7+ | anti-mode | USER_DIALOG_V11 + CANON_EN | U7_WINDOW_CORE;OP_Refuse;OP_Sever | U7;forgetting;Refuse;Sever;anti-mode | U7_Window_Cycles/U7_FORGET_CLOSE | Уточняет −A У7 |
 | U7_U8_ANSWER_QUESTION_BOUNDARY | boundary | Граница У7/У8: ответ не вопрос | Answer(W)=A vs Hyp(W)=A? | У7 даёт ответ/закрытие окна; У8 задаёт вопрос/открытие окна. Предположение не является слабым предсказанием. | candidate_boundary | 7-8 | boundary | USER_DIALOG_V11 | U_07;U_08;U7_WINDOW_CORE | U7;U8;answer;question;hypothesis | U7_Window_Cycles/U7_U8_ANSWER_QUESTION_BOUNDARY | A? нельзя выдавать за A |
 | U7_AGENTIC_GATE_LAYER | guardrail | κ/T7 как agentic gate, не сущность У7 | agentic_gate(Answer)=κ/T7A/T7B/T7C | κ, provenance, Refuse/Sever, T7A/T7B/T7C остаются операциональным слоем для агентных/обновляемых реализаций, но не ядром У7. | operational_diagnostic_layer | 7+ | guardrail | CANON_EN + USER_DIALOG_V11 | OP_kappa;T7A;T7B;T7C;U7_WINDOW_CORE | U7;agentic_gate;kappa;T7;guardrail | U7_Window_Cycles/U7_AGENTIC_GATE_LAYER | Снимает перегруз У7 частным воплощением знания |
-| U7_MATH_LOCAL_FORBID | constraint | У7: y=-x*x обязан читаться с y!=x*x | y=-x*x; y!=x*x | Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6. | derived_constraint | 7 | composition | RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 | A_07;U_06;SP_WINDOW;SP_ZERO | U7;math;local_forbid;mirror_window | 06_Мат_аналогии/U7 | Группировка является локальной границей |
+| U7_MATH_LOCAL_FORBID | constraint | У7: y=-x*x обязан читаться с y!=x*x | y=-x*x; y!=x*x | Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6. | derived_constraint | 7 | composition | RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 | U_06;SP_WINDOW;SP_ZERO | U7;math;local_forbid;mirror_window | 06_Мат_аналогии/U7 | Группировка является локальной границей |
 | CHI_STAT_LADDER | overlay | χ как статистический носитель дополнительной лестницы | x:=χ | Статистический overlay: использовать χ как нормированный остаток ожидания вместо плоского x; χ*χ=χ² даёт сильный аналог У6. | statistical_overlay_candidate | -1..11 | overlay | USER_DIALOG_V12 | OP_ChiCarrier;OP_ChiOverlayMap;OP_ChiSquareDiagnostic | chi;statistics;overlay;expectation_window | Chi_Stat_Ladder/CHI_STAT_LADDER | Не заменяет основной канон; добавляет локальный носитель. |
 | CHI_CARRIER | definition | χ-носитель как нормированный остаток ожидания | χ_i=(O_i-E_i)/sqrt(E_i) | χ_i фиксирует signed/normalized expectation residue; χ=(χ_i)_i сохраняет компонентность до агрегации. | statistical_overlay_candidate | 6→11 | definition | USER_DIALOG_V12 | U_06;U7_WINDOW_CORE | chi;residual;expectation;U6 | Chi_Stat_Ladder/CHI_CARRIER | x:=χ, не x:=χ². |
 | OP_ChiCarrier | operator | Оператор χ-носителя | χ_i=(O_i-E_i)/sqrt(E_i) | Оператор строит χ-носитель из наблюдаемого O_i и ожидаемого E_i; это вход для χ-лестницы. | statistical_overlay_candidate | 6→11 | operator | USER_DIALOG_V12 | OP_ChiSquareDiagnostic | operator;chi;residual | 25_Операторы/OP_ChiCarrier | Сохранять sign/component before χ² aggregation. |
@@ -31479,26 +31503,26 @@ Cards: 169. Triples: 271. Sheets: 54.
 | O_18 | candidate_supports | U_m1_to_U_07 | candidate_connectivity | CANON_V43 | candidate | candidate-модуль | G_0122 |
 | O_19 | candidate_supports | U_m1_to_U_07 | candidate_connectivity | CANON_V43 | candidate | candidate-модуль | G_0123 |
 | O_20 | candidate_supports | U_m1_to_U_07 | candidate_connectivity | CANON_V43 | candidate_requires_empirical_test | candidate-модуль | G_0124 |
-| OP_Tot | depends_on | O2 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0125 |
-| OP_Tot | depends_on | O12 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0126 |
+| OP_Tot | depends_on | O_02 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0125 |
+| OP_Tot | depends_on | O_12 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0126 |
 | OP_Tot | depends_on | A4 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0127 |
-| OP_TotPlus | depends_on | O2 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0128 |
-| OP_TotMinus | depends_on | O2 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0129 |
-| OP_TotMinus | depends_on | O12 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0130 |
-| OP_Lift | depends_on | O3 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0131 |
-| OP_Lift | depends_on | O7 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0132 |
-| OP_Lift | depends_on | O8 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0133 |
+| OP_TotPlus | depends_on | O_02 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0128 |
+| OP_TotMinus | depends_on | O_02 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0129 |
+| OP_TotMinus | depends_on | O_12 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0130 |
+| OP_Lift | depends_on | O_03 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0131 |
+| OP_Lift | depends_on | O_07 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0132 |
+| OP_Lift | depends_on | O_08 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0133 |
 | OP_Lift | depends_on | A6 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0134 |
-| OP_Promote | depends_on | O12 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0135 |
+| OP_Promote | depends_on | O_12 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0135 |
 | OP_Promote | depends_on | A9 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0136 |
 | OP_Refuse | depends_on | A8 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0137 |
 | OP_Sever | depends_on | A8 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0138 |
-| OP_kappa | depends_on | O15 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0139 |
+| OP_kappa | depends_on | O_15 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0139 |
 | OP_event0A | depends_on | A2 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0140 |
-| OP_Unpack | depends_on | O9 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0141 |
-| OP_Unpack | depends_on | O12 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0142 |
-| OP_Compress2 | depends_on | O8 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0143 |
-| OP_Expand2 | depends_on | O8 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0144 |
+| OP_Unpack | depends_on | O_09 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0141 |
+| OP_Unpack | depends_on | O_12 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0142 |
+| OP_Compress2 | depends_on | O_08 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0143 |
+| OP_Expand2 | depends_on | O_08 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0144 |
 | OP_pi | depends_on | A7 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0145 |
 | OP_iota | depends_on | A7 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0146 |
 | A0 | supports | core_grammar | axiom_support | CANON_EN | canonical | Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary | G_0147 |
@@ -31535,13 +31559,13 @@ Cards: 169. Triples: 271. Sheets: 54.
 | ADDENDUM_V3 | contains | ADD_U11_EPI | addendum_v3 | ADDENDUM_V3 | candidate | U11 dynamic/window reading | G_0178 |
 | ADDENDUM_V3 | contains | ADD_U12_CIRCLE | addendum_v3 | ADDENDUM_V3 | candidate | U12 circle candidate | G_0179 |
 | ADD_MIRROR_WINDOW | depends_on | ADD_ZERO_BOUNDARY | logic | ADDENDUM_V3 | candidate | local mirror needs zero boundary | G_0180 |
-| ADD_ZERO_BOUNDARY | supports | O(17) | boundary_gain | ADDENDUM_V3 | candidate | boundary candidate support | G_0181 |
-| ADD_PARITY_TOPOLOGY | supports | O(8) | two_step_projection | ADDENDUM_V3 | candidate | local prohibitions are projection-relative | G_0182 |
-| ADD_TOPO_INVARIANTS | supports | O(17) | boundary_gain | ADDENDUM_V3 | candidate | zero classes as boundary types | G_0183 |
+| ADD_ZERO_BOUNDARY | supports | O_17 | boundary_gain | ADDENDUM_V3 | candidate | boundary candidate support | G_0181 |
+| ADD_PARITY_TOPOLOGY | supports | O_08 | two_step_projection | ADDENDUM_V3 | candidate | local prohibitions are projection-relative | G_0182 |
+| ADD_TOPO_INVARIANTS | supports | O_17 | boundary_gain | ADDENDUM_V3 | candidate | zero classes as boundary types | G_0183 |
 | ADD_U11_EPI | supports | U_11 | level_variant | ADDENDUM_V3 | candidate | e^x dynamic; e^pi window constant | G_0184 |
 | ADD_U12_CIRCLE | supports | U_12 | level_candidate | ADDENDUM_V3 | candidate | closed boundary candidate | G_0185 |
 | ADD_U12_CIRCLE | depends_on | ADD_U11_EPI | structural_link | ADDENDUM_V3 | candidate | e^pi gives support through U11/15 window | G_0186 |
-| ADD_U12_CIRCLE | depends_on | U_10 | structural_link | ADDENDUM_V3 | candidate | cos period becomes circle coordinate | G_0187 |
+| ADD_U12_CIRCLE | uses_analogy | U_10 | structural_link | ADDENDUM_V3 | candidate | cos period becomes circle coordinate; Relation reviewed as uses_analogy; see GRAPH_RECONCILIATION_2026-10-03.md | G_0187 |
 | ADD_HALF_PHI | supports | U_09 | boundary_hypothesis | ADDENDUM_V3 | candidate | cubic surplus boundary | G_0188 |
 | ADD_RESEARCH_FORMAT | exports_to | FTS_research_v8.md | research_export | workbook | active | primary GPT research format | G_0189 |
 | ADD_RESEARCH_FORMAT | exports_to | fts_cards_research_v8.jsonl | research_export | workbook | active | cards sidecar | G_0190 |
@@ -31622,10 +31646,117 @@ Cards: 169. Triples: 271. Sheets: 54.
 | AC_20261003_WINDOWS_FIVES | depends_on | AC_20261003_WINDOW_FAMILIES | integration_2026-10-03 | AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03 | author_canonical_amendment | Explicit author integration / register repair | G_0266 |
 | AC_20261003_WINDOWS_SEVENS | depends_on | AC_20261003_WINDOW_FAMILIES | integration_2026-10-03 | AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03 | author_canonical_amendment | Explicit author integration / register repair | G_0267 |
 | A_07 | has_local_forbid | U7_MATH_LOCAL_FORBID | integration_2026-10-03 | CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03 | candidate_with_operational_gate | Explicit author integration / register repair | G_0268 |
-| U7_MATH_LOCAL_FORBID | depends_on | A_07 | integration_2026-10-03 | RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 | derived_constraint | Explicit author integration / register repair | G_0269 |
+| U7_MATH_LOCAL_FORBID | applies_to | A_07 | integration_2026-10-03 | RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 | derived_constraint | Explicit author integration / register repair; Relation reviewed as applies_to; see GRAPH_RECONCILIATION_2026-10-03.md | G_0269 |
 | U7_MATH_LOCAL_FORBID | depends_on | U_06 | integration_2026-10-03 | RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 | derived_constraint | Explicit author integration / register repair | G_0270 |
 | U7_MATH_LOCAL_FORBID | depends_on | SP_WINDOW | integration_2026-10-03 | RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 | derived_constraint | Explicit author integration / register repair | G_0271 |
 | U7_MATH_LOCAL_FORBID | depends_on | SP_ZERO | integration_2026-10-03 | RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 | derived_constraint | Explicit author integration / register repair | G_0272 |
+| ADD_ZERO_BOUNDARY | applies_to | ADD_MIRROR_WINDOW | graph_dependency_reference_reconciliation | ADDENDUM_V3 | formal_math_fact / derived_constraint | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0273 |
+| ADDENDUM_V3 | contains | ADD_RESEARCH_FORMAT | graph_dependency_reference_reconciliation | ADDENDUM_V3 | candidate_bundle | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0274 |
+| M_07 | depends_on | U_06 | graph_dependency_reference_reconciliation | CANON_V43 + AUTHOR_CORRECTION_2026-09-21 | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0275 |
+| CH_07 | depends_on | U7_WINDOW_CORE | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0276 |
+| CH_07 | depends_on | OP_WindowClose | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0277 |
+| CH_07 | depends_on | OP_AgenticGate | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0278 |
+| F1 | depends_on | O_12 | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | canonical | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0279 |
+| F2 | depends_on | O_12 | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | canonical | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0280 |
+| F3 | depends_on | O_12 | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | canonical | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0281 |
+| F4 | depends_on | O_12 | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | canonical | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0282 |
+| F5 | depends_on | O_12 | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | canonical | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0283 |
+| T7A | depends_on | O_12 | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | canonical | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0284 |
+| T7B | depends_on | O_12 | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | canonical | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0285 |
+| T7C | depends_on | O_12 | graph_dependency_reference_reconciliation | CANON_V43/CANON_EN | canonical | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0286 |
+| ADD_PARITY_TOPOLOGY | depends_on | ADD_MIRROR_WINDOW | graph_dependency_reference_reconciliation | ADDENDUM_V3 | canonical_alignment | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0287 |
+| ADD_TOPO_INVARIANTS | depends_on | ADD_ZERO_BOUNDARY | graph_dependency_reference_reconciliation | ADDENDUM_V3 | candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0288 |
+| ADD_HALF_PHI | depends_on | ADD_PARITY_TOPOLOGY | graph_dependency_reference_reconciliation | ADDENDUM_V3 | candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0289 |
+| ADD_CONSTANTS | depends_on | ADD_ZERO_BOUNDARY | graph_dependency_reference_reconciliation | ADDENDUM_V3 | candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0290 |
+| ADD_U11_EPI | depends_on | ADD_CONSTANTS | graph_dependency_reference_reconciliation | ADDENDUM_V3 | candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0291 |
+| ADD_U12_CIRCLE | depends_on | ADD_ZERO_BOUNDARY | graph_dependency_reference_reconciliation | ADDENDUM_V3 | candidate_requires_formalization | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0292 |
+| SP_WINDOW | depends_on | ADD_MIRROR_WINDOW | graph_dependency_reference_reconciliation | RESEARCH_STATUS_V9 | derived_constraint | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0293 |
+| SP_ZERO | depends_on | ADD_ZERO_BOUNDARY | graph_dependency_reference_reconciliation | RESEARCH_STATUS_V9 | formal_math_fact / derived_constraint | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0294 |
+| SP_U8 | depends_on | U_08 | graph_dependency_reference_reconciliation | RESEARCH_STATUS_V9 | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0295 |
+| SP_U8 | depends_on | M_08 | graph_dependency_reference_reconciliation | RESEARCH_STATUS_V9 | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0296 |
+| SP_U9 | depends_on | U_09 | graph_dependency_reference_reconciliation | RESEARCH_STATUS_V9 | FTS_candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0297 |
+| SP_U9 | depends_on | M_09 | graph_dependency_reference_reconciliation | RESEARCH_STATUS_V9 | FTS_candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0298 |
+| SP_U12 | depends_on | U_12 | graph_dependency_reference_reconciliation | RESEARCH_STATUS_V9 | candidate_requires_formalization + canonical_alignment | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0299 |
+| SP_U12 | depends_on | ADD_U12_CIRCLE | graph_dependency_reference_reconciliation | RESEARCH_STATUS_V9 | candidate_requires_formalization + canonical_alignment | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0300 |
+| U7_WINDOW_CORE | depends_on | U_07 | graph_dependency_reference_reconciliation | USER_DIALOG_V11 + CANON_HABR | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0301 |
+| U7_WINDOW_CORE | depends_on | M_07 | graph_dependency_reference_reconciliation | USER_DIALOG_V11 + CANON_HABR | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0302 |
+| OP_WindowClose | depends_on | U7_WINDOW_CORE | graph_dependency_reference_reconciliation | USER_DIALOG_V11 | candidate_core | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0303 |
+| OP_WindowClose | depends_on | OP_Window | graph_dependency_reference_reconciliation | USER_DIALOG_V11 | candidate_core | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0304 |
+| U7_FORGET_CLOSE | depends_on | U7_WINDOW_CORE | graph_dependency_reference_reconciliation | USER_DIALOG_V11 + CANON_EN | candidate_core | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0305 |
+| U7_FORGET_CLOSE | depends_on | OP_Refuse | graph_dependency_reference_reconciliation | USER_DIALOG_V11 + CANON_EN | candidate_core | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0306 |
+| U7_FORGET_CLOSE | depends_on | OP_Sever | graph_dependency_reference_reconciliation | USER_DIALOG_V11 + CANON_EN | candidate_core | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0307 |
+| U7_U8_ANSWER_QUESTION_BOUNDARY | depends_on | U_07 | graph_dependency_reference_reconciliation | USER_DIALOG_V11 | candidate_boundary | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0308 |
+| U7_U8_ANSWER_QUESTION_BOUNDARY | depends_on | U_08 | graph_dependency_reference_reconciliation | USER_DIALOG_V11 | candidate_boundary | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0309 |
+| U7_U8_ANSWER_QUESTION_BOUNDARY | depends_on | U7_WINDOW_CORE | graph_dependency_reference_reconciliation | USER_DIALOG_V11 | candidate_boundary | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0310 |
+| U7_AGENTIC_GATE_LAYER | depends_on | OP_kappa | graph_dependency_reference_reconciliation | CANON_EN + USER_DIALOG_V11 | operational_diagnostic_layer | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0311 |
+| U7_AGENTIC_GATE_LAYER | depends_on | T7A | graph_dependency_reference_reconciliation | CANON_EN + USER_DIALOG_V11 | operational_diagnostic_layer | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0312 |
+| U7_AGENTIC_GATE_LAYER | depends_on | T7B | graph_dependency_reference_reconciliation | CANON_EN + USER_DIALOG_V11 | operational_diagnostic_layer | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0313 |
+| U7_AGENTIC_GATE_LAYER | depends_on | T7C | graph_dependency_reference_reconciliation | CANON_EN + USER_DIALOG_V11 | operational_diagnostic_layer | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0314 |
+| U7_AGENTIC_GATE_LAYER | depends_on | U7_WINDOW_CORE | graph_dependency_reference_reconciliation | CANON_EN + USER_DIALOG_V11 | operational_diagnostic_layer | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0315 |
+| CHI_STAT_LADDER | depends_on | OP_ChiCarrier | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | statistical_overlay_candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0316 |
+| CHI_STAT_LADDER | depends_on | OP_ChiOverlayMap | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | statistical_overlay_candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0317 |
+| CHI_STAT_LADDER | depends_on | OP_ChiSquareDiagnostic | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | statistical_overlay_candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0318 |
+| CHI_CARRIER | depends_on | U_06 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | statistical_overlay_candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0319 |
+| CHI_CARRIER | depends_on | U7_WINDOW_CORE | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | statistical_overlay_candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0320 |
+| OP_ChiCarrier | depends_on | OP_ChiSquareDiagnostic | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | statistical_overlay_candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0321 |
+| CHI_LADDER_U6 | depends_on | U_06 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | strong_statistical_analog | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0322 |
+| CHI_LADDER_U6 | depends_on | CHI_CARRIER | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | strong_statistical_analog | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0323 |
+| CHI_LADDER_U6 | depends_on | OP_ChiSquareDiagnostic | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | strong_statistical_analog | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0324 |
+| CHI_LADDER_U7 | depends_on | U_07 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | candidate_bridge | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0325 |
+| CHI_LADDER_U7 | depends_on | U7_WINDOW_CORE | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | candidate_bridge | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0326 |
+| CHI_LADDER_U7 | depends_on | CHI_LADDER_U6 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | candidate_bridge | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0327 |
+| CHI_LADDER_U8 | depends_on | U_08 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0328 |
+| CHI_LADDER_U8 | depends_on | U7_U8_ANSWER_QUESTION_BOUNDARY | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0329 |
+| CHI_LADDER_U8 | depends_on | CHI_CARRIER | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | candidate_with_operational_gate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0330 |
+| CHI_LADDER_U9 | depends_on | U_09 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | FTS_candidate_guarded | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0331 |
+| CHI_LADDER_U9 | depends_on | SP_U9 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | FTS_candidate_guarded | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0332 |
+| CHI_LADDER_U9 | depends_on | CHI_LADDER_U8 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | FTS_candidate_guarded | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0333 |
+| CHI_LADDER_U10 | depends_on | U_10 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | reserved_underformalized_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0334 |
+| CHI_LADDER_U10 | depends_on | OP_dDelta | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | reserved_underformalized_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0335 |
+| CHI_LADDER_U10 | depends_on | CHI_LADDER_U9 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | reserved_underformalized_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0336 |
+| CHI_LADDER_U11 | depends_on | U_11 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | reserved_underformalized_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0337 |
+| CHI_LADDER_U11 | depends_on | CHI_LADDER_U10 | graph_dependency_reference_reconciliation | USER_DIALOG_V12 | reserved_underformalized_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0338 |
+| COMPLEX_BRANCH_OVERLAY | depends_on | CHI_CARRIER | graph_dependency_reference_reconciliation | USER_DIALOG_V13/access_axes_layer | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0339 |
+| COMPLEX_BRANCH_OVERLAY | depends_on | U7_WINDOW_CORE | graph_dependency_reference_reconciliation | USER_DIALOG_V13/access_axes_layer | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0340 |
+| COMPLEX_CARRIER | depends_on | CHI_CARRIER | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0341 |
+| OP_ComplexNormReadout | depends_on | OP_ChiCarrier | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0342 |
+| OP_ComplexBranchAccess | depends_on | M_08 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0343 |
+| OP_ComplexBranchAccess | depends_on | TA1 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0344 |
+| OP_ComplexBoundaryBranch | depends_on | SP_U12 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_U12_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0345 |
+| OP_ComplexBoundaryBranch | depends_on | U12_CHI_PI_BOUNDARY | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_U12_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0346 |
+| COMPLEX_LADDER_U6 | depends_on | U_06 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | strong_overlay_for_U6 | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0347 |
+| COMPLEX_LADDER_U6 | depends_on | CHI_LADDER_U6 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | strong_overlay_for_U6 | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0348 |
+| COMPLEX_LADDER_U7 | depends_on | U_07 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_bridge | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0349 |
+| COMPLEX_LADDER_U7 | depends_on | U7_WINDOW_CORE | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_bridge | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0350 |
+| COMPLEX_LADDER_U7 | depends_on | COMPLEX_LADDER_U6 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_bridge | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0351 |
+| COMPLEX_LADDER_U8 | depends_on | U_08 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0352 |
+| COMPLEX_LADDER_U8 | depends_on | OP_ComplexBranchAccess | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0353 |
+| COMPLEX_LADDER_U9 | depends_on | U_09 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | FTS_candidate_guarded | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0354 |
+| COMPLEX_LADDER_U9 | depends_on | SP_U9 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | FTS_candidate_guarded | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0355 |
+| COMPLEX_LADDER_U9 | depends_on | COMPLEX_LADDER_U8 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | FTS_candidate_guarded | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0356 |
+| COMPLEX_LADDER_U10 | depends_on | U_10 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | reserved_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0357 |
+| COMPLEX_LADDER_U10 | depends_on | CHI_LADDER_U10 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | reserved_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0358 |
+| COMPLEX_LADDER_U11 | depends_on | U_11 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | reserved_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0359 |
+| COMPLEX_LADDER_U11 | depends_on | CHI_LADDER_U11 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | reserved_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0360 |
+| COMPLEX_LADDER_U12 | depends_on | U_12 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_U12_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0361 |
+| COMPLEX_LADDER_U12 | depends_on | SP_U12 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_U12_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0362 |
+| COMPLEX_LADDER_U12 | depends_on | OP_ComplexBoundaryBranch | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_U12_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0363 |
+| U12_CHI_PI_COMPLEX_BOUNDARY | depends_on | U12_CHI_PI_BOUNDARY | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_requires_formalization | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0364 |
+| U12_CHI_PI_COMPLEX_BOUNDARY | depends_on | COMPLEX_LADDER_U12 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_requires_formalization | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0365 |
+| TENSOR_CONTEXT_OVERLAY | depends_on | U_10 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0366 |
+| TENSOR_CONTEXT_OVERLAY | depends_on | U_11 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0367 |
+| TENSOR_CONTEXT_OVERLAY | depends_on | U_12 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0368 |
+| TENSOR_CARRIER | depends_on | CHI_CARRIER | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0369 |
+| TENSOR_CARRIER | depends_on | Lambda_link | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0370 |
+| OP_TensorContextMap | depends_on | Lambda_link | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0371 |
+| OP_TensorContextMap | depends_on | U_10 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0372 |
+| OP_TensorContextMap | depends_on | U_11 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0373 |
+| TENSOR_LADDER_U10 | depends_on | U_10 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0374 |
+| TENSOR_LADDER_U10 | depends_on | OP_TensorContextMap | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0375 |
+| TENSOR_LADDER_U11 | depends_on | U_11 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0376 |
+| TENSOR_LADDER_U11 | depends_on | TENSOR_LADDER_U10 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0377 |
+| TENSOR_LADDER_U12 | depends_on | U_12 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_U12_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0378 |
+| TENSOR_LADDER_U12 | depends_on | U12_CHI_PI_COMPLEX_BOUNDARY | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_U12_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0379 |
 
 #### Sheet 19: `19_Канон_текст`
 
@@ -32072,18 +32203,18 @@ Cards: 169. Triples: 271. Sheets: 54.
 | 75 | {"id": "O_18", "type": "connectivity_ground", "text": "ErrTypeGain: новый уровень делает видимой новую ошибку. Падает, если ошибка выражается ниже.", "depends_on": [], "tags": ["ground", "connectivity", "O18"], "path": "07_Основания_О/O18", "status": "candidate", "internal_ref": "CANON_V43", "symbol": "О(18)", "title": "Смена режима ошибки"} |
 | 76 | {"id": "O_19", "type": "connectivity_ground", "text": "Select имеет арность 1; Agg требует семейства i. Падает, если статистика строится из одного выбора без скрытого индекса.", "depends_on": [], "tags": ["ground", "connectivity", "O19"], "path": "07_Основания_О/O19", "status": "candidate", "internal_ref": "CANON_V43", "symbol": "О(19)", "title": "Арностный переход"} |
 | 77 | {"id": "O_20", "type": "connectivity_ground", "text": "AbsDataGain: типизированное отсутствие улучшает missing/OOD/provenance. Падает, если typed absence не даёт выигрыша.", "depends_on": [], "tags": ["ground", "connectivity", "O20"], "path": "07_Основания_О/O20", "status": "candidate_requires_empirical_test", "internal_ref": "CANON_V43", "symbol": "О(20)", "title": "Лестница не-события как данных"} |
-| 78 | {"id": "OP_Tot", "type": "operator", "text": "Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация", "depends_on": ["O2", "O12", "A4"], "tags": ["operator", "Tot"], "path": "25_Операторы/OP_Tot", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "Tot(0_A)=event(0_A)=¬A", "title": "Tot"} |
-| 79 | {"id": "OP_TotPlus", "type": "operator", "text": "рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻", "depends_on": ["O2"], "tags": ["operator", "Tot⁺"], "path": "25_Операторы/OP_TotPlus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "рабочая упаковка без потери Res_n", "title": "Tot⁺"} |
-| 80 | {"id": "OP_TotMinus", "type": "operator", "text": "редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра", "depends_on": ["O2", "O12"], "tags": ["operator", "Tot⁻"], "path": "25_Операторы/OP_TotMinus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "редукционистская тотализация", "title": "Tot⁻"} |
-| 81 | {"id": "OP_Lift", "type": "operator", "text": "X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote", "depends_on": ["O3", "O7", "O8", "A6"], "tags": ["operator", "Lift"], "path": "25_Операторы/OP_Lift", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "X_{n+1}=Lift(X_n,Res_n)", "title": "Lift"} |
-| 82 | {"id": "OP_Promote", "type": "operator", "text": "label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever", "depends_on": ["O12", "A9"], "tags": ["operator", "Promote"], "path": "25_Операторы/OP_Promote", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "label n→n+1 без новой выразимости", "title": "Promote"} |
+| 78 | {"id": "OP_Tot", "type": "operator", "text": "Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация", "depends_on": ["O_02", "O_12", "A4"], "tags": ["operator", "Tot"], "path": "25_Операторы/OP_Tot", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "Tot(0_A)=event(0_A)=¬A", "title": "Tot"} |
+| 79 | {"id": "OP_TotPlus", "type": "operator", "text": "рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻", "depends_on": ["O_02"], "tags": ["operator", "Tot⁺"], "path": "25_Операторы/OP_TotPlus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "рабочая упаковка без потери Res_n", "title": "Tot⁺"} |
+| 80 | {"id": "OP_TotMinus", "type": "operator", "text": "редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра", "depends_on": ["O_02", "O_12"], "tags": ["operator", "Tot⁻"], "path": "25_Операторы/OP_TotMinus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "редукционистская тотализация", "title": "Tot⁻"} |
+| 81 | {"id": "OP_Lift", "type": "operator", "text": "X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote", "depends_on": ["O_03", "O_07", "O_08", "A6"], "tags": ["operator", "Lift"], "path": "25_Операторы/OP_Lift", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "X_{n+1}=Lift(X_n,Res_n)", "title": "Lift"} |
+| 82 | {"id": "OP_Promote", "type": "operator", "text": "label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever", "depends_on": ["O_12", "A9"], "tags": ["operator", "Promote"], "path": "25_Операторы/OP_Promote", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "label n→n+1 без новой выразимости", "title": "Promote"} |
 | 83 | {"id": "OP_Refuse", "type": "operator", "text": "фильтр обновлений g(e): отказ допустить опыт/контрданные. 7+ anti-mode", "depends_on": ["A8"], "tags": ["operator", "Refuse"], "path": "25_Операторы/OP_Refuse", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "фильтр обновлений g(e)", "title": "Refuse"} |
 | 84 | {"id": "OP_Sever", "type": "operator", "text": "обрыв Λ/provenance/transfer: разрывает перенос оснований и контрсвидетельств. патологическое забывание", "depends_on": ["A8"], "tags": ["operator", "Sever"], "path": "25_Операторы/OP_Sever", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "обрыв Λ/provenance/transfer", "title": "Sever"} |
-| 85 | {"id": "OP_kappa", "type": "operator", "text": "κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7", "depends_on": ["O15"], "tags": ["operator", "κ"], "path": "25_Операторы/OP_kappa", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43/CANON_EN", "symbol": "κ(S,0_S,Prov,Rev)", "title": "κ"} |
+| 85 | {"id": "OP_kappa", "type": "operator", "text": "κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7", "depends_on": ["O_15"], "tags": ["operator", "κ"], "path": "25_Операторы/OP_kappa", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43/CANON_EN", "symbol": "κ(S,0_S,Prov,Rev)", "title": "κ"} |
 | 86 | {"id": "OP_event0A", "type": "operator", "text": "event(0_A)=¬A: булева проекция структурированного отсутствия. обратный вывод ¬A→0_A запрещён", "depends_on": ["A2"], "tags": ["operator", "event(0_A)"], "path": "25_Операторы/OP_event0A", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "event(0_A)=¬A", "title": "event(0_A)"} |
-| 87 | {"id": "OP_Unpack", "type": "operator", "text": "C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox", "depends_on": ["O9", "O12"], "tags": ["operator", "Unpack"], "path": "25_Операторы/OP_Unpack", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "C(x)=C(Unpack(x))", "title": "Unpack"} |
-| 88 | {"id": "OP_Compress2", "type": "operator", "text": "M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз", "depends_on": ["O8"], "tags": ["operator", "Compress₂"], "path": "25_Операторы/OP_Compress2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_n*=Compress₂(M_{n+2})", "title": "Compress₂"} |
-| 89 | {"id": "OP_Expand2", "type": "operator", "text": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх", "depends_on": ["O8"], "tags": ["operator", "Expand₂"], "path": "25_Операторы/OP_Expand2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)", "title": "Expand₂"} |
+| 87 | {"id": "OP_Unpack", "type": "operator", "text": "C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox", "depends_on": ["O_09", "O_12"], "tags": ["operator", "Unpack"], "path": "25_Операторы/OP_Unpack", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "C(x)=C(Unpack(x))", "title": "Unpack"} |
+| 88 | {"id": "OP_Compress2", "type": "operator", "text": "M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз", "depends_on": ["O_08"], "tags": ["operator", "Compress₂"], "path": "25_Операторы/OP_Compress2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_n*=Compress₂(M_{n+2})", "title": "Compress₂"} |
+| 89 | {"id": "OP_Expand2", "type": "operator", "text": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх", "depends_on": ["O_08"], "tags": ["operator", "Expand₂"], "path": "25_Операторы/OP_Expand2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)", "title": "Expand₂"} |
 | 90 | {"id": "OP_pi", "type": "operator", "text": "π_n:X_{n+1}↠X_n: проекция старого слоя. должна сохранять старое", "depends_on": ["A7"], "tags": ["operator", "π"], "path": "25_Операторы/OP_pi", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "π_n:X_{n+1}↠X_n", "title": "π"} |
 | 91 | {"id": "OP_iota", "type": "operator", "text": "ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id", "depends_on": ["A7"], "tags": ["operator", "ι"], "path": "25_Операторы/OP_iota", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "ι_n:X_n↪X_{n+1}", "title": "ι"} |
 | 92 | {"id": "A0", "type": "axiom", "text": "Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary", "depends_on": [], "tags": ["axiom", "A0"], "path": "26_Аксиомы_A0_A9/A0", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0", "title": "Ladder-first ontology of distinction"} |
@@ -32107,27 +32238,27 @@ Cards: 169. Triples: 271. Sheets: 54.
 | 110 | {"id": "T7B", "type": "test", "text": "интервенция в g(e) или Λ предсказуемо меняет поведение", "depends_on": ["O_12"], "tags": ["test", "defeat", "test"], "path": "24_MPrime_Audit/T7B", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "T7B", "title": "Counterfactual self-control test"} |
 | 111 | {"id": "T7C", "type": "test", "text": "контрсвидетельства переносятся между контекстами, если Sever не применён", "depends_on": ["O_12"], "tags": ["test", "defeat", "test"], "path": "24_MPrime_Audit/T7C", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "T7C", "title": "Provenance continuity test"} |
 | 112 | {"id": "ADDENDUM_V3", "type": "candidate_bundle", "text": "Встроенная candidate-добавка: локальное зеркало, ZeroBoundary, чётно/нечётная топология, вещественные константы, e^pi, У12 circle, research export.", "depends_on": [], "tags": ["addendum", "candidate", "research_export"], "path": "43_Добавка_v3/ADDENDUM_V3", "status": "candidate_bundle", "internal_ref": "ADDENDUM_V3", "symbol": "ADDENDUM_V3", "title": "Добавка v3 к табличному канону"} |
-| 113 | {"id": "ADD_NOTATION_ABS", "type": "notation_rule", "text": "В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо \|x\|, чтобы не ломать pipe-таблицы.", "depends_on": ["ADDENDUM_V3"], "tags": ["notation", "export", "markdown"], "path": "43_Добавка_v3/ADD_NOTATION_ABS", "status": "canonical_note", "internal_ref": "ADDENDUM_V3", "symbol": "abs(x)", "title": "Правило abs(x) для Markdown/TSV"} |
+| 113 | {"id": "ADD_NOTATION_ABS", "type": "notation_rule", "text": "В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо \|x\|, чтобы не ломать pipe-таблицы.", "depends_on": [], "tags": ["notation", "export", "markdown"], "path": "43_Добавка_v3/ADD_NOTATION_ABS", "status": "canonical_note", "internal_ref": "ADDENDUM_V3", "symbol": "abs(x)", "title": "Правило abs(x) для Markdown/TSV"} |
 | 114 | {"id": "ADD_MIRROR_WINDOW", "type": "operator_candidate", "text": "Уровень задаётся разрешённой формой, запрещённой зеркальной формой и нулевой boundary; запрет действует локально, не глобально.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["mirror_window", "boundary", "operator"], "path": "43_Добавка_v3/ADD_MIRROR_WINDOW", "status": "derived_constraint", "internal_ref": "ADDENDUM_V3", "symbol": "Window(F_n)={F_n,-F_n}", "title": "Локальное зеркальное окно"} |
-| 115 | {"id": "ADD_ZERO_BOUNDARY", "type": "boundary_candidate", "text": "F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.", "depends_on": ["ADD_MIRROR_WINDOW"], "tags": ["zero_boundary", "absence", "mirror_window"], "path": "43_Добавка_v3/ADD_ZERO_BOUNDARY", "status": "formal_math_fact / derived_constraint", "internal_ref": "ADDENDUM_V3", "symbol": "ZeroBoundary(F_n)={x:F_n(x)=0}", "title": "Нулевая граница зеркального окна"} |
+| 115 | {"id": "ADD_ZERO_BOUNDARY", "type": "boundary_candidate", "text": "F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.", "depends_on": [], "tags": ["zero_boundary", "absence", "mirror_window"], "path": "43_Добавка_v3/ADD_ZERO_BOUNDARY", "status": "formal_math_fact / derived_constraint", "internal_ref": "ADDENDUM_V3", "symbol": "ZeroBoundary(F_n)={x:F_n(x)=0}", "title": "Нулевая граница зеркального окна"} |
 | 116 | {"id": "ADD_PARITY_TOPOLOGY", "type": "topology_candidate", "text": "Чётные и нечётные уровни рассматриваются как разные топологические слои; запреты локальны и не уничтожают соседний уровень.", "depends_on": ["ADD_MIRROR_WINDOW"], "tags": ["even_odd", "topology", "projection"], "path": "43_Добавка_v3/ADD_PARITY_TOPOLOGY", "status": "canonical_alignment", "internal_ref": "ADDENDUM_V3", "symbol": "EvenSpace/OddSpace", "title": "Чётная и нечётная топология уровней"} |
 | 117 | {"id": "ADD_TOPO_INVARIANTS", "type": "invariant_candidate", "text": "Классы нулевых узлов: один ноль, бесконечно много нулей, нет нулей; e^x требует отдельной boundary/gate.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["topology", "invariants", "zero_boundary"], "path": "43_Добавка_v3/ADD_TOPO_INVARIANTS", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "Gamma(F), Gamma(-F), Z_n", "title": "Топологические инварианты после запретов"} |
 | 118 | {"id": "ADD_HALF_PHI", "type": "hypothesis_candidate", "text": "phi появляется как условие границы, где кубический избыток после удаления факторной оси возвращает квадратный агрегат.", "depends_on": ["ADD_PARITY_TOPOLOGY"], "tags": ["phi", "half", "boundary", "U9"], "path": "43_Добавка_v3/ADD_HALF_PHI", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "x*x*x-x=x*x", "title": "Половина, кубический избыток и phi"} |
 | 119 | {"id": "ADD_CONSTANTS", "type": "classification_candidate", "text": "Константы ФТС-релевантны только как следы операций, инварианты, границы, нормировки, симметрии или несоизмеримости.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["constants", "invariants", "criteria"], "path": "43_Добавка_v3/ADD_CONSTANTS", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "0,1,-1,2,1/2,phi,e,pi,sqrt(2)", "title": "Вещественные константы как следы операций"} |
 | 120 | {"id": "ADD_U11_EPI", "type": "level_variant_candidate", "text": "e^x — динамический оператор У11; e^pi — оконная константа 11–15, не полный уровень и не замена e^x.", "depends_on": ["ADD_CONSTANTS"], "tags": ["U11", "e", "pi", "window_constant"], "path": "43_Добавка_v3/ADD_U11_EPI", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "e^x / e^pi", "title": "У11: e^x и e^pi как два чтения"} |
 | 121 | {"id": "ADD_U12_CIRCLE", "type": "level_candidate", "text": "У12 как closed relation: окружность с центром (0,2), радиусом 2, касанием нуля и pi-boundary.", "depends_on": ["ADD_U11_EPI", "ADD_ZERO_BOUNDARY"], "tags": ["U12", "circle", "pi", "closed_boundary"], "path": "43_Добавка_v3/ADD_U12_CIRCLE", "status": "candidate_requires_formalization", "internal_ref": "ADDENDUM_V3", "symbol": "x*x+(y-2)*(y-2)=4", "title": "У12: окружность и замкнутая boundary"} |
-| 122 | {"id": "ADD_RESEARCH_FORMAT", "type": "export_instruction", "text": "Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.", "depends_on": ["ADDENDUM_V3"], "tags": ["export", "research", "markdown", "jsonl", "tsv", "yaml"], "path": "42_Экспорт_GPT/ADD_RESEARCH_FORMAT", "status": "active_instruction", "internal_ref": "workbook", "symbol": "Markdown+JSONL+TSV+YAML", "title": "Research-friendly формат для GPT"} |
+| 122 | {"id": "ADD_RESEARCH_FORMAT", "type": "export_instruction", "text": "Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.", "depends_on": [], "tags": ["export", "research", "markdown", "jsonl", "tsv", "yaml"], "path": "42_Экспорт_GPT/ADD_RESEARCH_FORMAT", "status": "active_instruction", "internal_ref": "workbook", "symbol": "Markdown+JSONL+TSV+YAML", "title": "Research-friendly формат для GPT"} |
 | 123 | {"id": "SP_WINDOW", "type": "status_promotion", "text": "Window(F) получает статус derived_constraint: в локальном двухветвевом окне при F!=0 исключение одной ветви выбирает другую.", "depends_on": ["ADD_MIRROR_WINDOW"], "tags": ["status", "mirror_window", "derived_constraint"], "path": "45_Статус_гипотез_v9/SP_WINDOW", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "Window(F)={F,-F}", "title": "Повышение статуса локального зеркального окна"} |
 | 124 | {"id": "SP_ZERO", "type": "status_promotion", "text": "Математический факт: F=-F iff F=0; ФТС-слой: ZeroBoundary как derived constraint локального зеркала.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["status", "zero_boundary", "formal_math_fact"], "path": "45_Статус_гипотез_v9/SP_ZERO", "status": "formal_math_fact / derived_constraint", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "F=-F iff F=0", "title": "Повышение статуса ZeroBoundary"} |
 | 125 | {"id": "SP_U8", "type": "status_promotion", "text": "У8 повышен до candidate_with_operational_gate за счёт math kernel sqrt(abs(x)) как partial inverse of square on sign quotient.", "depends_on": ["U_08", "M_08"], "tags": ["status", "U8", "hypothesis", "formal_math_fact"], "path": "45_Статус_гипотез_v9/SP_U8", "status": "candidate_with_operational_gate", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "sqrt(abs(x))", "title": "У8 как полу-восстановление"} |
 | 126 | {"id": "SP_U9", "type": "status_promotion", "text": "У9 повышен до FTS_candidate: x*x*x=x*(x*x), минимальный multiplicative surplus над квадратом.", "depends_on": ["U_09", "M_09"], "tags": ["status", "U9", "cubic_surplus"], "path": "45_Статус_гипотез_v9/SP_U9", "status": "FTS_candidate", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "x*x*x", "title": "У9 как кубический избыток"} |
 | 127 | {"id": "SP_U12", "type": "status_promotion", "text": "У12 получает formal_math_fact по геометрии и canonical_alignment как closed boundary candidate.", "depends_on": ["U_12", "ADD_U12_CIRCLE"], "tags": ["status", "U12", "closed_boundary"], "path": "45_Статус_гипотез_v9/SP_U12", "status": "candidate_requires_formalization + canonical_alignment", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "x*x+(y-2)*(y-2)=4", "title": "У12 как closed boundary"} |
-| 128 | {"id": "U7_WINDOW_CORE", "type": "definition", "text": "У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.", "depends_on": ["U_07", "M_07", "OP_WindowClose"], "tags": ["U7", "expectation_window", "answer", "prediction", "knowledge"], "path": "U7_Window_Cycles/U7_WINDOW_CORE", "status": "candidate_with_operational_gate", "internal_ref": "USER_DIALOG_V11 + CANON_HABR", "symbol": "Answer(W)=Close(W,W)", "title": "У7: окно ожидания как самозамыкающийся ответ"} |
+| 128 | {"id": "U7_WINDOW_CORE", "type": "definition", "text": "У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.", "depends_on": ["U_07", "M_07"], "tags": ["U7", "expectation_window", "answer", "prediction", "knowledge"], "path": "U7_Window_Cycles/U7_WINDOW_CORE", "status": "candidate_with_operational_gate", "internal_ref": "USER_DIALOG_V11 + CANON_HABR", "symbol": "Answer(W)=Close(W,W)", "title": "У7: окно ожидания как самозамыкающийся ответ"} |
 | 129 | {"id": "OP_WindowClose", "type": "operator", "text": "Close(W,W) фиксирует ответ как сам акт закрытия ожидания ожиданием; продуктивная тавтология У7, не плоское a=a.", "depends_on": ["U7_WINDOW_CORE", "OP_Window"], "tags": ["operator", "U7", "answer", "cycle"], "path": "25_Операторы/OP_WindowClose", "status": "candidate_core", "internal_ref": "USER_DIALOG_V11", "symbol": "Close(W,W)", "title": "Оператор самозакрытия окна ожидания"} |
 | 130 | {"id": "U7_FORGET_CLOSE", "type": "anti_mode", "text": "Забывание: W закрывается Refuse(W), то есть отказом от ожидания; это не простое отсутствие памяти и не честное незнание.", "depends_on": ["U7_WINDOW_CORE", "OP_Refuse", "OP_Sever"], "tags": ["U7", "forgetting", "Refuse", "Sever", "anti-mode"], "path": "U7_Window_Cycles/U7_FORGET_CLOSE", "status": "candidate_core", "internal_ref": "USER_DIALOG_V11 + CANON_EN", "symbol": "Close(W,Refuse(W))", "title": "Забывание как закрытие ожидания отказом от ожидания"} |
 | 131 | {"id": "U7_U8_ANSWER_QUESTION_BOUNDARY", "type": "boundary", "text": "У7 даёт ответ/закрытие окна; У8 задаёт вопрос/открытие окна. Предположение не является слабым предсказанием.", "depends_on": ["U_07", "U_08", "U7_WINDOW_CORE"], "tags": ["U7", "U8", "answer", "question", "hypothesis"], "path": "U7_Window_Cycles/U7_U8_ANSWER_QUESTION_BOUNDARY", "status": "candidate_boundary", "internal_ref": "USER_DIALOG_V11", "symbol": "Answer(W)=A vs Hyp(W)=A?", "title": "Граница У7/У8: ответ не вопрос"} |
 | 132 | {"id": "U7_AGENTIC_GATE_LAYER", "type": "guardrail", "text": "κ, provenance, Refuse/Sever, T7A/T7B/T7C остаются операциональным слоем для агентных/обновляемых реализаций, но не ядром У7.", "depends_on": ["OP_kappa", "T7A", "T7B", "T7C", "U7_WINDOW_CORE"], "tags": ["U7", "agentic_gate", "kappa", "T7", "guardrail"], "path": "U7_Window_Cycles/U7_AGENTIC_GATE_LAYER", "status": "operational_diagnostic_layer", "internal_ref": "CANON_EN + USER_DIALOG_V11", "symbol": "agentic_gate(Answer)=κ/T7A/T7B/T7C", "title": "κ/T7 как agentic gate, не сущность У7"} |
-| 133 | {"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.", "depends_on": ["A_07", "U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "У7: y=-x*x обязан читаться с y!=x*x"} |
+| 133 | {"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.", "depends_on": ["U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "У7: y=-x*x обязан читаться с y!=x*x"} |
 | 134 | {"id": "CHI_STAT_LADDER", "type": "overlay", "text": "Статистический overlay: использовать χ как нормированный остаток ожидания вместо плоского x; χ*χ=χ² даёт сильный аналог У6.", "depends_on": ["OP_ChiCarrier", "OP_ChiOverlayMap", "OP_ChiSquareDiagnostic"], "tags": ["chi", "statistics", "overlay", "expectation_window"], "path": "Chi_Stat_Ladder/CHI_STAT_LADDER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "x:=χ", "title": "χ как статистический носитель дополнительной лестницы", "notes": "Не заменяет основной канон; добавляет локальный носитель."} |
 | 135 | {"id": "CHI_CARRIER", "type": "definition", "text": "χ_i фиксирует signed/normalized expectation residue; χ=(χ_i)_i сохраняет компонентность до агрегации.", "depends_on": ["U_06", "U7_WINDOW_CORE"], "tags": ["chi", "residual", "expectation", "U6"], "path": "Chi_Stat_Ladder/CHI_CARRIER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "χ-носитель как нормированный остаток ожидания", "notes": "x:=χ, не x:=χ²."} |
 | 136 | {"id": "OP_ChiCarrier", "type": "operator", "text": "Оператор строит χ-носитель из наблюдаемого O_i и ожидаемого E_i; это вход для χ-лестницы.", "depends_on": ["OP_ChiSquareDiagnostic"], "tags": ["operator", "chi", "residual"], "path": "25_Операторы/OP_ChiCarrier", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "Оператор χ-носителя", "notes": "Сохранять sign/component before χ² aggregation."} |
@@ -32293,26 +32424,26 @@ Cards: 169. Triples: 271. Sheets: 54.
 | 122 | O_18	candidate_supports	U_m1_to_U_07 |
 | 123 | O_19	candidate_supports	U_m1_to_U_07 |
 | 124 | O_20	candidate_supports	U_m1_to_U_07 |
-| 125 | OP_Tot	depends_on	O2 |
-| 126 | OP_Tot	depends_on	O12 |
+| 125 | OP_Tot	depends_on	O_02 |
+| 126 | OP_Tot	depends_on	O_12 |
 | 127 | OP_Tot	depends_on	A4 |
-| 128 | OP_TotPlus	depends_on	O2 |
-| 129 | OP_TotMinus	depends_on	O2 |
-| 130 | OP_TotMinus	depends_on	O12 |
-| 131 | OP_Lift	depends_on	O3 |
-| 132 | OP_Lift	depends_on	O7 |
-| 133 | OP_Lift	depends_on	O8 |
+| 128 | OP_TotPlus	depends_on	O_02 |
+| 129 | OP_TotMinus	depends_on	O_02 |
+| 130 | OP_TotMinus	depends_on	O_12 |
+| 131 | OP_Lift	depends_on	O_03 |
+| 132 | OP_Lift	depends_on	O_07 |
+| 133 | OP_Lift	depends_on	O_08 |
 | 134 | OP_Lift	depends_on	A6 |
-| 135 | OP_Promote	depends_on	O12 |
+| 135 | OP_Promote	depends_on	O_12 |
 | 136 | OP_Promote	depends_on	A9 |
 | 137 | OP_Refuse	depends_on	A8 |
 | 138 | OP_Sever	depends_on	A8 |
-| 139 | OP_kappa	depends_on	O15 |
+| 139 | OP_kappa	depends_on	O_15 |
 | 140 | OP_event0A	depends_on	A2 |
-| 141 | OP_Unpack	depends_on	O9 |
-| 142 | OP_Unpack	depends_on	O12 |
-| 143 | OP_Compress2	depends_on	O8 |
-| 144 | OP_Expand2	depends_on	O8 |
+| 141 | OP_Unpack	depends_on	O_09 |
+| 142 | OP_Unpack	depends_on	O_12 |
+| 143 | OP_Compress2	depends_on	O_08 |
+| 144 | OP_Expand2	depends_on	O_08 |
 | 145 | OP_pi	depends_on	A7 |
 | 146 | OP_iota	depends_on	A7 |
 | 147 | A0	supports	core_grammar |
@@ -32349,13 +32480,13 @@ Cards: 169. Triples: 271. Sheets: 54.
 | 178 | ADDENDUM_V3	contains	ADD_U11_EPI |
 | 179 | ADDENDUM_V3	contains	ADD_U12_CIRCLE |
 | 180 | ADD_MIRROR_WINDOW	depends_on	ADD_ZERO_BOUNDARY |
-| 181 | ADD_ZERO_BOUNDARY	supports	O(17) |
-| 182 | ADD_PARITY_TOPOLOGY	supports	O(8) |
-| 183 | ADD_TOPO_INVARIANTS	supports	O(17) |
+| 181 | ADD_ZERO_BOUNDARY	supports	O_17 |
+| 182 | ADD_PARITY_TOPOLOGY	supports	O_08 |
+| 183 | ADD_TOPO_INVARIANTS	supports	O_17 |
 | 184 | ADD_U11_EPI	supports	U_11 |
 | 185 | ADD_U12_CIRCLE	supports	U_12 |
 | 186 | ADD_U12_CIRCLE	depends_on	ADD_U11_EPI |
-| 187 | ADD_U12_CIRCLE	depends_on	U_10 |
+| 187 | ADD_U12_CIRCLE	uses_analogy	U_10 |
 | 188 | ADD_HALF_PHI	supports	U_09 |
 | 189 | ADD_RESEARCH_FORMAT	exports_to	FTS_research_v8.md |
 | 190 | ADD_RESEARCH_FORMAT	exports_to	fts_cards_research_v8.jsonl |
@@ -32436,16 +32567,123 @@ Cards: 169. Triples: 271. Sheets: 54.
 | 265 | AC_20261003_WINDOWS_FIVES	depends_on	AC_20261003_WINDOW_FAMILIES |
 | 266 | AC_20261003_WINDOWS_SEVENS	depends_on	AC_20261003_WINDOW_FAMILIES |
 | 267 | A_07	has_local_forbid	U7_MATH_LOCAL_FORBID |
-| 268 | U7_MATH_LOCAL_FORBID	depends_on	A_07 |
+| 268 | U7_MATH_LOCAL_FORBID	applies_to	A_07 |
 | 269 | U7_MATH_LOCAL_FORBID	depends_on	U_06 |
 | 270 | U7_MATH_LOCAL_FORBID	depends_on	SP_WINDOW |
 | 271 | U7_MATH_LOCAL_FORBID	depends_on	SP_ZERO |
+| 272 | ADD_ZERO_BOUNDARY	applies_to	ADD_MIRROR_WINDOW |
+| 273 | ADDENDUM_V3	contains	ADD_RESEARCH_FORMAT |
+| 274 | M_07	depends_on	U_06 |
+| 275 | CH_07	depends_on	U7_WINDOW_CORE |
+| 276 | CH_07	depends_on	OP_WindowClose |
+| 277 | CH_07	depends_on	OP_AgenticGate |
+| 278 | F1	depends_on	O_12 |
+| 279 | F2	depends_on	O_12 |
+| 280 | F3	depends_on	O_12 |
+| 281 | F4	depends_on	O_12 |
+| 282 | F5	depends_on	O_12 |
+| 283 | T7A	depends_on	O_12 |
+| 284 | T7B	depends_on	O_12 |
+| 285 | T7C	depends_on	O_12 |
+| 286 | ADD_PARITY_TOPOLOGY	depends_on	ADD_MIRROR_WINDOW |
+| 287 | ADD_TOPO_INVARIANTS	depends_on	ADD_ZERO_BOUNDARY |
+| 288 | ADD_HALF_PHI	depends_on	ADD_PARITY_TOPOLOGY |
+| 289 | ADD_CONSTANTS	depends_on	ADD_ZERO_BOUNDARY |
+| 290 | ADD_U11_EPI	depends_on	ADD_CONSTANTS |
+| 291 | ADD_U12_CIRCLE	depends_on	ADD_ZERO_BOUNDARY |
+| 292 | SP_WINDOW	depends_on	ADD_MIRROR_WINDOW |
+| 293 | SP_ZERO	depends_on	ADD_ZERO_BOUNDARY |
+| 294 | SP_U8	depends_on	U_08 |
+| 295 | SP_U8	depends_on	M_08 |
+| 296 | SP_U9	depends_on	U_09 |
+| 297 | SP_U9	depends_on	M_09 |
+| 298 | SP_U12	depends_on	U_12 |
+| 299 | SP_U12	depends_on	ADD_U12_CIRCLE |
+| 300 | U7_WINDOW_CORE	depends_on	U_07 |
+| 301 | U7_WINDOW_CORE	depends_on	M_07 |
+| 302 | OP_WindowClose	depends_on	U7_WINDOW_CORE |
+| 303 | OP_WindowClose	depends_on	OP_Window |
+| 304 | U7_FORGET_CLOSE	depends_on	U7_WINDOW_CORE |
+| 305 | U7_FORGET_CLOSE	depends_on	OP_Refuse |
+| 306 | U7_FORGET_CLOSE	depends_on	OP_Sever |
+| 307 | U7_U8_ANSWER_QUESTION_BOUNDARY	depends_on	U_07 |
+| 308 | U7_U8_ANSWER_QUESTION_BOUNDARY	depends_on	U_08 |
+| 309 | U7_U8_ANSWER_QUESTION_BOUNDARY	depends_on	U7_WINDOW_CORE |
+| 310 | U7_AGENTIC_GATE_LAYER	depends_on	OP_kappa |
+| 311 | U7_AGENTIC_GATE_LAYER	depends_on	T7A |
+| 312 | U7_AGENTIC_GATE_LAYER	depends_on	T7B |
+| 313 | U7_AGENTIC_GATE_LAYER	depends_on	T7C |
+| 314 | U7_AGENTIC_GATE_LAYER	depends_on	U7_WINDOW_CORE |
+| 315 | CHI_STAT_LADDER	depends_on	OP_ChiCarrier |
+| 316 | CHI_STAT_LADDER	depends_on	OP_ChiOverlayMap |
+| 317 | CHI_STAT_LADDER	depends_on	OP_ChiSquareDiagnostic |
+| 318 | CHI_CARRIER	depends_on	U_06 |
+| 319 | CHI_CARRIER	depends_on	U7_WINDOW_CORE |
+| 320 | OP_ChiCarrier	depends_on	OP_ChiSquareDiagnostic |
+| 321 | CHI_LADDER_U6	depends_on	U_06 |
+| 322 | CHI_LADDER_U6	depends_on	CHI_CARRIER |
+| 323 | CHI_LADDER_U6	depends_on	OP_ChiSquareDiagnostic |
+| 324 | CHI_LADDER_U7	depends_on	U_07 |
+| 325 | CHI_LADDER_U7	depends_on	U7_WINDOW_CORE |
+| 326 | CHI_LADDER_U7	depends_on	CHI_LADDER_U6 |
+| 327 | CHI_LADDER_U8	depends_on	U_08 |
+| 328 | CHI_LADDER_U8	depends_on	U7_U8_ANSWER_QUESTION_BOUNDARY |
+| 329 | CHI_LADDER_U8	depends_on	CHI_CARRIER |
+| 330 | CHI_LADDER_U9	depends_on	U_09 |
+| 331 | CHI_LADDER_U9	depends_on	SP_U9 |
+| 332 | CHI_LADDER_U9	depends_on	CHI_LADDER_U8 |
+| 333 | CHI_LADDER_U10	depends_on	U_10 |
+| 334 | CHI_LADDER_U10	depends_on	OP_dDelta |
+| 335 | CHI_LADDER_U10	depends_on	CHI_LADDER_U9 |
+| 336 | CHI_LADDER_U11	depends_on	U_11 |
+| 337 | CHI_LADDER_U11	depends_on	CHI_LADDER_U10 |
+| 338 | COMPLEX_BRANCH_OVERLAY	depends_on	CHI_CARRIER |
+| 339 | COMPLEX_BRANCH_OVERLAY	depends_on	U7_WINDOW_CORE |
+| 340 | COMPLEX_CARRIER	depends_on	CHI_CARRIER |
+| 341 | OP_ComplexNormReadout	depends_on	OP_ChiCarrier |
+| 342 | OP_ComplexBranchAccess	depends_on	M_08 |
+| 343 | OP_ComplexBranchAccess	depends_on	TA1 |
+| 344 | OP_ComplexBoundaryBranch	depends_on	SP_U12 |
+| 345 | OP_ComplexBoundaryBranch	depends_on	U12_CHI_PI_BOUNDARY |
+| 346 | COMPLEX_LADDER_U6	depends_on	U_06 |
+| 347 | COMPLEX_LADDER_U6	depends_on	CHI_LADDER_U6 |
+| 348 | COMPLEX_LADDER_U7	depends_on	U_07 |
+| 349 | COMPLEX_LADDER_U7	depends_on	U7_WINDOW_CORE |
+| 350 | COMPLEX_LADDER_U7	depends_on	COMPLEX_LADDER_U6 |
+| 351 | COMPLEX_LADDER_U8	depends_on	U_08 |
+| 352 | COMPLEX_LADDER_U8	depends_on	OP_ComplexBranchAccess |
+| 353 | COMPLEX_LADDER_U9	depends_on	U_09 |
+| 354 | COMPLEX_LADDER_U9	depends_on	SP_U9 |
+| 355 | COMPLEX_LADDER_U9	depends_on	COMPLEX_LADDER_U8 |
+| 356 | COMPLEX_LADDER_U10	depends_on	U_10 |
+| 357 | COMPLEX_LADDER_U10	depends_on	CHI_LADDER_U10 |
+| 358 | COMPLEX_LADDER_U11	depends_on	U_11 |
+| 359 | COMPLEX_LADDER_U11	depends_on	CHI_LADDER_U11 |
+| 360 | COMPLEX_LADDER_U12	depends_on	U_12 |
+| 361 | COMPLEX_LADDER_U12	depends_on	SP_U12 |
+| 362 | COMPLEX_LADDER_U12	depends_on	OP_ComplexBoundaryBranch |
+| 363 | U12_CHI_PI_COMPLEX_BOUNDARY	depends_on	U12_CHI_PI_BOUNDARY |
+| 364 | U12_CHI_PI_COMPLEX_BOUNDARY	depends_on	COMPLEX_LADDER_U12 |
+| 365 | TENSOR_CONTEXT_OVERLAY	depends_on	U_10 |
+| 366 | TENSOR_CONTEXT_OVERLAY	depends_on	U_11 |
+| 367 | TENSOR_CONTEXT_OVERLAY	depends_on	U_12 |
+| 368 | TENSOR_CARRIER	depends_on	CHI_CARRIER |
+| 369 | TENSOR_CARRIER	depends_on	Lambda_link |
+| 370 | OP_TensorContextMap	depends_on	Lambda_link |
+| 371 | OP_TensorContextMap	depends_on	U_10 |
+| 372 | OP_TensorContextMap	depends_on	U_11 |
+| 373 | TENSOR_LADDER_U10	depends_on	U_10 |
+| 374 | TENSOR_LADDER_U10	depends_on	OP_TensorContextMap |
+| 375 | TENSOR_LADDER_U11	depends_on	U_11 |
+| 376 | TENSOR_LADDER_U11	depends_on	TENSOR_LADDER_U10 |
+| 377 | TENSOR_LADDER_U12	depends_on	U_12 |
+| 378 | TENSOR_LADDER_U12	depends_on	U12_CHI_PI_COMPLEX_BOUNDARY |
 
 #### Sheet 36: `36_Export_yaml`
 
 | line_no | yaml |
 | --- | --- |
-| 1 | version: v13_active_integrated_2026-10-03 |
+| 1 | version: v13_active_graph_reconciled_2026-10-03 |
 | 2 | self_contained: true |
 | 3 | working_rule: "Read active cards and current PROJECT_INSTRUCTIONS; historical workbook rules are provenance." |
 | 4 | embedded_archives: |
@@ -32561,18 +32799,18 @@ Cards: 169. Triples: 271. Sheets: 54.
 | 114 |   - {"id": "O_18", "type": "connectivity_ground", "text": "ErrTypeGain: новый уровень делает видимой новую ошибку. Падает, если ошибка выражается ниже.", "depends_on": [], "tags": ["ground", "connectivity", "O18"], "path": "07_Основания_О/O18", "status": "candidate", "internal_ref": "CANON_V43", "symbol": "О(18)", "title": "Смена режима ошибки"} |
 | 115 |   - {"id": "O_19", "type": "connectivity_ground", "text": "Select имеет арность 1; Agg требует семейства i. Падает, если статистика строится из одного выбора без скрытого индекса.", "depends_on": [], "tags": ["ground", "connectivity", "O19"], "path": "07_Основания_О/O19", "status": "candidate", "internal_ref": "CANON_V43", "symbol": "О(19)", "title": "Арностный переход"} |
 | 116 |   - {"id": "O_20", "type": "connectivity_ground", "text": "AbsDataGain: типизированное отсутствие улучшает missing/OOD/provenance. Падает, если typed absence не даёт выигрыша.", "depends_on": [], "tags": ["ground", "connectivity", "O20"], "path": "07_Основания_О/O20", "status": "candidate_requires_empirical_test", "internal_ref": "CANON_V43", "symbol": "О(20)", "title": "Лестница не-события как данных"} |
-| 117 |   - {"id": "OP_Tot", "type": "operator", "text": "Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация", "depends_on": ["O2", "O12", "A4"], "tags": ["operator", "Tot"], "path": "25_Операторы/OP_Tot", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "Tot(0_A)=event(0_A)=¬A", "title": "Tot"} |
-| 118 |   - {"id": "OP_TotPlus", "type": "operator", "text": "рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻", "depends_on": ["O2"], "tags": ["operator", "Tot⁺"], "path": "25_Операторы/OP_TotPlus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "рабочая упаковка без потери Res_n", "title": "Tot⁺"} |
-| 119 |   - {"id": "OP_TotMinus", "type": "operator", "text": "редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра", "depends_on": ["O2", "O12"], "tags": ["operator", "Tot⁻"], "path": "25_Операторы/OP_TotMinus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "редукционистская тотализация", "title": "Tot⁻"} |
-| 120 |   - {"id": "OP_Lift", "type": "operator", "text": "X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote", "depends_on": ["O3", "O7", "O8", "A6"], "tags": ["operator", "Lift"], "path": "25_Операторы/OP_Lift", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "X_{n+1}=Lift(X_n,Res_n)", "title": "Lift"} |
-| 121 |   - {"id": "OP_Promote", "type": "operator", "text": "label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever", "depends_on": ["O12", "A9"], "tags": ["operator", "Promote"], "path": "25_Операторы/OP_Promote", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "label n→n+1 без новой выразимости", "title": "Promote"} |
+| 117 |   - {"id": "OP_Tot", "type": "operator", "text": "Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация", "depends_on": ["O_02", "O_12", "A4"], "tags": ["operator", "Tot"], "path": "25_Операторы/OP_Tot", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "Tot(0_A)=event(0_A)=¬A", "title": "Tot"} |
+| 118 |   - {"id": "OP_TotPlus", "type": "operator", "text": "рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻", "depends_on": ["O_02"], "tags": ["operator", "Tot⁺"], "path": "25_Операторы/OP_TotPlus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "рабочая упаковка без потери Res_n", "title": "Tot⁺"} |
+| 119 |   - {"id": "OP_TotMinus", "type": "operator", "text": "редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра", "depends_on": ["O_02", "O_12"], "tags": ["operator", "Tot⁻"], "path": "25_Операторы/OP_TotMinus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "редукционистская тотализация", "title": "Tot⁻"} |
+| 120 |   - {"id": "OP_Lift", "type": "operator", "text": "X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote", "depends_on": ["O_03", "O_07", "O_08", "A6"], "tags": ["operator", "Lift"], "path": "25_Операторы/OP_Lift", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "X_{n+1}=Lift(X_n,Res_n)", "title": "Lift"} |
+| 121 |   - {"id": "OP_Promote", "type": "operator", "text": "label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever", "depends_on": ["O_12", "A9"], "tags": ["operator", "Promote"], "path": "25_Операторы/OP_Promote", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "label n→n+1 без новой выразимости", "title": "Promote"} |
 | 122 |   - {"id": "OP_Refuse", "type": "operator", "text": "фильтр обновлений g(e): отказ допустить опыт/контрданные. 7+ anti-mode", "depends_on": ["A8"], "tags": ["operator", "Refuse"], "path": "25_Операторы/OP_Refuse", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "фильтр обновлений g(e)", "title": "Refuse"} |
 | 123 |   - {"id": "OP_Sever", "type": "operator", "text": "обрыв Λ/provenance/transfer: разрывает перенос оснований и контрсвидетельств. патологическое забывание", "depends_on": ["A8"], "tags": ["operator", "Sever"], "path": "25_Операторы/OP_Sever", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "обрыв Λ/provenance/transfer", "title": "Sever"} |
-| 124 |   - {"id": "OP_kappa", "type": "operator", "text": "κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7", "depends_on": ["O15"], "tags": ["operator", "κ"], "path": "25_Операторы/OP_kappa", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43/CANON_EN", "symbol": "κ(S,0_S,Prov,Rev)", "title": "κ"} |
+| 124 |   - {"id": "OP_kappa", "type": "operator", "text": "κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7", "depends_on": ["O_15"], "tags": ["operator", "κ"], "path": "25_Операторы/OP_kappa", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43/CANON_EN", "symbol": "κ(S,0_S,Prov,Rev)", "title": "κ"} |
 | 125 |   - {"id": "OP_event0A", "type": "operator", "text": "event(0_A)=¬A: булева проекция структурированного отсутствия. обратный вывод ¬A→0_A запрещён", "depends_on": ["A2"], "tags": ["operator", "event(0_A)"], "path": "25_Операторы/OP_event0A", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "event(0_A)=¬A", "title": "event(0_A)"} |
-| 126 |   - {"id": "OP_Unpack", "type": "operator", "text": "C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox", "depends_on": ["O9", "O12"], "tags": ["operator", "Unpack"], "path": "25_Операторы/OP_Unpack", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "C(x)=C(Unpack(x))", "title": "Unpack"} |
-| 127 |   - {"id": "OP_Compress2", "type": "operator", "text": "M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз", "depends_on": ["O8"], "tags": ["operator", "Compress₂"], "path": "25_Операторы/OP_Compress2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_n*=Compress₂(M_{n+2})", "title": "Compress₂"} |
-| 128 |   - {"id": "OP_Expand2", "type": "operator", "text": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх", "depends_on": ["O8"], "tags": ["operator", "Expand₂"], "path": "25_Операторы/OP_Expand2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)", "title": "Expand₂"} |
+| 126 |   - {"id": "OP_Unpack", "type": "operator", "text": "C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox", "depends_on": ["O_09", "O_12"], "tags": ["operator", "Unpack"], "path": "25_Операторы/OP_Unpack", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "C(x)=C(Unpack(x))", "title": "Unpack"} |
+| 127 |   - {"id": "OP_Compress2", "type": "operator", "text": "M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз", "depends_on": ["O_08"], "tags": ["operator", "Compress₂"], "path": "25_Операторы/OP_Compress2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_n*=Compress₂(M_{n+2})", "title": "Compress₂"} |
+| 128 |   - {"id": "OP_Expand2", "type": "operator", "text": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх", "depends_on": ["O_08"], "tags": ["operator", "Expand₂"], "path": "25_Операторы/OP_Expand2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)", "title": "Expand₂"} |
 | 129 |   - {"id": "OP_pi", "type": "operator", "text": "π_n:X_{n+1}↠X_n: проекция старого слоя. должна сохранять старое", "depends_on": ["A7"], "tags": ["operator", "π"], "path": "25_Операторы/OP_pi", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "π_n:X_{n+1}↠X_n", "title": "π"} |
 | 130 |   - {"id": "OP_iota", "type": "operator", "text": "ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id", "depends_on": ["A7"], "tags": ["operator", "ι"], "path": "25_Операторы/OP_iota", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "ι_n:X_n↪X_{n+1}", "title": "ι"} |
 | 131 |   - {"id": "A0", "type": "axiom", "text": "Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary", "depends_on": [], "tags": ["axiom", "A0"], "path": "26_Аксиомы_A0_A9/A0", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0", "title": "Ladder-first ontology of distinction"} |
@@ -32596,27 +32834,27 @@ Cards: 169. Triples: 271. Sheets: 54.
 | 149 |   - {"id": "T7B", "type": "test", "text": "интервенция в g(e) или Λ предсказуемо меняет поведение", "depends_on": ["O_12"], "tags": ["test", "defeat", "test"], "path": "24_MPrime_Audit/T7B", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "T7B", "title": "Counterfactual self-control test"} |
 | 150 |   - {"id": "T7C", "type": "test", "text": "контрсвидетельства переносятся между контекстами, если Sever не применён", "depends_on": ["O_12"], "tags": ["test", "defeat", "test"], "path": "24_MPrime_Audit/T7C", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "T7C", "title": "Provenance continuity test"} |
 | 151 |   - {"id": "ADDENDUM_V3", "type": "candidate_bundle", "text": "Встроенная candidate-добавка: локальное зеркало, ZeroBoundary, чётно/нечётная топология, вещественные константы, e^pi, У12 circle, research export.", "depends_on": [], "tags": ["addendum", "candidate", "research_export"], "path": "43_Добавка_v3/ADDENDUM_V3", "status": "candidate_bundle", "internal_ref": "ADDENDUM_V3", "symbol": "ADDENDUM_V3", "title": "Добавка v3 к табличному канону"} |
-| 152 |   - {"id": "ADD_NOTATION_ABS", "type": "notation_rule", "text": "В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо \|x\|, чтобы не ломать pipe-таблицы.", "depends_on": ["ADDENDUM_V3"], "tags": ["notation", "export", "markdown"], "path": "43_Добавка_v3/ADD_NOTATION_ABS", "status": "canonical_note", "internal_ref": "ADDENDUM_V3", "symbol": "abs(x)", "title": "Правило abs(x) для Markdown/TSV"} |
+| 152 |   - {"id": "ADD_NOTATION_ABS", "type": "notation_rule", "text": "В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо \|x\|, чтобы не ломать pipe-таблицы.", "depends_on": [], "tags": ["notation", "export", "markdown"], "path": "43_Добавка_v3/ADD_NOTATION_ABS", "status": "canonical_note", "internal_ref": "ADDENDUM_V3", "symbol": "abs(x)", "title": "Правило abs(x) для Markdown/TSV"} |
 | 153 |   - {"id": "ADD_MIRROR_WINDOW", "type": "operator_candidate", "text": "Уровень задаётся разрешённой формой, запрещённой зеркальной формой и нулевой boundary; запрет действует локально, не глобально.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["mirror_window", "boundary", "operator"], "path": "43_Добавка_v3/ADD_MIRROR_WINDOW", "status": "derived_constraint", "internal_ref": "ADDENDUM_V3", "symbol": "Window(F_n)={F_n,-F_n}", "title": "Локальное зеркальное окно"} |
-| 154 |   - {"id": "ADD_ZERO_BOUNDARY", "type": "boundary_candidate", "text": "F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.", "depends_on": ["ADD_MIRROR_WINDOW"], "tags": ["zero_boundary", "absence", "mirror_window"], "path": "43_Добавка_v3/ADD_ZERO_BOUNDARY", "status": "formal_math_fact / derived_constraint", "internal_ref": "ADDENDUM_V3", "symbol": "ZeroBoundary(F_n)={x:F_n(x)=0}", "title": "Нулевая граница зеркального окна"} |
+| 154 |   - {"id": "ADD_ZERO_BOUNDARY", "type": "boundary_candidate", "text": "F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.", "depends_on": [], "tags": ["zero_boundary", "absence", "mirror_window"], "path": "43_Добавка_v3/ADD_ZERO_BOUNDARY", "status": "formal_math_fact / derived_constraint", "internal_ref": "ADDENDUM_V3", "symbol": "ZeroBoundary(F_n)={x:F_n(x)=0}", "title": "Нулевая граница зеркального окна"} |
 | 155 |   - {"id": "ADD_PARITY_TOPOLOGY", "type": "topology_candidate", "text": "Чётные и нечётные уровни рассматриваются как разные топологические слои; запреты локальны и не уничтожают соседний уровень.", "depends_on": ["ADD_MIRROR_WINDOW"], "tags": ["even_odd", "topology", "projection"], "path": "43_Добавка_v3/ADD_PARITY_TOPOLOGY", "status": "canonical_alignment", "internal_ref": "ADDENDUM_V3", "symbol": "EvenSpace/OddSpace", "title": "Чётная и нечётная топология уровней"} |
 | 156 |   - {"id": "ADD_TOPO_INVARIANTS", "type": "invariant_candidate", "text": "Классы нулевых узлов: один ноль, бесконечно много нулей, нет нулей; e^x требует отдельной boundary/gate.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["topology", "invariants", "zero_boundary"], "path": "43_Добавка_v3/ADD_TOPO_INVARIANTS", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "Gamma(F), Gamma(-F), Z_n", "title": "Топологические инварианты после запретов"} |
 | 157 |   - {"id": "ADD_HALF_PHI", "type": "hypothesis_candidate", "text": "phi появляется как условие границы, где кубический избыток после удаления факторной оси возвращает квадратный агрегат.", "depends_on": ["ADD_PARITY_TOPOLOGY"], "tags": ["phi", "half", "boundary", "U9"], "path": "43_Добавка_v3/ADD_HALF_PHI", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "x*x*x-x=x*x", "title": "Половина, кубический избыток и phi"} |
 | 158 |   - {"id": "ADD_CONSTANTS", "type": "classification_candidate", "text": "Константы ФТС-релевантны только как следы операций, инварианты, границы, нормировки, симметрии или несоизмеримости.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["constants", "invariants", "criteria"], "path": "43_Добавка_v3/ADD_CONSTANTS", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "0,1,-1,2,1/2,phi,e,pi,sqrt(2)", "title": "Вещественные константы как следы операций"} |
 | 159 |   - {"id": "ADD_U11_EPI", "type": "level_variant_candidate", "text": "e^x — динамический оператор У11; e^pi — оконная константа 11–15, не полный уровень и не замена e^x.", "depends_on": ["ADD_CONSTANTS"], "tags": ["U11", "e", "pi", "window_constant"], "path": "43_Добавка_v3/ADD_U11_EPI", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "e^x / e^pi", "title": "У11: e^x и e^pi как два чтения"} |
 | 160 |   - {"id": "ADD_U12_CIRCLE", "type": "level_candidate", "text": "У12 как closed relation: окружность с центром (0,2), радиусом 2, касанием нуля и pi-boundary.", "depends_on": ["ADD_U11_EPI", "ADD_ZERO_BOUNDARY"], "tags": ["U12", "circle", "pi", "closed_boundary"], "path": "43_Добавка_v3/ADD_U12_CIRCLE", "status": "candidate_requires_formalization", "internal_ref": "ADDENDUM_V3", "symbol": "x*x+(y-2)*(y-2)=4", "title": "У12: окружность и замкнутая boundary"} |
-| 161 |   - {"id": "ADD_RESEARCH_FORMAT", "type": "export_instruction", "text": "Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.", "depends_on": ["ADDENDUM_V3"], "tags": ["export", "research", "markdown", "jsonl", "tsv", "yaml"], "path": "42_Экспорт_GPT/ADD_RESEARCH_FORMAT", "status": "active_instruction", "internal_ref": "workbook", "symbol": "Markdown+JSONL+TSV+YAML", "title": "Research-friendly формат для GPT"} |
+| 161 |   - {"id": "ADD_RESEARCH_FORMAT", "type": "export_instruction", "text": "Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.", "depends_on": [], "tags": ["export", "research", "markdown", "jsonl", "tsv", "yaml"], "path": "42_Экспорт_GPT/ADD_RESEARCH_FORMAT", "status": "active_instruction", "internal_ref": "workbook", "symbol": "Markdown+JSONL+TSV+YAML", "title": "Research-friendly формат для GPT"} |
 | 162 |   - {"id": "SP_WINDOW", "type": "status_promotion", "text": "Window(F) получает статус derived_constraint: в локальном двухветвевом окне при F!=0 исключение одной ветви выбирает другую.", "depends_on": ["ADD_MIRROR_WINDOW"], "tags": ["status", "mirror_window", "derived_constraint"], "path": "45_Статус_гипотез_v9/SP_WINDOW", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "Window(F)={F,-F}", "title": "Повышение статуса локального зеркального окна"} |
 | 163 |   - {"id": "SP_ZERO", "type": "status_promotion", "text": "Математический факт: F=-F iff F=0; ФТС-слой: ZeroBoundary как derived constraint локального зеркала.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["status", "zero_boundary", "formal_math_fact"], "path": "45_Статус_гипотез_v9/SP_ZERO", "status": "formal_math_fact / derived_constraint", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "F=-F iff F=0", "title": "Повышение статуса ZeroBoundary"} |
 | 164 |   - {"id": "SP_U8", "type": "status_promotion", "text": "У8 повышен до candidate_with_operational_gate за счёт math kernel sqrt(abs(x)) как partial inverse of square on sign quotient.", "depends_on": ["U_08", "M_08"], "tags": ["status", "U8", "hypothesis", "formal_math_fact"], "path": "45_Статус_гипотез_v9/SP_U8", "status": "candidate_with_operational_gate", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "sqrt(abs(x))", "title": "У8 как полу-восстановление"} |
 | 165 |   - {"id": "SP_U9", "type": "status_promotion", "text": "У9 повышен до FTS_candidate: x*x*x=x*(x*x), минимальный multiplicative surplus над квадратом.", "depends_on": ["U_09", "M_09"], "tags": ["status", "U9", "cubic_surplus"], "path": "45_Статус_гипотез_v9/SP_U9", "status": "FTS_candidate", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "x*x*x", "title": "У9 как кубический избыток"} |
 | 166 |   - {"id": "SP_U12", "type": "status_promotion", "text": "У12 получает formal_math_fact по геометрии и canonical_alignment как closed boundary candidate.", "depends_on": ["U_12", "ADD_U12_CIRCLE"], "tags": ["status", "U12", "closed_boundary"], "path": "45_Статус_гипотез_v9/SP_U12", "status": "candidate_requires_formalization + canonical_alignment", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "x*x+(y-2)*(y-2)=4", "title": "У12 как closed boundary"} |
-| 167 |   - {"id": "U7_WINDOW_CORE", "type": "definition", "text": "У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.", "depends_on": ["U_07", "M_07", "OP_WindowClose"], "tags": ["U7", "expectation_window", "answer", "prediction", "knowledge"], "path": "U7_Window_Cycles/U7_WINDOW_CORE", "status": "candidate_with_operational_gate", "internal_ref": "USER_DIALOG_V11 + CANON_HABR", "symbol": "Answer(W)=Close(W,W)", "title": "У7: окно ожидания как самозамыкающийся ответ"} |
+| 167 |   - {"id": "U7_WINDOW_CORE", "type": "definition", "text": "У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.", "depends_on": ["U_07", "M_07"], "tags": ["U7", "expectation_window", "answer", "prediction", "knowledge"], "path": "U7_Window_Cycles/U7_WINDOW_CORE", "status": "candidate_with_operational_gate", "internal_ref": "USER_DIALOG_V11 + CANON_HABR", "symbol": "Answer(W)=Close(W,W)", "title": "У7: окно ожидания как самозамыкающийся ответ"} |
 | 168 |   - {"id": "OP_WindowClose", "type": "operator", "text": "Close(W,W) фиксирует ответ как сам акт закрытия ожидания ожиданием; продуктивная тавтология У7, не плоское a=a.", "depends_on": ["U7_WINDOW_CORE", "OP_Window"], "tags": ["operator", "U7", "answer", "cycle"], "path": "25_Операторы/OP_WindowClose", "status": "candidate_core", "internal_ref": "USER_DIALOG_V11", "symbol": "Close(W,W)", "title": "Оператор самозакрытия окна ожидания"} |
 | 169 |   - {"id": "U7_FORGET_CLOSE", "type": "anti_mode", "text": "Забывание: W закрывается Refuse(W), то есть отказом от ожидания; это не простое отсутствие памяти и не честное незнание.", "depends_on": ["U7_WINDOW_CORE", "OP_Refuse", "OP_Sever"], "tags": ["U7", "forgetting", "Refuse", "Sever", "anti-mode"], "path": "U7_Window_Cycles/U7_FORGET_CLOSE", "status": "candidate_core", "internal_ref": "USER_DIALOG_V11 + CANON_EN", "symbol": "Close(W,Refuse(W))", "title": "Забывание как закрытие ожидания отказом от ожидания"} |
 | 170 |   - {"id": "U7_U8_ANSWER_QUESTION_BOUNDARY", "type": "boundary", "text": "У7 даёт ответ/закрытие окна; У8 задаёт вопрос/открытие окна. Предположение не является слабым предсказанием.", "depends_on": ["U_07", "U_08", "U7_WINDOW_CORE"], "tags": ["U7", "U8", "answer", "question", "hypothesis"], "path": "U7_Window_Cycles/U7_U8_ANSWER_QUESTION_BOUNDARY", "status": "candidate_boundary", "internal_ref": "USER_DIALOG_V11", "symbol": "Answer(W)=A vs Hyp(W)=A?", "title": "Граница У7/У8: ответ не вопрос"} |
 | 171 |   - {"id": "U7_AGENTIC_GATE_LAYER", "type": "guardrail", "text": "κ, provenance, Refuse/Sever, T7A/T7B/T7C остаются операциональным слоем для агентных/обновляемых реализаций, но не ядром У7.", "depends_on": ["OP_kappa", "T7A", "T7B", "T7C", "U7_WINDOW_CORE"], "tags": ["U7", "agentic_gate", "kappa", "T7", "guardrail"], "path": "U7_Window_Cycles/U7_AGENTIC_GATE_LAYER", "status": "operational_diagnostic_layer", "internal_ref": "CANON_EN + USER_DIALOG_V11", "symbol": "agentic_gate(Answer)=κ/T7A/T7B/T7C", "title": "κ/T7 как agentic gate, не сущность У7"} |
-| 172 |   - {"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.", "depends_on": ["A_07", "U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "У7: y=-x*x обязан читаться с y!=x*x"} |
+| 172 |   - {"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.", "depends_on": ["U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "У7: y=-x*x обязан читаться с y!=x*x"} |
 | 173 |   - {"id": "CHI_STAT_LADDER", "type": "overlay", "text": "Статистический overlay: использовать χ как нормированный остаток ожидания вместо плоского x; χ*χ=χ² даёт сильный аналог У6.", "depends_on": ["OP_ChiCarrier", "OP_ChiOverlayMap", "OP_ChiSquareDiagnostic"], "tags": ["chi", "statistics", "overlay", "expectation_window"], "path": "Chi_Stat_Ladder/CHI_STAT_LADDER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "x:=χ", "title": "χ как статистический носитель дополнительной лестницы", "notes": "Не заменяет основной канон; добавляет локальный носитель."} |
 | 174 |   - {"id": "CHI_CARRIER", "type": "definition", "text": "χ_i фиксирует signed/normalized expectation residue; χ=(χ_i)_i сохраняет компонентность до агрегации.", "depends_on": ["U_06", "U7_WINDOW_CORE"], "tags": ["chi", "residual", "expectation", "U6"], "path": "Chi_Stat_Ladder/CHI_CARRIER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "χ-носитель как нормированный остаток ожидания", "notes": "x:=χ, не x:=χ²."} |
 | 175 |   - {"id": "OP_ChiCarrier", "type": "operator", "text": "Оператор строит χ-носитель из наблюдаемого O_i и ожидаемого E_i; это вход для χ-лестницы.", "depends_on": ["OP_ChiSquareDiagnostic"], "tags": ["operator", "chi", "residual"], "path": "25_Операторы/OP_ChiCarrier", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "Оператор χ-носителя", "notes": "Сохранять sign/component before χ² aggregation."} |
@@ -32835,6 +33073,7 @@ Cards: 169. Triples: 271. Sheets: 54.
 | v12_chi_stat_ladder | 2026-06-10 | statistical_overlay_patch | Добавлен Chi_Stat_Ladder: x:=χ, χ_i=(O_i-E_i)/sqrt(E_i), χ*χ=χ² как сильный аналог У6; У7/У8/У9 получают guarded χ-readings and questions. | Chi_Stat_Ladder;01;02;17;18;25;33;34;35;36;37;38;40 | self-contained |
 | v13_complex_branch_overlay | 2026-06-10 | complex_tensor_overlay_patch | Добавлены Complex_Branch_Overlay и Tensor_Context_Overlay: complex carrier z/χ, Q(χ)=Σ\|χ_i\|² как У6-readout, branch/sheet для У8+, complex U12 outside branch, tensor context для 10+; guardrails phase!=−A, branch access!=Lift, array!=tensor. | Complex_Branch_Overlay;Tensor_Context_Overlay;01;02;17;18;25;31;33;34;35;36;37;38;40 | self-contained |
 | v13_active_integrated_2026-10-03 | 2026-10-03 | author_integration_register_repair | Integrate AC-2026-10-03 window families and restore separate U7 mathematical and logical constraints; preserve AC-2026-09-21 and existing evidence statuses. | 17/18/34/35/36 and active renderings | active |
+| v13_active_graph_reconciled_2026-10-03 | 2026-10-03 | graph_dependency_reference_reconciliation | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | 17/18/34/35/36 and active renderings | active |
 
 #### Sheet 39: `39_Status_Dict`
 
@@ -33334,18 +33573,18 @@ Cards: 169. Triples: 271. Sheets: 54.
 {"id": "O_18", "type": "connectivity_ground", "text": "ErrTypeGain: новый уровень делает видимой новую ошибку. Падает, если ошибка выражается ниже.", "depends_on": [], "tags": ["ground", "connectivity", "O18"], "path": "07_Основания_О/O18", "status": "candidate", "internal_ref": "CANON_V43", "symbol": "О(18)", "title": "Смена режима ошибки"}
 {"id": "O_19", "type": "connectivity_ground", "text": "Select имеет арность 1; Agg требует семейства i. Падает, если статистика строится из одного выбора без скрытого индекса.", "depends_on": [], "tags": ["ground", "connectivity", "O19"], "path": "07_Основания_О/O19", "status": "candidate", "internal_ref": "CANON_V43", "symbol": "О(19)", "title": "Арностный переход"}
 {"id": "O_20", "type": "connectivity_ground", "text": "AbsDataGain: типизированное отсутствие улучшает missing/OOD/provenance. Падает, если typed absence не даёт выигрыша.", "depends_on": [], "tags": ["ground", "connectivity", "O20"], "path": "07_Основания_О/O20", "status": "candidate_requires_empirical_test", "internal_ref": "CANON_V43", "symbol": "О(20)", "title": "Лестница не-события как данных"}
-{"id": "OP_Tot", "type": "operator", "text": "Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация", "depends_on": ["O2", "O12", "A4"], "tags": ["operator", "Tot"], "path": "25_Операторы/OP_Tot", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "Tot(0_A)=event(0_A)=¬A", "title": "Tot"}
-{"id": "OP_TotPlus", "type": "operator", "text": "рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻", "depends_on": ["O2"], "tags": ["operator", "Tot⁺"], "path": "25_Операторы/OP_TotPlus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "рабочая упаковка без потери Res_n", "title": "Tot⁺"}
-{"id": "OP_TotMinus", "type": "operator", "text": "редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра", "depends_on": ["O2", "O12"], "tags": ["operator", "Tot⁻"], "path": "25_Операторы/OP_TotMinus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "редукционистская тотализация", "title": "Tot⁻"}
-{"id": "OP_Lift", "type": "operator", "text": "X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote", "depends_on": ["O3", "O7", "O8", "A6"], "tags": ["operator", "Lift"], "path": "25_Операторы/OP_Lift", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "X_{n+1}=Lift(X_n,Res_n)", "title": "Lift"}
-{"id": "OP_Promote", "type": "operator", "text": "label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever", "depends_on": ["O12", "A9"], "tags": ["operator", "Promote"], "path": "25_Операторы/OP_Promote", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "label n→n+1 без новой выразимости", "title": "Promote"}
+{"id": "OP_Tot", "type": "operator", "text": "Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация", "depends_on": ["O_02", "O_12", "A4"], "tags": ["operator", "Tot"], "path": "25_Операторы/OP_Tot", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "Tot(0_A)=event(0_A)=¬A", "title": "Tot"}
+{"id": "OP_TotPlus", "type": "operator", "text": "рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻", "depends_on": ["O_02"], "tags": ["operator", "Tot⁺"], "path": "25_Операторы/OP_TotPlus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "рабочая упаковка без потери Res_n", "title": "Tot⁺"}
+{"id": "OP_TotMinus", "type": "operator", "text": "редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра", "depends_on": ["O_02", "O_12"], "tags": ["operator", "Tot⁻"], "path": "25_Операторы/OP_TotMinus", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "редукционистская тотализация", "title": "Tot⁻"}
+{"id": "OP_Lift", "type": "operator", "text": "X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote", "depends_on": ["O_03", "O_07", "O_08", "A6"], "tags": ["operator", "Lift"], "path": "25_Операторы/OP_Lift", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "X_{n+1}=Lift(X_n,Res_n)", "title": "Lift"}
+{"id": "OP_Promote", "type": "operator", "text": "label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever", "depends_on": ["O_12", "A9"], "tags": ["operator", "Promote"], "path": "25_Операторы/OP_Promote", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "label n→n+1 без новой выразимости", "title": "Promote"}
 {"id": "OP_Refuse", "type": "operator", "text": "фильтр обновлений g(e): отказ допустить опыт/контрданные. 7+ anti-mode", "depends_on": ["A8"], "tags": ["operator", "Refuse"], "path": "25_Операторы/OP_Refuse", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "фильтр обновлений g(e)", "title": "Refuse"}
 {"id": "OP_Sever", "type": "operator", "text": "обрыв Λ/provenance/transfer: разрывает перенос оснований и контрсвидетельств. патологическое забывание", "depends_on": ["A8"], "tags": ["operator", "Sever"], "path": "25_Операторы/OP_Sever", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "обрыв Λ/provenance/transfer", "title": "Sever"}
-{"id": "OP_kappa", "type": "operator", "text": "κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7", "depends_on": ["O15"], "tags": ["operator", "κ"], "path": "25_Операторы/OP_kappa", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43/CANON_EN", "symbol": "κ(S,0_S,Prov,Rev)", "title": "κ"}
+{"id": "OP_kappa", "type": "operator", "text": "κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7", "depends_on": ["O_15"], "tags": ["operator", "κ"], "path": "25_Операторы/OP_kappa", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43/CANON_EN", "symbol": "κ(S,0_S,Prov,Rev)", "title": "κ"}
 {"id": "OP_event0A", "type": "operator", "text": "event(0_A)=¬A: булева проекция структурированного отсутствия. обратный вывод ¬A→0_A запрещён", "depends_on": ["A2"], "tags": ["operator", "event(0_A)"], "path": "25_Операторы/OP_event0A", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "event(0_A)=¬A", "title": "event(0_A)"}
-{"id": "OP_Unpack", "type": "operator", "text": "C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox", "depends_on": ["O9", "O12"], "tags": ["operator", "Unpack"], "path": "25_Операторы/OP_Unpack", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "C(x)=C(Unpack(x))", "title": "Unpack"}
-{"id": "OP_Compress2", "type": "operator", "text": "M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз", "depends_on": ["O8"], "tags": ["operator", "Compress₂"], "path": "25_Операторы/OP_Compress2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_n*=Compress₂(M_{n+2})", "title": "Compress₂"}
-{"id": "OP_Expand2", "type": "operator", "text": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх", "depends_on": ["O8"], "tags": ["operator", "Expand₂"], "path": "25_Операторы/OP_Expand2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)", "title": "Expand₂"}
+{"id": "OP_Unpack", "type": "operator", "text": "C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox", "depends_on": ["O_09", "O_12"], "tags": ["operator", "Unpack"], "path": "25_Операторы/OP_Unpack", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "C(x)=C(Unpack(x))", "title": "Unpack"}
+{"id": "OP_Compress2", "type": "operator", "text": "M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз", "depends_on": ["O_08"], "tags": ["operator", "Compress₂"], "path": "25_Операторы/OP_Compress2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_n*=Compress₂(M_{n+2})", "title": "Compress₂"}
+{"id": "OP_Expand2", "type": "operator", "text": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх", "depends_on": ["O_08"], "tags": ["operator", "Expand₂"], "path": "25_Операторы/OP_Expand2", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)", "title": "Expand₂"}
 {"id": "OP_pi", "type": "operator", "text": "π_n:X_{n+1}↠X_n: проекция старого слоя. должна сохранять старое", "depends_on": ["A7"], "tags": ["operator", "π"], "path": "25_Операторы/OP_pi", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "π_n:X_{n+1}↠X_n", "title": "π"}
 {"id": "OP_iota", "type": "operator", "text": "ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id", "depends_on": ["A7"], "tags": ["operator", "ι"], "path": "25_Операторы/OP_iota", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "ι_n:X_n↪X_{n+1}", "title": "ι"}
 {"id": "A0", "type": "axiom", "text": "Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary", "depends_on": [], "tags": ["axiom", "A0"], "path": "26_Аксиомы_A0_A9/A0", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0", "title": "Ladder-first ontology of distinction"}
@@ -33369,27 +33608,27 @@ Cards: 169. Triples: 271. Sheets: 54.
 {"id": "T7B", "type": "test", "text": "интервенция в g(e) или Λ предсказуемо меняет поведение", "depends_on": ["O_12"], "tags": ["test", "defeat", "test"], "path": "24_MPrime_Audit/T7B", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "T7B", "title": "Counterfactual self-control test"}
 {"id": "T7C", "type": "test", "text": "контрсвидетельства переносятся между контекстами, если Sever не применён", "depends_on": ["O_12"], "tags": ["test", "defeat", "test"], "path": "24_MPrime_Audit/T7C", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "T7C", "title": "Provenance continuity test"}
 {"id": "ADDENDUM_V3", "type": "candidate_bundle", "text": "Встроенная candidate-добавка: локальное зеркало, ZeroBoundary, чётно/нечётная топология, вещественные константы, e^pi, У12 circle, research export.", "depends_on": [], "tags": ["addendum", "candidate", "research_export"], "path": "43_Добавка_v3/ADDENDUM_V3", "status": "candidate_bundle", "internal_ref": "ADDENDUM_V3", "symbol": "ADDENDUM_V3", "title": "Добавка v3 к табличному канону"}
-{"id": "ADD_NOTATION_ABS", "type": "notation_rule", "text": "В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо |x|, чтобы не ломать pipe-таблицы.", "depends_on": ["ADDENDUM_V3"], "tags": ["notation", "export", "markdown"], "path": "43_Добавка_v3/ADD_NOTATION_ABS", "status": "canonical_note", "internal_ref": "ADDENDUM_V3", "symbol": "abs(x)", "title": "Правило abs(x) для Markdown/TSV"}
+{"id": "ADD_NOTATION_ABS", "type": "notation_rule", "text": "В текстовых и Markdown/TSV таблицах использовать abs(x), -abs(x), sqrt(abs(x)) вместо |x|, чтобы не ломать pipe-таблицы.", "depends_on": [], "tags": ["notation", "export", "markdown"], "path": "43_Добавка_v3/ADD_NOTATION_ABS", "status": "canonical_note", "internal_ref": "ADDENDUM_V3", "symbol": "abs(x)", "title": "Правило abs(x) для Markdown/TSV"}
 {"id": "ADD_MIRROR_WINDOW", "type": "operator_candidate", "text": "Уровень задаётся разрешённой формой, запрещённой зеркальной формой и нулевой boundary; запрет действует локально, не глобально.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["mirror_window", "boundary", "operator"], "path": "43_Добавка_v3/ADD_MIRROR_WINDOW", "status": "derived_constraint", "internal_ref": "ADDENDUM_V3", "symbol": "Window(F_n)={F_n,-F_n}", "title": "Локальное зеркальное окно"}
-{"id": "ADD_ZERO_BOUNDARY", "type": "boundary_candidate", "text": "F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.", "depends_on": ["ADD_MIRROR_WINDOW"], "tags": ["zero_boundary", "absence", "mirror_window"], "path": "43_Добавка_v3/ADD_ZERO_BOUNDARY", "status": "formal_math_fact / derived_constraint", "internal_ref": "ADDENDUM_V3", "symbol": "ZeroBoundary(F_n)={x:F_n(x)=0}", "title": "Нулевая граница зеркального окна"}
+{"id": "ADD_ZERO_BOUNDARY", "type": "boundary_candidate", "text": "F_n=-F_n iff F_n=0; ноль — место схлопывания формы и анти-формы.", "depends_on": [], "tags": ["zero_boundary", "absence", "mirror_window"], "path": "43_Добавка_v3/ADD_ZERO_BOUNDARY", "status": "formal_math_fact / derived_constraint", "internal_ref": "ADDENDUM_V3", "symbol": "ZeroBoundary(F_n)={x:F_n(x)=0}", "title": "Нулевая граница зеркального окна"}
 {"id": "ADD_PARITY_TOPOLOGY", "type": "topology_candidate", "text": "Чётные и нечётные уровни рассматриваются как разные топологические слои; запреты локальны и не уничтожают соседний уровень.", "depends_on": ["ADD_MIRROR_WINDOW"], "tags": ["even_odd", "topology", "projection"], "path": "43_Добавка_v3/ADD_PARITY_TOPOLOGY", "status": "canonical_alignment", "internal_ref": "ADDENDUM_V3", "symbol": "EvenSpace/OddSpace", "title": "Чётная и нечётная топология уровней"}
 {"id": "ADD_TOPO_INVARIANTS", "type": "invariant_candidate", "text": "Классы нулевых узлов: один ноль, бесконечно много нулей, нет нулей; e^x требует отдельной boundary/gate.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["topology", "invariants", "zero_boundary"], "path": "43_Добавка_v3/ADD_TOPO_INVARIANTS", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "Gamma(F), Gamma(-F), Z_n", "title": "Топологические инварианты после запретов"}
 {"id": "ADD_HALF_PHI", "type": "hypothesis_candidate", "text": "phi появляется как условие границы, где кубический избыток после удаления факторной оси возвращает квадратный агрегат.", "depends_on": ["ADD_PARITY_TOPOLOGY"], "tags": ["phi", "half", "boundary", "U9"], "path": "43_Добавка_v3/ADD_HALF_PHI", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "x*x*x-x=x*x", "title": "Половина, кубический избыток и phi"}
 {"id": "ADD_CONSTANTS", "type": "classification_candidate", "text": "Константы ФТС-релевантны только как следы операций, инварианты, границы, нормировки, симметрии или несоизмеримости.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["constants", "invariants", "criteria"], "path": "43_Добавка_v3/ADD_CONSTANTS", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "0,1,-1,2,1/2,phi,e,pi,sqrt(2)", "title": "Вещественные константы как следы операций"}
 {"id": "ADD_U11_EPI", "type": "level_variant_candidate", "text": "e^x — динамический оператор У11; e^pi — оконная константа 11–15, не полный уровень и не замена e^x.", "depends_on": ["ADD_CONSTANTS"], "tags": ["U11", "e", "pi", "window_constant"], "path": "43_Добавка_v3/ADD_U11_EPI", "status": "candidate", "internal_ref": "ADDENDUM_V3", "symbol": "e^x / e^pi", "title": "У11: e^x и e^pi как два чтения"}
 {"id": "ADD_U12_CIRCLE", "type": "level_candidate", "text": "У12 как closed relation: окружность с центром (0,2), радиусом 2, касанием нуля и pi-boundary.", "depends_on": ["ADD_U11_EPI", "ADD_ZERO_BOUNDARY"], "tags": ["U12", "circle", "pi", "closed_boundary"], "path": "43_Добавка_v3/ADD_U12_CIRCLE", "status": "candidate_requires_formalization", "internal_ref": "ADDENDUM_V3", "symbol": "x*x+(y-2)*(y-2)=4", "title": "У12: окружность и замкнутая boundary"}
-{"id": "ADD_RESEARCH_FORMAT", "type": "export_instruction", "text": "Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.", "depends_on": ["ADDENDUM_V3"], "tags": ["export", "research", "markdown", "jsonl", "tsv", "yaml"], "path": "42_Экспорт_GPT/ADD_RESEARCH_FORMAT", "status": "active_instruction", "internal_ref": "workbook", "symbol": "Markdown+JSONL+TSV+YAML", "title": "Research-friendly формат для GPT"}
+{"id": "ADD_RESEARCH_FORMAT", "type": "export_instruction", "text": "Для исследования GPT лучше использовать Markdown как основной файл, JSONL для карточек, TSV для графа, YAML для машинного канона.", "depends_on": [], "tags": ["export", "research", "markdown", "jsonl", "tsv", "yaml"], "path": "42_Экспорт_GPT/ADD_RESEARCH_FORMAT", "status": "active_instruction", "internal_ref": "workbook", "symbol": "Markdown+JSONL+TSV+YAML", "title": "Research-friendly формат для GPT"}
 {"id": "SP_WINDOW", "type": "status_promotion", "text": "Window(F) получает статус derived_constraint: в локальном двухветвевом окне при F!=0 исключение одной ветви выбирает другую.", "depends_on": ["ADD_MIRROR_WINDOW"], "tags": ["status", "mirror_window", "derived_constraint"], "path": "45_Статус_гипотез_v9/SP_WINDOW", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "Window(F)={F,-F}", "title": "Повышение статуса локального зеркального окна"}
 {"id": "SP_ZERO", "type": "status_promotion", "text": "Математический факт: F=-F iff F=0; ФТС-слой: ZeroBoundary как derived constraint локального зеркала.", "depends_on": ["ADD_ZERO_BOUNDARY"], "tags": ["status", "zero_boundary", "formal_math_fact"], "path": "45_Статус_гипотез_v9/SP_ZERO", "status": "formal_math_fact / derived_constraint", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "F=-F iff F=0", "title": "Повышение статуса ZeroBoundary"}
 {"id": "SP_U8", "type": "status_promotion", "text": "У8 повышен до candidate_with_operational_gate за счёт math kernel sqrt(abs(x)) как partial inverse of square on sign quotient.", "depends_on": ["U_08", "M_08"], "tags": ["status", "U8", "hypothesis", "formal_math_fact"], "path": "45_Статус_гипотез_v9/SP_U8", "status": "candidate_with_operational_gate", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "sqrt(abs(x))", "title": "У8 как полу-восстановление"}
 {"id": "SP_U9", "type": "status_promotion", "text": "У9 повышен до FTS_candidate: x*x*x=x*(x*x), минимальный multiplicative surplus над квадратом.", "depends_on": ["U_09", "M_09"], "tags": ["status", "U9", "cubic_surplus"], "path": "45_Статус_гипотез_v9/SP_U9", "status": "FTS_candidate", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "x*x*x", "title": "У9 как кубический избыток"}
 {"id": "SP_U12", "type": "status_promotion", "text": "У12 получает formal_math_fact по геометрии и canonical_alignment как closed boundary candidate.", "depends_on": ["U_12", "ADD_U12_CIRCLE"], "tags": ["status", "U12", "closed_boundary"], "path": "45_Статус_гипотез_v9/SP_U12", "status": "candidate_requires_formalization + canonical_alignment", "internal_ref": "RESEARCH_STATUS_V9", "symbol": "x*x+(y-2)*(y-2)=4", "title": "У12 как closed boundary"}
-{"id": "U7_WINDOW_CORE", "type": "definition", "text": "У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.", "depends_on": ["U_07", "M_07", "OP_WindowClose"], "tags": ["U7", "expectation_window", "answer", "prediction", "knowledge"], "path": "U7_Window_Cycles/U7_WINDOW_CORE", "status": "candidate_with_operational_gate", "internal_ref": "USER_DIALOG_V11 + CANON_HABR", "symbol": "Answer(W)=Close(W,W)", "title": "У7: окно ожидания как самозамыкающийся ответ"}
+{"id": "U7_WINDOW_CORE", "type": "definition", "text": "У7 core: Ответ/Знание/Познание/Предсказание есть закрытие окна ожидания самим окном ожидания; ответ не внешний объект.", "depends_on": ["U_07", "M_07"], "tags": ["U7", "expectation_window", "answer", "prediction", "knowledge"], "path": "U7_Window_Cycles/U7_WINDOW_CORE", "status": "candidate_with_operational_gate", "internal_ref": "USER_DIALOG_V11 + CANON_HABR", "symbol": "Answer(W)=Close(W,W)", "title": "У7: окно ожидания как самозамыкающийся ответ"}
 {"id": "OP_WindowClose", "type": "operator", "text": "Close(W,W) фиксирует ответ как сам акт закрытия ожидания ожиданием; продуктивная тавтология У7, не плоское a=a.", "depends_on": ["U7_WINDOW_CORE", "OP_Window"], "tags": ["operator", "U7", "answer", "cycle"], "path": "25_Операторы/OP_WindowClose", "status": "candidate_core", "internal_ref": "USER_DIALOG_V11", "symbol": "Close(W,W)", "title": "Оператор самозакрытия окна ожидания"}
 {"id": "U7_FORGET_CLOSE", "type": "anti_mode", "text": "Забывание: W закрывается Refuse(W), то есть отказом от ожидания; это не простое отсутствие памяти и не честное незнание.", "depends_on": ["U7_WINDOW_CORE", "OP_Refuse", "OP_Sever"], "tags": ["U7", "forgetting", "Refuse", "Sever", "anti-mode"], "path": "U7_Window_Cycles/U7_FORGET_CLOSE", "status": "candidate_core", "internal_ref": "USER_DIALOG_V11 + CANON_EN", "symbol": "Close(W,Refuse(W))", "title": "Забывание как закрытие ожидания отказом от ожидания"}
 {"id": "U7_U8_ANSWER_QUESTION_BOUNDARY", "type": "boundary", "text": "У7 даёт ответ/закрытие окна; У8 задаёт вопрос/открытие окна. Предположение не является слабым предсказанием.", "depends_on": ["U_07", "U_08", "U7_WINDOW_CORE"], "tags": ["U7", "U8", "answer", "question", "hypothesis"], "path": "U7_Window_Cycles/U7_U8_ANSWER_QUESTION_BOUNDARY", "status": "candidate_boundary", "internal_ref": "USER_DIALOG_V11", "symbol": "Answer(W)=A vs Hyp(W)=A?", "title": "Граница У7/У8: ответ не вопрос"}
 {"id": "U7_AGENTIC_GATE_LAYER", "type": "guardrail", "text": "κ, provenance, Refuse/Sever, T7A/T7B/T7C остаются операциональным слоем для агентных/обновляемых реализаций, но не ядром У7.", "depends_on": ["OP_kappa", "T7A", "T7B", "T7C", "U7_WINDOW_CORE"], "tags": ["U7", "agentic_gate", "kappa", "T7", "guardrail"], "path": "U7_Window_Cycles/U7_AGENTIC_GATE_LAYER", "status": "operational_diagnostic_layer", "internal_ref": "CANON_EN + USER_DIALOG_V11", "symbol": "agentic_gate(Answer)=κ/T7A/T7B/T7C", "title": "κ/T7 как agentic gate, не сущность У7"}
-{"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.", "depends_on": ["A_07", "U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "У7: y=-x*x обязан читаться с y!=x*x"}
+{"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.", "depends_on": ["U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "У7: y=-x*x обязан читаться с y!=x*x"}
 {"id": "CHI_STAT_LADDER", "type": "overlay", "text": "Статистический overlay: использовать χ как нормированный остаток ожидания вместо плоского x; χ*χ=χ² даёт сильный аналог У6.", "depends_on": ["OP_ChiCarrier", "OP_ChiOverlayMap", "OP_ChiSquareDiagnostic"], "tags": ["chi", "statistics", "overlay", "expectation_window"], "path": "Chi_Stat_Ladder/CHI_STAT_LADDER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "x:=χ", "title": "χ как статистический носитель дополнительной лестницы", "notes": "Не заменяет основной канон; добавляет локальный носитель."}
 {"id": "CHI_CARRIER", "type": "definition", "text": "χ_i фиксирует signed/normalized expectation residue; χ=(χ_i)_i сохраняет компонентность до агрегации.", "depends_on": ["U_06", "U7_WINDOW_CORE"], "tags": ["chi", "residual", "expectation", "U6"], "path": "Chi_Stat_Ladder/CHI_CARRIER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "χ-носитель как нормированный остаток ожидания", "notes": "x:=χ, не x:=χ²."}
 {"id": "OP_ChiCarrier", "type": "operator", "text": "Оператор строит χ-носитель из наблюдаемого O_i и ожидаемого E_i; это вход для χ-лестницы.", "depends_on": ["OP_ChiSquareDiagnostic"], "tags": ["operator", "chi", "residual"], "path": "25_Операторы/OP_ChiCarrier", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "Оператор χ-носителя", "notes": "Сохранять sign/component before χ² aggregation."}
@@ -33558,26 +33797,26 @@ O_17	candidate_supports	U_m1_to_U_07
 O_18	candidate_supports	U_m1_to_U_07
 O_19	candidate_supports	U_m1_to_U_07
 O_20	candidate_supports	U_m1_to_U_07
-OP_Tot	depends_on	O2
-OP_Tot	depends_on	O12
+OP_Tot	depends_on	O_02
+OP_Tot	depends_on	O_12
 OP_Tot	depends_on	A4
-OP_TotPlus	depends_on	O2
-OP_TotMinus	depends_on	O2
-OP_TotMinus	depends_on	O12
-OP_Lift	depends_on	O3
-OP_Lift	depends_on	O7
-OP_Lift	depends_on	O8
+OP_TotPlus	depends_on	O_02
+OP_TotMinus	depends_on	O_02
+OP_TotMinus	depends_on	O_12
+OP_Lift	depends_on	O_03
+OP_Lift	depends_on	O_07
+OP_Lift	depends_on	O_08
 OP_Lift	depends_on	A6
-OP_Promote	depends_on	O12
+OP_Promote	depends_on	O_12
 OP_Promote	depends_on	A9
 OP_Refuse	depends_on	A8
 OP_Sever	depends_on	A8
-OP_kappa	depends_on	O15
+OP_kappa	depends_on	O_15
 OP_event0A	depends_on	A2
-OP_Unpack	depends_on	O9
-OP_Unpack	depends_on	O12
-OP_Compress2	depends_on	O8
-OP_Expand2	depends_on	O8
+OP_Unpack	depends_on	O_09
+OP_Unpack	depends_on	O_12
+OP_Compress2	depends_on	O_08
+OP_Expand2	depends_on	O_08
 OP_pi	depends_on	A7
 OP_iota	depends_on	A7
 A0	supports	core_grammar
@@ -33614,13 +33853,13 @@ ADDENDUM_V3	contains	ADD_PARITY_TOPOLOGY
 ADDENDUM_V3	contains	ADD_U11_EPI
 ADDENDUM_V3	contains	ADD_U12_CIRCLE
 ADD_MIRROR_WINDOW	depends_on	ADD_ZERO_BOUNDARY
-ADD_ZERO_BOUNDARY	supports	O(17)
-ADD_PARITY_TOPOLOGY	supports	O(8)
-ADD_TOPO_INVARIANTS	supports	O(17)
+ADD_ZERO_BOUNDARY	supports	O_17
+ADD_PARITY_TOPOLOGY	supports	O_08
+ADD_TOPO_INVARIANTS	supports	O_17
 ADD_U11_EPI	supports	U_11
 ADD_U12_CIRCLE	supports	U_12
 ADD_U12_CIRCLE	depends_on	ADD_U11_EPI
-ADD_U12_CIRCLE	depends_on	U_10
+ADD_U12_CIRCLE	uses_analogy	U_10
 ADD_HALF_PHI	supports	U_09
 ADD_RESEARCH_FORMAT	exports_to	FTS_research_v8.md
 ADD_RESEARCH_FORMAT	exports_to	fts_cards_research_v8.jsonl
@@ -33701,8 +33940,115 @@ AC_20261003_WINDOWS_TRIPLES	depends_on	AC_20261003_WINDOW_FAMILIES
 AC_20261003_WINDOWS_FIVES	depends_on	AC_20261003_WINDOW_FAMILIES
 AC_20261003_WINDOWS_SEVENS	depends_on	AC_20261003_WINDOW_FAMILIES
 A_07	has_local_forbid	U7_MATH_LOCAL_FORBID
-U7_MATH_LOCAL_FORBID	depends_on	A_07
+U7_MATH_LOCAL_FORBID	applies_to	A_07
 U7_MATH_LOCAL_FORBID	depends_on	U_06
 U7_MATH_LOCAL_FORBID	depends_on	SP_WINDOW
 U7_MATH_LOCAL_FORBID	depends_on	SP_ZERO
+ADD_ZERO_BOUNDARY	applies_to	ADD_MIRROR_WINDOW
+ADDENDUM_V3	contains	ADD_RESEARCH_FORMAT
+M_07	depends_on	U_06
+CH_07	depends_on	U7_WINDOW_CORE
+CH_07	depends_on	OP_WindowClose
+CH_07	depends_on	OP_AgenticGate
+F1	depends_on	O_12
+F2	depends_on	O_12
+F3	depends_on	O_12
+F4	depends_on	O_12
+F5	depends_on	O_12
+T7A	depends_on	O_12
+T7B	depends_on	O_12
+T7C	depends_on	O_12
+ADD_PARITY_TOPOLOGY	depends_on	ADD_MIRROR_WINDOW
+ADD_TOPO_INVARIANTS	depends_on	ADD_ZERO_BOUNDARY
+ADD_HALF_PHI	depends_on	ADD_PARITY_TOPOLOGY
+ADD_CONSTANTS	depends_on	ADD_ZERO_BOUNDARY
+ADD_U11_EPI	depends_on	ADD_CONSTANTS
+ADD_U12_CIRCLE	depends_on	ADD_ZERO_BOUNDARY
+SP_WINDOW	depends_on	ADD_MIRROR_WINDOW
+SP_ZERO	depends_on	ADD_ZERO_BOUNDARY
+SP_U8	depends_on	U_08
+SP_U8	depends_on	M_08
+SP_U9	depends_on	U_09
+SP_U9	depends_on	M_09
+SP_U12	depends_on	U_12
+SP_U12	depends_on	ADD_U12_CIRCLE
+U7_WINDOW_CORE	depends_on	U_07
+U7_WINDOW_CORE	depends_on	M_07
+OP_WindowClose	depends_on	U7_WINDOW_CORE
+OP_WindowClose	depends_on	OP_Window
+U7_FORGET_CLOSE	depends_on	U7_WINDOW_CORE
+U7_FORGET_CLOSE	depends_on	OP_Refuse
+U7_FORGET_CLOSE	depends_on	OP_Sever
+U7_U8_ANSWER_QUESTION_BOUNDARY	depends_on	U_07
+U7_U8_ANSWER_QUESTION_BOUNDARY	depends_on	U_08
+U7_U8_ANSWER_QUESTION_BOUNDARY	depends_on	U7_WINDOW_CORE
+U7_AGENTIC_GATE_LAYER	depends_on	OP_kappa
+U7_AGENTIC_GATE_LAYER	depends_on	T7A
+U7_AGENTIC_GATE_LAYER	depends_on	T7B
+U7_AGENTIC_GATE_LAYER	depends_on	T7C
+U7_AGENTIC_GATE_LAYER	depends_on	U7_WINDOW_CORE
+CHI_STAT_LADDER	depends_on	OP_ChiCarrier
+CHI_STAT_LADDER	depends_on	OP_ChiOverlayMap
+CHI_STAT_LADDER	depends_on	OP_ChiSquareDiagnostic
+CHI_CARRIER	depends_on	U_06
+CHI_CARRIER	depends_on	U7_WINDOW_CORE
+OP_ChiCarrier	depends_on	OP_ChiSquareDiagnostic
+CHI_LADDER_U6	depends_on	U_06
+CHI_LADDER_U6	depends_on	CHI_CARRIER
+CHI_LADDER_U6	depends_on	OP_ChiSquareDiagnostic
+CHI_LADDER_U7	depends_on	U_07
+CHI_LADDER_U7	depends_on	U7_WINDOW_CORE
+CHI_LADDER_U7	depends_on	CHI_LADDER_U6
+CHI_LADDER_U8	depends_on	U_08
+CHI_LADDER_U8	depends_on	U7_U8_ANSWER_QUESTION_BOUNDARY
+CHI_LADDER_U8	depends_on	CHI_CARRIER
+CHI_LADDER_U9	depends_on	U_09
+CHI_LADDER_U9	depends_on	SP_U9
+CHI_LADDER_U9	depends_on	CHI_LADDER_U8
+CHI_LADDER_U10	depends_on	U_10
+CHI_LADDER_U10	depends_on	OP_dDelta
+CHI_LADDER_U10	depends_on	CHI_LADDER_U9
+CHI_LADDER_U11	depends_on	U_11
+CHI_LADDER_U11	depends_on	CHI_LADDER_U10
+COMPLEX_BRANCH_OVERLAY	depends_on	CHI_CARRIER
+COMPLEX_BRANCH_OVERLAY	depends_on	U7_WINDOW_CORE
+COMPLEX_CARRIER	depends_on	CHI_CARRIER
+OP_ComplexNormReadout	depends_on	OP_ChiCarrier
+OP_ComplexBranchAccess	depends_on	M_08
+OP_ComplexBranchAccess	depends_on	TA1
+OP_ComplexBoundaryBranch	depends_on	SP_U12
+OP_ComplexBoundaryBranch	depends_on	U12_CHI_PI_BOUNDARY
+COMPLEX_LADDER_U6	depends_on	U_06
+COMPLEX_LADDER_U6	depends_on	CHI_LADDER_U6
+COMPLEX_LADDER_U7	depends_on	U_07
+COMPLEX_LADDER_U7	depends_on	U7_WINDOW_CORE
+COMPLEX_LADDER_U7	depends_on	COMPLEX_LADDER_U6
+COMPLEX_LADDER_U8	depends_on	U_08
+COMPLEX_LADDER_U8	depends_on	OP_ComplexBranchAccess
+COMPLEX_LADDER_U9	depends_on	U_09
+COMPLEX_LADDER_U9	depends_on	SP_U9
+COMPLEX_LADDER_U9	depends_on	COMPLEX_LADDER_U8
+COMPLEX_LADDER_U10	depends_on	U_10
+COMPLEX_LADDER_U10	depends_on	CHI_LADDER_U10
+COMPLEX_LADDER_U11	depends_on	U_11
+COMPLEX_LADDER_U11	depends_on	CHI_LADDER_U11
+COMPLEX_LADDER_U12	depends_on	U_12
+COMPLEX_LADDER_U12	depends_on	SP_U12
+COMPLEX_LADDER_U12	depends_on	OP_ComplexBoundaryBranch
+U12_CHI_PI_COMPLEX_BOUNDARY	depends_on	U12_CHI_PI_BOUNDARY
+U12_CHI_PI_COMPLEX_BOUNDARY	depends_on	COMPLEX_LADDER_U12
+TENSOR_CONTEXT_OVERLAY	depends_on	U_10
+TENSOR_CONTEXT_OVERLAY	depends_on	U_11
+TENSOR_CONTEXT_OVERLAY	depends_on	U_12
+TENSOR_CARRIER	depends_on	CHI_CARRIER
+TENSOR_CARRIER	depends_on	Lambda_link
+OP_TensorContextMap	depends_on	Lambda_link
+OP_TensorContextMap	depends_on	U_10
+OP_TensorContextMap	depends_on	U_11
+TENSOR_LADDER_U10	depends_on	U_10
+TENSOR_LADDER_U10	depends_on	OP_TensorContextMap
+TENSOR_LADDER_U11	depends_on	U_11
+TENSOR_LADDER_U11	depends_on	TENSOR_LADDER_U10
+TENSOR_LADDER_U12	depends_on	U_12
+TENSOR_LADDER_U12	depends_on	U12_CHI_PI_COMPLEX_BOUNDARY
 ~~~~

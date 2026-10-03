@@ -1,28 +1,28 @@
 {
-  "package": "v13_active_integrated_2026-10-03",
-  "release_kind": "integrated_author_amendment_and_register_repair",
-  "base_release": "v13_complex_branch_overlay_author_correction_2026-09-21",
+  "package": "v13_active_graph_reconciled_2026-10-03",
+  "release_kind": "graph_dependency_reference_reconciliation",
+  "base_release": "v13_active_integrated_2026-10-03",
   "base_manifest_path": "work/canon_history/v13_complex_branch_overlay_2026-06-11/MANIFEST.json",
   "canonical_update_date": "2026-10-03",
-  "canonical_update": "Integrate AC-2026-10-03 window families and restore separate U7 mathematical and logical constraints; preserve AC-2026-09-21 and existing evidence statuses.",
+  "canonical_update": "Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.",
   "source_workbook": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-10-03T10:50:19.536997Z",
+  "exported_at_utc": "2026-10-03T13:03:44.108277Z",
   "files": [
     {
       "path": "FTS.yaml",
-      "size": 89314,
-      "sha256": "02853043f711981061e0f5458d4925ba7f99758f4acfed5add057c43635573dc"
+      "size": 89272,
+      "sha256": "72c540603687e56dc645e5a141b7c6885ac3ca52cd1079fc3d83cc6d73e6ff8b"
     },
     {
       "path": "FTS_v13_LLM_CONTEXT.md",
-      "size": 68823,
-      "sha256": "92b908e81e9fbc2c24db9a743e856a78baffc4d50d321117d05b1fdb165db123"
+      "size": 68908,
+      "sha256": "789c58200887f48bcdd23e15a174ecf579c51c46e5068e037cc60e517560fbed"
     },
     {
       "path": "FTS_v13_LLM_FULL_DUMP.md",
-      "size": 768555,
-      "sha256": "9ff4f0896a57c97669ae05449c05e513da45367001d3356966f279657b8f635c"
+      "size": 814998,
+      "sha256": "fa59ae8d76f505b0e6be7268e4102a0c02561575f6e742a0b442981fda501173"
     },
     {
       "path": "INSTALL.md",
@@ -36,56 +36,56 @@
     },
     {
       "path": "START_HERE.md",
-      "size": 1599,
-      "sha256": "f4d534d612b2a6d8a21576fa1436d7a837064270495560bd424e346c7ba1ada2"
+      "size": 1684,
+      "sha256": "038439e42875550d9ac2dd74237cbfdc039617258f3dede84caa8a15da1daf81"
     },
     {
       "path": "fts_cards.json",
-      "size": 97240,
-      "sha256": "6472a167895eef5d6a74d167cc4a4d2aac60db41993a2122256d6c9a6d2fcde5"
+      "size": 97144,
+      "sha256": "603aecd6fbfaa21e12dec9eb2f0a72d6c46138ddbcef2baf45f0f941690c220a"
     },
     {
       "path": "fts_cards.jsonl",
-      "size": 81716,
-      "sha256": "2b90ce6c7cba31cdc07fd6f4fb38228112463b0e7d4c64d5b842cae377178fa8"
+      "size": 81668,
+      "sha256": "9c9836bc66c5d2e07dca065252697dd07e9766d2fa9ebdd51e2be81fcab86861"
     },
     {
       "path": "fts_cards_table.tsv",
-      "size": 70122,
-      "sha256": "b2fc4e68b786fe75399e0b282dd459aa36d2b556cf9f35035bd4794141279914"
+      "size": 70086,
+      "sha256": "4e231bdcb36c5ddbf4605236550ca95025677a015cdf8d79a4c7bdaf459b4769"
     },
     {
       "path": "fts_graph_full.tsv",
-      "size": 33666,
-      "sha256": "873569d42f0eff536d07fc3741d6796f296f5db856db7bdb2a5aa703b23264e5"
+      "size": 72684,
+      "sha256": "0f5ec2c6ebad47f3c2c1ebde891f6d0ff7fa9332ff3e59cb6370b02ebf50482e"
     },
     {
       "path": "fts_triples.tsv",
-      "size": 9110,
-      "sha256": "5d0818fadbbfeca82467c92467f4736eaedec1e74170a5f8d14411c081e8ee82"
+      "size": 13188,
+      "sha256": "aee1780e6d4ed85894056cc49df054de4a660b6f5a7ef076eb488e8786fe7a9c"
     },
     {
       "path": "fts_v13_workbook_sheets.json",
-      "size": 981996,
-      "sha256": "4055f5e6b47e16276ff76759f70b9ebf847b10acf2024730c0f92571558d50d8"
+      "size": 1044046,
+      "sha256": "6f4fe0bc6ce050b853df03240e8b7cff07b46ad64735816b5e871a8a21e63006"
     },
     {
       "path": "sheet_index.tsv",
       "size": 1865,
-      "sha256": "0d4cfc66f965d6cf9fe94e77d4dece185d2408d459de93d8557115f7a4404acf"
+      "sha256": "a4e8ffce25a86714c0af86d94fd8d158bd99fd78f909df4188348d759da1812f"
     }
   ],
   "counts": {
     "cards": 169,
-    "triples": 271,
+    "triples": 378,
     "yaml_lines": 336,
     "sheets": 54
   },
-  "base_manifest_sha256": "f003f5b4c7ba5a4dc3448cfaf26bc54c18ccabfe36045525de200dcf91aab92c",
-  "base_git_commit": "f863a389382454ce78beef816f607f6b7e138b62",
+  "base_manifest_sha256": "e71c458b30fff6b0ac25eed7d55829003717fd013b1d5cdd4d0a9a2ffb2b7ee3",
+  "base_git_commit": "01914f7ca38d5b9f94baec8c2340d82192850a11",
   "source_workbook_status": "historical_input_not_reissued",
-  "active_cards_sha256": "2b90ce6c7cba31cdc07fd6f4fb38228112463b0e7d4c64d5b842cae377178fa8",
-  "active_triples_sha256": "5d0818fadbbfeca82467c92467f4736eaedec1e74170a5f8d14411c081e8ee82",
+  "active_cards_sha256": "9c9836bc66c5d2e07dca065252697dd07e9766d2fa9ebdd51e2be81fcab86861",
+  "active_triples_sha256": "aee1780e6d4ed85894056cc49df054de4a660b6f5a7ef076eb488e8786fe7a9c",
   "merged_parent_commits": [
     "e521e2006cacbd6b91b34377e26bc49bf02bcce6",
     "930878a6dacfaf53cc1b96126b27c170bbda1f9f"

@@ -17,7 +17,7 @@ index	sheet	range	rows	cols
 15	15_Внутр_архив	A1:G11	11	7
 16	16_TODO	A1:E15	15	5
 17	17_Карточки	A1:M170	170	13
-18	18_Граф	A1:H272	272	8
+18	18_Граф	A1:H379	379	8
 19	19_Канон_текст	A1:I80	80	9
 20	20_CE_метрика	A1:H16	16	8
 21	21_Переходы	A1:L9	9	12
@@ -34,10 +34,10 @@ index	sheet	range	rows	cols
 32	32_Integrity	A1:J11	11	10
 33	33_Validation	A1:F43	43	6
 34	34_Export_jsonl	A1:B170	170	2
-35	35_Export_tsv	A1:B272	272	2
+35	35_Export_tsv	A1:B379	379	2
 36	36_Export_yaml	A1:B337	337	2
 37	37_Export_md	A1:F31	31	6
-38	38_Changelog	A1:F15	15	6
+38	38_Changelog	A1:F16	16	6
 39	39_Status_Dict	A1:E21	21	5
 40	40_Reader_View	A1:B12	12	2
 41	41_Самодостаточность	A1:D9	9	4

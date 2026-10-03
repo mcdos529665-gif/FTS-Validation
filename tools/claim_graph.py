@@ -18,6 +18,11 @@ from collections import Counter, deque
 from pathlib import Path
 from typing import Any
 
+try:
+    from .reference_resolution import REGISTRY, fragment_witness, load_resolutions, validate_resolutions
+except ImportError:
+    from reference_resolution import REGISTRY, fragment_witness, load_resolutions, validate_resolutions
+
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "work" / "v14_rebuild" / "claim_graph"
@@ -44,6 +49,8 @@ RESEARCH_DIR = ROOT / "work" / "v14_rebuild" / "neural_skeleton_research_2026-09
 RESEARCH_CLAIMS = OUT_DIR / "RESEARCH_CLAIMS.tsv"
 RESEARCH_BRIDGES = OUT_DIR / "RESEARCH_CLAIM_BRIDGES.tsv"
 RESEARCH_EVIDENCE = OUT_DIR / "RESEARCH_EVIDENCE.tsv"
+RELATION_REVIEWS = AUDIT_DIR / 'GRAPH_RELATION_PATCH.tsv'
+CYCLE_REVIEWS = AUDIT_DIR / 'DEPENDENCY_CYCLE_REVIEW.tsv'
 
 NEURAL_EVIDENCE = RESEARCH_DIR / "EVIDENCE_MATRIX.tsv"
 SUM_EVIDENCE = RESEARCH_DIR / "SUM_DISTINCTION_EVIDENCE.tsv"
@@ -67,14 +74,14 @@ RELATION_RULES: dict[str, tuple[set[str], set[str]]] = {
     "has_status": ({"card", "author_statement", "claim", "claim_group", "finding"}, {"status_assessment"}),
     "has_status_before": ({"claim", "claim_group"}, {"status_assessment"}),
     "has_status_after": ({"claim", "claim_group"}, {"status_assessment"}),
-    "grounds_claim": ({"claim", "claim_group", "pattern", "author_statement"}, {"card", "source_document", "source_reference", "author_statement"}),
+    "grounds_claim": ({"claim", "claim_group", "pattern", "author_statement"}, {"card", "source_document", "source_fragment", "scope", "source_reference", "author_statement"}),
     "documented_in": ({"claim", "claim_group", "author_statement", "external_evidence", "internal_evidence", "finding", "status_assessment", "verification"}, {"source_document"}),
     "verified_by": ({"claim", "claim_group", "pattern"}, {"verification", "external_evidence", "internal_evidence"}),
     "supported_by": ({"claim", "claim_group"}, {"external_evidence", "internal_evidence", "verification", "source_document"}),
     "limited_by": ({"claim", "claim_group"}, {"finding", "external_evidence", "internal_evidence", "source_reference", "source_document"}),
     "refined_by": ({"claim", "claim_group"}, {"source_document", "external_evidence", "internal_evidence"}),
     "audits_claim": ({"finding"}, {"claim", "claim_group"}),
-    "contains": ({"source_document", "card", "author_statement"}, {"card", "author_statement", "claim", "claim_group", "finding", "pattern", "open_question", "verification", "external_evidence", "internal_evidence", "status_assessment", "source_reference", "literal", "unresolved_reference"}),
+    "contains": ({"source_document", "card", "author_statement", "scope"}, {"card", "author_statement", "claim", "claim_group", "finding", "pattern", "open_question", "verification", "external_evidence", "internal_evidence", "status_assessment", "source_reference", "source_fragment", "scope", "literal", "unresolved_reference"}),
     "opens_question": ({"pattern", "claim", "claim_group"}, {"open_question"}),
     "directly_traced_to": ({"pattern"}, {"open_question"}),
     "curated_bridge_to": ({"pattern"}, {"open_question"}),
@@ -88,7 +95,9 @@ RELATION_RULES: dict[str, tuple[set[str], set[str]]] = {
     "maps_to": ({"external_evidence", "internal_evidence"}, {"card", "claim", "claim_group"}),
     "supports_claim": ({"external_evidence", "internal_evidence", "verification"}, {"claim", "claim_group"}),
     "limits_claim": ({"external_evidence", "internal_evidence", "finding"}, {"claim", "claim_group"}),
-    "depends_on": ({"card", "author_statement"}, {"card", "author_statement", "literal", "unresolved_reference"}),
+    "depends_on": ({"card", "author_statement"}, {"card", "author_statement", "source_fragment", "literal", "unresolved_reference"}),
+    "applies_to": ({"card", "author_statement"}, {"card", "author_statement"}),
+    "uses_analogy": ({"card", "author_statement"}, {"card", "author_statement"}),
 }
 
 
@@ -193,6 +202,9 @@ class GraphBuilder:
         self.inputs: set[Path] = set()
         self.aliases: dict[str, str] = {}
         self.counts: Counter[str] = Counter()
+        self.resolutions = load_resolutions()
+        self.resolved_references: dict[str, str] = {}
+        self.input(REGISTRY)
 
     def input(self, path: Path) -> None:
         if path.is_file():
@@ -257,6 +269,9 @@ class GraphBuilder:
         return self.node(node_id, "source_document", label or rel(path), layer, source_file=rel(path))
 
     def source_reference(self, raw: str, source_file: Path, row: int) -> str:
+        resolved = self.resolve_reference(raw, source_file, row, "research", as_source=True)
+        if resolved is not None:
+            return resolved
         node_id = f"source_ref_{short_hash(raw)}"
         return self.node(
             node_id,
@@ -270,6 +285,77 @@ class GraphBuilder:
             source_location=f"row:{row}",
         )
 
+    def resolve_reference(self, raw: str, origin: Path, row: int, layer: str, *, as_source: bool = False) -> str | None:
+        resolution = self.resolutions.get(raw)
+        if resolution is None:
+            return None
+        if raw in self.resolved_references:
+            return self.resolved_references[raw]
+        kind = resolution['resolution']
+        attrs = {
+            'raw_reference': raw,
+            'reference_resolution': kind,
+            'resolution_evidence': resolution['evidence'],
+            'resolution_registry': rel(REGISTRY),
+            'scope': resolution['scope'],
+            'status_effect': resolution['status_effect'],
+        }
+        if kind == 'card_alias':
+            target = self.aliases.get(resolution['target'])
+            if target is None:
+                raise ValueError(f'Missing alias target: {raw} -> {resolution["target"]}')
+        elif kind in {'sheet_record', 'document_fragment'}:
+            location, witness = fragment_witness(ROOT, resolution)
+            target = self.node(
+                f'ref_resolved_{short_hash(raw)}', 'source_fragment', raw, layer,
+                **attrs, resolution_state='resolved_fragment',
+                source_file=resolution['target'], source_location=location,
+                fragment_record=witness,
+            )
+            document = self.document(ROOT / resolution['target'], layer=layer)
+            self.edge(f'resolution_contains_{short_hash(raw)}', document, target, 'contains',
+                      'reference_registry', 'CURATED', REGISTRY, f'reference:{raw}',
+                      scope=resolution['scope'], status_effect=resolution['status_effect'])
+        elif kind == 'scope':
+            members = json.loads(resolution['target'])
+            target = self.node(f'ref_scope_{short_hash(raw)}', 'scope', raw, layer,
+                               **attrs, resolution_state='resolved_scope', members=members,
+                               source_file=rel(origin), source_location=f'row:{row}')
+            for member in members:
+                member_id = self.aliases.get(member)
+                if member_id is None:
+                    raise ValueError(f'Missing scope member: {raw} -> {member}')
+                self.edge(f'scope_member_{short_hash(raw)}_{slug(member)}', target, member_id,
+                          'contains', 'reference_registry', 'CURATED', REGISTRY,
+                          f'reference:{raw}:member:{member}', scope=resolution['scope'],
+                          status_effect='membership only; no independent support claim')
+        elif kind == 'document_set':
+            members = json.loads(resolution['target'])
+            target = self.node(f'ref_documents_{short_hash(raw)}', 'source_document', raw, layer,
+                               **attrs, resolution_state='resolved_document_set', members=members,
+                               source_file=rel(REGISTRY), source_location=f'reference:{raw}')
+            for member in members:
+                document = self.document(ROOT / member, layer=layer)
+                self.edge(f'document_member_{short_hash(raw)}_{short_hash(member)}', target, document,
+                          'contains', 'reference_registry', 'CURATED', REGISTRY,
+                          f'reference:{raw}:member:{member}', scope=resolution['scope'],
+                          status_effect='source collection only; no independent support claim')
+        elif kind == 'literal':
+            target = self.node(f'literal_{short_hash(raw)}', 'literal', raw, layer, **attrs,
+                               raw_value=raw, resolution_state='literal',
+                               literal_kind=resolution['target'], source_file=rel(origin),
+                               source_location=f'row:{row}')
+        else:
+            prefix = 'source_ref' if as_source else 'ref_unresolved'
+            target = self.node(f'{prefix}_{short_hash(raw)}',
+                               'source_reference' if as_source else 'unresolved_reference',
+                               raw, layer, **attrs, resolution_state='unresolved_reference',
+                               missing_reason='нет в артефактах', candidates=resolution['target'],
+                               next_step=resolution['next_step'], source_file=rel(origin),
+                               source_location=f'row:{row}')
+        self.resolved_references[raw] = target
+        return target
+
     def output(self) -> dict[str, Any]:
         inputs = [
             {"path": rel(path), "sha256": sha256(path)}
@@ -279,7 +365,7 @@ class GraphBuilder:
             "schema": "fts_claim_graph/v1",
             "generator": "tools/claim_graph.py",
             "trust_boundary": {
-                "canonical_v13": "immutable source-backed assertions",
+                "canonical_v13": "active editable canon; versioned source-backed assertions",
                 "author_canon": "accepted author supplement; separate versioned layer",
                 "research": "curated claims and bridges with explicit scope",
                 "external_evidence": "bibliographic or experimental evidence; no automatic St_FTS promotion",
@@ -312,6 +398,22 @@ def build_graph() -> dict[str, Any]:
     card_ids = canonical_card_id_map(canon_cards, "card")
     author_ids = canonical_card_id_map(author_cards, "author")
     builder = GraphBuilder()
+    builder.aliases.update(author_ids)
+    builder.aliases.update(card_ids)
+    validate_resolutions(ROOT, builder.resolutions, set(canon_by_id))
+    reviews = {}
+    for review_file in (RELATION_REVIEWS, CYCLE_REVIEWS):
+        builder.input(review_file)
+        for review_number, review in enumerate(read_tsv(review_file), 2):
+            reviews[(review['final_subject'], review['final_predicate'], review['final_object'])] = {
+                'scope': review['scope'], 'status_effect': review['status_effect'],
+                'relationship_review_file': rel(review_file),
+                'relationship_review_location': f'row:{review_number}',
+                'review_confidence': 'CURATED',
+            }
+
+    def review_attrs(subject: str, predicate: str, obj: str, layer: str) -> dict:
+        return reviews.get((subject, predicate, obj), {}) if layer == 'canonical_v13' else {}
     # OQ nodes and their statuses are extracted below; retain the file digest so
     # validation catches a stale graph after an OQ edit.
     builder.input(OPEN_QUESTIONS)
@@ -329,6 +431,9 @@ def build_graph() -> dict[str, Any]:
             return card_ids[raw]
         if raw in author_ids:
             return author_ids[raw]
+        resolved = builder.resolve_reference(raw, source_path, row, layer)
+        if resolved is not None:
+            return resolved
         literal = raw.startswith("(") or raw.startswith("{") or raw.endswith(".md") or raw.startswith("scope:")
         if literal:
             return builder.node(
@@ -420,6 +525,7 @@ def build_graph() -> dict[str, Any]:
                     source_path,
                     f"card:{card['id']}:depends_on[{index}]",
                     assertion_kind="card_field",
+                    **review_attrs(str(card['id']), 'depends_on', str(dependency), layer),
                 )
 
     def add_triples(path: Path, layer: str) -> None:
@@ -440,6 +546,7 @@ def build_graph() -> dict[str, Any]:
                     assertion_kind="triple",
                     raw_subject=row.get("subject", ""),
                     raw_object=row.get("object", ""),
+                    **review_attrs(row['subject'], row['predicate'], row['object'], layer),
                 )
 
     add_card_dependencies(canon_cards, "canonical_v13", CANON_CARDS, card_ids)
@@ -789,11 +896,12 @@ def build_graph() -> dict[str, Any]:
         builder.edge(row["bridge_id"], source, target, row["relation"], "research_bridge", row["confidence"].upper(), bridge_source, f"row:{row_no}", scope=row["scope"], status_effect=row["status_effect"], rationale=row["rationale"])
 
     graph = builder.output()
+    canonical_triple_count = len(read_tsv(CANON_TRIPLES))
     graph["coverage"] = {
         "canonical_cards": len(canon_cards),
-        "canonical_triples": sum(1 for _ in CANON_TRIPLES.open(encoding="utf-8")) - 1,
+        "canonical_triples": canonical_triple_count,
         "canonical_card_depends_on": sum(len(card.get("depends_on") or []) for card in canon_cards),
-        "canonical_input_assertions": sum(1 for _ in CANON_TRIPLES.open(encoding="utf-8")) - 1 + sum(len(card.get("depends_on") or []) for card in canon_cards) + sum(len(read_tsv(directory / "triples.tsv")) for directory in AUTHOR_PACKAGES) + sum(len(card.get("depends_on") or []) for card in author_cards),
+        "canonical_input_assertions": canonical_triple_count + sum(len(card.get("depends_on") or []) for card in canon_cards) + sum(len(read_tsv(directory / "triples.tsv")) for directory in AUTHOR_PACKAGES) + sum(len(card.get("depends_on") or []) for card in author_cards),
         "author_cards": len(author_cards),
         "author_triples": sum(len(read_tsv(directory / "triples.tsv")) for directory in AUTHOR_PACKAGES),
         "audit_claim_groups": len(claims),
@@ -833,6 +941,8 @@ def write_markdown_reports(graph: dict[str, Any]) -> None:
         "- `CLAIM_MATRIX.tsv` покрыт на уровне 25 групп; атомарные claims внутри групп не выдумываются.",
         "- C01–C62 представлены как verification-evidence; их PASS не повышает St_FTS.",
         "- Неразрешённые ссылки сохранены как `source_reference`/`unresolved_reference` с `нет в артефактах`.",
+        "- Точные записи книги адресуются как `source_fragment`; scope/literal сохраняют группировку и тип, не создавая новых канонических карточек.",
+        "- Решения по ссылкам и отношениям: `audit/REFERENCE_RESOLUTIONS.tsv`, `audit/GRAPH_RELATION_PATCH.tsv`, `audit/DEPENDENCY_CYCLE_REVIEW.tsv`.",
         "- Внешние evidence-строки без явного bridge остаются evidence-узлами без поддержки конкретного claim.",
         "- Graphify не используется как authoritative storage, поскольку его простой граф может схлопывать параллельные relation-варианты.",
         "",
@@ -924,6 +1034,7 @@ def load_graph() -> dict[str, Any]:
 
 
 def validate_graph(graph: dict[str, Any], idempotent: bool = False) -> dict[str, Any]:
+    resolutions = load_resolutions()
     nodes = {str(node["id"]): node for node in graph.get("nodes", [])}
     edges = list(graph.get("edges", []))
     if len(nodes) != len(graph.get("nodes", [])):
@@ -983,6 +1094,17 @@ def validate_graph(graph: dict[str, Any], idempotent: bool = False) -> dict[str,
         source_file = node.get("source_file")
         if source_file and not (ROOT / source_file).is_file():
             raise AssertionError(f"node source missing: {node['id']} -> {source_file}")
+        if node.get('resolution_state') == 'resolved_fragment':
+            resolution = resolutions.get(node.get('raw_reference'))
+            if resolution is None:
+                raise AssertionError(f'Unregistered fragment: {node["id"]}')
+            location, witness = fragment_witness(ROOT, resolution)
+            if (node.get('source_file'), node.get('source_location'), node.get('fragment_record')) != (resolution['target'], location, witness):
+                raise AssertionError(f'Fragment witness drift: {node["id"]}')
+        if node.get('resolution_state') == 'unresolved_reference':
+            resolution = resolutions.get(node.get('raw_reference'))
+            if resolution is None or resolution['resolution'] not in {'missing', 'ambiguous'} or not node.get('next_step'):
+                raise AssertionError(f'Unclassified unresolved reference: {node["id"]}')
     for edge in edges:
         source_file = edge.get("source_file")
         if source_file and not (ROOT / source_file).is_file():
