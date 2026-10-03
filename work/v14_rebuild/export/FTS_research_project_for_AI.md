@@ -30,7 +30,7 @@
 | `tools/build_research_export.py` | `7ab603eea6aa5fec315a196ac2e3881cd5dfc6d3cb98ae28d4bd9f655b17ecb8` |
 | `AGENTS.md` | `382c79ffd6f2eee96c581c6f4c0ab3b6e79eb05ce743c9ba1ef695ff082be295` |
 | `PROJECT_INSTRUCTIONS.md` | `c6f0ea29a03108b45daa6dc3542e7afe9f8eadca70cf6301ff5e2a3ff86c12c7` |
-| `work/STATE.md` | `23f28a396b06d323e8cf50d7eb0a270a458f1171d81249ff13699c6589545cfd` |
+| `work/STATE.md` | `0419b6ad27f0bafb5119d684b462c37f634aa0b1f0d3930bc80b8e9e8370e0a6` |
 | `work/notation.md` | `e0b5f3f18833104f694c54a863c555d948e0f9ca5ce0701f7ec3fbd671a61b6c` |
 | `work/DOCUMENT_MAP.md` | `c55ccab0a7a5e476b4144a0ca9e7b4d47d3e2b07668c912951e32c65aa028d39` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
@@ -454,8 +454,8 @@ check visual structure; correct `article.md` against source, never the reverse.
 
 #### Текущая цель
 
-Ветки основной разработки и рабочего дерева объединены. Проверенная сборка
-подготовлена для основного каталога `C:/Users/Mcdos/Desktop/FTS_v13_project`.
+Ветки основной разработки и рабочего дерева объединены и перенесены в `master`.
+Единое место работы: `C:/Users/Mcdos/Desktop/FTS_v13_project`.
 Действует редактируемый канон и английский контракт; ответы пользователю — по-русски.
 Отчёт выполнения и сохранность материалов: [MERGE_2026-10-03](project_consistency/MERGE_2026-10-03.md).
 
