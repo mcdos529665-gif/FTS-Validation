@@ -32,6 +32,7 @@ CANON_TRIPLES = ROOT / "source" / "fts_triples.tsv"
 AUTHOR_DIR = ROOT / "work" / "author_canon" / "2026-09-21"
 AUTHOR_CARDS = AUTHOR_DIR / "cards.jsonl"
 AUTHOR_TRIPLES = AUTHOR_DIR / "triples.tsv"
+AUTHOR_PACKAGES = (AUTHOR_DIR, ROOT / "work" / "author_canon" / "2026-10-03")
 AUDIT_DIR = ROOT / "work" / "v14_rebuild" / "audit"
 CLAIMS = AUDIT_DIR / "CLAIM_MATRIX.tsv"
 FINDINGS = AUDIT_DIR / "FINDINGS.tsv"
@@ -296,12 +297,16 @@ def canonical_card_id_map(cards: list[dict[str, Any]], prefix: str) -> dict[str,
 
 
 def build_graph() -> dict[str, Any]:
-    for path in [CANON_CARDS, CANON_TRIPLES, AUTHOR_CARDS, AUTHOR_TRIPLES, CLAIMS, FINDINGS, ATLAS, OQ_MAP, OPEN_QUESTIONS, VERIFICATION, RESEARCH_CLAIMS, RESEARCH_EVIDENCE, RESEARCH_BRIDGES]:
+    for path in [CANON_CARDS, CANON_TRIPLES, CLAIMS, FINDINGS, ATLAS, OQ_MAP, OPEN_QUESTIONS, VERIFICATION, RESEARCH_CLAIMS, RESEARCH_EVIDENCE, RESEARCH_BRIDGES, *[directory / name for directory in AUTHOR_PACKAGES for name in ("cards.jsonl", "triples.tsv")]]:
         if not path.is_file():
             raise FileNotFoundError(f"нет в артефактах: {rel(path)}")
 
     canon_cards = read_jsonl(CANON_CARDS)
-    author_cards = read_jsonl(AUTHOR_CARDS)
+    author_packets = [(directory / "cards.jsonl", read_jsonl(directory / "cards.jsonl")) for directory in AUTHOR_PACKAGES]
+    author_cards = [card for _path, packet in author_packets for card in packet]
+    author_paths = {str(card["id"]): path for path, packet in author_packets for card in packet}
+    if len(author_paths) != len(author_cards):
+        raise ValueError("Duplicate author IDs across active author packages")
     canon_by_id = {str(card["id"]): card for card in canon_cards}
     author_by_id = {str(card["id"]): card for card in author_cards}
     card_ids = canonical_card_id_map(canon_cards, "card")
@@ -312,11 +317,14 @@ def build_graph() -> dict[str, Any]:
     builder.input(OPEN_QUESTIONS)
     builder.input(CANON_CARDS)
     builder.input(CANON_TRIPLES)
-    builder.input(AUTHOR_CARDS)
-    builder.input(AUTHOR_TRIPLES)
+    for directory in AUTHOR_PACKAGES:
+        builder.input(directory / "cards.jsonl")
+        builder.input(directory / "triples.tsv")
 
     def ref_node(raw: str, layer: str, source_path: Path, row: int) -> str:
         raw = str(raw).strip()
+        if layer == "author_canon" and raw in author_ids:
+            return author_ids[raw]
         if raw in card_ids:
             return card_ids[raw]
         if raw in author_ids:
@@ -347,6 +355,10 @@ def build_graph() -> dict[str, Any]:
 
     def card_node(card: dict[str, Any], card_id: str, layer: str, node_type: str) -> str:
         node_id = card_id
+        card_path = author_paths[str(card["id"])] if layer == "author_canon" else CANON_CARDS
+        status_key = slug(str(card["id"]))
+        if str(card["id"]) in card_ids and str(card["id"]) in author_ids:
+            status_key = slug(layer) + "_" + status_key
         builder.node(
             node_id,
             node_type,
@@ -356,14 +368,14 @@ def build_graph() -> dict[str, Any]:
             status=card.get("status"),
             tags=card.get("tags", []),
             text=card.get("text", ""),
-            source_file=rel(AUTHOR_CARDS if layer == "author_canon" else CANON_CARDS),
+            source_file=rel(card_path),
             source_location=f"card:{card.get('id')}",
         )
         status_value = card.get("status") or card.get("author_status") or "unknown"
         if layer == "author_canon":
             status_value = card.get("author_status") or card.get("status") or "unknown"
             status_value = f"{status_value}; evidence_status={card.get('evidence_status', 'unknown')}"
-        assessment_id = f"assessment_{slug(str(card['id']))}_status"
+        assessment_id = f"assessment_{status_key}_status"
         builder.node(
             assessment_id,
             "status_assessment",
@@ -372,17 +384,17 @@ def build_graph() -> dict[str, Any]:
             status_text=status_value,
             status_axis="author_status" if layer == "author_canon" else "St_FTS",
             status_effect="stored_only; no automatic promotion",
-            source_file=rel(AUTHOR_CARDS if layer == "author_canon" else CANON_CARDS),
+            source_file=rel(card_path),
             source_location=f"card:{card['id']}",
         )
         builder.edge(
-            f"status_{slug(str(card['id']))}",
+            f"status_{status_key}",
             node_id,
             assessment_id,
             "has_status",
             layer,
             "EXTRACTED",
-            AUTHOR_CARDS if layer == "author_canon" else CANON_CARDS,
+            card_path,
             f"card:{card['id']}",
             status_effect="stored_only; no automatic promotion",
         )
@@ -417,7 +429,7 @@ def build_graph() -> dict[str, Any]:
                 source_id = ref_node(row.get("subject", ""), layer, path, row_no)
                 target_id = ref_node(row.get("object", ""), layer, path, row_no)
                 builder.edge(
-                    f"{slug(layer)}_triple_{row_no - 1:04d}",
+                    f"{slug(layer)}{'_' + slug(path.parent.name) if layer == 'author_canon' and path != AUTHOR_TRIPLES else ''}_triple_{row_no - 1:04d}",
                     source_id,
                     target_id,
                     row.get("predicate", ""),
@@ -432,16 +444,18 @@ def build_graph() -> dict[str, Any]:
 
     add_card_dependencies(canon_cards, "canonical_v13", CANON_CARDS, card_ids)
     add_triples(CANON_TRIPLES, "canonical_v13")
-    add_card_dependencies(author_cards, "author_canon", AUTHOR_CARDS, author_ids)
-    add_triples(AUTHOR_TRIPLES, "author_canon")
+    for author_path, packet in author_packets:
+        add_card_dependencies(packet, "author_canon", author_path, author_ids)
+        add_triples(author_path.parent / "triples.tsv", "author_canon")
 
     for card in author_cards:
         source_id = author_ids[str(card["id"])]
+        author_path = author_paths[str(card["id"])]
         for field in ("source", "clarification_source"):
             raw = str(card.get(field, "")).strip()
             if not raw:
                 continue
-            path = AUTHOR_DIR / raw
+            path = author_path.parent / raw
             if path.is_file():
                 target = builder.document(path, layer="author_canon")
                 builder.edge(
@@ -451,11 +465,11 @@ def build_graph() -> dict[str, Any]:
                     "documented_in",
                     "author_canon",
                     "EXTRACTED",
-                    AUTHOR_CARDS,
+                    author_path,
                     f"card:{card['id']}:{field}",
                 )
             else:
-                target = builder.source_reference(raw, AUTHOR_CARDS, int(card.get("_line", 0) or 0))
+                target = builder.source_reference(raw, author_path, int(card.get("_line", 0) or 0))
                 builder.edge(
                     f"author_source_ref_{slug(str(card['id']))}_{slug(field)}",
                     source_id,
@@ -463,7 +477,7 @@ def build_graph() -> dict[str, Any]:
                     "grounds_claim",
                     "author_canon",
                     "EXTRACTED",
-                    AUTHOR_CARDS,
+                    author_path,
                     f"card:{card['id']}:{field}",
                 )
         for index, text in enumerate(card.get("open_obligations") or []):
@@ -472,7 +486,7 @@ def build_graph() -> dict[str, Any]:
                 "open_obligation",
                 compact(text),
                 "author_canon",
-                source_file=rel(AUTHOR_CARDS),
+                source_file=rel(author_path),
                 source_location=f"card:{card['id']}:open_obligations[{index}]",
             )
             builder.edge(
@@ -482,7 +496,7 @@ def build_graph() -> dict[str, Any]:
                 "has_open_obligation",
                 "author_canon",
                 "EXTRACTED",
-                AUTHOR_CARDS,
+                author_path,
                 f"card:{card['id']}:open_obligations[{index}]",
             )
         for index, text in enumerate(card.get("local_forbid") or []):
@@ -491,7 +505,7 @@ def build_graph() -> dict[str, Any]:
                 "constraint",
                 compact(text),
                 "author_canon",
-                source_file=rel(AUTHOR_CARDS),
+                source_file=rel(author_path),
                 source_location=f"card:{card['id']}:local_forbid[{index}]",
             )
             builder.edge(
@@ -501,7 +515,7 @@ def build_graph() -> dict[str, Any]:
                 "has_local_forbid",
                 "author_canon",
                 "EXTRACTED",
-                AUTHOR_CARDS,
+                author_path,
                 f"card:{card['id']}:local_forbid[{index}]",
             )
 
@@ -779,9 +793,9 @@ def build_graph() -> dict[str, Any]:
         "canonical_cards": len(canon_cards),
         "canonical_triples": sum(1 for _ in CANON_TRIPLES.open(encoding="utf-8")) - 1,
         "canonical_card_depends_on": sum(len(card.get("depends_on") or []) for card in canon_cards),
-        "canonical_input_assertions": sum(1 for _ in CANON_TRIPLES.open(encoding="utf-8")) - 1 + sum(len(card.get("depends_on") or []) for card in canon_cards) + sum(1 for _ in AUTHOR_TRIPLES.open(encoding="utf-8")) - 1 + sum(len(card.get("depends_on") or []) for card in author_cards),
+        "canonical_input_assertions": sum(1 for _ in CANON_TRIPLES.open(encoding="utf-8")) - 1 + sum(len(card.get("depends_on") or []) for card in canon_cards) + sum(len(read_tsv(directory / "triples.tsv")) for directory in AUTHOR_PACKAGES) + sum(len(card.get("depends_on") or []) for card in author_cards),
         "author_cards": len(author_cards),
-        "author_triples": sum(1 for _ in AUTHOR_TRIPLES.open(encoding="utf-8")) - 1,
+        "author_triples": sum(len(read_tsv(directory / "triples.tsv")) for directory in AUTHOR_PACKAGES),
         "audit_claim_groups": len(claims),
         "audit_findings": len(findings),
         "patterns": len(atlas),
@@ -825,7 +839,7 @@ def write_markdown_reports(graph: dict[str, Any]) -> None:
         "## Обработанные слои",
         "",
         "- `canonical_v13`: карточки и все направленные триплеты/`depends_on`.",
-        "- `author_canon`: AC-2026-09-19 с отдельным provenance и статусом авторского принятия.",
+        "- `author_canon`: AC-2026-09-21 и AC-2026-10-03 с отдельным provenance и статусом авторского принятия; прежние уточнения сохраняются исторически.",
         "- `audit`: claims, findings, patterns, OQ и проверки.",
         "- `external_research` и `internal_research`: evidence matrices и внутренние результаты.",
         "- `research_bridge`: только явно записанные curated bridges из `RESEARCH_CLAIM_BRIDGES.tsv`.",
@@ -976,14 +990,14 @@ def validate_graph(graph: dict[str, Any], idempotent: bool = False) -> dict[str,
 
     # Directional canonical completeness, including parallel relation variants.
     expected_signatures: list[tuple[str, str, str, str, str]] = []
-    for path_text, prefix in [(rel(CANON_TRIPLES), "canonical_v13"), (rel(AUTHOR_TRIPLES), "author_canon")]:
+    for path_text, prefix in [(rel(CANON_TRIPLES), "canonical_v13"), *[(rel(directory / "triples.tsv"), "author_canon") for directory in AUTHOR_PACKAGES]]:
         path = ROOT / path_text
         with path.open(encoding="utf-8", newline="") as handle:
             for row_no, row in enumerate(csv.DictReader(handle, delimiter="\t"), 2):
                 source = _expected_ref_id(row["subject"], prefix, graph)
                 target = _expected_ref_id(row["object"], prefix, graph)
                 expected_signatures.append((source, target, row["predicate"], path_text, f"row:{row_no}"))
-    for path_text, prefix in [(rel(CANON_CARDS), "canonical_v13"), (rel(AUTHOR_CARDS), "author_canon")]:
+    for path_text, prefix in [(rel(CANON_CARDS), "canonical_v13"), *[(rel(directory / "cards.jsonl"), "author_canon") for directory in AUTHOR_PACKAGES]]:
         path = ROOT / path_text
         ids = _card_ids_for_prefix(path, prefix)
         for card in read_jsonl(path):
@@ -1048,6 +1062,9 @@ def _card_ids_for_prefix(path: Path, prefix: str) -> dict[str, str]:
 def _expected_ref_id(raw: str, layer: str, graph: dict[str, Any]) -> str:
     raw = str(raw).strip()
     for node in graph.get("nodes", []):
+        if node.get("card_id") == raw and node.get("layer") == layer:
+            return str(node["id"])
+    for node in graph.get("nodes", []):
         if node.get("card_id") == raw:
             return str(node["id"])
     for node in graph.get("nodes", []):
@@ -1076,6 +1093,10 @@ def alias_map(graph: dict[str, Any]) -> dict[str, str]:
             aliases[slug(document_stem)] = node_id
             if document_stem == "DEEP_RESEARCH_REPORT_10_INTEGRATION":
                 aliases["deep_report_10_integration"] = node_id
+    # Prefer active canonical cards for public card-ID aliases; explicit author node IDs remain available.
+    for node in graph["nodes"]:
+        if node.get("type") == "card" and node.get("card_id"):
+            aliases[str(node["card_id"])] = str(node["id"])
     return aliases
 
 

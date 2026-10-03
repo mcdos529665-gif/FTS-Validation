@@ -55,3 +55,13 @@
 - Card-only edges: 102 (`ADD_TRIPLE` в patch-плане).
 - Triple-only edges: 1 (`REVIEW_TRIPLE` в patch-плане).
 - Конфликт: `ADD_U12_CIRCLE →depends_on→ U_10` есть только в TSV.
+
+## Active register repair — 2026-10-03
+
+The previous U7 mathematical SCC is now `A_07 ↔ U7_MATH_LOCAL_FORBID`.
+`M_07` keeps the September logical form; `U7_LOGIC_GROUPING` is its distinct
+constraint. The three documented SCCs remain three, with the mathematical
+record correctly named. Current representation drift: 97 card-only and
+1 triple-only dependency. These remain P2 limitations; no new unresolved
+reference or status promotion is introduced. Historical measurements above
+retain their original scope.

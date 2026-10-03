@@ -205,7 +205,7 @@ U_07	has_antimode_detail	U7_FORGET_CLOSE	v11_core	USER_DIALOG_V11	candidate_core
 U7_WINDOW_CORE	has_boundary	U7_U8_ANSWER_QUESTION_BOUNDARY	v11_boundary	USER_DIALOG_V11	candidate_boundary	ответ/вопрос; У7/У8	G_0204
 U_08	contrasts_with	U7_U8_ANSWER_QUESTION_BOUNDARY	v11_boundary	USER_DIALOG_V11	candidate_boundary	У8 = A?; не слабое У7	G_0205
 U7_WINDOW_CORE	has_agentic_gate	U7_AGENTIC_GATE_LAYER	v11_guardrail	CANON_EN/USER_DIALOG_V11	operational_diagnostic_layer	κ/T7 перенесены в diagnostic layer	G_0206
-M_07	has_local_forbid	U7_MATH_LOCAL_FORBID	author_correction_2026-09-21	AUTHOR_CORRECTION_2026-09-21/RESEARCH_STATUS_V9	derived_constraint	вложенная форма У7 не должна схлопываться в обычную булеву тень	G_0207
+M_07	has_local_forbid	U7_LOGIC_GROUPING	integration_2026-10-03	CANON_V43 + AUTHOR_CORRECTION_2026-09-21	candidate_with_operational_gate	Explicit author integration / register repair	G_0239
 U_06	contrasts_with	U7_MATH_LOCAL_FORBID	v11_math	RESEARCH_STATUS_V9/USER_DIALOG_V11	derived_constraint	У7 не должен схлопываться в У6	G_0208
 CHI_STAT_LADDER	uses_carrier	CHI_CARRIER	v12_chi_ladder	USER_DIALOG_V12	statistical_overlay_candidate	x:=χ, not χ²	G_0209
 CHI_CARRIER	has_operator	OP_ChiCarrier	v12_chi_ladder	USER_DIALOG_V12	statistical_overlay_candidate	χ_i from O_i,E_i	G_0210
@@ -237,3 +237,36 @@ TENSOR_CONTEXT_OVERLAY	has_operator	OP_TensorContextMap	25_Операторы	US
 U_10	has_tensor_overlay	TENSOR_LADDER_U10	Tensor_Context_Overlay	USER_DIALOG_V13	candidate_overlay	U10 tensor metric	G_0236
 U_11	has_tensor_overlay	TENSOR_LADDER_U11	Tensor_Context_Overlay	USER_DIALOG_V13	candidate_overlay	U11 observer index	G_0237
 U_12	has_tensor_overlay	TENSOR_LADDER_U12	Tensor_Context_Overlay	USER_DIALOG_V13	candidate_U12_overlay	U12 tensor boundary	G_0238
+AC_20261003_AUTHOR_DECISION	adopts	AC_20261003_WINDOW_FAMILIES	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0240
+AC_20261003_WINDOW_FAMILIES	has_family	AC_20261003_WINDOWS_TRIPLES	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0241
+AC_20261003_WINDOW_FAMILIES	has_family	AC_20261003_WINDOWS_FIVES	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0242
+AC_20261003_WINDOW_FAMILIES	has_family	AC_20261003_WINDOWS_SEVENS	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0243
+AC_20261003_WINDOW_FAMILIES	depends_on	AC_20261003_AUTHOR_DECISION	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0244
+AC_20261003_WINDOW_FAMILIES	requires_mapping_to	U_m1	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0245
+AC_20261003_WINDOW_FAMILIES	requires_mapping_to	U_03	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0246
+AC_20261003_WINDOW_FAMILIES	requires_mapping_to	U_07	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0247
+AC_20261003_WINDOW_FAMILIES	requires_mapping_to	U_11	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0248
+AC_20261003_WINDOW_FAMILIES	requires_mapping_to	U_15	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0249
+AC_20261003_WINDOW_FIVES_ALIGNMENT	depends_on	AC_20261003_WINDOW_FAMILIES	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	editorial_check	Explicit author integration / register repair	G_0250
+AC_20261003_WINDOW_FIVES_ALIGNMENT	depends_on	U_03	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	editorial_check	Explicit author integration / register repair	G_0251
+AC_20261003_WINDOW_FIVES_ALIGNMENT	depends_on	U_07	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	editorial_check	Explicit author integration / register repair	G_0252
+AC_20261003_WINDOW_FIVES_ALIGNMENT	depends_on	U_09	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	editorial_check	Explicit author integration / register repair	G_0253
+U_07	has_math_expression	A_07	integration_2026-10-03	CANON_V43/CANON_EN + AUTHOR_CORRECTION_2026-09-21	candidate_with_operational_gate	Explicit author integration / register repair	G_0254
+U_07	has_local_forbid	U7_LOGIC_GROUPING	integration_2026-10-03	CANON_V43/CANON_EN + AUTHOR_CORRECTION_2026-09-21	candidate_with_operational_gate	Explicit author integration / register repair	G_0255
+A_07	depends_on	U_06	integration_2026-10-03	CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03	candidate_with_operational_gate	Explicit author integration / register repair	G_0256
+A_07	depends_on	U7_MATH_LOCAL_FORBID	integration_2026-10-03	CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03	candidate_with_operational_gate	Explicit author integration / register repair	G_0257
+U7_LOGIC_GROUPING	depends_on	M_07	integration_2026-10-03	AUTHOR_CORRECTION_2026-09-21 + RESEARCH_STATUS_V9 + REGISTER_REPAIR_2026-10-03	derived_constraint	Explicit author integration / register repair	G_0258
+U7_LOGIC_GROUPING	depends_on	U_06	integration_2026-10-03	AUTHOR_CORRECTION_2026-09-21 + RESEARCH_STATUS_V9 + REGISTER_REPAIR_2026-10-03	derived_constraint	Explicit author integration / register repair	G_0259
+AC_20261003_WINDOW_FAMILIES	depends_on	U_m1	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0260
+AC_20261003_WINDOW_FAMILIES	depends_on	U_03	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0261
+AC_20261003_WINDOW_FAMILIES	depends_on	U_07	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0262
+AC_20261003_WINDOW_FAMILIES	depends_on	U_11	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0263
+AC_20261003_WINDOW_FAMILIES	depends_on	U_15	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0264
+AC_20261003_WINDOWS_TRIPLES	depends_on	AC_20261003_WINDOW_FAMILIES	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0265
+AC_20261003_WINDOWS_FIVES	depends_on	AC_20261003_WINDOW_FAMILIES	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0266
+AC_20261003_WINDOWS_SEVENS	depends_on	AC_20261003_WINDOW_FAMILIES	integration_2026-10-03	AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03	author_canonical_amendment	Explicit author integration / register repair	G_0267
+A_07	has_local_forbid	U7_MATH_LOCAL_FORBID	integration_2026-10-03	CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03	candidate_with_operational_gate	Explicit author integration / register repair	G_0268
+U7_MATH_LOCAL_FORBID	depends_on	A_07	integration_2026-10-03	RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03	derived_constraint	Explicit author integration / register repair	G_0269
+U7_MATH_LOCAL_FORBID	depends_on	U_06	integration_2026-10-03	RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03	derived_constraint	Explicit author integration / register repair	G_0270
+U7_MATH_LOCAL_FORBID	depends_on	SP_WINDOW	integration_2026-10-03	RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03	derived_constraint	Explicit author integration / register repair	G_0271
+U7_MATH_LOCAL_FORBID	depends_on	SP_ZERO	integration_2026-10-03	RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03	derived_constraint	Explicit author integration / register repair	G_0272

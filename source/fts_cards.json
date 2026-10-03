@@ -413,8 +413,7 @@
     "type": "minimal_expression",
     "text": "М-регистр для У(7): (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))",
     "depends_on": [
-      "U_06",
-      "U7_MATH_LOCAL_FORBID"
+      "U_06"
     ],
     "tags": [
       "minimal",
@@ -2257,23 +2256,24 @@
   {
     "id": "U7_MATH_LOCAL_FORBID",
     "type": "constraint",
-    "text": "Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму.",
+    "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.",
     "depends_on": [
-      "M_07",
+      "A_07",
       "U_06",
       "SP_WINDOW",
       "SP_ZERO"
     ],
     "tags": [
       "U7",
-      "composition",
-      "local_forbid"
+      "math",
+      "local_forbid",
+      "mirror_window"
     ],
     "path": "06_Мат_аналогии/U7",
     "status": "derived_constraint",
-    "internal_ref": "AUTHOR_CORRECTION_2026-09-21 + RESEARCH_STATUS_V9",
-    "symbol": "U7_author",
-    "title": "У7: вложенная группировка обязательна"
+    "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03",
+    "symbol": "y=-x*x; y!=x*x",
+    "title": "У7: y=-x*x обязан читаться с y!=x*x"
   },
   {
     "id": "CHI_STAT_LADDER",
@@ -2863,5 +2863,375 @@
     "symbol": "B(χ_{iα},c_β,R_{αβ})",
     "title": "У12 как тензор контуров",
     "notes": "not canonical without tests."
+  },
+  {
+    "id": "A_07",
+    "type": "mathematical_expression",
+    "text": "А-регистр для У(7): y=-x*x; y!=x*x. Математический аналог сохраняется отдельно от логической формы M_07; мост между регистрами открыт.",
+    "depends_on": [
+      "U_06",
+      "U7_MATH_LOCAL_FORBID"
+    ],
+    "tags": [
+      "math",
+      "U7",
+      "local_forbid"
+    ],
+    "path": "17_Карточки/A_07",
+    "status": "candidate_with_operational_gate",
+    "internal_ref": "CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03",
+    "symbol": "y=-x*x; y!=x*x",
+    "title": "Математический регистр У7",
+    "register": "A"
+  },
+  {
+    "id": "U7_LOGIC_GROUPING",
+    "type": "constraint",
+    "text": "Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму.",
+    "depends_on": [
+      "M_07",
+      "U_06"
+    ],
+    "tags": [
+      "U7",
+      "composition",
+      "local_forbid"
+    ],
+    "path": "17_Карточки/U7_LOGIC_GROUPING",
+    "status": "derived_constraint",
+    "internal_ref": "AUTHOR_CORRECTION_2026-09-21 + RESEARCH_STATUS_V9 + REGISTER_REPAIR_2026-10-03",
+    "symbol": "U7_author",
+    "title": "У7: вложенная группировка обязательна"
+  },
+  {
+    "id": "AC_20261003_AUTHOR_DECISION",
+    "type": "author_decision",
+    "version": "AC-2026-10-03",
+    "author_status": "accepted_into_author_canon",
+    "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt",
+    "base_release": "v13_complex_branch_overlay",
+    "status": "author_canonical_amendment",
+    "supersedes_version": null,
+    "title": "Прямая авторская запись семейств окон",
+    "text": "Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки.",
+    "evidence_status": "direct_author_statement",
+    "depends_on": [],
+    "tags": [
+      "author_amendment",
+      "window_families"
+    ],
+    "path": "17_Карточки/AC_20261003_AUTHOR_DECISION",
+    "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03",
+    "symbol": "AC_20261003_AUTHOR_DECISION"
+  },
+  {
+    "id": "AC_20261003_WINDOW_FAMILIES",
+    "type": "window_family_statement",
+    "version": "AC-2026-10-03",
+    "author_status": "accepted_into_author_canon",
+    "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt",
+    "base_release": "v13_complex_branch_overlay",
+    "status": "author_canonical_amendment",
+    "title": "Семейства окон нечётной длины",
+    "text": "Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню.",
+    "families": {
+      "triples": [
+        [
+          -1,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          7,
+          8,
+          9
+        ],
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "fives": [
+        [
+          -1,
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "sevens": [
+        [
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ]
+    },
+    "depends_on": [
+      "AC_20261003_AUTHOR_DECISION",
+      "U_m1",
+      "U_03",
+      "U_07",
+      "U_11",
+      "U_15"
+    ],
+    "evidence_status": "author_adopted_formal_semantics_not_given",
+    "local_forbid": [
+      "Не отождествлять окна уровней с зеркальным окном Window(F) и окном ожидания W.",
+      "Не выводить из пересечения окон направленную обратную связь или статус узла-носителя без отдельного определения.",
+      "Не считать перечень продолжением выше указанных окон."
+    ],
+    "open_obligations": [
+      "Роль каждого семейства (тройки/пятёрки/семёрки): какая сущность определяется окном и чем семейства различаются по содержанию.",
+      "Соотношение пересечения окон и узла-носителя, включая уровни 1, 5, 9 для троек и 5 для семёрок.",
+      "Правило построения последующих окон."
+    ],
+    "tags": [
+      "author_amendment",
+      "window_families"
+    ],
+    "path": "17_Карточки/AC_20261003_WINDOW_FAMILIES",
+    "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03",
+    "symbol": "AC_20261003_WINDOW_FAMILIES",
+    "integration_record": "work/author_canon/2026-10-03/INTEGRATION.md"
+  },
+  {
+    "id": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+    "type": "alignment_note",
+    "version": "AC-2026-10-03",
+    "status": "editorial_check",
+    "author_status": "not_author_statement",
+    "source": "work/author_canon/2026-10-03/AMENDMENT.md",
+    "base_release": "v13_complex_branch_overlay",
+    "title": "Пятёрки совпадают с окнами канона v13",
+    "text": "Семейство пятёрок совпадает с окнами (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15) из поля window карточек уровней активного канона v13 (узлы-носители 3, 7, 11, 15); открытое окно (15,16,17,…) карточки U_15 в авторское перечисление не входит.",
+    "depends_on": [
+      "AC_20261003_WINDOW_FAMILIES",
+      "U_03",
+      "U_07",
+      "U_09"
+    ],
+    "evidence_status": "editorial_comparison_with_source",
+    "tags": [
+      "author_amendment",
+      "window_families"
+    ],
+    "path": "17_Карточки/AC_20261003_WINDOW_FIVES_ALIGNMENT",
+    "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03",
+    "symbol": "AC_20261003_WINDOW_FIVES_ALIGNMENT"
+  },
+  {
+    "id": "AC_20261003_WINDOWS_TRIPLES",
+    "type": "window_family",
+    "title": "Окна длины 3: авторский перечень",
+    "symbol": "(-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11)",
+    "text": "Точный конечный авторский перечень: (-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.",
+    "windows": [
+      [
+        -1,
+        0,
+        1
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        5,
+        6,
+        7
+      ],
+      [
+        7,
+        8,
+        9
+      ],
+      [
+        9,
+        10,
+        11
+      ]
+    ],
+    "window_length": 3,
+    "depends_on": [
+      "AC_20261003_WINDOW_FAMILIES"
+    ],
+    "tags": [
+      "author_amendment",
+      "window_family"
+    ],
+    "path": "17_Карточки/AC_20261003_WINDOWS_TRIPLES",
+    "status": "author_canonical_amendment",
+    "author_status": "accepted_into_author_canon",
+    "evidence_status": "author_adopted_formal_semantics_not_given",
+    "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03",
+    "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"
+  },
+  {
+    "id": "AC_20261003_WINDOWS_FIVES",
+    "type": "window_family",
+    "title": "Окна длины 5: авторский перечень",
+    "symbol": "(-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15)",
+    "text": "Точный конечный авторский перечень: (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.",
+    "windows": [
+      [
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    ],
+    "window_length": 5,
+    "depends_on": [
+      "AC_20261003_WINDOW_FAMILIES"
+    ],
+    "tags": [
+      "author_amendment",
+      "window_family"
+    ],
+    "path": "17_Карточки/AC_20261003_WINDOWS_FIVES",
+    "status": "author_canonical_amendment",
+    "author_status": "accepted_into_author_canon",
+    "evidence_status": "author_adopted_formal_semantics_not_given",
+    "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03",
+    "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"
+  },
+  {
+    "id": "AC_20261003_WINDOWS_SEVENS",
+    "type": "window_family",
+    "title": "Окна длины 7: авторский перечень",
+    "symbol": "(-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17)",
+    "text": "Точный конечный авторский перечень: (-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.",
+    "windows": [
+      [
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    ],
+    "window_length": 7,
+    "depends_on": [
+      "AC_20261003_WINDOW_FAMILIES"
+    ],
+    "tags": [
+      "author_amendment",
+      "window_family"
+    ],
+    "path": "17_Карточки/AC_20261003_WINDOWS_SEVENS",
+    "status": "author_canonical_amendment",
+    "author_status": "accepted_into_author_canon",
+    "evidence_status": "author_adopted_formal_semantics_not_given",
+    "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03",
+    "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"
   }
 ]

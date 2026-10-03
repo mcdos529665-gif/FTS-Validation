@@ -1,159 +1,127 @@
-# FTS v13 compact LLM context
+# FTS active canonical release — v13_active_integrated_2026-10-03
 
-# FTS active canonical release — START HERE
+Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
-This package is the active canonical export of
-`ФТС_табличный_канон_v13_complex_branch_overlay.xlsx` with the explicit author
-correction dated 2026-09-21.
+## Reading rules
 
-## Hard reading rules
+Canon is editable directly for the current task. Historical instructions embedded
+in sheets or corpora are provenance, superseded by `PROJECT_INSTRUCTIONS.md`.
+Read exact formulas and statuses by card ID. Author acceptance, mathematical
+proof, and empirical confirmation remain separate. Registers are connected but
+not interchangeable; their mapping requires a scoped witness.
+The original workbook and embedded historical corpora are not claims that this
+release was produced by a new workbook round-trip.
 
-- Treat the Excel v13 workbook as the immediate source snapshot for this export.
-- Primary structured sources in this package: `fts_cards.jsonl`, `fts_triples.tsv`, `FTS.yaml`, `fts_v13_workbook_sheets.json`.
-- Do not conflate `¬A`, `0_A`, and `−A`.
-- Do not promote a candidate/overlay to canon unless status fields, local_forbid rules, Lift/defeat conditions, and graph/card evidence support it.
-- For any conclusion, cite card IDs, graph triples, or sheet rows. If an entity is not found, say `нет в артефактах`.
+## Active changes
 
-## Current v13 snapshot
+Integrate AC-2026-10-03 window families and restore separate U7 mathematical and logical constraints; preserve AC-2026-09-21 and existing evidence statuses.
 
-- Cards: `161`
-- Triples: `238`
-- Sheets: `54`
-- Source SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6`
+U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
+`A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
+AC-2026-10-03 adds the exact finite triple/five/seven window families, with author
+and editorial statuses retained. Intersections do not automatically define carriers.
 
-## Reader view
-
-### Что такое ФТС
-ФТС — лестница различимости, где уровень получает смысл через собственное структурированное отсутствие, предел тотализации, ошибку/остаток и возможность Lift.
-
-### Как читать Excel
-Сначала 00/01/02, затем 03 уровни, 07 основания, 17 карточки, 18 граф. Для полного текста — 19. Для проверки — 33.
-
-### Что не является ФТС
-Не абсолютная метатеория мира; не доказанные 8+; не смешение ¬A/0_A/−A; не список красивых слов без ролей и условий поражения.
-
-### М-регистр vs Ч-регистр
-М-регистр — минимальная проекция выражения. Ч-регистр — частное/операциональное чтение: Dist₃, Select, Agg, K и т.д.
-
-### Почему Excel может заменить файлы
-Потому что теперь хранит атомы (17), граф (18), полный текст (19), метрику (20), proof sketch (23), M′ audit (24), manifest (32), validation (33), exports (34–37).
-
-### Что всё ещё требует проверки
-Канонизация C(E), machine-check proof, κ на provenance-aware inference, real missing-data benchmark, формулы 7–11, верхние уровни 12–17.
-
-### Что изменено в v11
-У7 теперь читается не как “ответ вставлен в ожидание”, а как сам акт закрытия ожидания ожиданием: Answer(W)=Close(W,W). κ/T7 — диагностический слой для агентных реализаций, не сущность уровня.
-
-### Где χ²
-Критерий χ² относится к статистике У6, но полезен как диагностический мост: он проверяет расхождение наблюдаемого O_i и ожидаемого E_i, не превращая p-value в знание.
-
-### Что изменено в v12
-Добавлена χ-лестница: χ берётся как нормированный остаток ожидания, а χ*χ=χ² фиксирует сильный аналог У6. Верхние χ-формы являются overlay/gate, не доказанной заменой У7–У11.
-
-### Что изменено в v13
-Добавлен комплексный overlay: вещественный квадрат прячет знак, комплексный Q(z)=|z|² прячет фазу; У8+ получает вопрос о ветви/branch/sheet, но phase не равен −A.
-
-### Комплексные vs тензоры
-Комплексные числа — скаляры с фазой/ветвью; тензоры — многоиндексные структуры отношений и преобразований. Первые полезнее для 7–9, вторые для 10–12+.
+Cards: 169. Triples: 271. Sheets: 54.
 
 ## Counts by card type
 
-- `connectivity_ground`: 20
-- `operator`: 20
-- `level`: 19
-- `minimal_expression`: 19
-- `private_expression`: 19
-- `axiom`: 12
-- `complex_analog`: 7
-- `statistical_analog`: 6
-- `failure_condition`: 5
-- `status_promotion`: 5
-- `definition`: 4
-- `test`: 3
-- `overlay`: 3
-- `tensor_analog`: 3
-- `candidate_bundle`: 1
-- `notation_rule`: 1
-- `operator_candidate`: 1
-- `boundary_candidate`: 1
-- `topology_candidate`: 1
-- `invariant_candidate`: 1
-- `hypothesis_candidate`: 1
-- `classification_candidate`: 1
-- `level_variant_candidate`: 1
-- `level_candidate`: 1
-- `export_instruction`: 1
-- `anti_mode`: 1
-- `boundary`: 1
-- `guardrail`: 1
-- `constraint`: 1
-- `candidate_overlay`: 1
+| type | count |
+| --- | --- |
+| alignment_note | 1 |
+| anti_mode | 1 |
+| author_decision | 1 |
+| axiom | 12 |
+| boundary | 1 |
+| boundary_candidate | 1 |
+| candidate_bundle | 1 |
+| candidate_overlay | 1 |
+| classification_candidate | 1 |
+| complex_analog | 7 |
+| connectivity_ground | 20 |
+| constraint | 2 |
+| definition | 4 |
+| export_instruction | 1 |
+| failure_condition | 5 |
+| guardrail | 1 |
+| hypothesis_candidate | 1 |
+| invariant_candidate | 1 |
+| level | 19 |
+| level_candidate | 1 |
+| level_variant_candidate | 1 |
+| mathematical_expression | 1 |
+| minimal_expression | 19 |
+| notation_rule | 1 |
+| operator | 20 |
+| operator_candidate | 1 |
+| overlay | 3 |
+| private_expression | 19 |
+| statistical_analog | 6 |
+| status_promotion | 5 |
+| tensor_analog | 3 |
+| test | 3 |
+| topology_candidate | 1 |
+| window_family | 3 |
+| window_family_statement | 1 |
 
 ## Counts by status
 
-- `canonical`: 31
-- `canonical_strict`: 24
-- `candidate`: 12
-- `canon/base`: 11
-- `candidate_with_operational_gate`: 10
-- `candidate_overlay`: 9
-- `reserved_underformalized`: 6
-- `projected_underformalized`: 6
-- `speculative`: 6
-- `FTS_candidate`: 4
-- `candidate_requires_formalization + canonical_alignment`: 3
-- `canonical_node_underformalized_semantics`: 3
-- `derived_constraint`: 3
-- `statistical_overlay_candidate`: 3
-- `candidate_U12_overlay`: 3
-- `formal_math_fact / derived_constraint`: 2
-- `candidate_requires_formalization`: 2
-- `candidate_core`: 2
-- `candidate_bridge`: 2
-- `FTS_candidate_guarded`: 2
-- `reserved_underformalized_overlay`: 2
-- `reserved_overlay`: 2
-- `formal_math_fact / candidate_requires_formalization + canonical_alignment`: 1
-- `canon/base_plus_user_refinement`: 1
-- `candidate_requires_empirical_test`: 1
-- `canonical_conceptual`: 1
-- `canonical_extension`: 1
-- `candidate_bundle`: 1
-- `canonical_note`: 1
-- `canonical_alignment`: 1
-- `active_instruction`: 1
-- `candidate_boundary`: 1
-- `operational_diagnostic_layer`: 1
-- `strong_statistical_analog`: 1
-- `strong_overlay_for_U6`: 1
+| status | count |
+| --- | --- |
+| FTS_candidate | 4 |
+| FTS_candidate_guarded | 2 |
+| active_instruction | 1 |
+| author_canonical_amendment | 5 |
+| candidate | 12 |
+| candidate_U12_overlay | 3 |
+| candidate_boundary | 1 |
+| candidate_bridge | 2 |
+| candidate_bundle | 1 |
+| candidate_core | 2 |
+| candidate_overlay | 9 |
+| candidate_requires_empirical_test | 1 |
+| candidate_requires_formalization | 2 |
+| candidate_requires_formalization + canonical_alignment | 3 |
+| candidate_with_operational_gate | 11 |
+| canon/base | 11 |
+| canon/base_plus_user_refinement | 1 |
+| canonical | 31 |
+| canonical_alignment | 1 |
+| canonical_conceptual | 1 |
+| canonical_extension | 1 |
+| canonical_node_underformalized_semantics | 3 |
+| canonical_note | 1 |
+| canonical_strict | 24 |
+| derived_constraint | 4 |
+| editorial_check | 1 |
+| formal_math_fact / candidate_requires_formalization + canonical_alignment | 1 |
+| formal_math_fact / derived_constraint | 2 |
+| operational_diagnostic_layer | 1 |
+| projected_underformalized | 6 |
+| reserved_overlay | 2 |
+| reserved_underformalized | 6 |
+| reserved_underformalized_overlay | 2 |
+| speculative | 6 |
+| statistical_overlay_candidate | 3 |
+| strong_overlay_for_U6 | 1 |
+| strong_statistical_analog | 1 |
 
-## File map
+## Added and restored records
 
-- `fts_cards.jsonl` — atomic entity cards. Best first source for IDs, status, text, dependencies, tags.
-- `fts_cards.json` — same cards as JSON array.
-- `fts_triples.tsv` — compact graph triples: subject/predicate/object.
-- `fts_graph_full.tsv` — full graph sheet, including evidence/internal refs/status/comment/graph_id.
-- `fts_cards_table.tsv` — full card table from sheet `17_Карточки`.
-- `FTS.yaml` — workbook YAML export.
-- `fts_v13_workbook_sheets.json` — full workbook sheet dump as structured JSON.
-- `FTS_v13_LLM_FULL_DUMP.md` — all workbook sheets as Markdown tables.
-- `LLM_IMPORT_PROMPT.txt` — compact prompt for another LLM.
-
-## v13 overlay guardrails
-
-- `Q(z)=|z|²` and `Q(χ)=Σ|χ_i|²` belong to U6 statistical/quadratic readout.
-- U7+ may ask about phase/branch/sheet, but `phase != −A`.
-- Branch access alone is not Lift.
-- Complex numbers are scalars with phase/branch; tensors are multi-index relation/transform objects.
-- `array != tensor` unless a transformation law is specified.
-
-
----
-
-## Key sheets
+| id | status | text |
+| --- | --- | --- |
+| U7_MATH_LOCAL_FORBID | derived_constraint | Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6. |
+| A_07 | candidate_with_operational_gate | А-регистр для У(7): y=-x*x; y!=x*x. Математический аналог сохраняется отдельно от логической формы M_07; мост между регистрами открыт. |
+| U7_LOGIC_GROUPING | derived_constraint | Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму. |
+| AC_20261003_AUTHOR_DECISION | author_canonical_amendment | Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки. |
+| AC_20261003_WINDOW_FAMILIES | author_canonical_amendment | Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню. |
+| AC_20261003_WINDOW_FIVES_ALIGNMENT | editorial_check | Семейство пятёрок совпадает с окнами (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15) из поля window карточек уровней активного канона v13 (узлы-носители 3, 7, 11, 15); открытое окно (15,16,17,…) карточки U_15 в авторское перечисление не входит. |
+| AC_20261003_WINDOWS_TRIPLES | author_canonical_amendment | Точный конечный авторский перечень: (-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается. |
+| AC_20261003_WINDOWS_FIVES | author_canonical_amendment | Точный конечный авторский перечень: (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается. |
+| AC_20261003_WINDOWS_SEVENS | author_canonical_amendment | Точный конечный авторский перечень: (-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается. |
 
 ### `40_Reader_View`
-Range: `A1:B12`; rows: `12`; cols: `2`.
+
 | section | reader_text |
 | --- | --- |
 | Что такое ФТС | ФТС — лестница различимости, где уровень получает смысл через собственное структурированное отсутствие, предел тотализации, ошибку/остаток и возможность Lift. |
@@ -169,8 +137,8 @@ Range: `A1:B12`; rows: `12`; cols: `2`.
 | Комплексные vs тензоры | Комплексные числа — скаляры с фазой/ветвью; тензоры — многоиндексные структуры отношений и преобразований. Первые полезнее для 7–9, вторые для 10–12+. |
 
 ### `03_Уровни_У`
-Range: `A1:M23`; rows: `23`; cols: `13`.
-| Уровни У(-1..17): М-регистр, Ч-регистр и математический регистр | col_2 | col_3 | col_4 | col_5 | col_6 | col_7 | col_8 | col_9 | col_10 | col_11 | col_12 | col_13 |
+
+| Уровни У(-1..17): М-регистр, Ч-регистр и математический регистр |  |  |  |  |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Главный лист: уровни не равны основаниям. Здесь исправлены 7+ anti-mode и сохранены верхние направления как underformalized/speculative. |  |  |  |  |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -182,8 +150,8 @@ Range: `A1:M23`; rows: `23`; cols: `13`.
 | 3 | (3,4,5,6,7) | node-3: distinguishable objects | Информация / 0_информации | 0_информации как не-событие/контекст | canonical_strict | I=(a≠b; a-b) / Δ(a,b) | y=-1*x | Dist₃(A,B;0_A^C) | ≠, НЕ_A и 0_A начинают разводиться; a≠b → a-b | Абсолютная информация → вероятность не нужна | О1–О4, О8, О13–О18 | Dist₃ — частное строгое чтение, не замена минимума |
 | 4 | (3,4,5,6,7) | node-3 interval | Вероятность / закономерная случайность | 0_вероятности как нераспределённая/нереализованная ветвь | canonical_strict | (a=b) ∧ (a≠b) | y=\|x\| | B=(a=₂b)∧(a≠₃b) | удержание взаимоисключающих положений | Абсолютная вероятность → выбор/случайность исчезают | О1–О4, О8, О13–О18 | B typed — частная форма; минимум: a=b and a≠b |
 | 5 | (3,4,5,6,7) | node-3 interval | Выбор / случайность | 0_выбора как невыбранное/зависимость | canonical_strict | (a=b) ∨ (a≠b) | y=-1*\|x\| | Select(B) | из поля выделяется ветвь; девариация | Абсолютный выбор/хаос → статистика не формируется | О1–О4, О8, О13–О19 | Select(B) — операциональное чтение минимума OR |
-| 6 | (3,4,5,6,7) | threshold-to-7 | Статистика / случайная закономерность | 0_статистики как out-of-sample/hidden variables | canonical_strict | ((a=b) and (a!=b)) and ((a=b) or (a!=b)) / (a=b ∨ a≠b)*(a=b ∨ a≠b) | y=x*x | Agg_i(V_i) | повтор/умножение/агрегация выборов | Абсолютная статистика → знание редуцируется к корреляции | О1–О4, О8, О13–О20 | Agg_i — частное статистическое чтение |
-| 7 | (3,4,5,6,7) | node-7: update rules and frames | Знание / Познание / Предсказание / Забывание(отказ от ожидания) | −A: забывание как Close(W,Refuse(W)); Sever — частный разрыв связи/переноса | candidate_with_operational_gate | (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) | y=-1*x*x; y!=x*x | K_core=⟨W,0_W,Ans⟩; Answer(W)=Close(W,W); agentic gate: K=⟨S,0_S,κ⟩ | ответ не внешний объект: ответ = закрытие ожидания ожиданием; У7!=У6 | Абсолютное знание/предсказание → окно закрывается без удержания 0_W; У8-вопрос невозможен | О1–О5, О8, О13–О20 | v11: ядро У7 = самоподдерживающийся цикл ожидания; κ/T7 — диагностическая обвязка, не сущность |
+| 6 | (3,4,5,6,7) | threshold-to-7 | Статистика / случайная закономерность | 0_статистики как out-of-sample/hidden variables | canonical_strict | ((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b)) | y=x*x | Agg_i(V_i) | повтор/умножение/агрегация выборов | Абсолютная статистика → знание редуцируется к корреляции | О1–О4, О8, О13–О20 | Agg_i — частное статистическое чтение |
+| 7 | (3,4,5,6,7) | node-7: update rules and frames | Знание / Познание / Предсказание / Забывание(отказ от ожидания) | −A: забывание как Close(W,Refuse(W)); Sever — частный разрыв связи/переноса | candidate_with_operational_gate | (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b))) | y=-1*x*x; y!=x*x | K_core=⟨W,0_W,Ans⟩; Answer(W)=Close(W,W); agentic gate: K=⟨S,0_S,κ⟩ | ответ не внешний объект: ответ = закрытие ожидания ожиданием; У7!=У6 | Абсолютное знание/предсказание → окно закрывается без удержания 0_W; У8-вопрос невозможен | О1–О5, О8, О13–О20 | v11: ядро У7 = самоподдерживающийся цикл ожидания; κ/T7 — диагностическая обвязка, не сущность |
 | 8 | (7,8,9,10,11) | node-7 interval | Предположение / вера(отказ от вопросной формы) | −A: вера как превращение A? в A без честного закрытия окна ожидания | candidate_with_operational_gate | candidate: Hyp(W)=W[A?] / Link(0_K,M) / TBD | y=\|x\|^(1/2) | Hyp(W)=W[A?]; вопросная форма возможного ответа; не слабое предсказание | вопросность/открытое ожидание отделяется от ответа/закрытого ожидания | Тотальное предположение → вопрос незаконно закрывается как ответ/вера | О5, О8, О15–О20 | v11 boundary: Предположение = A?, не A с меньшей уверенностью. Нужны trace/defeat/test. |
 | 9 | (7,8,9,10,11) | node-7 interval | Понимание / упрощение, оскорбление, отказ от сложности | −A: отказ от сложности; оскорбление/упрощение как ложное понимание | FTS_candidate | candidate: Analogy_κ(...) / TBD | y=x*x*x | Analogy_κ / causal-counterfactual reading | кубический избыток: x*x*x=x*(x*x), один дополнительный множитель над квадратом | Абсолютное понимание → сравнение/оценка невозможны | О5, О8, О15–О20 | Повышено v9: math ядро formal_math_fact; ФТС-слой FTS_candidate. Не выдавать за полное понимание без object-language. |
 | 10 | (7,8,9,10,11) | threshold-to-11 | Сравнение, оценка / догматизм, отказ от сравнения | −A: догматизм как отказ от сравнения/метрики | reserved_underformalized | candidate: Compare_κ(...) / TBD | y=cos(x) | Compare_κ(options,criteria) | критерий/метрика отделяются от объяснения; cos имеет формальную нулевую решётку | Тотальная оценка → Я как участник контура не осознаётся | О5, О8, О15–О20 | Статус уровня не повышен; math факт о нулях cos(x) добавлен в математический регистр. |
@@ -196,8 +164,8 @@ Range: `A1:M23`; rows: `23`; cols: `13`.
 | 17 | (15,16,17,...) | node-15 interval | Искусство | anti-mode: отказ от композиции симметрий? current_user_hypothesis | speculative | TBD | TBD | TBD | композиция форм симметрии? текущая гипотеза | TBD | О17? candidate | Требует отдельного модуля |
 
 ### `06_Мат_аналогии`
-Range: `A1:J30`; rows: `30`; cols: `10`.
-| Математические аналогии минимальных выражений: объёмы места | col_2 | col_3 | col_4 | col_5 | col_6 | col_7 | col_8 | col_9 | col_10 |
+
+| Математические аналогии минимальных выражений: объёмы места |  |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Формулы записаны как аналогии, не как доказанные функции. Они отражают математический регистр места/объёма. |  |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |  |
@@ -209,8 +177,8 @@ Range: `A1:J30`; rows: `30`; cols: `10`.
 | 3 | y=-1*x | ориентированная разность/инверсия | a≠b → a-b | working_minimum | не путать '-' с 7+ −A | y!=x | x=0 | {x,-x} | ориентированная разность не равна прямому соответствию |
 | 4 | y=\|x\| | модуль из x: поле без знака направления | (a=b) ∧ (a≠b) | working_analogy | почему модуль является носителем вероятностного поля | y!=-abs(x) | x=0 | {abs(x),-abs(x)} | модуль не равен отрицательному модулю |
 | 5 | y=-1*\|x\| | модуль из x, умноженный на -1 | (a=b) ∨ (a≠b) | working_analogy | связь с выбором/девариацией | y!=abs(x) | x=0 | {abs(x),-abs(x)} | отрицательный модуль не равен модулю |
-| 6 | y=x*x | квадратичная агрегация/умножение | ((a=b) and (a!=b)) and ((a=b) or (a!=b)) | working_analogy | что именно агрегируется | y!=-x*x | x=0 | {x*x,-x*x} | статистический агрегат не равен анти-ориентированному квадрату |
-| 7 | y=-1*x*x | квадрат с противоположной ориентацией; локально y=-x*x и y!=x*x; оконное чтение: Answer(W)=Close(W,W) | (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) | candidate_minimum / window_core_patch_v11 | развести '-' как orientation; y!=x*x как local_forbid; Answer(W) как самозакрытие окна | y!=x*x | x=0 | {x*x,-x*x} | У7: Answer(W)=Close(W,W); не статистический x*x |
+| 6 | y=x*x | квадратичная агрегация/умножение | ((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b)) | working_analogy | что именно агрегируется | y!=-x*x | x=0 | {x*x,-x*x} | статистический агрегат не равен анти-ориентированному квадрату |
+| 7 | y=-1*x*x | квадрат с противоположной ориентацией; локально y=-x*x и y!=x*x; оконное чтение: Answer(W)=Close(W,W) | (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b))) | candidate_minimum / window_core_patch_v11 | развести '-' как orientation; y!=x*x как local_forbid; Answer(W) как самозакрытие окна | y!=x*x | x=0 | {x*x,-x*x} | У7: Answer(W)=Close(W,W); не статистический x*x |
 | 8 | y=\|x\|^(1/2) | корень из модуля x; вопросная форма возможного ответа | Hyp(W)=W[A?] / Link(0_K,M) / TBD | formal_math_fact / candidate_with_operational_gate | Math: partial inverse; FTS: предположение=A?, не ответ A и не слабое предсказание | Hyp(W)=A? != Answer(W)=A | A? unresolved | {A,A?} | У8: вопросная форма возможного ответа, не слабое У7 |
 | 9 | y=x*x*x | кубическая развёртка | понимание/сложность | formal_math_fact / FTS_candidate | Math: уникальный минимальный multiplicative surplus над x*x; FTS: нужен язык понимания/избытка. |  |  |  |  |
 | 10 | y=cos(x) | периодическое сравнение/метрика | сравнение/оценка | formal_math_fact / canonical_alignment | Math: cos(x)=0 при x=pi/2+pi*k; FTS: сравнение/оценка ещё underformalized. |  |  |  |  |
@@ -230,8 +198,8 @@ Range: `A1:J30`; rows: `30`; cols: `10`.
 | 12 | x*x+(y-2)*(y-2)=4 | окружность, closed relation, pi-boundary | центр (0,2), r=2, 0_F=(0,0), длина=4*pi, площадь=4*pi | FTS_candidate | Не повышать: e^pi требует отдельной sealing-меры; complex Euler требует оператора i. |  |  |  |  |
 
 ### `U7_Window_Cycles`
-Range: `A1:I34`; rows: `34`; cols: `9`.
-| U7_Window_Cycles — v11: ответ как самозамыкание окна ожидания | col_2 | col_3 | col_4 | col_5 | col_6 | col_7 | col_8 | col_9 |
+
+| U7_Window_Cycles — v11: ответ как самозамыкание окна ожидания |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |  |  |
 | item_id | scope | formula | meaning | status | source/IDs | guardrail | defeat condition | where used |
@@ -268,8 +236,8 @@ Range: `A1:I34`; rows: `34`; cols: `9`.
 | G7 | Не смешивать математический минус '-', 0_A, −A и Refuse/Sever. |  |  |  |  |  |  |  |
 
 ### `ChiSquare_FTS`
-Range: `A1:H9`; rows: `9`; cols: `8`.
-| ChiSquare_FTS — χ² как статистический тест окна ожидания | col_2 | col_3 | col_4 | col_5 | col_6 | col_7 | col_8 |
+
+| ChiSquare_FTS — χ² как статистический тест окна ожидания |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |  |
 | item | FTS placement | formula / object | meaning | helps how | not equal to | guardrail | where used |
@@ -281,8 +249,8 @@ Range: `A1:H9`; rows: `9`; cols: `8`.
 | FTS-вывод | diagnostic bridge | χ² tests W vs observed counts | χ² относится к статистике, но помогает построить bridge к У7, если использовать его как тест закрытия/сбоя окна ожидания | показывает разницу: статистика считает; знание/предсказание закрывает W; предположение задаёт A? | не замена Close(W,W) | оставить как OP_ChiSquareDiagnostic | 25_Операторы |
 
 ### `Chi_Stat_Ladder`
-Range: `A1:I57`; rows: `57`; cols: `9`.
-| Chi_Stat_Ladder | χ как статистический носитель дополнительной лестницы | col_3 | col_4 | col_5 | col_6 | col_7 | col_8 | col_9 |
+
+| Chi_Stat_Ladder | χ как статистический носитель дополнительной лестницы |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Статус | statistical_overlay_candidate; локальный носитель ожидания/остатка: x:=χ, где χ — нормированный остаток ожидания; χ*χ=χ² даёт У6; это не замена основной лестницы. |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |
@@ -342,8 +310,8 @@ Range: `A1:I57`; rows: `57`; cols: `9`.
 | Reading | χ² here is only an У6 diagnostic. It may support questions for У7/У8, but it does not close W as Answer(W) by itself. |  |  |  |  |  |  |  |
 
 ### `Complex_Branch_Overlay`
-Range: `A1:I31`; rows: `31`; cols: `9`.
-| Complex_Branch_Overlay | комплексные числа как фазово-ветвевой overlay для 7+ | col_3 | col_4 | col_5 | col_6 | col_7 | col_8 | col_9 |
+
+| Complex_Branch_Overlay | комплексные числа как фазово-ветвевой overlay для 7+ |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Статус | candidate_overlay; не заменяет основную лестницу. Усиливает axis_A: quadratic-only readout vs full object/phase/branch access; B-axis/self-reference остаётся отдельным требованием 7+. |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |
@@ -377,8 +345,8 @@ Range: `A1:I31`; rows: `31`; cols: `9`.
 | EX_outside | 5 | 4 | outside complex branch |  |  | 2 + i*1.000 | 2 - i*1.000 | реальных y нет; возникает мнимая ветвь напряжения |
 
 ### `Tensor_Context_Overlay`
-Range: `A1:I27`; rows: `27`; cols: `9`.
-| Tensor_Context_Overlay | тензоры как контекстно-индексный overlay для 10+ | col_3 | col_4 | col_5 | col_6 | col_7 | col_8 | col_9 |
+
+| Tensor_Context_Overlay | тензоры как контекстно-индексный overlay для 10+ |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Статус | candidate_overlay; не “ещё более сложные числа”, а многоиндексные структуры отношений/преобразований между осями, контекстами, критериями и наблюдателями. |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |
@@ -407,79 +375,12 @@ Range: `A1:I27`; rows: `27`; cols: `9`.
 | TNS_G3 | tensor context overlay != replacement of Λ/Sever | Тензор может расширять перенос, но не заменяет failure grammar. | Sever растворён в общей матрице. | 7+ | Lambda_link; Sever | blocking |  |  |
 | TNS_G4 | complexity and tensorness are orthogonal | Комплексные числа и тензоры можно сочетать, но это разные свойства. | фаза и контекстный индекс перепутаны. | 7+ | Complex_Branch_Overlay | blocking |  |  |
 
-### `31_Upper_12_17`
-Range: `A1:K26`; rows: `26`; cols: `11`.
-| У | name | minimal_candidate | math_motif | anti_mode | what_does_not_fit | lost_if_total | symmetry_type | formal_status | needed_formalization | internal_ref |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 12 | Конфликт / Союз | x*x+(y-2)*(y-2)=4 | closed relation; circle center=(0,2), r=2; lower branch ~ x*x/4 near zero | anti-mode: TBD; candidate closed-boundary failure/gate needed | рост/самоописание без замкнутой boundary | без У12 e^x рискует стать образом тотализации без нулевой границы | closed boundary / cycle / pi-measure | candidate_requires_formalization + canonical_alignment | Math ядро повышено до formal_math_fact; ФТС-слой: closed boundary candidate. Нужны anti-mode У12, оператор, тест, defeat condition. | ADDENDUM_V3 |
-| 13 | Мир-Мы / Космос-острова | TBD | TBD | TBD / current_user_hypothesis | TBD | TBD | TBD | projected_underformalized | оператор + invariant + test + condition_of_defeat | CANON_EN/user_current |
-| 14 | Воображение / Вычисления-Логика | TBD | TBD | TBD / current_user_hypothesis | TBD | TBD | TBD | projected_underformalized | оператор + invariant + test + condition_of_defeat | CANON_EN/user_current |
-| 15 | Красота | TBD | TBD | отказ от формы симметрии? | TBD | TBD | static point symmetry? | canonical_node_underformalized_semantics | оператор + invariant + test + condition_of_defeat | CANON_EN/user_current |
-| 16 | Музыка | TBD | TBD | отказ от динамической точки симметрии? | TBD | TBD | dynamic point of symmetry? | speculative | оператор + invariant + test + condition_of_defeat | CANON_EN/user_current |
-| 17 | Искусство | TBD | TBD | отказ от композиции симметрий? | TBD | TBD | composition of symmetries? | speculative | оператор + invariant + test + condition_of_defeat | CANON_EN/user_current |
-|  |  |  |  |  |  |  |  |  |  |  |
-| detail_id | entry_type | level | formula | local_forbid | zero_boundary | status | note | linked_level | source_archive | condition_of_defeat |
-| U12_CIRCLE | level_detail | 12 | center=(0,2), radius=2 | n/a | (0,0) | candidate | У12 не график y=F(x), а closed relation; две ветви y=2±sqrt(4-x*x). | У12 | ADDENDUM_V3 | показать, что closed boundary не даёт новой выразимости относительно У10/У11 |
-| U12_PI | pi_invariant | 12 | circumference=4*pi; area=4*pi | n/a | n/a | candidate | При r=2 длина и площадь численно совпадают; нужна размерностная оговорка. | У12 | ADDENDUM_V3 | если совпадение коэффициентов не несёт новой роли, оставить как analogy_only |
-| U12_QUAD_CONTACT | local_quadratic_contact | 12 | y=2-sqrt(4-x*x) ~ x*x/4 | n/a | (0,0) | candidate | Нижняя ветвь У12 локально содержит квадратичность У6 как касание. | У6→У12 | ADDENDUM_V3 | если контакт не поддерживает Lift/проекцию, не считать основанием |
-| U10_TO_U12 | structural_link | 10_to_12 | x=2*cos(t), y=2+2*sin(t) | n/a | t in [0,2*pi) | candidate | У10 cos(x) становится координатой окружности; pi переходит из периода в boundary. | У10→У12 | ADDENDUM_V3 | если параметризация не добавляет carrier shift, оставить как математический мотив |
-| U11_TO_U12 | structural_link | 11_to_12 | e^x -> e^pi -> circle | n/a | n/a | candidate | У11 рост; e^pi — рост на pi-мере; У12 — замкнутая pi-boundary. | У11→У12 | ADDENDUM_V3 | если e^pi не получает operator/gate, не использовать как уровень |
-| U11_EPI | window_constant | 11-15 | e^pi | n/a | n/a | candidate | Оконное чтение: самоусиление e, оценённое на циклической мере pi; не замена e^x. | У11/15 | ADDENDUM_V3 | если e^pi используется как полный уровень — ошибка статуса |
-| U11_COMPLEX_BOUNDARY | complex_boundary | 11plus | e^(i*pi)+1=0 | n/a | 0 | candidate | Комплексное указание на e, pi, i, -1, 0; требует оператора поворота/ортогональности. | У11+ | ADDENDUM_V3 | без оператора i/rotation оставить как analogy_only |
-|  |  |  |  |  |  |  |  |  |  |  |
-| status_patch_id | item | math_status | fts_status | rationale | ceiling | internal_ref |  |  |  |  |
-| SP_U12 | У12 circle geometry | formal_math_fact | candidate_requires_formalization + canonical_alignment | circle center=(0,2), r=2, tangent at (0,0), local quadratic contact | не canonical_strict без operator/test/anti-mode | RESEARCH_STATUS_V9 |  |  |  |  |
-| SP_PHI | phi-boundary | formal_math_fact | FTS_candidate | unique positive root of normalized boundary x*x*x-x=x*x | не У11/красота без дополнительного оператора | RESEARCH_STATUS_V9 |  |  |  |  |
-| SP_EPI | e^pi window constant | formal_math_fact as number | FTS_candidate | conditional sealed growth constant | не повышать выше candidate: pi sealing не единственна | RESEARCH_STATUS_V9 |  |  |  |  |
-| SP_COMPLEX | e^(i*pi)+1=0 | formal_math_fact externally | analogy_only / low candidate | структурная подсказка для e,pi,i,-1,0 | нет оператора i/pivot/rotation in FTS | RESEARCH_STATUS_V9 |  |  |  |  |
-| SP_U13_17 | У13–У17 | — | projected_underformalized / speculative | нет ответственного повышения статуса в отчёте | нет minimal expressions/operators/tests/defeat conditions | RESEARCH_STATUS_V9 |  |  |  |  |
-| v13_detail_id | entry_type | level | formula | local_forbid | zero_boundary | status | note | linked_level | source_archive | condition_of_defeat |
-| U12_CHI_PI_COMPLEX_BOUNDARY | complex_boundary_overlay | 12 | Q(χ(π_k))+(y-2)^2=4; if Q>4 then y=2±i√(Q-4) | Q(χ) alone; complex outside treated as real Union | branch/sheet at Q=4 | candidate_requires_formalization | Комплексная версия У12-кандидата: outside вещественной границы становится мнимой ветвью напряжения, а не исчезает. | У6→У12 | USER_DIALOG_V13 | если branch/sheet не различает Conflict/Union, оставить как decorative overlay |
-| TENSOR_CONTEXT_U12 | tensor_context_overlay | 12 | Boundary B(χ_{iα}, c_β, R_{αβ}) | array without transformation law; indices as decoration | context/protocol boundary | candidate_requires_formalization | Тензорный overlay для нескольких контуров/протоколов: полезен только при явном законе переноса/метрике. | У10→У12 | USER_DIALOG_V13 | если не задана transformation law / оператор, не считать тензором ФТС |
+### `28_CarrierNodes`
 
-### `33_Validation`
-Range: `A1:F43`; rows: `43`; cols: `6`.
-| check_id | check | result | evidence | blocking | notes |
-| --- | --- | --- | --- | --- | --- |
-| VAL_01 | A1 instruction declares workbook self-contained | OK | 00_Инструкция!A1 | yes | GPT/LLM должен читать только книгу |
-| VAL_02 | Internal archive sheet exists | OK | 15_Внутр_архив | yes | archive_id вместо внешних file/path references |
-| VAL_03 | Canonical text is embedded | OK | 19_Канон_текст rows=80 | yes | встроенный текст chunk-ами |
-| VAL_04 | Cards database present | OK | 17_Карточки rows=161 | yes | заменитель карточного JSONL-слоя |
-| VAL_05 | Graph database present | OK | 18_Граф rows=238; graph_id column H present; G_0001..G_0238 | yes | заменитель TSV-графа; graph_id добавлен как стабильный локальный id связи |
-| VAL_06 | JSONL export present | OK | 34_Export_jsonl rows=161 | yes | internal_ref only |
-| VAL_07 | TSV export present | OK | 35_Export_tsv rows=238; subject/predicate/object export; graph_id metadata in 18_Граф!H | yes | TSV оставлен тройками; graph_id не смешан с subject/predicate/object |
-| VAL_08 | YAML export has no external paths | OK | 36_Export_yaml lines=914 | yes | self_contained: true |
-| VAL_09 | No legacy local paths in workbook | OK | search returned 0 after patch | yes | локальные пути контейнера удалены |
-| VAL_10 | No old document filenames in workbook | OK | search returned 0 for legacy filenames | yes | старые имена заменены archive_id |
-| VAL_11 | No legacy prefix in workbook | OK | search returned 0 | yes | CANON_* archive IDs only |
-| VAL_12 | Self-containment policy sheet exists | OK | 41_Самодостаточность | yes | если спор — читать этот лист |
-| VAL_13 | Upper levels status not overpromoted | OK | 03/31/39 | yes | 8+ remains reserved/projected where needed |
-| VAL_14 | Proof sketch not sold as machine proof | OK | 23_ProofSketch | yes | это sketch, не proof assistant |
-| CHK_no_structured_tables | No structured Excel tables remain; ranges are plain cells to avoid Excel repair warnings. | OK | all sheets | 2026-06-08 | v6 |
-| CHK_no_merged_cells | No merged cells remain; overlapping merge on sheet1 removed. | OK | all sheets | 2026-06-08 | v6 |
-| ADDENDUM_V3 embedded | OK | 43_Добавка_v3 created; chunks in 19_Канон_текст |  |  |  |
-| Research export instruction | OK | 42_Экспорт_GPT created; primary format Markdown+JSONL+TSV+YAML |  |  |  |
-| Research pack manifest | OK | 44_Research_Pack created |  |  |  |
-| No strict promotion of addendum | OK | ADDENDUM_V3 marked candidate / requires formalization |  |  |  |
-| Formula export rule | OK | abs(x) rule inserted for Markdown/TSV |  |  |  |
-| CHK_v9_status_sheet | 45_Статус_гипотез_v9 exists | OK | SP_WINDOW/SP_ZERO/SP_U8/SP_U9/SP_U12 present | v9 | status promotion |
-| CHK_v9_two_axis | St_math and St_FTS separated | OK | 46_Статусная_логика_v9 | v9 | status discipline |
-| CHK_v9_limits | non-promoted limits recorded | OK | e^pi/U13-U17 not overpromoted | v9 | anti-inflation |
-| CHK_v9_embedded | research report embedded internally | OK | RESEARCH_STATUS_V9 + ADDENDUM_V4_STATUS | v9 | self-contained |
-| VAL_15 | Graph ids exist and cover 18_Граф data rows | OK | 18_Граф!H1:H239; G_0001..G_0238 | yes | graph_id добавлен без сдвига triple schema; v13 edges included |
-| VAL_16 | U7_Kappa_Gate sheet exists | OK | U7_Kappa_Gate | yes | рабочий gate для связи M₇ ↔ y=-x² ↔ κ |
-| VAL_17 | U7 math analogue separated from operational proof | OK | U7_Kappa_Gate sections 2–4 | yes | math connectedness accepted; strict promotion still gated by κ/T7 |
-| VAL_18 | U7_Window_Cycles sheet exists | OK | U7_Window_Cycles | yes | v11: Answer(W)=Close(W,W); Forgetting(W)=Close(W,Refuse(W)) |
-| VAL_19 | U7 core separated from agentic κ/T7 gate | OK | 03_Уровни_У; U7_Kappa_Gate; 25_Операторы | yes | κ/T7 retained as diagnostic layer, not U7 essence |
-| VAL_20 | Local-forbid/right-side columns exist for math analogies | OK | 06_Мат_аналогии!G:J | yes | right side y!=... restored for 0..8+ rows |
-| VAL_21 | Cards/graph/export counts updated after v13 patch | OK | 17 rows=161; 18 rows=238; JSONL rows=161; TSV rows=238; YAML lines=914 | yes | self-contained patch recorded after v13 complex/tensor overlay |
-| VAL_22 | Chi-square diagnostic bridge recorded | OK | ChiSquare_FTS; 25_Операторы!OP_ChiSquareDiagnostic | no | χ² belongs to У6 statistics; helps diagnose W mismatch, not U7 answer |
-| VAL_23 | Chi_Stat_Ladder sheet exists | OK | Chi_Stat_Ladder | yes | v12: χ as statistical carrier; x:=χ |
-| VAL_24 | χ carrier is not χ² | OK | Chi_Stat_Ladder definitions: CHI_RESIDUAL / G_CHI_01 | yes | prevents χ⁴ false square-of-square |
-| VAL_25 | χ² kept at U6 and not promoted to U7 answer | OK | Chi_Stat_Ladder U6/U7 rows; ChiSquare_FTS | yes | p-value/χ² not treated as Answer(W) |
-| VAL_26 | Complex_Branch_Overlay sheet exists | OK | Complex_Branch_Overlay | yes | v13: complex z/χ; Q(χ)=Σ\|χ_i\|²; branch/sheet for 7+ |
-| VAL_27 | Complex overlay keeps A-axis/B-axis separated | OK | Complex_Branch_Overlay guardrails CPLX_G1..G5 | yes | phase/branch access does not imply −A, self-reference or Lift |
-| VAL_28 | Tensor_Context_Overlay sheet exists | OK | Tensor_Context_Overlay | yes | v13: tensor context carrier for 10+, not bigger numbers |
-| VAL_29 | Tensor overlay has anti-inflation guardrails | OK | Tensor_Context_Overlay TNS_G1..G4 | yes | array != tensor; more indices != higher level |
-| VAL_30 | Cards/graph/export counts updated after v13 patch | OK | 17 rows=161; 18 rows=238; JSONL rows=161; TSV rows=238; YAML lines=914 | yes | self-contained complex/tensor overlay recorded |
-| VAL_31 | U12 complex boundary kept candidate | OK | 31_Upper_12_17; Complex_Branch_Overlay | yes | complex outside branch is not canonical U12 proof |
+| node | carrier | interval | what unfolds | formal_status | guardrail | internal_ref |
+| --- | --- | --- | --- | --- | --- | --- |
+| pre -1..2 | primary distinguishability | pre-carrier genesis | noise→error→signal→code | canonical_strict | не считать carrier-node | CANON_EN |
+| 3 | distinguishable objects | 3-6 | objects, distributions, selection, statistical aggregation | canonical_strict | 0_A object-level, not −A | CANON_EN |
+| 7 | update rules and frames | 7-10 | self-reference, hypothesis, causal/counterfactual, comparison | candidate/reserved | −A internally definable only with metacontrol | CANON_EN |
+| 11 | self-description coherence | 11-14 | agent in loop, responsibility, intersubjective contours | underformalized | не формализовать преждевременно | CANON_EN |
+| 15 | higher-order metacoherence | 15-18? | higher-order symmetry/metacoherence | underformalized/speculative | красота/музыка/искусство не canonical_strict | CANON_EN/user_current |

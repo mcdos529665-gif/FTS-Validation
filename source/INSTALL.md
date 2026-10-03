@@ -1,22 +1,6 @@
-# INSTALL / use
+# Active canon installation
 
-This is a plain-text LLM export of the active canonical release. No installation is required.
-
-Recommended upload order to another LLM:
-1. `START_HERE.md`
-2. `fts_cards.jsonl`
-3. `fts_triples.tsv`
-4. `FTS.yaml`
-5. `FTS_v13_LLM_CONTEXT.md`
-6. `FTS_v13_LLM_FULL_DUMP.md` or `fts_v13_workbook_sheets.json` only if full sheet-level detail is needed.
-
-The active release includes the explicit author correction dated 2026-09-21;
-the previous v13 release is preserved under `work/canon_history/`.
-
-For graph work:
-- Use `fts_cards.jsonl` as the entity source.
-- Use `fts_triples.tsv` for compact subject/predicate/object graph.
-- Use `fts_graph_full.tsv` if graph IDs, evidence IDs, comments, statuses, or internal references are needed.
-
-For exact workbook reconstruction:
-- Use `fts_v13_workbook_sheets.json`.
+Copy every file listed in MANIFEST.json into the project root source/ directory.
+Preserve the manifest and verify with `python -X utf8 tools/verify.py --strict`.
+Use `python -X utf8 tools/query.py card <ID>` to inspect records.
+Canon is editable; update primary records, rebuild derivatives, and verify hashes.

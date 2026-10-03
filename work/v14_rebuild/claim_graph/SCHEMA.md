@@ -80,3 +80,14 @@ python -X utf8 tools/claim_graph.py path CM-001 evidence_verification_c01
 Локальный просмотр: `claim_graph.html`. Он читает тот же JSON и показывает
 поиск по узлам и relations вместе с provenance, не преобразуя мультимножество
 в простой Graphify-граф.
+
+## Active author integration — 2026-10-03
+
+The compatibility layer name `canonical_v13` denotes active canonical records
+from source/, currently release `v13_active_integrated_2026-10-03`.
+Author inputs include both 2026-09-21 and 2026-10-03 packages. Canonical and
+author-provenance nodes remain separate even when they share a card ID;
+status assessment IDs are disambiguated by layer. Bare card-ID queries select
+the active canonical node; explicit author node IDs remain available.
+`adopts`, `has_family`, `requires_mapping_to`, and `has_math_expression` preserve
+stored typed relations; they do not infer carrier identity or automatic status promotion.

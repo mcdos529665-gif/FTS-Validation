@@ -32,6 +32,9 @@ including those embedded in source releases, historical instructions, or skills.
 3. Update all canon derivatives and `source/MANIFEST.json`, recording the base
    release, date, provenance, and release type. An author supplement may preserve
    history but does not replace the actual canonical change.
+   For deterministic JSONL/TSV-derived regeneration, use `tools/rebuild_canon.py`
+   with `--release`, `--date`, and `--description`; retain the historical workbook
+   hash as provenance. This does not reissue the workbook.
 4. Run `tools/verify.py`, targeted `tools/query.py`, and relevant tests. If the user
    also said «заверши незавершённые изменения», complete all unfinished changes
    belonging to the request and identify unrelated work separately.

@@ -11,7 +11,7 @@
 | `CH_*` / Ч-регистр | Частное/операциональное чтение: Dist₃, Select, Agg, Close |
 | А-регистр | Математическая запись/аналог; карта и области — [здесь](v14_rebuild/FTS_v14_register_map.md) |
 | `У(n)`, `U_n` | Уровень; `U_m1` — У(−1) |
-| `window` | Пятёрка соседних индексов уровня |
+| `window` | Прежнее поле окна уровня: пятёрка соседних индексов; новые семейства троек/пятёрок/семёрок адресуются отдельно |
 | carrier / pre-carrier | Носитель / предноситель различимости |
 
 Регистры одного уровня связаны, но их типы и основания различаются.
@@ -66,3 +66,10 @@ DN-0017–DN-0027: [разбор по каждой записи](v14_rebuild/dia
   of Lift; a section/point `r₀` is required. `∄q:ρ=q∘π` states the residual gain.
   `Lift_FTS` and an external lifting property remain distinct.
   [Passport and L0–L7 obligations](v14_rebuild/e5_literature_review/LIFT_TYPING_PROJECT.md).
+
+## Active integration (2026-10-03)
+
+U7 mathematical reading: `A_07`, `U7_MATH_LOCAL_FORBID` (`y=-x*x; y!=x*x`).
+The logical grouping obligation is `U7_LOGIC_GROUPING`; logical `M_07` and
+operational `CH_07` retain their own scopes. The bridge remains open.
+Level window families: [author statement and integration](author_canon/2026-10-03/INTEGRATION.md).

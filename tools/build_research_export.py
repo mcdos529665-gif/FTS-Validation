@@ -126,6 +126,7 @@ DIALOGUE_SEMANTICS_NOTE = Path("work/v14_rebuild/dialogue_semantics_2026-09-15.m
 DIALOGUE_INTEGRATION_NOTE = Path("work/v14_rebuild/dialogue_integration_2026-09-22.md")
 AUTHOR_CANON_INDEX = Path("work/AUTHOR_CANON.md")
 AUTHOR_CANON_ROOT = Path("work/author_canon/2026-09-21")
+AUTHOR_WINDOW_ROOT = Path("work/author_canon/2026-10-03")
 AUTHOR_CANON_INPUTS = tuple(AUTHOR_CANON_ROOT / name for name in (
     "AMENDMENT.md", "AUTHOR_MESSAGE.txt", "INHERITED_AUTHOR_MESSAGE.txt",
     "INHERITED_AUTHOR_CLARIFICATION.txt",
@@ -492,7 +493,7 @@ def render_export() -> str:
 ## 1. Паспорт выгрузки и правила чтения
 
 - Формат сборки: `FTS_RESEARCH_EXPORT_V1`.
-- Версия активного канона: `source/MANIFEST.json`.
+- Версия активного канона: `source/MANIFEST.json` (включая интегрированные авторские поправки).
 - Source SHA256: `{source_sha}`.
 - Покрытие канона: **{cards} карточка / {triples} триплетов / {sheets} листа**.
 - Машинная верификация текущего v14: **{passed} PASS / {failed} FAIL из {total}**.
@@ -574,6 +575,12 @@ def render_export() -> str:
                 markdown_source("6.23. Нейросетевой аналог ФТС: гашение и обобщение", NEURAL_ANALOGY_REVIEW),
                 fenced_source_trimmed("6.24. Исходное сообщение об аналоге", NEURAL_ANALOGY_AUTHOR_MESSAGE, "text"),
                 fenced_source("6.25. Воспроизводимые свидетели аналога", NEURAL_ANALOGY_CHECK, "python"),
+                markdown_source("6.26. Авторские семейства окон AC-2026-10-03", AUTHOR_WINDOW_ROOT / "AMENDMENT.md"),
+                fenced_source("6.27. Исходное сообщение об окнах", AUTHOR_WINDOW_ROOT / "AUTHOR_MESSAGE.txt", "text"),
+                fenced_source("6.28. Карточки авторской записи окон", AUTHOR_WINDOW_ROOT / "cards.jsonl", "jsonl"),
+                fenced_source("6.29. Связи авторской записи окон", AUTHOR_WINDOW_ROOT / "triples.tsv", "tsv"),
+                fenced_source("6.30. Манифест авторской записи окон", AUTHOR_WINDOW_ROOT / "MANIFEST.json", "json"),
+                markdown_source("6.31. Интеграция окон и регистров", AUTHOR_WINDOW_ROOT / "INTEGRATION.md"),
             ]
         ),
         "## 7. Внешний исследовательский контур E5\n\n"

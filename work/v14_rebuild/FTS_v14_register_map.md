@@ -66,8 +66,8 @@ rule; он не обращает канонное ребро `has_minimal_expres
 | 3 | Информация | `a≠b` | `Dist₃` | `y=−x` | нечёт | `y≠x` | `x=0` |
 | 4 | Вероятность | `(a=b)∧(a≠b)` | Field | `y=\|x\|` | чёт | `y≠−\|x\|` | `x=0` |
 | 5 | Выбор | `(a=b)∨(a≠b)` | `Select` | `y=−\|x\|` | чёт | `y≠\|x\|` | `x=0` |
-| 6 | Статистика | `V·V` | `Aggᵢ(Vᵢ)` | `y=x²` | чёт | `y≠−x²` | `x=0` |
-| 7 | Знание | `−(V·V)` | `Close(W,W)` | `y=−x²` | чёт | `y≠x²` | `x=0` |
+| 6 | Статистика | `((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))` | `Aggᵢ(Vᵢ)` | `y=x²` | чёт | `y≠−x²` | `x=0` |
+| 7 | Знание | `(((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))` | `Close(W,W)` | `y=−x²` | чёт | `y≠x²` | `x=0` |
 | 8 | Предположение | `?(V·V)` | `Hyp=W[A?]` | `y=√\|x\|` | чёт | `A?≠A` | `A? unres.` |
 | 9 | Понимание | `Δ·(V·V)` | «почему ветвь» | `y=x³` | нечёт | `y≠−x³` | `x=0` |
 | 10 | Оценка | `Δ²Ц=−Ц` | `Compare` | `y=cos x` | чёт | `Ц≠−Ц вне реш.` | `π/2+πk` |
@@ -236,3 +236,10 @@ Sem(U_n) требует M_n как минимальный носитель; M_n 
 Q:  |F|              (величина; склеивает {F,−F})
 R:  F/−F = {+1,−1}   (ветвь; различает; Tot = коллапс Z/2→{1})
 ```
+
+## Register preservation at integration (2026-10-03)
+
+The logical M6/M7 column uses AC-2026-09-21. Mathematical readings and right-hand
+constraints remain separate: U7 `A_07` and `U7_MATH_LOCAL_FORBID` preserve
+`y=-x*x; y!=x*x`; logical grouping is `U7_LOGIC_GROUPING`. A change in one register
+is not withdrawal of another. The bridge requires its own scoped witness.

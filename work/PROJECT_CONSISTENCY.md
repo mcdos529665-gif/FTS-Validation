@@ -72,3 +72,13 @@ PASS preserves provenance without replacing grounds or the author's decision.
 
 Pre-existing unfinished work by others and the intended future commit boundary:
 `work/project_consistency/BASELINE_UNFINISHED_2026-09-23.md`.
+
+## Runtime used for integration on 2026-10-03
+
+The existing Windows Python 3.11.9 has SymPy 1.14.0 and runs the formal checks.
+The default `C:/Python313/python.exe` lacks SymPy. Use an interpreter with the
+required dependencies, e.g. `py -3.11 -X utf8 tools/check_project_consistency.py`,
+or put that Python first in PATH before the documented `python` command.
+No global installation or local Codex configuration change is required.
+Intentional canon edits are checked against the current MANIFEST, schema,
+references, and typed SCC profile; Git difference from HEAD is not a corruption gate.

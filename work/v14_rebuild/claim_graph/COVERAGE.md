@@ -5,24 +5,24 @@
 
 ## Покрытие
 
-- `canonical_cards`: 161
-- `canonical_triples`: 238
-- `canonical_card_depends_on`: 156
-- `canonical_input_assertions`: 420
-- `author_cards`: 5
-- `author_triples`: 18
+- `canonical_cards`: 169
+- `canonical_triples`: 271
+- `canonical_card_depends_on`: 172
+- `canonical_input_assertions`: 493
+- `author_cards`: 8
+- `author_triples`: 32
 - `audit_claim_groups`: 25
 - `audit_findings`: 20
 - `patterns`: 31
-- `open_question_anchors`: 76
-- `mapped_open_questions`: 60
+- `open_question_anchors`: 79
+- `mapped_open_questions`: 65
 - `verification_nodes`: 62
 - `external_evidence_nodes`: 21
 - `internal_evidence_nodes`: 7
 - `research_claims`: 10
 - `curated_research_bridges`: 14
-- `nodes`: 756
-- `edges`: 1550
+- `nodes`: 790
+- `edges`: 1678
 - `unresolved_references`: 34
 
 ## Границы
@@ -36,7 +36,7 @@
 ## Обработанные слои
 
 - `canonical_v13`: карточки и все направленные триплеты/`depends_on`.
-- `author_canon`: AC-2026-09-19 с отдельным provenance и статусом авторского принятия.
+- `author_canon`: AC-2026-09-21 и AC-2026-10-03 с отдельным provenance и статусом авторского принятия; прежние уточнения сохраняются исторически.
 - `audit`: claims, findings, patterns, OQ и проверки.
 - `external_research` и `internal_research`: evidence matrices и внутренние результаты.
 - `research_bridge`: только явно записанные curated bridges из `RESEARCH_CLAIM_BRIDGES.tsv`.

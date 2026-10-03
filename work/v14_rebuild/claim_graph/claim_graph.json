@@ -11,19 +11,19 @@
   "input_digests": [
     {
       "path": "source/FTS_v13_LLM_FULL_DUMP.md",
-      "sha256": "038f8f19772a43167687aa14593816279aa67e7262b02219213bf640c6a615cb"
+      "sha256": "9ff4f0896a57c97669ae05449c05e513da45367001d3356966f279657b8f635c"
     },
     {
       "path": "source/fts_cards.jsonl",
-      "sha256": "bf92fdeae4f7d7b781fd4dd7be6c20c738623243f0a71135fb9ee89d1c0960ab"
+      "sha256": "2b90ce6c7cba31cdc07fd6f4fb38228112463b0e7d4c64d5b842cae377178fa8"
     },
     {
       "path": "source/fts_triples.tsv",
-      "sha256": "6b23b2dff16629ebc7b85aeb2a0930048e0076272e32499c2de33b0c4b4adf0c"
+      "sha256": "5d0818fadbbfeca82467c92467f4736eaedec1e74170a5f8d14411c081e8ee82"
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
-      "sha256": "29839e7db5fb986aeb279733a96e108691836250490fba446bb7cdd41ab2ae56"
+      "sha256": "798bac570c4295a673441da548cc3f430e414bcee8547b506c65ec7fa1071479"
     },
     {
       "path": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
@@ -46,12 +46,28 @@
       "sha256": "8834d23f4c966ebd112207d5b2be59e218c9b8d820416162e695ef992b721b2c"
     },
     {
+      "path": "work/author_canon/2026-10-03/AMENDMENT.md",
+      "sha256": "7cea8db76d1277a0a879e0549ae80df09be05d5c08d5c9921a9e7aa4d08460cb"
+    },
+    {
+      "path": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt",
+      "sha256": "34b1ebabd41f273ff301c7b3af36cde88cc06506192d45c51c2b8c24aa28de08"
+    },
+    {
+      "path": "work/author_canon/2026-10-03/cards.jsonl",
+      "sha256": "a9064daca28abd0c5f1918ebd319fe0a4c6e6927db40107ce690d682a72e1cc5"
+    },
+    {
+      "path": "work/author_canon/2026-10-03/triples.tsv",
+      "sha256": "691a5895a0436c583e82a76799bc9dc7ebda512eee53c2360e94ac5707aa80c1"
+    },
+    {
       "path": "work/notation.md",
-      "sha256": "15f7fea239af0d86ed83d6e0639307a3ee6cba9ffec15941b3d58dee8d2b2405"
+      "sha256": "e0b5f3f18833104f694c54a863c555d948e0f9ca5ce0701f7ec3fbd671a61b6c"
     },
     {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
-      "sha256": "58086a0fd1ab3d86d92581b7a05cc8e1434e01176346c3ea535663e7c9e60531"
+      "sha256": "d6da08e3b4fb49eba1451e7c782b173ca47727110c4713f87fca15ee0dada916"
     },
     {
       "path": "work/v14_rebuild/audit/BASELINE.md",
@@ -79,7 +95,7 @@
     },
     {
       "path": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "sha256": "014b3887def8fb43e712abaa8606e4308944e5e1eb7374ff52b94c2a32fc0d7b"
+      "sha256": "f206486a1be4609d983903e106c9df91b21b7584814ba3386f7eae522e824ff7"
     },
     {
       "path": "work/v14_rebuild/audit/REPRODUCIBILITY.md",
@@ -308,6 +324,17 @@
       "source_location": "card:A9"
     },
     {
+      "id": "assessment_a_07_status",
+      "type": "status_assessment",
+      "label": "A_07 status: candidate_with_operational_gate",
+      "layer": "canonical_v13",
+      "status_text": "candidate_with_operational_gate",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:A_07"
+    },
+    {
       "id": "assessment_ac_20260919_expectation_speed_status",
       "type": "status_assessment",
       "label": "AC_20260919_EXPECTATION_SPEED status: accepted_into_author_canon; evidence_status=author_adopted_empirically_untested",
@@ -361,6 +388,39 @@
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260921_U7_LOGIC"
+    },
+    {
+      "id": "assessment_ac_20261003_windows_fives_status",
+      "type": "status_assessment",
+      "label": "AC_20261003_WINDOWS_FIVES status: author_canonical_amendment",
+      "layer": "canonical_v13",
+      "status_text": "author_canonical_amendment",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_FIVES"
+    },
+    {
+      "id": "assessment_ac_20261003_windows_sevens_status",
+      "type": "status_assessment",
+      "label": "AC_20261003_WINDOWS_SEVENS status: author_canonical_amendment",
+      "layer": "canonical_v13",
+      "status_text": "author_canonical_amendment",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_SEVENS"
+    },
+    {
+      "id": "assessment_ac_20261003_windows_triples_status",
+      "type": "status_assessment",
+      "label": "AC_20261003_WINDOWS_TRIPLES status: author_canonical_amendment",
+      "layer": "canonical_v13",
+      "status_text": "author_canonical_amendment",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_TRIPLES"
     },
     {
       "id": "assessment_add_constants_status",
@@ -482,6 +542,72 @@
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:ADDENDUM_V3"
+    },
+    {
+      "id": "assessment_author_canon_ac_20261003_author_decision_status",
+      "type": "status_assessment",
+      "label": "AC_20261003_AUTHOR_DECISION status: accepted_into_author_canon; evidence_status=direct_author_statement",
+      "layer": "author_canon",
+      "status_text": "accepted_into_author_canon; evidence_status=direct_author_statement",
+      "status_axis": "author_status",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_AUTHOR_DECISION"
+    },
+    {
+      "id": "assessment_author_canon_ac_20261003_window_families_status",
+      "type": "status_assessment",
+      "label": "AC_20261003_WINDOW_FAMILIES status: accepted_into_author_canon; evidence_status=author_adopted_formal_semantics_not_given",
+      "layer": "author_canon",
+      "status_text": "accepted_into_author_canon; evidence_status=author_adopted_formal_semantics_not_given",
+      "status_axis": "author_status",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "assessment_author_canon_ac_20261003_window_fives_alignment_status",
+      "type": "status_assessment",
+      "label": "AC_20261003_WINDOW_FIVES_ALIGNMENT status: not_author_statement; evidence_status=editorial_comparison_with_source",
+      "layer": "author_canon",
+      "status_text": "not_author_statement; evidence_status=editorial_comparison_with_source",
+      "status_axis": "author_status",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT"
+    },
+    {
+      "id": "assessment_canonical_v13_ac_20261003_author_decision_status",
+      "type": "status_assessment",
+      "label": "AC_20261003_AUTHOR_DECISION status: author_canonical_amendment",
+      "layer": "canonical_v13",
+      "status_text": "author_canonical_amendment",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_AUTHOR_DECISION"
+    },
+    {
+      "id": "assessment_canonical_v13_ac_20261003_window_families_status",
+      "type": "status_assessment",
+      "label": "AC_20261003_WINDOW_FAMILIES status: author_canonical_amendment",
+      "layer": "canonical_v13",
+      "status_text": "author_canonical_amendment",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "assessment_canonical_v13_ac_20261003_window_fives_alignment_status",
+      "type": "status_assessment",
+      "label": "AC_20261003_WINDOW_FIVES_ALIGNMENT status: editorial_check",
+      "layer": "canonical_v13",
+      "status_text": "editorial_check",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT"
     },
     {
       "id": "assessment_ch_00_status",
@@ -2420,6 +2546,17 @@
       "source_location": "card:U7_FORGET_CLOSE"
     },
     {
+      "id": "assessment_u7_logic_grouping_status",
+      "type": "status_assessment",
+      "label": "U7_LOGIC_GROUPING status: derived_constraint",
+      "layer": "canonical_v13",
+      "status_text": "derived_constraint",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:U7_LOGIC_GROUPING"
+    },
+    {
       "id": "assessment_u7_math_local_forbid_status",
       "type": "status_assessment",
       "label": "U7_MATH_LOCAL_FORBID status: derived_constraint",
@@ -2722,6 +2859,42 @@
       "source_location": "card:AC_20260921_U7_LOGIC"
     },
     {
+      "id": "author_ac_20261003_author_decision",
+      "type": "author_statement",
+      "label": "Прямая авторская запись семейств окон",
+      "layer": "author_canon",
+      "card_id": "AC_20261003_AUTHOR_DECISION",
+      "status": "author_canonical_amendment",
+      "tags": [],
+      "text": "Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки.",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_AUTHOR_DECISION"
+    },
+    {
+      "id": "author_ac_20261003_window_families",
+      "type": "author_statement",
+      "label": "Семейства окон нечётной длины",
+      "layer": "author_canon",
+      "card_id": "AC_20261003_WINDOW_FAMILIES",
+      "status": "author_canonical_amendment",
+      "tags": [],
+      "text": "Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню.",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "author_ac_20261003_window_fives_alignment",
+      "type": "author_statement",
+      "label": "Пятёрки совпадают с окнами канона v13",
+      "layer": "author_canon",
+      "card_id": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "status": "editorial_check",
+      "tags": [],
+      "text": "Семейство пятёрок совпадает с окнами (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15) из поля window карточек уровней активного канона v13 (узлы-носители 3, 7, 11, 15); открытое окно (15,16,17,…) карточки U_15 в авторское перечисление не входит.",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT"
+    },
+    {
       "id": "card_a0",
       "type": "card",
       "label": "A0 Ladder-first ontology of distinction",
@@ -2900,6 +3073,112 @@
       "text": "anti-mode is declared next constructive level without expressibility gain",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:A9"
+    },
+    {
+      "id": "card_a_07",
+      "type": "card",
+      "label": "y=-x*x; y!=x*x Математический регистр У7",
+      "layer": "canonical_v13",
+      "card_id": "A_07",
+      "status": "candidate_with_operational_gate",
+      "tags": [
+        "math",
+        "U7",
+        "local_forbid"
+      ],
+      "text": "А-регистр для У(7): y=-x*x; y!=x*x. Математический аналог сохраняется отдельно от логической формы M_07; мост между регистрами открыт.",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:A_07"
+    },
+    {
+      "id": "card_ac_20261003_author_decision",
+      "type": "card",
+      "label": "AC_20261003_AUTHOR_DECISION Прямая авторская запись семейств окон",
+      "layer": "canonical_v13",
+      "card_id": "AC_20261003_AUTHOR_DECISION",
+      "status": "author_canonical_amendment",
+      "tags": [
+        "author_amendment",
+        "window_families"
+      ],
+      "text": "Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки.",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_AUTHOR_DECISION"
+    },
+    {
+      "id": "card_ac_20261003_window_families",
+      "type": "card",
+      "label": "AC_20261003_WINDOW_FAMILIES Семейства окон нечётной длины",
+      "layer": "canonical_v13",
+      "card_id": "AC_20261003_WINDOW_FAMILIES",
+      "status": "author_canonical_amendment",
+      "tags": [
+        "author_amendment",
+        "window_families"
+      ],
+      "text": "Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню.",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "card_ac_20261003_window_fives_alignment",
+      "type": "card",
+      "label": "AC_20261003_WINDOW_FIVES_ALIGNMENT Пятёрки совпадают с окнами канона v13",
+      "layer": "canonical_v13",
+      "card_id": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "status": "editorial_check",
+      "tags": [
+        "author_amendment",
+        "window_families"
+      ],
+      "text": "Семейство пятёрок совпадает с окнами (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15) из поля window карточек уровней активного канона v13 (узлы-носители 3, 7, 11, 15); открытое окно (15,16,17,…) карточки U_15 в авторское перечисление не входит.",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT"
+    },
+    {
+      "id": "card_ac_20261003_windows_fives",
+      "type": "card",
+      "label": "(-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15) Окна длины 5: авторский перечень",
+      "layer": "canonical_v13",
+      "card_id": "AC_20261003_WINDOWS_FIVES",
+      "status": "author_canonical_amendment",
+      "tags": [
+        "author_amendment",
+        "window_family"
+      ],
+      "text": "Точный конечный авторский перечень: (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_FIVES"
+    },
+    {
+      "id": "card_ac_20261003_windows_sevens",
+      "type": "card",
+      "label": "(-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17) Окна длины 7: авторский перечень",
+      "layer": "canonical_v13",
+      "card_id": "AC_20261003_WINDOWS_SEVENS",
+      "status": "author_canonical_amendment",
+      "tags": [
+        "author_amendment",
+        "window_family"
+      ],
+      "text": "Точный конечный авторский перечень: (-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_SEVENS"
+    },
+    {
+      "id": "card_ac_20261003_windows_triples",
+      "type": "card",
+      "label": "(-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11) Окна длины 3: авторский перечень",
+      "layer": "canonical_v13",
+      "card_id": "AC_20261003_WINDOWS_TRIPLES",
+      "status": "author_canonical_amendment",
+      "tags": [
+        "author_amendment",
+        "window_family"
+      ],
+      "text": "Точный конечный авторский перечень: (-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_TRIPLES"
     },
     {
       "id": "card_add_constants",
@@ -4951,11 +5230,11 @@
       "source_location": "card:U7_FORGET_CLOSE"
     },
     {
-      "id": "card_u7_math_local_forbid",
+      "id": "card_u7_logic_grouping",
       "type": "card",
       "label": "U7_author У7: вложенная группировка обязательна",
       "layer": "canonical_v13",
-      "card_id": "U7_MATH_LOCAL_FORBID",
+      "card_id": "U7_LOGIC_GROUPING",
       "status": "derived_constraint",
       "tags": [
         "U7",
@@ -4963,6 +5242,23 @@
         "local_forbid"
       ],
       "text": "Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму.",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:U7_LOGIC_GROUPING"
+    },
+    {
+      "id": "card_u7_math_local_forbid",
+      "type": "card",
+      "label": "y=-x*x; y!=x*x У7: y=-x*x обязан читаться с y!=x*x",
+      "layer": "canonical_v13",
+      "card_id": "U7_MATH_LOCAL_FORBID",
+      "status": "derived_constraint",
+      "tags": [
+        "U7",
+        "math",
+        "local_forbid",
+        "mirror_window"
+      ],
+      "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:U7_MATH_LOCAL_FORBID"
     },
@@ -5898,6 +6194,30 @@
       "source_location": "card:AC_20260921_U7_LOGIC:local_forbid[1]"
     },
     {
+      "id": "constraint_ac_20261003_window_families_00",
+      "type": "constraint",
+      "label": "Не отождествлять окна уровней с зеркальным окном Window(F) и окном ожидания W.",
+      "layer": "author_canon",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:local_forbid[0]"
+    },
+    {
+      "id": "constraint_ac_20261003_window_families_01",
+      "type": "constraint",
+      "label": "Не выводить из пересечения окон направленную обратную связь или статус узла-носителя без отдельного определения.",
+      "layer": "author_canon",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:local_forbid[1]"
+    },
+    {
+      "id": "constraint_ac_20261003_window_families_02",
+      "type": "constraint",
+      "label": "Не считать перечень продолжением выше указанных окон.",
+      "layer": "author_canon",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:local_forbid[2]"
+    },
+    {
       "id": "doc_source_fts_cards_jsonl",
       "type": "source_document",
       "label": "source/fts_cards.jsonl",
@@ -5938,6 +6258,20 @@
       "label": "work/author_canon/2026-09-21/INHERITED_AUTHOR_MESSAGE.txt",
       "layer": "author_canon",
       "source_file": "work/author_canon/2026-09-21/INHERITED_AUTHOR_MESSAGE.txt"
+    },
+    {
+      "id": "doc_work_author_canon_2026_10_03_amendment_md",
+      "type": "source_document",
+      "label": "work/author_canon/2026-10-03/AMENDMENT.md",
+      "layer": "author_canon",
+      "source_file": "work/author_canon/2026-10-03/AMENDMENT.md"
+    },
+    {
+      "id": "doc_work_author_canon_2026_10_03_author_message_txt",
+      "type": "source_document",
+      "label": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt",
+      "layer": "author_canon",
+      "source_file": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"
     },
     {
       "id": "doc_work_notation_md",
@@ -7241,6 +7575,38 @@
       "source_location": "card:AC_20260921_U7_LOGIC:open_obligations[0]"
     },
     {
+      "id": "obligation_ac_20261003_window_families_00",
+      "type": "open_obligation",
+      "label": "Роль каждого семейства (тройки/пятёрки/семёрки): какая сущность определяется окном и чем семейства различаются по содержанию.",
+      "layer": "author_canon",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:open_obligations[0]"
+    },
+    {
+      "id": "obligation_ac_20261003_window_families_01",
+      "type": "open_obligation",
+      "label": "Соотношение пересечения окон и узла-носителя, включая уровни 1, 5, 9 для троек и 5 для семёрок.",
+      "layer": "author_canon",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:open_obligations[1]"
+    },
+    {
+      "id": "obligation_ac_20261003_window_families_02",
+      "type": "open_obligation",
+      "label": "Правило построения последующих окон.",
+      "layer": "author_canon",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:open_obligations[2]"
+    },
+    {
+      "id": "obligation_ac_20261003_window_families_03",
+      "type": "open_obligation",
+      "label": "Карточки и листы workbook (28_CarrierNodes, окна в U_03…U_09) не переиздавались: поправка не слита в активный source/.",
+      "layer": "author_canon",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:open_obligations[3]"
+    },
+    {
       "id": "oq_oq_8plus_only_refuted",
       "type": "open_question",
       "label": "oq-8plus-only-refuted — «8+ only» для «половины» — ОПРОВЕРГНУТО (D1: знаковый полушаг уже на У4).",
@@ -7979,6 +8345,36 @@
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L394"
+    },
+    {
+      "id": "oq_oq_window_family_continuation",
+      "type": "open_question",
+      "label": "oq-window-family-continuation — Задать правило продолжения авторских перечней окон.",
+      "layer": "audit",
+      "anchor": "oq-window-family-continuation",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L562"
+    },
+    {
+      "id": "oq_oq_window_family_roles",
+      "type": "open_question",
+      "label": "oq-window-family-roles — Определить роли семейств троек, пятёрок и семёрок.",
+      "layer": "audit",
+      "anchor": "oq-window-family-roles",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L557"
+    },
+    {
+      "id": "oq_oq_window_intersection_carrier",
+      "type": "open_question",
+      "label": "oq-window-intersection-carrier — Развести пересечение окон и узел-носитель.",
+      "layer": "audit",
+      "anchor": "oq-window-intersection-carrier",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L559"
     },
     {
       "id": "oq_oq_witnesses_verif_done",
@@ -10010,6 +10406,188 @@
       "source_location": "row:32"
     },
     {
+      "id": "author_canon_2026_10_03_triple_0001",
+      "source": "author_ac_20261003_author_decision",
+      "target": "author_ac_20261003_window_families",
+      "relation": "adopts",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:2",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_AUTHOR_DECISION",
+      "raw_object": "AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0002",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_ac_20261003_windows_triples",
+      "relation": "has_family",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:3",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "AC_20261003_WINDOWS_TRIPLES"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0003",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_ac_20261003_windows_fives",
+      "relation": "has_family",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:4",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "AC_20261003_WINDOWS_FIVES"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0004",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_ac_20261003_windows_sevens",
+      "relation": "has_family",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:5",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "AC_20261003_WINDOWS_SEVENS"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0005",
+      "source": "author_ac_20261003_window_families",
+      "target": "author_ac_20261003_author_decision",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:6",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "AC_20261003_AUTHOR_DECISION"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0006",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_u_m1",
+      "relation": "requires_mapping_to",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:7",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_m1"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0007",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_u_03",
+      "relation": "requires_mapping_to",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:8",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_03"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0008",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_u_07",
+      "relation": "requires_mapping_to",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:9",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_07"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0009",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_u_11",
+      "relation": "requires_mapping_to",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:10",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_11"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0010",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_u_15",
+      "relation": "requires_mapping_to",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:11",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_15"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0011",
+      "source": "author_ac_20261003_window_fives_alignment",
+      "target": "author_ac_20261003_window_families",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:12",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "raw_object": "AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0012",
+      "source": "author_ac_20261003_window_fives_alignment",
+      "target": "card_u_03",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:13",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "raw_object": "U_03"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0013",
+      "source": "author_ac_20261003_window_fives_alignment",
+      "target": "card_u_07",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:14",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "raw_object": "U_07"
+    },
+    {
+      "id": "author_canon_2026_10_03_triple_0014",
+      "source": "author_ac_20261003_window_fives_alignment",
+      "target": "card_u_09",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/triples.tsv",
+      "source_location": "row:15",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "raw_object": "U_09"
+    },
+    {
       "id": "author_canon_dependency_ac_20260919_expectation_speed_000",
       "source": "author_ac_20260919_expectation_speed",
       "target": "card_u7_window_core",
@@ -10095,6 +10673,116 @@
       "confidence": "EXTRACTED",
       "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260921_U7_LOGIC:depends_on[1]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "author_canon_dependency_ac_20261003_window_families_000",
+      "source": "author_ac_20261003_window_families",
+      "target": "author_ac_20261003_author_decision",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[0]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "author_canon_dependency_ac_20261003_window_families_001",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_u_m1",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[1]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "author_canon_dependency_ac_20261003_window_families_002",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_u_03",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[2]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "author_canon_dependency_ac_20261003_window_families_003",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_u_07",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[3]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "author_canon_dependency_ac_20261003_window_families_004",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_u_11",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[4]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "author_canon_dependency_ac_20261003_window_families_005",
+      "source": "author_ac_20261003_window_families",
+      "target": "card_u_15",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[5]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "author_canon_dependency_ac_20261003_window_fives_alignment_000",
+      "source": "author_ac_20261003_window_fives_alignment",
+      "target": "author_ac_20261003_window_families",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT:depends_on[0]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "author_canon_dependency_ac_20261003_window_fives_alignment_001",
+      "source": "author_ac_20261003_window_fives_alignment",
+      "target": "card_u_03",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT:depends_on[1]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "author_canon_dependency_ac_20261003_window_fives_alignment_002",
+      "source": "author_ac_20261003_window_fives_alignment",
+      "target": "card_u_07",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT:depends_on[2]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "author_canon_dependency_ac_20261003_window_fives_alignment_003",
+      "source": "author_ac_20261003_window_fives_alignment",
+      "target": "card_u_09",
+      "relation": "depends_on",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT:depends_on[3]",
       "assertion_kind": "card_field"
     },
     {
@@ -10390,6 +11078,201 @@
       "confidence": "EXTRACTED",
       "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260921_U7_LOGIC:source"
+    },
+    {
+      "id": "author_source_ac_20261003_author_decision_source",
+      "source": "author_ac_20261003_author_decision",
+      "target": "doc_work_author_canon_2026_10_03_author_message_txt",
+      "relation": "documented_in",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_AUTHOR_DECISION:source"
+    },
+    {
+      "id": "author_source_ac_20261003_window_families_source",
+      "source": "author_ac_20261003_window_families",
+      "target": "doc_work_author_canon_2026_10_03_author_message_txt",
+      "relation": "documented_in",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:source"
+    },
+    {
+      "id": "author_source_ac_20261003_window_fives_alignment_source",
+      "source": "author_ac_20261003_window_fives_alignment",
+      "target": "doc_work_author_canon_2026_10_03_amendment_md",
+      "relation": "documented_in",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT:source"
+    },
+    {
+      "id": "canonical_v13_dependency_a_07_000",
+      "source": "card_a_07",
+      "target": "card_u_06",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:A_07:depends_on[0]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_a_07_001",
+      "source": "card_a_07",
+      "target": "card_u7_math_local_forbid",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:A_07:depends_on[1]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_window_families_000",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_ac_20261003_author_decision",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[0]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_window_families_001",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_m1",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[1]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_window_families_002",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_03",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[2]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_window_families_003",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_07",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[3]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_window_families_004",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_11",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[4]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_window_families_005",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_15",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:depends_on[5]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_window_fives_alignment_000",
+      "source": "card_ac_20261003_window_fives_alignment",
+      "target": "card_ac_20261003_window_families",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT:depends_on[0]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_window_fives_alignment_001",
+      "source": "card_ac_20261003_window_fives_alignment",
+      "target": "card_u_03",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT:depends_on[1]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_window_fives_alignment_002",
+      "source": "card_ac_20261003_window_fives_alignment",
+      "target": "card_u_07",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT:depends_on[2]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_window_fives_alignment_003",
+      "source": "card_ac_20261003_window_fives_alignment",
+      "target": "card_u_09",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT:depends_on[3]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_windows_fives_000",
+      "source": "card_ac_20261003_windows_fives",
+      "target": "card_ac_20261003_window_families",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_FIVES:depends_on[0]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_windows_sevens_000",
+      "source": "card_ac_20261003_windows_sevens",
+      "target": "card_ac_20261003_window_families",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_SEVENS:depends_on[0]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_ac_20261003_windows_triples_000",
+      "source": "card_ac_20261003_windows_triples",
+      "target": "card_ac_20261003_window_families",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_TRIPLES:depends_on[0]",
+      "assertion_kind": "card_field"
     },
     {
       "id": "canonical_v13_dependency_add_constants_000",
@@ -11071,17 +11954,6 @@
       "confidence": "EXTRACTED",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:M_07:depends_on[0]",
-      "assertion_kind": "card_field"
-    },
-    {
-      "id": "canonical_v13_dependency_m_07_001",
-      "source": "card_m_07",
-      "target": "card_u7_math_local_forbid",
-      "relation": "depends_on",
-      "layer": "canonical_v13",
-      "confidence": "EXTRACTED",
-      "source_file": "source/fts_cards.jsonl",
-      "source_location": "card:M_07:depends_on[1]",
       "assertion_kind": "card_field"
     },
     {
@@ -11800,9 +12672,31 @@
       "assertion_kind": "card_field"
     },
     {
+      "id": "canonical_v13_dependency_u7_logic_grouping_000",
+      "source": "card_u7_logic_grouping",
+      "target": "card_m_07",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:U7_LOGIC_GROUPING:depends_on[0]",
+      "assertion_kind": "card_field"
+    },
+    {
+      "id": "canonical_v13_dependency_u7_logic_grouping_001",
+      "source": "card_u7_logic_grouping",
+      "target": "card_u_06",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:U7_LOGIC_GROUPING:depends_on[1]",
+      "assertion_kind": "card_field"
+    },
+    {
       "id": "canonical_v13_dependency_u7_math_local_forbid_000",
       "source": "card_u7_math_local_forbid",
-      "target": "card_m_07",
+      "target": "card_a_07",
       "relation": "depends_on",
       "layer": "canonical_v13",
       "confidence": "EXTRACTED",
@@ -14788,7 +15682,7 @@
     {
       "id": "canonical_v13_triple_0207",
       "source": "card_m_07",
-      "target": "card_u7_math_local_forbid",
+      "target": "card_u7_logic_grouping",
       "relation": "has_local_forbid",
       "layer": "canonical_v13",
       "confidence": "EXTRACTED",
@@ -14796,7 +15690,7 @@
       "source_location": "row:208",
       "assertion_kind": "triple",
       "raw_subject": "M_07",
-      "raw_object": "U7_MATH_LOCAL_FORBID"
+      "raw_object": "U7_LOGIC_GROUPING"
     },
     {
       "id": "canonical_v13_triple_0208",
@@ -15200,6 +16094,435 @@
       "assertion_kind": "triple",
       "raw_subject": "U_12",
       "raw_object": "TENSOR_LADDER_U12"
+    },
+    {
+      "id": "canonical_v13_triple_0239",
+      "source": "card_ac_20261003_author_decision",
+      "target": "card_ac_20261003_window_families",
+      "relation": "adopts",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:240",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_AUTHOR_DECISION",
+      "raw_object": "AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "canonical_v13_triple_0240",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_ac_20261003_windows_triples",
+      "relation": "has_family",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:241",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "AC_20261003_WINDOWS_TRIPLES"
+    },
+    {
+      "id": "canonical_v13_triple_0241",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_ac_20261003_windows_fives",
+      "relation": "has_family",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:242",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "AC_20261003_WINDOWS_FIVES"
+    },
+    {
+      "id": "canonical_v13_triple_0242",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_ac_20261003_windows_sevens",
+      "relation": "has_family",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:243",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "AC_20261003_WINDOWS_SEVENS"
+    },
+    {
+      "id": "canonical_v13_triple_0243",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_ac_20261003_author_decision",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:244",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "AC_20261003_AUTHOR_DECISION"
+    },
+    {
+      "id": "canonical_v13_triple_0244",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_m1",
+      "relation": "requires_mapping_to",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:245",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_m1"
+    },
+    {
+      "id": "canonical_v13_triple_0245",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_03",
+      "relation": "requires_mapping_to",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:246",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_03"
+    },
+    {
+      "id": "canonical_v13_triple_0246",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_07",
+      "relation": "requires_mapping_to",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:247",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_07"
+    },
+    {
+      "id": "canonical_v13_triple_0247",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_11",
+      "relation": "requires_mapping_to",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:248",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_11"
+    },
+    {
+      "id": "canonical_v13_triple_0248",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_15",
+      "relation": "requires_mapping_to",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:249",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_15"
+    },
+    {
+      "id": "canonical_v13_triple_0249",
+      "source": "card_ac_20261003_window_fives_alignment",
+      "target": "card_ac_20261003_window_families",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:250",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "raw_object": "AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "canonical_v13_triple_0250",
+      "source": "card_ac_20261003_window_fives_alignment",
+      "target": "card_u_03",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:251",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "raw_object": "U_03"
+    },
+    {
+      "id": "canonical_v13_triple_0251",
+      "source": "card_ac_20261003_window_fives_alignment",
+      "target": "card_u_07",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:252",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "raw_object": "U_07"
+    },
+    {
+      "id": "canonical_v13_triple_0252",
+      "source": "card_ac_20261003_window_fives_alignment",
+      "target": "card_u_09",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:253",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "raw_object": "U_09"
+    },
+    {
+      "id": "canonical_v13_triple_0253",
+      "source": "card_u_07",
+      "target": "card_a_07",
+      "relation": "has_math_expression",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:254",
+      "assertion_kind": "triple",
+      "raw_subject": "U_07",
+      "raw_object": "A_07"
+    },
+    {
+      "id": "canonical_v13_triple_0254",
+      "source": "card_u_07",
+      "target": "card_u7_logic_grouping",
+      "relation": "has_local_forbid",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:255",
+      "assertion_kind": "triple",
+      "raw_subject": "U_07",
+      "raw_object": "U7_LOGIC_GROUPING"
+    },
+    {
+      "id": "canonical_v13_triple_0255",
+      "source": "card_a_07",
+      "target": "card_u_06",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:256",
+      "assertion_kind": "triple",
+      "raw_subject": "A_07",
+      "raw_object": "U_06"
+    },
+    {
+      "id": "canonical_v13_triple_0256",
+      "source": "card_a_07",
+      "target": "card_u7_math_local_forbid",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:257",
+      "assertion_kind": "triple",
+      "raw_subject": "A_07",
+      "raw_object": "U7_MATH_LOCAL_FORBID"
+    },
+    {
+      "id": "canonical_v13_triple_0257",
+      "source": "card_u7_logic_grouping",
+      "target": "card_m_07",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:258",
+      "assertion_kind": "triple",
+      "raw_subject": "U7_LOGIC_GROUPING",
+      "raw_object": "M_07"
+    },
+    {
+      "id": "canonical_v13_triple_0258",
+      "source": "card_u7_logic_grouping",
+      "target": "card_u_06",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:259",
+      "assertion_kind": "triple",
+      "raw_subject": "U7_LOGIC_GROUPING",
+      "raw_object": "U_06"
+    },
+    {
+      "id": "canonical_v13_triple_0259",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_m1",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:260",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_m1"
+    },
+    {
+      "id": "canonical_v13_triple_0260",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_03",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:261",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_03"
+    },
+    {
+      "id": "canonical_v13_triple_0261",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_07",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:262",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_07"
+    },
+    {
+      "id": "canonical_v13_triple_0262",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_11",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:263",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_11"
+    },
+    {
+      "id": "canonical_v13_triple_0263",
+      "source": "card_ac_20261003_window_families",
+      "target": "card_u_15",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:264",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOW_FAMILIES",
+      "raw_object": "U_15"
+    },
+    {
+      "id": "canonical_v13_triple_0264",
+      "source": "card_ac_20261003_windows_triples",
+      "target": "card_ac_20261003_window_families",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:265",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOWS_TRIPLES",
+      "raw_object": "AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "canonical_v13_triple_0265",
+      "source": "card_ac_20261003_windows_fives",
+      "target": "card_ac_20261003_window_families",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:266",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOWS_FIVES",
+      "raw_object": "AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "canonical_v13_triple_0266",
+      "source": "card_ac_20261003_windows_sevens",
+      "target": "card_ac_20261003_window_families",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:267",
+      "assertion_kind": "triple",
+      "raw_subject": "AC_20261003_WINDOWS_SEVENS",
+      "raw_object": "AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "canonical_v13_triple_0267",
+      "source": "card_a_07",
+      "target": "card_u7_math_local_forbid",
+      "relation": "has_local_forbid",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:268",
+      "assertion_kind": "triple",
+      "raw_subject": "A_07",
+      "raw_object": "U7_MATH_LOCAL_FORBID"
+    },
+    {
+      "id": "canonical_v13_triple_0268",
+      "source": "card_u7_math_local_forbid",
+      "target": "card_a_07",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:269",
+      "assertion_kind": "triple",
+      "raw_subject": "U7_MATH_LOCAL_FORBID",
+      "raw_object": "A_07"
+    },
+    {
+      "id": "canonical_v13_triple_0269",
+      "source": "card_u7_math_local_forbid",
+      "target": "card_u_06",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:270",
+      "assertion_kind": "triple",
+      "raw_subject": "U7_MATH_LOCAL_FORBID",
+      "raw_object": "U_06"
+    },
+    {
+      "id": "canonical_v13_triple_0270",
+      "source": "card_u7_math_local_forbid",
+      "target": "card_sp_window",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:271",
+      "assertion_kind": "triple",
+      "raw_subject": "U7_MATH_LOCAL_FORBID",
+      "raw_object": "SP_WINDOW"
+    },
+    {
+      "id": "canonical_v13_triple_0271",
+      "source": "card_u7_math_local_forbid",
+      "target": "card_sp_zero",
+      "relation": "depends_on",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:272",
+      "assertion_kind": "triple",
+      "raw_subject": "U7_MATH_LOCAL_FORBID",
+      "raw_object": "SP_ZERO"
     },
     {
       "id": "claim_cm_001_after_status",
@@ -18538,6 +19861,36 @@
       "source_location": "card:AC_20260921_U7_LOGIC:local_forbid[1]"
     },
     {
+      "id": "constraint_ac_20261003_window_families_00_edge",
+      "source": "author_ac_20261003_window_families",
+      "target": "constraint_ac_20261003_window_families_00",
+      "relation": "has_local_forbid",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:local_forbid[0]"
+    },
+    {
+      "id": "constraint_ac_20261003_window_families_01_edge",
+      "source": "author_ac_20261003_window_families",
+      "target": "constraint_ac_20261003_window_families_01",
+      "relation": "has_local_forbid",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:local_forbid[1]"
+    },
+    {
+      "id": "constraint_ac_20261003_window_families_02_edge",
+      "source": "author_ac_20261003_window_families",
+      "target": "constraint_ac_20261003_window_families_02",
+      "relation": "has_local_forbid",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:local_forbid[2]"
+    },
+    {
       "id": "dn_20260922_absence_lift_documented_in",
       "source": "claim_dn_20260922_absence_lift",
       "target": "doc_work_v14_rebuild_dialogue_integration_2026_09_22_md",
@@ -19215,6 +20568,46 @@
       "source_location": "card:AC_20260921_U7_LOGIC:open_obligations[0]"
     },
     {
+      "id": "obligation_ac_20261003_window_families_00_edge",
+      "source": "author_ac_20261003_window_families",
+      "target": "obligation_ac_20261003_window_families_00",
+      "relation": "has_open_obligation",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:open_obligations[0]"
+    },
+    {
+      "id": "obligation_ac_20261003_window_families_01_edge",
+      "source": "author_ac_20261003_window_families",
+      "target": "obligation_ac_20261003_window_families_01",
+      "relation": "has_open_obligation",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:open_obligations[1]"
+    },
+    {
+      "id": "obligation_ac_20261003_window_families_02_edge",
+      "source": "author_ac_20261003_window_families",
+      "target": "obligation_ac_20261003_window_families_02",
+      "relation": "has_open_obligation",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:open_obligations[2]"
+    },
+    {
+      "id": "obligation_ac_20261003_window_families_03_edge",
+      "source": "author_ac_20261003_window_families",
+      "target": "obligation_ac_20261003_window_families_03",
+      "relation": "has_open_obligation",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES:open_obligations[3]"
+    },
+    {
       "id": "oq_map_contains_oq_antitotality_diagonal_preconditions",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_antitotality_diagonal_preconditions",
@@ -19253,6 +20646,16 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:50"
+    },
+    {
+      "id": "oq_map_contains_oq_blackwell_canonical_projection",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_blackwell_canonical_projection",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:62"
     },
     {
       "id": "oq_map_contains_oq_canon_star_fate",
@@ -19473,6 +20876,16 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:47"
+    },
+    {
+      "id": "oq_map_contains_oq_lift_section_and_category",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_lift_section_and_category",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:63"
     },
     {
       "id": "oq_map_contains_oq_mprime_audit",
@@ -19805,6 +21218,36 @@
       "source_location": "row:49"
     },
     {
+      "id": "oq_map_contains_oq_window_family_continuation",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_window_family_continuation",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66"
+    },
+    {
+      "id": "oq_map_contains_oq_window_family_roles",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_window_family_roles",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:64"
+    },
+    {
+      "id": "oq_map_contains_oq_window_intersection_carrier",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_window_intersection_carrier",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:65"
+    },
+    {
       "id": "oq_map_contains_oq_zero_classes_chi_e",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_zero_classes_chi_e",
@@ -19953,6 +21396,46 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:50"
+    },
+    {
+      "id": "oq_oq_blackwell_canonical_projection_event",
+      "source": "oq_oq_blackwell_canonical_projection",
+      "target": "event_e5",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:62"
+    },
+    {
+      "id": "oq_oq_blackwell_canonical_projection_meta_mp_b",
+      "source": "oq_oq_blackwell_canonical_projection",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:62"
+    },
+    {
+      "id": "oq_oq_blackwell_canonical_projection_meta_mp_c",
+      "source": "oq_oq_blackwell_canonical_projection",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:62"
+    },
+    {
+      "id": "oq_oq_blackwell_canonical_projection_program",
+      "source": "oq_oq_blackwell_canonical_projection",
+      "target": "program_rp_6",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:62"
     },
     {
       "id": "oq_oq_canon_star_fate_event",
@@ -20683,6 +22166,46 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:47"
+    },
+    {
+      "id": "oq_oq_lift_section_and_category_event",
+      "source": "oq_oq_lift_section_and_category",
+      "target": "event_e1",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:63"
+    },
+    {
+      "id": "oq_oq_lift_section_and_category_meta_mp_b",
+      "source": "oq_oq_lift_section_and_category",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:63"
+    },
+    {
+      "id": "oq_oq_lift_section_and_category_meta_mp_c",
+      "source": "oq_oq_lift_section_and_category",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:63"
+    },
+    {
+      "id": "oq_oq_lift_section_and_category_program",
+      "source": "oq_oq_lift_section_and_category",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:63"
     },
     {
       "id": "oq_oq_mprime_audit_event",
@@ -21855,6 +23378,116 @@
       "source_location": "row:49"
     },
     {
+      "id": "oq_oq_window_family_continuation_event",
+      "source": "oq_oq_window_family_continuation",
+      "target": "event_e1",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66"
+    },
+    {
+      "id": "oq_oq_window_family_continuation_meta_mp_b",
+      "source": "oq_oq_window_family_continuation",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66"
+    },
+    {
+      "id": "oq_oq_window_family_continuation_program",
+      "source": "oq_oq_window_family_continuation",
+      "target": "program_rp_1",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66"
+    },
+    {
+      "id": "oq_oq_window_family_roles_event",
+      "source": "oq_oq_window_family_roles",
+      "target": "event_e1",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:64"
+    },
+    {
+      "id": "oq_oq_window_family_roles_meta_mp_b",
+      "source": "oq_oq_window_family_roles",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:64"
+    },
+    {
+      "id": "oq_oq_window_family_roles_meta_mp_c",
+      "source": "oq_oq_window_family_roles",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:64"
+    },
+    {
+      "id": "oq_oq_window_family_roles_program",
+      "source": "oq_oq_window_family_roles",
+      "target": "program_rp_1",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:64"
+    },
+    {
+      "id": "oq_oq_window_intersection_carrier_event",
+      "source": "oq_oq_window_intersection_carrier",
+      "target": "event_e1",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:65"
+    },
+    {
+      "id": "oq_oq_window_intersection_carrier_meta_mp_b",
+      "source": "oq_oq_window_intersection_carrier",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:65"
+    },
+    {
+      "id": "oq_oq_window_intersection_carrier_meta_mp_c",
+      "source": "oq_oq_window_intersection_carrier",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:65"
+    },
+    {
+      "id": "oq_oq_window_intersection_carrier_program",
+      "source": "oq_oq_window_intersection_carrier",
+      "target": "program_rp_1",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:65"
+    },
+    {
       "id": "oq_oq_zero_classes_chi_e_event",
       "source": "oq_oq_zero_classes_chi_e",
       "target": "event_e10",
@@ -22173,6 +23806,30 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c03_oq_blackwell_canonical_projection_curated_bridge_to",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_blackwell_canonical_projection",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:62",
+      "scope": "Нет двух заданных экспериментов E6/E4 и канала канонической проекции.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c03_oq_lift_section_and_category_curated_bridge_to",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_lift_section_and_category",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:63",
+      "scope": "Не заданы категория перехода, тип остатка и обоснованная секция.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c03_oq_node11_asymmetry_curated_bridge_to",
       "source": "pattern_pa_c03",
       "target": "oq_oq_node11_asymmetry",
@@ -22242,6 +23899,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:7",
       "scope": "Для У12–У17 нет единой завершённой цепочки операторов, паспортов и defeat-условий.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c03_oq_window_intersection_carrier_curated_bridge_to",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_window_intersection_carrier",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:65",
+      "scope": "Не задано отношение пересечения окна к узлу-носителю и обратной связи.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -22545,6 +24214,30 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c05_oq_window_family_continuation_curated_bridge_to",
+      "source": "pattern_pa_c05",
+      "target": "oq_oq_window_family_continuation",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66",
+      "scope": "Нет авторского правила продолжения конечных перечней окон.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c05_oq_window_family_roles_curated_bridge_to",
+      "source": "pattern_pa_c05",
+      "target": "oq_oq_window_family_roles",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:64",
+      "scope": "Авторские перечни заданы, содержательные роли семейств не определены.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c06_oq_d10_phase_test_directly_traced_to",
       "source": "pattern_pa_c06",
       "target": "oq_oq_d10_phase_test",
@@ -22761,6 +24454,18 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c09_oq_blackwell_canonical_projection_curated_bridge_to",
+      "source": "pattern_pa_c09",
+      "target": "oq_oq_blackwell_canonical_projection",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:62",
+      "scope": "Нет двух заданных экспериментов E6/E4 и канала канонической проекции.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c09_oq_canon_star_fate_directly_traced_to",
       "source": "pattern_pa_c09",
       "target": "oq_oq_canon_star_fate",
@@ -22782,6 +24487,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:46",
       "scope": "Критерий QuestionGain задан, но 2–3 независимых кейса ещё не собраны.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c09_oq_lift_section_and_category_curated_bridge_to",
+      "source": "pattern_pa_c09",
+      "target": "oq_oq_lift_section_and_category",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:63",
+      "scope": "Не заданы категория перехода, тип остатка и обоснованная секция.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -22950,6 +24667,42 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:40",
       "scope": "Корни Z/3,6,8 не встроены в доказанный переходный оператор лестницы.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_f04_oq_window_family_continuation_curated_bridge_to",
+      "source": "pattern_pa_f04",
+      "target": "oq_oq_window_family_continuation",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66",
+      "scope": "Нет авторского правила продолжения конечных перечней окон.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_f04_oq_window_family_roles_curated_bridge_to",
+      "source": "pattern_pa_f04",
+      "target": "oq_oq_window_family_roles",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:64",
+      "scope": "Авторские перечни заданы, содержательные роли семейств не определены.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_f04_oq_window_intersection_carrier_curated_bridge_to",
+      "source": "pattern_pa_f04",
+      "target": "oq_oq_window_intersection_carrier",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:65",
+      "scope": "Не задано отношение пересечения окна к узлу-носителю и обратной связи.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -25019,6 +26772,17 @@
       "status_effect": "stored_only; no automatic promotion"
     },
     {
+      "id": "status_a_07",
+      "source": "card_a_07",
+      "target": "assessment_a_07_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:A_07",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
       "id": "status_ac_20260919_expectation_speed",
       "source": "author_ac_20260919_expectation_speed",
       "target": "assessment_ac_20260919_expectation_speed_status",
@@ -25071,6 +26835,39 @@
       "confidence": "EXTRACTED",
       "source_file": "work/author_canon/2026-09-21/cards.jsonl",
       "source_location": "card:AC_20260921_U7_LOGIC",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_ac_20261003_windows_fives",
+      "source": "card_ac_20261003_windows_fives",
+      "target": "assessment_ac_20261003_windows_fives_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_FIVES",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_ac_20261003_windows_sevens",
+      "source": "card_ac_20261003_windows_sevens",
+      "target": "assessment_ac_20261003_windows_sevens_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_SEVENS",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_ac_20261003_windows_triples",
+      "source": "card_ac_20261003_windows_triples",
+      "target": "assessment_ac_20261003_windows_triples_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOWS_TRIPLES",
       "status_effect": "stored_only; no automatic promotion"
     },
     {
@@ -25192,6 +26989,72 @@
       "confidence": "EXTRACTED",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:ADDENDUM_V3",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_author_canon_ac_20261003_author_decision",
+      "source": "author_ac_20261003_author_decision",
+      "target": "assessment_author_canon_ac_20261003_author_decision_status",
+      "relation": "has_status",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_AUTHOR_DECISION",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_author_canon_ac_20261003_window_families",
+      "source": "author_ac_20261003_window_families",
+      "target": "assessment_author_canon_ac_20261003_window_families_status",
+      "relation": "has_status",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_author_canon_ac_20261003_window_fives_alignment",
+      "source": "author_ac_20261003_window_fives_alignment",
+      "target": "assessment_author_canon_ac_20261003_window_fives_alignment_status",
+      "relation": "has_status",
+      "layer": "author_canon",
+      "confidence": "EXTRACTED",
+      "source_file": "work/author_canon/2026-10-03/cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_canonical_v13_ac_20261003_author_decision",
+      "source": "card_ac_20261003_author_decision",
+      "target": "assessment_canonical_v13_ac_20261003_author_decision_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_AUTHOR_DECISION",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_canonical_v13_ac_20261003_window_families",
+      "source": "card_ac_20261003_window_families",
+      "target": "assessment_canonical_v13_ac_20261003_window_families_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FAMILIES",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_canonical_v13_ac_20261003_window_fives_alignment",
+      "source": "card_ac_20261003_window_fives_alignment",
+      "target": "assessment_canonical_v13_ac_20261003_window_fives_alignment_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:AC_20261003_WINDOW_FIVES_ALIGNMENT",
       "status_effect": "stored_only; no automatic promotion"
     },
     {
@@ -26471,6 +28334,17 @@
       "status_effect": "stored_only; no automatic promotion"
     },
     {
+      "id": "status_u7_logic_grouping",
+      "source": "card_u7_logic_grouping",
+      "target": "assessment_u7_logic_grouping_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:U7_LOGIC_GROUPING",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
       "id": "status_u7_math_local_forbid",
       "source": "card_u7_math_local_forbid",
       "target": "assessment_u7_math_local_forbid_status",
@@ -26920,24 +28794,24 @@
     }
   ],
   "coverage": {
-    "canonical_cards": 161,
-    "canonical_triples": 238,
-    "canonical_card_depends_on": 156,
-    "canonical_input_assertions": 420,
-    "author_cards": 5,
-    "author_triples": 18,
+    "canonical_cards": 169,
+    "canonical_triples": 271,
+    "canonical_card_depends_on": 172,
+    "canonical_input_assertions": 493,
+    "author_cards": 8,
+    "author_triples": 32,
     "audit_claim_groups": 25,
     "audit_findings": 20,
     "patterns": 31,
-    "open_question_anchors": 76,
-    "mapped_open_questions": 60,
+    "open_question_anchors": 79,
+    "mapped_open_questions": 65,
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
     "internal_evidence_nodes": 7,
     "research_claims": 10,
     "curated_research_bridges": 14,
-    "nodes": 756,
-    "edges": 1550,
+    "nodes": 790,
+    "edges": 1678,
     "unresolved_references": 34
   }
 }

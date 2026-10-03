@@ -2,6 +2,13 @@
 
 Формат: дата — решение — почему. Дописывать строкой при каждом нетривиальном выборе.
 
+- 2026-10-03 — Merged research branches and incorporated AC-2026-10-03 into
+  `v13_active_integrated_2026-10-03`. Restored U7 mathematical constraints under
+  `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping is `U7_LOGIC_GROUPING`.
+  Original author packages and workbook hashes remain provenance. Statuses are
+  preserved; register equivalence, carrier identity, and continuation are not inferred.
+  Reason: explicit implementation of the author's merge plan.
+
 - 2026-10-03 — Canon is editable directly within the current task, without separate
   author permission or a mandatory workbook round-trip. Git history is sufficient
   for prior versions; update MANIFEST and derivatives after actual canon edits.

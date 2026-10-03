@@ -6,6 +6,7 @@
 
 | Версия дополнения | Принятый предмет | Источник и пакет |
 |---|---|---|
+| AC-2026-10-03 | Семейства окон нечётной длины: точные перечни троек, пятёрок и семёрок; действующие пятёрки сохраняются | [Оригинал](author_canon/2026-10-03/AMENDMENT.md), [интеграция](author_canon/2026-10-03/INTEGRATION.md), активный `source/` |
 | AC-2026-09-21 | Активная каноническая замена форм У6/У7: У6 вместо `V*V`, У7 с вложенным повтором формы У6 | [AMENDMENT.md](author_canon/2026-09-21/AMENDMENT.md), активный `source/`, точное сообщение автора, карточки, рёбра и MANIFEST |
 | AC-2026-09-19 | Логические формы У6/У7; неразличимость не-предмета и отсутствия на У0; неразличимость скорости расчёта и фундаментальности для модели | [AMENDMENT.md](author_canon/2026-09-19/AMENDMENT.md), точное сообщение автора, карточки, рёбра и MANIFEST |
 
@@ -15,7 +16,7 @@
 повышение прежних карточек U_07/M_07: новые утверждения имеют собственные ID.
 
 `source/` теперь является активным каноническим релизом
-`v13_complex_branch_overlay_author_correction_2026-09-21`; предыдущий v13
+`v13_active_integrated_2026-10-03`; предыдущий v13
 сохранён в `work/canon_history/v13_complex_branch_overlay_2026-06-11/`.
 `tools/query.py` показывает заменённые карточки. AC-2026-09-19 сохраняется как
 историческая версия с прежними формулами. Полная объединённая workbook-выгрузка
@@ -25,3 +26,11 @@
 Исходные цитаты и прежние версии сохраняются. Внешнее булево или численное
 прочтение не может молча заменить принятый смысл; его предел записывается
 в `EXTERNAL_CONFLICTS.md`.
+
+## Integration on 2026-10-03
+
+The active release includes AC-2026-10-03 and preserves the September logical
+forms. U7 mathematical and operational readings remain separately grounded;
+`A_07`, `U7_MATH_LOCAL_FORBID`, and `U7_LOGIC_GROUPING` separate the restored
+mathematical constraint from logical grouping. Original amendment packages and
+historical workbook provenance remain unchanged. No evidence status is promoted.
