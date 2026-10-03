@@ -1,4 +1,4 @@
-# FTS active canonical release — v13_active_graph_reconciled_2026-10-03
+# FTS active canonical release — v13_active_logic_provenance_2026-10-03
 
 Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
@@ -10,12 +10,15 @@ in sheets or corpora are provenance, superseded by `PROJECT_INSTRUCTIONS.md`.
 Read exact formulas and statuses by card ID. Author acceptance, mathematical
 proof, and empirical confirmation remain separate. Registers are connected but
 not interchangeable; their mapping requires a scoped witness.
+Presence in the active registry does not make a proposal author-accepted.
+Read card types, statuses and provenance. Embedded original corpora retain their
+historical wording; active structured card/axiom views take precedence.
 The original workbook and embedded historical corpora are not claims that this
 release was produced by a new workbook round-trip.
 
 ## Active changes
 
-Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.
+Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.

@@ -1554,18 +1554,26 @@
   },
   {
     "id": "A1",
-    "type": "axiom",
-    "text": "is/no/unknown/absent are defined only relative to C_n",
+    "type": "logical_supplement",
+    "text": "v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS.",
     "depends_on": [],
     "tags": [
-      "axiom",
+      "logical_supplement",
+      "external",
       "A1"
     ],
     "path": "26_Аксиомы_A0_A9/A1",
-    "status": "canonical",
+    "status": "candidate_logical_supplement",
     "internal_ref": "CANON_EN",
     "symbol": "A1",
-    "title": "Contextuality of absence"
+    "title": "Four-valued assessment states",
+    "previous_status": "canonical",
+    "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+    "register": "logical_supplement",
+    "formulation_origin": "external_logical_model",
+    "author_status": "possible_explanatory_supplement",
+    "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment",
+    "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"
   },
   {
     "id": "A2",
@@ -1584,18 +1592,26 @@
   },
   {
     "id": "A3",
-    "type": "axiom",
+    "type": "logical_supplement",
     "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels",
     "depends_on": [],
     "tags": [
-      "axiom",
+      "logical_supplement",
+      "external",
       "A3"
     ],
     "path": "26_Аксиомы_A0_A9/A3",
-    "status": "canonical",
+    "status": "candidate_logical_supplement",
     "internal_ref": "CANON_EN",
     "symbol": "A3",
-    "title": "Dual-channel semantics"
+    "title": "Dual-channel assessment (possible logical supplement)",
+    "previous_status": "canonical",
+    "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+    "register": "logical_supplement",
+    "formulation_origin": "external_logical_model",
+    "author_status": "possible_explanatory_supplement",
+    "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment",
+    "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"
   },
   {
     "id": "A4",
@@ -1614,33 +1630,51 @@
   },
   {
     "id": "A5",
-    "type": "axiom",
+    "type": "formalization_proposal",
     "text": "If R*_n>ε then level totality is false in class I_n",
     "depends_on": [],
     "tags": [
-      "axiom",
+      "formalization_proposal",
+      "assistant_proposal",
+      "not_author_adopted",
       "A5"
     ],
     "path": "26_Аксиомы_A0_A9/A5",
-    "status": "canonical_conceptual",
+    "status": "assistant_formalization_not_adopted",
     "internal_ref": "CANON_EN",
     "symbol": "A5",
-    "title": "Error remainder and false totality"
+    "title": "Error remainder and false totality",
+    "previous_status": "canonical_conceptual",
+    "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+    "register": "assistant_formalization",
+    "formulation_origin": "assistant_proposed_formalization",
+    "author_status": "not_adopted",
+    "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception",
+    "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"
   },
   {
     "id": "A5a",
-    "type": "axiom",
+    "type": "formalization_proposal",
     "text": "Operational diagnosis should use ΔR*(op), not bare R*>0",
     "depends_on": [],
     "tags": [
-      "axiom",
+      "formalization_proposal",
+      "assistant_proposal",
+      "not_author_adopted",
       "A5a"
     ],
     "path": "26_Аксиомы_A0_A9/A5a",
-    "status": "canonical_extension",
+    "status": "assistant_formalization_not_adopted",
     "internal_ref": "CANON_EN",
     "symbol": "A5a",
-    "title": "Conceptual false totality"
+    "title": "Conceptual false totality",
+    "previous_status": "canonical_extension",
+    "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+    "register": "assistant_formalization",
+    "formulation_origin": "assistant_proposed_formalization",
+    "author_status": "not_adopted",
+    "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception",
+    "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"
   },
   {
     "id": "A6",

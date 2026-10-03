@@ -43,7 +43,7 @@ EXPORT = REBUILD / "export"
 
 ALLOWED_PREDICATES = {
     "adopts", "has_family", "requires_mapping_to", "has_math_expression", "applies_to", "uses_analogy",
-    "asks_branch_of", "candidate_supports", "contains", "contrasts_with",
+    "asks_branch_of", "candidate_supports", "proposes_formalization_of", "contains", "contrasts_with",
     "defeats_or_tests", "depends_on", "does_not_promote_above", "exports_to",
     "has_agentic_gate", "has_antimode", "has_antimode_detail", "has_boundary",
     "has_complex_overlay", "has_core", "has_local_forbid",

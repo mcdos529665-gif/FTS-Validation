@@ -147,12 +147,12 @@ OP_pi	depends_on	A7	operator_dependency	CANON_V43/CANON_EN	canonical		G_0145
 OP_iota	depends_on	A7	operator_dependency	CANON_V43/CANON_EN	canonical		G_0146
 A0	supports	core_grammar	axiom_support	CANON_EN	canonical	Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary	G_0147
 A0b	supports	core_grammar	axiom_support	CANON_EN	canonical	nodes 3/7/11/15 change symmetry carrier	G_0148
-A1	supports	core_grammar	axiom_support	CANON_EN	canonical	is/no/unknown/absent are defined only relative to C_n	G_0149
+A1	candidate_supports	A0	author_provenance_and_adoption_correction	CANON_EN	candidate_logical_supplement	Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.	G_0380
 A2	supports	core_grammar	axiom_support	CANON_EN	canonical	0_A is induced structure on U\A; event(0_A)=¬A without identification	G_0150
-A3	supports	core_grammar	axiom_support	CANON_EN	canonical	v(A)=(t(A),f(A)) independent positive/negative evidence channels	G_0151
+A3	candidate_supports	A0	author_provenance_and_adoption_correction	CANON_EN	candidate_logical_supplement	Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.	G_0381
 A4	supports	core_grammar	axiom_support	CANON_EN	canonical	Tot collapses 0_A into ¬A and/or makes f derivative of t	G_0152
-A5	supports	core_grammar	axiom_support	CANON_EN	canonical_conceptual	If R*_n>ε then level totality is false in class I_n	G_0153
-A5a	supports	core_grammar	axiom_support	CANON_EN	canonical_extension	Operational diagnosis should use ΔR*(op), not bare R*>0	G_0154
+A5	proposes_formalization_of	A0	author_provenance_and_adoption_correction	CANON_EN	assistant_formalization_not_adopted	Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.	G_0382
+A5a	proposes_formalization_of	A5	author_provenance_and_adoption_correction	CANON_EN	assistant_formalization_not_adopted	Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.	G_0383
 A6	supports	core_grammar	axiom_support	CANON_EN	canonical	X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible	G_0155
 A7	supports	core_grammar	axiom_support	CANON_EN	canonical	ι_n and π_n preserve old layer; π∘ι=id	G_0156
 A8	supports	core_grammar	axiom_support	CANON_EN	canonical	Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A	G_0157

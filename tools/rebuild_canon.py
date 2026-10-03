@@ -117,6 +117,21 @@ def rebuild(release: str, date: str, description: str,
     sheets = {sheet['name']: sheet for sheet in book['sheets']}
     update_sheet(sheets['17_Карточки'], [fields] + [[row[field] or None for field in fields] for row in rows])
     update_sheet(sheets['18_Граф'], [graph_fields] + [[row[field] or None for field in graph_fields] for row in graph_rows])
+    # This structured view is active; embedded original corpora remain historical.
+    axiom_sheet = sheets.get('26_Аксиомы_A0_A9')
+    if axiom_sheet:
+        axiom_fields = axiom_sheet['values'][0]
+        axiom_aliases = {'axiom_id': 'id', 'name': 'title', 'statement': 'text'}
+        for sheet_row in axiom_sheet['values'][1:]:
+            card = by_id.get(str(sheet_row[0]))
+            if not card:
+                continue
+            for index, field in enumerate(axiom_fields):
+                key = axiom_aliases.get(field, field)
+                if key in card:
+                    value = card[key]
+                    sheet_row[index] = ';'.join(value) if isinstance(value, list) else value
+        update_sheet(axiom_sheet, axiom_sheet['values'])
     update_sheet(sheets['34_Export_jsonl'], [['line_no','jsonl']] + [[index,json.dumps(card,ensure_ascii=False)] for index,card in enumerate(cards,1)])
     update_sheet(sheets['35_Export_tsv'], [['line_no','tsv']] + [[index,'\t'.join(signature)] for index,signature in enumerate(signatures,1)])
     update_sheet(sheets['36_Export_yaml'], [['line_no','yaml']] + [[index,line] for index,line in enumerate(yaml_text.splitlines(),1)])
@@ -147,6 +162,9 @@ in sheets or corpora are provenance, superseded by `PROJECT_INSTRUCTIONS.md`.
 Read exact formulas and statuses by card ID. Author acceptance, mathematical
 proof, and empirical confirmation remain separate. Registers are connected but
 not interchangeable; their mapping requires a scoped witness.
+Presence in the active registry does not make a proposal author-accepted.
+Read card types, statuses and provenance. Embedded original corpora retain their
+historical wording; active structured card/axiom views take precedence.
 The original workbook and embedded historical corpora are not claims that this
 release was produced by a new workbook round-trip.
 

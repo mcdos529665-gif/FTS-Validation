@@ -74,11 +74,12 @@ CHECK_RE = re.compile(r"check\(\s*[\"'](C\d{1,2})[\"']")
 RELATION_RULES: dict[str, tuple[set[str], set[str]]] = {
     "has_research_scope": ({"project"}, {"scope"}),
     "addresses_object": ({"scope"}, {"card"}),
+    "proposes_formalization_of": ({"card"}, {"card"}),
     "has_status": ({"card", "author_statement", "claim", "claim_group", "finding"}, {"status_assessment"}),
     "has_status_before": ({"claim", "claim_group"}, {"status_assessment"}),
     "has_status_after": ({"claim", "claim_group"}, {"status_assessment"}),
     "grounds_claim": ({"claim", "claim_group", "pattern", "author_statement"}, {"card", "source_document", "source_fragment", "scope", "source_reference", "author_statement"}),
-    "documented_in": ({"project", "claim", "claim_group", "author_statement", "external_evidence", "internal_evidence", "finding", "status_assessment", "verification"}, {"source_document"}),
+    "documented_in": ({"project", "card", "claim", "claim_group", "author_statement", "external_evidence", "internal_evidence", "finding", "status_assessment", "verification"}, {"source_document"}),
     "verified_by": ({"claim", "claim_group", "pattern"}, {"verification", "external_evidence", "internal_evidence"}),
     "supported_by": ({"claim", "claim_group"}, {"external_evidence", "internal_evidence", "verification", "source_document"}),
     "limited_by": ({"claim", "claim_group"}, {"finding", "external_evidence", "internal_evidence", "source_reference", "source_document"}),
@@ -526,6 +527,11 @@ def build_graph() -> dict[str, Any]:
         status_key = slug(str(card["id"]))
         if str(card["id"]) in card_ids and str(card["id"]) in author_ids:
             status_key = slug(layer) + "_" + status_key
+        adoption = {key: card[key] for key in
+                    ("formulation_origin", "author_status", "adoption_scope", "adoption_source")
+                    if key in card} if card.get("adoption_source") else {}
+        if card.get("adoption_source"):
+            adoption["card_type"] = card["type"]
         builder.node(
             node_id,
             node_type,
@@ -537,7 +543,18 @@ def build_graph() -> dict[str, Any]:
             text=card.get("text", ""),
             source_file=rel(card_path),
             source_location=f"card:{card.get('id')}",
+            **adoption,
         )
+        if card.get("adoption_source"):
+            clarification = ROOT / card["adoption_source"]
+            if not clarification.resolve().is_relative_to(ROOT.resolve()) or not clarification.is_file():
+                raise ValueError(f"Missing author adoption source: {card['id']}")
+            document = builder.document(clarification, layer="author_clarification")
+            builder.edge(f"card_adoption_{slug(str(card['id']))}", node_id, document,
+                         "documented_in", "author_clarification", "EXTRACTED", card_path,
+                         f"card:{card['id']}:adoption_source",
+                         scope=card["adoption_scope"],
+                         status_effect="author provenance/adoption clarification; no evidence promotion")
         status_value = card.get("status") or card.get("author_status") or "unknown"
         if layer == "author_canon":
             status_value = card.get("author_status") or card.get("status") or "unknown"
@@ -596,6 +613,13 @@ def build_graph() -> dict[str, Any]:
             for row_no, row in enumerate(reader, 2):
                 source_id = ref_node(row.get("subject", ""), layer, path, row_no)
                 target_id = ref_node(row.get("object", ""), layer, path, row_no)
+                attributes = review_attrs(row['subject'], row['predicate'], row['object'], layer)
+                if layer == "canonical_v13":
+                    record = next((card for card in canon_cards if card['id'] == row['subject']), {})
+                    if record.get("adoption_source"):
+                        attributes.update(scope=record["adoption_scope"],
+                                          clarification_source=record["adoption_source"],
+                                          status_effect="proposal/explanatory address only; no evidence or status promotion")
                 builder.edge(
                     f"{slug(layer)}{'_' + slug(path.parent.name) if layer == 'author_canon' and path != AUTHOR_TRIPLES else ''}_triple_{row_no - 1:04d}",
                     source_id,
@@ -608,7 +632,7 @@ def build_graph() -> dict[str, Any]:
                     assertion_kind="triple",
                     raw_subject=row.get("subject", ""),
                     raw_object=row.get("object", ""),
-                    **review_attrs(row['subject'], row['predicate'], row['object'], layer),
+                    **attributes,
                 )
 
     add_card_dependencies(canon_cards, "canonical_v13", CANON_CARDS, card_ids)

@@ -1,4 +1,4 @@
-# FTS active canonical release — v13_active_graph_reconciled_2026-10-03
+# FTS active canonical release — v13_active_logic_provenance_2026-10-03
 
 Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
@@ -10,12 +10,15 @@ in sheets or corpora are provenance, superseded by `PROJECT_INSTRUCTIONS.md`.
 Read exact formulas and statuses by card ID. Author acceptance, mathematical
 proof, and empirical confirmation remain separate. Registers are connected but
 not interchangeable; their mapping requires a scoped witness.
+Presence in the active registry does not make a proposal author-accepted.
+Read card types, statuses and provenance. Embedded original corpora retain their
+historical wording; active structured card/axiom views take precedence.
 The original workbook and embedded historical corpora are not claims that this
 release was produced by a new workbook round-trip.
 
 ## Active changes
 
-Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.
+Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
@@ -31,7 +34,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | alignment_note | 1 |
 | anti_mode | 1 |
 | author_decision | 1 |
-| axiom | 12 |
+| axiom | 8 |
 | boundary | 1 |
 | boundary_candidate | 1 |
 | candidate_bundle | 1 |
@@ -43,12 +46,14 @@ Cards: 169. Triples: 378. Sheets: 54.
 | definition | 4 |
 | export_instruction | 1 |
 | failure_condition | 5 |
+| formalization_proposal | 2 |
 | guardrail | 1 |
 | hypothesis_candidate | 1 |
 | invariant_candidate | 1 |
 | level | 19 |
 | level_candidate | 1 |
 | level_variant_candidate | 1 |
+| logical_supplement | 2 |
 | mathematical_expression | 1 |
 | minimal_expression | 19 |
 | notation_rule | 1 |
@@ -71,6 +76,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | FTS_candidate | 4 |
 | FTS_candidate_guarded | 2 |
 | active_instruction | 1 |
+| assistant_formalization_not_adopted | 2 |
 | author_canonical_amendment | 5 |
 | candidate | 12 |
 | candidate_U12_overlay | 3 |
@@ -78,6 +84,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | candidate_bridge | 2 |
 | candidate_bundle | 1 |
 | candidate_core | 2 |
+| candidate_logical_supplement | 2 |
 | candidate_overlay | 9 |
 | candidate_requires_empirical_test | 1 |
 | candidate_requires_formalization | 2 |
@@ -85,10 +92,8 @@ Cards: 169. Triples: 378. Sheets: 54.
 | candidate_with_operational_gate | 11 |
 | canon/base | 11 |
 | canon/base_plus_user_refinement | 1 |
-| canonical | 31 |
+| canonical | 29 |
 | canonical_alignment | 1 |
-| canonical_conceptual | 1 |
-| canonical_extension | 1 |
 | canonical_node_underformalized_semantics | 3 |
 | canonical_note | 1 |
 | canonical_strict | 24 |

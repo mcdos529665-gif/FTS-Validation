@@ -12,7 +12,7 @@
   "input_digests": [
     {
       "path": "PROJECT.json",
-      "sha256": "50a69c83bc9985f555012aa5a5ec9611bc86edec42c88bed523e4ad3e8d8cfcc"
+      "sha256": "717b1ff9ee55f90afb6e95965210d66d655810d87df15adbb29f2a78c7b49832"
     },
     {
       "path": "README.md",
@@ -20,19 +20,19 @@
     },
     {
       "path": "source/FTS_v13_LLM_FULL_DUMP.md",
-      "sha256": "fa59ae8d76f505b0e6be7268e4102a0c02561575f6e742a0b442981fda501173"
+      "sha256": "442eefed988abf57825f00fcf1cdd43013fd335cf6b5bc7bd21f061029a04b92"
     },
     {
       "path": "source/fts_cards.jsonl",
-      "sha256": "9c9836bc66c5d2e07dca065252697dd07e9766d2fa9ebdd51e2be81fcab86861"
+      "sha256": "e03d164678b0d16abb6e4c2edffedecaacecea778ba598e3f0fca77f311e6582"
     },
     {
       "path": "source/fts_triples.tsv",
-      "sha256": "aee1780e6d4ed85894056cc49df054de4a660b6f5a7ef076eb488e8786fe7a9c"
+      "sha256": "c792924d4d7bac4874c3940109d6c6d9d99b849cf4128e8f1b060b17f4941b11"
     },
     {
       "path": "source/fts_v13_workbook_sheets.json",
-      "sha256": "6f4fe0bc6ce050b853df03240e8b7cff07b46ad64735816b5e871a8a21e63006"
+      "sha256": "fb54ff0e4c330a6430b816ea9db35d30907b6054c7ebdb536b67d7fe46b4d535"
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
@@ -67,6 +67,10 @@
       "sha256": "34b1ebabd41f273ff301c7b3af36cde88cc06506192d45c51c2b8c24aa28de08"
     },
     {
+      "path": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+      "sha256": "cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b"
+    },
+    {
       "path": "work/author_canon/2026-10-03/cards.jsonl",
       "sha256": "a9064daca28abd0c5f1918ebd319fe0a4c6e6927db40107ce690d682a72e1cc5"
     },
@@ -76,11 +80,11 @@
     },
     {
       "path": "work/notation.md",
-      "sha256": "e0b5f3f18833104f694c54a863c555d948e0f9ca5ce0701f7ec3fbd671a61b6c"
+      "sha256": "706b4dc4af393d5f974877a8ca755a962c50016474cb1730da7b6acfdbbfcba8"
     },
     {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
-      "sha256": "d6da08e3b4fb49eba1451e7c782b173ca47727110c4713f87fca15ee0dada916"
+      "sha256": "434165cc1a5915e56e662634341c02bfc99c7498702b0042a6155c756ab9dd92"
     },
     {
       "path": "work/v14_rebuild/audit/BASELINE.md",
@@ -301,9 +305,9 @@
     {
       "id": "assessment_a1_status",
       "type": "status_assessment",
-      "label": "A1 status: canonical",
+      "label": "A1 status: candidate_logical_supplement",
       "layer": "canonical_v13",
-      "status_text": "canonical",
+      "status_text": "candidate_logical_supplement",
       "status_axis": "St_FTS",
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
@@ -323,9 +327,9 @@
     {
       "id": "assessment_a3_status",
       "type": "status_assessment",
-      "label": "A3 status: canonical",
+      "label": "A3 status: candidate_logical_supplement",
       "layer": "canonical_v13",
-      "status_text": "canonical",
+      "status_text": "candidate_logical_supplement",
       "status_axis": "St_FTS",
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
@@ -345,9 +349,9 @@
     {
       "id": "assessment_a5_status",
       "type": "status_assessment",
-      "label": "A5 status: canonical_conceptual",
+      "label": "A5 status: assistant_formalization_not_adopted",
       "layer": "canonical_v13",
-      "status_text": "canonical_conceptual",
+      "status_text": "assistant_formalization_not_adopted",
       "status_axis": "St_FTS",
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
@@ -356,9 +360,9 @@
     {
       "id": "assessment_a5a_status",
       "type": "status_assessment",
-      "label": "A5a status: canonical_extension",
+      "label": "A5a status: assistant_formalization_not_adopted",
       "layer": "canonical_v13",
-      "status_text": "canonical_extension",
+      "status_text": "assistant_formalization_not_adopted",
       "status_axis": "St_FTS",
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
@@ -3012,17 +3016,23 @@
     {
       "id": "card_a1",
       "type": "card",
-      "label": "A1 Contextuality of absence",
+      "label": "A1 Four-valued assessment states",
       "layer": "canonical_v13",
       "card_id": "A1",
-      "status": "canonical",
+      "status": "candidate_logical_supplement",
       "tags": [
-        "axiom",
+        "logical_supplement",
+        "external",
         "A1"
       ],
-      "text": "is/no/unknown/absent are defined only relative to C_n",
+      "text": "v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS.",
       "source_file": "source/fts_cards.jsonl",
-      "source_location": "card:A1"
+      "source_location": "card:A1",
+      "formulation_origin": "external_logical_model",
+      "author_status": "possible_explanatory_supplement",
+      "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment",
+      "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+      "card_type": "logical_supplement"
     },
     {
       "id": "card_a2",
@@ -3042,17 +3052,23 @@
     {
       "id": "card_a3",
       "type": "card",
-      "label": "A3 Dual-channel semantics",
+      "label": "A3 Dual-channel assessment (possible logical supplement)",
       "layer": "canonical_v13",
       "card_id": "A3",
-      "status": "canonical",
+      "status": "candidate_logical_supplement",
       "tags": [
-        "axiom",
+        "logical_supplement",
+        "external",
         "A3"
       ],
       "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels",
       "source_file": "source/fts_cards.jsonl",
-      "source_location": "card:A3"
+      "source_location": "card:A3",
+      "formulation_origin": "external_logical_model",
+      "author_status": "possible_explanatory_supplement",
+      "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment",
+      "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+      "card_type": "logical_supplement"
     },
     {
       "id": "card_a4",
@@ -3075,14 +3091,21 @@
       "label": "A5 Error remainder and false totality",
       "layer": "canonical_v13",
       "card_id": "A5",
-      "status": "canonical_conceptual",
+      "status": "assistant_formalization_not_adopted",
       "tags": [
-        "axiom",
+        "formalization_proposal",
+        "assistant_proposal",
+        "not_author_adopted",
         "A5"
       ],
       "text": "If R*_n>ε then level totality is false in class I_n",
       "source_file": "source/fts_cards.jsonl",
-      "source_location": "card:A5"
+      "source_location": "card:A5",
+      "formulation_origin": "assistant_proposed_formalization",
+      "author_status": "not_adopted",
+      "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception",
+      "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+      "card_type": "formalization_proposal"
     },
     {
       "id": "card_a5a",
@@ -3090,14 +3113,21 @@
       "label": "A5a Conceptual false totality",
       "layer": "canonical_v13",
       "card_id": "A5a",
-      "status": "canonical_extension",
+      "status": "assistant_formalization_not_adopted",
       "tags": [
-        "axiom",
+        "formalization_proposal",
+        "assistant_proposal",
+        "not_author_adopted",
         "A5a"
       ],
       "text": "Operational diagnosis should use ΔR*(op), not bare R*>0",
       "source_file": "source/fts_cards.jsonl",
-      "source_location": "card:A5a"
+      "source_location": "card:A5a",
+      "formulation_origin": "assistant_proposed_formalization",
+      "author_status": "not_adopted",
+      "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception",
+      "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+      "card_type": "formalization_proposal"
     },
     {
       "id": "card_a6",
@@ -6373,6 +6403,13 @@
       "source_file": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"
     },
     {
+      "id": "doc_work_author_canon_2026_10_03_logical_supplement_clarification_md",
+      "type": "source_document",
+      "label": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+      "layer": "author_clarification",
+      "source_file": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"
+    },
+    {
       "id": "doc_work_notation_md",
       "type": "source_document",
       "label": "work/notation.md",
@@ -9223,7 +9260,7 @@
           "requirement": "Проверка соответствия учитывает документы вне графа и гранулярность записей. Наличие ссылки, общий файл, тематическая близость и полнота зарегистрированных рёбер сами по себе не доказывают содержательную связность всех утверждений."
         }
       ],
-      "status_policy": "Задача проекта и адресация исследования не повышают St_FTS или St_math. Действуют отдельные оси авторского принятия, математического доказательства и эмпирического подтверждения, SP/К1–К5 и пересматриваемые обязательства SP_LIMITS.",
+      "status_policy": "Задача проекта и адресация исследования не повышают St_FTS или St_math. Действуют отдельные оси авторского принятия, математического доказательства и эмпирического подтверждения, SP/К1–К5 и пересматриваемые обязательства SP_LIMITS. Предложения ассистента не приписываются автору по факту их записи в source/: происхождение, возможность дополнения и явное авторское принятие учитываются отдельно.",
       "provenance": {
         "authority": "explicit_user_instruction",
         "source": "Диалог 2026-10-03; пользователь подтвердил запись в файлах и графе проекта.",
@@ -15874,15 +15911,18 @@
     {
       "id": "canonical_v13_triple_0149",
       "source": "card_a1",
-      "target": "literal_c60260630d76",
-      "relation": "supports",
+      "target": "card_a0",
+      "relation": "candidate_supports",
       "layer": "canonical_v13",
       "confidence": "EXTRACTED",
       "source_file": "source/fts_triples.tsv",
       "source_location": "row:150",
       "assertion_kind": "triple",
       "raw_subject": "A1",
-      "raw_object": "core_grammar"
+      "raw_object": "A0",
+      "scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment",
+      "clarification_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+      "status_effect": "proposal/explanatory address only; no evidence or status promotion"
     },
     {
       "id": "canonical_v13_triple_0150",
@@ -15900,15 +15940,18 @@
     {
       "id": "canonical_v13_triple_0151",
       "source": "card_a3",
-      "target": "literal_c60260630d76",
-      "relation": "supports",
+      "target": "card_a0",
+      "relation": "candidate_supports",
       "layer": "canonical_v13",
       "confidence": "EXTRACTED",
       "source_file": "source/fts_triples.tsv",
       "source_location": "row:152",
       "assertion_kind": "triple",
       "raw_subject": "A3",
-      "raw_object": "core_grammar"
+      "raw_object": "A0",
+      "scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment",
+      "clarification_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+      "status_effect": "proposal/explanatory address only; no evidence or status promotion"
     },
     {
       "id": "canonical_v13_triple_0152",
@@ -15926,28 +15969,34 @@
     {
       "id": "canonical_v13_triple_0153",
       "source": "card_a5",
-      "target": "literal_c60260630d76",
-      "relation": "supports",
+      "target": "card_a0",
+      "relation": "proposes_formalization_of",
       "layer": "canonical_v13",
       "confidence": "EXTRACTED",
       "source_file": "source/fts_triples.tsv",
       "source_location": "row:154",
       "assertion_kind": "triple",
       "raw_subject": "A5",
-      "raw_object": "core_grammar"
+      "raw_object": "A0",
+      "scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception",
+      "clarification_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+      "status_effect": "proposal/explanatory address only; no evidence or status promotion"
     },
     {
       "id": "canonical_v13_triple_0154",
       "source": "card_a5a",
-      "target": "literal_c60260630d76",
-      "relation": "supports",
+      "target": "card_a5",
+      "relation": "proposes_formalization_of",
       "layer": "canonical_v13",
       "confidence": "EXTRACTED",
       "source_file": "source/fts_triples.tsv",
       "source_location": "row:155",
       "assertion_kind": "triple",
       "raw_subject": "A5a",
-      "raw_object": "core_grammar"
+      "raw_object": "A5",
+      "scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception",
+      "clarification_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md",
+      "status_effect": "proposal/explanatory address only; no evidence or status promotion"
     },
     {
       "id": "canonical_v13_triple_0155",
@@ -19425,6 +19474,54 @@
       "relationship_review_file": "work/v14_rebuild/audit/GRAPH_RELATION_PATCH.tsv",
       "relationship_review_location": "row:93",
       "review_confidence": "CURATED"
+    },
+    {
+      "id": "card_adoption_a1",
+      "source": "card_a1",
+      "target": "doc_work_author_canon_2026_10_03_logical_supplement_clarification_md",
+      "relation": "documented_in",
+      "layer": "author_clarification",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:A1:adoption_source",
+      "scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment",
+      "status_effect": "author provenance/adoption clarification; no evidence promotion"
+    },
+    {
+      "id": "card_adoption_a3",
+      "source": "card_a3",
+      "target": "doc_work_author_canon_2026_10_03_logical_supplement_clarification_md",
+      "relation": "documented_in",
+      "layer": "author_clarification",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:A3:adoption_source",
+      "scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment",
+      "status_effect": "author provenance/adoption clarification; no evidence promotion"
+    },
+    {
+      "id": "card_adoption_a5",
+      "source": "card_a5",
+      "target": "doc_work_author_canon_2026_10_03_logical_supplement_clarification_md",
+      "relation": "documented_in",
+      "layer": "author_clarification",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:A5:adoption_source",
+      "scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception",
+      "status_effect": "author provenance/adoption clarification; no evidence promotion"
+    },
+    {
+      "id": "card_adoption_a5a",
+      "source": "card_a5a",
+      "target": "doc_work_author_canon_2026_10_03_logical_supplement_clarification_md",
+      "relation": "documented_in",
+      "layer": "author_clarification",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:A5a:adoption_source",
+      "scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception",
+      "status_effect": "author provenance/adoption clarification; no evidence promotion"
     },
     {
       "id": "claim_cm_001_after_status",
@@ -32836,8 +32933,8 @@
     "curated_research_bridges": 14,
     "project_entities": 1,
     "declared_research_scopes": 4,
-    "nodes": 801,
-    "edges": 1877,
+    "nodes": 802,
+    "edges": 1881,
     "unresolved_references": 4
   }
 }

@@ -27,21 +27,22 @@
 
 | Входной артефакт | SHA256 |
 |---|---|
-| `tools/build_research_export.py` | `e5ac0cfedbc938c00de5366cc9f1eb4fb6aaa8c368c3f638d7a6edde77dcff0e` |
+| `tools/build_research_export.py` | `fa611aaa68a281559fecd7215abd6ea6d566ed2de1c67cd63c11faf5345135d3` |
 | `AGENTS.md` | `382c79ffd6f2eee96c581c6f4c0ab3b6e79eb05ce743c9ba1ef695ff082be295` |
-| `PROJECT.json` | `50a69c83bc9985f555012aa5a5ec9611bc86edec42c88bed523e4ad3e8d8cfcc` |
-| `work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md` | `236aad98e838c3d48ebf0e830e935f4a3be7c58f5fb325878cb99f9f47e3cd02` |
+| `PROJECT.json` | `717b1ff9ee55f90afb6e95965210d66d655810d87df15adbb29f2a78c7b49832` |
+| `work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md` | `e7e066c50b50d97f64b53ed7bf59c8e8695ce0e62eebcac37ee51d7224268f16` |
+| `work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md` | `cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b` |
 | `PROJECT_INSTRUCTIONS.md` | `4d54f6d1abba63f227914873020adad0d2fb86034a564744702bb2e7c2cb04f4` |
-| `work/STATE.md` | `a2a78667aefbef10def29b58027ea2161c474b847565b3cc56669afdd17949cb` |
-| `work/notation.md` | `e0b5f3f18833104f694c54a863c555d948e0f9ca5ce0701f7ec3fbd671a61b6c` |
+| `work/STATE.md` | `05323dbe3a4124c05c9a354483d0f281bed2f2056567206e9f5d0f17eb5600a5` |
+| `work/notation.md` | `706b4dc4af393d5f974877a8ca755a962c50016474cb1730da7b6acfdbbfcba8` |
 | `work/DOCUMENT_MAP.md` | `18298a5dc1dfd68252d3c6c830ba1fc505eb91242da1ac5bd927f4de1422538c` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
-| `work/DECISIONS.md` | `250befeb6c06d7a9d4a48b9b9c97ba3dc8db6fe99470a2c588839b8c0f0b5424` |
+| `work/DECISIONS.md` | `d41f3eeab739f36e5a423feec5a4fd0ba9fdd3418b18a9fb362e0bfa9eb8e85b` |
 | `work/OPEN_QUESTIONS.md` | `888546701f744f028fb9cecbf9cd1bd48033d443dfc5b5e1059f9499007df79d` |
 | `work/EXTERNAL_CONFLICTS.md` | `0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a` |
-| `work/v14_rebuild/FTS_v14_paper.md` | `d6da08e3b4fb49eba1451e7c782b173ca47727110c4713f87fca15ee0dada916` |
+| `work/v14_rebuild/FTS_v14_paper.md` | `434165cc1a5915e56e662634341c02bfc99c7498702b0042a6155c756ab9dd92` |
 | `work/v14_rebuild/FTS_v14_register_map.md` | `710ec5be63957527ec5baae8e43d3040179bdf243152d02d64208c520e28aa12` |
 | `work/v14_rebuild/status_patch_v14.md` | `f366b4d9534a4090483b45eb2c96720ff702e0a053395f27cda2920eb71d4ed0` |
 | `work/v14_rebuild/red_team_F3.md` | `0ed37c74e2c80ff46d8c292df45539767f636445ba9f8a1d9fa1016cd35a6139` |
@@ -102,7 +103,7 @@
 | `work/v14_rebuild/train_reflection/results.json` | `5a49d40bd2e21a68c6058fdbfb885c3fd44730a9640594a987fe10ec6971da76` |
 | `work/v14_rebuild/dialogue_semantics_2026-09-15.md` | `e5c934477f52646aa6f1a8f5d98c7b486358c343eed2bb45d27c7d683ee0ef5e` |
 | `work/v14_rebuild/dialogue_integration_2026-09-22.md` | `f702af4f46119ec6aa68e9fc3f48876b59f46305a93a68317c107c0f0b229b6b` |
-| `work/AUTHOR_CANON.md` | `887f7de56fc880348f4aa34d83849f7565c23f98f675c8636972a5d66881734a` |
+| `work/AUTHOR_CANON.md` | `cafb6d7ff6c9d3596e8ad48d2300c049ab494beb94c793fef29f986b43083edb` |
 | `work/author_canon/2026-09-21/AMENDMENT.md` | `b1b8c209f98c557afff5c439ac9112abdc01ee17afd4dde164d18056eaaaae6d` |
 | `work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt` | `4634997721d5c42d50765189deb9bd97114d611c075b09f513fe3b8d61c66178` |
 | `work/author_canon/2026-09-21/INHERITED_AUTHOR_MESSAGE.txt` | `6ed5c7b91877969c5cae727b0e4d8dc7a587ccc47ca3c725f3f317a241ebf199` |
@@ -114,11 +115,11 @@
 | `work/v14_rebuild/neural_analogy_2026-09-19/REVIEW.md` | `9d5e0df0301712671d4597d936b2c8893c4b0f7a3fb7387ae0ad2510c5556ec0` |
 | `work/v14_rebuild/neural_analogy_2026-09-19/AUTHOR_MESSAGE.txt` | `63f03b5a4a98232bd431bf6f559e1adcd752eead82f9cf9760c9ed3c144332fe` |
 | `work/v14_rebuild/neural_analogy_2026-09-19/check_examples.py` | `0ec19822598e81717dfe67541a32e0147185675e976746a25a25ee1fd2b6829d` |
-| `source/MANIFEST.json` | `e691c20efcab517a39664943e25948967496303cfca57f91d2694c003f4b24a0` |
-| `source/FTS_v13_LLM_CONTEXT.md` | `789c58200887f48bcdd23e15a174ecf579c51c46e5068e037cc60e517560fbed` |
-| `source/FTS_v13_LLM_FULL_DUMP.md` | `fa59ae8d76f505b0e6be7268e4102a0c02561575f6e742a0b442981fda501173` |
-| `source/fts_cards.jsonl` | `9c9836bc66c5d2e07dca065252697dd07e9766d2fa9ebdd51e2be81fcab86861` |
-| `source/fts_triples.tsv` | `aee1780e6d4ed85894056cc49df054de4a660b6f5a7ef076eb488e8786fe7a9c` |
+| `source/MANIFEST.json` | `18e37b0af29aaf56122298ada72ddfef8e8fd3e55711908f1fbc8f4ff7be4663` |
+| `source/FTS_v13_LLM_CONTEXT.md` | `07ff127eae127a3ba8c8a7a32582df5b5de1884bdf4c7c3ca95dadc96d5e85ee` |
+| `source/FTS_v13_LLM_FULL_DUMP.md` | `442eefed988abf57825f00fcf1cdd43013fd335cf6b5bc7bd21f061029a04b92` |
+| `source/fts_cards.jsonl` | `e03d164678b0d16abb6e4c2edffedecaacecea778ba598e3f0fca77f311e6582` |
+| `source/fts_triples.tsv` | `c792924d4d7bac4874c3940109d6c6d9d99b849cf4128e8f1b060b17f4941b11` |
 
 ### 1.3. Краткий рабочий контракт
 
@@ -529,7 +530,7 @@ check visual structure; correct `article.md` against source, never the reverse.
       "requirement": "Проверка соответствия учитывает документы вне графа и гранулярность записей. Наличие ссылки, общий файл, тематическая близость и полнота зарегистрированных рёбер сами по себе не доказывают содержательную связность всех утверждений."
     }
   ],
-  "status_policy": "Задача проекта и адресация исследования не повышают St_FTS или St_math. Действуют отдельные оси авторского принятия, математического доказательства и эмпирического подтверждения, SP/К1–К5 и пересматриваемые обязательства SP_LIMITS.",
+  "status_policy": "Задача проекта и адресация исследования не повышают St_FTS или St_math. Действуют отдельные оси авторского принятия, математического доказательства и эмпирического подтверждения, SP/К1–К5 и пересматриваемые обязательства SP_LIMITS. Предложения ассистента не приписываются автору по факту их записи в source/: происхождение, возможность дополнения и явное авторское принятие учитываются отдельно.",
   "recorded_on": "2026-10-03",
   "provenance": {
     "authority": "explicit_user_instruction",
@@ -547,6 +548,12 @@ check visual structure; correct `article.md` against source, never the reverse.
 #### Соответствие исследовательской задаче ФТС — 2026-10-03
 
 ##### Вывод
+
+Уточнено после прямой авторской поправки:
+[A1/A3 и происхождение C_n/A5/A5a](../author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md).
+A1/A3 адресованы логике лестницы как возможные заимствованные дополнения.
+A5/A5a выделены как непринятая формализация ассистента. Наличие прежнего
+`canonical*`-ярлыка не удостоверяло авторское принятие этих записей.
 
 Проект соответствует заявленному предмету: исследованию связности элементарных
 абстракций, минимальных выражений, порядка уровней и межуровневых отношений.
@@ -571,7 +578,7 @@ check visual structure; correct `article.md` against source, never the reverse.
    25 групп CLAIM_MATRIX и 10 RESEARCH_CLAIMS: **212 адресуемых записей**.
    Авторские записи частично повторяют принятые канонические карточки.
    `ADD_NOTATION_ABS`, `ADD_RESEARCH_FORMAT` и `CM-019` выделены как служебные.
-2. Инвентаризированы **235 Markdown-файлов**, включая историю, оригинальные
+2. Инвентаризированы **236 Markdown-файлов**, включая историю, оригинальные
    источники, производные представления и инструкции. Для 138 файлов текущего
    рабочего слоя показаны признаки адресации; 113 из них не входят в набор входов
    графа. Это счётчик документов, а не независимых утверждений. Нахождение вне
@@ -603,13 +610,13 @@ check visual structure; correct `article.md` against source, never the reverse.
 
 ##### Машинная прослеживаемость и её границы
 
-| Слой | Записей | Найден маршрут к предметному адресу | Без маршрута по данной политике | Служебные |
-|---|---:|---:|---:|---:|
-| Активные карточки | 169 | 162 | 5 | 2 |
-| Авторское происхождение | 8 | 7 | 1 | 0 |
-| Исследовательские claims | 10 | 2 | 8 | 0 |
-| Группы CLAIM_MATRIX | 25 | 11 | 13 | 1 |
-| **Итого** | **212** | **182** | **27** | **3** |
+| Слой | Записей | Найден маршрут к предметному адресу | Без маршрута по данной политике | Непринятая формализация | Служебные |
+|---|---:|---:|---:|---:|---:|
+| Активные карточки | 169 | 164 | 1 | 2 | 2 |
+| Авторское происхождение | 8 | 7 | 1 | 0 | 0 |
+| Исследовательские claims | 10 | 2 | 8 | 0 | 0 |
+| Группы CLAIM_MATRIX | 25 | 11 | 13 | 0 | 1 |
+| **Итого** | **212** | **184** | **23** | **2** | **3** |
 
 Маршрут задаёт зарегистрированное отношение к объекту задачи. Поиск сохраняет
 предикат, направление, источник, область и статусный эффект. Допускаются явная
@@ -618,14 +625,17 @@ check visual structure; correct `article.md` against source, never the reverse.
 Ссылка на документ, общая проверка, статус, навигация и новые рёбра задачи
 проекта исключены как самостоятельные основания адресации.
 
-**27 строк не означают 27 посторонних или ложных утверждений.** Консервативный
+**23 строки не означают 23 посторонних или ложных утверждения.** Консервативный
 поиск не извлекает семантику из свободного текста и не пользуется общими файлами
 или C-проверками как связующим звеном. Например, `CM-020` прямо называет O_20,
 `CM-007` называет U_13 в статусе/паспорте, а
 `U6_Q_NOT_SUFFICIENT_FOR_U7` явно относится к У6→У7. Их предметный адрес есть в
 тексте, но соответствующий маршрут по зарегистрированным связям отсутствует.
-Для A1/A3/A5/A5a требуется явная роль глобальной предпосылки; ADDENDUM_V3 и
-авторское решение нужно описывать как пакет/происхождение, не как одну теорему.
+Роль A1/A3 уточнена автором: возможное пояснение логики всей лестницы,
+не глобальные предпосылки. A5/A5a не приняты автором; их не требуется
+приписывать авторскому замыслу ради устранения отсутствующего адреса.
+ADDENDUM_V3 и авторское решение нужно описывать как пакет/происхождение,
+не как одну теорему.
 
 ##### Содержательные примеры
 
@@ -653,7 +663,7 @@ check visual structure; correct `article.md` against source, never the reverse.
 
 ##### Что остаётся оформить
 
-1. Разобрать 27 записей: зарегистрировать уже заявленные текстовые адреса,
+1. Разобрать 23 записи: зарегистрировать уже заявленные текстовые адреса,
    уточнить роль предпосылок и выделить пакетные/служебные записи.
 2. Развернуть 25 укрупнённых CM-групп в тезисы там, где меняются адрес, область,
    регистр, доказательство или статус. Проверять R1–R3 на этой гранулярности.
@@ -675,7 +685,7 @@ py -3.11 -X utf8 tools/check_project_consistency.py
 ```
 
 Первая команда валидирует актуальность графа и строит инвентари, сохраняя предел
-«не все атомарные предложения». Вторая проверяет 12 защитных случаев, включая
+«не все атомарные предложения». Вторая проверяет 13 защитных случаев, включая
 ложное соединение через документ, общую проверку или запись задачи, потерю
 scope-ребра и недопустимые адреса. Полный маршрут проверяет целостность и
 воспроизводимость своих входов; его PASS не меняет содержательного вывода выше.
@@ -687,13 +697,65 @@ scope-ребра и недопустимые адреса. Полный марш
 точный FTS-паспорт проверяемой роли; это не девять опровержений теории.
 
 Полный маршрут выполнен: **5/5 проверок пройдены**, C01–C62 — **62 PASS / 0 FAIL**,
-контроль проекции задачи и ложных маршрутов — **12/12 PASS**. Четыре прежних
+контроль проекции задачи и ложных маршрутов — **13/13 PASS**. Четыре прежних
 пробела определений `Lambda_link`, `TA1`, `U12_CHI_PI_BOUNDARY`, `NODE_SIGNATURES`
-сохранены как документированные P2. Проверка исходного снимка подтверждает
-побайтовое сохранение всех 14 файлов `source/` и всех 595 канонных/авторских рёбер.
+сохранены как документированные P2. Первичная проверка до авторского уточнения
+сохраняла все 14 файлов `source/` и все 595 канонных/авторских рёбер побайтово.
+Нынешняя поправка намеренно меняет ровно четыре первичные карточки и четыре
+отношения, обновляет их производные и источник авторского чтения.
 
-Формулы, канонные статусы и первичные авторские/экспериментальные источники в ходе
-этой проверки не пересматриваются. Новая задача — критерий дальнейшей работы.
+Формулы уровней и первичные авторские/экспериментальные источники сохранены.
+Четыре ошибочно атрибутированные карточки больше не обозначены принятыми
+аксиомами. Новая задача — критерий дальнейшей работы.
+
+### 1.7. Авторское уточнение происхождения логических дополнений
+
+*Источник сборки: `work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md`.*
+
+#### Происхождение и роль логических дополнений — уточнение автора 2026-10-03
+
+##### Прямая авторская позиция
+
+> А3 - функция означивания (оценки) высказывания \\(A\\) в неклассических логиках. мы взяли это как возможное дополнение к фтс, к объяснению как работает логика фтс. аналогично с А1.
+
+> Я не добавлял в проект ни C_n, ни А5, ни А5а - всё это было тобой предложенной формализацией. я так не мыслю.
+
+Автор также перечислил значения `v(A)=(1,0)`, `(0,1)`, `(0,0)`, `(1,1)`:
+истина, ложь, неизвестность и противоречивая информация соответственно.
+Это уточнение относится к карточкам `A1`/`A3`, а не к А-регистру уровней.
+
+##### Действующее чтение
+
+| Объект | Происхождение и роль | Принятие |
+|---|---|---|
+| `A1` | Четыре состояния оценки высказывания в возможном логическом дополнении | Возможное объяснение логики всей ФТС; не принятая аксиома лестницы |
+| `A3` | Заимствованная двухканальная оценка `v(A)=(t(A),f(A))` | Возможное объяснение логики всей ФТС; не доказательство оснований или переходов |
+| `C_n` | Контекстная параметризация, предложенная ассистентом; исторически включена в формулировку A1 и модельные схемы | Автор не вводил и не принимает как описание своего замысла |
+| `A5`, `A5a` | Предложенные ассистентом критерии остатка/полноты и операционной диагностики | Не приняты автором; сохраняются как предложения формализации с явным происхождением |
+
+Прежние `canonical*`-ярлыки этих четырёх карточек не удостоверяли авторского
+принятия. Активный релиз исправляет тексты/типы/статусы и отношения этих записей.
+Формулы A5/A5a сохранены для прослеживаемости предложения; снятие авторской
+атрибуции не является математическим опровержением формул. Исторические оригиналы
+сохраняются; актуальное чтение определяется активными карточками и этой поправкой.
+
+##### Пределы внешнего логического пояснения
+
+`[внешнее]` Четыре состояния соответствуют семантике Belnap–Dunn:
+истина, ложь, neither и both. Одна пара оценок ещё не задаёт всю логику:
+нужны операции и отношение следования.
+[Первичная публикация о четырёхзначных логиках](https://arxiv.org/abs/2111.09978).
+
+`[внешнее]` В стандартной классической семантике значения двузначны.
+Пример `0.7`/`0.3` относится к нечёткой оценке со стандартным отрицанием
+`1-t`; он не характеризует классическую логику.
+[Zadeh, Fuzzy sets (1965)](https://www.sciencedirect.com/science/article/pii/S001999586590241X).
+
+Для произвольных независимых степеней `t,f` выражение `1-(t+f)` не получает
+автоматически смысла меры незнания: требуются выбранная шкала и правила её
+интерпретации. Пример `t=f=0.4` может содержать свидетельства с обеих сторон,
+хотя сумма меньше единицы. Градуированное продолжение и перенос на ФТС остаются
+кандидатными; новая метрика или новое основание лестницы здесь не вводятся.
 
 ## 2. Текущее состояние проекта
 
@@ -701,62 +763,43 @@ scope-ребра и недопустимые адреса. Полный марш
 
 ### STATE — текущая точка
 
-Обновлено 2026-10-03. Единое место работы:
-`C:/Users/Mcdos/Desktop/FTS_v13_project`.
+Обновлено 2026-10-03. Основной каталог: `C:/Users/Mcdos/Desktop/FTS_v13_project`.
 
 #### Текущая работа
 
-Задача проекта зафиксирована в [PROJECT.json](../PROJECT.json),
-[README](../README.md#задача-проекта) и узле `project_fts`: исследовать и обосновать
-связность элементарных абстракций, минимальные выражения, порядок и переходы
-в заявленной структурной сложности. Каждому содержательному утверждению нужен
-хотя бы один из четырёх адресов и явная роль с областью/свидетелем или обязательством.
+Задача и четыре допустимых предметных адреса записаны в [PROJECT.json](../PROJECT.json)
+и графе `project_fts`. Основные направления соответствуют задаче;
+[полная прослеживаемость](project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md)
+отдельных тезисов ещё не обеспечена.
 
-[Проверка соответствия](project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md):
-основные направления соответствуют предмету; полная прослеживаемость отдельных
-тезисов не обеспечена. Из 212 записей графа 182 имеют предметный маршрут,
-27 — без маршрута по объявленной политике, 3 — служебные. CM-групп — 25;
-проверены декларации 39 основных документов и инвентарь 235 Markdown-файлов.
-Текстовый адрес может существовать без отдельного ребра; эти счётчики не доказывают
-семантику и не означают наличия 27 посторонних утверждений.
+[Авторская поправка](author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md):
+A1/A3 — возможное заимствованное объяснение логики всей ФТС. C_n, A5 и A5a —
+предложенная ассистентом формализация, не принятая автором. Четыре ошибочных
+ярлыка принятия исправлены; статья и граф отражают происхождение и ограничения.
+Присутствие в source/ не удостоверяет авторского принятия или доказательства.
 
-Активный релиз: `v13_active_graph_reconciled_2026-10-03`;
-169 карточек, 378 триплетов, 54 листа. Тексты, символы и статусы сохранены.
-Карточки и TSV содержат одинаковые 167 зависимостей; расхождение — 0 / 0,
-циклов предпосылок — 0. Взаимосвязи сохраняются с уточнёнными типами.
-Граф: 801 узел, 1877 рёбер, 595/595 исходных канонных/авторских связей.
-Все 34 исходные ссылки разобраны; четыре точных объекта остаются без определения:
-`Lambda_link`, `TA1`, `U12_CHI_PI_BOUNDARY`, `NODE_SIGNATURES`.
+Активный релиз `v13_active_logic_provenance_2026-10-03`: 169 карточек,
+378 триплетов, 54 листа; 167 согласованных depends_on, циклов предпосылок — 0.
+Граф: 802 узла, 1881 ребро; 595/595 входных канонных/авторских отношений.
+Из 212 записей 184 имеют предметный маршрут, 23 — без маршрута,
+2 — непринятая формализация, 3 — служебные. Учтены 236 Markdown-файлов,
+проверены декларации 39 основных документов; это не охват всех атомарных тезисов.
 
-#### Следующий содержательный шаг
+#### Следующий шаг
 
-Оформить предметные адреса 27 записей, выделить служебное/пакетное происхождение,
-развернуть укрупнённые CM-тезисы по различающимся областям и паспортировать
-FTS-мишени модельных тестов. [Очередь и ограничения](project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md#что-остаётся-оформить).
+Продолжить авторское уточнение адресов 23 записей; A5/A5a не требуют
+приписывания авторскому замыслу. Разделять группы там, где различаются область,
+роль или доказательство; уточнять FTS-мишени модельных проверок.
+[Очередь](project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md#что-остаётся-оформить).
 
-[Определения для четырёх ссылок](OPEN_QUESTIONS.md#oq-graph-reference-definitions)
-требуют адресной реконструкции и свидетелей своей области. Сам факт наличия
-строки или её адресное исправление не повышает St_FTS. Далее сохраняется
-работа с выбранным паспортом из [ответов на 60 OQ](v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md)
-и [AUTHOR_ANSWERS_60.md](AUTHOR_ANSWERS_60.md).
-
-Открыты [мост У6/У7](OPEN_QUESTIONS.md#oq-u6-u7-compositional-semantics),
-[роли окон](OPEN_QUESTIONS.md#oq-window-family-roles),
+Четыре [пробела определений](OPEN_QUESTIONS.md#oq-graph-reference-definitions):
+Lambda_link, TA1, U12_CHI_PI_BOUNDARY, NODE_SIGNATURES.
+Открыты [У6/У7](OPEN_QUESTIONS.md#oq-u6-u7-compositional-semantics),
+[окна](OPEN_QUESTIONS.md#oq-window-family-roles),
 [Blackwell](OPEN_QUESTIONS.md#oq-blackwell-canonical-projection),
 [Lift](OPEN_QUESTIONS.md#oq-lift-section-and-category),
-[код / «ведёт к»](OPEN_QUESTIONS.md#oq-code-link-vs-leads-to) и
-[интернализация ярлыка](OPEN_QUESTIONS.md#oq-reflection-label-internalization).
-
-#### Происхождение и история
-
-[Согласование зависимостей](project_consistency/GRAPH_RECONCILIATION_2026-10-03.md),
-[маршрут того релиза](project_consistency/GRAPH_CHECKS_2026-10-03.json),
-[требования того плана](project_consistency/GRAPH_ACCEPTANCE_2026-10-03.json).
-[Слияние и резервные копии](project_consistency/MERGE_2026-10-03.md);
-[интеграция AC-2026-10-03](author_canon/2026-10-03/INTEGRATION.md).
-Математическое У7 — A_07/U7_MATH_LOCAL_FORBID, логическое — M_07/U7_LOGIC_GROUPING;
-операциональное чтение остаётся отдельным. История сохранена в Git,
-[решениях](DECISIONS.md) и [авторских поправках](AUTHOR_CANON.md).
+[код / «ведёт к»](OPEN_QUESTIONS.md#oq-code-link-vs-leads-to),
+[рефлексия](OPEN_QUESTIONS.md#oq-reflection-label-internalization).
 
 ## 3. Основной исследовательский текст v14
 
@@ -923,11 +966,15 @@ Explicitly label claims absent from the artifacts.
 [notation.md]. Для уровней 7+ канон приписывает антимоду
 [триплеты `U_07..U_17 has_antimode minusA`].
 
-**Корень неслипания (A3).** Почему `¬A ≠ 0_A`: канон постулирует двухканальную
-семантику `v(A) = (t(A), f(A))` — независимые каналы свидетельства за и против
-[карточка A3]. Отсутствие t-свидетельства (`¬t`) не есть f-свидетельство; `0_A` —
-структура на этом зазоре, `¬A` — лишь булева тень (`event(0_A)=¬A`, обратно — нет,
-[карточка A2]). Это аксиоматическая опора фундамента §6.0.
+**Возможное логическое пояснение (A1/A3).** Заимствованная оценка
+`v(A) = (t(A), f(A))` допускает независимые каналы свидетельств за и против:
+нет свидетельства за — ещё не значит, что есть свидетельство против.
+Четыре состояния `(1,0)`, `(0,1)`, `(0,0)`, `(1,1)` дают возможный язык
+объяснения логики ФТС. По [уточнению автора](../author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md)
+это дополнение сохраняет кандидатную роль. Соответствие `0_A`, `¬A` и операторов
+ФТС этой внешней модели требует отдельного обоснования; A3 не является
+принятой аксиоматической опорой фундамента §6.0.
+`C_n`, A5 и A5a — предложенная ассистентом формализация, не принятая автором.
 
 **Рабочие отсутствия сверх трёх.** Далее в тексте используются ещё два: `Res_n` —
 поднимаемый остаток (`Res_n → Lift`, не Promote; оператор Lift, [карточка A6]) — и
@@ -2109,12 +2156,14 @@ EC-014…016]. Канонический смысл M_n* и якорный кри
   ветви; на тотализованной области остаётся `{2}` — вопрос исчезает;
   `t²=−1 → ∅` — граница, за которой нужен `i` (§7).
 
-**Булева тень** [C-62]. `Tot(0_A)=event(0_A)=¬A` схлопывает двухканальную
-оценку A3 `v(A)=(t,f)` (§3.2) в один канал, и в тени средняя пара падает в
-полюса нижней: `(a=b)∧(a≠b) → False`, `(a=b)∨(a≠b) → True` — тотализация
-проецирует пару {4,5} на пару {0,1} (∅/ℝ). Вне тени уровни 4–5 существуют
-ровно потому, что каналы истинности и ложности не слиты: **абсолютизация =
-слитие каналов = вырождение.**
+**Булева тень** [C-62]. В классическом булевом чтении
+`(a=b)∧(a≠b) → False`, `(a=b)∨(a≠b) → True`; C-62 проверяет именно эти
+тождества. Чтение `Tot(0_A)=event(0_A)=¬A` и проекции пары {4,5} на пару {0,1}
+(∅/ℝ) относится к предлагаемой в статье модельной интерпретации. Связь этой проекции с
+двухканальной оценкой A3 `v(A)=(t,f)` (§3.2) остаётся кандидатным пояснением.
+C-62 не проверяет такой перенос и не обосновывает существование уровней 4–5
+из одной лишь независимости каналов. Формула «слитие каналов = вырождение»
+требует отдельного паспорта и свидетеля своей области.
 
 Итог соответствия: запрет надстройки при тотализации действует на каждом шаге,
 но его формульный носитель различен — противоречие (C-58-ребро решётки) на
@@ -2883,10 +2932,17 @@ derived/formal ограничения. Карточки SP_PARITY нет. Нов
 
 ##### Статусы
 
+`A1`/`A3` — возможное заимствованное пояснение логики всей ФТС через оценку
+`v(A)=(t(A),f(A))` и четыре состояния; не принятые аксиомы лестницы.
+`C_n` — контекстная параметризация, предложенная ассистентом; `A5`/`A5a` —
+его непринятые критерии остатка/полноты и диагностики.
+[Прямая авторская поправка и пределы](author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md).
+
 Поле `status` читается из конкретной карточки. Принятый порядок обозначений:
 `canonical_strict > canonical > canon/base > derived_constraint >
 candidate_* / *_overlay / reserved_* / projected_* / speculative`.
 Порядок проверки повышения — [патч-таблица статусов](v14_rebuild/status_patch_v14.md).
+Наличие записи в `source/` не означает авторского принятия предложения.
 
 ##### Адреса прежних разделов
 
@@ -6635,6 +6691,13 @@ if __name__ == "__main__":
   missing-indicator с `0_A` отвергнуты. Почему: канон не задаёт базовую точку
   `Res`, категорию, факторизацию всех морфизмов или fillers; их молчаливое
   добавление нарушило бы no-smuggling.
+
+- 2026-10-03 — прямая авторская поправка происхождения A1/A3/C_n/A5/A5a:
+  A1/A3 — возможное заимствованное пояснение логики всей ФТС; C_n и A5/A5a —
+  предложенная ассистентом формализация, не принятая автором. Исправлены четыре
+  активные карточки и четыре отношения, статусы/происхождение отражены в графе;
+  статья больше не использует A3 как принятую аксиоматическую опору фундамента.
+  Формулы уровней и математические предикаты не меняются. [Источник и границы](author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md).
 
 ### 6.2. Открытые вопросы
 
@@ -10761,8 +10824,14 @@ journal: `integrated`.
 оно не эквивалентно `formal_math_fact` или прохождению К1–К5. Это не скрытое
 повышение прежних карточек U_07/M_07: новые утверждения имеют собственные ID.
 
+Поправка происхождения от 2026-10-03: `A1`/`A3` — возможные логические
+дополнения; `C_n`, `A5` и `A5a` — предложенная ассистентом формализация, которую
+автор не вводил и не принимает как свой замысел.
+[Точная цитата и интеграция](author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md).
+Это уточнение не добавляет новые принятые аксиомы и не повышает доказанность.
+
 `source/` теперь является активным каноническим релизом
-`v13_active_integrated_2026-10-03`; предыдущий v13
+`v13_active_logic_provenance_2026-10-03`; предыдущий v13
 сохранён в `work/canon_history/v13_complex_branch_overlay_2026-06-11/`.
 `tools/query.py` показывает заменённые карточки. AC-2026-09-19 сохраняется как
 историческая версия с прежними формулами. Полная объединённая workbook-выгрузка
@@ -30514,7 +30583,7 @@ if __name__ == "__main__":
 
 ## 8. Компактный контекст канона v13
 
-### FTS active canonical release — v13_active_graph_reconciled_2026-10-03
+### FTS active canonical release — v13_active_logic_provenance_2026-10-03
 
 Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
@@ -30526,12 +30595,15 @@ in sheets or corpora are provenance, superseded by `PROJECT_INSTRUCTIONS.md`.
 Read exact formulas and statuses by card ID. Author acceptance, mathematical
 proof, and empirical confirmation remain separate. Registers are connected but
 not interchangeable; their mapping requires a scoped witness.
+Presence in the active registry does not make a proposal author-accepted.
+Read card types, statuses and provenance. Embedded original corpora retain their
+historical wording; active structured card/axiom views take precedence.
 The original workbook and embedded historical corpora are not claims that this
 release was produced by a new workbook round-trip.
 
 #### Active changes
 
-Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.
+Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
@@ -30547,7 +30619,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | alignment_note | 1 |
 | anti_mode | 1 |
 | author_decision | 1 |
-| axiom | 12 |
+| axiom | 8 |
 | boundary | 1 |
 | boundary_candidate | 1 |
 | candidate_bundle | 1 |
@@ -30559,12 +30631,14 @@ Cards: 169. Triples: 378. Sheets: 54.
 | definition | 4 |
 | export_instruction | 1 |
 | failure_condition | 5 |
+| formalization_proposal | 2 |
 | guardrail | 1 |
 | hypothesis_candidate | 1 |
 | invariant_candidate | 1 |
 | level | 19 |
 | level_candidate | 1 |
 | level_variant_candidate | 1 |
+| logical_supplement | 2 |
 | mathematical_expression | 1 |
 | minimal_expression | 19 |
 | notation_rule | 1 |
@@ -30587,6 +30661,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | FTS_candidate | 4 |
 | FTS_candidate_guarded | 2 |
 | active_instruction | 1 |
+| assistant_formalization_not_adopted | 2 |
 | author_canonical_amendment | 5 |
 | candidate | 12 |
 | candidate_U12_overlay | 3 |
@@ -30594,6 +30669,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | candidate_bridge | 2 |
 | candidate_bundle | 1 |
 | candidate_core | 2 |
+| candidate_logical_supplement | 2 |
 | candidate_overlay | 9 |
 | candidate_requires_empirical_test | 1 |
 | candidate_requires_formalization | 2 |
@@ -30601,10 +30677,8 @@ Cards: 169. Triples: 378. Sheets: 54.
 | candidate_with_operational_gate | 11 |
 | canon/base | 11 |
 | canon/base_plus_user_refinement | 1 |
-| canonical | 31 |
+| canonical | 29 |
 | canonical_alignment | 1 |
-| canonical_conceptual | 1 |
-| canonical_extension | 1 |
 | canonical_node_underformalized_semantics | 3 |
 | canonical_note | 1 |
 | canonical_strict | 24 |
@@ -30903,7 +30977,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 
 ## 9. Полный 54-листовый дамп канона v13
 
-### FTS active canonical release — v13_active_graph_reconciled_2026-10-03
+### FTS active canonical release — v13_active_logic_provenance_2026-10-03
 
 Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
@@ -30915,12 +30989,15 @@ in sheets or corpora are provenance, superseded by `PROJECT_INSTRUCTIONS.md`.
 Read exact formulas and statuses by card ID. Author acceptance, mathematical
 proof, and empirical confirmation remain separate. Registers are connected but
 not interchangeable; their mapping requires a scoped witness.
+Presence in the active registry does not make a proposal author-accepted.
+Read card types, statuses and provenance. Embedded original corpora retain their
+historical wording; active structured card/axiom views take precedence.
 The original workbook and embedded historical corpora are not claims that this
 release was produced by a new workbook round-trip.
 
 #### Active changes
 
-Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.
+Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
@@ -30971,7 +31048,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 35 | 35_Export_tsv | A1:B379 | 379 | 2 |
 | 36 | 36_Export_yaml | A1:B337 | 337 | 2 |
 | 37 | 37_Export_md | A1:F31 | 31 | 6 |
-| 38 | 38_Changelog | A1:F16 | 16 | 6 |
+| 38 | 38_Changelog | A1:F17 | 17 | 6 |
 | 39 | 39_Status_Dict | A1:E21 | 21 | 5 |
 | 40 | 40_Reader_View | A1:B12 | 12 | 2 |
 | 41 | 41_Самодостаточность | A1:D9 | 9 | 4 |
@@ -31157,7 +31234,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 
 | Поле | Значение | Комментарий | Внутренний лист |
 | --- | --- | --- | --- |
-| Версия | v13_active_graph_reconciled_2026-10-03 | Active export; historical workbook remains a provenance input. | 38_Changelog |
+| Версия | v13_active_logic_provenance_2026-10-03 | Active export; historical workbook remains a provenance input. | 38_Changelog |
 | Дата | 2026-06-10 | America/New_York current session date |  |
 | Назначение | self-contained Excel canon + U7 window cycles + χ statistical + complex branch/tensor overlays | карточки + граф + встроенный канон + U7/χ + complex/tensor overlays | 17–41 + overlays |
 | Статус | candidate replacement; not machine-checked proof | ядро −1..7 сильнее 8+; О(13..20) candidate-модуль | 39_Status_Dict |
@@ -31567,12 +31644,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | OP_iota | operator | ι | ι_n:X_n↪X_{n+1} | ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id | canonical |  | operator | CANON_V43/CANON_EN | A7 | operator;ι | 25_Операторы/OP_iota | π∘ι=id |
 | A0 | axiom | Ladder-first ontology of distinction | A0 | Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary | canonical |  | axiom | CANON_EN |  | axiom;A0 | 26_Аксиомы_A0_A9/A0 | Imported from English canon layer |
 | A0b | axiom | Symmetry-carrier shift nodes | A0b | nodes 3/7/11/15 change symmetry carrier | canonical |  | axiom | CANON_EN |  | axiom;A0b | 26_Аксиомы_A0_A9/A0b | Imported from English canon layer |
-| A1 | axiom | Contextuality of absence | A1 | is/no/unknown/absent are defined only relative to C_n | canonical |  | axiom | CANON_EN |  | axiom;A1 | 26_Аксиомы_A0_A9/A1 | Imported from English canon layer |
+| A1 | logical_supplement | Four-valued assessment states | A1 | v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS. | candidate_logical_supplement |  | logical_supplement | CANON_EN |  | logical_supplement;external;A1 | 26_Аксиомы_A0_A9/A1 | Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A2 | axiom | Structured absence | A2 | 0_A is induced structure on U\A; event(0_A)=¬A without identification | canonical |  | axiom | CANON_EN |  | axiom;A2 | 26_Аксиомы_A0_A9/A2 | Imported from English canon layer |
-| A3 | axiom | Dual-channel semantics | A3 | v(A)=(t(A),f(A)) independent positive/negative evidence channels | canonical |  | axiom | CANON_EN |  | axiom;A3 | 26_Аксиомы_A0_A9/A3 | Imported from English canon layer |
+| A3 | logical_supplement | Dual-channel assessment (possible logical supplement) | A3 | v(A)=(t(A),f(A)) independent positive/negative evidence channels | candidate_logical_supplement |  | logical_supplement | CANON_EN |  | logical_supplement;external;A3 | 26_Аксиомы_A0_A9/A3 | Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A4 | axiom | Tot as operator of forgetting | A4 | Tot collapses 0_A into ¬A and/or makes f derivative of t | canonical |  | axiom | CANON_EN |  | axiom;A4 | 26_Аксиомы_A0_A9/A4 | Imported from English canon layer |
-| A5 | axiom | Error remainder and false totality | A5 | If R*_n>ε then level totality is false in class I_n | canonical_conceptual |  | axiom | CANON_EN |  | axiom;A5 | 26_Аксиомы_A0_A9/A5 | Imported from English canon layer |
-| A5a | axiom | Conceptual false totality | A5a | Operational diagnosis should use ΔR*(op), not bare R*>0 | canonical_extension |  | axiom | CANON_EN |  | axiom;A5a | 26_Аксиомы_A0_A9/A5a | Imported from English canon layer |
+| A5 | formalization_proposal | Error remainder and false totality | A5 | If R*_n>ε then level totality is false in class I_n | assistant_formalization_not_adopted |  | assistant_formalization | CANON_EN |  | formalization_proposal;assistant_proposal;not_author_adopted;A5 | 26_Аксиомы_A0_A9/A5 | Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
+| A5a | formalization_proposal | Conceptual false totality | A5a | Operational diagnosis should use ΔR*(op), not bare R*>0 | assistant_formalization_not_adopted |  | assistant_formalization | CANON_EN |  | formalization_proposal;assistant_proposal;not_author_adopted;A5a | 26_Аксиомы_A0_A9/A5a | Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A6 | axiom | Lift as reification of remainder | A6 | X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible | canonical |  | axiom | CANON_EN |  | axiom;A6 | 26_Аксиомы_A0_A9/A6 | Imported from English canon layer |
 | A7 | axiom | Sublation through embedding/projection | A7 | ι_n and π_n preserve old layer; π∘ι=id | canonical |  | axiom | CANON_EN |  | axiom;A7 | 26_Аксиомы_A0_A9/A7 | Imported from English canon layer |
 | A8 | axiom | Metacontrol and −A after self-reference | A8 | Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A | canonical |  | axiom | CANON_EN |  | axiom;A8 | 26_Аксиомы_A0_A9/A8 | Imported from English canon layer |
@@ -31796,12 +31873,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | OP_iota | depends_on | A7 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0146 |
 | A0 | supports | core_grammar | axiom_support | CANON_EN | canonical | Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary | G_0147 |
 | A0b | supports | core_grammar | axiom_support | CANON_EN | canonical | nodes 3/7/11/15 change symmetry carrier | G_0148 |
-| A1 | supports | core_grammar | axiom_support | CANON_EN | canonical | is/no/unknown/absent are defined only relative to C_n | G_0149 |
+| A1 | candidate_supports | A0 | author_provenance_and_adoption_correction | CANON_EN | candidate_logical_supplement | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | G_0380 |
 | A2 | supports | core_grammar | axiom_support | CANON_EN | canonical | 0_A is induced structure on U\A; event(0_A)=¬A without identification | G_0150 |
-| A3 | supports | core_grammar | axiom_support | CANON_EN | canonical | v(A)=(t(A),f(A)) independent positive/negative evidence channels | G_0151 |
+| A3 | candidate_supports | A0 | author_provenance_and_adoption_correction | CANON_EN | candidate_logical_supplement | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | G_0381 |
 | A4 | supports | core_grammar | axiom_support | CANON_EN | canonical | Tot collapses 0_A into ¬A and/or makes f derivative of t | G_0152 |
-| A5 | supports | core_grammar | axiom_support | CANON_EN | canonical_conceptual | If R*_n>ε then level totality is false in class I_n | G_0153 |
-| A5a | supports | core_grammar | axiom_support | CANON_EN | canonical_extension | Operational diagnosis should use ΔR*(op), not bare R*>0 | G_0154 |
+| A5 | proposes_formalization_of | A0 | author_provenance_and_adoption_correction | CANON_EN | assistant_formalization_not_adopted | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | G_0382 |
+| A5a | proposes_formalization_of | A5 | author_provenance_and_adoption_correction | CANON_EN | assistant_formalization_not_adopted | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | G_0383 |
 | A6 | supports | core_grammar | axiom_support | CANON_EN | canonical | X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible | G_0155 |
 | A7 | supports | core_grammar | axiom_support | CANON_EN | canonical | ι_n and π_n preserve old layer; π∘ι=id | G_0156 |
 | A8 | supports | core_grammar | axiom_support | CANON_EN | canonical | Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A | G_0157 |
@@ -32235,12 +32312,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | --- | --- | --- | --- | --- | --- | --- |
 | A0 | Ladder-first ontology of distinction | Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary | canonical |  | CANON_EN | Imported as canonical English layer |
 | A0b | Symmetry-carrier shift nodes | nodes 3/7/11/15 change symmetry carrier | canonical |  | CANON_EN | Imported as canonical English layer |
-| A1 | Contextuality of absence | is/no/unknown/absent are defined only relative to C_n | canonical |  | CANON_EN | Imported as canonical English layer |
+| A1 | Four-valued assessment states | v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS. | candidate_logical_supplement |  | CANON_EN | Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A2 | Structured absence | 0_A is induced structure on U\A; event(0_A)=¬A without identification | canonical |  | CANON_EN | Imported as canonical English layer |
-| A3 | Dual-channel semantics | v(A)=(t(A),f(A)) independent positive/negative evidence channels | canonical |  | CANON_EN | Imported as canonical English layer |
+| A3 | Dual-channel assessment (possible logical supplement) | v(A)=(t(A),f(A)) independent positive/negative evidence channels | candidate_logical_supplement |  | CANON_EN | Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A4 | Tot as operator of forgetting | Tot collapses 0_A into ¬A and/or makes f derivative of t | canonical |  | CANON_EN | Imported as canonical English layer |
-| A5 | Error remainder and false totality | If R*_n>ε then level totality is false in class I_n | canonical_conceptual |  | CANON_EN | Imported as canonical English layer |
-| A5a | Conceptual false totality | Operational diagnosis should use ΔR*(op), not bare R*>0 | canonical_extension |  | CANON_EN | Imported as canonical English layer |
+| A5 | Error remainder and false totality | If R*_n>ε then level totality is false in class I_n | assistant_formalization_not_adopted |  | CANON_EN | Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
+| A5a | Conceptual false totality | Operational diagnosis should use ΔR*(op), not bare R*>0 | assistant_formalization_not_adopted |  | CANON_EN | Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A6 | Lift as reification of remainder | X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible | canonical |  | CANON_EN | Imported as canonical English layer |
 | A7 | Sublation through embedding/projection | ι_n and π_n preserve old layer; π∘ι=id | canonical |  | CANON_EN | Imported as canonical English layer |
 | A8 | Metacontrol and −A after self-reference | Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A | canonical |  | CANON_EN | Imported as canonical English layer |
@@ -32488,12 +32565,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 91 | {"id": "OP_iota", "type": "operator", "text": "ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id", "depends_on": ["A7"], "tags": ["operator", "ι"], "path": "25_Операторы/OP_iota", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "ι_n:X_n↪X_{n+1}", "title": "ι"} |
 | 92 | {"id": "A0", "type": "axiom", "text": "Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary", "depends_on": [], "tags": ["axiom", "A0"], "path": "26_Аксиомы_A0_A9/A0", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0", "title": "Ladder-first ontology of distinction"} |
 | 93 | {"id": "A0b", "type": "axiom", "text": "nodes 3/7/11/15 change symmetry carrier", "depends_on": [], "tags": ["axiom", "A0b"], "path": "26_Аксиомы_A0_A9/A0b", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0b", "title": "Symmetry-carrier shift nodes"} |
-| 94 | {"id": "A1", "type": "axiom", "text": "is/no/unknown/absent are defined only relative to C_n", "depends_on": [], "tags": ["axiom", "A1"], "path": "26_Аксиомы_A0_A9/A1", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A1", "title": "Contextuality of absence"} |
+| 94 | {"id": "A1", "type": "logical_supplement", "text": "v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS.", "depends_on": [], "tags": ["logical_supplement", "external", "A1"], "path": "26_Аксиомы_A0_A9/A1", "status": "candidate_logical_supplement", "internal_ref": "CANON_EN", "symbol": "A1", "title": "Four-valued assessment states", "previous_status": "canonical", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "logical_supplement", "formulation_origin": "external_logical_model", "author_status": "possible_explanatory_supplement", "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment", "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 95 | {"id": "A2", "type": "axiom", "text": "0_A is induced structure on U\\A; event(0_A)=¬A without identification", "depends_on": [], "tags": ["axiom", "A2"], "path": "26_Аксиомы_A0_A9/A2", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A2", "title": "Structured absence"} |
-| 96 | {"id": "A3", "type": "axiom", "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels", "depends_on": [], "tags": ["axiom", "A3"], "path": "26_Аксиомы_A0_A9/A3", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A3", "title": "Dual-channel semantics"} |
+| 96 | {"id": "A3", "type": "logical_supplement", "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels", "depends_on": [], "tags": ["logical_supplement", "external", "A3"], "path": "26_Аксиомы_A0_A9/A3", "status": "candidate_logical_supplement", "internal_ref": "CANON_EN", "symbol": "A3", "title": "Dual-channel assessment (possible logical supplement)", "previous_status": "canonical", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "logical_supplement", "formulation_origin": "external_logical_model", "author_status": "possible_explanatory_supplement", "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment", "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 97 | {"id": "A4", "type": "axiom", "text": "Tot collapses 0_A into ¬A and/or makes f derivative of t", "depends_on": [], "tags": ["axiom", "A4"], "path": "26_Аксиомы_A0_A9/A4", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A4", "title": "Tot as operator of forgetting"} |
-| 98 | {"id": "A5", "type": "axiom", "text": "If R*_n>ε then level totality is false in class I_n", "depends_on": [], "tags": ["axiom", "A5"], "path": "26_Аксиомы_A0_A9/A5", "status": "canonical_conceptual", "internal_ref": "CANON_EN", "symbol": "A5", "title": "Error remainder and false totality"} |
-| 99 | {"id": "A5a", "type": "axiom", "text": "Operational diagnosis should use ΔR*(op), not bare R*>0", "depends_on": [], "tags": ["axiom", "A5a"], "path": "26_Аксиомы_A0_A9/A5a", "status": "canonical_extension", "internal_ref": "CANON_EN", "symbol": "A5a", "title": "Conceptual false totality"} |
+| 98 | {"id": "A5", "type": "formalization_proposal", "text": "If R*_n>ε then level totality is false in class I_n", "depends_on": [], "tags": ["formalization_proposal", "assistant_proposal", "not_author_adopted", "A5"], "path": "26_Аксиомы_A0_A9/A5", "status": "assistant_formalization_not_adopted", "internal_ref": "CANON_EN", "symbol": "A5", "title": "Error remainder and false totality", "previous_status": "canonical_conceptual", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "assistant_formalization", "formulation_origin": "assistant_proposed_formalization", "author_status": "not_adopted", "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception", "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
+| 99 | {"id": "A5a", "type": "formalization_proposal", "text": "Operational diagnosis should use ΔR*(op), not bare R*>0", "depends_on": [], "tags": ["formalization_proposal", "assistant_proposal", "not_author_adopted", "A5a"], "path": "26_Аксиомы_A0_A9/A5a", "status": "assistant_formalization_not_adopted", "internal_ref": "CANON_EN", "symbol": "A5a", "title": "Conceptual false totality", "previous_status": "canonical_extension", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "assistant_formalization", "formulation_origin": "assistant_proposed_formalization", "author_status": "not_adopted", "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception", "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 100 | {"id": "A6", "type": "axiom", "text": "X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible", "depends_on": [], "tags": ["axiom", "A6"], "path": "26_Аксиомы_A0_A9/A6", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A6", "title": "Lift as reification of remainder"} |
 | 101 | {"id": "A7", "type": "axiom", "text": "ι_n and π_n preserve old layer; π∘ι=id", "depends_on": [], "tags": ["axiom", "A7"], "path": "26_Аксиомы_A0_A9/A7", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A7", "title": "Sublation through embedding/projection"} |
 | 102 | {"id": "A8", "type": "axiom", "text": "Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A", "depends_on": [], "tags": ["axiom", "A8"], "path": "26_Аксиомы_A0_A9/A8", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A8", "title": "Metacontrol and −A after self-reference"} |
@@ -32717,12 +32794,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 146 | OP_iota	depends_on	A7 |
 | 147 | A0	supports	core_grammar |
 | 148 | A0b	supports	core_grammar |
-| 149 | A1	supports	core_grammar |
+| 149 | A1	candidate_supports	A0 |
 | 150 | A2	supports	core_grammar |
-| 151 | A3	supports	core_grammar |
+| 151 | A3	candidate_supports	A0 |
 | 152 | A4	supports	core_grammar |
-| 153 | A5	supports	core_grammar |
-| 154 | A5a	supports	core_grammar |
+| 153 | A5	proposes_formalization_of	A0 |
+| 154 | A5a	proposes_formalization_of	A5 |
 | 155 | A6	supports	core_grammar |
 | 156 | A7	supports	core_grammar |
 | 157 | A8	supports	core_grammar |
@@ -32952,7 +33029,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 
 | line_no | yaml |
 | --- | --- |
-| 1 | version: v13_active_graph_reconciled_2026-10-03 |
+| 1 | version: v13_active_logic_provenance_2026-10-03 |
 | 2 | self_contained: true |
 | 3 | working_rule: "Read active cards and current PROJECT_INSTRUCTIONS; historical workbook rules are provenance." |
 | 4 | embedded_archives: |
@@ -33084,12 +33161,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 130 |   - {"id": "OP_iota", "type": "operator", "text": "ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id", "depends_on": ["A7"], "tags": ["operator", "ι"], "path": "25_Операторы/OP_iota", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "ι_n:X_n↪X_{n+1}", "title": "ι"} |
 | 131 |   - {"id": "A0", "type": "axiom", "text": "Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary", "depends_on": [], "tags": ["axiom", "A0"], "path": "26_Аксиомы_A0_A9/A0", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0", "title": "Ladder-first ontology of distinction"} |
 | 132 |   - {"id": "A0b", "type": "axiom", "text": "nodes 3/7/11/15 change symmetry carrier", "depends_on": [], "tags": ["axiom", "A0b"], "path": "26_Аксиомы_A0_A9/A0b", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0b", "title": "Symmetry-carrier shift nodes"} |
-| 133 |   - {"id": "A1", "type": "axiom", "text": "is/no/unknown/absent are defined only relative to C_n", "depends_on": [], "tags": ["axiom", "A1"], "path": "26_Аксиомы_A0_A9/A1", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A1", "title": "Contextuality of absence"} |
+| 133 |   - {"id": "A1", "type": "logical_supplement", "text": "v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS.", "depends_on": [], "tags": ["logical_supplement", "external", "A1"], "path": "26_Аксиомы_A0_A9/A1", "status": "candidate_logical_supplement", "internal_ref": "CANON_EN", "symbol": "A1", "title": "Four-valued assessment states", "previous_status": "canonical", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "logical_supplement", "formulation_origin": "external_logical_model", "author_status": "possible_explanatory_supplement", "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment", "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 134 |   - {"id": "A2", "type": "axiom", "text": "0_A is induced structure on U\\A; event(0_A)=¬A without identification", "depends_on": [], "tags": ["axiom", "A2"], "path": "26_Аксиомы_A0_A9/A2", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A2", "title": "Structured absence"} |
-| 135 |   - {"id": "A3", "type": "axiom", "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels", "depends_on": [], "tags": ["axiom", "A3"], "path": "26_Аксиомы_A0_A9/A3", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A3", "title": "Dual-channel semantics"} |
+| 135 |   - {"id": "A3", "type": "logical_supplement", "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels", "depends_on": [], "tags": ["logical_supplement", "external", "A3"], "path": "26_Аксиомы_A0_A9/A3", "status": "candidate_logical_supplement", "internal_ref": "CANON_EN", "symbol": "A3", "title": "Dual-channel assessment (possible logical supplement)", "previous_status": "canonical", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "logical_supplement", "formulation_origin": "external_logical_model", "author_status": "possible_explanatory_supplement", "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment", "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 136 |   - {"id": "A4", "type": "axiom", "text": "Tot collapses 0_A into ¬A and/or makes f derivative of t", "depends_on": [], "tags": ["axiom", "A4"], "path": "26_Аксиомы_A0_A9/A4", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A4", "title": "Tot as operator of forgetting"} |
-| 137 |   - {"id": "A5", "type": "axiom", "text": "If R*_n>ε then level totality is false in class I_n", "depends_on": [], "tags": ["axiom", "A5"], "path": "26_Аксиомы_A0_A9/A5", "status": "canonical_conceptual", "internal_ref": "CANON_EN", "symbol": "A5", "title": "Error remainder and false totality"} |
-| 138 |   - {"id": "A5a", "type": "axiom", "text": "Operational diagnosis should use ΔR*(op), not bare R*>0", "depends_on": [], "tags": ["axiom", "A5a"], "path": "26_Аксиомы_A0_A9/A5a", "status": "canonical_extension", "internal_ref": "CANON_EN", "symbol": "A5a", "title": "Conceptual false totality"} |
+| 137 |   - {"id": "A5", "type": "formalization_proposal", "text": "If R*_n>ε then level totality is false in class I_n", "depends_on": [], "tags": ["formalization_proposal", "assistant_proposal", "not_author_adopted", "A5"], "path": "26_Аксиомы_A0_A9/A5", "status": "assistant_formalization_not_adopted", "internal_ref": "CANON_EN", "symbol": "A5", "title": "Error remainder and false totality", "previous_status": "canonical_conceptual", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "assistant_formalization", "formulation_origin": "assistant_proposed_formalization", "author_status": "not_adopted", "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception", "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
+| 138 |   - {"id": "A5a", "type": "formalization_proposal", "text": "Operational diagnosis should use ΔR*(op), not bare R*>0", "depends_on": [], "tags": ["formalization_proposal", "assistant_proposal", "not_author_adopted", "A5a"], "path": "26_Аксиомы_A0_A9/A5a", "status": "assistant_formalization_not_adopted", "internal_ref": "CANON_EN", "symbol": "A5a", "title": "Conceptual false totality", "previous_status": "canonical_extension", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "assistant_formalization", "formulation_origin": "assistant_proposed_formalization", "author_status": "not_adopted", "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception", "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 139 |   - {"id": "A6", "type": "axiom", "text": "X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible", "depends_on": [], "tags": ["axiom", "A6"], "path": "26_Аксиомы_A0_A9/A6", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A6", "title": "Lift as reification of remainder"} |
 | 140 |   - {"id": "A7", "type": "axiom", "text": "ι_n and π_n preserve old layer; π∘ι=id", "depends_on": [], "tags": ["axiom", "A7"], "path": "26_Аксиомы_A0_A9/A7", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A7", "title": "Sublation through embedding/projection"} |
 | 141 |   - {"id": "A8", "type": "axiom", "text": "Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A", "depends_on": [], "tags": ["axiom", "A8"], "path": "26_Аксиомы_A0_A9/A8", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A8", "title": "Metacontrol and −A after self-reference"} |
@@ -33343,6 +33420,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | v13_complex_branch_overlay | 2026-06-10 | complex_tensor_overlay_patch | Добавлены Complex_Branch_Overlay и Tensor_Context_Overlay: complex carrier z/χ, Q(χ)=Σ\|χ_i\|² как У6-readout, branch/sheet для У8+, complex U12 outside branch, tensor context для 10+; guardrails phase!=−A, branch access!=Lift, array!=tensor. | Complex_Branch_Overlay;Tensor_Context_Overlay;01;02;17;18;25;31;33;34;35;36;37;38;40 | self-contained |
 | v13_active_integrated_2026-10-03 | 2026-10-03 | author_integration_register_repair | Integrate AC-2026-10-03 window families and restore separate U7 mathematical and logical constraints; preserve AC-2026-09-21 and existing evidence statuses. | 17/18/34/35/36 and active renderings | active |
 | v13_active_graph_reconciled_2026-10-03 | 2026-10-03 | graph_dependency_reference_reconciliation | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | 17/18/34/35/36 and active renderings | active |
+| v13_active_logic_provenance_2026-10-03 | 2026-10-03 | author_provenance_and_adoption_correction | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | 17/18/34/35/36 and active renderings | active |
 
 #### Sheet 39: `39_Status_Dict`
 
@@ -33858,12 +33936,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 {"id": "OP_iota", "type": "operator", "text": "ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id", "depends_on": ["A7"], "tags": ["operator", "ι"], "path": "25_Операторы/OP_iota", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "ι_n:X_n↪X_{n+1}", "title": "ι"}
 {"id": "A0", "type": "axiom", "text": "Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary", "depends_on": [], "tags": ["axiom", "A0"], "path": "26_Аксиомы_A0_A9/A0", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0", "title": "Ladder-first ontology of distinction"}
 {"id": "A0b", "type": "axiom", "text": "nodes 3/7/11/15 change symmetry carrier", "depends_on": [], "tags": ["axiom", "A0b"], "path": "26_Аксиомы_A0_A9/A0b", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0b", "title": "Symmetry-carrier shift nodes"}
-{"id": "A1", "type": "axiom", "text": "is/no/unknown/absent are defined only relative to C_n", "depends_on": [], "tags": ["axiom", "A1"], "path": "26_Аксиомы_A0_A9/A1", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A1", "title": "Contextuality of absence"}
+{"id": "A1", "type": "logical_supplement", "text": "v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS.", "depends_on": [], "tags": ["logical_supplement", "external", "A1"], "path": "26_Аксиомы_A0_A9/A1", "status": "candidate_logical_supplement", "internal_ref": "CANON_EN", "symbol": "A1", "title": "Four-valued assessment states", "previous_status": "canonical", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "logical_supplement", "formulation_origin": "external_logical_model", "author_status": "possible_explanatory_supplement", "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment", "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"}
 {"id": "A2", "type": "axiom", "text": "0_A is induced structure on U\\A; event(0_A)=¬A without identification", "depends_on": [], "tags": ["axiom", "A2"], "path": "26_Аксиомы_A0_A9/A2", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A2", "title": "Structured absence"}
-{"id": "A3", "type": "axiom", "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels", "depends_on": [], "tags": ["axiom", "A3"], "path": "26_Аксиомы_A0_A9/A3", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A3", "title": "Dual-channel semantics"}
+{"id": "A3", "type": "logical_supplement", "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels", "depends_on": [], "tags": ["logical_supplement", "external", "A3"], "path": "26_Аксиомы_A0_A9/A3", "status": "candidate_logical_supplement", "internal_ref": "CANON_EN", "symbol": "A3", "title": "Dual-channel assessment (possible logical supplement)", "previous_status": "canonical", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "logical_supplement", "formulation_origin": "external_logical_model", "author_status": "possible_explanatory_supplement", "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment", "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"}
 {"id": "A4", "type": "axiom", "text": "Tot collapses 0_A into ¬A and/or makes f derivative of t", "depends_on": [], "tags": ["axiom", "A4"], "path": "26_Аксиомы_A0_A9/A4", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A4", "title": "Tot as operator of forgetting"}
-{"id": "A5", "type": "axiom", "text": "If R*_n>ε then level totality is false in class I_n", "depends_on": [], "tags": ["axiom", "A5"], "path": "26_Аксиомы_A0_A9/A5", "status": "canonical_conceptual", "internal_ref": "CANON_EN", "symbol": "A5", "title": "Error remainder and false totality"}
-{"id": "A5a", "type": "axiom", "text": "Operational diagnosis should use ΔR*(op), not bare R*>0", "depends_on": [], "tags": ["axiom", "A5a"], "path": "26_Аксиомы_A0_A9/A5a", "status": "canonical_extension", "internal_ref": "CANON_EN", "symbol": "A5a", "title": "Conceptual false totality"}
+{"id": "A5", "type": "formalization_proposal", "text": "If R*_n>ε then level totality is false in class I_n", "depends_on": [], "tags": ["formalization_proposal", "assistant_proposal", "not_author_adopted", "A5"], "path": "26_Аксиомы_A0_A9/A5", "status": "assistant_formalization_not_adopted", "internal_ref": "CANON_EN", "symbol": "A5", "title": "Error remainder and false totality", "previous_status": "canonical_conceptual", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "assistant_formalization", "formulation_origin": "assistant_proposed_formalization", "author_status": "not_adopted", "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception", "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"}
+{"id": "A5a", "type": "formalization_proposal", "text": "Operational diagnosis should use ΔR*(op), not bare R*>0", "depends_on": [], "tags": ["formalization_proposal", "assistant_proposal", "not_author_adopted", "A5a"], "path": "26_Аксиомы_A0_A9/A5a", "status": "assistant_formalization_not_adopted", "internal_ref": "CANON_EN", "symbol": "A5a", "title": "Conceptual false totality", "previous_status": "canonical_extension", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "assistant_formalization", "formulation_origin": "assistant_proposed_formalization", "author_status": "not_adopted", "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception", "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"}
 {"id": "A6", "type": "axiom", "text": "X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible", "depends_on": [], "tags": ["axiom", "A6"], "path": "26_Аксиомы_A0_A9/A6", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A6", "title": "Lift as reification of remainder"}
 {"id": "A7", "type": "axiom", "text": "ι_n and π_n preserve old layer; π∘ι=id", "depends_on": [], "tags": ["axiom", "A7"], "path": "26_Аксиомы_A0_A9/A7", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A7", "title": "Sublation through embedding/projection"}
 {"id": "A8", "type": "axiom", "text": "Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A", "depends_on": [], "tags": ["axiom", "A8"], "path": "26_Аксиомы_A0_A9/A8", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A8", "title": "Metacontrol and −A after self-reference"}
@@ -34090,12 +34168,12 @@ OP_pi	depends_on	A7
 OP_iota	depends_on	A7
 A0	supports	core_grammar
 A0b	supports	core_grammar
-A1	supports	core_grammar
+A1	candidate_supports	A0
 A2	supports	core_grammar
-A3	supports	core_grammar
+A3	candidate_supports	A0
 A4	supports	core_grammar
-A5	supports	core_grammar
-A5a	supports	core_grammar
+A5	proposes_formalization_of	A0
+A5a	proposes_formalization_of	A5
 A6	supports	core_grammar
 A7	supports	core_grammar
 A8	supports	core_grammar

@@ -147,12 +147,12 @@ OP_pi	depends_on	A7
 OP_iota	depends_on	A7
 A0	supports	core_grammar
 A0b	supports	core_grammar
-A1	supports	core_grammar
+A1	candidate_supports	A0
 A2	supports	core_grammar
-A3	supports	core_grammar
+A3	candidate_supports	A0
 A4	supports	core_grammar
-A5	supports	core_grammar
-A5a	supports	core_grammar
+A5	proposes_formalization_of	A0
+A5a	proposes_formalization_of	A5
 A6	supports	core_grammar
 A7	supports	core_grammar
 A8	supports	core_grammar

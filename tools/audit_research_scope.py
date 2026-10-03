@@ -98,11 +98,15 @@ def address_routes(graph: dict, entity: dict) -> list[dict]:
                                   "scope": edge.get("scope", ""), "confidence": edge.get("confidence", ""),
                                   "status_effect": edge.get("status_effect", ""),
                                   "rationale": edge.get("rationale", "")}]))
+        address_state = "recorded_route" if route is not None else "no_recorded_route"
+        if record_id in AUXILIARY_IDS:
+            address_state = "auxiliary_record"
+        elif node.get("status") == "assistant_formalization_not_adopted":
+            address_state = "unadopted_formalization"
         result.append({
             "node_id": node["id"], "record_id": record_id, "type": node["type"],
             "layer": node["layer"], "label": node["label"],
-            "address_state": "auxiliary_record" if record_id in AUXILIARY_IDS else (
-                "recorded_route" if route is not None else "no_recorded_route"),
+            "address_state": address_state,
             "scope_categories": ";".join(sorted(anchors[anchor])) if anchor else "",
             "anchor": anchor, "route": json.dumps(route or [], ensure_ascii=False, separators=(",", ":")),
             "source_file": node.get("source_file", ""), "source_location": node.get("source_location", ""),

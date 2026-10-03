@@ -47,6 +47,12 @@ class AddressControls(unittest.TestCase):
                  self.edge("g", "claim", "doc", "grounds_claim")]
         self.assertEqual(self.route(nodes, edges)["claim"]["address_state"], "no_recorded_route")
 
+    def test_unadopted_formalization_is_not_an_unanswered_author_claim(self):
+        nodes = self.base() + [self.node("proposal", "card", card_id="A5",
+                                        status="assistant_formalization_not_adopted")]
+        edges = [self.edge("candidate", "proposal", "ground", "candidate_supports")]
+        self.assertEqual(self.route(nodes, edges)["proposal"]["address_state"], "unadopted_formalization")
+
     def test_project_scope_edges_do_not_repair_claims(self):
         nodes = self.base() + [self.node("scope", "scope", layer="project_definition")]
         edges = [self.edge("a", "claim", "scope", "addresses_object", "project_definition"),

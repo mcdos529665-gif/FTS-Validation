@@ -1,9 +1,9 @@
 {
   "project_id": "FTS",
-  "graph_sha256": "44bbb871844211b19211655cd3e12b77e3d908cd717c5b2e18075e9a4435c979",
+  "graph_sha256": "ece92df1b091d5ebe73c884416903c692278c83fdbf2072a62dd991379c08ec9",
   "generator": "tools/audit_research_scope.py",
-  "generator_sha256": "a8602fe82c2fb03dcb8a197f668f7a2551363cf7484722b6edee7aa44704f0d9",
-  "project_entity_sha256": "50a69c83bc9985f555012aa5a5ec9611bc86edec42c88bed523e4ad3e8d8cfcc",
+  "generator_sha256": "709b5719786bfdcdeaf7eae8fc7dc5cff3fbf8f57f56028a21645b371b64a3bb",
+  "project_entity_sha256": "717b1ff9ee55f90afb6e95965210d66d655810d87df15adbb29f2a78c7b49832",
   "assertion_records": 212,
   "by_type": {
     "author_statement": {
@@ -11,9 +11,10 @@
       "no_recorded_route": 1
     },
     "card": {
-      "recorded_route": 162,
-      "no_recorded_route": 5,
-      "auxiliary_record": 2
+      "recorded_route": 164,
+      "unadopted_formalization": 2,
+      "auxiliary_record": 2,
+      "no_recorded_route": 1
     },
     "claim": {
       "no_recorded_route": 8,
@@ -25,9 +26,9 @@
       "auxiliary_record": 1
     }
   },
-  "documents": 235,
+  "documents": 236,
   "document_kinds": {
-    "procedure_or_provenance": 16,
+    "procedure_or_provenance": 17,
     "project_description_or_procedure": 10,
     "derived_or_navigation": 24,
     "active_research": 138,
@@ -40,10 +41,6 @@
   "active_research_documents_outside_graph_inputs": 113,
   "unrouted_records": [
     "AC_20260921_AUTHOR_DECISION",
-    "A1",
-    "A3",
-    "A5",
-    "A5a",
     "ADDENDUM_V3",
     "DN_20260922_ABSENCE_LIFT",
     "DN_20260922_GEOMETRY_SELF",

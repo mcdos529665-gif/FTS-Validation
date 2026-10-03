@@ -1,4 +1,4 @@
-# FTS active canonical release — v13_active_graph_reconciled_2026-10-03
+# FTS active canonical release — v13_active_logic_provenance_2026-10-03
 
 Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
@@ -10,12 +10,15 @@ in sheets or corpora are provenance, superseded by `PROJECT_INSTRUCTIONS.md`.
 Read exact formulas and statuses by card ID. Author acceptance, mathematical
 proof, and empirical confirmation remain separate. Registers are connected but
 not interchangeable; their mapping requires a scoped witness.
+Presence in the active registry does not make a proposal author-accepted.
+Read card types, statuses and provenance. Embedded original corpora retain their
+historical wording; active structured card/axiom views take precedence.
 The original workbook and embedded historical corpora are not claims that this
 release was produced by a new workbook round-trip.
 
 ## Active changes
 
-Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md.
+Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
@@ -66,7 +69,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 35 | 35_Export_tsv | A1:B379 | 379 | 2 |
 | 36 | 36_Export_yaml | A1:B337 | 337 | 2 |
 | 37 | 37_Export_md | A1:F31 | 31 | 6 |
-| 38 | 38_Changelog | A1:F16 | 16 | 6 |
+| 38 | 38_Changelog | A1:F17 | 17 | 6 |
 | 39 | 39_Status_Dict | A1:E21 | 21 | 5 |
 | 40 | 40_Reader_View | A1:B12 | 12 | 2 |
 | 41 | 41_Самодостаточность | A1:D9 | 9 | 4 |
@@ -252,7 +255,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 
 | Поле | Значение | Комментарий | Внутренний лист |
 | --- | --- | --- | --- |
-| Версия | v13_active_graph_reconciled_2026-10-03 | Active export; historical workbook remains a provenance input. | 38_Changelog |
+| Версия | v13_active_logic_provenance_2026-10-03 | Active export; historical workbook remains a provenance input. | 38_Changelog |
 | Дата | 2026-06-10 | America/New_York current session date |  |
 | Назначение | self-contained Excel canon + U7 window cycles + χ statistical + complex branch/tensor overlays | карточки + граф + встроенный канон + U7/χ + complex/tensor overlays | 17–41 + overlays |
 | Статус | candidate replacement; not machine-checked proof | ядро −1..7 сильнее 8+; О(13..20) candidate-модуль | 39_Status_Dict |
@@ -662,12 +665,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | OP_iota | operator | ι | ι_n:X_n↪X_{n+1} | ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id | canonical |  | operator | CANON_V43/CANON_EN | A7 | operator;ι | 25_Операторы/OP_iota | π∘ι=id |
 | A0 | axiom | Ladder-first ontology of distinction | A0 | Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary | canonical |  | axiom | CANON_EN |  | axiom;A0 | 26_Аксиомы_A0_A9/A0 | Imported from English canon layer |
 | A0b | axiom | Symmetry-carrier shift nodes | A0b | nodes 3/7/11/15 change symmetry carrier | canonical |  | axiom | CANON_EN |  | axiom;A0b | 26_Аксиомы_A0_A9/A0b | Imported from English canon layer |
-| A1 | axiom | Contextuality of absence | A1 | is/no/unknown/absent are defined only relative to C_n | canonical |  | axiom | CANON_EN |  | axiom;A1 | 26_Аксиомы_A0_A9/A1 | Imported from English canon layer |
+| A1 | logical_supplement | Four-valued assessment states | A1 | v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS. | candidate_logical_supplement |  | logical_supplement | CANON_EN |  | logical_supplement;external;A1 | 26_Аксиомы_A0_A9/A1 | Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A2 | axiom | Structured absence | A2 | 0_A is induced structure on U\A; event(0_A)=¬A without identification | canonical |  | axiom | CANON_EN |  | axiom;A2 | 26_Аксиомы_A0_A9/A2 | Imported from English canon layer |
-| A3 | axiom | Dual-channel semantics | A3 | v(A)=(t(A),f(A)) independent positive/negative evidence channels | canonical |  | axiom | CANON_EN |  | axiom;A3 | 26_Аксиомы_A0_A9/A3 | Imported from English canon layer |
+| A3 | logical_supplement | Dual-channel assessment (possible logical supplement) | A3 | v(A)=(t(A),f(A)) independent positive/negative evidence channels | candidate_logical_supplement |  | logical_supplement | CANON_EN |  | logical_supplement;external;A3 | 26_Аксиомы_A0_A9/A3 | Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A4 | axiom | Tot as operator of forgetting | A4 | Tot collapses 0_A into ¬A and/or makes f derivative of t | canonical |  | axiom | CANON_EN |  | axiom;A4 | 26_Аксиомы_A0_A9/A4 | Imported from English canon layer |
-| A5 | axiom | Error remainder and false totality | A5 | If R*_n>ε then level totality is false in class I_n | canonical_conceptual |  | axiom | CANON_EN |  | axiom;A5 | 26_Аксиомы_A0_A9/A5 | Imported from English canon layer |
-| A5a | axiom | Conceptual false totality | A5a | Operational diagnosis should use ΔR*(op), not bare R*>0 | canonical_extension |  | axiom | CANON_EN |  | axiom;A5a | 26_Аксиомы_A0_A9/A5a | Imported from English canon layer |
+| A5 | formalization_proposal | Error remainder and false totality | A5 | If R*_n>ε then level totality is false in class I_n | assistant_formalization_not_adopted |  | assistant_formalization | CANON_EN |  | formalization_proposal;assistant_proposal;not_author_adopted;A5 | 26_Аксиомы_A0_A9/A5 | Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
+| A5a | formalization_proposal | Conceptual false totality | A5a | Operational diagnosis should use ΔR*(op), not bare R*>0 | assistant_formalization_not_adopted |  | assistant_formalization | CANON_EN |  | formalization_proposal;assistant_proposal;not_author_adopted;A5a | 26_Аксиомы_A0_A9/A5a | Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A6 | axiom | Lift as reification of remainder | A6 | X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible | canonical |  | axiom | CANON_EN |  | axiom;A6 | 26_Аксиомы_A0_A9/A6 | Imported from English canon layer |
 | A7 | axiom | Sublation through embedding/projection | A7 | ι_n and π_n preserve old layer; π∘ι=id | canonical |  | axiom | CANON_EN |  | axiom;A7 | 26_Аксиомы_A0_A9/A7 | Imported from English canon layer |
 | A8 | axiom | Metacontrol and −A after self-reference | A8 | Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A | canonical |  | axiom | CANON_EN |  | axiom;A8 | 26_Аксиомы_A0_A9/A8 | Imported from English canon layer |
@@ -891,12 +894,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | OP_iota | depends_on | A7 | operator_dependency | CANON_V43/CANON_EN | canonical |  | G_0146 |
 | A0 | supports | core_grammar | axiom_support | CANON_EN | canonical | Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary | G_0147 |
 | A0b | supports | core_grammar | axiom_support | CANON_EN | canonical | nodes 3/7/11/15 change symmetry carrier | G_0148 |
-| A1 | supports | core_grammar | axiom_support | CANON_EN | canonical | is/no/unknown/absent are defined only relative to C_n | G_0149 |
+| A1 | candidate_supports | A0 | author_provenance_and_adoption_correction | CANON_EN | candidate_logical_supplement | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | G_0380 |
 | A2 | supports | core_grammar | axiom_support | CANON_EN | canonical | 0_A is induced structure on U\A; event(0_A)=¬A without identification | G_0150 |
-| A3 | supports | core_grammar | axiom_support | CANON_EN | canonical | v(A)=(t(A),f(A)) independent positive/negative evidence channels | G_0151 |
+| A3 | candidate_supports | A0 | author_provenance_and_adoption_correction | CANON_EN | candidate_logical_supplement | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | G_0381 |
 | A4 | supports | core_grammar | axiom_support | CANON_EN | canonical | Tot collapses 0_A into ¬A and/or makes f derivative of t | G_0152 |
-| A5 | supports | core_grammar | axiom_support | CANON_EN | canonical_conceptual | If R*_n>ε then level totality is false in class I_n | G_0153 |
-| A5a | supports | core_grammar | axiom_support | CANON_EN | canonical_extension | Operational diagnosis should use ΔR*(op), not bare R*>0 | G_0154 |
+| A5 | proposes_formalization_of | A0 | author_provenance_and_adoption_correction | CANON_EN | assistant_formalization_not_adopted | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | G_0382 |
+| A5a | proposes_formalization_of | A5 | author_provenance_and_adoption_correction | CANON_EN | assistant_formalization_not_adopted | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | G_0383 |
 | A6 | supports | core_grammar | axiom_support | CANON_EN | canonical | X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible | G_0155 |
 | A7 | supports | core_grammar | axiom_support | CANON_EN | canonical | ι_n and π_n preserve old layer; π∘ι=id | G_0156 |
 | A8 | supports | core_grammar | axiom_support | CANON_EN | canonical | Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A | G_0157 |
@@ -1330,12 +1333,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | --- | --- | --- | --- | --- | --- | --- |
 | A0 | Ladder-first ontology of distinction | Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary | canonical |  | CANON_EN | Imported as canonical English layer |
 | A0b | Symmetry-carrier shift nodes | nodes 3/7/11/15 change symmetry carrier | canonical |  | CANON_EN | Imported as canonical English layer |
-| A1 | Contextuality of absence | is/no/unknown/absent are defined only relative to C_n | canonical |  | CANON_EN | Imported as canonical English layer |
+| A1 | Four-valued assessment states | v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS. | candidate_logical_supplement |  | CANON_EN | Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A2 | Structured absence | 0_A is induced structure on U\A; event(0_A)=¬A without identification | canonical |  | CANON_EN | Imported as canonical English layer |
-| A3 | Dual-channel semantics | v(A)=(t(A),f(A)) independent positive/negative evidence channels | canonical |  | CANON_EN | Imported as canonical English layer |
+| A3 | Dual-channel assessment (possible logical supplement) | v(A)=(t(A),f(A)) independent positive/negative evidence channels | candidate_logical_supplement |  | CANON_EN | Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A4 | Tot as operator of forgetting | Tot collapses 0_A into ¬A and/or makes f derivative of t | canonical |  | CANON_EN | Imported as canonical English layer |
-| A5 | Error remainder and false totality | If R*_n>ε then level totality is false in class I_n | canonical_conceptual |  | CANON_EN | Imported as canonical English layer |
-| A5a | Conceptual false totality | Operational diagnosis should use ΔR*(op), not bare R*>0 | canonical_extension |  | CANON_EN | Imported as canonical English layer |
+| A5 | Error remainder and false totality | If R*_n>ε then level totality is false in class I_n | assistant_formalization_not_adopted |  | CANON_EN | Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
+| A5a | Conceptual false totality | Operational diagnosis should use ΔR*(op), not bare R*>0 | assistant_formalization_not_adopted |  | CANON_EN | Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md |
 | A6 | Lift as reification of remainder | X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible | canonical |  | CANON_EN | Imported as canonical English layer |
 | A7 | Sublation through embedding/projection | ι_n and π_n preserve old layer; π∘ι=id | canonical |  | CANON_EN | Imported as canonical English layer |
 | A8 | Metacontrol and −A after self-reference | Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A | canonical |  | CANON_EN | Imported as canonical English layer |
@@ -1583,12 +1586,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 91 | {"id": "OP_iota", "type": "operator", "text": "ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id", "depends_on": ["A7"], "tags": ["operator", "ι"], "path": "25_Операторы/OP_iota", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "ι_n:X_n↪X_{n+1}", "title": "ι"} |
 | 92 | {"id": "A0", "type": "axiom", "text": "Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary", "depends_on": [], "tags": ["axiom", "A0"], "path": "26_Аксиомы_A0_A9/A0", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0", "title": "Ladder-first ontology of distinction"} |
 | 93 | {"id": "A0b", "type": "axiom", "text": "nodes 3/7/11/15 change symmetry carrier", "depends_on": [], "tags": ["axiom", "A0b"], "path": "26_Аксиомы_A0_A9/A0b", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0b", "title": "Symmetry-carrier shift nodes"} |
-| 94 | {"id": "A1", "type": "axiom", "text": "is/no/unknown/absent are defined only relative to C_n", "depends_on": [], "tags": ["axiom", "A1"], "path": "26_Аксиомы_A0_A9/A1", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A1", "title": "Contextuality of absence"} |
+| 94 | {"id": "A1", "type": "logical_supplement", "text": "v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS.", "depends_on": [], "tags": ["logical_supplement", "external", "A1"], "path": "26_Аксиомы_A0_A9/A1", "status": "candidate_logical_supplement", "internal_ref": "CANON_EN", "symbol": "A1", "title": "Four-valued assessment states", "previous_status": "canonical", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "logical_supplement", "formulation_origin": "external_logical_model", "author_status": "possible_explanatory_supplement", "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment", "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 95 | {"id": "A2", "type": "axiom", "text": "0_A is induced structure on U\\A; event(0_A)=¬A without identification", "depends_on": [], "tags": ["axiom", "A2"], "path": "26_Аксиомы_A0_A9/A2", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A2", "title": "Structured absence"} |
-| 96 | {"id": "A3", "type": "axiom", "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels", "depends_on": [], "tags": ["axiom", "A3"], "path": "26_Аксиомы_A0_A9/A3", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A3", "title": "Dual-channel semantics"} |
+| 96 | {"id": "A3", "type": "logical_supplement", "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels", "depends_on": [], "tags": ["logical_supplement", "external", "A3"], "path": "26_Аксиомы_A0_A9/A3", "status": "candidate_logical_supplement", "internal_ref": "CANON_EN", "symbol": "A3", "title": "Dual-channel assessment (possible logical supplement)", "previous_status": "canonical", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "logical_supplement", "formulation_origin": "external_logical_model", "author_status": "possible_explanatory_supplement", "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment", "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 97 | {"id": "A4", "type": "axiom", "text": "Tot collapses 0_A into ¬A and/or makes f derivative of t", "depends_on": [], "tags": ["axiom", "A4"], "path": "26_Аксиомы_A0_A9/A4", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A4", "title": "Tot as operator of forgetting"} |
-| 98 | {"id": "A5", "type": "axiom", "text": "If R*_n>ε then level totality is false in class I_n", "depends_on": [], "tags": ["axiom", "A5"], "path": "26_Аксиомы_A0_A9/A5", "status": "canonical_conceptual", "internal_ref": "CANON_EN", "symbol": "A5", "title": "Error remainder and false totality"} |
-| 99 | {"id": "A5a", "type": "axiom", "text": "Operational diagnosis should use ΔR*(op), not bare R*>0", "depends_on": [], "tags": ["axiom", "A5a"], "path": "26_Аксиомы_A0_A9/A5a", "status": "canonical_extension", "internal_ref": "CANON_EN", "symbol": "A5a", "title": "Conceptual false totality"} |
+| 98 | {"id": "A5", "type": "formalization_proposal", "text": "If R*_n>ε then level totality is false in class I_n", "depends_on": [], "tags": ["formalization_proposal", "assistant_proposal", "not_author_adopted", "A5"], "path": "26_Аксиомы_A0_A9/A5", "status": "assistant_formalization_not_adopted", "internal_ref": "CANON_EN", "symbol": "A5", "title": "Error remainder and false totality", "previous_status": "canonical_conceptual", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "assistant_formalization", "formulation_origin": "assistant_proposed_formalization", "author_status": "not_adopted", "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception", "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
+| 99 | {"id": "A5a", "type": "formalization_proposal", "text": "Operational diagnosis should use ΔR*(op), not bare R*>0", "depends_on": [], "tags": ["formalization_proposal", "assistant_proposal", "not_author_adopted", "A5a"], "path": "26_Аксиомы_A0_A9/A5a", "status": "assistant_formalization_not_adopted", "internal_ref": "CANON_EN", "symbol": "A5a", "title": "Conceptual false totality", "previous_status": "canonical_extension", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "assistant_formalization", "formulation_origin": "assistant_proposed_formalization", "author_status": "not_adopted", "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception", "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 100 | {"id": "A6", "type": "axiom", "text": "X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible", "depends_on": [], "tags": ["axiom", "A6"], "path": "26_Аксиомы_A0_A9/A6", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A6", "title": "Lift as reification of remainder"} |
 | 101 | {"id": "A7", "type": "axiom", "text": "ι_n and π_n preserve old layer; π∘ι=id", "depends_on": [], "tags": ["axiom", "A7"], "path": "26_Аксиомы_A0_A9/A7", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A7", "title": "Sublation through embedding/projection"} |
 | 102 | {"id": "A8", "type": "axiom", "text": "Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A", "depends_on": [], "tags": ["axiom", "A8"], "path": "26_Аксиомы_A0_A9/A8", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A8", "title": "Metacontrol and −A after self-reference"} |
@@ -1812,12 +1815,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 146 | OP_iota	depends_on	A7 |
 | 147 | A0	supports	core_grammar |
 | 148 | A0b	supports	core_grammar |
-| 149 | A1	supports	core_grammar |
+| 149 | A1	candidate_supports	A0 |
 | 150 | A2	supports	core_grammar |
-| 151 | A3	supports	core_grammar |
+| 151 | A3	candidate_supports	A0 |
 | 152 | A4	supports	core_grammar |
-| 153 | A5	supports	core_grammar |
-| 154 | A5a	supports	core_grammar |
+| 153 | A5	proposes_formalization_of	A0 |
+| 154 | A5a	proposes_formalization_of	A5 |
 | 155 | A6	supports	core_grammar |
 | 156 | A7	supports	core_grammar |
 | 157 | A8	supports	core_grammar |
@@ -2047,7 +2050,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 
 | line_no | yaml |
 | --- | --- |
-| 1 | version: v13_active_graph_reconciled_2026-10-03 |
+| 1 | version: v13_active_logic_provenance_2026-10-03 |
 | 2 | self_contained: true |
 | 3 | working_rule: "Read active cards and current PROJECT_INSTRUCTIONS; historical workbook rules are provenance." |
 | 4 | embedded_archives: |
@@ -2179,12 +2182,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 130 |   - {"id": "OP_iota", "type": "operator", "text": "ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id", "depends_on": ["A7"], "tags": ["operator", "ι"], "path": "25_Операторы/OP_iota", "status": "canonical", "internal_ref": "CANON_V43/CANON_EN", "symbol": "ι_n:X_n↪X_{n+1}", "title": "ι"} |
 | 131 |   - {"id": "A0", "type": "axiom", "text": "Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary", "depends_on": [], "tags": ["axiom", "A0"], "path": "26_Аксиомы_A0_A9/A0", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0", "title": "Ladder-first ontology of distinction"} |
 | 132 |   - {"id": "A0b", "type": "axiom", "text": "nodes 3/7/11/15 change symmetry carrier", "depends_on": [], "tags": ["axiom", "A0b"], "path": "26_Аксиомы_A0_A9/A0b", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A0b", "title": "Symmetry-carrier shift nodes"} |
-| 133 |   - {"id": "A1", "type": "axiom", "text": "is/no/unknown/absent are defined only relative to C_n", "depends_on": [], "tags": ["axiom", "A1"], "path": "26_Аксиомы_A0_A9/A1", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A1", "title": "Contextuality of absence"} |
+| 133 |   - {"id": "A1", "type": "logical_supplement", "text": "v(A)=(t(A),f(A)); (1,0)=true, (0,1)=false, (0,0)=unknown, (1,1)=conflicting evidence; possible logical supplement to FTS.", "depends_on": [], "tags": ["logical_supplement", "external", "A1"], "path": "26_Аксиомы_A0_A9/A1", "status": "candidate_logical_supplement", "internal_ref": "CANON_EN", "symbol": "A1", "title": "Four-valued assessment states", "previous_status": "canonical", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "logical_supplement", "formulation_origin": "external_logical_model", "author_status": "possible_explanatory_supplement", "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment", "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 134 |   - {"id": "A2", "type": "axiom", "text": "0_A is induced structure on U\\A; event(0_A)=¬A without identification", "depends_on": [], "tags": ["axiom", "A2"], "path": "26_Аксиомы_A0_A9/A2", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A2", "title": "Structured absence"} |
-| 135 |   - {"id": "A3", "type": "axiom", "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels", "depends_on": [], "tags": ["axiom", "A3"], "path": "26_Аксиомы_A0_A9/A3", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A3", "title": "Dual-channel semantics"} |
+| 135 |   - {"id": "A3", "type": "logical_supplement", "text": "v(A)=(t(A),f(A)) independent positive/negative evidence channels", "depends_on": [], "tags": ["logical_supplement", "external", "A3"], "path": "26_Аксиомы_A0_A9/A3", "status": "candidate_logical_supplement", "internal_ref": "CANON_EN", "symbol": "A3", "title": "Dual-channel assessment (possible logical supplement)", "previous_status": "canonical", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "logical_supplement", "formulation_origin": "external_logical_model", "author_status": "possible_explanatory_supplement", "adoption_scope": "Possible explanation of the logic of the whole FTS ladder; no adopted axiom, foundation proof or level assignment", "notes": "Author clarification 2026-10-03: possible explanatory supplement, not an adopted axiom; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 136 |   - {"id": "A4", "type": "axiom", "text": "Tot collapses 0_A into ¬A and/or makes f derivative of t", "depends_on": [], "tags": ["axiom", "A4"], "path": "26_Аксиомы_A0_A9/A4", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A4", "title": "Tot as operator of forgetting"} |
-| 137 |   - {"id": "A5", "type": "axiom", "text": "If R*_n>ε then level totality is false in class I_n", "depends_on": [], "tags": ["axiom", "A5"], "path": "26_Аксиомы_A0_A9/A5", "status": "canonical_conceptual", "internal_ref": "CANON_EN", "symbol": "A5", "title": "Error remainder and false totality"} |
-| 138 |   - {"id": "A5a", "type": "axiom", "text": "Operational diagnosis should use ΔR*(op), not bare R*>0", "depends_on": [], "tags": ["axiom", "A5a"], "path": "26_Аксиомы_A0_A9/A5a", "status": "canonical_extension", "internal_ref": "CANON_EN", "symbol": "A5a", "title": "Conceptual false totality"} |
+| 137 |   - {"id": "A5", "type": "formalization_proposal", "text": "If R*_n>ε then level totality is false in class I_n", "depends_on": [], "tags": ["formalization_proposal", "assistant_proposal", "not_author_adopted", "A5"], "path": "26_Аксиомы_A0_A9/A5", "status": "assistant_formalization_not_adopted", "internal_ref": "CANON_EN", "symbol": "A5", "title": "Error remainder and false totality", "previous_status": "canonical_conceptual", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "assistant_formalization", "formulation_origin": "assistant_proposed_formalization", "author_status": "not_adopted", "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception", "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
+| 138 |   - {"id": "A5a", "type": "formalization_proposal", "text": "Operational diagnosis should use ΔR*(op), not bare R*>0", "depends_on": [], "tags": ["formalization_proposal", "assistant_proposal", "not_author_adopted", "A5a"], "path": "26_Аксиомы_A0_A9/A5a", "status": "assistant_formalization_not_adopted", "internal_ref": "CANON_EN", "symbol": "A5a", "title": "Conceptual false totality", "previous_status": "canonical_extension", "adoption_source": "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md", "register": "assistant_formalization", "formulation_origin": "assistant_proposed_formalization", "author_status": "not_adopted", "adoption_scope": "Assistant proposal for completeness/residual diagnostics; author does not adopt this formalization as their FTS conception", "notes": "Author clarification 2026-10-03: assistant formalization, not author-adopted; source: work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md"} |
 | 139 |   - {"id": "A6", "type": "axiom", "text": "X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible", "depends_on": [], "tags": ["axiom", "A6"], "path": "26_Аксиомы_A0_A9/A6", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A6", "title": "Lift as reification of remainder"} |
 | 140 |   - {"id": "A7", "type": "axiom", "text": "ι_n and π_n preserve old layer; π∘ι=id", "depends_on": [], "tags": ["axiom", "A7"], "path": "26_Аксиомы_A0_A9/A7", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A7", "title": "Sublation through embedding/projection"} |
 | 141 |   - {"id": "A8", "type": "axiom", "text": "Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A", "depends_on": [], "tags": ["axiom", "A8"], "path": "26_Аксиомы_A0_A9/A8", "status": "canonical", "internal_ref": "CANON_EN", "symbol": "A8", "title": "Metacontrol and −A after self-reference"} |
@@ -2438,6 +2441,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | v13_complex_branch_overlay | 2026-06-10 | complex_tensor_overlay_patch | Добавлены Complex_Branch_Overlay и Tensor_Context_Overlay: complex carrier z/χ, Q(χ)=Σ\|χ_i\|² как У6-readout, branch/sheet для У8+, complex U12 outside branch, tensor context для 10+; guardrails phase!=−A, branch access!=Lift, array!=tensor. | Complex_Branch_Overlay;Tensor_Context_Overlay;01;02;17;18;25;31;33;34;35;36;37;38;40 | self-contained |
 | v13_active_integrated_2026-10-03 | 2026-10-03 | author_integration_register_repair | Integrate AC-2026-10-03 window families and restore separate U7 mathematical and logical constraints; preserve AC-2026-09-21 and existing evidence statuses. | 17/18/34/35/36 and active renderings | active |
 | v13_active_graph_reconciled_2026-10-03 | 2026-10-03 | graph_dependency_reference_reconciliation | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | 17/18/34/35/36 and active renderings | active |
+| v13_active_logic_provenance_2026-10-03 | 2026-10-03 | author_provenance_and_adoption_correction | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | 17/18/34/35/36 and active renderings | active |
 
 ## Sheet 39: `39_Status_Dict`
 

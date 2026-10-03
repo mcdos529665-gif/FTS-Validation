@@ -23,8 +23,8 @@
 - `curated_research_bridges`: 14
 - `project_entities`: 1
 - `declared_research_scopes`: 4
-- `nodes`: 801
-- `edges`: 1877
+- `nodes`: 802
+- `edges`: 1881
 - `unresolved_references`: 4
 
 ## Границы

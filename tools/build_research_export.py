@@ -49,6 +49,7 @@ PACKAGE_COPIES = (
 AGENT_RULES = Path("AGENTS.md")
 PROJECT_ENTITY = Path("PROJECT.json")
 RESEARCH_SCOPE_AUDIT = Path("work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md")
+LOGIC_CLARIFICATION = Path("work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md")
 PROJECT_INSTRUCTIONS = Path("PROJECT_INSTRUCTIONS.md")
 STATE = Path("work/STATE.md")
 NOTATION = Path("work/notation.md")
@@ -153,6 +154,7 @@ INPUT_PATHS = (
     AGENT_RULES,
     PROJECT_ENTITY,
     RESEARCH_SCOPE_AUDIT,
+    LOGIC_CLARIFICATION,
     PROJECT_INSTRUCTIONS,
     STATE,
     NOTATION,
@@ -527,6 +529,8 @@ def render_export() -> str:
 {fenced_source("1.5. Сущность проекта, задача и критерии содержания", PROJECT_ENTITY, "json")}
 
 {markdown_source("1.6. Проверка соответствия задаче проекта", RESEARCH_SCOPE_AUDIT)}
+
+{markdown_source("1.7. Авторское уточнение происхождения логических дополнений", LOGIC_CLARIFICATION)}
 """
 
     parts = [
