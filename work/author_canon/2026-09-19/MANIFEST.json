@@ -1,0 +1,42 @@
+{
+  "version": "AC-2026-09-19",
+  "date": "2026-09-19",
+  "author_status": "accepted_into_author_canon",
+  "release_kind": "versioned_author_canon_supplement",
+  "base_version": "v13_complex_branch_overlay",
+  "base_manifest_sha256": "a91c453226cac21072478fa1fbf2db766e36f1bfe477e52414ee19f5c8f6f16a",
+  "base_workbook_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
+  "merged_workbook_release": "not_issued",
+  "evidence_scope": "Авторское принятие; исполнимая семантика и внешняя эмпирическая проверка открыты. check_scope.py проверяет только пределы внешних переводов.",
+  "counts": {
+    "new_statements": 4,
+    "cards_including_author_decision": 5,
+    "triples": 18
+  },
+  "files": {
+    "AMENDMENT.md": {
+      "sha256": "122dd603a7530bea14e7fd6b44e2f8c74460904e76dd65a1c11b9d603c2afc85",
+      "bytes": 12611
+    },
+    "AUTHOR_MESSAGE.txt": {
+      "sha256": "6ed5c7b91877969c5cae727b0e4d8dc7a587ccc47ca3c725f3f317a241ebf199",
+      "bytes": 1060
+    },
+    "AUTHOR_CLARIFICATION.txt": {
+      "sha256": "348f19c9f2848736e73cded6aefc33891215bc409ea51c33a9c3a5693b892881",
+      "bytes": 197
+    },
+    "cards.jsonl": {
+      "sha256": "004664d05a6ac99ff9b184ef42bac3040724a5e9a1a8e00c57ff3821244338db",
+      "bytes": 4730
+    },
+    "triples.tsv": {
+      "sha256": "8a186d5546c3f9daa75d3d1aa0e89fd4d3a13f56ab8b3233ff10c27267a64842",
+      "bytes": 938
+    },
+    "check_scope.py": {
+      "sha256": "b101face1066fdce3493622d7d48422abac3c4f2e51d1b6075d9fb0ec26d72a1",
+      "bytes": 1318
+    }
+  }
+}

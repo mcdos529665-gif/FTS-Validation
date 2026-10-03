@@ -1,97 +1,69 @@
 ---
 name: fts-academic-research
-description: Явный маршрутизатор академического исследования ФТС с Consensus, Semantic Scholar, ручным citation-graph round-trip через ResearchRabbit и отдельным необязательным Wolfram-аудитом. Использовать только при явном вызове $fts-academic-research с claim/OQ и режимом quick, fact-check, lit-review или systematic-review; применять для prior art, проверки ограниченной новизны, внешних evidence-claims, литературных и систематических обзоров, citation-network coverage и попыток опереться на публикацию при изменении статуса ФТС. Не использовать для локальной проверки канона, редактуры, экспорта или чисто математических claims.
+description: Route externally grounded FTS research into supporting, contradicting, or limiting evidence for a claim or OQ. Use when invoked or when literature verification, prior art, novelty, or a review is needed within an assigned investigation. Do not use for local canon checks, editing, exports, or purely mathematical claims.
 ---
 
-# Академическое исследование ФТС
+# FTS Academic Research
 
-Проводить внешние основания в исследовательский слой ФТС, не импортируя внешнюю
-терминологию или авторитет источника в канон. Сохранять `source/` неизменным и
-считать каждую публикацию `[внешнее]` до отдельного авторского решения о статусе.
+Route external evidence into FTS without importing external terminology or authority into the canon. Treat every publication as `[внешнее]`; a separately grounded SP decision must stay within the author's authorized scope. Follow `PROJECT_INSTRUCTIONS.md#canon` for any canon revision needed for the current task.
 
-## Обязательный вход
+## Required input
 
-Требовать точный `claim` либо якорь OQ и один из режимов: `quick`,
-`fact-check`, `lit-review`, `systematic-review`. Если одного элемента нет,
-запросить его. Не расширять вопрос молча.
+Identify an exact `claim` or OQ anchor from the task. Choose the smallest sufficient
+mode (`quick`, `fact-check`, `lit-review`, `systematic-review`) within the assigned
+scope and budget; state it in a progress update. Ask only when a missing fact changes
+the object of research or the task cannot be scoped from available context.
 
-## Выбор процесса
+## Select the workflow
 
-- `quick`: узкий discovery-проход Consensus; получить каждую потенциально
-  цитируемую запись и затем проверить идентичность в Semantic Scholar.
-- `fact-check`: независимо искать supporting и contradicting evidence; фиксировать
-  только ограниченный свидетельствами вывод, не канонический вердикт.
-- `lit-review`: использовать литературный маршрут `$academic-research-suite`
-  после применения ограничений ФТС ниже.
-- `systematic-review`: заморозить протокол и Material Passport до discovery;
-  вести файлы E5; требовать два независимых screening-прохода и явную adjudication
-  до синтеза.
+- `quick`: run a narrow Consensus discovery pass, fetch every result that may be cited, then verify identity in Semantic Scholar.
+- `fact-check`: search supporting and contradicting evidence independently; record an evidence-bounded verdict, never a canon verdict.
+- `lit-review`: use `$academic-research-suite` in its literature-review path after applying the FTS constraints below.
+- `systematic-review`: freeze the protocol and Material Passport before discovery; maintain the E5 files; require two independent screening passes and explicit adjudication before synthesis.
 
-Для написания или рецензирования статьи использовать `$academic-research-suite`
-напрямую. Не включать ARS full-runtime, agent-team commands или hooks.
+Use `$academic-research-suite` directly for paper drafting or manuscript review. Do not activate ARS full-runtime, agent-team commands, or hooks.
 
-## Маршрут провайдеров
+## Apply the provider route
 
-Перед вызовами провайдеров читать
-[provider-routing.md](references/provider-routing.md).
+Read [provider-routing.md](references/provider-routing.md) before making provider calls.
 
-1. Искать рецензируемых кандидатов через Consensus. До цитирования получать
-   полную запись результата.
-2. Разрешать DOI/S2 ID и метаданные через Semantic Scholar. Использовать
-   `scripts/s2_verify.py`; начинать с одного запроса в секунду, соблюдать `429`
-   и `Retry-After`.
-3. Дедуплицировать по нормализованному DOI, затем S2 ID, затем заголовку и году.
-4. Экспортировать проверенные seeds в `seed_set.bib`. Исследователь изучает в
-   ResearchRabbit citations, references и similar papers и возвращает BibTeX,
-   RIS либо CSV.
-5. Считать ResearchRabbit только discovery-инструментом, не проверкой
-   существования публикации.
-6. Для точной формулы, области, квантора, ветви, полюса или статистического
-   выражения останавливать литературный маршрут и советовать отдельный
-   `$fts-wolfram-audit` с полным пакетом claim/C-NN.
+1. Discover peer-reviewed candidates with Consensus. Fetch a result before citing it.
+2. Resolve DOI/S2 ID and metadata with Semantic Scholar. Use `scripts/s2_verify.py`; start at one request per second and honor `429` plus `Retry-After`.
+3. Deduplicate by normalized DOI, then S2 ID, then normalized title and year.
+4. Export verified seeds to `seed_set.bib`. Ask the researcher to explore citations, references, and similar papers in ResearchRabbit and return BibTeX, RIS, or CSV.
+5. Treat ResearchRabbit as discovery only, never as existence verification.
+6. Route an exact mathematical predicate to `$fts-wolfram-audit` when an independent CAS check is needed. Prepare a full claim/C-NN packet within the assigned scope; no separate invocation is required.
 
-По умолчанию отправлять внешним сервисам только поисковые строки и
-библиографические метаданные. Не отправлять рукописи, частные заметки или корпус
-без отдельного согласия.
+Send only search strings and bibliographic metadata to external services by default. Do not send manuscripts, private notes, or the corpus without separate consent.
 
-## Границы ФТС
+## Enforce FTS boundaries
 
-- Помечать каждый неканонический вывод `[внешнее]` и сохранять отношение
-  `direct|limiting|alternative|analogy`.
-- Не повышать `St_FTS`, `St_math` или статус claim на основании одной публикации.
-- Не отождествлять внешний термин с перегруженным термином ФТС без отдельного
-  отображения.
-- Писать `нет в артефактах`, если локального основания нет.
-- Сохранять `¬A ≠ 0_A ≠ −A`, различия регистр/канал/оверлей и все статусные гейты.
-- Активные результаты писать только в
-  `work/v14_rebuild/e5_literature_review/`; не переписывать
-  `work/v14_rebuild/audit/` или историческую `LITERATURE_MATRIX.tsv`.
+- Label every non-canon inference `[внешнее]` and preserve the relation `direct|limiting|alternative|analogy`.
+- Never raise `St_FTS`, `St_math`, or a claim status from a publication alone.
+- Never equate an external term with an overloaded FTS term without a separately argued mapping.
+- Record `нет в артефактах` when the local grounding is absent.
+- Preserve typed absence, register/channel/overlay distinctions. State the domain and witness of a local equivalence; follow the current status procedure in `PROJECT_INSTRUCTIONS.md#status`.
+- Write active outputs only under `work/v14_rebuild/e5_literature_review/`; do not rewrite `work/v14_rebuild/audit/` or its historical `LITERATURE_MATRIX.tsv`.
 
-## Регистрация и screening
+## Record and screen
 
-Схемы и checkpoints находятся в
-[records-and-gates.md](references/records-and-gates.md). В systematic-режиме:
+Read [records-and-gates.md](references/records-and-gates.md) for schemas and checkpoints. In systematic mode:
 
-1. Заполнить и заморозить `PROTOCOL.md` и `MATERIAL_PASSPORT.yaml` до первого
-   содержательного поиска.
-2. Добавлять каждый запрос и каждого кандидата, включая `exclude` и `uncertain`.
-3. Формировать screening Codex, не читая решения исследователя.
-4. Исследователь заполняет второй файл по тому же набору и критериям.
-5. Раскрывать оба файла только при adjudication. Каждое расхождение явно
-   закрывать в `ADJUDICATION.tsv`.
-6. Запускать
-   `python -X utf8 .agents/skills/fts-academic-research/scripts/validate_e5_workspace.py work/v14_rebuild/e5_literature_review`.
-7. Синтезировать только adjudicated inclusions, включать отрицательные и
-   ограничивающие результаты и формулировать bounded novelty вместо мировой
-   новизны.
+1. Complete and freeze `PROTOCOL.md` plus `MATERIAL_PASSPORT.yaml` before the first substantive search.
+2. Append every query and candidate, including excluded and uncertain records.
+3. Produce the Codex screening file without reading the researcher's decisions.
+4. Have the researcher complete the second file from the same candidate set and criteria.
+5. Reveal both files only at adjudication. Resolve every disagreement explicitly in `ADJUDICATION.tsv`.
+6. Run `python -X utf8 .agents/skills/fts-academic-research/scripts/validate_e5_workspace.py work/v14_rebuild/e5_literature_review`.
+7. Synthesize only adjudicated inclusions, include negative and limiting evidence, and state a bounded novelty boundary rather than world novelty.
 
-При локальном добавлении полнотекстового OCR/Markdown:
+Return findings in Russian in the project form: `Найдено → зависимости → вывод → что не закрыто.`
 
-1. Сохранять исходный текст без изменений.
-2. Фиксировать SHA256, DOI, путь и показатели OCR в `PAPER_INTAKE.tsv`.
-3. Создавать отдельное русское досье, сохраняя формулы, ID и no-smuggling.
-4. Не подменять досьем независимый screen исследователя.
-5. Проверять intake тем же `validate_e5_workspace.py`.
+## Local full-text intake
 
-Возвращать результат в проектном формате:
-`Найдено → зависимости → вывод → что не закрыто.`
+For user-supplied OCR/Markdown sources, preserve the original bytes. Register
+SHA256, DOI, original and project paths, OCR metrics, and a separate Russian dossier
+in `PAPER_INTAKE.tsv`. Preserve formulas, IDs, and source provenance in the dossier.
+Validate intake with `scripts/validate_e5_workspace.py`; a dossier does not replace
+independent screening when the selected review mode requires it. The current E5
+cycle's optional replay follows its recorded protocol amendment.

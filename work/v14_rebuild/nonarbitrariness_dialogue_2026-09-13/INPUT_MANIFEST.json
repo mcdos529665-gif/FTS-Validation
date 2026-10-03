@@ -1,0 +1,10 @@
+{
+  "schema": "fts-dialogue-intake/v1",
+  "date": "2026-09-13",
+  "source_role": "author_submitted_dialogue_with_external_model_not_canon",
+  "file": "SOURCE_ORIGINAL.txt",
+  "bytes": 10817,
+  "sha256": "0675e54772d40c7b34fd58d163a84c60575447308dc259ebaf12dc08d85a6b09",
+  "encoding": "utf-8",
+  "line_count": 260
+}

@@ -1,0 +1,135 @@
+{
+  "scope": "assistant-proposed Out projection keeps AND trees and unions OR outcomes; later_AND_fold_example uses a separate stated reading rule",
+  "given_longer_is_expand_of_shorter": true,
+  "trees_differ": true,
+  "both_read_as_three_author_outcomes": true,
+  "outcome_projection_is_not_injective": true,
+  "roundtrip_also_works_on_B": true,
+  "B_expansion_also_preserves_its_outcomes": true,
+  "arbitrary_formula_need_not_have_three_outcomes": true,
+  "active_M7_differs_from_given_expansion": true,
+  "active_M7_outcomes_count_under_this_candidate_only": 4,
+  "finite_samples": [
+    {
+      "expansions": 0,
+      "atomic_occurrences": 4,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 1,
+      "atomic_occurrences": 6,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 2,
+      "atomic_occurrences": 8,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 3,
+      "atomic_occurrences": 10,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 4,
+      "atomic_occurrences": 12,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 5,
+      "atomic_occurrences": 14,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 6,
+      "atomic_occurrences": 16,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 7,
+      "atomic_occurrences": 18,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    },
+    {
+      "expansions": 8,
+      "atomic_occurrences": 20,
+      "same_three_outcomes": true,
+      "one_step_roundtrip": true
+    }
+  ],
+  "later_AND_fold_example": {
+    "scope": "new stipulated syntax reading: unfold base B as B AND swap_root(B); repeated right-D wrappers form a separate illustrative family",
+    "one_step_reconstructed_from_B_and_rule": true,
+    "one_step_compresses_to_B": true,
+    "different_depths_have_same_short_reading": true,
+    "depths_require_distinct_trace_if_exact_history_is_requested": [
+      1,
+      2
+    ],
+    "previous_Out_does_not_preserve_this_AND_fold": true,
+    "boolean_shadow_valuations": [
+      {
+        "p": false,
+        "q": false,
+        "paired_U4_to_U9_boolean_shadow": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "long_AND_and_short_B_agree": true
+      },
+      {
+        "p": false,
+        "q": true,
+        "paired_U4_to_U9_boolean_shadow": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "long_AND_and_short_B_agree": true
+      },
+      {
+        "p": true,
+        "q": false,
+        "paired_U4_to_U9_boolean_shadow": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "long_AND_and_short_B_agree": true
+      },
+      {
+        "p": true,
+        "q": true,
+        "paired_U4_to_U9_boolean_shadow": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "long_AND_and_short_B_agree": true
+      }
+    ],
+    "status_effect": "no FTS equality, speed measurement or proof of speed-fundamentality discrimination"
+  },
+  "status_effect": "none; no FTS level assignment or correspondence with Close is established"
+}

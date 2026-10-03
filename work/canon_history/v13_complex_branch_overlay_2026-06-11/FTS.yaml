@@ -1,0 +1,913 @@
+version: xlsx-canon-v5-self-contained
+self_contained: true
+working_rule: 'Use this workbook only; external documents are not required.'
+embedded_archives:
+  - id: CANON_V43
+    embedded_corpus: 'Встроенный канон v4.3'
+    internal_location: '19_Канон_текст rows where archive_id=CANON_V43'
+    dependency_status: 'NO_EXTERNAL_DEPENDENCY'
+    seed_sha256: 'b749ad2983bdb3824f9e9a65525b96c36b87799f8b7e5735b21f15e03ea926c3'
+  - id: CANON_EN
+    embedded_corpus: 'Встроенный английский канон/research-layer'
+    internal_location: '19_Канон_текст rows where archive_id=CANON_EN'
+    dependency_status: 'NO_EXTERNAL_DEPENDENCY'
+    seed_sha256: '108fac434cca10f56c2dd71dbc8ecad52f87d6d08cb5ed199325c0c653c120f1'
+  - id: CANON_HABR
+    embedded_corpus: 'Встроенный текст Хабр/авторское изложение'
+    internal_location: '19_Канон_текст rows where archive_id=CANON_HABR'
+    dependency_status: 'NO_EXTERNAL_DEPENDENCY'
+    seed_sha256: 'bf5430b6c9dd1f4a54282a3219912667f18b76cbafd44b4c85fe206689637493'
+  - id: CANON_RESEARCH_V2
+    embedded_corpus: 'Встроенное объединённое исследование v2'
+    internal_location: '19_Канон_текст rows where archive_id=CANON_RESEARCH_V2'
+    dependency_status: 'NO_EXTERNAL_DEPENDENCY'
+    seed_sha256: '28462b6c590e7f07d4a285e31e28c6106faadff1bcf4492f2fa614e944e41e50'
+  - id: CANON_AUDIT
+    embedded_corpus: 'Встроенная инструкция внешнего аудита'
+    internal_location: '19_Канон_текст rows where archive_id=CANON_AUDIT'
+    dependency_status: 'NO_EXTERNAL_DEPENDENCY'
+    seed_sha256: '70cf0eeca17f2e5d9d35e185de09533f06875b3654c3239d9d656b3c102ccc08'
+  - id: CANON_LINKS_ARCHIVE
+    embedded_corpus: 'Внешние shared-ссылки удалены из рабочего канона'
+    internal_location: 'не импортировано как зависимость'
+    dependency_status: 'OMITTED_AS_EXTERNAL_DEPENDENCY'
+    seed_sha256: 'f1459c4f2ace01eb527f23341cbbb5c84bee0b05c15ccf461706d46104007c37'
+  - id: WORKBOOK_SCHEMA_V5
+    embedded_corpus: 'Схема Excel-канона v5'
+    internal_location: 'all sheets'
+    dependency_status: 'ACTIVE'
+cards:
+  - id: U_m1
+    type: 'level'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(-1)'
+    text: 'У(-1): Шум / неизвестное. Carrier=pre-carrier; window=(-1,0,1,2,3)'
+  - id: M_m1
+    type: 'minimal_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'a≈□[0_знака/0_места?]'
+    text: 'М-регистр для У(-1): a≈□[0_знака/0_места?]'
+  - id: CH_m1
+    type: 'private_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'Seg(W)=∅ / открытая сцена'
+    text: 'Ч-регистр/операциональное чтение для У(-1): Seg(W)=∅ / открытая сцена'
+  - id: U_00
+    type: 'level'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(0)'
+    text: 'У(0): Ошибка / 0_ошибки. Carrier=pre-carrier; window=(-1,0,1,2,3)'
+    depends_on:
+      - U_m1
+  - id: M_00
+    type: 'minimal_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'a≠a'
+    text: 'М-регистр для У(0): a≠a'
+  - id: CH_00
+    type: 'private_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'Eq₀(a,a)=false'
+    text: 'Ч-регистр/операциональное чтение для У(0): Eq₀(a,a)=false'
+  - id: U_01
+    type: 'level'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(1)'
+    text: 'У(1): Сигнал / 0_сигнала. Carrier=pre-carrier; window=(-1,0,1,2,3)'
+    depends_on:
+      - U_00
+  - id: M_01
+    type: 'minimal_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'a=a'
+    text: 'М-регистр для У(1): a=a'
+  - id: CH_01
+    type: 'private_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'сигнал / аксиома / стабилизация'
+    text: 'Ч-регистр/операциональное чтение для У(1): сигнал / аксиома / стабилизация'
+  - id: U_02
+    type: 'level'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(2)'
+    text: 'У(2): Код / 0_кода. Carrier=terminal_pre-carrier; window=(-1,0,1,2,3)'
+    depends_on:
+      - U_01
+  - id: M_02
+    type: 'minimal_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'a=b'
+    text: 'М-регистр для У(2): a=b'
+  - id: CH_02
+    type: 'private_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'a=₂b'
+    text: 'Ч-регистр/операциональное чтение для У(2): a=₂b'
+  - id: U_03
+    type: 'level'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(3)'
+    text: 'У(3): Информация / 0_информации. Carrier=node-3; window=(3,4,5,6,7)'
+    depends_on:
+      - U_02
+  - id: M_03
+    type: 'minimal_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'I=(a≠b; a-b) / Δ(a,b)'
+    text: 'М-регистр для У(3): I=(a≠b; a-b) / Δ(a,b)'
+  - id: CH_03
+    type: 'private_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'Dist₃(A,B;0_A^C)'
+    text: 'Ч-регистр/операциональное чтение для У(3): Dist₃(A,B;0_A^C)'
+  - id: U_04
+    type: 'level'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(4)'
+    text: 'У(4): Вероятность / закономерная случайность. Carrier=node-3 interval; window=(3,4,5,6,7)'
+    depends_on:
+      - U_03
+  - id: M_04
+    type: 'minimal_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: '(a=b) ∧ (a≠b)'
+    text: 'М-регистр для У(4): (a=b) ∧ (a≠b)'
+  - id: CH_04
+    type: 'private_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'B=(a=₂b)∧(a≠₃b)'
+    text: 'Ч-регистр/операциональное чтение для У(4): B=(a=₂b)∧(a≠₃b)'
+  - id: U_05
+    type: 'level'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(5)'
+    text: 'У(5): Выбор / случайность. Carrier=node-3 interval; window=(3,4,5,6,7)'
+    depends_on:
+      - U_04
+  - id: M_05
+    type: 'minimal_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: '(a=b) ∨ (a≠b)'
+    text: 'М-регистр для У(5): (a=b) ∨ (a≠b)'
+  - id: CH_05
+    type: 'private_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'Select(B)'
+    text: 'Ч-регистр/операциональное чтение для У(5): Select(B)'
+  - id: U_06
+    type: 'level'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(6)'
+    text: 'У(6): Статистика / случайная закономерность. Carrier=threshold-to-7; window=(3,4,5,6,7)'
+    depends_on:
+      - U_05
+  - id: M_06
+    type: 'minimal_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'V*V'
+    text: 'М-регистр для У(6): V*V'
+  - id: CH_06
+    type: 'private_expression'
+    status: 'canonical_strict'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'Agg_i(V_i)'
+    text: 'Ч-регистр/операциональное чтение для У(6): Agg_i(V_i)'
+  - id: U_07
+    type: 'level'
+    status: 'candidate_with_operational_gate'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(7)'
+    text: 'У(7): Знание / забывание(отказ от ожидания). Carrier=node-7; window=(3,4,5,6,7)'
+    depends_on:
+      - U_06
+  - id: M_07
+    type: 'minimal_expression'
+    status: 'candidate_with_operational_gate'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'a=-*b*b'
+    text: 'М-регистр для У(7): a=-*b*b'
+  - id: CH_07
+    type: 'private_expression'
+    status: 'candidate_with_operational_gate'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'K=⟨S,0_S,κ⟩'
+    text: 'Ч-регистр/операциональное чтение для У(7): K=⟨S,0_S,κ⟩'
+  - id: U_08
+    type: 'level'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(8)'
+    text: 'У(8): Предположение / вера(отказ от предположений). Carrier=node-7 interval; window=(7,8,9,10,11)'
+    depends_on:
+      - U_07
+  - id: M_08
+    type: 'minimal_expression'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'Link(0_K,M) / TBD'
+    text: 'М-регистр для У(8): Link(0_K,M) / TBD'
+  - id: CH_08
+    type: 'private_expression'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'Link(K(0_A),M;κ)'
+    text: 'Ч-регистр/операциональное чтение для У(8): Link(K(0_A),M;κ)'
+  - id: U_09
+    type: 'level'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(9)'
+    text: 'У(9): Понимание / упрощение, оскорбление, отказ от сложности. Carrier=node-7 interval; window=(7,8,9,10,11)'
+    depends_on:
+      - U_08
+  - id: M_09
+    type: 'minimal_expression'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'Analogy_κ(...) / TBD'
+    text: 'М-регистр для У(9): Analogy_κ(...) / TBD'
+  - id: CH_09
+    type: 'private_expression'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'causal-counterfactual reading'
+    text: 'Ч-регистр/операциональное чтение для У(9): causal-counterfactual reading'
+  - id: U_10
+    type: 'level'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(10)'
+    text: 'У(10): Сравнение, оценка / догматизм, отказ от сравнения. Carrier=threshold-to-11; window=(7,8,9,10,11)'
+    depends_on:
+      - U_09
+  - id: M_10
+    type: 'minimal_expression'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'Compare_κ(...) / TBD'
+    text: 'М-регистр для У(10): Compare_κ(...) / TBD'
+  - id: CH_10
+    type: 'private_expression'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'Compare_κ(options,criteria)'
+    text: 'Ч-регистр/операциональное чтение для У(10): Compare_κ(options,criteria)'
+  - id: U_11
+    type: 'level'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(11)'
+    text: 'У(11): Осознание Я / отказ от ответственности. Carrier=node-11; window=(7,8,9,10,11)'
+    depends_on:
+      - U_10
+  - id: M_11
+    type: 'minimal_expression'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'Fix(E,Agent,Consequences;...)'
+    text: 'М-регистр для У(11): Fix(E,Agent,Consequences;...)'
+  - id: CH_11
+    type: 'private_expression'
+    status: 'reserved_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'self-reference / agent-in-loop'
+    text: 'Ч-регистр/операциональное чтение для У(11): self-reference / agent-in-loop'
+  - id: U_12
+    type: 'level'
+    status: 'projected_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(12)'
+    text: 'У(12): Конфликт / Союз. Carrier=node-11 interval; window=(11,12,13,14,15)'
+    depends_on:
+      - U_11
+  - id: M_12
+    type: 'minimal_expression'
+    status: 'projected_underformalized'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'TBD'
+    text: 'М-регистр для У(12): TBD'
+  - id: CH_12
+    type: 'private_expression'
+    status: 'projected_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'TBD'
+    text: 'Ч-регистр/операциональное чтение для У(12): TBD'
+  - id: U_13
+    type: 'level'
+    status: 'projected_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(13)'
+    text: 'У(13): Мир-Мы / Космос-острова. Carrier=node-11 interval; window=(11,12,13,14,15)'
+    depends_on:
+      - U_12
+  - id: M_13
+    type: 'minimal_expression'
+    status: 'projected_underformalized'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'TBD'
+    text: 'М-регистр для У(13): TBD'
+  - id: CH_13
+    type: 'private_expression'
+    status: 'projected_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'TBD'
+    text: 'Ч-регистр/операциональное чтение для У(13): TBD'
+  - id: U_14
+    type: 'level'
+    status: 'projected_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(14)'
+    text: 'У(14): Воображение / Вычисления-Логика. Carrier=threshold-to-15; window=(11,12,13,14,15)'
+    depends_on:
+      - U_13
+  - id: M_14
+    type: 'minimal_expression'
+    status: 'projected_underformalized'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'TBD'
+    text: 'М-регистр для У(14): TBD'
+  - id: CH_14
+    type: 'private_expression'
+    status: 'projected_underformalized'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'TBD'
+    text: 'Ч-регистр/операциональное чтение для У(14): TBD'
+  - id: U_15
+    type: 'level'
+    status: 'canonical_node_underformalized_semantics'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(15)'
+    text: 'У(15): Красота. Carrier=node-15; window=(15,16,17,...)'
+    depends_on:
+      - U_14
+  - id: M_15
+    type: 'minimal_expression'
+    status: 'canonical_node_underformalized_semantics'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'TBD'
+    text: 'М-регистр для У(15): TBD'
+  - id: CH_15
+    type: 'private_expression'
+    status: 'canonical_node_underformalized_semantics'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'TBD'
+    text: 'Ч-регистр/операциональное чтение для У(15): TBD'
+  - id: U_16
+    type: 'level'
+    status: 'speculative'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(16)'
+    text: 'У(16): Музыка. Carrier=node-15 interval; window=(15,16,17,...)'
+    depends_on:
+      - U_15
+  - id: M_16
+    type: 'minimal_expression'
+    status: 'speculative'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'TBD'
+    text: 'М-регистр для У(16): TBD'
+  - id: CH_16
+    type: 'private_expression'
+    status: 'speculative'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'TBD'
+    text: 'Ч-регистр/операциональное чтение для У(16): TBD'
+  - id: U_17
+    type: 'level'
+    status: 'speculative'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'У(17)'
+    text: 'У(17): Искусство. Carrier=node-15 interval; window=(15,16,17,...)'
+    depends_on:
+      - U_16
+  - id: M_17
+    type: 'minimal_expression'
+    status: 'speculative'
+    internal_ref: 'CANON_V43 + user_current'
+    symbol: 'TBD'
+    text: 'М-регистр для У(17): TBD'
+  - id: CH_17
+    type: 'private_expression'
+    status: 'speculative'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'TBD'
+    text: 'Ч-регистр/операциональное чтение для У(17): TBD'
+  - id: O_01
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(1)'
+    text: 'У(n+1) функционирует в среде У(n). Если убрать: уровни висят в пустоте.'
+  - id: O_02
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(2)'
+    text: 'Tot(У(n)) → невозможность У(n+1). Если убрать: пропадает предел уровня.'
+  - id: O_03
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(3)'
+    text: 'A_n / 0_A_n → A_{n+1}. Если убрать: пропадает главный генератор.'
+  - id: O_04
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(4)'
+    text: 'уровни образуют цепочку минимальных выражений. Если убрать: уровни снова слова.'
+  - id: O_05
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(5)'
+    text: 'A / 0_A / −A; −A прерывает тотальность. Если убрать: верхние anti-mode не различаются.'
+  - id: O_06
+    type: 'connectivity_ground'
+    status: 'canon/base_plus_user_refinement'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(6)'
+    text: 'минимум выражения = знак + связь + место с 0_знака/0_места. Если убрать: старт становится произвольным.'
+  - id: O_07
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(7)'
+    text: 'Dense_FTS(−1..7 | Σ_FTS,C,T). Если убрать: вставки X бесконтрольны.'
+  - id: O_08
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(8)'
+    text: 'π_{n+2→n}(M_{n+2})=M_n*; Expand₂/Compress₂. Если убрать: соседние уровни спорят без родства.'
+  - id: O_09
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(9)'
+    text: 'M′ должен покрыть функции, стоимость и связность без скрытой ФТС. Если убрать: любая альтернатива объявляется скрытой ФТС.'
+  - id: O_10
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(10)'
+    text: 'процедурная лестница усиливает, но не заменяет минимум. Если убрать: тесты отрываются от минимума.'
+  - id: O_11
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(11)'
+    text: 'минимальная грамматика различимости, не замена нейронаукам. Если убрать: теряется область применения.'
+  - id: O_12
+    type: 'connectivity_ground'
+    status: 'canon/base'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(12)'
+    text: 'F1–F5; insertion/collapse/independent M′/0_A→¬A/knowledge without κ. Если убрать: теория иммунизируется.'
+  - id: O_13
+    type: 'connectivity_ground'
+    status: 'candidate'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(13)'
+    text: 'RoleNec: удаление r_{n+1} ломает уровень. Если убрать роль и функция сохранена — основание падает.'
+  - id: O_14
+    type: 'connectivity_ground'
+    status: 'candidate'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(14)'
+    text: 'QuestionGain: Q_{n+1} невыразим ниже без скрытого аппарата. Если Q выражается ниже с той же ценой — основание падает.'
+  - id: O_15
+    type: 'connectivity_ground'
+    status: 'candidate'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(15)'
+    text: 'κ(S,0_S,Prov,Rev) как критерий закрытия знания. Падает при operational knowledge without κ.'
+  - id: O_16
+    type: 'connectivity_ground'
+    status: 'candidate'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(16)'
+    text: 'Trace_n: новый уровень должен давать наблюдаемый след. Падает, если след не наблюдаем.'
+  - id: O_17
+    type: 'connectivity_ground'
+    status: 'candidate'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(17)'
+    text: 'BoundaryGain: новый уровень вводит новую границу. Падает, если граница сводима к старой.'
+  - id: O_18
+    type: 'connectivity_ground'
+    status: 'candidate'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(18)'
+    text: 'ErrTypeGain: новый уровень делает видимой новую ошибку. Падает, если ошибка выражается ниже.'
+  - id: O_19
+    type: 'connectivity_ground'
+    status: 'candidate'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(19)'
+    text: 'Select имеет арность 1; Agg требует семейства i. Падает, если статистика строится из одного выбора без скрытого индекса.'
+  - id: O_20
+    type: 'connectivity_ground'
+    status: 'candidate_requires_empirical_test'
+    internal_ref: 'CANON_V43'
+    symbol: 'О(20)'
+    text: 'AbsDataGain: типизированное отсутствие улучшает missing/OOD/provenance. Падает, если typed absence не даёт выигрыша.'
+  - id: OP_Tot
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'Tot(0_A)=event(0_A)=¬A'
+    text: 'Tot(0_A)=event(0_A)=¬A: схлопывает структуру 0_A в булеву тень. патология: ложная тотализация'
+    depends_on:
+      - O2,O12,A4
+  - id: OP_TotPlus
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'рабочая упаковка без потери Res_n'
+    text: 'рабочая упаковка без потери Res_n: допустимое локальное закрытие. опасность: превращение в Tot⁻'
+    depends_on:
+      - O2
+  - id: OP_TotMinus
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'редукционистская тотализация'
+    text: 'редукционистская тотализация: стирает Res_n/0_A и блокирует Lift. патология ядра'
+    depends_on:
+      - O2,O12
+  - id: OP_Lift
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'X_{n+1}=Lift(X_n,Res_n)'
+    text: 'X_{n+1}=Lift(X_n,Res_n): делает остаток выразимым объектом нового уровня. если нет definability gain — Promote'
+    depends_on:
+      - O3,O7,O8,A6
+  - id: OP_Promote
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'label n→n+1 без новой выразимости'
+    text: 'label n→n+1 без новой выразимости: ложное повышение. часто через Tot/Refuse/Sever'
+    depends_on:
+      - O12,A9
+  - id: OP_Refuse
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'фильтр обновлений g(e)'
+    text: 'фильтр обновлений g(e): отказ допустить опыт/контрданные. 7+ anti-mode'
+    depends_on:
+      - A8
+  - id: OP_Sever
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'обрыв Λ/provenance/transfer'
+    text: 'обрыв Λ/provenance/transfer: разрывает перенос оснований и контрсвидетельств. патологическое забывание'
+    depends_on:
+      - A8
+  - id: OP_kappa
+    type: 'operator'
+    status: 'candidate_with_operational_gate'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'κ(S,0_S,Prov,Rev)'
+    text: 'κ(S,0_S,Prov,Rev): критерий легитимного закрытия/обновления. underformalized, но нужен для У7'
+    depends_on:
+      - O15
+  - id: OP_event0A
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'event(0_A)=¬A'
+    text: 'event(0_A)=¬A: булева проекция структурированного отсутствия. обратный вывод ¬A→0_A запрещён'
+    depends_on:
+      - A2
+  - id: OP_Unpack
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'C(x)=C(Unpack(x))'
+    text: 'C(x)=C(Unpack(x)): распаковка скрытых примитивов. анти-blackbox'
+    depends_on:
+      - O9,O12
+  - id: OP_Compress2
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'M_n*=Compress₂(M_{n+2})'
+    text: 'M_n*=Compress₂(M_{n+2}): двухшаговая свёртка. проекция вниз'
+    depends_on:
+      - O8
+  - id: OP_Expand2
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n)'
+    text: 'M_{n+2}=Expand₂(M_n,Op_{n+1},Res_n): двухшаговая развёртка. проекция вверх'
+    depends_on:
+      - O8
+  - id: OP_pi
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'π_n:X_{n+1}↠X_n'
+    text: 'π_n:X_{n+1}↠X_n: проекция старого слоя. должна сохранять старое'
+    depends_on:
+      - A7
+  - id: OP_iota
+    type: 'operator'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'ι_n:X_n↪X_{n+1}'
+    text: 'ι_n:X_n↪X_{n+1}: встраивание старого слоя. π∘ι=id'
+    depends_on:
+      - A7
+  - id: A0
+    type: 'axiom'
+    status: 'canonical'
+    internal_ref: 'CANON_EN'
+    symbol: 'A0'
+    text: 'Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary'
+  - id: A0b
+    type: 'axiom'
+    status: 'canonical'
+    internal_ref: 'CANON_EN'
+    symbol: 'A0b'
+    text: 'nodes 3/7/11/15 change symmetry carrier'
+  - id: A1
+    type: 'axiom'
+    status: 'canonical'
+    internal_ref: 'CANON_EN'
+    symbol: 'A1'
+    text: 'is/no/unknown/absent are defined only relative to C_n'
+  - id: A2
+    type: 'axiom'
+    status: 'canonical'
+    internal_ref: 'CANON_EN'
+    symbol: 'A2'
+    text: '0_A is induced structure on U\A; event(0_A)=¬A without identification'
+  - id: A3
+    type: 'axiom'
+    status: 'canonical'
+    internal_ref: 'CANON_EN'
+    symbol: 'A3'
+    text: 'v(A)=(t(A),f(A)) independent positive/negative evidence channels'
+  - id: A4
+    type: 'axiom'
+    status: 'canonical'
+    internal_ref: 'CANON_EN'
+    symbol: 'A4'
+    text: 'Tot collapses 0_A into ¬A and/or makes f derivative of t'
+  - id: A5
+    type: 'axiom'
+    status: 'canonical_conceptual'
+    internal_ref: 'CANON_EN'
+    symbol: 'A5'
+    text: 'If R*_n>ε then level totality is false in class I_n'
+  - id: A5a
+    type: 'axiom'
+    status: 'canonical_extension'
+    internal_ref: 'CANON_EN'
+    symbol: 'A5a'
+    text: 'Operational diagnosis should use ΔR*(op), not bare R*>0'
+  - id: A6
+    type: 'axiom'
+    status: 'canonical'
+    internal_ref: 'CANON_EN'
+    symbol: 'A6'
+    text: 'X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible'
+  - id: A7
+    type: 'axiom'
+    status: 'canonical'
+    internal_ref: 'CANON_EN'
+    symbol: 'A7'
+    text: 'ι_n and π_n preserve old layer; π∘ι=id'
+  - id: A8
+    type: 'axiom'
+    status: 'canonical'
+    internal_ref: 'CANON_EN'
+    symbol: 'A8'
+    text: 'Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A'
+  - id: A9
+    type: 'axiom'
+    status: 'canonical'
+    internal_ref: 'CANON_EN'
+    symbol: 'A9'
+    text: 'anti-mode is declared next constructive level without expressibility gain'
+  - id: F1
+    type: 'failure_condition'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'F1'
+    text: 'найти X между M_n и M_{n+1}, не повтор/не ранняя форма/не метастатус'
+    depends_on:
+      - O_12
+  - id: F2
+    type: 'failure_condition'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'F2'
+    text: 'схлопнуть два соседних уровня без потери роли/вопроса/следа'
+    depends_on:
+      - O_12
+  - id: F3
+    type: 'failure_condition'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'F3'
+    text: 'M′ independent, C(M′)≤C(FTS-core), covers −1..7'
+    depends_on:
+      - O_12
+  - id: F4
+    type: 'failure_condition'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'F4'
+    text: 'показать редукцию 0_A к ¬A без потерь структуры'
+    depends_on:
+      - O_12
+  - id: F5
+    type: 'failure_condition'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'F5'
+    text: 'показать знание без κ, сохранив provenance/revision/defeaters/domain-control'
+    depends_on:
+      - O_12
+  - id: T7A
+    type: 'test'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'T7A'
+    text: 'какое наблюдение e увеличит f(A) / изменит решение?'
+    depends_on:
+      - O_12
+  - id: T7B
+    type: 'test'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'T7B'
+    text: 'интервенция в g(e) или Λ предсказуемо меняет поведение'
+    depends_on:
+      - O_12
+  - id: T7C
+    type: 'test'
+    status: 'canonical'
+    internal_ref: 'CANON_V43/CANON_EN'
+    symbol: 'T7C'
+    text: 'контрсвидетельства переносятся между контекстами, если Sever не применён'
+    depends_on:
+      - O_12
+addendum_v3:
+  id: ADDENDUM_V3
+  status: candidate_requires_formalization
+  embedded_in: ['43_Добавка_v3','19_Канон_текст']
+  main_additions: ['mirror_window','zero_boundary','parity_topology','U11_e_pi','U12_circle','research_export']
+research_export:
+  primary: FTS_research_v8.md
+  sidecars: ['fts_cards_research_v8.jsonl','fts_triples_research_v8.tsv','FTS_research_v8.yaml']
+v9_status_promotion:
+  status: self_contained_status_patch
+  date: 2026-06-09
+  promoted:
+    - id: SP_WINDOW
+      target: ADD_MIRROR_WINDOW
+      status_after: derived_constraint
+    - id: SP_ZERO
+      target: ADD_ZERO_BOUNDARY
+      status_after: formal_math_fact / derived_constraint
+    - id: SP_U8
+      target: U_08
+      status_after: candidate_with_operational_gate
+    - id: SP_U9
+      target: U_09
+      status_after: FTS_candidate
+    - id: SP_U12
+      target: U_12
+      status_after: candidate_requires_formalization + canonical_alignment
+  not_promoted:
+    - e^pi remains FTS_candidate
+    - e^(i*pi)+1=0 remains analogy_only / low candidate
+    - U13-U17 remain projected_underformalized/speculative
+v11_u7_window_cycles:
+  status: self_contained_patch
+  date: '2026-06-10'
+  core:
+    formula: 'Answer(W)=Close(W,W)'
+    forgetting: 'Forgetting(W)=Close(W,Refuse(W))'
+    math: 'y=-x*x; y!=x*x'
+    m_register: 'a=-*b*b; a!=b*b'
+  boundary_7_8: 'Answer(W)=A != Hyp(W)=A?'
+  agentic_gate: 'K=⟨S,0_S,κ⟩ / T7A-T7C as diagnostic layer, not core essence'
+  chi_square_bridge:
+    formula: 'χ²=Σ((O_i-E_i)^2/E_i)'
+    status: 'U6 statistical diagnostic; bridge to W/0_W, not U7 answer'
+  sheets_changed:
+    - U7_Window_Cycles
+    - ChiSquare_FTS
+    - 03_Уровни_У
+    - 06_Мат_аналогии
+    - 17_Карточки
+    - 18_Граф
+v12_chi_stat_ladder:
+  date: '2026-06-10'
+  status: 'statistical_overlay_candidate'
+  carrier:
+    symbol: 'χ'
+    definition: 'χ_i=(O_i-E_i)/sqrt(E_i); χ=(χ_i)_i'
+    substitution_rule: 'x:=χ, not x:=χ²'
+  strongest_anchor:
+    U6: 'χ*χ=Σχ_i²=χ²'
+  level_readings:
+    U7: '-χ*χ; !=χ*χ; Answer(W)=Close(W,W)'
+    U8: 'sqrt(abs(χ)); Hyp(W)=W[A?]'
+    U9: 'χ*χ*χ only with causal/counterfactual decomposition'
+    U10: 'Compare(E,E_prime,loss,df,Δχ²,ΔR*)'
+    U11: 'Own(W,E,loss,α,protocol)'
+  guardrails:
+    - 'χ² belongs to U6 statistics, not U7 answer'
+    - 'p-value / low χ² does not close W by itself'
+    - 'χ-ladder is an overlay, not replacement of the main FTS ladder'
+    - 'χ³ without causal/counterfactual decomposition is not understanding'
+  sheets_changed:
+    - Chi_Stat_Ladder
+    - 01_Оглавление
+    - 02_Паспорт
+    - 17_Карточки
+    - 18_Граф
+    - 25_Операторы
+    - 33_Validation
+    - 34_Export_jsonl
+    - 35_Export_tsv
+    - 36_Export_yaml
+    - 37_Export_md
+    - 38_Changelog
+    - 40_Reader_View
+v13_complex_branch_overlay:
+  status: candidate_overlay
+  sheets_changed:
+    - Complex_Branch_Overlay
+    - Tensor_Context_Overlay
+    - 01_Оглавление
+    - 02_Паспорт
+    - 17_Карточки
+    - 18_Граф
+    - 25_Операторы
+    - 31_Upper_12_17
+    - 33_Validation
+    - 34_Export_jsonl
+    - 35_Export_tsv
+    - 36_Export_yaml
+    - 37_Export_md
+    - 38_Changelog
+    - 40_Reader_View
+  complex_overlay:
+    carrier: 'z or chi in C^n; z=r*e^{iθ}'
+    readout: 'Q(χ)=Σ conjugate(χ_i)*χ_i=Σ|χ_i|²'
+    rule: 'real square hides sign; complex norm-square hides phase'
+    U6: 'Q(χ) is statistical/quadratic readout'
+    U7: '-Q(χ); y!=Q(χ); Answer(W)=Close(W,W), but phase!=minusA'
+    U8: 'sqrt(z)=±sqrt(r)*e^{iθ/2}; hypothesis as branch question A_k?'
+    U9: 'understanding requires causal/counterfactual model of phase/branch'
+    U10: 'evaluation compares branch/phase/protocol/loss'
+    U11: 'observer/protocol fixes branch'
+    U12: 'Q(χ(π_k))+(y-2)^2=4; if Q>4, outside becomes imaginary branch'
+  tensor_overlay:
+    status: candidate_overlay_10plus
+    rule: 'tensor is multi-index transformation object, not a bigger number'
+    examples:
+      - 'χ_{iα}: residue i in context/protocol α'
+      - 'T_{ijαβ}: transfer/coupling between residues and contexts'
+      - 'G_{ij}, L_{αβ}: metric/loss tensors for evaluation'
+  guardrails:
+    - 'phase != −A'
+    - 'complex number != self-reference'
+    - 'branch access != Lift by itself'
+    - 'Q(χ) belongs to U6 readout, not U7 answer'
+    - 'array != tensor unless transformation law is specified'
+    - 'more indices != higher level'

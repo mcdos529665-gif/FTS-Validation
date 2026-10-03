@@ -1,0 +1,272 @@
+{
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\MANIFEST.json": {
+    "mtime": 1781199998.0574727,
+    "ast_hash": "a2bf32591f2c4c19130f9dd2215c6700",
+    "semantic_hash": "a2bf32591f2c4c19130f9dd2215c6700"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\fts_cards.json": {
+    "mtime": 1781148182.0,
+    "ast_hash": "b9e5318901cd0191fdff2ebc21e17b36",
+    "semantic_hash": "b9e5318901cd0191fdff2ebc21e17b36"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\fts_v13_workbook_sheets.json": {
+    "mtime": 1781148182.0,
+    "ast_hash": "94579d35f0131eadcabcbc5f1d6756fa",
+    "semantic_hash": "94579d35f0131eadcabcbc5f1d6756fa"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\import_from.py": {
+    "mtime": 1781199998.0584724,
+    "ast_hash": "24c34b1419df6d5159db41ef0c241f34",
+    "semantic_hash": "24c34b1419df6d5159db41ef0c241f34"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\oq_pool.py": {
+    "mtime": 1783325960.0312824,
+    "ast_hash": "4fafdaee28d85ceb8b7701faf86e8b90",
+    "semantic_hash": "4fafdaee28d85ceb8b7701faf86e8b90"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\query.py": {
+    "mtime": 1781199998.0594726,
+    "ast_hash": "367873086aa479fb4e5c7e20f5a0bc14",
+    "semantic_hash": "367873086aa479fb4e5c7e20f5a0bc14"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\verify.py": {
+    "mtime": 1781199998.0594726,
+    "ast_hash": "0a06f548dc7cc8c25403923369dc2dbe",
+    "semantic_hash": "0a06f548dc7cc8c25403923369dc2dbe"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\crosscheck.py": {
+    "mtime": 1781201245.3108723,
+    "ast_hash": "3cb23efb4992e86c5a922dc5623f4db8",
+    "semantic_hash": "3cb23efb4992e86c5a922dc5623f4db8"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\d2_sign\\results.json": {
+    "mtime": 1781513136.3564193,
+    "ast_hash": "da480d9fc9a91abebf8ca74d234e048f",
+    "semantic_hash": "da480d9fc9a91abebf8ca74d234e048f"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\d2_sign\\run_d2.py": {
+    "mtime": 1781513036.36567,
+    "ast_hash": "2db385df042d252afa48542ec78ea6c0",
+    "semantic_hash": "2db385df042d252afa48542ec78ea6c0"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\o20\\probe.py": {
+    "mtime": 1781369207.8837745,
+    "ast_hash": "68fef8bd333e8ccffa43afa2b8efb269",
+    "semantic_hash": "68fef8bd333e8ccffa43afa2b8efb269"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\o20\\results.json": {
+    "mtime": 1781369628.6036427,
+    "ast_hash": "e1ebbd491d6610738117a6f65bf712cb",
+    "semantic_hash": "e1ebbd491d6610738117a6f65bf712cb"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\o20\\run_o20.py": {
+    "mtime": 1781369475.2650645,
+    "ast_hash": "b50c162df82a422a788070f752762377",
+    "semantic_hash": "b50c162df82a422a788070f752762377"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\probes.py": {
+    "mtime": 1783348496.2473066,
+    "ast_hash": "850e71d3a0e156f9209941db79aebfda",
+    "semantic_hash": "850e71d3a0e156f9209941db79aebfda"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\sheet_dump.py": {
+    "mtime": 1781201464.5395796,
+    "ast_hash": "1a745d5ab01bec278abf8f74935d3740",
+    "semantic_hash": "1a745d5ab01bec278abf8f74935d3740"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\verification.py": {
+    "mtime": 1783348303.350975,
+    "ast_hash": "1c5c06bf8df391b12f5e9430b275e8a2",
+    "semantic_hash": "1c5c06bf8df391b12f5e9430b275e8a2"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\CLAUDE.md": {
+    "mtime": 1783348517.4774625,
+    "ast_hash": "fde37d978a01a4842a36dce0c8df944d",
+    "semantic_hash": "fde37d978a01a4842a36dce0c8df944d"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\PROJECT_INSTRUCTIONS.md": {
+    "mtime": 1781199998.0544732,
+    "ast_hash": "d27c1bea45da72add4a4cda997e35af8",
+    "semantic_hash": "d27c1bea45da72add4a4cda997e35af8"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\README.md": {
+    "mtime": 1781199998.0554738,
+    "ast_hash": "c768156e144708f53890eccba64b601a",
+    "semantic_hash": "c768156e144708f53890eccba64b601a"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\FTS.yaml": {
+    "mtime": 1781148182.0,
+    "ast_hash": "741519b52bc47257b20984bc9ae11f7f",
+    "semantic_hash": "741519b52bc47257b20984bc9ae11f7f"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\FTS_v13_LLM_CONTEXT.md": {
+    "mtime": 1781148182.0,
+    "ast_hash": "5046ded5e304e2c649baea3075a6bd84",
+    "semantic_hash": "5046ded5e304e2c649baea3075a6bd84"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\FTS_v13_LLM_FULL_DUMP.md": {
+    "mtime": 1781148182.0,
+    "ast_hash": "e685c84b5324fc900bd074bd7a26673b",
+    "semantic_hash": "e685c84b5324fc900bd074bd7a26673b"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\INSTALL.md": {
+    "mtime": 1781148182.0,
+    "ast_hash": "80bfbe83b8af7e5f76bcceb13868e381",
+    "semantic_hash": "80bfbe83b8af7e5f76bcceb13868e381"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\LLM_IMPORT_PROMPT.txt": {
+    "mtime": 1781148182.0,
+    "ast_hash": "4abe12623f07371faa7456e7834127fd",
+    "semantic_hash": "4abe12623f07371faa7456e7834127fd"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\START_HERE.md": {
+    "mtime": 1781148182.0,
+    "ast_hash": "a463e50d2736753982cefa7f2494d67b",
+    "semantic_hash": "a463e50d2736753982cefa7f2494d67b"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\DECISIONS.md": {
+    "mtime": 1783349727.1392798,
+    "ast_hash": "f94771681fb399c4f91d0c806d72de73",
+    "semantic_hash": "f94771681fb399c4f91d0c806d72de73"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\OPEN_QUESTIONS.md": {
+    "mtime": 1783329635.959538,
+    "ast_hash": "76e48048228f1085057f43d2a7205a9d",
+    "semantic_hash": "76e48048228f1085057f43d2a7205a9d"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\OQ_POOLS.md": {
+    "mtime": 1783329672.8517153,
+    "ast_hash": "fa7a541f37d55acaf34604f84dc43468",
+    "semantic_hash": "fa7a541f37d55acaf34604f84dc43468"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\OQ_TRIAGE.md": {
+    "mtime": 1783329658.1023672,
+    "ast_hash": "0690e7f2320ff8993dc4e45e82448b7f",
+    "semantic_hash": "0690e7f2320ff8993dc4e45e82448b7f"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\REFUTED.md": {
+    "mtime": 1783172614.3469377,
+    "ast_hash": "5dfe122d037a6aab62d95ad7bd76a11a",
+    "semantic_hash": "5dfe122d037a6aab62d95ad7bd76a11a"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\STATE.md": {
+    "mtime": 1783349732.6385274,
+    "ast_hash": "a2588bf8b3a8c9ecfe94409aaf1e79a2",
+    "semantic_hash": "a2588bf8b3a8c9ecfe94409aaf1e79a2"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\notation.md": {
+    "mtime": 1782238632.3892663,
+    "ast_hash": "e2157d6008e13e22f0c3083f71b528c3",
+    "semantic_hash": "e2157d6008e13e22f0c3083f71b528c3"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\FTS_v14_paper.md": {
+    "mtime": 1783349699.4389746,
+    "ast_hash": "903ab00a2f3e221bed8690e4de5c3e59",
+    "semantic_hash": "903ab00a2f3e221bed8690e4de5c3e59"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\FTS_v14_register_map.md": {
+    "mtime": 1783349706.2652595,
+    "ast_hash": "c450fea1bc1e70a78105943c29a99a36",
+    "semantic_hash": "c450fea1bc1e70a78105943c29a99a36"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\canon_coverage_v14.md": {
+    "mtime": 1782238425.7883341,
+    "ast_hash": "24582280f3b496479e04099227a03155",
+    "semantic_hash": "24582280f3b496479e04099227a03155"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\clt_u6_note.md": {
+    "mtime": 1783158044.3945315,
+    "ast_hash": "4ae96fae729d17167548d78f4bf09d60",
+    "semantic_hash": "4ae96fae729d17167548d78f4bf09d60"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\d2_sign\\PREREGISTRATION.md": {
+    "mtime": 1781512916.4062543,
+    "ast_hash": "5ea67ce8afb82111f3fe8462f7bc4cb1",
+    "semantic_hash": "5ea67ce8afb82111f3fe8462f7bc4cb1"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\d2_sign\\RESULTS.md": {
+    "mtime": 1781513221.156604,
+    "ast_hash": "8d421d0312b40c7afdfccf9542151d6b",
+    "semantic_hash": "8d421d0312b40c7afdfccf9542151d6b"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\half_hypothesis.md": {
+    "mtime": 1782238425.7726407,
+    "ast_hash": "e8c5527b3211275ce728ee6006b60fc3",
+    "semantic_hash": "e8c5527b3211275ce728ee6006b60fc3"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\ladder_table.md": {
+    "mtime": 1783348464.0826893,
+    "ast_hash": "8e91eab3613b1f3b60dadd86761f663c",
+    "semantic_hash": "8e91eab3613b1f3b60dadd86761f663c"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\o20\\PREREGISTRATION.md": {
+    "mtime": 1781369435.8094873,
+    "ast_hash": "3c0a38124dc808fa9b8e13621c5a3dfe",
+    "semantic_hash": "3c0a38124dc808fa9b8e13621c5a3dfe"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\o20\\RESULTS.md": {
+    "mtime": 1781369698.4089882,
+    "ast_hash": "ddd0d695d47223642c0d8dccf0860b91",
+    "semantic_hash": "ddd0d695d47223642c0d8dccf0860b91"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\red_team_F3.md": {
+    "mtime": 1782238425.7863336,
+    "ast_hash": "1627ffba3358e6e8f0c1f8c5b168e108",
+    "semantic_hash": "1627ffba3358e6e8f0c1f8c5b168e108"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\status_patch_v14.md": {
+    "mtime": 1782238649.7062533,
+    "ast_hash": "35888fde7d730f91c2cca3c4261ba764",
+    "semantic_hash": "35888fde7d730f91c2cca3c4261ba764"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\topo_chi_note.md": {
+    "mtime": 1783173247.4918618,
+    "ast_hash": "2de017dfc5fc0da16e98ab891d26b77f",
+    "semantic_hash": "2de017dfc5fc0da16e98ab891d26b77f"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\verification_report.md": {
+    "mtime": 1783349752.5010064,
+    "ast_hash": "f20857834a909a5dd4e8181c7f0cb5da",
+    "semantic_hash": "f20857834a909a5dd4e8181c7f0cb5da"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\.claude\\agents\\fts-routine.md": {
+    "mtime": 1783234202.814403,
+    "ast_hash": "da48b3e48034421e5c51a8cd6c4a6447",
+    "semantic_hash": "da48b3e48034421e5c51a8cd6c4a6447"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\SLASH_COMMANDS.md": {
+    "mtime": 1783245016.2777212,
+    "ast_hash": "650bfbacf8f126aa4f4e788b2ef7cc5c",
+    "semantic_hash": "650bfbacf8f126aa4f4e788b2ef7cc5c"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\graphify_canon_edges.py": {
+    "mtime": 1783267589.032018,
+    "ast_hash": "7400b43f6a2bc9952c388f11bb280aae",
+    "semantic_hash": "7400b43f6a2bc9952c388f11bb280aae"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\oq_anchor.py": {
+    "mtime": 1783329644.4402199,
+    "ast_hash": "cbd472ca1d472b478b816049df69730c",
+    "semantic_hash": "cbd472ca1d472b478b816049df69730c"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\README_graphify_canon.md": {
+    "mtime": 1783267674.993456,
+    "ast_hash": "274f3ab79edd56cd1fa36514f8e454e9",
+    "semantic_hash": "274f3ab79edd56cd1fa36514f8e454e9"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\OQ_INTERSECTS.md": {
+    "mtime": 1783329672.9331272,
+    "ast_hash": "e0184e7d978b0f6da8d259ccfcf3d476",
+    "semantic_hash": "e0184e7d978b0f6da8d259ccfcf3d476"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\OQ_INTERSECT_PLAN.md": {
+    "mtime": 1783325851.6148942,
+    "ast_hash": "7c6d8bfbf72f737b68e3954eaed46871",
+    "semantic_hash": "7c6d8bfbf72f737b68e3954eaed46871"
+  },
+  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\questiongain_criterion.md": {
+    "mtime": 1783326962.5519867,
+    "ast_hash": "6cee335e7e52e923e18a33d626341823",
+    "semantic_hash": "6cee335e7e52e923e18a33d626341823"
+  }
+}

@@ -1,0 +1,103 @@
+# Review-пакет ФТС v14 для внешней критики
+
+This directory is a review package, not the active canon. Root `source/` is
+editable directly for the current task; no separate permission or workbook
+round-trip is required. Keep `MANIFEST.json`, SHA256, and derivatives consistent.
+The files below remain proposals until integrated into the active canon.
+
+## Файлы
+
+- `FTS_v14_paper.md` — аудированная review-копия статьи.
+- `status_patch_v14.md` — консервативная карта статусов и условий повышения.
+- `external_bridge_u1_u5.md` — проверенный внешний типизированный мост нижней цепочки; не канон.
+- `FTS_research_project_for_AI.md` — детерминированная единая исследовательская
+  выгрузка для чтения ИИ; включает канон, рабочие слои и пакет явных дополнений
+  Deep Research 2026-09-05 (EA-01…EA-08), журнал внешних коллизий и кандидатную
+  линию `код → предел кода → повторное кодирование`, а также 24 запроса Deep
+  Research по основаниям O_01…O_20 и авторский мандат текущего цикла
+  2026-09-13; сама выгрузка не является новым каноном.
+- `verification_report.md` — краткая сводка математического сьюта при успехе
+  и полный диагностический отчёт при FAIL.
+- `v14_export_cards.jsonl` — карточки в схеме `source/fts_cards.jsonl`.
+- `v14_export_triples.tsv` — рёбра в схеме `source/fts_triples.tsv`.
+- `audit/AUDIT_REPORT.md` — полный технический отчёт для автора.
+- `audit/REVIEW_CONCLUSION.md` — краткое заключение для рецензента.
+- `audit/FINDINGS.tsv` — реестр P0–P3 в формате
+  «Найдено → зависимости → вывод → что не закрыто».
+- `audit/CLAIM_MATRIX.tsv` — трасса существенных утверждений.
+- `audit/PATTERN_ATLAS.md` / `.tsv` — 31 закономерность на четырёх уровнях
+  доказательности.
+- `audit/PATTERN_OQ_MAP.md` / `.tsv` — двусторонняя карта 31 паттерна,
+  53 действующих OQ, семи программ и событий E1…E10/PARK/WATCH/ROLLUP.
+- `audit/LITERATURE_MATRIX.tsv` и `audit/SEARCH_LOG.md` — внешний поиск и
+  ограниченная граница новизны.
+- `audit/REPRODUCIBILITY.md` — данные, хеши, среда и эмпирический reanalysis.
+- `audit/GRAPH_AUDIT.md`, `CANON_REFERENCE_PATCH.tsv`,
+  `GRAPH_RELATION_PATCH.tsv` — дефекты прежнего v13 и план будущего экспорта.
+- `CHECKSUMS.sha256` — контрольные суммы остальных файлов пакета.
+
+## Границы статусов
+
+- Пакет ничего не повышает самим фактом упаковки.
+- PASS C-NN поддерживает только точно записанный математический предикат.
+- Семантическое повышение требует отдельных К1–К5 и SP-карточки с целевым статусом.
+- SP_U8, SP_U9 и SP_U12 в v13 сами имеют кандидатные статусы; их рёбра
+  `promotes_status_of` не создают `canonical_v14`.
+
+## Машинно подготовлено
+
+`PROPOSAL_STRICT_BAND_7` — гипотеза о границе форм до У7. C-60 подтверждает
+арифметический паттерн зеркальных пар и его разрыв на У8, но не вынужденность
+уровня и не смысл «Знание». Поэтому:
+
+- тип: `hypothesis_candidate`;
+- статус: `candidate_requires_canonization`;
+- зависимости: U_07, M_07, SP_WINDOW;
+- ребра `promotes_status_of` нет.
+
+Провизорные поля для workbook: `path` указывает на
+`45_Статус_гипотез_v14/PROPOSAL_STRICT_BAND_7`, `internal_ref` — `V14_AUDIT_STATUS_PATCH`.
+
+`LEVEL_RETENTION_RULE` подготовлено отдельно как `derived_constraint` из
+`O_01`+`O_03`+`O_08`, **не как аксиома**. `SYMMETRY_ESCALATION_HYPOTHESIS`
+подготовлено как `hypothesis_candidate`: A0b даёт только смену носителя
+симметрии, а последовательность анти-форма→оператор→группа остаётся проверяемой
+гипотезой. Ни одна из двух карточек не имеет ребра `promotes_status_of`.
+
+`EXTERNAL_BRIDGE_U1_U5` подготовлено как `external_bridge_candidate`. Карточка
+фиксирует component-level formal contact У2–У5 и limiting-якорь У1: фактор
+`q=|·|` задаёт класс альтернатив, а секция `s₋` даёт `s₋∘q=−|x|`. Она не
+доказывает порядок или семантические имена уровней, не выбирает `s₋` вместо
+`s₊` из внешней математики и не имеет ребра `promotes_status_of`.
+
+`EXPLICIT_ADDITIONS_20260905` подготовлено как
+`external_research_integration`: конечные пробы EA-01…EA-08 проверяют только
+заданные модели уточнения, разбиений, симметричного выбора, provenance и Lift.
+Они не являются C-NN статьи, не повышают `St_FTS` и не создают
+`promotes_status_of`.
+
+## Проверка после внешней сборки
+
+After integrating changes into the active canon, update `MANIFEST.json` and
+verify SHA256. A workbook round-trip is optional.
+`tools/query.py card PROPOSAL_STRICT_BAND_7` должен показать карточку без `promotes_status_of`.
+То же ограничение действует для `LEVEL_RETENTION_RULE` и
+`SYMMETRY_ESCALATION_HYPOTHESIS`, а также для `EXTERNAL_BRIDGE_U1_U5`.
+До этого каталог остаётся review-пакетом, а не каноном.
+
+## Текущий аудиторский вердикт
+
+- Необработанных P0/P1 нет; восемь P2 перечислены и не замаскированы.
+- O_20: 1/4 dataset wins, exact sign `p=0.9375`; D2: 2/4,
+  `p=0.6875`; чистого Д10-вердикта нет.
+- 62 PASS удостоверяют только точные math-предикаты, не смысл У7…У12.
+- После дополнительной проверки шесть источников подтверждают компонентный
+  формальный контакт У2–У5 (У1 — limiting), но не внешнюю валидацию всей ФТС.
+- Полного аналога ФТС не найдено только в пределах 28 запросов на 2026-07-13;
+  мировая новизна не заявляется.
+
+Полный runner находится в рабочем дереве:
+
+```text
+python -X utf8 work/v14_rebuild/audit/run_audit.py all
+```

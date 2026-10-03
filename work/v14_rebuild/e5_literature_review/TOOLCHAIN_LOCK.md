@@ -1,4 +1,4 @@
-# Зафиксированные версии исследовательского контура
+# Toolchain lock
 
 - Academic Research Skills plugin: `academic-research-skills@academic-research-skills-codex`
 - plugin ref/version: `v0.1.18` / `0.1.18`
@@ -14,6 +14,6 @@
 - citation cache: `E:\FTS-data\academic-research\verification.db`
 - environment variable: `ARS_VERIFICATION_CACHE_PATH`
 
-Порядок обновления: изменить зафиксированный ref, повторить quality gates ARS,
-тесты маршрутизации, smoke-тесты провайдеров, валидатор E5 и проектные проверки.
-Обновлять lock-запись только после прохождения всех проверок.
+Update procedure: change the pinned ref, rerun ARS quality gates, routing tests,
+provider smoke tests, E5 validator, and project verification gates; update this lock
+only after all pass.

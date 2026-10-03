@@ -1,4 +1,4 @@
-version: xlsx-canon-v5-self-contained
+version: xlsx-canon-v5-self-contained-author-correction-2026-09-21
 self_contained: true
 working_rule: 'Use this workbook only; external documents are not required.'
 embedded_archives:
@@ -40,7 +40,7 @@ cards:
   - id: U_m1
     type: 'level'
     status: 'canonical_strict'
-    internal_ref: 'CANON_V43/CANON_EN'
+    internal_ref: 'CANON_V43/CANON_EN + AUTHOR_CORRECTION_2026-09-21'
     symbol: 'У(-1)'
     text: 'У(-1): Шум / неизвестное. Carrier=pre-carrier; window=(-1,0,1,2,3)'
   - id: M_m1
@@ -178,17 +178,17 @@ cards:
   - id: U_06
     type: 'level'
     status: 'canonical_strict'
-    internal_ref: 'CANON_V43/CANON_EN'
+    internal_ref: 'CANON_V43/CANON_EN + AUTHOR_CORRECTION_2026-09-21'
     symbol: 'У(6)'
-    text: 'У(6): Статистика / случайная закономерность. Carrier=threshold-to-7; window=(3,4,5,6,7)'
+    text: 'У(6): Статистика / случайная закономерность. Carrier=threshold-to-7; window=(3,4,5,6,7). Активная каноническая форма: ((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))'
     depends_on:
       - U_05
   - id: M_06
     type: 'minimal_expression'
     status: 'canonical_strict'
-    internal_ref: 'CANON_V43 + user_current'
-    symbol: 'V*V'
-    text: 'М-регистр для У(6): V*V'
+    internal_ref: 'CANON_V43 + AUTHOR_CORRECTION_2026-09-21'
+    symbol: '((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))'
+    text: 'М-регистр для У(6): ((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))'
   - id: CH_06
     type: 'private_expression'
     status: 'canonical_strict'
@@ -198,17 +198,17 @@ cards:
   - id: U_07
     type: 'level'
     status: 'candidate_with_operational_gate'
-    internal_ref: 'CANON_V43/CANON_EN'
+    internal_ref: 'CANON_V43/CANON_EN + AUTHOR_CORRECTION_2026-09-21'
     symbol: 'У(7)'
-    text: 'У(7): Знание / забывание(отказ от ожидания). Carrier=node-7; window=(3,4,5,6,7)'
+    text: 'У(7): Знание / забывание(отказ от ожидания). Carrier=node-7; window=(3,4,5,6,7). Активная каноническая форма: (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))'
     depends_on:
       - U_06
   - id: M_07
     type: 'minimal_expression'
     status: 'candidate_with_operational_gate'
-    internal_ref: 'CANON_V43 + user_current'
-    symbol: 'a=-*b*b'
-    text: 'М-регистр для У(7): a=-*b*b'
+    internal_ref: 'CANON_V43 + AUTHOR_CORRECTION_2026-09-21'
+    symbol: '(((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))'
+    text: 'М-регистр для У(7): (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))'
   - id: CH_07
     type: 'private_expression'
     status: 'candidate_with_operational_gate'
@@ -820,8 +820,8 @@ v11_u7_window_cycles:
   core:
     formula: 'Answer(W)=Close(W,W)'
     forgetting: 'Forgetting(W)=Close(W,Refuse(W))'
-    math: 'y=-x*x; y!=x*x'
-    m_register: 'a=-*b*b; a!=b*b'
+    math: 'U7_author'
+    m_register: '(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))'
   boundary_7_8: 'Answer(W)=A != Hyp(W)=A?'
   agentic_gate: 'K=⟨S,0_S,κ⟩ / T7A-T7C as diagnostic layer, not core essence'
   chi_square_bridge:

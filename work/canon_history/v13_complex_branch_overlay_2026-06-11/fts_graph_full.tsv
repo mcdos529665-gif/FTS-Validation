@@ -1,0 +1,239 @@
+subject	predicate	object	evidence_id	internal_ref	status	comment	graph_id
+U_m1	has_minimal_expression	M_m1	expression_link	CANON_V43/user_current	canonical_strict	М-регистр	G_0001
+U_m1	has_private_expression	CH_m1	expression_link	CANON_V43/CANON_EN	canonical_strict	Ч-регистр	G_0002
+U_m1	has_window	(-1,0,1,2,3)	window5	workbook	canonical_strict	пятеричное окно	G_0003
+U_00	depends_on	U_m1	level_chain	CANON_V43	canonical	У(0) функционирует после U_m1	G_0004
+U_m1	has_next	U_00	level_chain	CANON_V43	canonical		G_0005
+U_00	has_minimal_expression	M_00	expression_link	CANON_V43/user_current	canonical_strict	М-регистр	G_0006
+U_00	has_private_expression	CH_00	expression_link	CANON_V43/CANON_EN	canonical_strict	Ч-регистр	G_0007
+U_00	has_window	(-1,0,1,2,3)	window5	workbook	canonical_strict	пятеричное окно	G_0008
+U_01	depends_on	U_00	level_chain	CANON_V43	canonical	У(1) функционирует после U_00	G_0009
+U_00	has_next	U_01	level_chain	CANON_V43	canonical		G_0010
+U_01	has_minimal_expression	M_01	expression_link	CANON_V43/user_current	canonical_strict	М-регистр	G_0011
+U_01	has_private_expression	CH_01	expression_link	CANON_V43/CANON_EN	canonical_strict	Ч-регистр	G_0012
+U_01	has_window	(-1,0,1,2,3)	window5	workbook	canonical_strict	пятеричное окно	G_0013
+U_02	depends_on	U_01	level_chain	CANON_V43	canonical	У(2) функционирует после U_01	G_0014
+U_01	has_next	U_02	level_chain	CANON_V43	canonical		G_0015
+U_02	has_minimal_expression	M_02	expression_link	CANON_V43/user_current	canonical_strict	М-регистр	G_0016
+U_02	has_private_expression	CH_02	expression_link	CANON_V43/CANON_EN	canonical_strict	Ч-регистр	G_0017
+U_02	has_window	(-1,0,1,2,3)	window5	workbook	canonical_strict	пятеричное окно	G_0018
+U_03	depends_on	U_02	level_chain	CANON_V43	canonical	У(3) функционирует после U_02	G_0019
+U_02	has_next	U_03	level_chain	CANON_V43	canonical		G_0020
+U_03	has_minimal_expression	M_03	expression_link	CANON_V43/user_current	canonical_strict	М-регистр	G_0021
+U_03	has_private_expression	CH_03	expression_link	CANON_V43/CANON_EN	canonical_strict	Ч-регистр	G_0022
+U_03	has_window	(3,4,5,6,7)	window5	workbook	canonical_strict	пятеричное окно	G_0023
+U_04	depends_on	U_03	level_chain	CANON_V43	canonical	У(4) функционирует после U_03	G_0024
+U_03	has_next	U_04	level_chain	CANON_V43	canonical		G_0025
+U_04	has_minimal_expression	M_04	expression_link	CANON_V43/user_current	canonical_strict	М-регистр	G_0026
+U_04	has_private_expression	CH_04	expression_link	CANON_V43/CANON_EN	canonical_strict	Ч-регистр	G_0027
+U_04	has_window	(3,4,5,6,7)	window5	workbook	canonical_strict	пятеричное окно	G_0028
+U_05	depends_on	U_04	level_chain	CANON_V43	canonical	У(5) функционирует после U_04	G_0029
+U_04	has_next	U_05	level_chain	CANON_V43	canonical		G_0030
+U_05	has_minimal_expression	M_05	expression_link	CANON_V43/user_current	canonical_strict	М-регистр	G_0031
+U_05	has_private_expression	CH_05	expression_link	CANON_V43/CANON_EN	canonical_strict	Ч-регистр	G_0032
+U_05	has_window	(3,4,5,6,7)	window5	workbook	canonical_strict	пятеричное окно	G_0033
+U_06	depends_on	U_05	level_chain	CANON_V43	canonical	У(6) функционирует после U_05	G_0034
+U_05	has_next	U_06	level_chain	CANON_V43	canonical		G_0035
+U_06	has_minimal_expression	M_06	expression_link	CANON_V43/user_current	canonical_strict	М-регистр	G_0036
+U_06	has_private_expression	CH_06	expression_link	CANON_V43/CANON_EN	canonical_strict	Ч-регистр	G_0037
+U_06	has_window	(3,4,5,6,7)	window5	workbook	canonical_strict	пятеричное окно	G_0038
+U_07	depends_on	U_06	level_chain	CANON_V43	canonical	У(7) функционирует после U_06	G_0039
+U_06	has_next	U_07	level_chain	CANON_V43	canonical		G_0040
+U_07	has_minimal_expression	M_07	expression_link	CANON_V43/user_current	candidate_with_operational_gate	М-регистр	G_0041
+U_07	has_private_expression	CH_07	expression_link	CANON_V43/CANON_EN	candidate_with_operational_gate	Ч-регистр	G_0042
+U_07	has_window	(3,4,5,6,7)	window5	workbook	candidate_with_operational_gate	пятеричное окно	G_0043
+U_07	has_antimode	minusA	anti_mode	CANON_EN	candidate_with_operational_gate	−A после 7+	G_0044
+U_08	depends_on	U_07	level_chain	CANON_V43	projected	У(8) функционирует после U_07	G_0045
+U_07	has_next	U_08	level_chain	CANON_V43	projected		G_0046
+U_08	has_minimal_expression	M_08	expression_link	CANON_V43/user_current	reserved_underformalized	М-регистр	G_0047
+U_08	has_private_expression	CH_08	expression_link	CANON_V43/CANON_EN	reserved_underformalized	Ч-регистр	G_0048
+U_08	has_window	(7,8,9,10,11)	window5	workbook	reserved_underformalized	пятеричное окно	G_0049
+U_08	has_antimode	minusA	anti_mode	CANON_EN	reserved_underformalized	−A после 7+	G_0050
+U_09	depends_on	U_08	level_chain	CANON_V43	projected	У(9) функционирует после U_08	G_0051
+U_08	has_next	U_09	level_chain	CANON_V43	projected		G_0052
+U_09	has_minimal_expression	M_09	expression_link	CANON_V43/user_current	reserved_underformalized	М-регистр	G_0053
+U_09	has_private_expression	CH_09	expression_link	CANON_V43/CANON_EN	reserved_underformalized	Ч-регистр	G_0054
+U_09	has_window	(7,8,9,10,11)	window5	workbook	reserved_underformalized	пятеричное окно	G_0055
+U_09	has_antimode	minusA	anti_mode	CANON_EN	reserved_underformalized	−A после 7+	G_0056
+U_10	depends_on	U_09	level_chain	CANON_V43	projected	У(10) функционирует после U_09	G_0057
+U_09	has_next	U_10	level_chain	CANON_V43	projected		G_0058
+U_10	has_minimal_expression	M_10	expression_link	CANON_V43/user_current	reserved_underformalized	М-регистр	G_0059
+U_10	has_private_expression	CH_10	expression_link	CANON_V43/CANON_EN	reserved_underformalized	Ч-регистр	G_0060
+U_10	has_window	(7,8,9,10,11)	window5	workbook	reserved_underformalized	пятеричное окно	G_0061
+U_10	has_antimode	minusA	anti_mode	CANON_EN	reserved_underformalized	−A после 7+	G_0062
+U_11	depends_on	U_10	level_chain	CANON_V43	projected	У(11) функционирует после U_10	G_0063
+U_10	has_next	U_11	level_chain	CANON_V43	projected		G_0064
+U_11	has_minimal_expression	M_11	expression_link	CANON_V43/user_current	reserved_underformalized	М-регистр	G_0065
+U_11	has_private_expression	CH_11	expression_link	CANON_V43/CANON_EN	reserved_underformalized	Ч-регистр	G_0066
+U_11	has_window	(7,8,9,10,11)	window5	workbook	reserved_underformalized	пятеричное окно	G_0067
+U_11	has_antimode	minusA	anti_mode	CANON_EN	reserved_underformalized	−A после 7+	G_0068
+U_12	depends_on	U_11	level_chain	CANON_V43	projected	У(12) функционирует после U_11	G_0069
+U_11	has_next	U_12	level_chain	CANON_V43	projected		G_0070
+U_12	has_minimal_expression	M_12	expression_link	CANON_V43/user_current	projected_underformalized	М-регистр	G_0071
+U_12	has_private_expression	CH_12	expression_link	CANON_V43/CANON_EN	projected_underformalized	Ч-регистр	G_0072
+U_12	has_window	(11,12,13,14,15)	window5	workbook	projected_underformalized	пятеричное окно	G_0073
+U_12	has_antimode	minusA	anti_mode	CANON_EN	projected_underformalized	−A после 7+	G_0074
+U_13	depends_on	U_12	level_chain	CANON_V43	projected	У(13) функционирует после U_12	G_0075
+U_12	has_next	U_13	level_chain	CANON_V43	projected		G_0076
+U_13	has_minimal_expression	M_13	expression_link	CANON_V43/user_current	projected_underformalized	М-регистр	G_0077
+U_13	has_private_expression	CH_13	expression_link	CANON_V43/CANON_EN	projected_underformalized	Ч-регистр	G_0078
+U_13	has_window	(11,12,13,14,15)	window5	workbook	projected_underformalized	пятеричное окно	G_0079
+U_13	has_antimode	minusA	anti_mode	CANON_EN	projected_underformalized	−A после 7+	G_0080
+U_14	depends_on	U_13	level_chain	CANON_V43	projected	У(14) функционирует после U_13	G_0081
+U_13	has_next	U_14	level_chain	CANON_V43	projected		G_0082
+U_14	has_minimal_expression	M_14	expression_link	CANON_V43/user_current	projected_underformalized	М-регистр	G_0083
+U_14	has_private_expression	CH_14	expression_link	CANON_V43/CANON_EN	projected_underformalized	Ч-регистр	G_0084
+U_14	has_window	(11,12,13,14,15)	window5	workbook	projected_underformalized	пятеричное окно	G_0085
+U_14	has_antimode	minusA	anti_mode	CANON_EN	projected_underformalized	−A после 7+	G_0086
+U_15	depends_on	U_14	level_chain	CANON_V43	projected	У(15) функционирует после U_14	G_0087
+U_14	has_next	U_15	level_chain	CANON_V43	projected		G_0088
+U_15	has_minimal_expression	M_15	expression_link	CANON_V43/user_current	canonical_node_underformalized_semantics	М-регистр	G_0089
+U_15	has_private_expression	CH_15	expression_link	CANON_V43/CANON_EN	canonical_node_underformalized_semantics	Ч-регистр	G_0090
+U_15	has_window	(15,16,17,...)	window5	workbook	canonical_node_underformalized_semantics	пятеричное окно	G_0091
+U_15	has_antimode	minusA	anti_mode	CANON_EN	canonical_node_underformalized_semantics	−A после 7+	G_0092
+U_16	depends_on	U_15	level_chain	CANON_V43	projected	У(16) функционирует после U_15	G_0093
+U_15	has_next	U_16	level_chain	CANON_V43	projected		G_0094
+U_16	has_minimal_expression	M_16	expression_link	CANON_V43/user_current	speculative	М-регистр	G_0095
+U_16	has_private_expression	CH_16	expression_link	CANON_V43/CANON_EN	speculative	Ч-регистр	G_0096
+U_16	has_window	(15,16,17,...)	window5	workbook	speculative	пятеричное окно	G_0097
+U_16	has_antimode	minusA	anti_mode	CANON_EN	speculative	−A после 7+	G_0098
+U_17	depends_on	U_16	level_chain	CANON_V43	projected	У(17) функционирует после U_16	G_0099
+U_16	has_next	U_17	level_chain	CANON_V43	projected		G_0100
+U_17	has_minimal_expression	M_17	expression_link	CANON_V43/user_current	speculative	М-регистр	G_0101
+U_17	has_private_expression	CH_17	expression_link	CANON_V43/CANON_EN	speculative	Ч-регистр	G_0102
+U_17	has_window	(15,16,17,...)	window5	workbook	speculative	пятеричное окно	G_0103
+U_17	has_antimode	minusA	anti_mode	CANON_EN	speculative	−A после 7+	G_0104
+O_01	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0105
+O_02	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0106
+O_03	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0107
+O_04	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0108
+O_05	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0109
+O_06	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base_plus_user_refinement	старое основание связности	G_0110
+O_07	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0111
+O_08	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0112
+O_09	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0113
+O_10	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0114
+O_11	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0115
+O_12	supports	U_m1_to_U_07	connectivity	CANON_V43	canon/base	старое основание связности	G_0116
+O_13	candidate_supports	U_m1_to_U_07	candidate_connectivity	CANON_V43	candidate	candidate-модуль	G_0117
+O_14	candidate_supports	U_m1_to_U_07	candidate_connectivity	CANON_V43	candidate	candidate-модуль	G_0118
+O_15	candidate_supports	U_m1_to_U_07	candidate_connectivity	CANON_V43	candidate	candidate-модуль	G_0119
+O_16	candidate_supports	U_m1_to_U_07	candidate_connectivity	CANON_V43	candidate	candidate-модуль	G_0120
+O_17	candidate_supports	U_m1_to_U_07	candidate_connectivity	CANON_V43	candidate	candidate-модуль	G_0121
+O_18	candidate_supports	U_m1_to_U_07	candidate_connectivity	CANON_V43	candidate	candidate-модуль	G_0122
+O_19	candidate_supports	U_m1_to_U_07	candidate_connectivity	CANON_V43	candidate	candidate-модуль	G_0123
+O_20	candidate_supports	U_m1_to_U_07	candidate_connectivity	CANON_V43	candidate_requires_empirical_test	candidate-модуль	G_0124
+OP_Tot	depends_on	O2	operator_dependency	CANON_V43/CANON_EN	canonical		G_0125
+OP_Tot	depends_on	O12	operator_dependency	CANON_V43/CANON_EN	canonical		G_0126
+OP_Tot	depends_on	A4	operator_dependency	CANON_V43/CANON_EN	canonical		G_0127
+OP_TotPlus	depends_on	O2	operator_dependency	CANON_V43/CANON_EN	canonical		G_0128
+OP_TotMinus	depends_on	O2	operator_dependency	CANON_V43/CANON_EN	canonical		G_0129
+OP_TotMinus	depends_on	O12	operator_dependency	CANON_V43/CANON_EN	canonical		G_0130
+OP_Lift	depends_on	O3	operator_dependency	CANON_V43/CANON_EN	canonical		G_0131
+OP_Lift	depends_on	O7	operator_dependency	CANON_V43/CANON_EN	canonical		G_0132
+OP_Lift	depends_on	O8	operator_dependency	CANON_V43/CANON_EN	canonical		G_0133
+OP_Lift	depends_on	A6	operator_dependency	CANON_V43/CANON_EN	canonical		G_0134
+OP_Promote	depends_on	O12	operator_dependency	CANON_V43/CANON_EN	canonical		G_0135
+OP_Promote	depends_on	A9	operator_dependency	CANON_V43/CANON_EN	canonical		G_0136
+OP_Refuse	depends_on	A8	operator_dependency	CANON_V43/CANON_EN	canonical		G_0137
+OP_Sever	depends_on	A8	operator_dependency	CANON_V43/CANON_EN	canonical		G_0138
+OP_kappa	depends_on	O15	operator_dependency	CANON_V43/CANON_EN	canonical		G_0139
+OP_event0A	depends_on	A2	operator_dependency	CANON_V43/CANON_EN	canonical		G_0140
+OP_Unpack	depends_on	O9	operator_dependency	CANON_V43/CANON_EN	canonical		G_0141
+OP_Unpack	depends_on	O12	operator_dependency	CANON_V43/CANON_EN	canonical		G_0142
+OP_Compress2	depends_on	O8	operator_dependency	CANON_V43/CANON_EN	canonical		G_0143
+OP_Expand2	depends_on	O8	operator_dependency	CANON_V43/CANON_EN	canonical		G_0144
+OP_pi	depends_on	A7	operator_dependency	CANON_V43/CANON_EN	canonical		G_0145
+OP_iota	depends_on	A7	operator_dependency	CANON_V43/CANON_EN	canonical		G_0146
+A0	supports	core_grammar	axiom_support	CANON_EN	canonical	Δ0 generates distinguishability; ladder-first; operators core, formalizations secondary	G_0147
+A0b	supports	core_grammar	axiom_support	CANON_EN	canonical	nodes 3/7/11/15 change symmetry carrier	G_0148
+A1	supports	core_grammar	axiom_support	CANON_EN	canonical	is/no/unknown/absent are defined only relative to C_n	G_0149
+A2	supports	core_grammar	axiom_support	CANON_EN	canonical	0_A is induced structure on U\A; event(0_A)=¬A without identification	G_0150
+A3	supports	core_grammar	axiom_support	CANON_EN	canonical	v(A)=(t(A),f(A)) independent positive/negative evidence channels	G_0151
+A4	supports	core_grammar	axiom_support	CANON_EN	canonical	Tot collapses 0_A into ¬A and/or makes f derivative of t	G_0152
+A5	supports	core_grammar	axiom_support	CANON_EN	canonical_conceptual	If R*_n>ε then level totality is false in class I_n	G_0153
+A5a	supports	core_grammar	axiom_support	CANON_EN	canonical_extension	Operational diagnosis should use ΔR*(op), not bare R*>0	G_0154
+A6	supports	core_grammar	axiom_support	CANON_EN	canonical	X_{n+1}=Lift(X_n,Res_n); residual query becomes expressible	G_0155
+A7	supports	core_grammar	axiom_support	CANON_EN	canonical	ι_n and π_n preserve old layer; π∘ι=id	G_0156
+A8	supports	core_grammar	axiom_support	CANON_EN	canonical	Starting at 7+, Refuse/Sever are internally definable; −A not ¬A/0_A	G_0157
+A9	supports	core_grammar	axiom_support	CANON_EN	canonical	anti-mode is declared next constructive level without expressibility gain	G_0158
+F1	defeats_or_tests	FTS_core	test_relation	CANON_V43/CANON_EN	canonical	найти X между M_n и M_{n+1}, не повтор/не ранняя форма/не метастатус	G_0159
+F2	defeats_or_tests	FTS_core	test_relation	CANON_V43/CANON_EN	canonical	схлопнуть два соседних уровня без потери роли/вопроса/следа	G_0160
+F3	defeats_or_tests	FTS_core	test_relation	CANON_V43/CANON_EN	canonical	M′ independent, C(M′)≤C(FTS-core), covers −1..7	G_0161
+F4	defeats_or_tests	FTS_core	test_relation	CANON_V43/CANON_EN	canonical	показать редукцию 0_A к ¬A без потерь структуры	G_0162
+F5	defeats_or_tests	FTS_core	test_relation	CANON_V43/CANON_EN	canonical	показать знание без κ, сохранив provenance/revision/defeaters/domain-control	G_0163
+T7A	defeats_or_tests	FTS_core	test_relation	CANON_V43/CANON_EN	canonical	какое наблюдение e увеличит f(A) / изменит решение?	G_0164
+T7B	defeats_or_tests	FTS_core	test_relation	CANON_V43/CANON_EN	canonical	интервенция в g(e) или Λ предсказуемо меняет поведение	G_0165
+T7C	defeats_or_tests	FTS_core	test_relation	CANON_V43/CANON_EN	canonical	контрсвидетельства переносятся между контекстами, если Sever не применён	G_0166
+U_01	projects_to	U_m1	two_step_projection	CANON_V43	canonical	сигнал есть стабилизированный носитель	G_0167
+U_02	projects_to	U_00	two_step_projection	CANON_V43	canonical	код есть управляемое несовпадение	G_0168
+U_03	projects_to	U_01	two_step_projection	CANON_V43	canonical	информация есть сигнал через смысловую границу	G_0169
+U_04	projects_to	U_02	two_step_projection	CANON_V43	canonical	вероятность есть код + различие + остаток	G_0170
+U_05	projects_to	U_03	two_step_projection	CANON_V43	canonical	выбор есть реализованное различие	G_0171
+U_06	projects_to	U_04	two_step_projection	CANON_V43	canonical	статистика есть агрегированное поле выборов	G_0172
+U_07	projects_to	U_05	two_step_projection	CANON_V43	canonical	знание проецируется вниз как критерий выбора	G_0173
+ADDENDUM_V3	contains	ADD_NOTATION_ABS	addendum_v3	ADDENDUM_V3	candidate	notation export rule	G_0174
+ADDENDUM_V3	contains	ADD_MIRROR_WINDOW	addendum_v3	ADDENDUM_V3	candidate	local mirror window	G_0175
+ADDENDUM_V3	contains	ADD_ZERO_BOUNDARY	addendum_v3	ADDENDUM_V3	candidate	zero boundary	G_0176
+ADDENDUM_V3	contains	ADD_PARITY_TOPOLOGY	addendum_v3	ADDENDUM_V3	candidate	even/odd topology	G_0177
+ADDENDUM_V3	contains	ADD_U11_EPI	addendum_v3	ADDENDUM_V3	candidate	U11 dynamic/window reading	G_0178
+ADDENDUM_V3	contains	ADD_U12_CIRCLE	addendum_v3	ADDENDUM_V3	candidate	U12 circle candidate	G_0179
+ADD_MIRROR_WINDOW	depends_on	ADD_ZERO_BOUNDARY	logic	ADDENDUM_V3	candidate	local mirror needs zero boundary	G_0180
+ADD_ZERO_BOUNDARY	supports	O(17)	boundary_gain	ADDENDUM_V3	candidate	boundary candidate support	G_0181
+ADD_PARITY_TOPOLOGY	supports	O(8)	two_step_projection	ADDENDUM_V3	candidate	local prohibitions are projection-relative	G_0182
+ADD_TOPO_INVARIANTS	supports	O(17)	boundary_gain	ADDENDUM_V3	candidate	zero classes as boundary types	G_0183
+ADD_U11_EPI	supports	U_11	level_variant	ADDENDUM_V3	candidate	e^x dynamic; e^pi window constant	G_0184
+ADD_U12_CIRCLE	supports	U_12	level_candidate	ADDENDUM_V3	candidate	closed boundary candidate	G_0185
+ADD_U12_CIRCLE	depends_on	ADD_U11_EPI	structural_link	ADDENDUM_V3	candidate	e^pi gives support through U11/15 window	G_0186
+ADD_U12_CIRCLE	depends_on	U_10	structural_link	ADDENDUM_V3	candidate	cos period becomes circle coordinate	G_0187
+ADD_HALF_PHI	supports	U_09	boundary_hypothesis	ADDENDUM_V3	candidate	cubic surplus boundary	G_0188
+ADD_RESEARCH_FORMAT	exports_to	FTS_research_v8.md	research_export	workbook	active	primary GPT research format	G_0189
+ADD_RESEARCH_FORMAT	exports_to	fts_cards_research_v8.jsonl	research_export	workbook	active	cards sidecar	G_0190
+ADD_RESEARCH_FORMAT	exports_to	fts_triples_research_v8.tsv	research_export	workbook	active	graph sidecar	G_0191
+SP_WINDOW	promotes_status_of	ADD_MIRROR_WINDOW	status_patch	RESEARCH_STATUS_V9	derived_constraint	Window(F) upgraded from candidate to derived_constraint	G_0192
+SP_ZERO	promotes_status_of	ADD_ZERO_BOUNDARY	status_patch	RESEARCH_STATUS_V9	formal_math_fact / derived_constraint	ZeroBoundary split into math fact + derived constraint	G_0193
+SP_PARITY	promotes_status_of	ADD_PARITY_TOPOLOGY	status_patch	RESEARCH_STATUS_V9	canonical_alignment	Parity topology upgraded to canonical_alignment	G_0194
+SP_U8	promotes_status_of	U_08	status_patch	RESEARCH_STATUS_V9	candidate_with_operational_gate	U8 promoted from reserved_underformalized	G_0195
+SP_U9	promotes_status_of	U_09	status_patch	RESEARCH_STATUS_V9	FTS_candidate	U9 promoted from reserved_underformalized	G_0196
+SP_U12	promotes_status_of	U_12	status_patch	RESEARCH_STATUS_V9	candidate_requires_formalization + canonical_alignment	U12 promoted from projected_underformalized	G_0197
+SP_PHI	supports	ADD_HALF_PHI	status_patch	RESEARCH_STATUS_V9	formal_math_fact / FTS_candidate	phi boundary stays FTS_candidate but math kernel promoted	G_0198
+SP_EPI	does_not_promote_above	ADD_U11_EPI	status_patch	RESEARCH_STATUS_V9	FTS_candidate	e^pi remains candidate	G_0199
+SP_LIMITS	does_not_promote_above	U_13_to_U_17	status_patch	RESEARCH_STATUS_V9	projected/speculative	no responsible promotion without operators/tests	G_0200
+U_07	has_core	U7_WINDOW_CORE	v11_core	USER_DIALOG_V11	candidate_with_operational_gate	У7 core: Answer(W)=Close(W,W)	G_0201
+U7_WINDOW_CORE	has_operator	OP_WindowClose	v11_core	USER_DIALOG_V11	candidate_core	оператор самозакрытия окна ожидания	G_0202
+U_07	has_antimode_detail	U7_FORGET_CLOSE	v11_core	USER_DIALOG_V11	candidate_core	забывание как Close(W,Refuse(W))	G_0203
+U7_WINDOW_CORE	has_boundary	U7_U8_ANSWER_QUESTION_BOUNDARY	v11_boundary	USER_DIALOG_V11	candidate_boundary	ответ/вопрос; У7/У8	G_0204
+U_08	contrasts_with	U7_U8_ANSWER_QUESTION_BOUNDARY	v11_boundary	USER_DIALOG_V11	candidate_boundary	У8 = A?; не слабое У7	G_0205
+U7_WINDOW_CORE	has_agentic_gate	U7_AGENTIC_GATE_LAYER	v11_guardrail	CANON_EN/USER_DIALOG_V11	operational_diagnostic_layer	κ/T7 перенесены в diagnostic layer	G_0206
+M_07	has_local_forbid	U7_MATH_LOCAL_FORBID	v11_math	RESEARCH_STATUS_V9/USER_DIALOG_V11	derived_constraint	y=-x*x requires y!=x*x	G_0207
+U_06	contrasts_with	U7_MATH_LOCAL_FORBID	v11_math	RESEARCH_STATUS_V9/USER_DIALOG_V11	derived_constraint	У7 не должен схлопываться в У6	G_0208
+CHI_STAT_LADDER	uses_carrier	CHI_CARRIER	v12_chi_ladder	USER_DIALOG_V12	statistical_overlay_candidate	x:=χ, not χ²	G_0209
+CHI_CARRIER	has_operator	OP_ChiCarrier	v12_chi_ladder	USER_DIALOG_V12	statistical_overlay_candidate	χ_i from O_i,E_i	G_0210
+CHI_STAT_LADDER	has_operator	OP_ChiOverlayMap	v12_chi_ladder	USER_DIALOG_V12	candidate_overlay	F_n(χ) by level formulas	G_0211
+U_06	has_statistical_overlay	CHI_LADDER_U6	v12_chi_ladder	USER_DIALOG_V12	strong_statistical_analog	χ*χ=χ²	G_0212
+U_07	has_statistical_overlay	CHI_LADDER_U7	v12_chi_ladder	USER_DIALOG_V12	candidate_bridge	-χ*χ; !=χ*χ; Answer(W)	G_0213
+U_08	has_statistical_overlay	CHI_LADDER_U8	v12_chi_ladder	USER_DIALOG_V12	candidate_with_operational_gate	sqrt(abs(χ)); A?	G_0214
+U_09	has_statistical_overlay	CHI_LADDER_U9	v12_chi_ladder	USER_DIALOG_V12	FTS_candidate_guarded	requires causal/counterfactual decomposition	G_0215
+U_10	has_statistical_overlay	CHI_LADDER_U10	v12_chi_ladder	USER_DIALOG_V12	reserved_underformalized_overlay	Compare(E,E',loss,df,Δχ²)	G_0216
+U_11	has_statistical_overlay	CHI_LADDER_U11	v12_chi_ladder	USER_DIALOG_V12	reserved_underformalized_overlay	Own(W,E,loss,α,protocol)	G_0217
+CHI_LADDER_U7	contrasts_with	CHI_LADDER_U6	v12_chi_ladder	USER_DIALOG_V12	candidate_bridge	Answer(W) != χ²	G_0218
+CHI_LADDER_U8	contrasts_with	CHI_LADDER_U7	v12_chi_ladder	USER_DIALOG_V12	candidate_boundary	A? != A	G_0219
+CHI_LADDER_U9	requires	causal_counterfactual_decomposition	v12_chi_ladder	USER_DIALOG_V12	guardrail	χ³ alone is not understanding	G_0220
+COMPLEX_BRANCH_OVERLAY	uses_carrier	COMPLEX_CARRIER	Complex_Branch_Overlay	USER_DIALOG_V13	candidate_overlay	complex overlay carrier	G_0221
+COMPLEX_CARRIER	has_operator	OP_ComplexNormReadout	25_Операторы	USER_DIALOG_V13	candidate_overlay	Q readout	G_0222
+COMPLEX_CARRIER	has_operator	OP_ComplexBranchAccess	25_Операторы	USER_DIALOG_V13	candidate_overlay	branch access	G_0223
+U_06	has_complex_overlay	COMPLEX_LADDER_U6	Complex_Branch_Overlay	USER_DIALOG_V13	candidate_overlay	U6 sees Q(χ)	G_0224
+U_07	has_complex_overlay	COMPLEX_LADDER_U7	Complex_Branch_Overlay	USER_DIALOG_V13	candidate_bridge	U7 != Q(χ)	G_0225
+U_08	has_complex_overlay	COMPLEX_LADDER_U8	Complex_Branch_Overlay	USER_DIALOG_V13	candidate	U8 branch question	G_0226
+U_09	has_complex_overlay	COMPLEX_LADDER_U9	Complex_Branch_Overlay	USER_DIALOG_V13	FTS_candidate_guarded	U9 phase explanation	G_0227
+U_10	has_complex_overlay	COMPLEX_LADDER_U10	Complex_Branch_Overlay	USER_DIALOG_V13	reserved_overlay	U10 branch criteria	G_0228
+U_11	has_complex_overlay	COMPLEX_LADDER_U11	Complex_Branch_Overlay	USER_DIALOG_V13	reserved_overlay	U11 protocol branch	G_0229
+U_12	has_complex_overlay	COMPLEX_LADDER_U12	Complex_Branch_Overlay	USER_DIALOG_V13	candidate_U12_overlay	U12 complex boundary	G_0230
+COMPLEX_LADDER_U7	contrasts_with	COMPLEX_LADDER_U6	Complex_Branch_Overlay	USER_DIALOG_V13	guardrail	phase/readout not identical	G_0231
+COMPLEX_LADDER_U8	asks_branch_of	COMPLEX_CARRIER	Complex_Branch_Overlay	USER_DIALOG_V13	candidate	A_k? branch question	G_0232
+COMPLEX_LADDER_U9	requires	causal_counterfactual_phase_model	Complex_Branch_Overlay	USER_DIALOG_V13	guardrail	not χ³ alone	G_0233
+TENSOR_CONTEXT_OVERLAY	uses_carrier	TENSOR_CARRIER	Tensor_Context_Overlay	USER_DIALOG_V13	candidate_overlay	tensor context carrier	G_0234
+TENSOR_CONTEXT_OVERLAY	has_operator	OP_TensorContextMap	25_Операторы	USER_DIALOG_V13	candidate_overlay	tensor operator	G_0235
+U_10	has_tensor_overlay	TENSOR_LADDER_U10	Tensor_Context_Overlay	USER_DIALOG_V13	candidate_overlay	U10 tensor metric	G_0236
+U_11	has_tensor_overlay	TENSOR_LADDER_U11	Tensor_Context_Overlay	USER_DIALOG_V13	candidate_overlay	U11 observer index	G_0237
+U_12	has_tensor_overlay	TENSOR_LADDER_U12	Tensor_Context_Overlay	USER_DIALOG_V13	candidate_U12_overlay	U12 tensor boundary	G_0238

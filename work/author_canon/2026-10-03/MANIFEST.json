@@ -1,0 +1,37 @@
+{
+  "version": "AC-2026-10-03",
+  "date": "2026-10-03",
+  "author_status": "accepted_into_author_canon",
+  "release_kind": "versioned_author_canon_addition",
+  "base_version": "v13_complex_branch_overlay",
+  "supersedes_version": null,
+  "supersedes_scope": [],
+  "base_manifest_sha256": "a91c453226cac21072478fa1fbf2db766e36f1bfe477e52414ee19f5c8f6f16a",
+  "base_workbook_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
+  "merged_workbook_release": "not_issued",
+  "evidence_scope": "Авторская запись построения окон; семантика узлов и ролей семейств не задана",
+  "counts": {
+    "new_statements": 2,
+    "editorial_notes": 1,
+    "cards": 3,
+    "triples": 14
+  },
+  "files": {
+    "AMENDMENT.md": {
+      "sha256": "7cea8db76d1277a0a879e0549ae80df09be05d5c08d5c9921a9e7aa4d08460cb",
+      "bytes": 5764
+    },
+    "AUTHOR_MESSAGE.txt": {
+      "sha256": "34b1ebabd41f273ff301c7b3af36cde88cc06506192d45c51c2b8c24aa28de08",
+      "bytes": 344
+    },
+    "cards.jsonl": {
+      "sha256": "a9064daca28abd0c5f1918ebd319fe0a4c6e6927db40107ce690d682a72e1cc5",
+      "bytes": 3486
+    },
+    "triples.tsv": {
+      "sha256": "691a5895a0436c583e82a76799bc9dc7ebda512eee53c2360e94ac5707aa80c1",
+      "bytes": 845
+    }
+  }
+}

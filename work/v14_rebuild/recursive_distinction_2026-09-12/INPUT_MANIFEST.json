@@ -1,0 +1,10 @@
+{
+  "schema": "fts-author-note-intake/v1",
+  "date": "2026-09-12",
+  "source_role": "user_submitted_research_note_not_canon",
+  "file": "SOURCE_ORIGINAL.txt",
+  "bytes": 31284,
+  "sha256": "30c38293a9cbedb2770e6ed00724fbe0f9b66e0840cff967365f1200289e017b",
+  "encoding": "utf-8",
+  "line_count": 993
+}

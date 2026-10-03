@@ -1,0 +1,50 @@
+{
+  "seed": 20260615,
+  "datasets": [
+    "breast_cancer",
+    "ionosphere",
+    "sonar",
+    "diabetes"
+  ],
+  "summary": {
+    "logreg": {
+      "median_T1": 0.7972592592592592,
+      "median_T2": 0.7855957372466806,
+      "median_T3": 0.8517522594364699,
+      "median_ORACLE": 0.8797632192369035,
+      "median_T3_minus_T2": 0.001810930180566661,
+      "winrate_T3_gt_T2": 0.5625,
+      "p_T3_gt_T2_wilcoxon": 0.00047845663330142995,
+      "median_ORACLE_minus_T2": 0.05446393762183244,
+      "median_T2_minus_T1": 0.0003306878306877925,
+      "n_folds": 80
+    },
+    "histgb": {
+      "median_T1": 0.9485125858123569,
+      "median_T2": 0.9542334096109839,
+      "median_T3": 0.9391512377782401,
+      "median_ORACLE": 0.9626666666666666,
+      "median_T3_minus_T2": -0.002454826794449416,
+      "winrate_T3_gt_T2": 0.3625,
+      "p_T3_gt_T2_wilcoxon": 0.9994776294299179,
+      "median_ORACLE_minus_T2": 0.008679986898132985,
+      "median_T2_minus_T1": 0.0009404761904761583,
+      "n_folds": 80
+    }
+  },
+  "per_dataset_T3_minus_T2": {
+    "logreg": {
+      "breast_cancer": -0.0003291172530445752,
+      "ionosphere": 0.17066666666666674,
+      "sonar": 0.023385167464114842,
+      "diabetes": -0.007685185185185073
+    },
+    "histgb": {
+      "breast_cancer": 0.0006706908115359234,
+      "ionosphere": 0.0,
+      "sonar": -0.013729977116704872,
+      "diabetes": -0.00450034940600974
+    }
+  },
+  "verdict": "WEAK — T3>T2 только для LogReg (приём для слабых моделей, не глубокая роль)"
+}

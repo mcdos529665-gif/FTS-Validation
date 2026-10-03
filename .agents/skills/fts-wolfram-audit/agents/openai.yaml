@@ -1,0 +1,7 @@
+interface:
+  display_name: "FTS Wolfram Audit"
+  short_description: "Independent Wolfram checks for FTS math"
+  default_prompt: "Use $fts-wolfram-audit to independently verify a precise FTS mathematical claim and search for counterexamples."
+
+policy:
+  allow_implicit_invocation: true

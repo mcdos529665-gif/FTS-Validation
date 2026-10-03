@@ -1,6 +1,8 @@
-# FTS v13 LLM export — START HERE
+# FTS active canonical release — START HERE
 
-This package is an LLM-friendly export of `ФТС_табличный_канон_v13_complex_branch_overlay.xlsx`.
+This package is the active canonical release derived from
+`ФТС_табличный_канон_v13_complex_branch_overlay.xlsx` and explicitly corrected
+by the author on 2026-09-21.
 
 ## Hard reading rules
 
@@ -10,12 +12,15 @@ This package is an LLM-friendly export of `ФТС_табличный_канон_
 - Do not promote a candidate/overlay to canon unless status fields, local_forbid rules, Lift/defeat conditions, and graph/card evidence support it.
 - For any conclusion, cite card IDs, graph triples, or sheet rows. If an entity is not found, say `нет в артефактах`.
 
-## Current v13 snapshot
+## Current active release
 
+- Release: `v13_complex_branch_overlay_author_correction_2026-09-21`
+- Base release: `v13_complex_branch_overlay`
 - Cards: `161`
 - Triples: `238`
 - Sheets: `54`
-- Source SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6`
+- Base workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6`
+- Canonical correction: U6 and U7 formulas are replaced in cards `U_06`, `M_06`, `U_07`, `M_07`.
 
 ## Reader view
 

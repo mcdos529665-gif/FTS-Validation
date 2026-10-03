@@ -1,8 +1,8 @@
 {
   "source": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-06-11T06:23:03Z",
-  "version": "v13_complex_branch_overlay",
+  "exported_at_utc": "2026-09-21T00:00:00Z",
+  "version": "v13_complex_branch_overlay_author_correction_2026-09-21",
   "sheet_count": 54,
   "sheets": [
     {
@@ -1275,7 +1275,7 @@
           "U7_Kappa_Gate",
           null,
           "#'U7_Kappa_Gate'!A1",
-          "рабочий gate У7: связь M₇=a=-*b*b, y=-1*x*x и κ(S,0_S,Prov,Rev)",
+          "рабочий gate У7: связь M₇=(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))), y=-1*x*x и κ(S,0_S,Prov,Rev)",
           "active_candidate",
           "v10; math bridge accepted; operational proof gated"
         ],
@@ -1416,7 +1416,7 @@
         ],
         [
           "Статус У(7)",
-          "candidate_with_operational_gate: M₇=a=-*b*b прямо связан с y=-1*x*x; Ч-регистр K=⟨S,0_S,κ⟩ остаётся операциональным gate",
+          "candidate_with_operational_gate: M₇=(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) прямо связан с y=-1*x*x; Ч-регистр K=⟨S,0_S,κ⟩ остаётся операциональным gate",
           "math connectedness accepted; strict knowledge proof requires κ/T7A/T7B/T7C",
           "03_Уровни_У"
         ],
@@ -1655,7 +1655,7 @@
           "Статистика / случайная закономерность",
           "0_статистики как out-of-sample/hidden variables",
           "canonical_strict",
-          "V*V / (a=b ∨ a≠b)*(a=b ∨ a≠b)",
+          "((a=b) and (a!=b)) and ((a=b) or (a!=b)) / (a=b ∨ a≠b)*(a=b ∨ a≠b)",
           "y=x*x",
           "Agg_i(V_i)",
           "повтор/умножение/агрегация выборов",
@@ -1670,7 +1670,7 @@
           "Знание / Познание / Предсказание / Забывание(отказ от ожидания)",
           "−A: забывание как Close(W,Refuse(W)); Sever — частный разрыв связи/переноса",
           "candidate_with_operational_gate",
-          "a=-*b*b; a!=b*b",
+          "(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))",
           "y=-1*x*x; y!=x*x",
           "K_core=⟨W,0_W,Ans⟩; Answer(W)=Close(W,W); agentic gate: K=⟨S,0_S,κ⟩",
           "ответ не внешний объект: ответ = закрытие ожидания ожиданием; У7!=У6",
@@ -2228,7 +2228,7 @@
           6,
           "y=x*x",
           "квадратичная агрегация/умножение",
-          "V*V",
+          "((a=b) and (a!=b)) and ((a=b) or (a!=b))",
           "working_analogy",
           "что именно агрегируется",
           "y!=-x*x",
@@ -2240,7 +2240,7 @@
           7,
           "y=-1*x*x",
           "квадрат с противоположной ориентацией; локально y=-x*x и y!=x*x; оконное чтение: Answer(W)=Close(W,W)",
-          "a=-*b*b; a!=b*b",
+          "(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))",
           "candidate_minimum / window_core_patch_v11",
           "развести '-' как orientation; y!=x*x как local_forbid; Answer(W) как самозакрытие окна",
           "y!=x*x",
@@ -3350,7 +3350,7 @@
           "ориентация/разность/контр-вектор в М-регистре",
           "может быть слит с 0_A до У(7)",
           "не называть это Prov и не отождествлять с −A",
-          "a-b, y=-x, a=-*b*b"
+          "a-b, y=-x, (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))"
         ],
         [
           "W",
@@ -3711,7 +3711,7 @@
         ],
         [
           1,
-          "Распаковать M₇ = a=-*b*b: что такое *, что такое -, почему b*b, как это проецируется в K=⟨S,0_S,κ⟩",
+          "Распаковать M₇ = (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))): что такое *, что такое -, почему b*b, как это проецируется в K=⟨S,0_S,κ⟩",
           "03_Уровни_У; 06_Мат_аналогии; 12_Отсутствия",
           "ключевой кандидат на минимальное выражение У(7)",
           "moved_to_U7_Kappa_Gate / open"
@@ -4144,8 +4144,8 @@
           "M_06",
           "minimal_expression",
           "Минимум У(6)",
-          "V*V",
-          "М-регистр для У(6): V*V",
+          "((a=b) and (a!=b)) and ((a=b) or (a!=b))",
+          "М-регистр для У(6): ((a=b) and (a!=b)) and ((a=b) or (a!=b))",
           "canonical_strict",
           "6",
           "M-register",
@@ -4189,8 +4189,8 @@
           "M_07",
           "minimal_expression",
           "Минимум У(7)",
-          "a=-*b*b; a!=b*b",
-          "М-регистр для У(7): a=-*b*b with local_forbid a!=b*b; math analogue y=-x*x,y!=x*x.",
+          "(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))",
+          "М-регистр для У(7): (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) with local_forbid (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))); math analogue U7_author.",
           "candidate_with_operational_gate",
           "7",
           "M-register",
@@ -5794,8 +5794,8 @@
           "U7_MATH_LOCAL_FORBID",
           "constraint",
           "У7: y=-x*x обязан читаться с y!=x*x",
-          "y=-x*x; y!=x*x",
-          "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.",
+          "U7_author",
+          "Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму.",
           "derived_constraint",
           "7",
           "math_analogy",
@@ -9508,7 +9508,7 @@
           "Встроенная правка v11: У7 как оконный цикл",
           "U7 window-cycle core",
           0,
-          "V11_U7_WINDOW_CORE\nУ7 core now reads Answer(W)=Close(W,W): answer/knowledge/cognition/prediction is the self-closure of the expectation window, not an external object inserted into the window.\nForgetting is Close(W,Refuse(W)): the expectation is closed by refusal of expectation.\nThe mathematical bridge y=-x*x must be kept together with local_forbid y!=x*x, and M-register a=-*b*b with a!=b*b.\nK=⟨S,0_S,κ⟩, provenance and T7A/T7B/T7C are retained as an agentic operational diagnostic layer, not as the essence of U7.\nU8 boundary: Hyp(W)=W[A?], a question-form of possible answer, not a weak prediction.\nχ² is recorded as U6 diagnostic bridge: it tests observed counts against expectation, not knowledge itself.",
+          "V11_U7_WINDOW_CORE\nУ7 core now reads Answer(W)=Close(W,W): answer/knowledge/cognition/prediction is the self-closure of the expectation window, not an external object inserted into the window.\nForgetting is Close(W,Refuse(W)): the expectation is closed by refusal of expectation.\nThe mathematical bridge y=-x*x must be kept together with local_forbid y!=x*x, and M-register (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) with (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))).\nK=⟨S,0_S,κ⟩, provenance and T7A/T7B/T7C are retained as an agentic operational diagnostic layer, not as the essence of U7.\nU8 boundary: Hyp(W)=W[A?], a question-form of possible answer, not a weak prediction.\nχ² is recorded as U6 diagnostic bridge: it tests observed counts against expectation, not knowledge itself.",
           "embedded_v11_patch",
           "TRUE_EMBEDDED_TEXT",
           "Встроено внутрь книги; не является внешней зависимостью."
@@ -9793,7 +9793,7 @@
           "T_05_06",
           "У(5)→У(6)",
           "V",
-          "V*V / Agg_i(V_i)",
+          "((a=b) and (a!=b)) and ((a=b) or (a!=b)) / Agg_i(V_i)",
           "Agg + i",
           "Что устойчиво по множеству выборов?",
           "частоты/корреляции",
@@ -9806,8 +9806,8 @@
         [
           "T_06_07",
           "У(6)→У(7)",
-          "V*V / Agg_i(V_i)",
-          "a=-*b*b / Answer(W)=Close(W,W)",
+          "((a=b) and (a!=b)) and ((a=b) or (a!=b)) / Agg_i(V_i)",
+          "(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) / Answer(W)=Close(W,W)",
           "W + 0_W + self-closing answer; κ as diagnostic gate",
           "Как ожидание закрывает само себя как ответ?",
           "expectation-window cycle; 0_W / refusal trace",
@@ -10851,7 +10851,7 @@
           "3-6",
           "threshold-to-7",
           "canonical_strict",
-          "M=V*V; CH=Agg_i(V_i)"
+          "M=((a=b) and (a!=b)) and ((a=b) or (a!=b)); CH=Agg_i(V_i)"
         ],
         [
           7,
@@ -10861,7 +10861,7 @@
           "7-10",
           "entry-node",
           "candidate_with_operational_gate",
-          "M=a=-*b*b; math=y=-x*x,y!=x*x; CH_core=Answer(W)=Close(W,W); agentic CH=K=⟨S,0_S,κ⟩"
+          "M=(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))); math=U7_author; CH_core=Answer(W)=Close(W,W); agentic CH=K=⟨S,0_S,κ⟩"
         ],
         [
           8,
@@ -12098,7 +12098,7 @@
         ],
         [
           23,
-          "{\"id\": \"M_06\", \"type\": \"minimal_expression\", \"text\": \"М-регистр для У(6): V*V\", \"depends_on\": [], \"tags\": [\"minimal\", \"U6\"], \"path\": \"17_Карточки/M_06\", \"status\": \"canonical_strict\", \"internal_ref\": \"CANON_V43 + user_current\", \"symbol\": \"V*V\", \"title\": \"Минимум У(6)\"}"
+          "{\"id\": \"M_06\", \"type\": \"minimal_expression\", \"text\": \"М-регистр для У(6): ((a=b) and (a!=b)) and ((a=b) or (a!=b))\", \"depends_on\": [], \"tags\": [\"minimal\", \"U6\"], \"path\": \"17_Карточки/M_06\", \"status\": \"canonical_strict\", \"internal_ref\": \"CANON_V43 + user_current\", \"symbol\": \"((a=b) and (a!=b)) and ((a=b) or (a!=b))\", \"title\": \"Минимум У(6)\"}"
         ],
         [
           24,
@@ -12110,7 +12110,7 @@
         ],
         [
           26,
-          "{\"id\": \"M_07\", \"type\": \"minimal_expression\", \"text\": \"М-регистр для У(7): a=-*b*b with local_forbid a!=b*b; math analogue y=-x*x,y!=x*x.\", \"depends_on\": [\"U_06\", \"U7_MATH_LOCAL_FORBID\"], \"tags\": [\"minimal\", \"U7\", \"local_forbid\"], \"path\": \"17_Карточки/M_07\", \"status\": \"candidate_with_operational_gate\", \"internal_ref\": \"CANON_V43 + user_current\", \"symbol\": \"a=-*b*b; a!=b*b\", \"title\": \"Минимум У(7)\"}"
+          "{\"id\": \"M_07\", \"type\": \"minimal_expression\", \"text\": \"М-регистр для У(7): (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) with local_forbid (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))); math analogue U7_author.\", \"depends_on\": [\"U_06\", \"U7_MATH_LOCAL_FORBID\"], \"tags\": [\"minimal\", \"U7\", \"local_forbid\"], \"path\": \"17_Карточки/M_07\", \"status\": \"candidate_with_operational_gate\", \"internal_ref\": \"CANON_V43 + user_current\", \"symbol\": \"(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))\", \"title\": \"Минимум У(7)\"}"
         ],
         [
           27,
@@ -12538,7 +12538,7 @@
         ],
         [
           133,
-          "{\"id\": \"U7_MATH_LOCAL_FORBID\", \"type\": \"constraint\", \"text\": \"Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.\", \"depends_on\": [\"M_07\", \"U_06\", \"SP_WINDOW\", \"SP_ZERO\"], \"tags\": [\"U7\", \"math\", \"local_forbid\", \"mirror_window\"], \"path\": \"06_Мат_аналогии/U7\", \"status\": \"derived_constraint\", \"internal_ref\": \"RESEARCH_STATUS_V9 + USER_DIALOG_V11\", \"symbol\": \"y=-x*x; y!=x*x\", \"title\": \"У7: y=-x*x обязан читаться с y!=x*x\"}"
+          "{\"id\": \"U7_MATH_LOCAL_FORBID\", \"type\": \"constraint\", \"text\": \"Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму.\", \"depends_on\": [\"M_07\", \"U_06\", \"SP_WINDOW\", \"SP_ZERO\"], \"tags\": [\"U7\", \"math\", \"local_forbid\", \"mirror_window\"], \"path\": \"06_Мат_аналогии/U7\", \"status\": \"derived_constraint\", \"internal_ref\": \"RESEARCH_STATUS_V9 + USER_DIALOG_V11\", \"symbol\": \"U7_author\", \"title\": \"У7: y=-x*x обязан читаться с y!=x*x\"}"
         ],
         [
           134,
@@ -14388,11 +14388,11 @@
         ],
         [
           190,
-          "    symbol: 'V*V'"
+          "    symbol: '((a=b) and (a!=b)) and ((a=b) or (a!=b))'"
         ],
         [
           191,
-          "    text: 'М-регистр для У(6): V*V'"
+          "    text: 'М-регистр для У(6): ((a=b) and (a!=b)) and ((a=b) or (a!=b))'"
         ],
         [
           192,
@@ -14468,11 +14468,11 @@
         ],
         [
           210,
-          "    symbol: 'a=-*b*b'"
+          "    symbol: '(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))'"
         ],
         [
           211,
-          "    text: 'М-регистр для У(7): a=-*b*b'"
+          "    text: 'М-регистр для У(7): (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))'"
         ],
         [
           212,
@@ -16920,11 +16920,11 @@
         ],
         [
           824,
-          "    math: 'y=-x*x; y!=x*x'"
+          "    math: 'U7_author'"
         ],
         [
           825,
-          "    m_register: 'a=-*b*b; a!=b*b'"
+          "    m_register: '(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))'"
         ],
         [
           826,
@@ -17632,7 +17632,7 @@
           "v10_u7_kappa_gate",
           "2026-06-09",
           "workbench_patch",
-          "Добавлены graph_id в 18_Граф, исправлены counts в 33_Validation, создан U7_Kappa_Gate; связь a=-*b*b ↔ y=-1*x*x признана прямым math bridge, но У7 остаётся gated by κ/T7.",
+          "Добавлены graph_id в 18_Граф, исправлены counts в 33_Validation, создан U7_Kappa_Gate; связь (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) ↔ y=-1*x*x признана прямым math bridge, но У7 остаётся gated by κ/T7.",
           "18;33;U7_Kappa_Gate;01;02;16;38",
           "self-contained"
         ],
@@ -19084,7 +19084,7 @@
         [
           "U7_WINDOW_GATE_V11",
           "У6→У7 / node-7",
-          "У7 core = Answer(W)=Close(W,W); math bridge y=-x*x,y!=x*x сохраняется; κ/T7 = diagnostic gate, not essence.",
+          "У7 core = Answer(W)=Close(W,W); math bridge U7_author сохраняется; κ/T7 = diagnostic gate, not essence.",
           "candidate_with_operational_gate",
           "[U_07]; [M_07]; U7_Window_Cycles",
           "answer != external object; κ != essence",
@@ -19142,7 +19142,7 @@
           null
         ],
         [
-          "1. Распаковка M₇ = a=-*b*b через y=-1*x*x",
+          "1. Распаковка M₇ = (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) через y=-1*x*x",
           null,
           null,
           null,
@@ -19173,7 +19173,7 @@
         ],
         [
           "b*b",
-          "b*b ← V*V / Agg_i(V_i)",
+          "b*b ← ((a=b) and (a!=b)) and ((a=b) or (a!=b)) / Agg_i(V_i)",
           "x*x",
           "квадратичная агрегация повторённых/выбранных реализаций; наследует У6 статистики",
           "PASS: У6 y=x*x → У7 y=-1*x*x",
@@ -19286,7 +19286,7 @@
           "Проецируется ли M₇ в K=⟨S,0_S,κ⟩?",
           "частично: b*b→S/Agg; '-'→orientation/0_S pressure; a=→closure via κ",
           "OPEN",
-          "21_Переходы T_06_07 связывает a=-*b*b / K=⟨S,0_S,κ⟩",
+          "21_Переходы T_06_07 связывает (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) / K=⟨S,0_S,κ⟩",
           "[T_06_07]; [CH_07]",
           "это центральный gate У7",
           "без формального κ остаётся candidate"
@@ -19473,7 +19473,7 @@
         ],
         [
           1,
-          "Принять прямую связь a=-*b*b ↔ y=-1*x*x",
+          "Принять прямую связь (((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b))) ↔ y=-1*x*x",
           "математический аналог должен работать как регистр места М₇",
           "[M_07]; 06_Мат_аналогии U7",
           "done in sheet",
@@ -19598,7 +19598,7 @@
         [
           "U7_MATH_LOCAL_FORBID",
           "математический регистр",
-          "y=-x*x; y!=x*x",
+          "U7_author",
           "У7 обязан читаться с правой частью: не быть У6-квадратом в том же зеркальном окне.",
           "derived_constraint",
           "[M_07]; [SP_WINDOW]; [SP_ZERO]",
@@ -20289,7 +20289,7 @@
         [
           7,
           "Предсказание / Познание / Знание",
-          "y=-x*x; y!=x*x",
+          "U7_author",
           "y=-χ*χ; y!=χ*χ",
           "Окно ожидания развернуто от статистического readout к самозакрытию: Answer(W)=Close(W,W).",
           "Answer(W) != χ²; p-value != knowledge",

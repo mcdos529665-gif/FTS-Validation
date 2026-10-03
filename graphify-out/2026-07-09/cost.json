@@ -1,0 +1,34 @@
+{
+  "runs": [
+    {
+      "date": "2026-07-05T04:50:43.569111+00:00",
+      "input_tokens": 301150,
+      "output_tokens": 301154,
+      "files": 46,
+      "note": "chunks 01/02/04/05/06 token counts are size-calibrated estimates (exact usage lost to an earlier context compaction this session); chunks 03a-03d are exact."
+    },
+    {
+      "date": "2026-07-05T14:36:50.455779+00:00",
+      "input_tokens": 700491,
+      "output_tokens": 109147,
+      "files": 48,
+      "note": "deep rebuild (--mode deep, 48 files); semantic cache cleared to force re-extraction. Token counts BEST-EFFORT: exact combined subagent usage captured for chunks 04/05/07/08 (347,638 in+out, split ~85/15); chunks 01/02/03/06 are size-calibrated estimates. Run resumed across a context interruption and some chunks were re-dispatched, so true spend is somewhat higher."
+    },
+    {
+      "date": "2026-07-05T15:06:55.232960+00:00",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 44,
+      "note": "reindex on de-duplicated corpus: .graphifyignore excludes 4 redundant canon serializations (workbook/full-dump/context/yaml); source/fts_cards.json is the sole canon source. All 44 files served from warm semantic cache -> 0 new extraction tokens. Graph 823->575 nodes (deliberate de-dup, to_json force=True)."
+    },
+    {
+      "date": "2026-07-05T15:59:02.322539+00:00",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 44,
+      "note": "canon-dense reindex: injected 260 EXTRACTED edges from source/fts_triples.tsv (238 triples, 141 card->card + 31 alias-recovered O<n>->O_<nn>) UNION card depends_on. All semantic from warm cache -> 0 new tokens. Graph: 838 edges / 57 communities / 90% EXTRACTED (was 699 / 116 / 85%)."
+    }
+  ],
+  "total_input_tokens": 1001641,
+  "total_output_tokens": 410301
+}

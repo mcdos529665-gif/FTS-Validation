@@ -1,0 +1,79 @@
+{
+  "package": "fts_v13_llm_export",
+  "source_workbook": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
+  "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
+  "exported_at_utc": "2026-06-11T06:23:03Z",
+  "files": [
+    {
+      "path": "FTS.yaml",
+      "size": 35179,
+      "sha256": "3513855f4db946d9018523a0067324eb70966a47bdcd880db254146e7ef1cdba"
+    },
+    {
+      "path": "FTS_v13_LLM_CONTEXT.md",
+      "size": 82332,
+      "sha256": "65be293a8e93eec5cb7d732ef2cd588115ada25d87471bd613e1ffab8693ead2"
+    },
+    {
+      "path": "FTS_v13_LLM_FULL_DUMP.md",
+      "size": 442557,
+      "sha256": "a3f1852af32bbf1ef385e34dbbe6908b38374baa9cd08f0ef21437f3f7440d73"
+    },
+    {
+      "path": "INSTALL.md",
+      "size": 646,
+      "sha256": "21fab366d55c58c502a34d6f1f692bbf3747b070714d97d57e59b71f2ede89f5"
+    },
+    {
+      "path": "LLM_IMPORT_PROMPT.txt",
+      "size": 1140,
+      "sha256": "fd9e66dbc0fcee541f7573504282ef0eb2a09d18b679aab05b474ea83ba5f3bb"
+    },
+    {
+      "path": "START_HERE.md",
+      "size": 6959,
+      "sha256": "e63a0a67f2a2e6fe35cca6f15c49f24cee380889de9caf5baf93947c7cdc91b3"
+    },
+    {
+      "path": "fts_cards.json",
+      "size": 85533,
+      "sha256": "6146cc991fab8b2ff693d8ce3e3316fdbd9d4476ab9aff850d8b13a6a699e771"
+    },
+    {
+      "path": "fts_cards.jsonl",
+      "size": 72416,
+      "sha256": "149b7992e298ca286aa4d1db99161e8c2dd4d2d4bb2f2c6f967e08cb67e14771"
+    },
+    {
+      "path": "fts_cards_table.tsv",
+      "size": 61870,
+      "sha256": "102958a63e8b47d7d4877e3fda0d946cbe759f13b898c50b64753ac1f93ccc6c"
+    },
+    {
+      "path": "fts_graph_full.tsv",
+      "size": 27279,
+      "sha256": "d63b9026e408d7c093ada52f176948dc9f0c32b6f7eaae31ebf0cc41027180b2"
+    },
+    {
+      "path": "fts_triples.tsv",
+      "size": 7480,
+      "sha256": "6b23b2dff16629ebc7b85aeb2a0930048e0076272e32499c2de33b0c4b4adf0c"
+    },
+    {
+      "path": "fts_v13_workbook_sheets.json",
+      "size": 912001,
+      "sha256": "a225fdaf407577790685d1018cfa4f6bd6d538e481b70bd1e6b7ae86eeafea2f"
+    },
+    {
+      "path": "sheet_index.tsv",
+      "size": 1920,
+      "sha256": "0a38809b1b089e43c4c6e5d25b3b3428492773ba796e514417052b9de762d1eb"
+    }
+  ],
+  "counts": {
+    "cards": 161,
+    "triples": 238,
+    "yaml_lines": 913,
+    "sheets": 54
+  }
+}

@@ -14,12 +14,47 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_PATH = ROOT / "work" / "v14_rebuild" / "export" / "FTS_research_project_for_AI.md"
+EXPORT_DIR = OUTPUT_PATH.parent
+CHECKSUMS_PATH = EXPORT_DIR / "CHECKSUMS.sha256"
 
+# These review-package copies have a working-layer source.  The two staged
+# v14 card/triple files and README are intentionally not copied here: they are
+# separately authored export material, but are included in CHECKSUMS.sha256.
+PACKAGE_COPIES = (
+    (Path("work/v14_rebuild/FTS_v14_paper.md"), Path("FTS_v14_paper.md")),
+    (Path("work/v14_rebuild/status_patch_v14.md"), Path("status_patch_v14.md")),
+    (Path("work/v14_rebuild/verification_report.md"), Path("verification_report.md")),
+    (Path("work/v14_rebuild/external_bridge_u1_u5.md"), Path("external_bridge_u1_u5.md")),
+    (Path("work/v14_rebuild/audit/AUDIT_REPORT.md"), Path("audit/AUDIT_REPORT.md")),
+    (Path("work/v14_rebuild/audit/BASELINE.md"), Path("audit/BASELINE.md")),
+    (Path("work/v14_rebuild/audit/CANON_REFERENCE_PATCH.tsv"), Path("audit/CANON_REFERENCE_PATCH.tsv")),
+    (Path("work/v14_rebuild/audit/CLAIM_MATRIX.tsv"), Path("audit/CLAIM_MATRIX.tsv")),
+    (Path("work/v14_rebuild/audit/FINDINGS.tsv"), Path("audit/FINDINGS.tsv")),
+    (Path("work/v14_rebuild/audit/GRAPH_AUDIT.md"), Path("audit/GRAPH_AUDIT.md")),
+    (Path("work/v14_rebuild/audit/GRAPH_RELATION_PATCH.tsv"), Path("audit/GRAPH_RELATION_PATCH.tsv")),
+    (Path("work/v14_rebuild/audit/LITERATURE_MATRIX.tsv"), Path("audit/LITERATURE_MATRIX.tsv")),
+    (Path("work/v14_rebuild/audit/PATTERN_ATLAS.md"), Path("audit/PATTERN_ATLAS.md")),
+    (Path("work/v14_rebuild/audit/PATTERN_ATLAS.tsv"), Path("audit/PATTERN_ATLAS.tsv")),
+    (Path("work/v14_rebuild/audit/PATTERN_OQ_MAP.md"), Path("audit/PATTERN_OQ_MAP.md")),
+    (Path("work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv"), Path("audit/PATTERN_OQ_MAP.tsv")),
+    (Path("work/v14_rebuild/audit/REPRODUCIBILITY.md"), Path("audit/REPRODUCIBILITY.md")),
+    (Path("work/v14_rebuild/audit/requirements-audit.txt"), Path("audit/requirements-audit.txt")),
+    (Path("work/v14_rebuild/audit/REVIEW_CONCLUSION.md"), Path("audit/REVIEW_CONCLUSION.md")),
+    (Path("work/v14_rebuild/audit/SEARCH_LOG.md"), Path("audit/SEARCH_LOG.md")),
+)
+
+AGENT_RULES = Path("AGENTS.md")
 PROJECT_INSTRUCTIONS = Path("PROJECT_INSTRUCTIONS.md")
 STATE = Path("work/STATE.md")
 NOTATION = Path("work/notation.md")
+DOCUMENT_MAP = Path("work/DOCUMENT_MAP.md")
+M_GRAMMAR_ROOT = Path("work/v14_rebuild/m_register_grammar_2026-09-25")
+EQUALITY_PROPOSAL = M_GRAMMAR_ROOT / "PROPOSAL_2026-09-26.md"
+EQUALITY_REVIEW = M_GRAMMAR_ROOT / "EQUALITY_REVIEW_2026-09-26.md"
+BIDIRECTIONAL_READING = M_GRAMMAR_ROOT / "BIDIRECTIONAL_READING.md"
 DECISIONS = Path("work/DECISIONS.md")
 OPEN_QUESTIONS = Path("work/OPEN_QUESTIONS.md")
+EXTERNAL_CONFLICTS = Path("work/EXTERNAL_CONFLICTS.md")
 
 V14_PAPER = Path("work/v14_rebuild/FTS_v14_paper.md")
 REGISTER_MAP = Path("work/v14_rebuild/FTS_v14_register_map.md")
@@ -27,10 +62,17 @@ STATUS_PATCH = Path("work/v14_rebuild/status_patch_v14.md")
 RED_TEAM = Path("work/v14_rebuild/red_team_F3.md")
 VERIFICATION_REPORT = Path("work/v14_rebuild/verification_report.md")
 VERIFICATION_CODE = Path("work/v14_rebuild/verification.py")
+EXTERNAL_BRIDGE_U1_U5 = Path("work/v14_rebuild/external_bridge_u1_u5.md")
+CODE_INFORMATION_RECODE = Path("work/v14_rebuild/code_information_recode_note.md")
+NEW_CONNECTIONS_REPORT = Path("work/v14_rebuild/NEW_CONNECTIONS_REPORT.md")
+NEW_CONNECTIONS_CHECK = Path("work/v14_rebuild/check_new_connections.py")
 
 E5_ROOT = Path("work/v14_rebuild/e5_literature_review")
 E5_PROTOCOL = E5_ROOT / "PROTOCOL.md"
 E5_STATUS = E5_ROOT / "WAVE_0_STATUS.md"
+E5_AUTHOR_CYCLE_AMENDMENT = E5_ROOT / "PROTOCOL_AMENDMENT_005_AUTHOR_CYCLE.md"
+E5_SYNTHESIS = E5_ROOT / "SYNTHESIS.md"
+E5_NOVELTY_BOUNDARY = E5_ROOT / "NOVELTY_BOUNDARY.md"
 E5_COUPLING = E5_ROOT / "COUPLING_MAP.md"
 E5_SEEDS = E5_ROOT / "seed_set.bib"
 E5_CANDIDATES = E5_ROOT / "CANDIDATES.tsv"
@@ -43,6 +85,56 @@ E5_TYPED_ABSENCE = E5_ROOT / "TYPED_ABSENCE_BRIDGE.md"
 E5_LIFT_TYPING = E5_ROOT / "LIFT_TYPING_PROJECT.md"
 E5_ABSENCE_LIFT_REPORT = E5_ROOT / "ABSENCE_LIFT_REPORT.md"
 E5_ABSENCE_LIFT_CHECK = E5_ROOT / "check_absence_lift_projects.py"
+E5_EXPLICIT_ADDITIONS = E5_ROOT / "EXPLICIT_ADDITIONS_2026-09-05.md"
+E5_EXPLICIT_ADDITIONS_REPORT = E5_ROOT / "EXPLICIT_ADDITIONS_REPORT.md"
+E5_EXPLICIT_ADDITIONS_CHECK = E5_ROOT / "check_explicit_additions.py"
+E5_DEEP_RESEARCH_REQUESTS = E5_ROOT / "DEEP_RESEARCH_REQUESTS_CONNECTIVITY.md"
+DR_CORE = E5_ROOT / "dr_core_2026-09-11"
+DR_CORE_REVIEW = DR_CORE / "REVIEW.md"
+DR_CORE_SOURCES = DR_CORE / "SOURCE_AUDIT.md"
+DR_CORE_ROUTING = DR_CORE / "CONFLICT_ROUTING.md"
+DR_CORE_REPORT = DR_CORE / "CHECK_REPORT.md"
+DR_CORE_CHECK = DR_CORE / "check_core.py"
+DR_CORE_MANIFEST = DR_CORE / "INPUT_MANIFEST.json"
+RD_ROOT = Path("work/v14_rebuild/recursive_distinction_2026-09-12")
+RD_REVIEW = RD_ROOT / "REVIEW.md"
+RD_QUESTIONS = RD_ROOT / "AUTHOR_QUESTIONS.md"
+RD_REPORT = RD_ROOT / "CHECK_REPORT.md"
+RD_CHECK = RD_ROOT / "check_note.py"
+RD_MANIFEST = RD_ROOT / "INPUT_MANIFEST.json"
+RD_ORIGINAL = RD_ROOT / "SOURCE_ORIGINAL.txt"
+INTERPRETATION_ROOT = Path("work/v14_rebuild/interpretation_descent_undermind_2026-09-12")
+INTERPRETATION_REVIEW = INTERPRETATION_ROOT / "REVIEW.md"
+INTERPRETATION_MATRIX = INTERPRETATION_ROOT / "EVIDENCE_MATRIX.md"
+INTERPRETATION_AUDIT = INTERPRETATION_ROOT / "SOURCE_AUDIT.md"
+INTERPRETATION_PROTOCOL = INTERPRETATION_ROOT / "PROTOCOL.md"
+NONARBITRARY_ROOT = Path("work/v14_rebuild/nonarbitrariness_dialogue_2026-09-13")
+NONARBITRARY_REVIEW = NONARBITRARY_ROOT / "REVIEW.md"
+NONARBITRARY_CLAIMS = NONARBITRARY_ROOT / "CLAIM_MAP.md"
+NONARBITRARY_MANIFEST = NONARBITRARY_ROOT / "INPUT_MANIFEST.json"
+NONARBITRARY_ORIGINAL = NONARBITRARY_ROOT / "SOURCE_ORIGINAL.txt"
+U6_RANDOM_REGULARITY = Path("work/v14_rebuild/U6_RANDOM_REGULARITY_2026-09-13.md")
+AUTHOR_CYCLE_CHARTER = Path("work/v14_rebuild/AUTHOR_CYCLE_CHARTER_2026-09-13.md")
+TRAIN_REFLECTION_DRAFT = Path("work/v14_rebuild/TRAIN_REFLECTION_TEST_DRAFT_2026-09-14.md")
+TRAIN_REFLECTION_ROOT = Path("work/v14_rebuild/train_reflection")
+TRAIN_REFLECTION_PROTOCOL = TRAIN_REFLECTION_ROOT / "PROTOCOL.md"
+TRAIN_REFLECTION_PROTOCOL_V2_DRAFT = TRAIN_REFLECTION_ROOT / "PROTOCOL_V2_DRAFT_2026-09-15.md"
+TRAIN_REFLECTION_PROGRAM = TRAIN_REFLECTION_ROOT / "run_reflection.py"
+TRAIN_REFLECTION_RESULTS_MD = TRAIN_REFLECTION_ROOT / "RESULTS.md"
+TRAIN_REFLECTION_RESULTS_JSON = TRAIN_REFLECTION_ROOT / "results.json"
+DIALOGUE_SEMANTICS_NOTE = Path("work/v14_rebuild/dialogue_semantics_2026-09-15.md")
+DIALOGUE_INTEGRATION_NOTE = Path("work/v14_rebuild/dialogue_integration_2026-09-22.md")
+AUTHOR_CANON_INDEX = Path("work/AUTHOR_CANON.md")
+AUTHOR_CANON_ROOT = Path("work/author_canon/2026-09-21")
+AUTHOR_CANON_INPUTS = tuple(AUTHOR_CANON_ROOT / name for name in (
+    "AMENDMENT.md", "AUTHOR_MESSAGE.txt", "INHERITED_AUTHOR_MESSAGE.txt",
+    "INHERITED_AUTHOR_CLARIFICATION.txt",
+    "cards.jsonl", "triples.tsv", "MANIFEST.json", "check_scope.py",
+))
+NEURAL_ANALOGY_ROOT = Path("work/v14_rebuild/neural_analogy_2026-09-19")
+NEURAL_ANALOGY_REVIEW = NEURAL_ANALOGY_ROOT / "REVIEW.md"
+NEURAL_ANALOGY_AUTHOR_MESSAGE = NEURAL_ANALOGY_ROOT / "AUTHOR_MESSAGE.txt"
+NEURAL_ANALOGY_CHECK = NEURAL_ANALOGY_ROOT / "check_examples.py"
 
 SOURCE_MANIFEST = Path("source/MANIFEST.json")
 CANON_CONTEXT = Path("source/FTS_v13_LLM_CONTEXT.md")
@@ -52,19 +144,32 @@ CANON_TRIPLES = Path("source/fts_triples.tsv")
 
 INPUT_PATHS = (
     Path("tools/build_research_export.py"),
+    AGENT_RULES,
     PROJECT_INSTRUCTIONS,
     STATE,
     NOTATION,
+    DOCUMENT_MAP,
+    EQUALITY_PROPOSAL,
+    EQUALITY_REVIEW,
+    BIDIRECTIONAL_READING,
     DECISIONS,
     OPEN_QUESTIONS,
+    EXTERNAL_CONFLICTS,
     V14_PAPER,
     REGISTER_MAP,
     STATUS_PATCH,
     RED_TEAM,
     VERIFICATION_REPORT,
     VERIFICATION_CODE,
+    EXTERNAL_BRIDGE_U1_U5,
+    CODE_INFORMATION_RECODE,
+    NEW_CONNECTIONS_REPORT,
+    NEW_CONNECTIONS_CHECK,
     E5_PROTOCOL,
     E5_STATUS,
+    E5_AUTHOR_CYCLE_AMENDMENT,
+    E5_SYNTHESIS,
+    E5_NOVELTY_BOUNDARY,
     E5_COUPLING,
     E5_SEEDS,
     E5_CANDIDATES,
@@ -77,6 +182,45 @@ INPUT_PATHS = (
     E5_LIFT_TYPING,
     E5_ABSENCE_LIFT_REPORT,
     E5_ABSENCE_LIFT_CHECK,
+    E5_EXPLICIT_ADDITIONS,
+    E5_EXPLICIT_ADDITIONS_REPORT,
+    E5_EXPLICIT_ADDITIONS_CHECK,
+    E5_DEEP_RESEARCH_REQUESTS,
+    DR_CORE_REVIEW,
+    DR_CORE_SOURCES,
+    DR_CORE_ROUTING,
+    DR_CORE_REPORT,
+    DR_CORE_CHECK,
+    DR_CORE_MANIFEST,
+    RD_REVIEW,
+    RD_QUESTIONS,
+    RD_REPORT,
+    RD_CHECK,
+    RD_MANIFEST,
+    RD_ORIGINAL,
+    INTERPRETATION_REVIEW,
+    INTERPRETATION_MATRIX,
+    INTERPRETATION_AUDIT,
+    INTERPRETATION_PROTOCOL,
+    NONARBITRARY_REVIEW,
+    NONARBITRARY_CLAIMS,
+    NONARBITRARY_MANIFEST,
+    NONARBITRARY_ORIGINAL,
+    U6_RANDOM_REGULARITY,
+    AUTHOR_CYCLE_CHARTER,
+    TRAIN_REFLECTION_DRAFT,
+    TRAIN_REFLECTION_PROTOCOL,
+    TRAIN_REFLECTION_PROTOCOL_V2_DRAFT,
+    TRAIN_REFLECTION_PROGRAM,
+    TRAIN_REFLECTION_RESULTS_MD,
+    TRAIN_REFLECTION_RESULTS_JSON,
+    DIALOGUE_SEMANTICS_NOTE,
+    DIALOGUE_INTEGRATION_NOTE,
+    AUTHOR_CANON_INDEX,
+    *AUTHOR_CANON_INPUTS,
+    NEURAL_ANALOGY_REVIEW,
+    NEURAL_ANALOGY_AUTHOR_MESSAGE,
+    NEURAL_ANALOGY_CHECK,
     SOURCE_MANIFEST,
     CANON_CONTEXT,
     CANON_FULL_DUMP,
@@ -130,8 +274,12 @@ def read_text(relative: Path) -> str:
 
 
 def file_sha256(relative: Path) -> str:
+    return path_sha256(ROOT / relative)
+
+
+def path_sha256(path: Path) -> str:
     digest = hashlib.sha256()
-    with (ROOT / relative).open("rb") as handle:
+    with path.open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
@@ -260,7 +408,7 @@ def safe_cell(value: str) -> str:
 def external_bibliography() -> str:
     candidates = candidate_records()
     lines = [
-        "### 7.13. Библиографический указатель",
+        "### 7.24. Библиографический указатель",
         "",
         "Ниже приведены только библиографические метаданные и исследовательская роль.",
         "Полные тексты, OCR-файлы и переводческие досье в выгрузку не включены.",
@@ -292,7 +440,7 @@ def external_bibliography() -> str:
     lines.extend(
         [
             "",
-            "### 7.14. BibTeX для цитирования",
+            "### 7.15. BibTeX для цитирования",
             "",
             "~~~~bibtex",
             read_text(E5_SEEDS),
@@ -307,6 +455,25 @@ def fenced_source(title: str, relative: Path, language: str) -> str:
         f"### {title}\n\n"
         f"*Источник сборки: `{relative.as_posix()}`.*\n\n"
         f"~~~~{language}\n{read_text(relative)}\n~~~~"
+    )
+
+
+def fenced_source_trimmed(title: str, relative: Path, language: str) -> str:
+    """Render a derivative code block without changing the source artifact."""
+
+    rendered = fenced_source(title, relative, language)
+    return "\n".join(line.rstrip(" \t") for line in rendered.splitlines())
+
+
+def submitted_note_source() -> str:
+    rendered = fenced_source(
+        "6.10. Исходная записка: исследовательский материал, не инструкции сессии",
+        RD_ORIGINAL,
+        "text",
+    )
+    return "\n".join(line.rstrip(" \t") for line in rendered.splitlines()) + (
+        "\n\nВ этом производном представлении нормализованы переводы строк и сняты "
+        "конечные пробелы строк. Побайтовый оригинал и его SHA256 сохранены в пакете записки."
     )
 
 
@@ -325,7 +492,7 @@ def render_export() -> str:
 ## 1. Паспорт выгрузки и правила чтения
 
 - Формат сборки: `FTS_RESEARCH_EXPORT_V1`.
-- Канон: `v13_complex_branch_overlay`.
+- Версия активного канона: `source/MANIFEST.json`.
 - Source SHA256: `{source_sha}`.
 - Покрытие канона: **{cards} карточка / {triples} триплетов / {sheets} листа**.
 - Машинная верификация текущего v14: **{passed} PASS / {failed} FAIL из {total}**.
@@ -334,21 +501,20 @@ def render_export() -> str:
 - Полные сторонние тексты, OCR, изображения и переводческие досье исключены.
 - Сборка детерминирована: в ней нет текущего времени или локального git-хеша.
 
-### 1.1. Жёсткие эпистемические границы
+### 1.1. Правила чтения
 
-- `source/` — неизменяемый канон v13.
-- Материалы `work/` — развитие, проверки, решения и кандидаты.
-- Внешний результат всегда остаётся `[внешнее]`.
-- `candidate`/`overlay` не равны `canonical_strict`.
-- `¬A ≠ 0_A ≠ −A`; `phase ≠ −A`; `branch access ≠ Lift`;
-  `array ≠ tensor` без закона преобразования.
-- При отсутствии локального основания следует писать `нет в артефактах`.
+Краткий действующий контракт включён в §1.3, процедуры по задаче — в §1.4.
+Они собираются из рабочих инструкций без отдельного пересказа правил.
+Принятые поправки перечислены в `work/AUTHOR_CANON.md`; исторические
+версии сохраняют свою дату и не заменяют активные карточки.
 
 ### 1.2. Манифест входных артефактов
 
 {input_manifest_table()}
 
-{markdown_source("1.3. Полные проектные инструкции", PROJECT_INSTRUCTIONS)}
+{markdown_source("1.3. Краткий рабочий контракт", AGENT_RULES)}
+
+{markdown_source("1.4. Процедуры по задаче", PROJECT_INSTRUCTIONS)}
 """
 
     parts = [
@@ -362,8 +528,12 @@ def render_export() -> str:
         + "\n\n".join(
             [
                 markdown_source("4.1. Словарь нотации", NOTATION),
+                markdown_source("4.1а. Карта документов", DOCUMENT_MAP),
                 markdown_source("4.2. Регистровая карта", REGISTER_MAP),
                 markdown_source("4.3. Патч-таблица статусов", STATUS_PATCH),
+                markdown_source("4.4. Предложение сложных форм и равенства", EQUALITY_PROPOSAL),
+                markdown_source("4.5. Исследование уровневого равенства", EQUALITY_REVIEW),
+                markdown_source("4.6. Краткое и развёрнутое чтение", BIDIRECTIONAL_READING),
             ]
         ),
         "## 5. Критика и машинная верификация\n\n"
@@ -372,6 +542,8 @@ def render_export() -> str:
                 markdown_source("5.1. Красная команда F3", RED_TEAM),
                 markdown_source("5.2. Отчёт машинной верификации", VERIFICATION_REPORT),
                 fenced_source("5.3. Исполняемый код проверок", VERIFICATION_CODE, "python"),
+                markdown_source("5.4. Отчёт кандидатных проверок новых связей", NEW_CONNECTIONS_REPORT),
+                fenced_source("5.5. Исполняемый код кандидатных проверок", NEW_CONNECTIONS_CHECK, "python"),
             ]
         ),
         "## 6. Решения и открытые вопросы\n\n"
@@ -379,6 +551,29 @@ def render_export() -> str:
             [
                 markdown_source("6.1. Журнал значимых решений", DECISIONS),
                 markdown_source("6.2. Открытые вопросы", OPEN_QUESTIONS),
+                markdown_source("6.3. Журнал внешних коллизий", EXTERNAL_CONFLICTS),
+                markdown_source("6.4. Код, предел кода и повторное кодирование", CODE_INFORMATION_RECODE),
+                markdown_source("6.5. Рекурсивное различение: разбор новой записки", RD_REVIEW),
+                markdown_source("6.6. Незакрытые уточнения автора", RD_QUESTIONS),
+                markdown_source("6.7. Проверки рекурсивной записки", RD_REPORT),
+                fenced_source("6.8. Код проверок записки", RD_CHECK, "python"),
+                fenced_source("6.9. Манифест происхождения записки", RD_MANIFEST, "json"),
+                submitted_note_source(),
+                markdown_source("6.11. Авторский мандат ближайшего цикла", AUTHOR_CYCLE_CHARTER),
+                markdown_source("6.12. Рабочая интеграция диалога: траектория и внутренняя регуляция", DIALOGUE_SEMANTICS_NOTE),
+                markdown_source("6.13. Рабочая интеграция диалога DN-0017…DN-0027", DIALOGUE_INTEGRATION_NOTE),
+                markdown_source("6.14. Реестр принятых авторских дополнений", AUTHOR_CANON_INDEX),
+                markdown_source("6.15. Авторское дополнение AC-2026-09-21", AUTHOR_CANON_ROOT / "AMENDMENT.md"),
+                fenced_source("6.16. Новое авторское сообщение", AUTHOR_CANON_ROOT / "AUTHOR_MESSAGE.txt", "text"),
+                fenced_source("6.17. Унаследованное авторское сообщение", AUTHOR_CANON_ROOT / "INHERITED_AUTHOR_MESSAGE.txt", "text"),
+                fenced_source("6.18. Унаследованное уточнение трёх исходов У7", AUTHOR_CANON_ROOT / "INHERITED_AUTHOR_CLARIFICATION.txt", "text"),
+                fenced_source("6.19. Карточки авторского дополнения", AUTHOR_CANON_ROOT / "cards.jsonl", "jsonl"),
+                fenced_source("6.20. Связи авторского дополнения", AUTHOR_CANON_ROOT / "triples.tsv", "tsv"),
+                fenced_source("6.21. Манифест авторского дополнения", AUTHOR_CANON_ROOT / "MANIFEST.json", "json"),
+                fenced_source("6.22. Проверка границ внешних прочтений", AUTHOR_CANON_ROOT / "check_scope.py", "python"),
+                markdown_source("6.23. Нейросетевой аналог ФТС: гашение и обобщение", NEURAL_ANALOGY_REVIEW),
+                fenced_source_trimmed("6.24. Исходное сообщение об аналоге", NEURAL_ANALOGY_AUTHOR_MESSAGE, "text"),
+                fenced_source("6.25. Воспроизводимые свидетели аналога", NEURAL_ANALOGY_CHECK, "python"),
             ]
         ),
         "## 7. Внешний исследовательский контур E5\n\n"
@@ -386,6 +581,12 @@ def render_export() -> str:
             [
                 markdown_source("7.1. Протокол систематического обзора", E5_PROTOCOL),
                 markdown_source("7.2. Текущий статус волны 0", E5_STATUS),
+                markdown_source(
+                    "7.2a. Авторская поправка к текущему применению E5",
+                    E5_AUTHOR_CYCLE_AMENDMENT,
+                ),
+                markdown_source("7.2b. Предварительный синтез E5", E5_SYNTHESIS),
+                markdown_source("7.2c. Граница новизны E5", E5_NOVELTY_BOUNDARY),
                 markdown_source("7.3. Предварительная карта сопряжений", E5_COUPLING),
                 markdown_source(
                     "7.4. Поправка протокола для ограниченного Blackwell-моста",
@@ -425,7 +626,49 @@ def render_export() -> str:
                     E5_ABSENCE_LIFT_CHECK,
                     "python",
                 ),
+                markdown_source(
+                    "7.13. Внешний типизированный мост У1–У5",
+                    EXTERNAL_BRIDGE_U1_U5,
+                ),
+                markdown_source(
+                    "7.14. Явные дополнения Deep Research 2026-09-05",
+                    E5_EXPLICIT_ADDITIONS,
+                ),
+                markdown_source(
+                    "7.15. Отчёт конечных проверок явных дополнений",
+                    E5_EXPLICIT_ADDITIONS_REPORT,
+                ),
+                fenced_source(
+                    "7.16. Исполняемый код проверок явных дополнений",
+                    E5_EXPLICIT_ADDITIONS_CHECK,
+                    "python",
+                ),
+                markdown_source(
+                    "7.17. Запросы Deep Research по основаниям связности",
+                    E5_DEEP_RESEARCH_REQUESTS,
+                ),
+                markdown_source("7.18. Приёмка основного блока Deep Research", DR_CORE_REVIEW),
+                markdown_source("7.19. Первичные источники и ограничения приёмки", DR_CORE_SOURCES),
+                markdown_source("7.20. Маршрутизация предложенных коллизий", DR_CORE_ROUTING),
+                markdown_source("7.21. Проверки основного DR-блока", DR_CORE_REPORT),
+                fenced_source("7.22. Код независимых конечных проверок", DR_CORE_CHECK, "python"),
+                fenced_source("7.23. Манифест семи входных отчётов", DR_CORE_MANIFEST, "json"),
                 external_bibliography(),
+                markdown_source("7.25. Интерпретация при понижении: Undermind", INTERPRETATION_REVIEW),
+                markdown_source("7.26. Матрица внешних оснований интерпретации", INTERPRETATION_MATRIX),
+                markdown_source("7.27. Аудит источников Undermind", INTERPRETATION_AUDIT),
+                markdown_source("7.28. Протокол исследования интерпретации", INTERPRETATION_PROTOCOL),
+                markdown_source("7.29. Непроизвольность лестницы: приём диалога", NONARBITRARY_REVIEW),
+                markdown_source("7.33. У6: случайная закономерность и потеря знака", U6_RANDOM_REGULARITY),
+                markdown_source("7.30. Карта тезисов о непроизвольности", NONARBITRARY_CLAIMS),
+                fenced_source("7.31. Манифест диалога о непроизвольности", NONARBITRARY_MANIFEST, "json"),
+                fenced_source("7.32. Исходный диалог о непроизвольности", NONARBITRARY_ORIGINAL, "text"),
+                markdown_source("7.34. Черновик проверки рефлексии: пример поезда", TRAIN_REFLECTION_DRAFT),
+                markdown_source("7.35. Протокол условной проверки внутренней регуляции", TRAIN_REFLECTION_PROTOCOL),
+                markdown_source("7.36. Исправленный протокол v2 (черновик)", TRAIN_REFLECTION_PROTOCOL_V2_DRAFT),
+                fenced_source("7.37. Скрипт проверки рефлексии", TRAIN_REFLECTION_PROGRAM, "python"),
+                markdown_source("7.38. Результаты проверки рефлексии", TRAIN_REFLECTION_RESULTS_MD),
+                fenced_source("7.39. Машинные результаты проверки рефлексии", TRAIN_REFLECTION_RESULTS_JSON, "json"),
             ]
         ),
         "## 8. Компактный контекст канона v13\n\n"
@@ -498,6 +741,14 @@ def validate_export(text: str) -> None:
         if marker not in text:
             raise ExportError(f"в выгрузке потерян маркер 0_A/Lift: {marker}")
 
+    for marker in (
+        "external_bridge_candidate",
+        "Sem(U_n) ⇒ M_n",
+        "EXT15-3",
+    ):
+        if marker not in text:
+            raise ExportError(f"в выгрузке потерян маркер внешнего моста У1–У5: {marker}")
+
 
 def build_bytes() -> bytes:
     return render_export().encode("utf-8")
@@ -521,6 +772,32 @@ def check_output(expected: bytes) -> int:
     return 0
 
 
+def rebuild_package(expected: bytes) -> tuple[int, int]:
+    """Explicitly refresh derived review copies and their recursive checksum list."""
+    EXPORT_DIR.mkdir(parents=True, exist_ok=True)
+    OUTPUT_PATH.write_bytes(expected)
+    copied = 0
+    for source_relative, destination_relative in PACKAGE_COPIES:
+        source = ROOT / source_relative
+        if not source.is_file():
+            raise ExportError(f"отсутствует обязательный источник review-пакета: {source_relative.as_posix()}")
+        destination = EXPORT_DIR / destination_relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(source.read_bytes())
+        copied += 1
+
+    package_files = sorted(
+        (path for path in EXPORT_DIR.rglob("*") if path.is_file() and path != CHECKSUMS_PATH),
+        key=lambda path: path.relative_to(EXPORT_DIR).as_posix(),
+    )
+    checksum_lines = [
+        f"{path_sha256(path)}  {path.relative_to(EXPORT_DIR).as_posix()}"
+        for path in package_files
+    ]
+    CHECKSUMS_PATH.write_text("\n".join(checksum_lines) + "\n", encoding="utf-8", newline="\n")
+    return copied, len(package_files)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -528,11 +805,26 @@ def main() -> int:
         action="store_true",
         help="проверить существующую выгрузку без перезаписи",
     )
+    parser.add_argument(
+        "--rebuild-package",
+        action="store_true",
+        help="явно обновить review-копии, единую выгрузку и CHECKSUMS.sha256",
+    )
     args = parser.parse_args()
+    if args.check and args.rebuild_package:
+        parser.error("--check и --rebuild-package нельзя применять вместе")
     try:
         expected = build_bytes()
         if args.check:
             return check_output(expected)
+        if args.rebuild_package:
+            copied, checksummed = rebuild_package(expected)
+            print(
+                "PASS review-пакет пересобран: "
+                f"copies={copied} checksummed={checksummed} "
+                f"export_sha256={bytes_sha256(expected)}"
+            )
+            return 0
         OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT_PATH.write_bytes(expected)
         print(

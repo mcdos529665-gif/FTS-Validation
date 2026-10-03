@@ -1,82 +1,93 @@
-# Патч-таблица статусов для канона v14
+# Audited v14 status patch
 
-Предложение изменений к следующему экспорту канона (v13 → v14).
-Канон v13 в `source/` не редактируется; патч применяется при сборке новой
-выгрузки. Каждая строка опирается на FTS_v14_paper.md и verification_report.md
-(59 PASS / 0 FAIL; канон установлен полностью, SHA256: 13 ok / 0 mismatch).
-Повышения оформлены через предусмотренные каноном SP-карточки
-[триплеты SP_* → promotes_status_of → *].
+This is a conservative proposal for a future v14 workbook export. It does not
+edit the v13 canon in `source/`. The audit confirmed canon integrity
+(`13 ok / 0 missing / 0 mismatch`) and 62 mathematical checks, but no new semantic
+promotions. The two-axis rule is mandatory:
 
-## 0. Закрытия открытых вопросов канона
+```text
+PASS C-NN -> computational evidence only for the exact predicate in the checked domain
+canonical_v14 -> К1–К5 passed separately and status encoded in the target SP card
+```
 
-| Вопрос канона | Где | Чем закрыт |
-|---|---|---|
-| Q_LOGIC_7_11 «Formal formulas 7–11, needs object-language» (open_high_priority) | лист 29_7plus_tests, стр. 5 | таблица минимальных записей 7–13 (paper §7.3) на объектном языке словаря Д |
-| condition_of_defeat U12_CIRCLE «closed boundary не даёт новой выразимости относительно У10/У11» | лист 31, стр. 9 | C-23: cos x и eˣ — графики функций, окружность — нет (paper §10.1) |
-| Требование ADDENDUM_V4 (п. F): закрепить EvenSpace/OddSpace через определения + defeat | лист 19_Канон_текст | аудит чётности C-05 + условие поражения §12 п.2 |
-| U12_QUAD_CONTACT и U10_TO_U12 — candidate-связи без проверки | лист 31, стр. 11–12 | машинные свидетели C-36 (касание x²/4) и C-37 (параметризация cos) |
-| SP_COMPLEX: «нет оператора i/pivot/rotation in FTS» (потолок analogy_only) | лист 31, стр. 21 | оператор поставлен: Rot_θ (Д10, C-38…C-40); потолок снимается только после операционального теста Д10 (paper §12 п.7) — до этого analogy_only → candidate_overlay |
-| U12_PI: «если совпадение коэффициентов (4π=4π при r=2) не несёт новой роли — analogy_only» | лист 31, стр. 10 | условие исполнено красной командой (A5): роль не предъявлена, радиус свободен [C-41] → **analogy_only** |
-| F3 / O_09 (независимая альтернатива M′) | карточки F3, O_09 | прогнано: red_team_F3.md — 8 атак, 7 отбиты, 1 частичная принята поправкой (класс У12). F3 не реализован; защиты A2/A6/A1 зависят от П4/О2/C-34 (зафиксировано) |
+The [current status procedure](../../PROJECT_INSTRUCTIONS.md#status), adopted
+2026-09-30, selects К1 by claim type, allows justified lower-level revision with
+consequences, and requires diagnosing FAIL. These tables preserve earlier audit
+results; a new decision requires a new SP record.
 
-## 1. Повышения статуса
+## 1. Audit of proposed promotions
 
-| Карточка/сущность | v13 | v14 | Через | Свидетели |
+| Entity | v13 status / grounding | Earlier claim | Audit verdict | Requirement for reconsideration |
 |---|---|---|---|---|
-| U_07 (ядро: К=≠С; y=−x²) | candidate_with_operational_gate | canonical | — (гейт κ/T7 остаётся операционным слоем) | C-35, C-05, C-01 |
-| U_08 (А?=?(С); y=√\|x\|) | candidate_with_operational_gate | canonical | SP_U8 | C-06, C-07, C-08, C-09 |
-| U_09 (П=Δ·С; y=x³) | FTS_candidate | canonical | SP_U9 | C-10, C-11, C-12 |
-| U_10 (Δ²Ц=≠Ц; y=cos x) | reserved_underformalized | canonical (формула + характеризация; замена чтения принята автором 2026-06-12) | новая карточка SP_U10 (создать) | C-13, C-14, C-15, C-16, C-17 |
-| U_11 (ΔЯ=Я; y=eˣ) | reserved_underformalized | canonical | новая карточка SP_U11 (создать) | C-18, C-19, C-20, C-21 |
-| U_12 (Inv(Я₁,Я₂)=c; окружность) | candidate_requires_formalization + canonical_alignment | canonical — как КЛАСС x²+(y−r)²=r², r>0, представитель r=2 (red team A5) | SP_U12 | C-22…C-27, C-41; условие поражения U12_CIRCLE снято [C-23] |
-| ADD_PARITY_TOPOLOGY (аудит чётности) | addendum | canonical-инвариант | SP_PARITY | C-05 |
-| ADD_ZERO_BOUNDARY (F=−F ⟺ F=0) | addendum/derived_constraint | canonical-инвариант | SP_ZERO | C-01, C-02 |
-| ADD_MIRROR_WINDOW (зеркальное окно {F,−F}) | addendum | canonical-инвариант | SP_WINDOW | C-02, C-03, C-04 |
+| U_07 / M_07 | `candidate_with_operational_gate` | Forms through У7: `canonical_strict` | **Do not promote**. C-35/C-60 show a formal pattern, not a forced rung or the meaning «Знание» | New SP card with separate form/semantic targets, К1–К5, operational test |
+| U_08 | SP_U8 and U_08: `candidate_with_operational_gate` | `canonical_v14` | **Keep `candidate_with_operational_gate`**. `promotes_status_of` transfers a candidate, not canonical, status | Question-role ablation and new SP with `canonical_v14` |
+| U_09 | SP_U9 and U_09: `FTS_candidate` | `canonical_v14` | **Keep `FTS_candidate`**; C-10…C-12 check the cube, not «Понимание» | Independent causal-grounding role test and new SP |
+| U_10 | `reserved_underformalized`; no SP_U10 | `canonical_v14` from cos uniqueness | **Keep `reserved_underformalized`**; ODE/series/zeros are `formal_math_fact`, interpretation is candidate | Operational scale/assessment test and SP_U10 |
+| U_11 | `reserved_underformalized`; no SP_U11 | `canonical_v14` from ODE `F'=F` | **Keep `reserved_underformalized`**; exponential is `formal_math_fact`, FTS selfhood unproven | К1–К5 for selfhood and SP_U11 |
+| U_12 | SP_U12/U_12: `candidate_requires_formalization + canonical_alignment` | `canonical_v14` | **Keep the compound status**. Class geometry is `formal_math_fact`; «Конфликт/Союз» and gate remain candidate | Formalize semantics/gate and new SP satisfying all К1–К5 |
 
-## 2. Новые карточки (создать в v14)
+## 2. Open questions and traceability defects
 
-| ID (предлож.) | Содержание | Статус |
+| Node | Finding | Verdict |
 |---|---|---|
-| DICT_D1…D10 | Словарь конвертации Д (§5 статьи): Д1–Д5, Д7, Д8 — canonical; Д6, Д9 — candidate; Д10 (Rot_θ: фаза = деформация формы в анти-форму, C-38…C-40) — candidate_overlay | по правилу |
-| NOTATION_ANTIFORM | Нотация знаков (§3.2a): ⊖F / anti(F) — анти-форма; − — арифметика; Rot_θ / rot(theta,F) — фаза; −A — антимода уровня. По образцу ADD_NOTATION_ABS; закрывает предупреждение листа 06 стр.8 «не путать '−' с 7+ −A» | canonical_note (**принята автором 2026-06-12**) |
-| DICT_D11 | Регистр отношений (§5.1b): ratio(F,G); унификация правых частей к «отношение ≠ 1» (C-44); бит ветви x/\|x\|=sign(x) — двойник Q-канала (C-45); полюс вместо границы (C-46); z/\|z\|=e^{iθ} — извлечение фазы, полярное разложение = Q×ratio (C-47) | candidate_v14 (математика — formal_math_fact); авторское расширение 2026-06-12 |
-| LEMMA_TOT_GROUP | Лемма Tot (§5.1b): Tot(A) = «отношение ≡ 1» = коллапс Z/2→{1}; узловому −1 не на чем действовать ⟹ правые части (материал A+1) уничтожены — формализация О2 через механизм «Tot ест ≠-формулы» (C-48, C-35) | candidate_v14 (формализация О2) |
-| REVERSI_TWO_LISTS | Двухсписочная реализация О3 (§4): связанные регистры «Есть А?»/«Есть 0_А?», конверсия «нет»→«да»; состояния окна U7_Window_Cycles = операции списков; Tot = декретное опустошение 0_А-списка | candidate_v14 (авторская фиксация 2026-06-12) |
-| UNIT_BOUNDARY | Единичная граница (§3.6): `F·F=F ⟺ x∈{0,1}` — мультипликативный дуал ADD_ZERO_BOUNDARY; в `x=1` У6=У2/У7=У3/У8=У4 (пентада назад), лестница У1–У9 → бит {+1,−1}, У10/У11 переживают | canonical-инвариант (дуал SP_ZERO); C-49…C-52. Авторское наблюдение 2026-06-12 |
-| A_REGISTER_DOMAIN | Домен А-регистра: уровни 6+ различимы только при `\|x\|∉{0,1}`; различимость 3–5 по знаку, 6+ по масштабу (узел 7 = переход знак→масштаб) | canonical-оговорка (следствие UNIT_BOUNDARY) |
-| PENTAD_NONDEGEN | Усиление пентады (§8.2): соответствие окон содержательно при `\|x\|≠1`, вырождается в идемпотентах — пентада фальсифицируема (обязана ломаться в {0,1}) | candidate_v14 (C-52) |
-| OVERLAY_AS_CARRIER | Формальное определение оверлея: `оверлей = А-регистр ∘ (x:=носитель)`; не добавляет содержания уровням (C-53). Закрывает открытый вопрос «χ не выдаётся за доказанное»: χ — это А-регистр при x:=χ, сильная точка только У6 | canonical_note |
-| CHI_OVERLAY_VERIFIED | χ-лестница: У3..У9 = А-формула при x→χ [C-53]; toy χ²=2.72 [C-54]; G_CHI_01 (x:=χ не χ²) реален — иначе У6=χ⁴ [C-55]; нулевая граница χ=0=идеальный fit [C-56] | подтверждение overlay-статуса (не повышение) |
-| SMALL_FORM_PROJECTION | Малая форма = проекция (§8.1а): нижний уровень (через один, +2) есть проекция верхнего, совпадает в нуле И единице, не зеркало [C-57]; вложение (x=|x| на [0,∞)) — сильный частный случай. Определение по авторскому выбору 2026-06-13: проекция (общие якоря), вложение — частность | canonical (усиление O_08 / projects_to) |
-| CONTRADICTION_LATTICE | Решётка непротиворечия (§8.1а): ±1 (зеркало) = противоречие [C-58]; +2 (проекция) = малая форма [C-57]; единичная граница — дискриминант (нуль слеп, единица разводит) [C-59] | canonical (сшивает §3.6 + §5.1b + projects_to) |
-| MAP_PENTAD | Пентадная рекурсия (шаг 4): окно k+1 = смыслы позиций окна k на новом носителе | canonical (C-32…C-35 + посвидетельная таблица §8.2) |
-| MAP_PI_PROJ | Полушаги проекции π(x)=\|x\| для шага 2 (У2..У7) | canonical в диапазоне 2..7; open для 8+ (C-34) |
-| RULE_P | Правило предсказания П (П1–П6, §8.4): П6 — паспорт уровня из O_13/O_14/O_16/O_17/O_18 (роль/вопрос/след/граница/режим ошибки) | canonical как порождающее правило; предсказания им — candidate_prediction; сами паспорта — интерпретирующий слой (candidate) |
-| O7_DICT_ATOMICITY | Аргумент невставляемости (§6.1): шаги лестницы — атомарные операции словаря Д; вставка = разложение атома или операция вне словаря с полным паспортом (честная процедура F1) | candidate (усиление O_07; падает вместе с полнотой словаря, §12 п.8) |
-| O19_WINDOW_PATTERN | Арностный паттерн окон (§8.5): переход «выбор→агрегация» (узел+2→узел+3) повторяет арностный скачок O_19 в каждом окне: 5→6 (x·x), 9→10 (Σ_k), предсказание 13→14 (θ-семейство) | candidate (обобщение O_19 правилом П) |
-| PASSPORT_U13_15 | Паспорта П6 предсказаний (§10.2–10.4): У13 — 5/5, У14 — ~3.5/5, У15 — ~4/5 | candidate; неполный паспорт удерживает У14/У15 в projected (дисциплина П6) |
-| NODE_SIGNATURES | Сигнатуры узлов 3/7/11/15 (анти-форма → неподвижная точка → инвариант группы) | candidate (асимметрия узла 11 не снята) |
-| U12_ANTIMODE | Анти-мода У12: Поглощение / Разрыв | **принята автором 2026-06-12**; остаются gate/test (лист 31: «gate needed») |
-| U_13_FORMULA | ∏Bₖ=0; минимально (x²+(y−2)²−4)·(x²+(y+2)²−4)=0 | candidate_prediction (C-28…C-30) |
-| U_14_FORMULA | Параметрическое семейство границ F(x,y;θ)=0 | projected_candidate |
-| U_15_FORMULA | Орбита симметрии z=e^{iθ} | projected_candidate (C-31) |
+| Q_LOGIC_7_11 | §7.3 proposes an object-language; completeness of dictionary Д and operational tests unproven | Do not close |
+| U12_CIRCLE | C-23 proves “not a function graph”: mathematical expressivity, not an operational FTS role | Math part closed; semantics open |
+| SP_PARITY | Subject `SP_PARITY` exists in `fts_triples.tsv` but no card in `fts_cards.jsonl` | Broken v13 reference; do not use for promotion; restore/remove in workbook v14 |
+| O2/O12 and other missing IDs | `depends_on` has aliases/unresolved entities | Full patch: `audit/CANON_REFERENCE_PATCH.tsv`; do not canonize dependent claims |
+| O_20 | Preregistered operationalization unconfirmed; audit: 1/4 dataset wins, sign `p=0.9375`, mean ΔAUC=-0.0079 | Preserve negative result; pooled fold-level p is not cross-dataset evidence |
+| D2 sign/phase | Original scaler saw full X; train-only reanalysis: HistGB 2/4, sign `p=0.6875`, mean ΔAUC=-0.0012 | Strong external role unconfirmed; internal У8/У9 role not tested |
+| Д10 / SP_COMPLEX | Five variants reproduced byte-equal, with representation/CFO/target confounds | No clean phase verdict; do not promote SP_COMPLEX |
+| External contact / novelty | Additional 2026-08-02 check confirmed component-level contact У2–У5 (У1 limiting); absence of a full analogue is bounded to 28 original queries | As of 2026-09-13, do not assign novelty or claim external validation of the full ladder. A future predefined SP/K1–K5 evidence threshold may yield `promotion_ready`; until then literature does not change `St_FTS` |
 
-## 3. Отброшено (discarded_v14)
+## 3. Proposed cards for a future v14 export
 
-| Утверждение | Причина |
+| ID | Content | Allowed status after audit |
+|---|---|---|
+| DICT_D1…D11 | Conversion dictionary §5 | `candidate_v14`; specified C-NN math kernels: `formal_math_fact`; Д3 separately `canon-grounded` within U_06 |
+| NOTATION_ANTIFORM | Distinguish `−F`, `Rot_θ`, `⊖A` | `proposed_note`; no level promotion |
+| UNIT_BOUNDARY | `x²=x ⇔ x∈{0,1}` and pointwise coincidences | Equality: `formal_math_fact`; FTS boundary: `candidate_v14` |
+| OVERLAY_AS_CARRIER / CHI_OVERLAY_VERIFIED | `x:=χ` substitution and guards | `candidate_overlay`; no level-status promotion |
+| SMALL_FORM_PROJECTION / CONTRADICTION_LATTICE | Projections/mirror pairs | `candidate_v14`; C-57…C-59 check exact special-case predicates |
+| EXTERNAL_BRIDGE_U1_U5 | Typed chain `Stable → E → Dist → μ на слое → section/decision rule`; `|x|` as alternative class, `−|x|` as fixed selector | `external_bridge_candidate`; direct component contact У2–У5, У1 limiting only; no `promotes_status_of`, level order/semantics unproven |
+| EXPLICIT_ADDITIONS_20260905 | REFINE-MIN, DENSE-PARTITION, SELECT-SYMMETRY, ABS-GAIN, Lift/У0–У7 limits, new OQs | `external_research_integration`; exact finite math scopes checked EA-01…EA-08; no `promotes_status_of`, paper C-NN, or `St_FTS` increase |
+| LEVEL_RETENTION_RULE | Consequence of О1+О3+О8: locally incompatible pairs through У7 retained in `У(2k+2)` as distinguishable modes | `derived_constraint` within `k∈{1,2,3}`; not an axiom or simultaneous truth; no U_08 promotion |
+| SYMMETRY_ESCALATION_HYPOTHESIS | After У7: antiform → operator symmetry (`ΔF=F`, У11) → group invariant (У15) | `hypothesis_candidate`; A0b confirms only carrier change, C-18/C-31 local math facts; no general law |
+| PROPOSAL_STRICT_BAND_7 | Hypothesis about the boundary of forms through У7 | `candidate_requires_canonization`; type `hypothesis_candidate`; no `promotes_status_of` |
+| MAP_PENTAD / MAP_PI_PROJ / RULE_P | Pentad, projections, rule П | `candidate_v14`; state exact C-NN scopes in cards |
+| U_13_FORMULA | `∏Bₖ=0` | `candidate_prediction`; zero-product: `formal_math_fact` |
+| U_14_FORMULA | `F(x,y;θ)=0` | `projected_candidate` |
+| U_15_FORMULA | `z=e^{iθ}` | `projected_candidate`; C-31 properties: `formal_math_fact` |
+
+## 4. Discarded or downgraded
+
+| Claim | Verdict |
 |---|---|
-| «y=−x² описывает мнимые числа» | нарушение гардрейла phase ≠ −A (провал К3). Отброшено отождествление; полезное содержание сохранено: нотация ⊖/−/Rot (NOTATION_ANTIFORM) + правило Д10 |
-| «3-мерный крест / поле мерностей» для У4 | нет свидетеля (провал К1), нарушает минимальность |
-| χ³ как формула ядра У9 | канон сам требует causal decomposition; остаётся оверлеем |
-| Альтернативные М-регистры У8 (Link(0_K,M) и TBD-варианты) | сворачиваются к ?(С) по Д4 |
-| Чтение У10 «периодическое сравнение» как определение | заменено характеризацией Δ²Ц=≠Ц (C-15) |
-| Жёсткие формулы У16–У17 | провал К1 + запрет SP_LIMITS |
+| `y=−x²` «описывает мнимые числа» | `discarded_v14`: violates `Rot ≠ −` |
+| «3-мерный крест / поле мерностей» for У4 | `discarded_v14`: no К1 witness |
+| `χ³` as У9 core | `overlay_only`: canon requires causal/counterfactual decomposition |
+| Reading У10 «периодическое сравнение» as definition | `discarded_v14`: decorative; ODE characterization retained as math fact, without canonizing meaning |
+| Fixed У16–У17 formulas | `discarded_v14` for the earlier proposal: no К1 witness; new research candidates allowed |
+| `canonical_v14` for U_07…U_12 from C-NN alone | Withdrawn as conflation of `St_math`/`St_FTS` |
 
-## 4. Без изменений
+## 5. Current boundaries
 
-- У−1…У6: canonical_strict.
-- χ-лестница и комплексный оверлей: overlay/gate (не канон уровней).
-- SP_EPI: does_not_promote_above ADD_U11_EPI — соблюдено.
-- SP_LIMITS: does_not_promote_above U_13_to_U_17 — соблюдено (13–15 только
-  candidate_prediction / projected_candidate).
-- Агентные тесты T7A/T7B/T7C, κ-гейт: операционный слой, не сущность уровня.
+- У−1…У6: current `canonical_strict` retained; justified revision allowed in a new coherent version.
+- χ ladder, complex/tensor layers: overlay/candidate, not canonical levels.
+- SP_EPI/SP_LIMITS record current gaps; closing them permits SP/К1–К5 review. For now, У13–У15 remain prediction/projected; У16–У17 speculative.
+- Preserve O_20, D2, D10 preregistrations and primary results; issue corrections as dated audit reanalyses.
+
+This patch becomes canon only after an external workbook round-trip, a new
+`MANIFEST.json`, and successful SHA256 verification. Until then it is a review artifact.
+
+## 6. Separate author acceptance, 2026-09-19
+
+The author's direct decision published
+[AC-2026-09-21](../author_canon/2026-09-21/AMENDMENT.md): current У6/У7 forms.
+AC-2026-09-19 remains for local non-object/absence equality at У0, expectation's
+link to speed, and the model's indistinguishability of speed/fundamentality.
+These new records have `author_status=accepted_into_author_canon`; they are not
+the earlier AND/OR research candidates. Their `evidence_status` separately records
+formal/empirical gaps. Each record links to the original message through `adopts`.
+Historical U_07/M_07 and SP statuses and C-NN are not promoted. The combined
+workbook is not yet released; when assembling it, transfer the supplement with
+both status axes preserved.

@@ -1,0 +1,89 @@
+{
+  "scope": "literal ordered syntax and separately declared observation criteria; ordinary Boolean equality is only a counterfactual control",
+  "author_formula_source_sha256": "a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69",
+  "syntax": {
+    "T5_is_D_AND_B": true,
+    "T6_is_flip_T5_AND_T5": true,
+    "T7_is_T6_OR_flip_T6": true,
+    "previous_duplicate_copy_defect_is_absent": true,
+    "T7_has_pattern_X_AND_Y_OR_X_OR_Y": true,
+    "T7_left_is_T6": true,
+    "T6_right_is_T5": true,
+    "T5_right_is_M4_B": true,
+    "B_occurrences_in_T5_T6_T7": [
+      1,
+      2,
+      4
+    ],
+    "atomic_occurrences_in_T5_T6_T7": [
+      4,
+      8,
+      16
+    ],
+    "new_T7_is_active_M07_tree": false
+  },
+  "literal_equality_of_T7_left_and_right": false,
+  "candidate_special_equality_of_root_components": {
+    "T7_branches_equal_by_this_rule": true,
+    "same_test_on_branches_of_T5_and_T6": [
+      true,
+      true
+    ],
+    "changing_one_component_is_detected": true,
+    "reordering_different_components_is_detected": true,
+    "substitution_in_arbitrary_lower_context_is_not_preserved": true,
+    "interpretation": "same ordered composition basis, different root mode; this does not imply the same action or establish first availability at U7"
+  },
+  "equality_under_atom_inventory_only": {
+    "all_B_D_T5_T6_T7_are_equal_by_this_observation": true,
+    "limitation": "this coarse reading also erases the AND/OR distinction already between B and D; it does not establish a U7-specific ability"
+  },
+  "previous_Out_reading": {
+    "T7_outcomes": [
+      "(((a=b ∨ a≠b) ∨ (a=b ∧ a≠b)) ∧ ((a=b ∨ a≠b) ∧ (a=b ∧ a≠b)))",
+      "((a=b ∨ a≠b) ∧ (a=b ∧ a≠b))",
+      "(a=b ∧ a≠b)",
+      "a=b",
+      "a≠b"
+    ],
+    "T7_outcome_count": 5,
+    "short_B_OR_D_outcome_count": 3,
+    "same_outcome_sets": false,
+    "limitation": "candidate Out retains entire AND subtrees; it is not accepted FTS semantics"
+  },
+  "ordinary_boolean_equality_counterfactual_only_not_authors_special_equality": [
+    {
+      "p": false,
+      "q": false,
+      "T7_outer_OR": false,
+      "outer_OR_replaced_by_equality_of_boolean_results": true,
+      "left_result": false,
+      "right_result": false
+    },
+    {
+      "p": false,
+      "q": true,
+      "T7_outer_OR": true,
+      "outer_OR_replaced_by_equality_of_boolean_results": false,
+      "left_result": false,
+      "right_result": true
+    },
+    {
+      "p": true,
+      "q": false,
+      "T7_outer_OR": true,
+      "outer_OR_replaced_by_equality_of_boolean_results": false,
+      "left_result": false,
+      "right_result": true
+    },
+    {
+      "p": true,
+      "q": true,
+      "T7_outer_OR": true,
+      "outer_OR_replaced_by_equality_of_boolean_results": true,
+      "left_result": true,
+      "right_result": true
+    }
+  ],
+  "status_effect": "none; no probability operation, equivalence relation on FTS carriers, or level assignment is established"
+}

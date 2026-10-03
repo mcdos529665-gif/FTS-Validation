@@ -1,6 +1,6 @@
 # INSTALL / use
 
-This is a plain-text LLM export. No installation is required.
+This is a plain-text LLM export of the active canonical release. No installation is required.
 
 Recommended upload order to another LLM:
 1. `START_HERE.md`
@@ -9,6 +9,9 @@ Recommended upload order to another LLM:
 4. `FTS.yaml`
 5. `FTS_v13_LLM_CONTEXT.md`
 6. `FTS_v13_LLM_FULL_DUMP.md` or `fts_v13_workbook_sheets.json` only if full sheet-level detail is needed.
+
+The active release includes the explicit author correction dated 2026-09-21;
+the previous v13 release is preserved under `work/canon_history/`.
 
 For graph work:
 - Use `fts_cards.jsonl` as the entity source.

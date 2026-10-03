@@ -1,4 +1,4 @@
-# Поправка 001 к протоколу — полный охват канона
+# Protocol amendment 001 — полный охват канона
 
 - amendment_id: `FTS-E5-A001`
 - authorized_by: авторский запрос «по всему канону, режим systematic-review»

@@ -1,0 +1,37 @@
+{
+  "schema": "fts_graphify_audit_navigation/v1",
+  "kind": "deterministic_navigation_overlay",
+  "inputs": {
+    "work/v14_rebuild/audit/PATTERN_ATLAS.tsv": "2adfe76f27fdf5a58bcf1622b1e2bc1b6acbbad376f9ee4b249c0571e10b9e2a",
+    "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv": "014b3887def8fb43e712abaa8606e4308944e5e1eb7374ff52b94c2a32fc0d7b",
+    "work/v14_rebuild/audit/CLAIM_MATRIX.tsv": "2707fdcc3d5f85594678573f76f56419eb6ed67823c50582eef19dc7678b0804",
+    "work/v14_rebuild/audit/FINDINGS.tsv": "305017c0267883d361689177d785df576a01dd2c2b5695cbc32974c2be9bf646",
+    "work/v14_rebuild/audit/REVIEW_CONCLUSION.md": "a9bca28add191dbe4a58590229fa138e0b738b2eba85f55a7541c81afe6b8245",
+    "work/OPEN_QUESTIONS.md": "7faca66ebdab6601faf4d6a4b9ec59359322df7cd6f1e90b2ce3b6d5bfd25e2a"
+  },
+  "counts": {
+    "patterns": 31,
+    "open_questions": 60,
+    "claims": 25,
+    "findings": 20,
+    "programs": 7,
+    "events": 13,
+    "meta_patterns": 4,
+    "nodes": 166,
+    "edges": 665,
+    "hyperedges": 1,
+    "bridge_direct": 34,
+    "bridge_indirect": 99,
+    "bridge_support": 8,
+    "finding_claim_links": 6
+  },
+  "community": 47,
+  "graph_nodes": 637,
+  "graph_edges": 1332,
+  "built_at_commit": "9a17dffee9c8c55cff37d55f3d69fc446891a79d",
+  "trust_boundary": {
+    "EXTRACTED": "буквальные связи TSV/Markdown",
+    "INFERRED": "курируемые indirect и непрямой фрагмент mixed",
+    "status_effect": "нет; слой только навигационный"
+  }
+}

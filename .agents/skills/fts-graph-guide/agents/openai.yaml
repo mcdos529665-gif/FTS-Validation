@@ -1,0 +1,4 @@
+interface:
+  display_name: "FTS Graph Guide"
+  short_description: "Explain FTS claims, evidence, and levels in Russian"
+  default_prompt: "Use $fts-graph-guide to explain the grounds, evidence, limits, and status of an FTS question in Russian."

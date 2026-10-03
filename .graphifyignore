@@ -1,0 +1,24 @@
+# .graphifyignore — управляет тем, что graphify включает в граф знаний.
+# graphify предпочитает этот файл .gitignore-у (last-match-wins, per-directory),
+# поэтому правила .gitignore продублированы ниже, чтобы их не потерять.
+# Каталоги .git/ и graphify-out/ исключаются самим graphify отдельно (noise/self).
+
+# --- зеркало .gitignore ---
+tools/_small_b64.json
+tools/_decode.py
+__pycache__/
+*.pyc
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# --- избыточные сериализации канона v13 (тот же контент, что source/fts_cards.json) ---
+# Исключены из графа: каждая порождала узлы-двойники для тех же 161 карточки под
+# разными ID (см. GRAPH_REPORT: ghost-duplicates, разреженность, ложные мосты).
+# Единственный канон-источник для графа — source/fts_cards.json (+ MANIFEST.json).
+# Сам канон в source/ при этом НЕ трогается — это правило только для graphify.
+source/fts_v13_workbook_sheets.json
+source/FTS_v13_LLM_FULL_DUMP.md
+source/FTS_v13_LLM_CONTEXT.md
+source/FTS.yaml

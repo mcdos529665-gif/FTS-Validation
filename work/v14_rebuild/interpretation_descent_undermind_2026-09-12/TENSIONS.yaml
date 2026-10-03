@@ -1,0 +1,53 @@
+# Scoped cross-paper comparison; not exhaustive pairwise detection.
+coverage_note: "Проверены четыре выбранные пары с общим вопросом. Связи между другими тематическими группами могли быть пропущены."
+cross_paper_tensions:
+  - pair_id: CP-001
+    paper_a: Ver23
+    paper_b: Zuc03
+    candidate_basis: shared RQ subtopic
+    overlap_topic: "Что сравнивается при изменении представления"
+    a_finding: "Профиль доступных вычислительных преобразований"
+    a_evidence_pointer: "Ver23 §§3.1–3.2, непосредственно проверено"
+    b_finding: "Разведение формализма и количества информации"
+    b_evidence_pointer: "Zuc03 Def.3.1–3.2/Fig.8, PDF-ответ Undermind"
+    pair_assessment: conditional_difference
+    resolution_status: resolved_in_synthesis
+    resolution_pointer: "REVIEW.md > Найдено, пункты 1–2"
+    scholar_confirmation: pending
+  - pair_id: CP-002
+    paper_a: Leh22
+    paper_b: Zuc03
+    candidate_basis: shared construct/outcome/measure
+    overlap_topic: "Обобщение через изменение представления"
+    a_finding: "Более широкая применимость имеет разные механизмы; увеличение выразительной мощности и ABS различаются"
+    a_evidence_pointer: "Leh22 §§4–5, ABS, непосредственно проверено"
+    b_finding: "В принятом определении абстракция скрывает детали при сохранении желаемых свойств"
+    b_evidence_pointer: "Zuc03 Def.3.1, PDF-ответ Undermind"
+    pair_assessment: conditional_difference
+    resolution_status: resolved_in_synthesis
+    resolution_pointer: "REVIEW.md > Найдено, пункт 2; EC-026"
+    scholar_confirmation: pending
+  - pair_id: CP-003
+    paper_a: Bar03
+    paper_b: Win18b
+    candidate_basis: shared RQ subtopic
+    overlap_topic: "Зависимость интерпретации от контекста"
+    a_finding: "Динамическая теория построения интерпретации"
+    a_evidence_pointer: "Bar03 §§2–4, PDF-ответ Undermind"
+    b_finding: "Манипуляция предсказуемостью контекста изменяет автономность сигналов в игре"
+    b_evidence_pointer: "Win18b §§2–3.4, Tables3–4/Figs8–9, непосредственно проверено"
+    pair_assessment: no_material_conflict
+    resolution_status: not_applicable
+    scholar_confirmation: pending
+  - pair_id: CP-004
+    paper_a: Hal95
+    paper_b: Lor26
+    candidate_basis: agent-noted cross-cluster
+    overlap_topic: "Сохранение вывода при изменении представления"
+    a_finding: "Пределы неограниченной representation independence вероятностного inference"
+    a_evidence_pointer: "Hal95 Th.4.11/4.16, §6, непосредственно проверено"
+    b_finding: "Согласованность заданных переводов запросов и состояний"
+    b_evidence_pointer: "Lor26 Def.14–16/Eq.15, непосредственно проверено"
+    pair_assessment: insufficient_overlap
+    resolution_status: not_applicable
+    scholar_confirmation: pending

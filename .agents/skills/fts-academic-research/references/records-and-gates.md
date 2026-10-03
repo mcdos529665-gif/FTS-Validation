@@ -1,40 +1,35 @@
-# Записи и контрольные точки
+# Records and checkpoints
 
-## Каноническая запись источника
+## Canonical source record
 
-В записях кандидатов и свидетельств использовать поля:
+Use these fields in candidate and evidence records:
 
 `record_id,doi,s2_paper_id,consensus_id,title,year,provider,retrieved_at,query_id,claim_or_oq,screening_decision,screening_reason,fts_relation`
 
-Правила:
+Rules:
 
 - `screening_decision`: `include|exclude|uncertain`.
 - `fts_relation`: `direct|limiting|alternative|analogy`.
-- DOI: нижний регистр, без resolver URL и ведущего `doi:`.
-- Дата получения: ISO 8601 UTC.
-- ID провайдера сохранять дословно.
-- Не помещать частные заметки или текст рукописи в provider fields.
+- DOI: lowercase; remove resolver URLs and leading `doi:`.
+- Retrieval date: ISO 8601 UTC.
+- Preserve provider IDs verbatim.
+- Do not place private notes or manuscript text in provider fields.
 
-## Контрольные точки systematic-review
+## Systematic-review checkpoints
 
-1. `protocol_frozen`: зафиксированы вопрос, базы, запросы, даты, критерии и
-   правило остановки.
-2. `seed_verified`: у каждой seed-записи есть DOI/S2 ID либо явная причина
-   неразрешённости.
-3. `rr_roundtrip_received`: возвращённый экспорт сохранён byte-for-byte и
-   проверено сохранение DOI.
-4. `screening_locked`: файлы Codex и исследователя независимо завершены.
-5. `adjudication_complete`: каждое расхождение имеет одобренное автором решение.
-6. `synthesis_bounded`: evidence matrix и novelty claim включают ограничения и
-   непокрытые области графа.
+1. `protocol_frozen`: research question, databases, queries, dates, criteria, and stopping rule fixed.
+2. `seed_verified`: every seed has DOI or S2 ID, or an explicit unresolved reason.
+3. `rr_roundtrip_received`: returned export stored byte-for-byte and DOI retention checked.
+4. `screening_locked`: Codex and researcher files complete independently.
+5. `adjudication_complete`: every disagreement has an author-approved resolution.
+6. `synthesis_bounded`: evidence matrix and novelty claim include limitations and uncovered graph regions.
 
-Ни одна контрольная точка не меняет статус ФТС. Любое предлагаемое изменение
-проходит через действующий авторский процесс SP/K1–K5.
+No checkpoint changes FTS status. Any proposed change must proceed through the existing SP/K1-K5 author workflow.
 
-## Локальный полнотекстовый intake
+## Local full-text intake record
 
-Для пользовательских OCR/Markdown-файлов использовать `PAPER_INTAKE.tsv`.
-Обязательны: существующий `record_id`, DOI при наличии, исходный путь, SHA256,
-проектный путь, показатели OCR, русское досье и `intake_status=imported`.
-Исходный файл сохраняется без правок. Досье является производным артефактом и не
-закрывает второй screening-проход.
+`PAPER_INTAKE.tsv` requires an existing `record_id`, DOI when available, original
+path, SHA256, project path, OCR metrics, Russian dossier, and
+`intake_status=imported`. Keep originals byte-identical and validate project paths
+within the workspace. Intake and translation are provenance steps, not independent
+screening or automatic changes to FTS status.

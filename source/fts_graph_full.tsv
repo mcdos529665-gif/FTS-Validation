@@ -205,7 +205,7 @@ U_07	has_antimode_detail	U7_FORGET_CLOSE	v11_core	USER_DIALOG_V11	candidate_core
 U7_WINDOW_CORE	has_boundary	U7_U8_ANSWER_QUESTION_BOUNDARY	v11_boundary	USER_DIALOG_V11	candidate_boundary	ответ/вопрос; У7/У8	G_0204
 U_08	contrasts_with	U7_U8_ANSWER_QUESTION_BOUNDARY	v11_boundary	USER_DIALOG_V11	candidate_boundary	У8 = A?; не слабое У7	G_0205
 U7_WINDOW_CORE	has_agentic_gate	U7_AGENTIC_GATE_LAYER	v11_guardrail	CANON_EN/USER_DIALOG_V11	operational_diagnostic_layer	κ/T7 перенесены в diagnostic layer	G_0206
-M_07	has_local_forbid	U7_MATH_LOCAL_FORBID	v11_math	RESEARCH_STATUS_V9/USER_DIALOG_V11	derived_constraint	y=-x*x requires y!=x*x	G_0207
+M_07	has_local_forbid	U7_MATH_LOCAL_FORBID	author_correction_2026-09-21	AUTHOR_CORRECTION_2026-09-21/RESEARCH_STATUS_V9	derived_constraint	вложенная форма У7 не должна схлопываться в обычную булеву тень	G_0207
 U_06	contrasts_with	U7_MATH_LOCAL_FORBID	v11_math	RESEARCH_STATUS_V9/USER_DIALOG_V11	derived_constraint	У7 не должен схлопываться в У6	G_0208
 CHI_STAT_LADDER	uses_carrier	CHI_CARRIER	v12_chi_ladder	USER_DIALOG_V12	statistical_overlay_candidate	x:=χ, not χ²	G_0209
 CHI_CARRIER	has_operator	OP_ChiCarrier	v12_chi_ladder	USER_DIALOG_V12	statistical_overlay_candidate	χ_i from O_i,E_i	G_0210

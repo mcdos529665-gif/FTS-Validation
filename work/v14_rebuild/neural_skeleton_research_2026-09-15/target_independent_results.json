@@ -1,0 +1,683 @@
+{
+  "protocol": "FTS-Skeleton-v0.3",
+  "status": "target_independent_cross_domain_probe",
+  "script_sha256": "b7fcd08585d845290078c60df6e2688d653fcb17500e334d843002153234fb09",
+  "protocol_sha256": "0e27729c72630360330ac40e9c6754c3b80382a46c56a0c7ccc3692ff0adbab2",
+  "seeds": [
+    13,
+    29,
+    47,
+    71,
+    97
+  ],
+  "train_n": 1000,
+  "test_n": 5000,
+  "rows": [
+    {
+      "seed": 13,
+      "dim": 1,
+      "target": "A",
+      "held_out_n": 657,
+      "raw_params": 177,
+      "structured_params": 177,
+      "raw_all": {
+        "accuracy": 0.9418,
+        "brier": 0.054166569250070906
+      },
+      "structured_all": {
+        "accuracy": 0.9958,
+        "brier": 0.003369972774146021
+      },
+      "raw_held": {
+        "accuracy": 0.665144596651446,
+        "brier": 0.3185654059608338
+      },
+      "structured_held": {
+        "accuracy": 0.9939117199391172,
+        "brier": 0.004844766395728963
+      },
+      "delta_accuracy_all": 0.05400000000000005,
+      "delta_accuracy_held": 0.3287671232876712,
+      "delta_brier_all": 0.05079659647592488,
+      "delta_brier_held": 0.3137206395651049
+    },
+    {
+      "seed": 13,
+      "dim": 1,
+      "target": "B",
+      "held_out_n": 657,
+      "raw_params": 177,
+      "structured_params": 177,
+      "raw_all": {
+        "accuracy": 0.9324,
+        "brier": 0.06467778619150999
+      },
+      "structured_all": {
+        "accuracy": 0.9924,
+        "brier": 0.006762444707145573
+      },
+      "raw_held": {
+        "accuracy": 0.6149162861491628,
+        "brier": 0.37504845330170594
+      },
+      "structured_held": {
+        "accuracy": 0.984779299847793,
+        "brier": 0.015473966459764966
+      },
+      "delta_accuracy_all": 0.05999999999999994,
+      "delta_accuracy_held": 0.36986301369863017,
+      "delta_brier_all": 0.05791534148436442,
+      "delta_brier_held": 0.359574486841941
+    },
+    {
+      "seed": 13,
+      "dim": 2,
+      "target": "A",
+      "held_out_n": 634,
+      "raw_params": 241,
+      "structured_params": 241,
+      "raw_all": {
+        "accuracy": 0.9136,
+        "brier": 0.08215625337704215
+      },
+      "structured_all": {
+        "accuracy": 0.9876,
+        "brier": 0.011041793708654695
+      },
+      "raw_held": {
+        "accuracy": 0.5583596214511041,
+        "brier": 0.4344343060290778
+      },
+      "structured_held": {
+        "accuracy": 0.9889589905362776,
+        "brier": 0.008191720443010796
+      },
+      "delta_accuracy_all": 0.07400000000000007,
+      "delta_accuracy_held": 0.4305993690851735,
+      "delta_brier_all": 0.07111445966838745,
+      "delta_brier_held": 0.426242585586067
+    },
+    {
+      "seed": 13,
+      "dim": 2,
+      "target": "B",
+      "held_out_n": 634,
+      "raw_params": 241,
+      "structured_params": 241,
+      "raw_all": {
+        "accuracy": 0.9262,
+        "brier": 0.06936663372560513
+      },
+      "structured_all": {
+        "accuracy": 0.9856,
+        "brier": 0.012203185159956926
+      },
+      "raw_held": {
+        "accuracy": 0.6876971608832808,
+        "brier": 0.3026567948363219
+      },
+      "structured_held": {
+        "accuracy": 0.9842271293375394,
+        "brier": 0.013430901918852042
+      },
+      "delta_accuracy_all": 0.05940000000000001,
+      "delta_accuracy_held": 0.2965299684542586,
+      "delta_brier_all": 0.0571634485656482,
+      "delta_brier_held": 0.28922589291746986
+    },
+    {
+      "seed": 29,
+      "dim": 1,
+      "target": "A",
+      "held_out_n": 583,
+      "raw_params": 177,
+      "structured_params": 177,
+      "raw_all": {
+        "accuracy": 0.9464,
+        "brier": 0.04985701161604972
+      },
+      "structured_all": {
+        "accuracy": 0.997,
+        "brier": 0.0022505605395126416
+      },
+      "raw_held": {
+        "accuracy": 0.6295025728987993,
+        "brier": 0.3465624960546948
+      },
+      "structured_held": {
+        "accuracy": 0.9982847341337907,
+        "brier": 0.0018400123837945409
+      },
+      "delta_accuracy_all": 0.05059999999999998,
+      "delta_accuracy_held": 0.3687821612349914,
+      "delta_brier_all": 0.047606451076537076,
+      "delta_brier_held": 0.34472248367090025
+    },
+    {
+      "seed": 29,
+      "dim": 1,
+      "target": "B",
+      "held_out_n": 583,
+      "raw_params": 177,
+      "structured_params": 177,
+      "raw_all": {
+        "accuracy": 0.957,
+        "brier": 0.04114345069822064
+      },
+      "structured_all": {
+        "accuracy": 0.9904,
+        "brier": 0.008846205783553475
+      },
+      "raw_held": {
+        "accuracy": 0.7495711835334476,
+        "brier": 0.24704211235970994
+      },
+      "structured_held": {
+        "accuracy": 0.9794168096054888,
+        "brier": 0.02068236984512663
+      },
+      "delta_accuracy_all": 0.033399999999999985,
+      "delta_accuracy_held": 0.22984562607204118,
+      "delta_brier_all": 0.032297244914667164,
+      "delta_brier_held": 0.2263597425145833
+    },
+    {
+      "seed": 29,
+      "dim": 2,
+      "target": "A",
+      "held_out_n": 632,
+      "raw_params": 241,
+      "structured_params": 241,
+      "raw_all": {
+        "accuracy": 0.9348,
+        "brier": 0.06175816608253681
+      },
+      "structured_all": {
+        "accuracy": 0.988,
+        "brier": 0.01029027391343356
+      },
+      "raw_held": {
+        "accuracy": 0.6471518987341772,
+        "brier": 0.3342311815619737
+      },
+      "structured_held": {
+        "accuracy": 0.9873417721518988,
+        "brier": 0.01194785772533688
+      },
+      "delta_accuracy_all": 0.053200000000000025,
+      "delta_accuracy_held": 0.34018987341772156,
+      "delta_brier_all": 0.051467892169103246,
+      "delta_brier_held": 0.3222833238366368
+    },
+    {
+      "seed": 29,
+      "dim": 2,
+      "target": "B",
+      "held_out_n": 632,
+      "raw_params": 241,
+      "structured_params": 241,
+      "raw_all": {
+        "accuracy": 0.9308,
+        "brier": 0.06417413550176668
+      },
+      "structured_all": {
+        "accuracy": 0.9872,
+        "brier": 0.01018927072369522
+      },
+      "raw_held": {
+        "accuracy": 0.685126582278481,
+        "brier": 0.30370640322039
+      },
+      "structured_held": {
+        "accuracy": 0.995253164556962,
+        "brier": 0.0024576260715976806
+      },
+      "delta_accuracy_all": 0.056400000000000006,
+      "delta_accuracy_held": 0.310126582278481,
+      "delta_brier_all": 0.053984864778071455,
+      "delta_brier_held": 0.30124877714879233
+    },
+    {
+      "seed": 47,
+      "dim": 1,
+      "target": "A",
+      "held_out_n": 646,
+      "raw_params": 177,
+      "structured_params": 177,
+      "raw_all": {
+        "accuracy": 0.9394,
+        "brier": 0.058262425239626534
+      },
+      "structured_all": {
+        "accuracy": 0.9972,
+        "brier": 0.0024368745813889226
+      },
+      "raw_held": {
+        "accuracy": 0.608359133126935,
+        "brier": 0.38037923006494734
+      },
+      "structured_held": {
+        "accuracy": 0.9984520123839009,
+        "brier": 0.0012621078128792962
+      },
+      "delta_accuracy_all": 0.05779999999999996,
+      "delta_accuracy_held": 0.3900928792569659,
+      "delta_brier_all": 0.05582555065823761,
+      "delta_brier_held": 0.37911712225206806
+    },
+    {
+      "seed": 47,
+      "dim": 1,
+      "target": "B",
+      "held_out_n": 646,
+      "raw_params": 177,
+      "structured_params": 177,
+      "raw_all": {
+        "accuracy": 0.9446,
+        "brier": 0.05286388500160997
+      },
+      "structured_all": {
+        "accuracy": 0.9968,
+        "brier": 0.0030211390344572434
+      },
+      "raw_held": {
+        "accuracy": 0.6393188854489165,
+        "brier": 0.34623583457729123
+      },
+      "structured_held": {
+        "accuracy": 0.9938080495356038,
+        "brier": 0.006113703194975005
+      },
+      "delta_accuracy_all": 0.052200000000000024,
+      "delta_accuracy_held": 0.3544891640866873,
+      "delta_brier_all": 0.04984274596715273,
+      "delta_brier_held": 0.34012213138231623
+    },
+    {
+      "seed": 47,
+      "dim": 2,
+      "target": "A",
+      "held_out_n": 620,
+      "raw_params": 241,
+      "structured_params": 241,
+      "raw_all": {
+        "accuracy": 0.9176,
+        "brier": 0.07940627506895535
+      },
+      "structured_all": {
+        "accuracy": 0.9932,
+        "brier": 0.0058568944802165615
+      },
+      "raw_held": {
+        "accuracy": 0.5806451612903226,
+        "brier": 0.4141665282746326
+      },
+      "structured_held": {
+        "accuracy": 0.9967741935483871,
+        "brier": 0.0032054856099161685
+      },
+      "delta_accuracy_all": 0.0756,
+      "delta_accuracy_held": 0.4161290322580645,
+      "delta_brier_all": 0.07354938058873879,
+      "delta_brier_held": 0.4109610426647164
+    },
+    {
+      "seed": 47,
+      "dim": 2,
+      "target": "B",
+      "held_out_n": 620,
+      "raw_params": 241,
+      "structured_params": 241,
+      "raw_all": {
+        "accuracy": 0.9388,
+        "brier": 0.05675570853559825
+      },
+      "structured_all": {
+        "accuracy": 0.9866,
+        "brier": 0.011562664188071775
+      },
+      "raw_held": {
+        "accuracy": 0.6903225806451613,
+        "brier": 0.290937480490541
+      },
+      "structured_held": {
+        "accuracy": 0.9693548387096774,
+        "brier": 0.026261083457165456
+      },
+      "delta_accuracy_all": 0.047800000000000065,
+      "delta_accuracy_held": 0.27903225806451615,
+      "delta_brier_all": 0.045193044347526475,
+      "delta_brier_held": 0.2646763970333756
+    },
+    {
+      "seed": 71,
+      "dim": 1,
+      "target": "A",
+      "held_out_n": 664,
+      "raw_params": 177,
+      "structured_params": 177,
+      "raw_all": {
+        "accuracy": 0.952,
+        "brier": 0.046631040118535715
+      },
+      "structured_all": {
+        "accuracy": 0.997,
+        "brier": 0.0028507673834666227
+      },
+      "raw_held": {
+        "accuracy": 0.7048192771084337,
+        "brier": 0.287611360843636
+      },
+      "structured_held": {
+        "accuracy": 0.9939759036144579,
+        "brier": 0.005882638827175909
+      },
+      "delta_accuracy_all": 0.04500000000000004,
+      "delta_accuracy_held": 0.28915662650602414,
+      "delta_brier_all": 0.04378027273506909,
+      "delta_brier_held": 0.28172872201646004
+    },
+    {
+      "seed": 71,
+      "dim": 1,
+      "target": "B",
+      "held_out_n": 664,
+      "raw_params": 177,
+      "structured_params": 177,
+      "raw_all": {
+        "accuracy": 0.9434,
+        "brier": 0.05519361485349599
+      },
+      "structured_all": {
+        "accuracy": 0.995,
+        "brier": 0.003895845659656979
+      },
+      "raw_held": {
+        "accuracy": 0.7093373493975904,
+        "brier": 0.29046507495405766
+      },
+      "structured_held": {
+        "accuracy": 0.9939759036144579,
+        "brier": 0.003914612007351042
+      },
+      "delta_accuracy_all": 0.05159999999999998,
+      "delta_accuracy_held": 0.28463855421686746,
+      "delta_brier_all": 0.051297769193839014,
+      "delta_brier_held": 0.2865504629467066
+    },
+    {
+      "seed": 71,
+      "dim": 2,
+      "target": "A",
+      "held_out_n": 603,
+      "raw_params": 241,
+      "structured_params": 241,
+      "raw_all": {
+        "accuracy": 0.9204,
+        "brier": 0.07513386406925049
+      },
+      "structured_all": {
+        "accuracy": 0.9918,
+        "brier": 0.006602237716026992
+      },
+      "raw_held": {
+        "accuracy": 0.5190713101160862,
+        "brier": 0.46870008889676884
+      },
+      "structured_held": {
+        "accuracy": 0.9917081260364843,
+        "brier": 0.005596742615984044
+      },
+      "delta_accuracy_all": 0.07140000000000002,
+      "delta_accuracy_held": 0.4726368159203981,
+      "delta_brier_all": 0.06853162635322349,
+      "delta_brier_held": 0.4631033462807848
+    },
+    {
+      "seed": 71,
+      "dim": 2,
+      "target": "B",
+      "held_out_n": 603,
+      "raw_params": 241,
+      "structured_params": 241,
+      "raw_all": {
+        "accuracy": 0.9358,
+        "brier": 0.060142419475113694
+      },
+      "structured_all": {
+        "accuracy": 0.9906,
+        "brier": 0.00889281789407408
+      },
+      "raw_held": {
+        "accuracy": 0.6368159203980099,
+        "brier": 0.34826929294056563
+      },
+      "structured_held": {
+        "accuracy": 0.9867330016583747,
+        "brier": 0.013578950776979305
+      },
+      "delta_accuracy_all": 0.05480000000000007,
+      "delta_accuracy_held": 0.3499170812603648,
+      "delta_brier_all": 0.05124960158103961,
+      "delta_brier_held": 0.33469034216358634
+    },
+    {
+      "seed": 97,
+      "dim": 1,
+      "target": "A",
+      "held_out_n": 629,
+      "raw_params": 177,
+      "structured_params": 177,
+      "raw_all": {
+        "accuracy": 0.9178,
+        "brier": 0.08003216635829644
+      },
+      "structured_all": {
+        "accuracy": 0.9966,
+        "brier": 0.0032676036529684467
+      },
+      "raw_held": {
+        "accuracy": 0.4292527821939587,
+        "brier": 0.5655160869609472
+      },
+      "structured_held": {
+        "accuracy": 0.9968203497615262,
+        "brier": 0.0030816280042096408
+      },
+      "delta_accuracy_all": 0.07880000000000009,
+      "delta_accuracy_held": 0.5675675675675675,
+      "delta_brier_all": 0.07676456270532798,
+      "delta_brier_held": 0.5624344589567376
+    },
+    {
+      "seed": 97,
+      "dim": 1,
+      "target": "B",
+      "held_out_n": 629,
+      "raw_params": 177,
+      "structured_params": 177,
+      "raw_all": {
+        "accuracy": 0.954,
+        "brier": 0.04355123027534772
+      },
+      "structured_all": {
+        "accuracy": 0.991,
+        "brier": 0.00761040335809324
+      },
+      "raw_held": {
+        "accuracy": 0.7472178060413355,
+        "brier": 0.24206070122159612
+      },
+      "structured_held": {
+        "accuracy": 0.9888712241653418,
+        "brier": 0.008357215325449014
+      },
+      "delta_accuracy_all": 0.03700000000000003,
+      "delta_accuracy_held": 0.24165341812400631,
+      "delta_brier_all": 0.03594082691725448,
+      "delta_brier_held": 0.23370348589614712
+    },
+    {
+      "seed": 97,
+      "dim": 2,
+      "target": "A",
+      "held_out_n": 640,
+      "raw_params": 241,
+      "structured_params": 241,
+      "raw_all": {
+        "accuracy": 0.9362,
+        "brier": 0.0605767780533969
+      },
+      "structured_all": {
+        "accuracy": 0.9908,
+        "brier": 0.007768986080290269
+      },
+      "raw_held": {
+        "accuracy": 0.60625,
+        "brier": 0.37798591274716226
+      },
+      "structured_held": {
+        "accuracy": 0.984375,
+        "brier": 0.013969865898689038
+      },
+      "delta_accuracy_all": 0.05459999999999998,
+      "delta_accuracy_held": 0.37812500000000004,
+      "delta_brier_all": 0.05280779197310664,
+      "delta_brier_held": 0.3640160468484732
+    },
+    {
+      "seed": 97,
+      "dim": 2,
+      "target": "B",
+      "held_out_n": 640,
+      "raw_params": 241,
+      "structured_params": 241,
+      "raw_all": {
+        "accuracy": 0.9264,
+        "brier": 0.07078158175337552
+      },
+      "structured_all": {
+        "accuracy": 0.9904,
+        "brier": 0.008421835923084065
+      },
+      "raw_held": {
+        "accuracy": 0.6203125,
+        "brier": 0.3682458342001637
+      },
+      "structured_held": {
+        "accuracy": 0.990625,
+        "brier": 0.00810492709079363
+      },
+      "delta_accuracy_all": 0.06399999999999995,
+      "delta_accuracy_held": 0.37031249999999993,
+      "delta_brier_all": 0.06235974583029146,
+      "delta_brier_held": 0.3601409071093701
+    }
+  ],
+  "summaries": {
+    "dim1_targetA": {
+      "delta_accuracy_all": {
+        "mean": 0.05724000000000003,
+        "sd": 0.012937851444501932,
+        "ci95_half_width": 0.016061888981611133,
+        "positive_seeds": 5
+      },
+      "delta_accuracy_held": {
+        "mean": 0.38887327157064405,
+        "sd": 0.10711319940093998,
+        "ci95_half_width": 0.1329772817861649,
+        "positive_seeds": 5
+      },
+      "delta_brier_all": {
+        "mean": 0.054954686730219325,
+        "sd": 0.012967101680316425,
+        "ci95_half_width": 0.016098202123893963,
+        "positive_seeds": 5
+      },
+      "delta_brier_held": {
+        "mean": 0.3763446852922542,
+        "sd": 0.11012607038573892,
+        "ci95_half_width": 0.13671765548587397,
+        "positive_seeds": 5
+      }
+    },
+    "dim1_targetB": {
+      "delta_accuracy_all": {
+        "mean": 0.04683999999999999,
+        "sd": 0.011203035302988185,
+        "ci95_half_width": 0.013908175562653762,
+        "positive_seeds": 5
+      },
+      "delta_accuracy_held": {
+        "mean": 0.29609795523964644,
+        "sd": 0.063905621297633,
+        "ci95_half_width": 0.07933658838072863,
+        "positive_seeds": 5
+      },
+      "delta_brier_all": {
+        "mean": 0.04545878569545556,
+        "sd": 0.010866189685307164,
+        "ci95_half_width": 0.013489993537736944,
+        "positive_seeds": 5
+      },
+      "delta_brier_held": {
+        "mean": 0.28926206191633885,
+        "sd": 0.060376720864681134,
+        "ci95_half_width": 0.07495558221255846,
+        "positive_seeds": 5
+      }
+    },
+    "dim2_targetA": {
+      "delta_accuracy_all": {
+        "mean": 0.06576000000000001,
+        "sd": 0.010941115116842537,
+        "ci95_half_width": 0.01358301083418549,
+        "positive_seeds": 5
+      },
+      "delta_accuracy_held": {
+        "mean": 0.4075360181362715,
+        "sd": 0.05060727002388899,
+        "ci95_half_width": 0.06282715149983809,
+        "positive_seeds": 5
+      },
+      "delta_brier_all": {
+        "mean": 0.06349423015051193,
+        "sd": 0.01052831984347629,
+        "ci95_half_width": 0.013070539974446248,
+        "positive_seeds": 5
+      },
+      "delta_brier_held": {
+        "mean": 0.39732126904333565,
+        "sd": 0.05497658298533522,
+        "ci95_half_width": 0.06825150035820184,
+        "positive_seeds": 5
+      }
+    },
+    "dim2_targetB": {
+      "delta_accuracy_all": {
+        "mean": 0.056480000000000016,
+        "sd": 0.005984312826047738,
+        "ci95_half_width": 0.007429314570160504,
+        "positive_seeds": 5
+      },
+      "delta_accuracy_held": {
+        "mean": 0.3211836780115241,
+        "sd": 0.03790137390903046,
+        "ci95_half_width": 0.04705322692788236,
+        "positive_seeds": 5
+      },
+      "delta_brier_all": {
+        "mean": 0.053990141020515435,
+        "sd": 0.006422998901988711,
+        "ci95_half_width": 0.007973927953593413,
+        "positive_seeds": 5
+      },
+      "delta_brier_held": {
+        "mean": 0.30999646327451885,
+        "sd": 0.037703116289331595,
+        "ci95_half_width": 0.046807097043718715,
+        "positive_seeds": 5
+      }
+    }
+  }
+}

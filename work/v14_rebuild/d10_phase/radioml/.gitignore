@@ -1,0 +1,5 @@
+# Данные RadioML — большие, НЕ коммитим (источник: DeepSig opendata / Kaggle-зеркало).
+# Прослеживаемость — через PREREGISTRATION.md (формат, SNR, классы) + run_radioml.py.
+*.pkl
+*.tar.bz2
+*.dat

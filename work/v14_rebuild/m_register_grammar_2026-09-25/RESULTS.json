@@ -1,0 +1,132 @@
+{
+  "scope": "ordered binary syntax trees; redundant parentheses ignored; no associativity, commutativity, idempotence, or FTS semantics assumed",
+  "source_sha256": "ca727b0bbf8f720de459717780db007056bf14f17235dce6b72c046b7b0f6dea",
+  "canon_sha256": "bf92fdeae4f7d7b781fd4dd7be6c20c738623243f0a71135fb9ee89d1c0960ab",
+  "parsed_formulas": 17,
+  "comparisons": {
+    "simple_0_1_2_4_5_6_match_current_trees": true,
+    "simple_4_to_8_follow_paired_rule": true,
+    "simple7_equals_current7_right_child": true,
+    "simple7_equals_current7": false,
+    "simple8_equals_swap_root_current7": true,
+    "implied_simple9_equals_current7": true,
+    "complex5_equals_simple6_with_only_root_children_swapped": true,
+    "complex6_equals_swap_root_complex5_AND_complex5": true,
+    "complex7_equals_complex6_OR_identical_complex6": true,
+    "complex7_has_root_swapped_copy_of_complex6": false,
+    "bootstrap2_is_literal_simple1_AND_simple0": false,
+    "bootstrap3_is_literal_simple1_OR_simple0": false
+  },
+  "atom_sets": {
+    "bootstrap_inputs": [
+      "a=a",
+      "a≠a"
+    ],
+    "M2": [
+      "a=b"
+    ],
+    "M3_proposal": [
+      "a≠b"
+    ]
+  },
+  "leaf_counts": {
+    "simple": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 2,
+      "5": 2,
+      "6": 4,
+      "7": 4,
+      "8": 8
+    },
+    "complex": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 2,
+      "5": 4,
+      "6": 8,
+      "7": 16
+    },
+    "current_M6": 4,
+    "current_M7": 8
+  },
+  "boolean_shadow_only": [
+    {
+      "p": false,
+      "q": false,
+      "simple": {
+        "4": false,
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": false
+      },
+      "complex": {
+        "4": false,
+        "5": false,
+        "6": false,
+        "7": false
+      },
+      "current_M7": false
+    },
+    {
+      "p": false,
+      "q": true,
+      "simple": {
+        "4": false,
+        "5": true,
+        "6": false,
+        "7": true,
+        "8": false
+      },
+      "complex": {
+        "4": false,
+        "5": false,
+        "6": false,
+        "7": false
+      },
+      "current_M7": true
+    },
+    {
+      "p": true,
+      "q": false,
+      "simple": {
+        "4": false,
+        "5": true,
+        "6": false,
+        "7": true,
+        "8": false
+      },
+      "complex": {
+        "4": false,
+        "5": false,
+        "6": false,
+        "7": false
+      },
+      "current_M7": true
+    },
+    {
+      "p": true,
+      "q": true,
+      "simple": {
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": true
+      },
+      "complex": {
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true
+      },
+      "current_M7": true
+    }
+  ],
+  "status_effect": "none; false comparisons report mismatches, not failures of canonical C-NN claims"
+}

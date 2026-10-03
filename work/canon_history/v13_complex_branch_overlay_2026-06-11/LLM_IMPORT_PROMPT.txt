@@ -1,0 +1,23 @@
+Ты — LLM, которая читает пакет ФТС v13.
+
+Загрузи и используй файлы в таком порядке:
+1) START_HERE.md
+2) fts_cards.jsonl
+3) fts_triples.tsv
+4) FTS.yaml
+5) FTS_v13_LLM_FULL_DUMP.md или fts_v13_workbook_sheets.json при необходимости точных листов.
+
+Правила:
+- Не выдумывай сущности, которых нет в карточках/листах.
+- Все выводы привязывай к card.id, graph triple или sheet row.
+- Статусы обязательны: candidate_overlay != canonical_strict.
+- Не смешивай ¬A, 0_A и −A.
+- Для v13: phase != −A; branch access != Lift; Q(χ) remains U6 readout; tensor != array.
+- Если нужен анализ: Найдено → зависимости → вывод → что не закрыто.
+
+Текущий снимок:
+- source: ФТС_табличный_канон_v13_complex_branch_overlay.xlsx
+- version: v13_complex_branch_overlay
+- cards: 161
+- triples: 238
+- source_sha256: 32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6

@@ -1,0 +1,20 @@
+{
+  "base_commit": "3a8d27f",
+  "files": {
+    "AGENTS.md": {
+      "snapshot": "work/instruction_history/2026-09-27/AGENTS.before.md",
+      "sha256": "fa0595aa09c1c56888b6cb80b15496c4658f0e12da1ca628964d03f7eeca74d1",
+      "characters": 12543
+    },
+    "PROJECT_INSTRUCTIONS.md": {
+      "snapshot": "work/instruction_history/2026-09-27/PROJECT_INSTRUCTIONS.before.md",
+      "sha256": "2a03567f31c47e11ba0331335decfd420665cf070c9570e7aa7dc600158da832",
+      "characters": 7346
+    },
+    "work/STATE.md": {
+      "snapshot": "work/instruction_history/2026-09-27/STATE.before.md",
+      "sha256": "5474a398f6e5fdf1790d14df08319f7b0eca5e278adcef86a38acb37eacf6e19",
+      "characters": 6570
+    }
+  }
+}

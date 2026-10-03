@@ -3,9 +3,12 @@
 Рабочий контур для `oq-systematic-literature-review`. Исторический каталог
 `../audit/` и его `LITERATURE_MATRIX.tsv` не изменяются.
 
-Порядок: заморозить протокол → выполнить discovery → проверить и дедуплицировать
-seed-set → ручной ResearchRabbit round-trip → два независимых screening-прохода →
-явная adjudication → evidence matrix → ограниченная novelty boundary.
+Исторический порядок wave 0: заморозить протокол → выполнить discovery →
+проверить и дедуплицировать seed-set → ручной ResearchRabbit round-trip → два
+независимых screening-прохода → явная adjudication → evidence matrix →
+ограниченная novelty boundary. Для текущего цикла действует
+`PROTOCOL_AMENDMENT_005_AUTHOR_CYCLE.md`: E5 вспомогателен, второй screen
+опционален, а предварительный synthesis разрешён с явными границами.
 
 Ни один внешний источник автоматически не меняет `St_FTS` или статус карточки.
 Передача наружу по умолчанию ограничена поисковыми строками и библиографическими
@@ -13,25 +16,41 @@ seed-set → ручной ResearchRabbit round-trip → два независи�
 
 Wave 0: `PROTOCOL_AMENDMENT_001.md`, `PROTOCOL_AMENDMENT_002.md`,
 `SEARCH_LOG.tsv`, `CANDIDATES.tsv`, `SCREENING_CODEX.tsv`, `PROVIDER_STATUS.md`,
-`WAVE_0_STATUS.md` и `RESEARCHRABBIT_HANDOFF.md` образуют замороженный пакет до
-adjudication. Независимый второй проход исследователя начинается в
+`WAVE_0_STATUS.md`, and `RESEARCHRABBIT_HANDOFF.md` form the frozen pre-adjudication
+package. `PROTOCOL_AMENDMENT_005_AUTHOR_CYCLE.md`, `SYNTHESIS.md` and
+`NOVELTY_BOUNDARY.md` describe only the current prospective use; they do not
+rewrite wave 0. A second pass, if used as independent evidence, begins blinded in
 `SCREENING_RESEARCHER.tsv`.
 
-Шесть переданных полнотекстовых работ добавлены по
-`IMPORT_PLAN.md`. Общий паспорт и контрольные суммы находятся в
-`PAPER_INTAKE.tsv`, неизменённые OCR-оригиналы и русские читательские досье —
-в `papers/`. Предварительные, неканонические точки сопряжения собраны в
-`COUPLING_MAP.md`.
+Восстановленные самостоятельные проекты из единой исследовательской выгрузки:
 
-По отдельной авторской команде и поправке `PROTOCOL_AMENDMENT_003.md` оформлен
-узкий `BLACKWELL_BRIDGE.md`: типизированный кандидат для У4–У6, точный пример,
-контрпримеры и `check_blackwell_bridge.py`. Это не общий E5-синтез и не снимает
-гейты второго screening-прохода и adjudication.
+- `DEEP_RESEARCH_REQUESTS_CONNECTIVITY.md` — готовые задания ChatGPT Deep
+  Research для симметричного поиска подтверждений, ограничений, альтернатив и
+  опровержений каждого основания O_01…O_20; `DR-00` маршрутизирует
+  arXiv:cs/0401016v3 к O_07/O_08/O_09/O_14 без повышения статуса;
+- `COUPLING_MAP.md` — предварительная карта сопряжений внешних работ с ФТС;
+- `PROTOCOL_AMENDMENT_003.md`, `BLACKWELL_BRIDGE.md`,
+  `check_blackwell_bridge.py`, `BLACKWELL_BRIDGE_REPORT.md` — ограниченный
+  Blackwell-мост У4→У5→У6 (`candidate_external_bridge`);
+- `PROTOCOL_AMENDMENT_004.md`, `TYPED_ABSENCE_BRIDGE.md`,
+  `LIFT_TYPING_PROJECT.md`, `check_absence_lift_projects.py`,
+  `ABSENCE_LIFT_REPORT.md` — раздельные кандидаты для `0_A` и `[OP_Lift]`.
 
-По поправке `PROTOCOL_AMENDMENT_004.md` добавлены ещё два раздельных проекта:
-`TYPED_ABSENCE_BRIDGE.md` задаёт кандидатную запись `0_A` через тип, локус,
-механизм, provenance и свидетельство; `LIFT_TYPING_PROJECT.md` задаёт паспорт
-категориальной типизации `[OP_Lift]` и явно отделяет его от WFS lifting
-property. Точные конечные пробы TA-01…TA-05 и LT-01…LT-05 находятся в
-`check_absence_lift_projects.py` и `ABSENCE_LIFT_REPORT.md`. Эти проекты также
-не меняют screening, общий синтез или `St_FTS`.
+Эти документы восстановлены как исследовательский слой. Они не завершают второй
+screening, не запускают adjudication и не меняют `St_FTS`.
+
+Новая волна 2026-09-11: [приёмка семи отчётов основного блока](dr_core_2026-09-11/REVIEW.md),
+[аудит первоисточников](dr_core_2026-09-11/SOURCE_AUDIT.md),
+[маршрутизация коллизий](dr_core_2026-09-11/CONFLICT_ROUTING.md),
+[18 конечных проверок и происхождение](dr_core_2026-09-11/CHECK_REPORT.md).
+В `inputs/` сохранены неизменённые отчёты с SHA256. Эта волна уточняет O_07,
+O_08, O_09, O_14 на уровне исследовательских мостов; полный F1/F2/F3 не установлен.
+
+## Local full-text intake preserved at merge (2026-10-03)
+
+Six originals and separate Russian dossiers are available in `papers/`:
+E5-H01, E5-H02, E5-H04, E5-H05, E5-H12, E5-H13.
+[Import plan](IMPORT_PLAN.md), [intake manifest](PAPER_INTAKE.tsv), and
+[coupling map](COUPLING_MAP.md) preserve their provenance. All six originals
+match their registered SHA256. Their presence does not complete screening,
+adjudication, citation-network coverage, or semantic status promotion.
