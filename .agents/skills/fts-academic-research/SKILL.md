@@ -5,7 +5,7 @@ description: Route externally grounded FTS research into supporting, contradicti
 
 # FTS Academic Research
 
-Route external evidence into FTS without importing external terminology or authority into the canon. Treat every publication as `[внешнее]`; a separately grounded SP decision must stay within the author's authorized scope. Follow `PROJECT_INSTRUCTIONS.md#canon` for any explicitly authorized canon revision.
+Route external evidence into FTS without importing external terminology or authority into the canon. Treat every publication as `[внешнее]`; a separately grounded SP decision must stay within the author's authorized scope. Follow `PROJECT_INSTRUCTIONS.md#canon` for any canon revision needed for the current task.
 
 ## Required input
 

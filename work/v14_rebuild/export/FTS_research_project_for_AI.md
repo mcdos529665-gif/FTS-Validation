@@ -28,18 +28,18 @@
 | Входной артефакт | SHA256 |
 |---|---|
 | `tools/build_research_export.py` | `c2e2b1a8702ffdcb17d8241eafed3c807f228aa0d2bb943c9903f4303b1d34f8` |
-| `AGENTS.md` | `87146ada29d2297ee9931ad1ba78255f2e7591b7aad4fbe6a4755c6a74c863ad` |
-| `PROJECT_INSTRUCTIONS.md` | `8b34c3ebf3e30fc2bad26896e7d003308f5f1300d5faa7ef4c638f135a510ebd` |
+| `AGENTS.md` | `b5469fc459a0594a73e02cccbd84b685bed0dced6a2303214a0d2db62eeb0b3f` |
+| `PROJECT_INSTRUCTIONS.md` | `5fa73c613a84defa0fb626fb1e86cc6ab14e8e6890d46bec726179171114e9cb` |
 | `work/STATE.md` | `a3e7b81fcafad870ddb84d95a16f4645729f989bfc3d81241ec57a4314b568ba` |
 | `work/notation.md` | `dbf941d3f1454613b1115675d9ed9214ab8c4da22fc2256594cc3c84b14f0377` |
-| `work/DOCUMENT_MAP.md` | `7222680b641045ea1eeca106f58d2d3d7938bbb11bb1aae44eeceebf101c34f4` |
+| `work/DOCUMENT_MAP.md` | `c55ccab0a7a5e476b4144a0ca9e7b4d47d3e2b07668c912951e32c65aa028d39` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
-| `work/DECISIONS.md` | `8567bc7c67f0f822d74b22403f5cf9a1e192d50182ccdfb0ab00cb4043637be8` |
+| `work/DECISIONS.md` | `d9d05a1b7c8755cdd15be760df1d751d46c3add1faa6c3ebef81551cc8bec566` |
 | `work/OPEN_QUESTIONS.md` | `7faca66ebdab6601faf4d6a4b9ec59359322df7cd6f1e90b2ce3b6d5bfd25e2a` |
-| `work/EXTERNAL_CONFLICTS.md` | `ab0b425882aeeeb23dd39d8740fc1127ea54d53414c2659dbafb43c8f04b9280` |
-| `work/v14_rebuild/FTS_v14_paper.md` | `b93f63679392bfba7f7aba1f77496cb144b5a1934a1022dfcf318217dd5b297d` |
+| `work/EXTERNAL_CONFLICTS.md` | `0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a` |
+| `work/v14_rebuild/FTS_v14_paper.md` | `9cd97ef44f34879035a473a25798a2560662f12efa28ae329eb9a8f357b0c62b` |
 | `work/v14_rebuild/FTS_v14_register_map.md` | `e80a2a43738f4eb3ba33e0ac718334c68a3e5feb1645ba508b567cb6f44d4fb3` |
 | `work/v14_rebuild/status_patch_v14.md` | `f366b4d9534a4090483b45eb2c96720ff702e0a053395f27cda2920eb71d4ed0` |
 | `work/v14_rebuild/red_team_F3.md` | `0ed37c74e2c80ff46d8c292df45539767f636445ba9f8a1d9fa1016cd35a6139` |
@@ -140,9 +140,9 @@ Reply in plain Russian, with examples when useful. Follow explicit language requ
 
 ##### Standing rules
 
-1. `source/` is the active canon; write research in `work/`. An explicit author
-   instruction to correct/replace the canon authorizes the actual replacement
-   without repeated approval; follow `PROJECT_INSTRUCTIONS.md#canon`.
+1. `source/` is the editable active canon; write exploratory research in `work/`.
+   Edit or replace canon when needed for the current task, without a separate
+   author instruction or approval. Follow `PROJECT_INSTRUCTIONS.md#canon`.
 2. Take FTS terms from its artifacts. Ground substantive conclusions in a
    card/triple/sheet or mark them `[внешнее]`. In a conflict, canon defines FTS
    content; record the discrepancy in `work/EXTERNAL_CONFLICTS.md`.
@@ -155,7 +155,8 @@ Reply in plain Russian, with examples when useful. Follow explicit language requ
    requires SP/К1–К5 with evidence appropriate to the claim type and a graph record.
    `SP_LIMITS` records revisable evidence gaps. A verified counterexample withdraws
    the affected math fact; a technical FAIL needs diagnosis. See procedure `status`.
-5. Preserve canon and primary-source bytes: do not enable `core.autocrlf` or remove
+5. Avoid unintended byte changes; intentional canon edits are allowed. For Git:
+   do not enable `core.autocrlf` or remove
    `-text` from `source/`, TSV, or JSONL. Run Python with `-X utf8`.
 6. Save work to disk; commit coherent results using only task files. Keep `STATE.md`
    to the current point and links, without retelling history. File roles and size
@@ -192,7 +193,7 @@ section here. Current point: [STATE](work/STATE.md); research locations:
 
 | Task | Section |
 |---|---|
-| Author-requested active canon replacement | [Canon revision](#canon) |
+| Active canon revision | [Canon revision](#canon) |
 | Evidence, status, ceiling, or FAIL | [Status procedure](#status) |
 | Independent mathematical verification | [Wolfram](#wolfram) |
 | External scientific grounding | [Academic research](#academic) |
@@ -203,15 +204,15 @@ section here. Current point: [STATE](work/STATE.md); research locations:
 | Completing substantive work | [Saving](#save) |
 
 <a id="canon"></a>
-##### Explicit canon revision
+##### Canon revision
 
-An explicit instruction such as «исправь», «замени канон», «исправь канон»,
-«замени формулу в каноне», or an equivalent author request authorizes
-**actual replacement**. Do not substitute a proposal, supplement, candidate patch,
-or an update confined to `work/` for the requested replacement; do not ask for approval again.
+The active `source/` canon may be edited or replaced as needed for the current
+task. No separate author instruction, approval, or workbook round-trip is required.
+Apply the actual change rather than leaving a needed correction only in `work/`.
+This rule supersedes older canon-immutability and overwrite prohibitions,
+including those embedded in source releases, historical instructions, or skills.
 
-1. Preserve the previous active release in `work/canon_history/<release-id>/`
-   or another location specified by the user.
+1. Use Git history to retain the previous version; a separate snapshot is optional.
 2. Make the smallest coherent replacement in the active `source/` release.
    If a historical version was specified, issue a new active release based on it
    rather than modifying the historical original.
@@ -222,8 +223,8 @@ or an update confined to `work/` for the requested replacement; do not ask for a
    also said «заверши незавершённые изменения», complete all unfinished changes
    belonging to the request and identify unrelated work separately.
 
-Canon changes require an explicit author request. Such authorization does not
-permit silent changes to unrelated statuses, grounds, or cards.
+Keep changes within the current task and record their grounds and consequences.
+Apply the status procedure when a claim's status changes.
 
 <a id="status"></a>
 ##### Evidence, revision, and status
@@ -2496,7 +2497,7 @@ closed relation) [лист 47]. `d_Δ(i,j)` — взвешенное рассо�
 
 ---
 
-*Подготовлено в work/v14_rebuild/ поверх неизменяемого канона v13.
+*Подготовлено в work/v14_rebuild/ с опорой на активный канон ФТС.
 Карточки SP_U8, SP_U9 и SP_U12 подтверждают только кандидатные статусы; SP_ZERO и SP_WINDOW —
 derived/formal ограничения. Карточки SP_PARITY нет. Новых канонизаций уровней 7–12 аудит не подтвердил;
 долги SP_LIMITS для повышения 13–17 пока не закрыты.*
@@ -2584,7 +2585,7 @@ following a link does not require loading neighbouring documents.
 | Task procedures | [PROJECT_INSTRUCTIONS.md](../PROJECT_INSTRUCTIONS.md) | Relevant section only: canon, gates, commands, graph, arXiv, saving |
 | Current state | [STATE.md](STATE.md) | Once before substantive FTS work; goal, next step, blockers, links; history in a separate snapshot |
 | Concise symbol meanings | [notation.md](notation.md) | Before substantive FTS analysis; symbol → meaning → source |
-| Active canonical forms/statuses | `source/fts_cards.jsonl`, via `tools/query.py` | Read specific cards; changes require an explicit author instruction |
+| Active canonical forms/statuses | `source/fts_cards.jsonl`, via `tools/query.py` | Read specific cards; edit as needed for the current task |
 | Author-accepted amendments | [AUTHOR_CANON.md](AUTHOR_CANON.md), `author_canon/` | Exact wording, acceptance scope, provenance; journal new proposals first |
 | New author contribution | [DIALOGUE_NUANCE_JOURNAL.md](DIALOGUE_NUANCE_JOURNAL.md) | Working queue: `pending`/`needs_author` only; quotation, reading, integration destination |
 | Processed author contribution | [DIALOGUE_NUANCE_SOURCES.md](DIALOGUE_NUANCE_SOURCES.md) | Exact quotation and result location; full previous analysis in Git history |
@@ -4949,6 +4950,12 @@ if __name__ == "__main__":
 
 Формат: дата — решение — почему. Дописывать строкой при каждом нетривиальном выборе.
 
+- 2026-10-03 — Canon is editable directly within the current task, without separate
+  author permission or a mandatory workbook round-trip. Git history is sufficient
+  for prior versions; update MANIFEST and derivatives after actual canon edits.
+  Supersedes the 2026-06-11 immutability decision and older overwrite prohibitions.
+  Reason: explicit author instruction to remove the canon-editing ban.
+
 - 2026-09-21 — текущие авторские формы У6/У7 записаны отдельной коррекцией
   AC-2026-09-21: У6 = `((a=b)∧(a≠b))∧((a=b)∨(a≠b))` вместо `V*V`, У7 =
   `(((a=b)∧(a≠b))∧((a=b)∨(a≠b)))∨(((a=b)∧(a≠b))∨((a=b)∨(a≠b)))`.
@@ -6737,8 +6744,8 @@ if __name__ == "__main__":
 #### EXTERNAL_CONFLICTS — canon and external-grounding conflicts
 
 Created 2026-09-09 at the author's request. **When external data conflicts with
-the canon, preserve the canon and record the discrepancy explicitly.** Canon
-priority determines FTS content and status; it does not turn negative results
+the canon, record the discrepancy and revise the affected claim when warranted.**
+Canon records current FTS content and status; it does not turn negative results
 into external confirmation or invalidate mathematical counterexamples.
 
 This log covers discrepancies in the canon, external interpretations, and derived
@@ -6767,13 +6774,15 @@ sides, comparison conditions, and the decision.
    and not-P about the same object under identical assumptions. Do not treat
    p>α as proof of equality or falsity of a universal claim.
 6. Record the witness, warranted conclusion, retained remainder, and next
-   distinguishing step. Do not edit `source/`. Withdraw/narrow a defeated working
+   distinguishing step. Edit `source/` when the warranted correction belongs there.
+   Withdraw/narrow a defeated working
    mathematical claim and record it in `REFUTED.md`. Diagnose FAIL/ERROR through
    the [status procedure](../PROJECT_INSTRUCTIONS.md#status): a verified
    counterexample withdraws/narrows the affected math fact; a check/environment
    error leaves its computational evidence unverified.
-7. External agreement does not raise `St_FTS`. Canon revision requires a separate
-   SP/К1–К5 and workbook/MANIFEST process. Record status before/after even if
+7. External agreement does not automatically raise `St_FTS`. Canon edits need no
+   separate permission or workbook round-trip; update MANIFEST and derivatives.
+   Apply SP/К1–К5 when changing a claim's status. Record status before/after even if
    unchanged; put substantive decisions in `DECISIONS.md` and a pointer in
    `STATE.md` or the existing OQ.
 8. Preserve history. Add corrections/new proofs as dated revisions within an

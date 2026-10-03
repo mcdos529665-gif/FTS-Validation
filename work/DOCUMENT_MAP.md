@@ -13,7 +13,7 @@ following a link does not require loading neighbouring documents.
 | Task procedures | [PROJECT_INSTRUCTIONS.md](../PROJECT_INSTRUCTIONS.md) | Relevant section only: canon, gates, commands, graph, arXiv, saving |
 | Current state | [STATE.md](STATE.md) | Once before substantive FTS work; goal, next step, blockers, links; history in a separate snapshot |
 | Concise symbol meanings | [notation.md](notation.md) | Before substantive FTS analysis; symbol → meaning → source |
-| Active canonical forms/statuses | `source/fts_cards.jsonl`, via `tools/query.py` | Read specific cards; changes require an explicit author instruction |
+| Active canonical forms/statuses | `source/fts_cards.jsonl`, via `tools/query.py` | Read specific cards; edit as needed for the current task |
 | Author-accepted amendments | [AUTHOR_CANON.md](AUTHOR_CANON.md), `author_canon/` | Exact wording, acceptance scope, provenance; journal new proposals first |
 | New author contribution | [DIALOGUE_NUANCE_JOURNAL.md](DIALOGUE_NUANCE_JOURNAL.md) | Working queue: `pending`/`needs_author` only; quotation, reading, integration destination |
 | Processed author contribution | [DIALOGUE_NUANCE_SOURCES.md](DIALOGUE_NUANCE_SOURCES.md) | Exact quotation and result location; full previous analysis in Git history |

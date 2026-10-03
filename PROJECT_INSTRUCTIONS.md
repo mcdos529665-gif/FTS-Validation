@@ -6,7 +6,7 @@ section here. Current point: [STATE](work/STATE.md); research locations:
 
 | Task | Section |
 |---|---|
-| Author-requested active canon replacement | [Canon revision](#canon) |
+| Active canon revision | [Canon revision](#canon) |
 | Evidence, status, ceiling, or FAIL | [Status procedure](#status) |
 | Independent mathematical verification | [Wolfram](#wolfram) |
 | External scientific grounding | [Academic research](#academic) |
@@ -17,15 +17,15 @@ section here. Current point: [STATE](work/STATE.md); research locations:
 | Completing substantive work | [Saving](#save) |
 
 <a id="canon"></a>
-## Explicit canon revision
+## Canon revision
 
-An explicit instruction such as «исправь», «замени канон», «исправь канон»,
-«замени формулу в каноне», or an equivalent author request authorizes
-**actual replacement**. Do not substitute a proposal, supplement, candidate patch,
-or an update confined to `work/` for the requested replacement; do not ask for approval again.
+The active `source/` canon may be edited or replaced as needed for the current
+task. No separate author instruction, approval, or workbook round-trip is required.
+Apply the actual change rather than leaving a needed correction only in `work/`.
+This rule supersedes older canon-immutability and overwrite prohibitions,
+including those embedded in source releases, historical instructions, or skills.
 
-1. Preserve the previous active release in `work/canon_history/<release-id>/`
-   or another location specified by the user.
+1. Use Git history to retain the previous version; a separate snapshot is optional.
 2. Make the smallest coherent replacement in the active `source/` release.
    If a historical version was specified, issue a new active release based on it
    rather than modifying the historical original.
@@ -36,8 +36,8 @@ or an update confined to `work/` for the requested replacement; do not ask for a
    also said «заверши незавершённые изменения», complete all unfinished changes
    belonging to the request and identify unrelated work separately.
 
-Canon changes require an explicit author request. Such authorization does not
-permit silent changes to unrelated statuses, grounds, or cards.
+Keep changes within the current task and record their grounds and consequences.
+Apply the status procedure when a claim's status changes.
 
 <a id="status"></a>
 ## Evidence, revision, and status

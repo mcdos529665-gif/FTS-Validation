@@ -2,6 +2,12 @@
 
 Формат: дата — решение — почему. Дописывать строкой при каждом нетривиальном выборе.
 
+- 2026-10-03 — Canon is editable directly within the current task, without separate
+  author permission or a mandatory workbook round-trip. Git history is sufficient
+  for prior versions; update MANIFEST and derivatives after actual canon edits.
+  Supersedes the 2026-06-11 immutability decision and older overwrite prohibitions.
+  Reason: explicit author instruction to remove the canon-editing ban.
+
 - 2026-09-21 — текущие авторские формы У6/У7 записаны отдельной коррекцией
   AC-2026-09-21: У6 = `((a=b)∧(a≠b))∧((a=b)∨(a≠b))` вместо `V*V`, У7 =
   `(((a=b)∧(a≠b))∧((a=b)∨(a≠b)))∨(((a=b)∧(a≠b))∨((a=b)∨(a≠b)))`.

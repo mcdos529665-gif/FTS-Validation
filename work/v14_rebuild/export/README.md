@@ -1,9 +1,9 @@
 # Review-пакет ФТС v14 для внешней критики
 
-Этот пакет **не является каноном v14** и не меняет v13. Канон в `source/`
-генерируется внешним циклом xlsx-воркбук → экспорт → `MANIFEST.json` с SHA256.
-Без нового workbook round-trip машинные файлы ниже — только детерминированное
-предложение к экспорту.
+This directory is a review package, not the active canon. Root `source/` is
+editable directly for the current task; no separate permission or workbook
+round-trip is required. Keep `MANIFEST.json`, SHA256, and derivatives consistent.
+The files below remain proposals until integrated into the active canon.
 
 ## Файлы
 
@@ -33,7 +33,7 @@
   ограниченная граница новизны.
 - `audit/REPRODUCIBILITY.md` — данные, хеши, среда и эмпирический reanalysis.
 - `audit/GRAPH_AUDIT.md`, `CANON_REFERENCE_PATCH.tsv`,
-  `GRAPH_RELATION_PATCH.tsv` — дефекты неизменяемого v13 и план будущего экспорта.
+  `GRAPH_RELATION_PATCH.tsv` — дефекты прежнего v13 и план будущего экспорта.
 - `CHECKSUMS.sha256` — контрольные суммы остальных файлов пакета.
 
 ## Границы статусов
@@ -78,7 +78,8 @@
 
 ## Проверка после внешней сборки
 
-Новая выгрузка обязана пройти workbook round-trip, новый `MANIFEST.json` и SHA256-сверку.
+After integrating changes into the active canon, update `MANIFEST.json` and
+verify SHA256. A workbook round-trip is optional.
 `tools/query.py card PROPOSAL_STRICT_BAND_7` должен показать карточку без `promotes_status_of`.
 То же ограничение действует для `LEVEL_RETENTION_RULE` и
 `SYMMETRY_ESCALATION_HYPOTHESIS`, а также для `EXTERNAL_BRIDGE_U1_U5`.

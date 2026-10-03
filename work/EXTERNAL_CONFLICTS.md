@@ -1,8 +1,8 @@
 # EXTERNAL_CONFLICTS — canon and external-grounding conflicts
 
 Created 2026-09-09 at the author's request. **When external data conflicts with
-the canon, preserve the canon and record the discrepancy explicitly.** Canon
-priority determines FTS content and status; it does not turn negative results
+the canon, record the discrepancy and revise the affected claim when warranted.**
+Canon records current FTS content and status; it does not turn negative results
 into external confirmation or invalidate mathematical counterexamples.
 
 This log covers discrepancies in the canon, external interpretations, and derived
@@ -31,13 +31,15 @@ sides, comparison conditions, and the decision.
    and not-P about the same object under identical assumptions. Do not treat
    p>α as proof of equality or falsity of a universal claim.
 6. Record the witness, warranted conclusion, retained remainder, and next
-   distinguishing step. Do not edit `source/`. Withdraw/narrow a defeated working
+   distinguishing step. Edit `source/` when the warranted correction belongs there.
+   Withdraw/narrow a defeated working
    mathematical claim and record it in `REFUTED.md`. Diagnose FAIL/ERROR through
    the [status procedure](../PROJECT_INSTRUCTIONS.md#status): a verified
    counterexample withdraws/narrows the affected math fact; a check/environment
    error leaves its computational evidence unverified.
-7. External agreement does not raise `St_FTS`. Canon revision requires a separate
-   SP/К1–К5 and workbook/MANIFEST process. Record status before/after even if
+7. External agreement does not automatically raise `St_FTS`. Canon edits need no
+   separate permission or workbook round-trip; update MANIFEST and derivatives.
+   Apply SP/К1–К5 when changing a claim's status. Record status before/after even if
    unchanged; put substantive decisions in `DECISIONS.md` and a pointer in
    `STATE.md` or the existing OQ.
 8. Preserve history. Add corrections/new proofs as dated revisions within an

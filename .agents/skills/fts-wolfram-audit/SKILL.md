@@ -14,7 +14,7 @@ Work only from an explicitly stated mathematical predicate. Keep separate:
 - current `St_math`;
 - current `St_FTS`.
 
-Treat Wolfram as independent external CAS evidence. It is not a source of canon, level semantics, or automatic status promotion. Do not edit `source/`.
+Treat Wolfram as independent external CAS evidence. It is not a source of canon, level semantics, or automatic status promotion. Canon corrections needed for the current task are allowed; follow `PROJECT_INSTRUCTIONS.md#canon`.
 
 Use this skill when explicitly invoked or when an independent CAS check is needed
 within the user's assigned investigation. Follow the scope and budget in
@@ -166,4 +166,4 @@ python -X utf8 work/v14_rebuild/verification.py
 python -X utf8 work/v14_rebuild/audit/run_audit.py traceability
 ```
 
-Ensure the diff under `source/` is empty.
+Review any intentional `source/` changes and keep MANIFEST and derivatives consistent.

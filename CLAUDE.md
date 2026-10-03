@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Что это за репозиторий
 
 Это **не обычная кодовая база, а проект развития теории ФТС** («лестница
-различимости») поверх неизменяемой канонической выгрузки v13. Python-скрипты —
+различимости») с редактируемой активной канонической выгрузкой. Python-скрипты —
 инструменты доступа и машинной проверки, а не продукт. «Продукт» — это статья,
 карточки и решения теории в `work/` (прежде всего пересборка в `work/v14_rebuild/`).
 
@@ -66,10 +66,9 @@ python tools/import_from.py "C:\путь\к\выгрузке"        # доус�
 
 ## Архитектура и поток данных
 
-- **`source/`** — **канон v13, неизменяемый** (`v13_complex_branch_overlay`:
+- **`source/`** — **активный редактируемый канон** (`v13_complex_branch_overlay`:
   161 карточка, 238 триплетов, 54 листа). Это выгрузка из xlsx; целостность задана
-  `MANIFEST.json` + SHA256. **Руками не редактировать.** Новая версия теории =
-  новая выгрузка + новый MANIFEST, а не правка файлов. Корпус велик (дамп 442 КБ,
+  `MANIFEST.json` + SHA256. Direct edits are allowed; update MANIFEST and derivatives. Корпус велик (дамп 442 КБ,
   workbook 912 КБ) — целиком в контекст не грузить, только через `tools/query.py`.
   Модель карточки (`fts_cards.jsonl`): `id, type, status, title, symbol, text,
   depends_on, tags, ...`; граф — в `fts_triples.tsv` (`subject  predicate  object`).
@@ -97,8 +96,9 @@ python tools/import_from.py "C:\путь\к\выгрузке"        # доус�
 
 ## Инварианты, которые нельзя нарушать
 
-1. **Канон неизменяем и проверяем.** Перед серьёзной работой `tools/verify.py`
-   обязан давать `0 missing, 0 mismatch`. Все правки — только в `work/`.
+1. **Canon is editable.** Edit or replace `source/` as needed for the current task,
+   without separate author permission. Follow `PROJECT_INSTRUCTIONS.md#canon`;
+   update MANIFEST and derivatives. Older immutability rules are superseded.
 
 2. **Нормализация переводов строк в git ОТКЛЮЧЕНА** (`core.autocrlf=false` +
    `.gitattributes`: `source/** -text`, `*.tsv -text`, `*.jsonl -text`). SHA256

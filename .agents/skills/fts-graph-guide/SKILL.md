@@ -32,4 +32,4 @@ Provenance does not establish truth. Keep `St_math`, `St_FTS`, author acceptance
 
 Use `Найдено → основания → свидетельства → ограничения → статус → что не закрыто`. Link relevant source files. Give both scopes when evidence conflicts. `contains`, topical proximity, and a shared document are not grounds.
 
-For an explicit graph update, run `build`, then `validate --idempotent`, and report coverage changes. Do not edit `source/`, author decisions, or statuses.
+For an explicit graph update, run `build`, then `validate --idempotent`, and report coverage changes. Canon corrections needed for the current task are allowed; follow `PROJECT_INSTRUCTIONS.md#canon` and the status procedure. Preserve historical author decisions.

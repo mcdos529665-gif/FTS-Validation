@@ -16,9 +16,9 @@ Reply in plain Russian, with examples when useful. Follow explicit language requ
 
 ## Standing rules
 
-1. `source/` is the active canon; write research in `work/`. An explicit author
-   instruction to correct/replace the canon authorizes the actual replacement
-   without repeated approval; follow `PROJECT_INSTRUCTIONS.md#canon`.
+1. `source/` is the editable active canon; write exploratory research in `work/`.
+   Edit or replace canon when needed for the current task, without a separate
+   author instruction or approval. Follow `PROJECT_INSTRUCTIONS.md#canon`.
 2. Take FTS terms from its artifacts. Ground substantive conclusions in a
    card/triple/sheet or mark them `[внешнее]`. In a conflict, canon defines FTS
    content; record the discrepancy in `work/EXTERNAL_CONFLICTS.md`.
@@ -31,7 +31,8 @@ Reply in plain Russian, with examples when useful. Follow explicit language requ
    requires SP/К1–К5 with evidence appropriate to the claim type and a graph record.
    `SP_LIMITS` records revisable evidence gaps. A verified counterexample withdraws
    the affected math fact; a technical FAIL needs diagnosis. See procedure `status`.
-5. Preserve canon and primary-source bytes: do not enable `core.autocrlf` or remove
+5. Avoid unintended byte changes; intentional canon edits are allowed. For Git:
+   do not enable `core.autocrlf` or remove
    `-text` from `source/`, TSV, or JSONL. Run Python with `-X utf8`.
 6. Save work to disk; commit coherent results using only task files. Keep `STATE.md`
    to the current point and links, without retelling history. File roles and size
