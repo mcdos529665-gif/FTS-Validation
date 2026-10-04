@@ -80,3 +80,15 @@ U7 mathematical reading: `A_07`, `U7_MATH_LOCAL_FORBID` (`y=-x*x; y!=x*x`).
 The logical grouping obligation is `U7_LOGIC_GROUPING`; logical `M_07` and
 operational `CH_07` retain their own scopes. The bridge remains open.
 Level window families: [author statement and integration](author_canon/2026-10-03/INTEGRATION.md).
+
+## Двухканальное чтение (кандидат, 2026-10-04)
+- `s=a+b` — канал У3 (опора У0, «ссылка в 0»); `d=a−b` — канал У2 (опора У1,
+  «ссылка в 1»).
+- `σ` — перестановка объектов `(a,b)↦(b,a)`; `ν` — смена знака у обоих; `σν`;
+  вместе с `id` — группа V4. `μ_b: (a,b)↦(a,−b)` — анти-форма одного объекта,
+  меняет каналы `s↔d`. Не путать `σ` с `⊖`: `⊖` действует на форму, `σ` — на пару
+  объектов.
+- `P_N(a,b)=[N(a+b)−N(a−b)]/c`, `N∈{t,|t|,t²}`, `c=2,2,4`.
+- Крест `|y|=|x|` — кандидат формы У4 (вероятность); `y=|x|` — его главная ветвь
+  (скрытый выбор).
+- Подробно: `v14_rebuild/addendum_2026-10-04_two_channels.md`, проверки C-63…C-76.
