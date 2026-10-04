@@ -44,14 +44,16 @@ ok &= sorted({w[0] for w in MIN_WINDOWS} | {w[2] for w in MIN_WINDOWS}) == COUPL
 check("C77", "Минимальные окна = (2k−1,2k,2k+1), k=0..5; соседние перекрываются ровно в одном "
       "нечётном уровне; точки сцепки −1,1,3,5,7,9,11", ok)
 
-# C-78: каноническое пятиэлементное окно = объединение двух соседних минимальных
+# C-78: обе системы окон начинаются с −1 и являются разными вариантами (шаг 2 и шаг 4)
 canon_w = sorted({tuple(int(t) for t in o.strip("()").split(","))
                   for s, r, o in triples if r == "has_window" and "..." not in o})
-ok = all(tuple(sorted(set(MIN_WINDOWS[2 * j]) | set(MIN_WINDOWS[2 * j + 1]))) == w
-         for j, w in enumerate(canon_w) if 2 * j + 1 < len(MIN_WINDOWS))
-check("C78", "Каноническое окно (has_window) = два соседних минимальных: "
-      "(−1..3)=(−1,0,1)∪(1,2,3), (3..7)=(3,4,5)∪(5,6,7), (7..11)=(7,8,9)∪(9,10,11)",
-      ok and len(canon_w) >= 3, "; ".join(map(str, canon_w)))
+ok = MIN_WINDOWS[0][0] == -1 and canon_w[0][0] == -1
+ok &= all(MIN_WINDOWS[i + 1][0] - MIN_WINDOWS[i][0] == 2 for i in range(len(MIN_WINDOWS) - 1))
+ok &= all(canon_w[i + 1][0] - canon_w[i][0] == 4 for i in range(len(canon_w) - 1))
+ok &= all(len(w) == 5 for w in canon_w) and all(len(w) == 3 for w in MIN_WINDOWS)
+check("C78", "Обе системы окон начинаются с −1: минимальные (шаг 2, по 3 уровня) и канонические "
+      "(has_window, шаг 4, по 5 уровней) — разные варианты, не части друг друга",
+      ok, "; ".join(map(str, canon_w)))
 
 # C-79: концы минимального окна связаны каноническим projects_to (+2); выше 7 рёбер нет
 proj = {(num(s), num(o)) for s, r, o in triples if r == "projects_to"}
