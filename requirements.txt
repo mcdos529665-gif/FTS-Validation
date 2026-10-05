@@ -1,0 +1,13 @@
+# Зависимости проекта ФТС. Проверено на SymPy 1.14.0 (Python 3.11).
+# Запуск: py -3.11 -m pip install -r requirements.txt
+
+# Проверки теории: work/v14_rebuild/verification*.py
+sympy==1.14.0
+
+# Эксперимент o20: work/v14_rebuild/o20/run_o20.py (версии не закреплены)
+numpy
+pandas
+scipy
+scikit-learn
+
+# Аудит: отдельный список в work/v14_rebuild/audit/requirements-audit.txt
