@@ -60,6 +60,42 @@ CHECKS: tuple[Check, ...] = (
         (),
     ),
     Check(
+        "candidate_c63",
+        "кандидатные предикаты C63–C76 в области локальных проверок",
+        "work/v14_rebuild/verification_c63.py",
+        (),
+    ),
+    Check(
+        "candidate_c77",
+        "кандидатные предикаты C77–C84 в области локальных проверок",
+        "work/v14_rebuild/verification_c77.py",
+        (),
+    ),
+    Check(
+        "candidate_c85",
+        "кандидатные предикаты C85–C92 в области локальных проверок",
+        "work/v14_rebuild/verification_c85.py",
+        (),
+    ),
+    Check(
+        "candidate_c93",
+        "кандидатные предикаты C93–C95 в области локальных проверок",
+        "work/v14_rebuild/verification_c93.py",
+        (),
+    ),
+    Check(
+        "candidate_c96",
+        "кандидатные предикаты C96–C99 в области локальных проверок",
+        "work/v14_rebuild/verification_c96.py",
+        (),
+    ),
+    Check(
+        "windows_table",
+        "вычислимые столбцы и ссылки таблицы окон",
+        "work/v14_rebuild/verification_windows_table.py",
+        (),
+    ),
+    Check(
         "audit",
         "аудит схемы, трассируемости, статических формальных и исторических артефактов",
         "work/v14_rebuild/audit/run_audit.py",

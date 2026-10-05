@@ -60,3 +60,6 @@ ok &= all(add(T[i], T[j]) == T[6 - i - j] for i in (1, 2, 3) for j in (1, 2, 3) 
 check("C99", "y²=x³−x: {∞,(−1,0),(0,0),(1,0)} — группа, все элементы порядка ≤2, сумма двух = третья: V4 (группа Клейна) наверху", ok)
 
 print(f"\nИТОГ: {sum(res)} PASS / {len(res) - sum(res)} FAIL")
+
+if __name__ == "__main__":
+    raise SystemExit(0 if all(res) else 1)

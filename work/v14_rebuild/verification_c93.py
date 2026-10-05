@@ -140,3 +140,6 @@ ok &= all(not any((x * x + 1) % p == 0 for x in range(p)) for p in range(3, 400)
 check("C95", "узел любого окна (остаток −1 по шагу) — Фробениус = сопряжение i↔−i: расщепляются в вещественном подполе только остатки 1 и −1; простые 4k+3 не имеют √−1 [внешнее]", ok)
 
 print(f"\nИТОГ: {sum(res)} PASS / {len(res) - sum(res)} FAIL")
+
+if __name__ == "__main__":
+    raise SystemExit(0 if all(res) else 1)

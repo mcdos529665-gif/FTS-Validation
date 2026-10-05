@@ -14,8 +14,8 @@
 - `audit_claim_groups`: 25
 - `audit_findings`: 20
 - `patterns`: 31
-- `open_question_anchors`: 80
-- `mapped_open_questions`: 64
+- `open_question_anchors`: 98
+- `mapped_open_questions`: 82
 - `verification_nodes`: 62
 - `external_evidence_nodes`: 21
 - `internal_evidence_nodes`: 7
@@ -23,8 +23,8 @@
 - `curated_research_bridges`: 14
 - `project_entities`: 1
 - `declared_research_scopes`: 4
-- `nodes`: 802
-- `edges`: 1881
+- `nodes`: 820
+- `edges`: 1987
 - `unresolved_references`: 4
 
 ## Границы

@@ -36,7 +36,7 @@
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
-      "sha256": "888546701f744f028fb9cecbf9cd1bd48033d443dfc5b5e1059f9499007df79d"
+      "sha256": "88913ca836de23e91aa55e44077ee42edf96a7b79be4f9ec67c49dfbe6fd1a0f"
     },
     {
       "path": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
@@ -80,11 +80,11 @@
     },
     {
       "path": "work/notation.md",
-      "sha256": "706b4dc4af393d5f974877a8ca755a962c50016474cb1730da7b6acfdbbfcba8"
+      "sha256": "f70ec8e284c179d883524ddcc94144810879f734fd287160972fcca45cbd60fa"
     },
     {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
-      "sha256": "434165cc1a5915e56e662634341c02bfc99c7498702b0042a6155c756ab9dd92"
+      "sha256": "665719501c832a62237370099606d863445c3381262e894ac7be43080a6c8f93"
     },
     {
       "path": "work/v14_rebuild/audit/BASELINE.md",
@@ -120,7 +120,7 @@
     },
     {
       "path": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "sha256": "05d293ad2f6c31a245c1c7a575473fe66a99947d87c6f5562096e7de545b2ca6"
+      "sha256": "79ce66cf5933fc7250547c13aa89289a3eba17de902c36e3012e26bca65150a7"
     },
     {
       "path": "work/v14_rebuild/audit/REFERENCE_RESOLUTIONS.tsv",
@@ -8034,7 +8034,7 @@
       "anchor": "oq-blackwell-canonical-projection",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L540"
+      "source_location": "L586"
     },
     {
       "id": "oq_oq_blackwell_u4_u6_witness",
@@ -8044,7 +8044,17 @@
       "anchor": "oq-blackwell-u4-u6-witness",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L537"
+      "source_location": "L583"
+    },
+    {
+      "id": "oq_oq_c83_parity_prediction",
+      "type": "open_question",
+      "label": "oq-c83-parity-prediction — Предсказание из наблюдения C-83: форма У15 нечётна, форма У13 — нет.",
+      "layer": "audit",
+      "anchor": "oq-c83-parity-prediction",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L552"
     },
     {
       "id": "oq_oq_canon_star_fate",
@@ -8294,7 +8304,7 @@
       "anchor": "oq-graph-reference-definitions",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L569"
+      "source_location": "L615"
     },
     {
       "id": "oq_oq_kappa_provenance",
@@ -8305,6 +8315,16 @@
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L10"
+    },
+    {
+      "id": "oq_oq_level_specific_absence",
+      "type": "open_question",
+      "label": "oq-level-specific-absence — «Отсутствие a» меняет значение по уровням: зафиксировать чтение на каждом",
+      "layer": "audit",
+      "anchor": "oq-level-specific-absence",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L538"
     },
     {
       "id": "oq_oq_levy_world",
@@ -8324,7 +8344,7 @@
       "anchor": "oq-lift-section-and-category",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L553"
+      "source_location": "L599"
     },
     {
       "id": "oq_oq_lift_typing_passport",
@@ -8334,7 +8354,7 @@
       "anchor": "oq-lift-typing-passport",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L550"
+      "source_location": "L596"
     },
     {
       "id": "oq_oq_machine_check_done",
@@ -8345,6 +8365,26 @@
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L8"
+    },
+    {
+      "id": "oq_oq_minimal_windows_projects_to",
+      "type": "open_question",
+      "label": "oq-minimal-windows-projects-to — Продолжать ли `projects_to` на минимальные окна `(7,8,9)`, `(9,10,11)`",
+      "layer": "audit",
+      "anchor": "oq-minimal-windows-projects-to",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L550"
+    },
+    {
+      "id": "oq_oq_mod3_channel_origin",
+      "type": "open_question",
+      "label": "oq-mod3-channel-origin — Источник канала mod 3: без него период 12 (группа Клейна {1,5,7,11},",
+      "layer": "audit",
+      "anchor": "oq-mod3-channel-origin",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L547"
     },
     {
       "id": "oq_oq_mprime_audit",
@@ -8375,6 +8415,16 @@
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L104"
+    },
+    {
+      "id": "oq_oq_number_level_semantic_bridge",
+      "type": "open_question",
+      "label": "oq-number-level-semantic-bridge — Проверка моста «числа → уровни» по смыслу (что «держит» 11 и что «держит» 3)",
+      "layer": "audit",
+      "anchor": "oq-number-level-semantic-bridge",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L563"
     },
     {
       "id": "oq_oq_o20_missing_benchmark",
@@ -8457,6 +8507,16 @@
       "source_location": "L107"
     },
     {
+      "id": "oq_oq_pn_above_u7",
+      "type": "open_question",
+      "label": "oq-pn-above-u7 — Продолжение `P_N` выше У7 (нечётные `N` дают несимметричную `P_N`).",
+      "layer": "audit",
+      "anchor": "oq-pn-above-u7",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L540"
+    },
+    {
       "id": "oq_oq_redteam_dependent_guards",
       "type": "open_question",
       "label": "oq-redteam-dependent-guards — Зависимые защиты красной команды: A2 держится на П4, A6 — на О2-цепочке,",
@@ -8505,6 +8565,16 @@
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L364"
+    },
+    {
+      "id": "oq_oq_step48_symmetry",
+      "type": "open_question",
+      "label": "oq-step48-symmetry — Шаг 48: какая симметрия сменяет `(Z/2)³` (предсказание: свойство «каждый",
+      "layer": "audit",
+      "anchor": "oq-step48-symmetry",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L557"
     },
     {
       "id": "oq_oq_strict_band_7_export",
@@ -8567,6 +8637,16 @@
       "source_location": "L138"
     },
     {
+      "id": "oq_oq_two_channel_k245",
+      "type": "open_question",
+      "label": "oq-two-channel-k245 — К2/К4/К5 для `addendum_2026-10-04_two_channels.md`.",
+      "layer": "audit",
+      "anchor": "oq-two-channel-k245",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L541"
+    },
+    {
       "id": "oq_oq_txp_verif_done",
       "type": "open_question",
       "label": "oq-txp-verif-done — Вносить ли свидетели T-1…T-3 и P-1…P-4 в verification.py как C-60+ — РЕШЕНО",
@@ -8584,7 +8664,7 @@
       "anchor": "oq-typed-absence-finite-witness",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L543"
+      "source_location": "L589"
     },
     {
       "id": "oq_oq_typed_absence_provenance_benchmark",
@@ -8637,6 +8717,16 @@
       "source_location": "L156"
     },
     {
+      "id": "oq_oq_u12_hyperbolic_antimode_guard",
+      "type": "open_question",
+      "label": "oq-u12-hyperbolic-antimode-guard — Гардрейл «фаза ≠ −A» для чтения «гипербола = анти-мода Разрыв У12»",
+      "layer": "audit",
+      "anchor": "oq-u12-hyperbolic-antimode-guard",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L574"
+    },
+    {
       "id": "oq_oq_u12_radius_r",
       "type": "open_question",
       "label": "oq-u12-radius-r — Вывод параметра r У12 из независимого принципа (если найдётся —",
@@ -8657,6 +8747,16 @@
       "source_location": "L190"
     },
     {
+      "id": "oq_oq_u14_jacobi_aggregation",
+      "type": "open_question",
+      "label": "oq-u14-jacobi-aggregation — У14: модуль Якоби k как параметр θ семейства; каков оператор агрегации?",
+      "layer": "audit",
+      "anchor": "oq-u14-jacobi-aggregation",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L573"
+    },
+    {
       "id": "oq_oq_u14_worlds_agg_op",
       "type": "open_question",
       "label": "oq-u14-worlds-agg-op — Оператор агрегации миров для У14 (сейчас — только тип объекта).",
@@ -8665,6 +8765,46 @@
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L193"
+    },
+    {
+      "id": "oq_oq_u16_phase_hyperbolic_pair",
+      "type": "open_question",
+      "label": "oq-u16-phase-hyperbolic-pair — У16: e^{iωt} или гиперболический поворот (инвариант x²−t²) — или пара?",
+      "layer": "audit",
+      "anchor": "oq-u16-phase-hyperbolic-pair",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L572"
+    },
+    {
+      "id": "oq_oq_u5_cross_section",
+      "type": "open_question",
+      "label": "oq-u5-cross-section — Математическая форма У5 после правки «У4 = крест»: одна прямая `y=±x` с",
+      "layer": "audit",
+      "anchor": "oq-u5-cross-section",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L532"
+    },
+    {
+      "id": "oq_oq_u6_direction_bit",
+      "type": "open_question",
+      "label": "oq-u6-direction-bit — Как хранить бит направления ссылки под чётной степенью (У6).",
+      "layer": "audit",
+      "anchor": "oq-u6-direction-bit",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L537"
+    },
+    {
+      "id": "oq_oq_u6_u7_choice_products",
+      "type": "open_question",
+      "label": "oq-u6-u7-choice-products — Предложение автора `У6 = (−|x|)·(−|x|)` (агрегат выборов),",
+      "layer": "audit",
+      "anchor": "oq-u6-u7-choice-products",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L534"
     },
     {
       "id": "oq_oq_u6_u7_compositional_semantics",
@@ -8717,6 +8857,26 @@
       "source_location": "L394"
     },
     {
+      "id": "oq_oq_window25_sqrt_minus2",
+      "type": "open_question",
+      "label": "oq-window25-sqrt-minus2 — Что в лестнице соответствует корню из −2 (третий бит окна 25), если",
+      "layer": "audit",
+      "anchor": "oq-window25-sqrt-minus2",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L560"
+    },
+    {
+      "id": "oq_oq_window_7_9_irrational_test",
+      "type": "open_question",
+      "label": "oq-window-7-9-irrational-test — Операционный тест окна 7–9 на иррациональных уравнениях: решает с",
+      "layer": "audit",
+      "anchor": "oq-window-7-9-irrational-test",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L542"
+    },
+    {
       "id": "oq_oq_window_family_continuation",
       "type": "open_question",
       "label": "oq-window-family-continuation — Задать правило продолжения авторских перечней окон.",
@@ -8724,7 +8884,7 @@
       "anchor": "oq-window-family-continuation",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L564"
+      "source_location": "L610"
     },
     {
       "id": "oq_oq_window_family_roles",
@@ -8734,7 +8894,7 @@
       "anchor": "oq-window-family-roles",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L559"
+      "source_location": "L605"
     },
     {
       "id": "oq_oq_window_intersection_carrier",
@@ -8744,7 +8904,27 @@
       "anchor": "oq-window-intersection-carrier",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L561"
+      "source_location": "L607"
+    },
+    {
+      "id": "oq_oq_window_node_conjugation_origin",
+      "type": "open_question",
+      "label": "oq-window-node-conjugation-origin — Совпадение узла окна (остаток −1) с сопряжением i↔−i: следствие выбора",
+      "layer": "audit",
+      "anchor": "oq-window-node-conjugation-origin",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L565"
+    },
+    {
+      "id": "oq_oq_windows11_15_quadratic_meaning",
+      "type": "open_question",
+      "label": "oq-windows11-15-quadratic-meaning — Смысл привязки окна 11 к √5 и окна 15 к √−7 в лестнице.",
+      "layer": "audit",
+      "anchor": "oq-windows11-15-quadratic-meaning",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L562"
     },
     {
       "id": "oq_oq_witnesses_verif_done",
@@ -23971,6 +24151,16 @@
       "source_location": "row:60"
     },
     {
+      "id": "oq_map_contains_oq_c83_parity_prediction",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_c83_parity_prediction",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:75"
+    },
+    {
       "id": "oq_map_contains_oq_canon_star_fate",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_canon_star_fate",
@@ -24181,6 +24371,16 @@
       "source_location": "row:4"
     },
     {
+      "id": "oq_map_contains_oq_level_specific_absence",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_level_specific_absence",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:69"
+    },
+    {
       "id": "oq_map_contains_oq_levy_world",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_levy_world",
@@ -24199,6 +24399,26 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:61"
+    },
+    {
+      "id": "oq_map_contains_oq_minimal_windows_projects_to",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_minimal_windows_projects_to",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:74"
+    },
+    {
+      "id": "oq_map_contains_oq_mod3_channel_origin",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_mod3_channel_origin",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:73"
     },
     {
       "id": "oq_map_contains_oq_mprime_audit",
@@ -24229,6 +24449,16 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:10"
+    },
+    {
+      "id": "oq_map_contains_oq_number_level_semantic_bridge",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_number_level_semantic_bridge",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:79"
     },
     {
       "id": "oq_map_contains_oq_o20_missing_benchmark",
@@ -24301,6 +24531,16 @@
       "source_location": "row:11"
     },
     {
+      "id": "oq_map_contains_oq_pn_above_u7",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_pn_above_u7",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:70"
+    },
+    {
       "id": "oq_map_contains_oq_redteam_dependent_guards",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_redteam_dependent_guards",
@@ -24339,6 +24579,16 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:42"
+    },
+    {
+      "id": "oq_map_contains_oq_step48_symmetry",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_step48_symmetry",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:76"
     },
     {
       "id": "oq_map_contains_oq_strict_band_7_export",
@@ -24401,6 +24651,16 @@
       "source_location": "row:55"
     },
     {
+      "id": "oq_map_contains_oq_two_channel_k245",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_two_channel_k245",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:71"
+    },
+    {
       "id": "oq_map_contains_oq_typed_absence_provenance_benchmark",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_typed_absence_provenance_benchmark",
@@ -24451,6 +24711,16 @@
       "source_location": "row:17"
     },
     {
+      "id": "oq_map_contains_oq_u12_hyperbolic_antimode_guard",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_u12_hyperbolic_antimode_guard",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83"
+    },
+    {
       "id": "oq_map_contains_oq_u12_radius_r",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_u12_radius_r",
@@ -24471,6 +24741,16 @@
       "source_location": "row:26"
     },
     {
+      "id": "oq_map_contains_oq_u14_jacobi_aggregation",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_u14_jacobi_aggregation",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82"
+    },
+    {
       "id": "oq_map_contains_oq_u14_worlds_agg_op",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_u14_worlds_agg_op",
@@ -24479,6 +24759,46 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:27"
+    },
+    {
+      "id": "oq_map_contains_oq_u16_phase_hyperbolic_pair",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_u16_phase_hyperbolic_pair",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81"
+    },
+    {
+      "id": "oq_map_contains_oq_u5_cross_section",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_u5_cross_section",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66"
+    },
+    {
+      "id": "oq_map_contains_oq_u6_direction_bit",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_u6_direction_bit",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:68"
+    },
+    {
+      "id": "oq_map_contains_oq_u6_u7_choice_products",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_u6_u7_choice_products",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:67"
     },
     {
       "id": "oq_map_contains_oq_u6_u7_compositional_semantics",
@@ -24531,6 +24851,26 @@
       "source_location": "row:48"
     },
     {
+      "id": "oq_map_contains_oq_window25_sqrt_minus2",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_window25_sqrt_minus2",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:77"
+    },
+    {
+      "id": "oq_map_contains_oq_window_7_9_irrational_test",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_window_7_9_irrational_test",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:72"
+    },
+    {
       "id": "oq_map_contains_oq_window_family_continuation",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_window_family_continuation",
@@ -24559,6 +24899,26 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:63"
+    },
+    {
+      "id": "oq_map_contains_oq_window_node_conjugation_origin",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_window_node_conjugation_origin",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:80"
+    },
+    {
+      "id": "oq_map_contains_oq_windows11_15_quadratic_meaning",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_windows11_15_quadratic_meaning",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:78"
     },
     {
       "id": "oq_map_contains_oq_zero_classes_chi_e",
@@ -24719,6 +25079,46 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:60"
+    },
+    {
+      "id": "oq_oq_c83_parity_prediction_event",
+      "source": "oq_oq_c83_parity_prediction",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:75"
+    },
+    {
+      "id": "oq_oq_c83_parity_prediction_meta_mp_a",
+      "source": "oq_oq_c83_parity_prediction",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:75"
+    },
+    {
+      "id": "oq_oq_c83_parity_prediction_meta_mp_b",
+      "source": "oq_oq_c83_parity_prediction",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:75"
+    },
+    {
+      "id": "oq_oq_c83_parity_prediction_program",
+      "source": "oq_oq_c83_parity_prediction",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:75"
     },
     {
       "id": "oq_oq_canon_star_fate_event",
@@ -25421,6 +25821,36 @@
       "source_location": "row:4"
     },
     {
+      "id": "oq_oq_level_specific_absence_event",
+      "source": "oq_oq_level_specific_absence",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:69"
+    },
+    {
+      "id": "oq_oq_level_specific_absence_meta_mp_c",
+      "source": "oq_oq_level_specific_absence",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:69"
+    },
+    {
+      "id": "oq_oq_level_specific_absence_program",
+      "source": "oq_oq_level_specific_absence",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:69"
+    },
+    {
       "id": "oq_oq_levy_world_event",
       "source": "oq_oq_levy_world",
       "target": "event_park",
@@ -25489,6 +25919,66 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:61"
+    },
+    {
+      "id": "oq_oq_minimal_windows_projects_to_event",
+      "source": "oq_oq_minimal_windows_projects_to",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:74"
+    },
+    {
+      "id": "oq_oq_minimal_windows_projects_to_meta_mp_b",
+      "source": "oq_oq_minimal_windows_projects_to",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:74"
+    },
+    {
+      "id": "oq_oq_minimal_windows_projects_to_program",
+      "source": "oq_oq_minimal_windows_projects_to",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:74"
+    },
+    {
+      "id": "oq_oq_mod3_channel_origin_event",
+      "source": "oq_oq_mod3_channel_origin",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:73"
+    },
+    {
+      "id": "oq_oq_mod3_channel_origin_meta_mp_b",
+      "source": "oq_oq_mod3_channel_origin",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:73"
+    },
+    {
+      "id": "oq_oq_mod3_channel_origin_program",
+      "source": "oq_oq_mod3_channel_origin",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:73"
     },
     {
       "id": "oq_oq_mprime_audit_event",
@@ -25599,6 +26089,46 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:10"
+    },
+    {
+      "id": "oq_oq_number_level_semantic_bridge_event",
+      "source": "oq_oq_number_level_semantic_bridge",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:79"
+    },
+    {
+      "id": "oq_oq_number_level_semantic_bridge_meta_mp_b",
+      "source": "oq_oq_number_level_semantic_bridge",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:79"
+    },
+    {
+      "id": "oq_oq_number_level_semantic_bridge_meta_mp_c",
+      "source": "oq_oq_number_level_semantic_bridge",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:79"
+    },
+    {
+      "id": "oq_oq_number_level_semantic_bridge_program",
+      "source": "oq_oq_number_level_semantic_bridge",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:79"
     },
     {
       "id": "oq_oq_o20_missing_benchmark_event",
@@ -25841,6 +26371,36 @@
       "source_location": "row:11"
     },
     {
+      "id": "oq_oq_pn_above_u7_event",
+      "source": "oq_oq_pn_above_u7",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:70"
+    },
+    {
+      "id": "oq_oq_pn_above_u7_meta_mp_c",
+      "source": "oq_oq_pn_above_u7",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:70"
+    },
+    {
+      "id": "oq_oq_pn_above_u7_program",
+      "source": "oq_oq_pn_above_u7",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:70"
+    },
+    {
       "id": "oq_oq_redteam_dependent_guards_event",
       "source": "oq_oq_redteam_dependent_guards",
       "target": "event_watch",
@@ -25979,6 +26539,36 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:42"
+    },
+    {
+      "id": "oq_oq_step48_symmetry_event",
+      "source": "oq_oq_step48_symmetry",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:76"
+    },
+    {
+      "id": "oq_oq_step48_symmetry_meta_mp_b",
+      "source": "oq_oq_step48_symmetry",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:76"
+    },
+    {
+      "id": "oq_oq_step48_symmetry_program",
+      "source": "oq_oq_step48_symmetry",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:76"
     },
     {
       "id": "oq_oq_strict_band_7_export_event",
@@ -26201,6 +26791,36 @@
       "source_location": "row:55"
     },
     {
+      "id": "oq_oq_two_channel_k245_event",
+      "source": "oq_oq_two_channel_k245",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:71"
+    },
+    {
+      "id": "oq_oq_two_channel_k245_meta_mp_c",
+      "source": "oq_oq_two_channel_k245",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:71"
+    },
+    {
+      "id": "oq_oq_two_channel_k245_program",
+      "source": "oq_oq_two_channel_k245",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:71"
+    },
+    {
       "id": "oq_oq_typed_absence_provenance_benchmark_event",
       "source": "oq_oq_typed_absence_provenance_benchmark",
       "target": "event_e9",
@@ -26361,6 +26981,46 @@
       "source_location": "row:17"
     },
     {
+      "id": "oq_oq_u12_hyperbolic_antimode_guard_event",
+      "source": "oq_oq_u12_hyperbolic_antimode_guard",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83"
+    },
+    {
+      "id": "oq_oq_u12_hyperbolic_antimode_guard_meta_mp_a",
+      "source": "oq_oq_u12_hyperbolic_antimode_guard",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83"
+    },
+    {
+      "id": "oq_oq_u12_hyperbolic_antimode_guard_meta_mp_c",
+      "source": "oq_oq_u12_hyperbolic_antimode_guard",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83"
+    },
+    {
+      "id": "oq_oq_u12_hyperbolic_antimode_guard_program",
+      "source": "oq_oq_u12_hyperbolic_antimode_guard",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83"
+    },
+    {
       "id": "oq_oq_u12_radius_r_event",
       "source": "oq_oq_u12_radius_r",
       "target": "event_e7",
@@ -26441,6 +27101,36 @@
       "source_location": "row:26"
     },
     {
+      "id": "oq_oq_u14_jacobi_aggregation_event",
+      "source": "oq_oq_u14_jacobi_aggregation",
+      "target": "event_e1",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82"
+    },
+    {
+      "id": "oq_oq_u14_jacobi_aggregation_meta_mp_c",
+      "source": "oq_oq_u14_jacobi_aggregation",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82"
+    },
+    {
+      "id": "oq_oq_u14_jacobi_aggregation_program",
+      "source": "oq_oq_u14_jacobi_aggregation",
+      "target": "program_rp_1",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82"
+    },
+    {
       "id": "oq_oq_u14_worlds_agg_op_event",
       "source": "oq_oq_u14_worlds_agg_op",
       "target": "event_e1",
@@ -26469,6 +27159,146 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:27"
+    },
+    {
+      "id": "oq_oq_u16_phase_hyperbolic_pair_event",
+      "source": "oq_oq_u16_phase_hyperbolic_pair",
+      "target": "event_park",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81"
+    },
+    {
+      "id": "oq_oq_u16_phase_hyperbolic_pair_meta_mp_a",
+      "source": "oq_oq_u16_phase_hyperbolic_pair",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81"
+    },
+    {
+      "id": "oq_oq_u16_phase_hyperbolic_pair_meta_mp_c",
+      "source": "oq_oq_u16_phase_hyperbolic_pair",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81"
+    },
+    {
+      "id": "oq_oq_u16_phase_hyperbolic_pair_program",
+      "source": "oq_oq_u16_phase_hyperbolic_pair",
+      "target": "program_rp_1",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81"
+    },
+    {
+      "id": "oq_oq_u5_cross_section_event",
+      "source": "oq_oq_u5_cross_section",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66"
+    },
+    {
+      "id": "oq_oq_u5_cross_section_meta_mp_c",
+      "source": "oq_oq_u5_cross_section",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66"
+    },
+    {
+      "id": "oq_oq_u5_cross_section_program",
+      "source": "oq_oq_u5_cross_section",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66"
+    },
+    {
+      "id": "oq_oq_u6_direction_bit_event",
+      "source": "oq_oq_u6_direction_bit",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:68"
+    },
+    {
+      "id": "oq_oq_u6_direction_bit_meta_mp_a",
+      "source": "oq_oq_u6_direction_bit",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:68"
+    },
+    {
+      "id": "oq_oq_u6_direction_bit_program",
+      "source": "oq_oq_u6_direction_bit",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:68"
+    },
+    {
+      "id": "oq_oq_u6_u7_choice_products_event",
+      "source": "oq_oq_u6_u7_choice_products",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:67"
+    },
+    {
+      "id": "oq_oq_u6_u7_choice_products_meta_mp_a",
+      "source": "oq_oq_u6_u7_choice_products",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:67"
+    },
+    {
+      "id": "oq_oq_u6_u7_choice_products_meta_mp_c",
+      "source": "oq_oq_u6_u7_choice_products",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:67"
+    },
+    {
+      "id": "oq_oq_u6_u7_choice_products_program",
+      "source": "oq_oq_u6_u7_choice_products",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:67"
     },
     {
       "id": "oq_oq_u6_u7_compositional_semantics_event",
@@ -26661,6 +27491,76 @@
       "source_location": "row:48"
     },
     {
+      "id": "oq_oq_window25_sqrt_minus2_event",
+      "source": "oq_oq_window25_sqrt_minus2",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:77"
+    },
+    {
+      "id": "oq_oq_window25_sqrt_minus2_meta_mp_b",
+      "source": "oq_oq_window25_sqrt_minus2",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:77"
+    },
+    {
+      "id": "oq_oq_window25_sqrt_minus2_meta_mp_c",
+      "source": "oq_oq_window25_sqrt_minus2",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:77"
+    },
+    {
+      "id": "oq_oq_window25_sqrt_minus2_program",
+      "source": "oq_oq_window25_sqrt_minus2",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:77"
+    },
+    {
+      "id": "oq_oq_window_7_9_irrational_test_event",
+      "source": "oq_oq_window_7_9_irrational_test",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:72"
+    },
+    {
+      "id": "oq_oq_window_7_9_irrational_test_meta_mp_c",
+      "source": "oq_oq_window_7_9_irrational_test",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:72"
+    },
+    {
+      "id": "oq_oq_window_7_9_irrational_test_program",
+      "source": "oq_oq_window_7_9_irrational_test",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:72"
+    },
+    {
       "id": "oq_oq_window_family_continuation_event",
       "source": "oq_oq_window_family_continuation",
       "target": "event_e1",
@@ -26771,6 +27671,86 @@
       "source_location": "row:63"
     },
     {
+      "id": "oq_oq_window_node_conjugation_origin_event",
+      "source": "oq_oq_window_node_conjugation_origin",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:80"
+    },
+    {
+      "id": "oq_oq_window_node_conjugation_origin_meta_mp_a",
+      "source": "oq_oq_window_node_conjugation_origin",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:80"
+    },
+    {
+      "id": "oq_oq_window_node_conjugation_origin_meta_mp_b",
+      "source": "oq_oq_window_node_conjugation_origin",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:80"
+    },
+    {
+      "id": "oq_oq_window_node_conjugation_origin_program",
+      "source": "oq_oq_window_node_conjugation_origin",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:80"
+    },
+    {
+      "id": "oq_oq_windows11_15_quadratic_meaning_event",
+      "source": "oq_oq_windows11_15_quadratic_meaning",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:78"
+    },
+    {
+      "id": "oq_oq_windows11_15_quadratic_meaning_meta_mp_b",
+      "source": "oq_oq_windows11_15_quadratic_meaning",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:78"
+    },
+    {
+      "id": "oq_oq_windows11_15_quadratic_meaning_meta_mp_c",
+      "source": "oq_oq_windows11_15_quadratic_meaning",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:78"
+    },
+    {
+      "id": "oq_oq_windows11_15_quadratic_meaning_program",
+      "source": "oq_oq_windows11_15_quadratic_meaning",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:78"
+    },
+    {
       "id": "oq_oq_zero_classes_chi_e_event",
       "source": "oq_oq_zero_classes_chi_e",
       "target": "event_e10",
@@ -26846,6 +27826,54 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:6",
       "scope": "Формулы проверены, но их операционный смысл и необходимость не установлены.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c01_oq_level_specific_absence_navigation_support_for",
+      "source": "pattern_pa_c01",
+      "target": "oq_oq_level_specific_absence",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:69",
+      "scope": "Требуется отдельная область и роль уровневого отсутствия.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c01_oq_pn_above_u7_navigation_support_for",
+      "source": "pattern_pa_c01",
+      "target": "oq_oq_pn_above_u7",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:70",
+      "scope": "Область и смысл продолжения P_N ещё не заданы.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c01_oq_u5_cross_section_navigation_support_for",
+      "source": "pattern_pa_c01",
+      "target": "oq_oq_u5_cross_section",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66",
+      "scope": "Уточнение сечения принято в дополнении windows_symmetry; вопрос сохраняет прежний статус до предметной интеграции.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c01_oq_u6_u7_choice_products_navigation_support_for",
+      "source": "pattern_pa_c01",
+      "target": "oq_oq_u6_u7_choice_products",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:67",
+      "scope": "Нужно согласовать предложение с действующей принятой поправкой У6/У7.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -27029,6 +28057,18 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c02_oq_u12_hyperbolic_antimode_guard_navigation_support_for",
+      "source": "pattern_pa_c02",
+      "target": "oq_oq_u12_hyperbolic_antimode_guard",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83",
+      "scope": "Нужна проверка смысла анти-моды с сохранением различия фазы и минуса.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c02_oq_u12_radius_r_curated_bridge_to",
       "source": "pattern_pa_c02",
       "target": "oq_oq_u12_radius_r",
@@ -27101,6 +28141,18 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c03_oq_c83_parity_prediction_navigation_support_for",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_c83_parity_prediction",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:75",
+      "scope": "Предсказание чётности требует явных форм и области; статус вопроса сохранён.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c03_oq_graph_reference_definitions_curated_bridge_to",
       "source": "pattern_pa_c03",
       "target": "oq_oq_graph_reference_definitions",
@@ -27125,6 +28177,30 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c03_oq_minimal_windows_projects_to_navigation_support_for",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_minimal_windows_projects_to",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:74",
+      "scope": "Продолжение projects_to не следует из пересечения окон.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c03_oq_mod3_channel_origin_navigation_support_for",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_mod3_channel_origin",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:73",
+      "scope": "Нужно объяснить источник mod 3 в чтении окон.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c03_oq_node11_asymmetry_curated_bridge_to",
       "source": "pattern_pa_c03",
       "target": "oq_oq_node11_asymmetry",
@@ -27134,6 +28210,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:10",
       "scope": "Асимметрия переоформлена как гипотеза смены типа симметрии: анти-форма→оператор→группа; общего закона нет.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c03_oq_number_level_semantic_bridge_navigation_support_for",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_number_level_semantic_bridge",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:79",
+      "scope": "Нужно обосновать мост от чисел к уровням отдельно от арифметических фактов.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -27158,6 +28246,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:11",
       "scope": "Следствие О1+О3+О8 удерживает У6/У7 в У8 структурно, но конкретная π-формула выше У7 отсутствует.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c03_oq_step48_symmetry_navigation_support_for",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_step48_symmetry",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:76",
+      "scope": "Продолжение смены симметрии требует свидетеля и связи с лестницей.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -27197,6 +28297,18 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c03_oq_window25_sqrt_minus2_navigation_support_for",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_window25_sqrt_minus2",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:77",
+      "scope": "Арифметическое различение третьего бита ещё не задаёт его роль в ФТС.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c03_oq_window_intersection_carrier_curated_bridge_to",
       "source": "pattern_pa_c03",
       "target": "oq_oq_window_intersection_carrier",
@@ -27206,6 +28318,30 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:63",
       "scope": "Не задано отношение пересечения окна к узлу-носителю и обратной связи.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c03_oq_window_node_conjugation_origin_navigation_support_for",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_window_node_conjugation_origin",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:80",
+      "scope": "Нужно отделить выбор начала окна от содержательного закона.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c03_oq_windows11_15_quadratic_meaning_navigation_support_for",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_windows11_15_quadratic_meaning",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:78",
+      "scope": "Квадратичные подполе и остатки не устанавливают смысл уровня.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -27329,6 +28465,18 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c04_oq_level_specific_absence_navigation_support_for",
+      "source": "pattern_pa_c04",
+      "target": "oq_oq_level_specific_absence",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:69",
+      "scope": "Требуется отдельная область и роль уровневого отсутствия.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c04_oq_mprime_audit_curated_bridge_to",
       "source": "pattern_pa_c04",
       "target": "oq_oq_mprime_audit",
@@ -27350,6 +28498,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:50",
       "scope": "Локальная QuestionGain-минимальность не выбирает следующий независимый вопрос.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c04_oq_number_level_semantic_bridge_navigation_support_for",
+      "source": "pattern_pa_c04",
+      "target": "oq_oq_number_level_semantic_bridge",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:79",
+      "scope": "Нужно обосновать мост от чисел к уровням отдельно от арифметических фактов.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -27386,6 +28546,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:54",
       "scope": "Не задан внутренний результат интернализированного ярлыка.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c04_oq_two_channel_k245_navigation_support_for",
+      "source": "pattern_pa_c04",
+      "target": "oq_oq_two_channel_k245",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:71",
+      "scope": "Кандидатные C-PASS не завершают К2/К4/К5.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -27437,6 +28609,54 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c04_oq_u14_jacobi_aggregation_navigation_support_for",
+      "source": "pattern_pa_c04",
+      "target": "oq_oq_u14_jacobi_aggregation",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82",
+      "scope": "Параметр семейства не задаёт оператор агрегации У14.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c04_oq_u16_phase_hyperbolic_pair_navigation_support_for",
+      "source": "pattern_pa_c04",
+      "target": "oq_oq_u16_phase_hyperbolic_pair",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81",
+      "scope": "Выбор формы У16 и её оператора остаётся открытым.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c04_oq_u5_cross_section_navigation_support_for",
+      "source": "pattern_pa_c04",
+      "target": "oq_oq_u5_cross_section",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:66",
+      "scope": "Уточнение сечения принято в дополнении windows_symmetry; вопрос сохраняет прежний статус до предметной интеграции.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c04_oq_u6_u7_choice_products_navigation_support_for",
+      "source": "pattern_pa_c04",
+      "target": "oq_oq_u6_u7_choice_products",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:67",
+      "scope": "Нужно согласовать предложение с действующей принятой поправкой У6/У7.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c04_oq_u8_u10_optests_curated_bridge_to",
       "source": "pattern_pa_c04",
       "target": "oq_oq_u8_u10_optests",
@@ -27446,6 +28666,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:12",
       "scope": "Нет независимых RoleNec/QuestionGain-тестов чтений У8–У10.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c04_oq_window_7_9_irrational_test_navigation_support_for",
+      "source": "pattern_pa_c04",
+      "target": "oq_oq_window_7_9_irrational_test",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:72",
+      "scope": "Нужен различающий операционный тест, а не совпадение форм.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -27869,6 +29101,18 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_f03_oq_c83_parity_prediction_navigation_support_for",
+      "source": "pattern_pa_f03",
+      "target": "oq_oq_c83_parity_prediction",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:75",
+      "scope": "Предсказание чётности требует явных форм и области; статус вопроса сохранён.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_f03_oq_edgeworth_u9_curated_bridge_to",
       "source": "pattern_pa_f03",
       "target": "oq_oq_edgeworth_u9",
@@ -27926,6 +29170,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:49",
       "scope": "Математические факты, канонные основания и операционный смысл ещё не сведены по К1–К5.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_f04_oq_minimal_windows_projects_to_navigation_support_for",
+      "source": "pattern_pa_f04",
+      "target": "oq_oq_minimal_windows_projects_to",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:74",
+      "scope": "Продолжение projects_to не следует из пересечения окон.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -28025,6 +29281,30 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_f05_oq_u12_hyperbolic_antimode_guard_navigation_support_for",
+      "source": "pattern_pa_f05",
+      "target": "oq_oq_u12_hyperbolic_antimode_guard",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83",
+      "scope": "Нужна проверка смысла анти-моды с сохранением различия фазы и минуса.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_f05_oq_u16_phase_hyperbolic_pair_navigation_support_for",
+      "source": "pattern_pa_f05",
+      "target": "oq_oq_u16_phase_hyperbolic_pair",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81",
+      "scope": "Выбор формы У16 и её оператора остаётся открытым.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_f05_oq_u6_u7_compositional_semantics_curated_bridge_to",
       "source": "pattern_pa_f05",
       "target": "oq_oq_u6_u7_compositional_semantics",
@@ -28106,6 +29386,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:21",
       "scope": "Group-collapse чтение Tot не связано с явным операционным морфизмом.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_f06_oq_u6_direction_bit_navigation_support_for",
+      "source": "pattern_pa_f06",
+      "target": "oq_oq_u6_direction_bit",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:68",
+      "scope": "Нужен носитель направления, сохраняющий различение при агрегации.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -32924,8 +34216,8 @@
     "audit_claim_groups": 25,
     "audit_findings": 20,
     "patterns": 31,
-    "open_question_anchors": 80,
-    "mapped_open_questions": 64,
+    "open_question_anchors": 98,
+    "mapped_open_questions": 82,
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
     "internal_evidence_nodes": 7,
@@ -32933,8 +34225,8 @@
     "curated_research_bridges": 14,
     "project_entities": 1,
     "declared_research_scopes": 4,
-    "nodes": 802,
-    "edges": 1881,
+    "nodes": 820,
+    "edges": 1987,
     "unresolved_references": 4
   }
 }

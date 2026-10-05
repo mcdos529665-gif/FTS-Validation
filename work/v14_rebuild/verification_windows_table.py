@@ -46,3 +46,6 @@ for r in rows:
 ok = not bad and [int(r[0]) for r in rows] == list(range(3, 27, 2)) and all(len(r) == len(head) for r in rows)
 for b in bad: print("расхождение:", *b)
 print("PASS" if ok else "FAIL", f"таблица окон: {len(rows)} строк, {len(head)} столбцов, вычислимые столбцы совпадают со счётом")
+
+if __name__ == "__main__":
+    raise SystemExit(0 if ok else 1)

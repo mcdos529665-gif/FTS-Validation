@@ -9,7 +9,7 @@ python -X utf8 tools/check_project_consistency.py
 ```
 
 The command reads the project without repairing `source/` or rebuilding the graph,
-review package, or Graphify navigation. Exit `0` means all five required checks
+review package, or Graphify navigation. Exit `0` means all eleven required checks
 passed; exit `1` means an error or a required check not run. `--verbose` shows full
 output; `--json` returns the same collected result as JSON. `--only <id>` is partial
 diagnosis, not a full verdict.
@@ -19,6 +19,12 @@ diagnosis, not a full verdict.
 | `canon_manifest` | `python -X utf8 tools/verify.py --strict` | SHA256/size of every active `source/` file; no unaccounted files | 0: all accounted for; 1: missing/mismatch/extra; 2: no MANIFEST. Writes nothing. |
 | `claim_graph` | `python -X utf8 tools/claim_graph.py validate --idempotent` | Directed edges, types, locators, all SHA256 inputs including `OPEN_QUESTIONS.md`, canonical assertion/parallel-predicate coverage, research claims/bridges, deterministic build | 0: PASS; nonzero: structural error or missing/changed/unaccounted input. Writes nothing. |
 | `formal_suite` | `python -X utf8 work/v14_rebuild/verification.py` | Exact paper predicates C01–C62 | `0`: all PASS; `1`: FAIL; `2`: ERROR/NOT_RUN. Writes a short `verification_report.md` on PASS and detailed diagnostics for negative outcomes. |
+| `candidate_c63` | `python -X utf8 work/v14_rebuild/verification_c63.py` | Candidate predicates C63–C76 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
+| `candidate_c77` | `python -X utf8 work/v14_rebuild/verification_c77.py` | Candidate predicates C77–C84 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
+| `candidate_c85` | `python -X utf8 work/v14_rebuild/verification_c85.py` | Candidate predicates C85–C92 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
+| `candidate_c93` | `python -X utf8 work/v14_rebuild/verification_c93.py` | Candidate predicates C93–C95 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
+| `candidate_c96` | `python -X utf8 work/v14_rebuild/verification_c96.py` | Candidate predicates C96–C99 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
+| `windows_table` | `python -X utf8 work/v14_rebuild/verification_windows_table.py` | Computable table columns and existence of cited C-check IDs | 0: PASS; 1: FAIL. Writes nothing; semantic columns need manual review. |
 | `audit` | `python -X utf8 work/v14_rebuild/audit/run_audit.py all` | Canon schema/links, claim/OQ/article traceability, review copies/checksums, static suite safeguards, historical artifacts | 0: no unresolved P0/P1; 1: P0/P1; 2: invalid mode. Writes nothing. |
 | `research_export` | `python -X utf8 tools/build_research_export.py --check` | Combined export equals the deterministic build from current inputs byte-for-byte | 0: current; 1: missing/stale/invalid build. Writes nothing. |
 
@@ -67,7 +73,8 @@ Any OQ change also requires a graph rebuild because OQ is in `input_digests`.
 The route does not prove FTS semantics, author acceptance, `St_FTS`, global
 mathematical truth, biological relevance, external-literature completeness, or
 new experimental results. It does not choose between conflicting substantive OQ
-statuses. C01–C62 witness only their exact formal predicates; structural graph
+statuses. C01–C99 witness only their implemented predicates and tested domains;
+C63–C99 remain candidate-model evidence, including finite grids and numerical checks; structural graph
 PASS preserves provenance without replacing grounds or the author's decision.
 
 Pre-existing unfinished work by others and the intended future commit boundary:

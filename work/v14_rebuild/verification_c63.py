@@ -143,3 +143,6 @@ check("C76", "Честное обращение У8: y²=|x| ⟺ y⁴=x² — д
 
 n_pass = sum(r[2] for r in results)
 print(f"\nИТОГ: {n_pass} PASS / {len(results) - n_pass} FAIL")
+
+if __name__ == "__main__":
+    raise SystemExit(0 if n_pass == len(results) else 1)

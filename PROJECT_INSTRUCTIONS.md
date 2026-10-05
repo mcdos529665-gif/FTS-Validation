@@ -165,6 +165,7 @@ Run from the repository root. Windows scripts print Cyrillic and write UTF-8;
 use **`-X utf8`** to avoid `UnicodeEncodeError`.
 
 ```
+python -X utf8 tools/check_project_consistency.py       # Full consistency route, including C63..C99 and windows table
 python -X utf8 tools/verify.py                          # Canon SHA256 integrity; must have 0 mismatch
 python -X utf8 tools/query.py stats                     # Card counts by type/status
 python -X utf8 tools/query.py card U_07                 # Card and incoming/outgoing edges
@@ -193,7 +194,8 @@ not a full-suite verdict. Its `verification_diagnostic.md` does not replace the
 full report. `--report <path>` selects a report path. Run the full suite without
 `--only` before completing formal changes.
 
-Dependencies: Python 3.13; `sympy` for verification; `numpy`/`pandas`/`scipy`/
+Dependencies: Python with `sympy` for verification (existing Windows Python 3.11.9 works;
+`C:/Python313` lacks SymPy); `numpy`/`pandas`/`scipy`/
 `scikit-learn` for o20. There is no requirements file; use the user's environment.
 
 Graph commands: `python -X utf8 tools/claim_graph.py

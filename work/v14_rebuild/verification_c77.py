@@ -129,3 +129,6 @@ check("C84", "Оговорка: (−x)² = x² — форма У6, хотя 3²=
 
 n_pass = sum(r[2] for r in results)
 print(f"\nИТОГ: {n_pass} PASS / {len(results) - n_pass} FAIL")
+
+if __name__ == "__main__":
+    raise SystemExit(0 if n_pass == len(results) else 1)
