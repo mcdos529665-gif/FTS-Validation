@@ -1,0 +1,10 @@
+query_id	provider	request	result	use
+Q01	Undermind deep search	Choice provenance and compositional outcomes; goal recorded in PROTOCOL and remote search	completed; 161 ranked papers; first 10 metadata records inspected	S1,S2; semiring lead corrected with S3 primary source
+Q02	Undermind semantic	Equivariant tensor maps under independent coordinate changes; arrays versus representations	5 records: Jon14,Kar19,Zha25g,Blu22,Ano26	Jon14 full text; other records not used
+Q03	Undermind semantic	Square root covering, branch selection and analytic continuation	5 records: Sch14,Men04,Alt22,Gar19,Wal92	No full text used; TA1 proof given directly
+Q04	Undermind semantic	Cyclotomic Galois groups, intermediate splitting and conjugation	5 records: Con02,Dok10,Var06,Sha08,Rep02	Dok10 full text; other records off target
+Q05	Undermind read_pdfs	Jon14 tensor transformation; Dok10 Frobenius identifiability	2 targeted readings	S4,S5
+Q06	Undermind read_pdfs	Cha25c constructors and equivalences; Kis21 laws and handlers	2 targeted readings	S1,S2; target identity checked against publisher
+Q07	Undermind lookup	10.1145/1265530.1265535	No papers resolved	S3 identity checked through primary PDF
+Q08	Web primary sources	Conrad cyclotomic; Green PODS 2007; NIST DLMF 22.5; Cambridge CTrees; author Kiselyov PDF	Primary documents opened	S1,S2,S3,S6,S7
+Q09	Semantic Scholar	10.1017/S0956796825100105	HTTP429; no further calls	S2_METADATA.json; independent metadata check incomplete

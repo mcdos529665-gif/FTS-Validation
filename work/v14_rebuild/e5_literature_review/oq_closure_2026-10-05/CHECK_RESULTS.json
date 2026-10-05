@@ -1,0 +1,134 @@
+{
+  "checks": [
+    {
+      "id": "OC01_units48",
+      "pass": true,
+      "evidence": {
+        "group": "C4 x C2 x C2",
+        "generators": [
+          5,
+          47,
+          17
+        ],
+        "units": [
+          1,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          25,
+          29,
+          31,
+          35,
+          37,
+          41,
+          43,
+          47
+        ],
+        "5_squared_mod48": 25
+      }
+    },
+    {
+      "id": "OC02_cyclic_subgroup_not_just_inverse",
+      "pass": true,
+      "evidence": {
+        "modulus": 96,
+        "same_generated_subgroup": [
+          5,
+          29,
+          53,
+          77
+        ],
+        "order_of_5": 8
+      }
+    },
+    {
+      "id": "OC03_cross_section",
+      "pass": true,
+      "evidence": "epsilon(0)=+1 chosen explicitly; sign(0)=0 is not a branch label"
+    },
+    {
+      "id": "OC04_relation_product",
+      "pass": true,
+      "evidence": {
+        "x": 2,
+        "retained_times_selected": [
+          -4,
+          4
+        ],
+        "limitation": "a relation times a section does not select -x^2"
+      }
+    },
+    {
+      "id": "OC05_polarization",
+      "pass": true,
+      "evidence": "Even N gives exchange symmetry; cubic N has D(0,1)=2 and D(1,0)=0"
+    },
+    {
+      "id": "OC06_branch_bit",
+      "pass": true,
+      "evidence": "No single-valued sign readout factors through x^2 on R excluding 0"
+    },
+    {
+      "id": "OC07_blackwell",
+      "pass": true,
+      "evidence": {
+        "P4": "Matrix([[5/8, 3/8], [3/8, 5/8]])",
+        "reverse_channel": "Matrix([[3/2, -1/2], [-1/2, 3/2]])",
+        "risks": [
+          "1/4",
+          "3/8"
+        ]
+      }
+    },
+    {
+      "id": "OC08_lift_section",
+      "pass": true,
+      "evidence": "Set section exists; none is equivariant under branch swap with trivial action on X"
+    },
+    {
+      "id": "OC09_real_complex_boundary",
+      "pass": true,
+      "evidence": "For q>=0 real roots exist iff q<=4; for q=5 complex roots are 2+-i"
+    },
+    {
+      "id": "OC10_tensor_covariance",
+      "pass": true,
+      "evidence": "K=A tensor B; metric transforms by K^-T G K^-1; operator by K T K^-1"
+    },
+    {
+      "id": "OC11_dynamic_forms",
+      "pass": true,
+      "evidence": "Circular and hyperbolic dynamics preserve different quadratic forms"
+    },
+    {
+      "id": "OC12_hyperbola_not_negation",
+      "pass": true,
+      "evidence": "Negating an equation preserves its zero set; switching its quadratic signature does not"
+    },
+    {
+      "id": "OC13_provenance_polynomials",
+      "pass": true,
+      "evidence": {
+        "u6": "n**2*p + n*p**2",
+        "u7": "n**2*p + n*p**2 + n*p + n + p",
+        "limit": "commutative semiring forgets original grouping; AST still needed"
+      }
+    },
+    {
+      "id": "OC14_window_projection_candidate",
+      "pass": true,
+      "evidence": "Shift by -2 is an available map on listed triples; adjacency alone does not select it"
+    },
+    {
+      "id": "OC15_parity_type_limit",
+      "pass": true,
+      "evidence": "exp(i theta) is not odd in theta (at theta=0 it equals 1); a locus has no function parity"
+    }
+  ],
+  "passed": 15,
+  "total": 15
+}
