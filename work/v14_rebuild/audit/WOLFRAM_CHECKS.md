@@ -20,3 +20,13 @@ Verdict: **confirmed_math** для `((s+t)²−(s−t)²)/4=st` на R²,
 [запись](../e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md).
 Смысл ФТС и выбор алгебры не подтверждены. WF-106 остаётся inconclusive;
 канонические `St_math`/`St_FTS` не меняются.
+
+## WF-108 — 2026-10-06
+
+Claim: `WINDOW_CIRCLE_CANDIDATE`; относительная фаза и действия на P24/P12.
+Verdict: **confirmed_math** для фазовых тождеств, слоёв редукции U24→U12,
+геометрических соотношений и следов повторения. Один context/evaluator,
+17.0 с, повторов нет. Полный предикат, код, сырой результат и границы:
+[запись](../e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_108.md).
+Матрицы S4 проверены отдельно локально; связь с ФТС — assistant_candidate.
+Канонические St_math/St_FTS не меняются.

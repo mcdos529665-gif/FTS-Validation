@@ -140,7 +140,7 @@
     },
     {
       "path": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
-      "sha256": "b04ceaaabf2e8f485b190e3124d64a147035bef9e55b5cab3f931b8021168183"
+      "sha256": "3f224e51f9102d4b7a98a1f7f7ff4038b3d2abf3796fd9025386ca71e97cecad"
     },
     {
       "path": "work/v14_rebuild/d10_phase/PREREGISTRATION.md",
@@ -223,8 +223,12 @@
       "sha256": "3b2832d822c3c91b8288ccf070313a4351efd024dc926b81b76514940bb118c5"
     },
     {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md",
+      "sha256": "958d755655a80afb8753080e17b137df41cfbbef6ac1b1086949a32519b0ec14"
+    },
+    {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md",
-      "sha256": "8ea4f7dd321981acc1e5d90bfd176c41e778952693cf5dd9d9139192af5fb13e"
+      "sha256": "de3bebe1559c14610166bf9e649c62c3f41bd496c688db031ec4466aee8aa727"
     },
     {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
@@ -239,8 +243,16 @@
       "sha256": "62a0f4e04f7850d887d7b9d8cbecb4395ba7b4f5ba0510b8707ee611227a8028"
     },
     {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_108.md",
+      "sha256": "9d859d4e156b9e9cf8a6b25c9dcd7f3f70eaa3e819422a4b6de07cf3e130de80"
+    },
+    {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
       "sha256": "3fc13cfd206949e06b3bb9836695afe183b2ffc74bfaa8da688ab2fd5335d217"
+    },
+    {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/circle_probe.py",
+      "sha256": "65fc92a4d1d4d18015580ed8671e786e67e8ec406aa44ba53f470d147be713ae"
     },
     {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
@@ -2985,6 +2997,17 @@
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:U_m1"
+    },
+    {
+      "id": "assessment_window_circle_candidate",
+      "type": "status_assessment",
+      "label": "WINDOW_CIRCLE_CANDIDATE: core_confirmed_math_WF108; S4_matrix_verified_locally; FTS_bridge_candidate; no St_FTS change",
+      "layer": "research",
+      "status_text": "core_confirmed_math_WF108; S4_matrix_verified_locally; FTS_bridge_candidate; no St_FTS change",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md",
+      "source_location": "Найдено; Зависимости, вывод и что не закрыто"
     },
     {
       "id": "assessment_window_node_inner_nonunique",
@@ -6472,6 +6495,19 @@
       "source_location": "§4. Исторический V*V"
     },
     {
+      "id": "claim_window_circle_candidate",
+      "type": "claim",
+      "label": "WINDOW_CIRCLE_CANDIDATE — Относительная фаза реализует двухканальную пробу; квадрат P24→P12 забывает противоположность, а геометрическое и арифметическое продолжения действий различаются при повторе; связь…",
+      "layer": "research",
+      "claim_id": "WINDOW_CIRCLE_CANDIDATE",
+      "granularity": "statement",
+      "scope": "interlevel; шаги 12/24; единичный комплексный круг и объявленные действия",
+      "status_axis": "research_status",
+      "status_text": "core_confirmed_math_WF108; S4_matrix_verified_locally; FTS_bridge_candidate; no St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md",
+      "source_location": "Найдено; Зависимости, вывод и что не закрыто"
+    },
+    {
       "id": "claim_window_node_inner_nonunique",
       "type": "claim",
       "label": "WINDOW_NODE_INNER_NONUNIQUE — На C-подалгебре внутреннее JzJ⁻¹ реализует комплексное сопряжение и в H, и в M₂(R), с J²=-1 и +1; это не выбирает модель или роль узла ФТС.",
@@ -6918,6 +6954,20 @@
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py"
     },
     {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_circle_model_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_circle_probe_py",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/circle_probe.py",
+      "layer": "internal_research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/circle_probe.py"
+    },
+    {
       "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_independent_finite_cjs",
       "type": "source_document",
       "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
@@ -6951,6 +7001,13 @@
       "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md",
       "layer": "internal_research",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_wolfram_108_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_108.md",
+      "layer": "internal_research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_108.md"
     },
     {
       "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_wolfram_md",
@@ -7776,6 +7833,32 @@
       "status_effect": "candidate model support and limits",
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
       "source_location": "P01–P12"
+    },
+    {
+      "id": "evidence_internal_window_circle_local",
+      "type": "internal_evidence",
+      "label": "window_circle_local — Круг: фаза, слои, действия и матрицы S4",
+      "layer": "internal_research",
+      "evidence_id": "window_circle_local",
+      "evidence_kind": "finite_exact_model_check",
+      "scope": "вещественные фазовые тождества; конечные U12/U24; 16 матричных произведений S4",
+      "limitation": "не задаёт семантику ФТС; геометрические действия дополнительно выбраны",
+      "status_effect": "no St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/circle_probe.py",
+      "source_location": "main"
+    },
+    {
+      "id": "evidence_internal_window_circle_wf108",
+      "type": "internal_evidence",
+      "label": "window_circle_wf108 — WF-108: фаза и конечные действия на круге",
+      "layer": "internal_research",
+      "evidence_id": "window_circle_wf108",
+      "evidence_kind": "independent_CAS",
+      "scope": "полиномиальное и фазовые тождества; полные конечные множества и действия",
+      "limitation": "матрицы S4 проверены отдельно локально; FTS-перевод не установлен",
+      "status_effect": "confirmed_math only for stated predicate; no canonical status change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_108.md",
+      "source_location": "Точный пакет; Выполненный код и сырой результат"
     },
     {
       "id": "evidence_internal_window_relative_sign_local",
@@ -11507,6 +11590,45 @@
       "scope": "двухканальный кандидат; перенос на новый носитель дополнительно предполагается",
       "status_effect": "no St_FTS change",
       "rationale": "Сумма, разность и поляризация дают местную форму протокола, не готовую семантику операций окон."
+    },
+    {
+      "id": "WSP-B15",
+      "source": "claim_window_circle_candidate",
+      "target": "evidence_internal_window_circle_local",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/circle_probe.py",
+      "source_location": "row:39",
+      "scope": "точные тождества, перестановки и матрицы выбранной модели",
+      "status_effect": "no St_FTS change",
+      "rationale": "Различение повторов и линейная реализация S4 проверены в объявленном носителе."
+    },
+    {
+      "id": "WSP-B16",
+      "source": "claim_window_circle_candidate",
+      "target": "evidence_internal_window_circle_wf108",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_108.md",
+      "source_location": "row:40",
+      "scope": "фаза, редукция и конечные действия",
+      "status_effect": "no St_FTS change",
+      "rationale": "Независимая CAS-проверка математического ядра без семантического переноса."
+    },
+    {
+      "id": "WSP-B17",
+      "source": "claim_window_circle_candidate",
+      "target": "doc_work_v14_rebuild_addendum_2026_10_04_windows_symmetry_md",
+      "relation": "grounds_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md",
+      "source_location": "row:41",
+      "scope": "арифметические шаги и сопряжение как действие остатка -1",
+      "status_effect": "no St_FTS change",
+      "rationale": "Геометрическое представление различает арифметическую перестановку, полуоборот и отражение."
     },
     {
       "id": "atlas_contains_pa_c01",
@@ -32430,6 +32552,26 @@
       "source_location": "row:6"
     },
     {
+      "id": "research_evidence_contains_window_circle_local",
+      "source": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_circle_probe_py",
+      "target": "evidence_internal_window_circle_local",
+      "relation": "contains",
+      "layer": "internal_research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
+      "source_location": "row:13"
+    },
+    {
+      "id": "research_evidence_contains_window_circle_wf108",
+      "source": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_wolfram_108_md",
+      "target": "evidence_internal_window_circle_wf108",
+      "relation": "contains",
+      "layer": "internal_research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
+      "source_location": "row:14"
+    },
+    {
       "id": "research_evidence_contains_window_relative_sign_local",
       "source": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_relative_sign_probe_py",
       "target": "evidence_internal_window_relative_sign_local",
@@ -34909,6 +35051,27 @@
       "status_effect": "research status only; no St_FTS promotion"
     },
     {
+      "id": "window_circle_candidate_documented_in",
+      "source": "claim_window_circle_candidate",
+      "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_circle_model_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md",
+      "source_location": "Найдено; Зависимости, вывод и что не закрыто"
+    },
+    {
+      "id": "window_circle_candidate_has_status",
+      "source": "claim_window_circle_candidate",
+      "target": "assessment_window_circle_candidate",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md",
+      "source_location": "Найдено; Зависимости, вывод и что не закрыто",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
       "id": "window_node_inner_nonunique_documented_in",
       "source": "claim_window_node_inner_nonunique",
       "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_review_md",
@@ -35028,13 +35191,13 @@
     "mapped_open_questions": 79,
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
-    "internal_evidence_nodes": 13,
-    "research_claims": 20,
-    "curated_research_bridges": 37,
+    "internal_evidence_nodes": 15,
+    "research_claims": 21,
+    "curated_research_bridges": 40,
     "project_entities": 1,
     "declared_research_scopes": 4,
-    "nodes": 856,
-    "edges": 2018,
+    "nodes": 863,
+    "edges": 2025,
     "unresolved_references": 4
   }
 }
