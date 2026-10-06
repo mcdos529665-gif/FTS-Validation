@@ -1,0 +1,851 @@
+{
+  "claim_ids": [
+    "WINDOW_SIGN_SHADOW_INVARIANT",
+    "WINDOW_SIGN_MODELS_INEQUIVALENT",
+    "WINDOW_NODE_INNER_NONUNIQUE"
+  ],
+  "domain": "signed basis B_d; bilinear extension only where stated",
+  "coordinates12": {
+    "1": [
+      0,
+      0
+    ],
+    "5": [
+      0,
+      1
+    ],
+    "7": [
+      1,
+      0
+    ],
+    "11": [
+      1,
+      1
+    ]
+  },
+  "coordinates24": {
+    "1": [
+      0,
+      0,
+      0
+    ],
+    "5": [
+      0,
+      1,
+      1
+    ],
+    "7": [
+      1,
+      0,
+      1
+    ],
+    "11": [
+      1,
+      1,
+      0
+    ],
+    "13": [
+      0,
+      0,
+      1
+    ],
+    "17": [
+      0,
+      1,
+      0
+    ],
+    "19": [
+      1,
+      0,
+      0
+    ],
+    "23": [
+      1,
+      1,
+      1
+    ]
+  },
+  "models": {
+    "T4": {
+      "dimension": 4,
+      "negative_basis_squares": 0,
+      "commutative": true,
+      "associative": true,
+      "noncommuting_basis_pairs": 0,
+      "nonassociative_basis_triples": 0,
+      "first_associativity_counterexample": [],
+      "ab_ba": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "abc": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "aab": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "epsilon_table": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "signed_pairs_checked": 64,
+      "signed_triples_checked": 512
+    },
+    "C4": {
+      "dimension": 4,
+      "negative_basis_squares": 2,
+      "commutative": true,
+      "associative": true,
+      "noncommuting_basis_pairs": 0,
+      "nonassociative_basis_triples": 0,
+      "first_associativity_counterexample": [],
+      "ab_ba": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "abc": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "aab": [
+        [
+          -1,
+          2
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "epsilon_table": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "signed_pairs_checked": 64,
+      "signed_triples_checked": 512
+    },
+    "H4": {
+      "dimension": 4,
+      "negative_basis_squares": 3,
+      "commutative": false,
+      "associative": true,
+      "noncommuting_basis_pairs": 6,
+      "nonassociative_basis_triples": 0,
+      "first_associativity_counterexample": [],
+      "ab_ba": [
+        [
+          1,
+          3
+        ],
+        [
+          -1,
+          3
+        ]
+      ],
+      "abc": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "aab": [
+        [
+          -1,
+          2
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "epsilon_table": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1
+        ]
+      ],
+      "signed_pairs_checked": 64,
+      "signed_triples_checked": 512
+    },
+    "S4": {
+      "dimension": 4,
+      "negative_basis_squares": 1,
+      "commutative": false,
+      "associative": true,
+      "noncommuting_basis_pairs": 6,
+      "nonassociative_basis_triples": 0,
+      "first_associativity_counterexample": [],
+      "ab_ba": [
+        [
+          1,
+          3
+        ],
+        [
+          -1,
+          3
+        ]
+      ],
+      "abc": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "aab": [
+        [
+          -1,
+          2
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "epsilon_table": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "signed_pairs_checked": 64,
+      "signed_triples_checked": 512
+    },
+    "N4": {
+      "dimension": 4,
+      "negative_basis_squares": 3,
+      "commutative": true,
+      "associative": false,
+      "noncommuting_basis_pairs": 0,
+      "nonassociative_basis_triples": 12,
+      "first_associativity_counterexample": [
+        [
+          1,
+          1,
+          2
+        ]
+      ],
+      "ab_ba": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "abc": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "aab": [
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "epsilon_table": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1
+        ]
+      ],
+      "signed_pairs_checked": 64,
+      "signed_triples_checked": 512
+    },
+    "T8": {
+      "dimension": 8,
+      "negative_basis_squares": 0,
+      "commutative": true,
+      "associative": true,
+      "noncommuting_basis_pairs": 0,
+      "nonassociative_basis_triples": 0,
+      "first_associativity_counterexample": [],
+      "ab_ba": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "abc": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "aab": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "epsilon_table": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "signed_pairs_checked": 256,
+      "signed_triples_checked": 4096,
+      "ab_ell": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          7
+        ]
+      ]
+    },
+    "B8": {
+      "dimension": 8,
+      "negative_basis_squares": 6,
+      "commutative": false,
+      "associative": true,
+      "noncommuting_basis_pairs": 24,
+      "nonassociative_basis_triples": 0,
+      "first_associativity_counterexample": [],
+      "ab_ba": [
+        [
+          1,
+          3
+        ],
+        [
+          -1,
+          3
+        ]
+      ],
+      "abc": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "aab": [
+        [
+          -1,
+          2
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "epsilon_table": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1
+        ]
+      ],
+      "signed_pairs_checked": 256,
+      "signed_triples_checked": 4096,
+      "ab_ell": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          7
+        ]
+      ]
+    },
+    "O8": {
+      "dimension": 8,
+      "negative_basis_squares": 7,
+      "commutative": false,
+      "associative": false,
+      "noncommuting_basis_pairs": 42,
+      "nonassociative_basis_triples": 168,
+      "first_associativity_counterexample": [
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "ab_ba": [
+        [
+          1,
+          3
+        ],
+        [
+          -1,
+          3
+        ]
+      ],
+      "abc": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "aab": [
+        [
+          -1,
+          2
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "epsilon_table": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ]
+      ],
+      "signed_pairs_checked": 256,
+      "signed_triples_checked": 4096,
+      "ab_ell": [
+        [
+          -1,
+          7
+        ],
+        [
+          1,
+          7
+        ]
+      ]
+    }
+  },
+  "inner_conjugation": {
+    "H4": {
+      "J_square": -1,
+      "JzJ_inverse": [
+        "x",
+        "-y",
+        "0",
+        "0"
+      ]
+    },
+    "S4": {
+      "J_square": 1,
+      "JzJ_inverse": [
+        "x",
+        "-y",
+        "0",
+        "0"
+      ]
+    }
+  },
+  "dependent_single_root_residues": {
+    "residues": [
+      5,
+      7,
+      11
+    ],
+    "indices": [
+      6,
+      5,
+      3
+    ],
+    "O8_associator": 1
+  },
+  "status": "PASS",
+  "fts_status_effect": "none"
+}

@@ -18,13 +18,13 @@
 - `mapped_open_questions`: 79
 - `verification_nodes`: 62
 - `external_evidence_nodes`: 21
-- `internal_evidence_nodes`: 8
-- `research_claims`: 15
-- `curated_research_bridges`: 23
+- `internal_evidence_nodes`: 11
+- `research_claims`: 19
+- `curated_research_bridges`: 34
 - `project_entities`: 1
 - `declared_research_scopes`: 4
-- `nodes`: 834
-- `edges`: 1989
+- `nodes`: 849
+- `edges`: 2011
 - `unresolved_references`: 4
 
 ## Границы

@@ -36,7 +36,7 @@
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
-      "sha256": "b969a3fcfae95dee23477500795fdbbc0146319428098da1f830c332a18490cc"
+      "sha256": "2f3de47e506129f11dbb660e0495cde06dae17bd446c753b0d90bd6fefd22fa4"
     },
     {
       "path": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
@@ -140,7 +140,7 @@
     },
     {
       "path": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
-      "sha256": "8bf44c451ef66dfc89a42a48bcfe01c2e8c7ad8f6cb23d93ef730eca625dcee7"
+      "sha256": "7bc6c1c4c8316705da4dd195f77681ac18fa5db7ed09dc79453636d7472b420f"
     },
     {
       "path": "work/v14_rebuild/d10_phase/PREREGISTRATION.md",
@@ -221,6 +221,22 @@
     {
       "path": "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/check_candidates.py",
       "sha256": "3b2832d822c3c91b8288ccf070313a4351efd024dc926b81b76514940bb118c5"
+    },
+    {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "sha256": "0a6a083fecc02a835f5bd81bcf563aaa85ddaff78db4ffa14e25a135b0ea40ca"
+    },
+    {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md",
+      "sha256": "af8820632c6e5994599b9b58a4bcc6a0f6998ff939c6efecf351dec2ebac127e"
+    },
+    {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
+      "sha256": "3fc13cfd206949e06b3bb9836695afe183b2ffc74bfaa8da688ab2fd5335d217"
+    },
+    {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
+      "sha256": "0d1a284fd329f42690c14b8688b8066575eeccdac6e2d2e17b49b1f68719a50a"
     },
     {
       "path": "work/v14_rebuild/external_bridge_u1_u5.md",
@@ -2957,6 +2973,50 @@
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:U_m1"
+    },
+    {
+      "id": "assessment_window_node_inner_nonunique",
+      "type": "status_assessment",
+      "label": "WINDOW_NODE_INNER_NONUNIQUE: local_math_verified; FTS_role_undefined; external_CAS_inconclusive; no St_FTS change",
+      "layer": "research",
+      "status_text": "local_math_verified; FTS_role_undefined; external_CAS_inconclusive; no St_FTS change",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§4. Внутреннее сопряжение"
+    },
+    {
+      "id": "assessment_window_sign_interface_undefined",
+      "type": "status_assessment",
+      "label": "WINDOW_SIGN_INTERFACE_UNDEFINED: bridge_underdetermined; no St_FTS change",
+      "layer": "research",
+      "status_text": "bridge_underdetermined; no St_FTS change",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§1; §4"
+    },
+    {
+      "id": "assessment_window_sign_models_inequivalent",
+      "type": "status_assessment",
+      "label": "WINDOW_SIGN_MODELS_INEQUIVALENT: local_finite_math_verified; separate_implementation_agrees; external_CAS_inconclusive; no St_FTS change",
+      "layer": "research",
+      "status_text": "local_finite_math_verified; separate_implementation_agrees; external_CAS_inconclusive; no St_FTS change",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§3"
+    },
+    {
+      "id": "assessment_window_sign_shadow_invariant",
+      "type": "status_assessment",
+      "label": "WINDOW_SIGN_SHADOW_INVARIANT: proved_by_induction_and_local_finite_check; external_CAS_inconclusive; no St_FTS change",
+      "layer": "research",
+      "status_text": "proved_by_induction_and_local_finite_check; external_CAS_inconclusive; no St_FTS change",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§2; §4"
     },
     {
       "id": "author_ac_20260919_expectation_speed",
@@ -6389,6 +6449,58 @@
       "source_location": "§4. Исторический V*V"
     },
     {
+      "id": "claim_window_node_inner_nonunique",
+      "type": "claim",
+      "label": "WINDOW_NODE_INNER_NONUNIQUE — На C-подалгебре внутреннее JzJ⁻¹ реализует комплексное сопряжение и в H, и в M₂(R), с J²=-1 и +1; это не выбирает модель или роль узла ФТС.",
+      "layer": "research",
+      "claim_id": "WINDOW_NODE_INNER_NONUNIQUE",
+      "granularity": "statement",
+      "scope": "interlevel; R-линейное сопряжение на span_R(1,I); кандидатное сопоставление узлу",
+      "status_axis": "research_status",
+      "status_text": "local_math_verified; FTS_role_undefined; external_CAS_inconclusive; no St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§4. Внутреннее сопряжение"
+    },
+    {
+      "id": "claim_window_sign_interface_undefined",
+      "type": "claim",
+      "label": "WINDOW_SIGN_INTERFACE_UNDEFINED — В проверенных источниках арифметических окон 13/25 не определены перевод операций ФТС в знаковое произведение и наблюдение дополнительного знака.",
+      "layer": "research",
+      "claim_id": "WINDOW_SIGN_INTERFACE_UNDEFINED",
+      "granularity": "limitation_claim",
+      "scope": "interlevel; окна 13/25; проверенные канонные и исследовательские источники",
+      "status_axis": "research_status",
+      "status_text": "bridge_underdetermined; no St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§1; §4"
+    },
+    {
+      "id": "claim_window_sign_models_inequivalent",
+      "type": "claim",
+      "label": "WINDOW_SIGN_MODELS_INEQUIVALENT — Один арифметический интерфейс окон 13/25 допускает неэквивалентные знаковые модели; H4/S4 различаются квадратами, O8/B8 ассоциативностью.",
+      "layer": "research",
+      "claim_id": "WINDOW_SIGN_MODELS_INEQUIVALENT",
+      "granularity": "claim_group",
+      "scope": "interlevel; объявленные R-модели; эквивалентность сменами знаков и GL(d,2)",
+      "status_axis": "research_status",
+      "status_text": "local_finite_math_verified; separate_implementation_agrees; external_CAS_inconclusive; no St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§3"
+    },
+    {
+      "id": "claim_window_sign_shadow_invariant",
+      "type": "claim",
+      "label": "WINDOW_SIGN_SHADOW_INVARIANT — На знаковом базисном носителе метка любого конечного произведения равна XOR меток листьев и не зависит от порядка или дерева; наблюдение через эту метку не различает знаковые резу…",
+      "layer": "research",
+      "claim_id": "WINDOW_SIGN_SHADOW_INVARIANT",
+      "granularity": "statement",
+      "scope": "interlevel; B_d; произвольная нормированная ±1-коцепь; наблюдение O_table∘π",
+      "status_axis": "research_status",
+      "status_text": "proved_by_induction_and_local_finite_check; external_CAS_inconclusive; no St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§2; §4"
+    },
+    {
       "id": "constraint_ac_20260919_expectation_speed_00",
       "type": "constraint",
       "label": "Не превращать чтение самой модели в объективный закон о фундаментальности.",
@@ -6761,6 +6873,34 @@
       "label": "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md",
       "layer": "research",
       "source_file": "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_check_models_py",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
+      "layer": "internal_research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py"
+    },
+    {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_independent_finite_cjs",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
+      "layer": "internal_research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs"
+    },
+    {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_review_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_wolfram_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md",
+      "layer": "internal_research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md"
     },
     {
       "id": "doc_work_v14_rebuild_external_bridge_u1_u5_md",
@@ -7581,6 +7721,45 @@
       "source_location": "P01–P12"
     },
     {
+      "id": "evidence_internal_window_sign_local",
+      "type": "internal_evidence",
+      "label": "window_sign_local — Восемь знаковых моделей и символическое сопряжение",
+      "layer": "internal_research",
+      "evidence_id": "window_sign_local",
+      "evidence_kind": "finite_exact_model_check",
+      "scope": "B_2/B_3; R-билинейные H4/S4 для сопряжения",
+      "limitation": "FTS-перевод операций и наблюдения не задан; независимый CAS inconclusive",
+      "status_effect": "no St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
+      "source_location": "coordinates; model_results; main"
+    },
+    {
+      "id": "evidence_internal_window_sign_separate",
+      "type": "internal_evidence",
+      "label": "window_sign_separate — Отдельные целочисленные векторы, матрицы и пары H",
+      "layer": "internal_research",
+      "evidence_id": "window_sign_separate",
+      "evidence_kind": "independent_local_implementation",
+      "scope": "все таблицы H4/S4/O8; конечные базисные/знаковые тройки; линейное сопряжение",
+      "limitation": "локальная проверка; не внешний независимый CAS и не смысловой тест ФТС",
+      "status_effect": "no St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
+      "source_location": "quaternion; matrix; octonion; audit"
+    },
+    {
+      "id": "evidence_internal_window_sign_wolfram_attempt",
+      "type": "internal_evidence",
+      "label": "window_sign_wolfram_attempt — WF-106: Wolfram provider_error, результат inconclusive",
+      "layer": "internal_research",
+      "evidence_id": "window_sign_wolfram_attempt",
+      "evidence_kind": "external_CAS_attempt",
+      "scope": "пакет A–E для моделей окон 13/25",
+      "limitation": "код вызова ошибочен; математических значений провайдер не вернул",
+      "status_effect": "no St_math or St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md",
+      "source_location": "WF-106; сырой ответ; диагноз"
+    },
+    {
       "id": "finding_af_001",
       "type": "finding",
       "label": "AF-001 [P1, resolved] — C28 содержал ветвь `or True` и потому не проверял zero-product predicate.",
@@ -8203,7 +8382,7 @@
       "anchor": "oq-blackwell-canonical-projection",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L609"
+      "source_location": "L610"
     },
     {
       "id": "oq_oq_blackwell_u4_u6_witness",
@@ -8213,7 +8392,7 @@
       "anchor": "oq-blackwell-u4-u6-witness",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L606"
+      "source_location": "L607"
     },
     {
       "id": "oq_oq_c83_parity_prediction",
@@ -8473,7 +8652,7 @@
       "anchor": "oq-graph-reference-definitions",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L643"
+      "source_location": "L645"
     },
     {
       "id": "oq_oq_kappa_provenance",
@@ -8513,7 +8692,7 @@
       "anchor": "oq-lift-section-and-category",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L623"
+      "source_location": "L624"
     },
     {
       "id": "oq_oq_lift_typing_passport",
@@ -8523,7 +8702,7 @@
       "anchor": "oq-lift-typing-passport",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L620"
+      "source_location": "L621"
     },
     {
       "id": "oq_oq_machine_check_done",
@@ -8833,7 +9012,7 @@
       "anchor": "oq-typed-absence-finite-witness",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L613"
+      "source_location": "L614"
     },
     {
       "id": "oq_oq_typed_absence_provenance_benchmark",
@@ -8893,7 +9072,7 @@
       "anchor": "oq-u12-hyperbolic-antimode-guard",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L596"
+      "source_location": "L597"
     },
     {
       "id": "oq_oq_u12_radius_r",
@@ -8923,7 +9102,7 @@
       "anchor": "oq-u14-jacobi-aggregation",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L594"
+      "source_location": "L595"
     },
     {
       "id": "oq_oq_u14_worlds_agg_op",
@@ -8943,7 +9122,7 @@
       "anchor": "oq-u16-phase-hyperbolic-pair",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L592"
+      "source_location": "L593"
     },
     {
       "id": "oq_oq_u5_cross_section",
@@ -9053,7 +9232,7 @@
       "anchor": "oq-window-family-continuation",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L637"
+      "source_location": "L639"
     },
     {
       "id": "oq_oq_window_family_roles",
@@ -9063,7 +9242,7 @@
       "anchor": "oq-window-family-roles",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L630"
+      "source_location": "L631"
     },
     {
       "id": "oq_oq_window_intersection_carrier",
@@ -9073,7 +9252,7 @@
       "anchor": "oq-window-intersection-carrier",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L633"
+      "source_location": "L635"
     },
     {
       "id": "oq_oq_window_node_conjugation_origin",
@@ -11063,6 +11242,149 @@
       "scope": "active U7 minimum",
       "status_effect": "no St_FTS change",
       "rationale": "Кандидат использует активную группировку У7 буквально; ресурс D5 не содержится в самой карточке."
+    },
+    {
+      "id": "WSP-B01",
+      "source": "claim_window_sign_interface_undefined",
+      "target": "card_m_07",
+      "relation": "grounds_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "row:25",
+      "scope": "точная группировка M_07; исполнимое знаковое умножение не следует",
+      "status_effect": "no St_FTS change",
+      "rationale": "Дерево канонной формулы сохраняется; новый операционный перевод отсутствует."
+    },
+    {
+      "id": "WSP-B02",
+      "source": "claim_window_sign_interface_undefined",
+      "target": "card_u7_logic_grouping",
+      "relation": "grounds_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "row:26",
+      "scope": "обязательное сохранение группировки как выражения",
+      "status_effect": "no St_FTS change",
+      "rationale": "Не заменять сохранение синтаксиса неассоциативностью значений."
+    },
+    {
+      "id": "WSP-B03",
+      "source": "claim_window_sign_interface_undefined",
+      "target": "author_ac_20261003_window_families",
+      "relation": "grounds_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "row:27",
+      "scope": "принятые конечные семейства; арифметические 13/25 отдельно",
+      "status_effect": "no St_FTS change",
+      "rationale": "Начало -1 и перечни не определяют скрытый знак или произведение."
+    },
+    {
+      "id": "WSP-B04",
+      "source": "claim_window_sign_shadow_invariant",
+      "target": "evidence_internal_window_sign_local",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
+      "source_location": "row:28",
+      "scope": "полный конечный знаковый домен моделей; общее доказательство в REVIEW §4",
+      "status_effect": "no St_FTS change",
+      "rationale": "Метки перестановок и группировок совпадают; не утверждение о всех проекциях ФТС."
+    },
+    {
+      "id": "WSP-B05",
+      "source": "claim_window_sign_models_inequivalent",
+      "target": "evidence_internal_window_sign_local",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
+      "source_location": "row:29",
+      "scope": "8 объявленных моделей и инварианты",
+      "status_effect": "no St_FTS change",
+      "rationale": "Диагональные знаки, коммутативность и ассоциативность дают разные структуры."
+    },
+    {
+      "id": "WSP-B06",
+      "source": "claim_window_sign_models_inequivalent",
+      "target": "evidence_internal_window_sign_separate",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
+      "source_location": "row:30",
+      "scope": "H4/S4/O8; независимые локальные алгоритмы",
+      "status_effect": "no St_FTS change",
+      "rationale": "Все таблицы совпали с исходным знаковым построением."
+    },
+    {
+      "id": "WSP-B07",
+      "source": "claim_window_sign_models_inequivalent",
+      "target": "evidence_internal_window_sign_wolfram_attempt",
+      "relation": "limited_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md",
+      "source_location": "row:31",
+      "scope": "неполученный внешний CAS",
+      "status_effect": "no St_FTS change",
+      "rationale": "provider_error не служит математическим подтверждением или опровержением."
+    },
+    {
+      "id": "WSP-B08",
+      "source": "claim_window_node_inner_nonunique",
+      "target": "evidence_internal_window_sign_local",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
+      "source_location": "row:32",
+      "scope": "все x,y∈R на фиксированной C-подалгебре",
+      "status_effect": "no St_FTS change",
+      "rationale": "Два разных знака J² дают одну операцию комплексного сопряжения."
+    },
+    {
+      "id": "WSP-B09",
+      "source": "claim_window_node_inner_nonunique",
+      "target": "evidence_internal_window_sign_separate",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
+      "source_location": "row:33",
+      "scope": "действие на базисе 1,I и R-линейность",
+      "status_effect": "no St_FTS change",
+      "rationale": "Отдельные векторная и матричная реализации подтверждают локальное тождество."
+    },
+    {
+      "id": "WSP-B10",
+      "source": "claim_window_node_inner_nonunique",
+      "target": "evidence_internal_window_sign_wolfram_attempt",
+      "relation": "limited_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md",
+      "source_location": "row:34",
+      "scope": "внешнее CAS-подтверждение сопряжения не получено",
+      "status_effect": "no St_FTS change",
+      "rationale": "Неисправная D-функция использовала H-умножение для S; результат не пригоден."
+    },
+    {
+      "id": "WSP-B11",
+      "source": "claim_window_node_inner_nonunique",
+      "target": "doc_work_v14_rebuild_addendum_2026_10_04_windows_symmetry_md",
+      "relation": "grounds_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md",
+      "source_location": "row:35",
+      "scope": "арифметический остаток -1 как сопряжение",
+      "status_effect": "no St_FTS change",
+      "rationale": "Источник кандидатного сопоставления роли; сам не устанавливает внутренний оператор ФТС."
     },
     {
       "id": "atlas_contains_pa_c01",
@@ -31986,6 +32308,36 @@
       "source_location": "row:6"
     },
     {
+      "id": "research_evidence_contains_window_sign_local",
+      "source": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_check_models_py",
+      "target": "evidence_internal_window_sign_local",
+      "relation": "contains",
+      "layer": "internal_research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
+      "source_location": "row:8"
+    },
+    {
+      "id": "research_evidence_contains_window_sign_separate",
+      "source": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_independent_finite_cjs",
+      "target": "evidence_internal_window_sign_separate",
+      "relation": "contains",
+      "layer": "internal_research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
+      "source_location": "row:9"
+    },
+    {
+      "id": "research_evidence_contains_window_sign_wolfram_attempt",
+      "source": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_wolfram_md",
+      "target": "evidence_internal_window_sign_wolfram_attempt",
+      "relation": "contains",
+      "layer": "internal_research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
+      "source_location": "row:10"
+    },
+    {
       "id": "resolution_contains_0a3be6be33ad",
       "source": "doc_source_fts_v13_workbook_sheets_json",
       "target": "ref_resolved_0a3be6be33ad",
@@ -34413,6 +34765,90 @@
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
       "source_location": "§4. Исторический V*V",
       "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "window_node_inner_nonunique_documented_in",
+      "source": "claim_window_node_inner_nonunique",
+      "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_review_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§4. Внутреннее сопряжение"
+    },
+    {
+      "id": "window_node_inner_nonunique_has_status",
+      "source": "claim_window_node_inner_nonunique",
+      "target": "assessment_window_node_inner_nonunique",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§4. Внутреннее сопряжение",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "window_sign_interface_undefined_documented_in",
+      "source": "claim_window_sign_interface_undefined",
+      "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_review_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§1; §4"
+    },
+    {
+      "id": "window_sign_interface_undefined_has_status",
+      "source": "claim_window_sign_interface_undefined",
+      "target": "assessment_window_sign_interface_undefined",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§1; §4",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "window_sign_models_inequivalent_documented_in",
+      "source": "claim_window_sign_models_inequivalent",
+      "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_review_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§3"
+    },
+    {
+      "id": "window_sign_models_inequivalent_has_status",
+      "source": "claim_window_sign_models_inequivalent",
+      "target": "assessment_window_sign_models_inequivalent",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§3",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "window_sign_shadow_invariant_documented_in",
+      "source": "claim_window_sign_shadow_invariant",
+      "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_review_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§2; §4"
+    },
+    {
+      "id": "window_sign_shadow_invariant_has_status",
+      "source": "claim_window_sign_shadow_invariant",
+      "target": "assessment_window_sign_shadow_invariant",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
+      "source_location": "§2; §4",
+      "status_effect": "research status only; no St_FTS promotion"
     }
   ],
   "coverage": {
@@ -34429,13 +34865,13 @@
     "mapped_open_questions": 79,
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
-    "internal_evidence_nodes": 8,
-    "research_claims": 15,
-    "curated_research_bridges": 23,
+    "internal_evidence_nodes": 11,
+    "research_claims": 19,
+    "curated_research_bridges": 34,
     "project_entities": 1,
     "declared_research_scopes": 4,
-    "nodes": 834,
-    "edges": 1989,
+    "nodes": 849,
+    "edges": 2011,
     "unresolved_references": 4
   }
 }

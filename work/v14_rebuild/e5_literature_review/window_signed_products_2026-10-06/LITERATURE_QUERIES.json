@@ -1,0 +1,45 @@
+{
+  "mode": "fact-check",
+  "provider": "Undermind",
+  "workspace_id": "dc244499-d113-4273-a491-111f79a873a8",
+  "retrieved_at": "2026-10-06T12:11:29Z",
+  "scope": "oq-window-family-roles; oq-window-node-conjugation-origin",
+  "queries": [
+    {
+      "query_id": "Q1",
+      "sample_abstract": "The octonions are realized as a twisted group algebra of the elementary abelian group of order eight. A sign valued cochain determines multiplication of homogeneous basis elements, and its coboundary measures nonassociativity. Twists and graded equivalences distinguish quaternion, Clifford and octonion algebras with the same group of degrees.",
+      "limit": 4,
+      "results": [
+        "Bas17",
+        "Cat89",
+        "Alb00",
+        "Alb98"
+      ]
+    },
+    {
+      "query_id": "Q2",
+      "sample_abstract": "Real Clifford algebras and quaternion algebras can be described as twisted group algebras with signs. A grading by an elementary abelian two group does not determine a unique algebra; square signs, commutation and associator data classify inequivalent multiplications. Split quaternion algebras provide alternatives to division algebras and both can implement complex conjugation by an inner automorphism.",
+      "limit": 4,
+      "results": [
+        "Aba11",
+        "Por95",
+        "Sal84",
+        "Bal11"
+      ]
+    }
+  ],
+  "full_text_read": [
+    "Alb98",
+    "Alb00"
+  ],
+  "verification": {
+    "s2": {
+      "status": "rate_limited",
+      "http_status": 429,
+      "doi": "10.1006/jabr.1998.7850"
+    },
+    "fallback": "arXiv full texts and author publication list; preprint and journal years separated"
+  },
+  "corpus_shared": false,
+  "systematic_review": false
+}
