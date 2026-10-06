@@ -140,7 +140,7 @@
     },
     {
       "path": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
-      "sha256": "7bc6c1c4c8316705da4dd195f77681ac18fa5db7ed09dc79453636d7472b420f"
+      "sha256": "b04ceaaabf2e8f485b190e3124d64a147035bef9e55b5cab3f931b8021168183"
     },
     {
       "path": "work/v14_rebuild/d10_phase/PREREGISTRATION.md",
@@ -223,12 +223,20 @@
       "sha256": "3b2832d822c3c91b8288ccf070313a4351efd024dc926b81b76514940bb118c5"
     },
     {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md",
+      "sha256": "8ea4f7dd321981acc1e5d90bfd176c41e778952693cf5dd9d9139192af5fb13e"
+    },
+    {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
-      "sha256": "0a6a083fecc02a835f5bd81bcf563aaa85ddaff78db4ffa14e25a135b0ea40ca"
+      "sha256": "cbb40149a5492e2cf55c3d85381f9b6de195040a636e261fec65df6e811ea983"
     },
     {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md",
       "sha256": "af8820632c6e5994599b9b58a4bcc6a0f6998ff939c6efecf351dec2ebac127e"
+    },
+    {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md",
+      "sha256": "62a0f4e04f7850d887d7b9d8cbecb4395ba7b4f5ba0510b8707ee611227a8028"
     },
     {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
@@ -237,6 +245,10 @@
     {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
       "sha256": "0d1a284fd329f42690c14b8688b8066575eeccdac6e2d2e17b49b1f68719a50a"
+    },
+    {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/relative_sign_probe.py",
+      "sha256": "8a2667ad40322db6412b08f66c68a00dbd910314b139c5141aed30f763d1819a"
     },
     {
       "path": "work/v14_rebuild/external_bridge_u1_u5.md",
@@ -2984,6 +2996,17 @@
       "status_effect": "research status only; no St_FTS promotion",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
       "source_location": "§4. Внутреннее сопряжение"
+    },
+    {
+      "id": "assessment_window_relative_sign_probe",
+      "type": "status_assessment",
+      "label": "WINDOW_RELATIVE_SIGN_PROBE: polarization_confirmed_math_WF107; model_probe_verified_locally; FTS_bridge_candidate; no St_FTS change",
+      "layer": "research",
+      "status_text": "polarization_confirmed_math_WF107; model_probe_verified_locally; FTS_bridge_candidate; no St_FTS change",
+      "status_axis": "research_status",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md",
+      "source_location": "Зависимости; Проверяемые пробы"
     },
     {
       "id": "assessment_window_sign_interface_undefined",
@@ -6462,6 +6485,19 @@
       "source_location": "§4. Внутреннее сопряжение"
     },
     {
+      "id": "claim_window_relative_sign_probe",
+      "type": "claim",
+      "label": "WINDOW_RELATIVE_SIGN_PROBE — Совместное квадратичное считывание суммы и разности однородных знаковых результатов различает относительный знак при инвариантности общей смены знака; его доступность в ФТС пока н…",
+      "layer": "research",
+      "claim_id": "WINDOW_RELATIVE_SIGN_PROBE",
+      "granularity": "statement",
+      "scope": "interlevel; окна 13/25; единичные однородные результаты в общем R-носителе",
+      "status_axis": "research_status",
+      "status_text": "polarization_confirmed_math_WF107; model_probe_verified_locally; FTS_bridge_candidate; no St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md",
+      "source_location": "Зависимости; Проверяемые пробы"
+    },
+    {
       "id": "claim_window_sign_interface_undefined",
       "type": "claim",
       "label": "WINDOW_SIGN_INTERFACE_UNDEFINED — В проверенных источниках арифметических окон 13/25 не определены перевод операций ФТС в знаковое произведение и наблюдение дополнительного знака.",
@@ -6889,11 +6925,32 @@
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs"
     },
     {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_relative_sign_probe_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_relative_sign_probe_py",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/relative_sign_probe.py",
+      "layer": "internal_research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/relative_sign_probe.py"
+    },
+    {
       "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_review_md",
       "type": "source_document",
       "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
       "layer": "research",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_wolfram_107_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md",
+      "layer": "internal_research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md"
     },
     {
       "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_wolfram_md",
@@ -7719,6 +7776,32 @@
       "status_effect": "candidate model support and limits",
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
       "source_location": "P01–P12"
+    },
+    {
+      "id": "evidence_internal_window_relative_sign_local",
+      "type": "internal_evidence",
+      "label": "window_relative_sign_local — Двухканальное наблюдение четырёх пар знаков и восьми моделей",
+      "layer": "internal_research",
+      "evidence_id": "window_relative_sign_local",
+      "evidence_kind": "finite_exact_model_check",
+      "scope": "однородные знаковые результаты; общий ортонормированный R-базис",
+      "limitation": "не доказывает доступность совместного удержания в ФТС",
+      "status_effect": "no St_FTS change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/relative_sign_probe.py",
+      "source_location": "observe; main"
+    },
+    {
+      "id": "evidence_internal_window_relative_sign_wf107",
+      "type": "internal_evidence",
+      "label": "window_relative_sign_wf107 — WF-107: поляризация и четыре знаковые пары",
+      "layer": "internal_research",
+      "evidence_id": "window_relative_sign_wf107",
+      "evidence_kind": "independent_CAS",
+      "scope": "s,t∈R и специализация ±1; постоянный знаменатель 4",
+      "limitation": "не проверяет таблицы алгебр или FTS-перевод; не исправляет WF-106",
+      "status_effect": "confirmed_math only for stated predicate; no canonical status change",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md",
+      "source_location": "точный пакет; полный код; сырой результат"
     },
     {
       "id": "evidence_internal_window_sign_local",
@@ -11385,6 +11468,45 @@
       "scope": "арифметический остаток -1 как сопряжение",
       "status_effect": "no St_FTS change",
       "rationale": "Источник кандидатного сопоставления роли; сам не устанавливает внутренний оператор ФТС."
+    },
+    {
+      "id": "WSP-B12",
+      "source": "claim_window_relative_sign_probe",
+      "target": "evidence_internal_window_relative_sign_local",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/relative_sign_probe.py",
+      "source_location": "row:36",
+      "scope": "конкретные пробы 8 моделей",
+      "status_effect": "no St_FTS change",
+      "rationale": "Наблюдение определено до индивидуальной проекции, с общей ориентацией результатов."
+    },
+    {
+      "id": "WSP-B13",
+      "source": "claim_window_relative_sign_probe",
+      "target": "evidence_internal_window_relative_sign_wf107",
+      "relation": "supported_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md",
+      "source_location": "row:37",
+      "scope": "поляризационное тождество и знаковая специализация",
+      "status_effect": "no St_FTS change",
+      "rationale": "CAS подтверждает только указанное математическое ядро."
+    },
+    {
+      "id": "WSP-B14",
+      "source": "claim_window_relative_sign_probe",
+      "target": "doc_work_v14_rebuild_addendum_2026_10_04_two_channels_md",
+      "relation": "grounds_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/addendum_2026-10-04_two_channels.md",
+      "source_location": "row:38",
+      "scope": "двухканальный кандидат; перенос на новый носитель дополнительно предполагается",
+      "status_effect": "no St_FTS change",
+      "rationale": "Сумма, разность и поляризация дают местную форму протокола, не готовую семантику операций окон."
     },
     {
       "id": "atlas_contains_pa_c01",
@@ -32308,6 +32430,26 @@
       "source_location": "row:6"
     },
     {
+      "id": "research_evidence_contains_window_relative_sign_local",
+      "source": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_relative_sign_probe_py",
+      "target": "evidence_internal_window_relative_sign_local",
+      "relation": "contains",
+      "layer": "internal_research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
+      "source_location": "row:11"
+    },
+    {
+      "id": "research_evidence_contains_window_relative_sign_wf107",
+      "source": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_wolfram_107_md",
+      "target": "evidence_internal_window_relative_sign_wf107",
+      "relation": "contains",
+      "layer": "internal_research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
+      "source_location": "row:12"
+    },
+    {
       "id": "research_evidence_contains_window_sign_local",
       "source": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_check_models_py",
       "target": "evidence_internal_window_sign_local",
@@ -34788,6 +34930,27 @@
       "status_effect": "research status only; no St_FTS promotion"
     },
     {
+      "id": "window_relative_sign_probe_documented_in",
+      "source": "claim_window_relative_sign_probe",
+      "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_relative_sign_probe_md",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md",
+      "source_location": "Зависимости; Проверяемые пробы"
+    },
+    {
+      "id": "window_relative_sign_probe_has_status",
+      "source": "claim_window_relative_sign_probe",
+      "target": "assessment_window_relative_sign_probe",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md",
+      "source_location": "Зависимости; Проверяемые пробы",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
       "id": "window_sign_interface_undefined_documented_in",
       "source": "claim_window_sign_interface_undefined",
       "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_review_md",
@@ -34865,13 +35028,13 @@
     "mapped_open_questions": 79,
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
-    "internal_evidence_nodes": 11,
-    "research_claims": 19,
-    "curated_research_bridges": 34,
+    "internal_evidence_nodes": 13,
+    "research_claims": 20,
+    "curated_research_bridges": 37,
     "project_entities": 1,
     "declared_research_scopes": 4,
-    "nodes": 849,
-    "edges": 2011,
+    "nodes": 856,
+    "edges": 2018,
     "unresolved_references": 4
   }
 }

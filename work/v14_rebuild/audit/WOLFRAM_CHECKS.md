@@ -10,3 +10,13 @@ Verdict: **inconclusive**, `provider_error` в коде вызова, без м�
 границы локальных доказательств:
 [запись](../e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md).
 Эффект на канонические `St_math`/`St_FTS`: отсутствует.
+
+## WF-107 — 2026-10-06
+
+Claim: `WINDOW_RELATIVE_SIGN_PROBE`; кандидат совместного сравнения путей.
+Verdict: **confirmed_math** для `((s+t)²−(s−t)²)/4=st` на R²,
+инвариантности общей смены знака и полной таблицы четырёх знаковых пар.
+Один context/evaluator, 18.621 с, повторов нет. Полный код и сырой результат:
+[запись](../e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md).
+Смысл ФТС и выбор алгебры не подтверждены. WF-106 остаётся inconclusive;
+канонические `St_math`/`St_FTS` не меняются.

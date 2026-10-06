@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "sign_rows": [
+    {
+      "s": -1,
+      "t": -1,
+      "plus": 4,
+      "minus": 0,
+      "relative": 1
+    },
+    {
+      "s": -1,
+      "t": 1,
+      "plus": 0,
+      "minus": 4,
+      "relative": -1
+    },
+    {
+      "s": 1,
+      "t": -1,
+      "plus": 0,
+      "minus": 4,
+      "relative": -1
+    },
+    {
+      "s": 1,
+      "t": 1,
+      "plus": 4,
+      "minus": 0,
+      "relative": 1
+    }
+  ],
+  "models": {
+    "T4": {
+      "square_a": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "square_node_c": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "order_ab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "grouping_aab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      }
+    },
+    "C4": {
+      "square_a": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "square_node_c": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "order_ab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "grouping_aab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      }
+    },
+    "H4": {
+      "square_a": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "square_node_c": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "order_ab": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "grouping_aab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      }
+    },
+    "S4": {
+      "square_a": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "square_node_c": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "order_ab": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "grouping_aab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      }
+    },
+    "N4": {
+      "square_a": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "square_node_c": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "order_ab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "grouping_aab": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      }
+    },
+    "T8": {
+      "square_a": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "square_node_c": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "order_ab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "grouping_aab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "grouping_ab_ell": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      }
+    },
+    "B8": {
+      "square_a": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "square_node_c": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "order_ab": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "grouping_aab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "grouping_ab_ell": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      }
+    },
+    "O8": {
+      "square_a": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "square_node_c": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "order_ab": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      },
+      "grouping_aab": {
+        "plus": 4,
+        "minus": 0,
+        "relative": 1
+      },
+      "grouping_ab_ell": {
+        "plus": 0,
+        "minus": 4,
+        "relative": -1
+      }
+    }
+  },
+  "assumptions": "common real vector carrier; paired addition before projection; orthonormal basis",
+  "limitation": "candidate readout, no executable FTS operation identified; not a multiplicative norm assumption"
+}
