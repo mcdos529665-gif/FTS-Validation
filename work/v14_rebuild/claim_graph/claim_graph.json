@@ -364,7 +364,7 @@
     },
     {
       "path": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
-      "sha256": "3f296ea137feea31bcc3f08dcd560d8fe892354a83aacff82b4d99253550bed5"
+      "sha256": "e08f8562cf4f6c45e22f1a5e32f318dbd453c051e8775d829186cae189e5bc44"
     },
     {
       "path": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
@@ -380,7 +380,7 @@
     },
     {
       "path": "work/v14_rebuild/windows_table.tsv",
-      "sha256": "c435ba1ce06b34fae35de4245d659c205e7d12e39f8e395de36d8a03e26fb615"
+      "sha256": "bcb1771ef2f6c4e36bb1eb9577a82b2cef4e606b7dc74085ff6a70b77db1f6ad"
     }
   ],
   "nodes": [

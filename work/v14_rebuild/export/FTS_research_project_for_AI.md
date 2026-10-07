@@ -28,7 +28,7 @@
 | Входной артефакт | SHA256 |
 |---|---|
 | `tools/build_research_export.py` | `df7fdecd877d6f8a8fdebc89c1248188d083c63161b431f6b86b463be6c9908c` |
-| `work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md` | `3f296ea137feea31bcc3f08dcd560d8fe892354a83aacff82b4d99253550bed5` |
+| `work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md` | `e08f8562cf4f6c45e22f1a5e32f318dbd453c051e8775d829186cae189e5bc44` |
 | `work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md` | `9a63b3bbf83b02a1bcd61d53601ca3c29c4e0d092077d5689798182bb2fc004e` |
 | `work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md` | `92dd2061f045f91ad636c20e72aa150d70c05f0f63edc2682e95a352f802f2c0` |
 | `work/v14_rebuild/window_groupings/FANO_AND_COMMON_NODE.md` | `f196619a9cef275733730827201f2607184fa716923948ee29ef23a0cead6cbc` |
@@ -41,7 +41,7 @@
 | `work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md` | `e7e066c50b50d97f64b53ed7bf59c8e8695ce0e62eebcac37ee51d7224268f16` |
 | `work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md` | `cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b` |
 | `PROJECT_INSTRUCTIONS.md` | `ccab8cae910e7696fb0779496499464cc68edcb522b2757a180a66ea05b6cdb8` |
-| `work/STATE.md` | `426758a294e93f247ae64c3471bd44766ce72a5c36ec18742c8c9b4c88b85c80` |
+| `work/STATE.md` | `2c4941c8401cd5de42cd81dea9e41d14861cee1f851e349db27ff833f044ca8b` |
 | `work/notation.md` | `f70ec8e284c179d883524ddcc94144810879f734fd287160972fcca45cbd60fa` |
 | `work/DOCUMENT_MAP.md` | `18298a5dc1dfd68252d3c6c830ba1fc505eb91242da1ac5bd927f4de1422538c` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
@@ -810,8 +810,8 @@ scope-ребра и недопустимые адреса. Полный марш
   `v14_rebuild/verification_c93.py` (C-93…C-95, 3 PASS).
 - **Знаковое умножение окон (2026-10-06):** [разбор](v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md): исход 3 — связь операций ФТС с правилом знаков и наблюдением не задана. Восемь моделей проверены локально; H/S/O сверены отдельной реализацией. После забывания знака порядок и скобки неразличимы; внутреннее сопряжение не выбирает H. Внешний CAS — inconclusive (ошибка кода). [Исходный контекст](v14_rebuild/windows_number_systems_context_2026-10-06.md); St_FTS сохранён.
 
-- **Таблица окон (2026-10-04):** `v14_rebuild/windows_table.tsv` — окна 3…25, 15
-  столбцов (шаг, узлы, середины, группа, тип, что выпадает, теория, статус, проверки);
+- **Таблица окон (2026-10-04):** `v14_rebuild/windows_table.tsv` — окна 3…25, 19
+  столбцов; добавлены закономерность, область действия, граница/контрпример и статус границы (2026-10-07);
   сверка вычислимых столбцов: `v14_rebuild/verification_windows_table.py` (PASS).
 - **Верхние уровни (2026-10-04):** автор снял запрет SP_LIMITS для фиксации форм
   13–17. Гиперболические и эллиптические функции расставлены на У11–У17 как
@@ -11828,6 +11828,20 @@ have their own SHA256 in the active MANIFEST.
 Окна уровней отдельно адресованы от зеркального `Window(F)={F,−F}`
 (`ADD_MIRROR_WINDOW`, `SP_WINDOW`) и окна ожидания W (`U7_WINDOW_CORE`).
 Скобки произведения — отдельный вопрос композиции, а не определение семейства.
+
+##### Чтение границ в таблице
+
+В [windows_table.tsv](../windows_table.tsv) добавлены четыре поля:
+`закономерность`, `область_действия`, `граница_контрпример`, `статус_границы`.
+Авторская граница рассмотрения, исключение из математической области,
+ограничение наблюдения и контрпример продолжению имеют разные значения.
+Диапазон конечной проверки не объявляется границей самой теоремы.
+Для пятёрок 21 опровергает продолжение «все середины — суммы двух квадратов»
+за авторскую границу 19, сохраняя критерий Ферма. Для шагов 48 и 96 указаны
+существующие свидетели OC01/OC02 из [OQ REVIEW, §5](../e5_literature_review/oq_closure_2026-10-05/REVIEW.md#windows);
+их первенство среди всех возможных контрпримеров не установлено.
+Строка окна23 содержит проверяемые арифметические параметры, но её
+содержательная закономерность и граница остаются неисследованными.
 
 ##### Найденное: общие связи
 
