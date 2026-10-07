@@ -1,28 +1,28 @@
 {
-  "package": "v13_window_grouping_cards_2026-10-07",
-  "release_kind": "candidate_window_grouping_cards",
-  "base_release": "v13_active_logic_provenance_2026-10-03",
+  "package": "v13_window_groupings_context_2026-10-07",
+  "release_kind": "research_grouping_card_context_enrichment",
+  "base_release": "v13_window_grouping_cards_2026-10-07",
   "base_manifest_path": "work/canon_history/v13_complex_branch_overlay_2026-06-11/MANIFEST.json",
   "canonical_update_date": "2026-10-07",
-  "canonical_update": "Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained.",
+  "canonical_update": "Enrich existing window grouping cards with arithmetic limits, Weierstrass, author counting/counterweight clarification and Fano dialogue; statuses preserved.",
   "source_workbook": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-10-07T14:04:20.982576Z",
+  "exported_at_utc": "2026-10-07T14:43:32.755628Z",
   "files": [
     {
       "path": "FTS.yaml",
-      "size": 102473,
-      "sha256": "c01cdc53b8fddb8c395c8fcda7423b8eb5a843f14242c2c5a2b1bd2b5afe0ca5"
+      "size": 108406,
+      "sha256": "d46fba86f24399427689baa6f22b9ad17128a73815aced456a3bc87a0e4393c1"
     },
     {
       "path": "FTS_v13_LLM_CONTEXT.md",
-      "size": 69336,
-      "sha256": "a96d0bc30c8b21ea0a0d459a62dc1ebf420d3c91a1073199331c75762b090926"
+      "size": 69250,
+      "sha256": "7a54baf3c1aba32520ecbe9500afdd20c634d99bac6ee527b63fe1f85c210a91"
     },
     {
       "path": "FTS_v13_LLM_FULL_DUMP.md",
-      "size": 858248,
-      "sha256": "d0591c8082358bbf5cdb6aa8d011640e8fdcce0f4f86d14fdd74808d2093084e"
+      "size": 876267,
+      "sha256": "f4c029bca4aaf4a4e339e56610ae307af753ccab9d0f62daf43e769151eadc7c"
     },
     {
       "path": "INSTALL.md",
@@ -36,23 +36,23 @@
     },
     {
       "path": "START_HERE.md",
-      "size": 1920,
-      "sha256": "ac81e8719e1cba991ef6070907a10951d617cd5771dfb29446e745da557dcae1"
+      "size": 1834,
+      "sha256": "cc9892146e3181179694a36bc946ad45e964f35d668505b6b6ec61a5ba393337"
     },
     {
       "path": "fts_cards.json",
-      "size": 111772,
-      "sha256": "dc10d934e2bc556ae1cde4b66b4e26d062f6fcbf03e168dada77d560c50c7871"
+      "size": 118254,
+      "sha256": "dcfda8fa992299165c5767cc3cbb672e01358ef5dd8c0478eb4f41a55687aadd"
     },
     {
       "path": "fts_cards.jsonl",
-      "size": 94859,
-      "sha256": "d8cf5c86e07a02189749a42a9cac132540de193d29cfb349b8b52ef6ab1a3fea"
+      "size": 100789,
+      "sha256": "e43cd969f70a05d9917c69e03e69cf47b95352c1673eb8816e3be08dbdf18923"
     },
     {
       "path": "fts_cards_table.tsv",
-      "size": 81541,
-      "sha256": "df22e75acc8c60407d7aeb78d6e6e07750882fecd18b595137d0c3b21a92d7e0"
+      "size": 87659,
+      "sha256": "639f7970429c43212be4583970c378a4a37dca978066778110b48fa11546fb72"
     },
     {
       "path": "fts_graph_full.tsv",
@@ -66,13 +66,13 @@
     },
     {
       "path": "fts_v13_workbook_sheets.json",
-      "size": 1090455,
-      "sha256": "e41153595e60b56cbb6bf6367647df3a3a0380857e665fef9130e4cdca75b69d"
+      "size": 1109221,
+      "sha256": "29ea726c6d70e6fdfa25d25bd73168a17926433e8a003843b478b3ce7f8aee3c"
     },
     {
       "path": "sheet_index.tsv",
       "size": 1865,
-      "sha256": "85680f1c056596abc37e23c8b7ef325903a851e848277915c9257fc48134270b"
+      "sha256": "6f743420bde83a7abf965d68eb42fc55b3f53852470c9eb5c351602f3e83b853"
     }
   ],
   "counts": {
@@ -81,10 +81,10 @@
     "yaml_lines": 339,
     "sheets": 54
   },
-  "base_manifest_sha256": "18e37b0af29aaf56122298ada72ddfef8e8fd3e55711908f1fbc8f4ff7be4663",
-  "base_git_commit": "09bbfc44fbfdd826cc5b7fdc84e35220f79e439d",
+  "base_manifest_sha256": "a4cc7df915e88b4746627968e7320e12bbe4aa9293821a852b52ac618acf5793",
+  "base_git_commit": "020ea5a279e7b345a6f18d9b09a5c8091fceb49c",
   "source_workbook_status": "historical_input_not_reissued",
-  "active_cards_sha256": "d8cf5c86e07a02189749a42a9cac132540de193d29cfb349b8b52ef6ab1a3fea",
+  "active_cards_sha256": "e43cd969f70a05d9917c69e03e69cf47b95352c1673eb8816e3be08dbdf18923",
   "active_triples_sha256": "35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a",
   "merged_parent_commits": [
     "e521e2006cacbd6b91b34377e26bc49bf02bcce6",

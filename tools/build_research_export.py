@@ -149,8 +149,19 @@ CANON_FULL_DUMP = Path("source/FTS_v13_LLM_FULL_DUMP.md")
 CANON_CARDS = Path("source/fts_cards.jsonl")
 CANON_TRIPLES = Path("source/fts_triples.tsv")
 
+WINDOW_GROUPING_ROOT = Path("work/v14_rebuild/window_groupings")
+WINDOW_SIGN_ROOT = Path("work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06")
+
 INPUT_PATHS = (
     Path("tools/build_research_export.py"),
+    WINDOW_GROUPING_ROOT / "WINDOW_GROUPINGS.md",
+    WINDOW_GROUPING_ROOT / "WINDOW_GROUPING_13.md",
+    WINDOW_GROUPING_ROOT / "WINDOW_GROUPING_25.md",
+    WINDOW_GROUPING_ROOT / "FANO_AND_COMMON_NODE.md",
+    WINDOW_GROUPING_ROOT / "fano_probe.py",
+    WINDOW_GROUPING_ROOT / "FANO_RESULTS.json",
+    WINDOW_SIGN_ROOT / "DIALOGUE_13_POINTS.md",
+    WINDOW_SIGN_ROOT / "COUNTING_AND_NESTING_DIALOGUE.md",
     AGENT_RULES,
     PROJECT_ENTITY,
     RESEARCH_SCOPE_AUDIT,
@@ -325,7 +336,12 @@ def demote_headings(text: str, levels: int) -> str:
 
 
 def markdown_source(title: str, relative: Path, *, heading_levels: int = 3) -> str:
-    body = demote_headings(read_text(relative), heading_levels)
+    body = read_text(relative)
+    if relative == WINDOW_SIGN_ROOT / "DIALOGUE_13_POINTS.md":
+        # Preserve the input filename while omitting its nonportable local path.
+        body = re.sub(r"\[([^\]]+)\]\(E:[/\\]torrent[/\\][^)]+\)",
+                      r"\1 (входное изображение автора; локальный путь опущен в выгрузке)", body)
+    body = demote_headings(body, heading_levels)
     return (
         f"### {title}\n\n"
         f"*Источник сборки: `{relative.as_posix()}`.*\n\n"
@@ -596,6 +612,14 @@ def render_export() -> str:
                 fenced_source("6.29. Связи авторской записи окон", AUTHOR_WINDOW_ROOT / "triples.tsv", "tsv"),
                 fenced_source("6.30. Манифест авторской записи окон", AUTHOR_WINDOW_ROOT / "MANIFEST.json", "json"),
                 markdown_source("6.31. Интеграция окон и регистров", AUTHOR_WINDOW_ROOT / "INTEGRATION.md"),
+                markdown_source("6.32. Группировки окон: полный указатель", WINDOW_GROUPING_ROOT / "WINDOW_GROUPINGS.md"),
+                markdown_source("6.33. Окно 13 / шаг 12", WINDOW_GROUPING_ROOT / "WINDOW_GROUPING_13.md"),
+                markdown_source("6.34. Окно 25 / шаг 24", WINDOW_GROUPING_ROOT / "WINDOW_GROUPING_25.md"),
+                markdown_source("6.35. Результаты: 13 пунктов", WINDOW_SIGN_ROOT / "DIALOGUE_13_POINTS.md"),
+                markdown_source("6.36. Авторский счёт и поправки", WINDOW_SIGN_ROOT / "COUNTING_AND_NESTING_DIALOGUE.md"),
+                markdown_source("6.37. Фано и общий узел", WINDOW_GROUPING_ROOT / "FANO_AND_COMMON_NODE.md"),
+                fenced_source("6.38. Локальная сверка Фано", WINDOW_GROUPING_ROOT / "FANO_RESULTS.json", "json"),
+                fenced_source("6.39. Воспроизводимая проверка рисунка", WINDOW_GROUPING_ROOT / "fano_probe.py", "python"),
             ]
         ),
         "## 7. Внешний исследовательский контур E5\n\n"
