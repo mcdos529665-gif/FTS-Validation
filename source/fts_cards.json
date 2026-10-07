@@ -3261,7 +3261,7 @@
     "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"
   },
   {
-    "version": "WG-CONTEXT-2026-10-07",
+    "version": "WG-CONTEXT-COMPLETE-2026-10-07",
     "register": "A",
     "base_release": "v13_window_grouping_cards_2026-10-07",
     "author_status": "organization_requested; joint_research_direction_accepted; geometric_and_algebraic_FTS_mappings_not_accepted",
@@ -3279,6 +3279,12 @@
         "request_quote": "внеси всё интересное.",
         "scope": "integrate arithmetic, Weierstrass, counting, author corrections and Fano dialogue",
         "status_effect": "existing candidate/canonical statuses preserved"
+      },
+      "context_completion": {
+        "date": "2026-10-07",
+        "user_request": "Сверить уже внесённое обсуждение и добавить недостающие положения.",
+        "scope": "first distinction; absolutization; structured absence; counterweight transfer candidate",
+        "status_effect": "existing card statuses and mathematical predicates unchanged"
       }
     },
     "tags": [
@@ -3298,14 +3304,17 @@
       "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖.",
       "Наличие минуса отличать от доступности его различения.",
       "Сохранять авторскую поправку: a→a счёт не увеличивает.",
-      "Индексы e_i не назначают уровни; e_(−1), скаляр −1 и предноситель различаются."
+      "Индексы e_i не назначают уровни; e_(−1), скаляр −1 и предноситель различаются.",
+      "Разные охваты не вводят произвольных локальных уровней; сохранять авторскую роль абсолютизации.",
+      "Участие У5 для У7 объяснять по роли отказа, а не заменять У6 по числовой симметрии.",
+      "Кандидат ассистента о переносе противовеса не считать новым авторским принятием."
     ],
     "id": "WINDOW_GROUPINGS",
     "type": "research_index",
     "title": "Группировки окон: карточки, находки и открытые вопросы",
     "symbol": "WindowGroupings",
     "status": "candidate_research_index",
-    "text": "Исследовательский указатель группировок окон: связывает принятые конечные семейства троек, пятёрок и семёрок с отдельно адресованными арифметическими окнами 13/25, моделями знаков, совместным наблюдением, геометрией круга и открытыми вопросами. Области и статусы каждой находки сохраняются; индекс не вводит новый закон окон. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md Добавлены арифметические пределы, вложенность, уточнения счёта/абсолютизации, Фано, знаковые циклы и гипотеза e(−1); происхождение и границы сохранены.",
+    "text": "Исследовательский указатель группировок окон: связывает принятые конечные семейства троек, пятёрок и семёрок с отдельно адресованными арифметическими окнами 13/25, моделями знаков, совместным наблюдением, геометрией круга и открытыми вопросами. Области и статусы каждой находки сохраняются; индекс не вводит новый закон окон. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md Добавлены арифметические пределы, вложенность, уточнения счёта/абсолютизации, Фано, знаковые циклы и гипотеза e(−1); происхождение и границы сохранены. Уточнены первое полагание, устойчивость уровней через абсолютизацию от У−1, Ошибка/Допущение как условие разметки и отдельный кандидат переноса противовеса; связь 0_A со скрытым минусом исследуется с сохранением структурированного отсутствия.",
     "path": "17_Карточки/WINDOW_GROUPINGS",
     "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
     "family_card_ids": [
@@ -3337,7 +3346,9 @@
       "WINDOW_FANO_NESTED",
       "WINDOW_FANO_SIGN_CYCLE",
       "WINDOW_COMMON_NODE_CANDIDATE",
-      "WINDOW_FANO_NUMBERING_LIMIT"
+      "WINDOW_FANO_NUMBERING_LIMIT",
+      "WINDOW_ABSOLUTIZATION_AUTHOR",
+      "WINDOW_COUNTERWEIGHT_TRANSFER_CANDIDATE"
     ],
     "related_evidence": [
       "window_sign_local",
@@ -3369,7 +3380,7 @@
     ]
   },
   {
-    "version": "WG-CONTEXT-2026-10-07",
+    "version": "WG-CONTEXT-COMPLETE-2026-10-07",
     "register": "A",
     "base_release": "v13_window_grouping_cards_2026-10-07",
     "author_status": "organization_requested; joint_research_direction_accepted; geometric_and_algebraic_FTS_mappings_not_accepted",
@@ -3387,6 +3398,12 @@
         "request_quote": "внеси всё интересное.",
         "scope": "integrate arithmetic, Weierstrass, counting, author corrections and Fano dialogue",
         "status_effect": "existing candidate/canonical statuses preserved"
+      },
+      "context_completion": {
+        "date": "2026-10-07",
+        "user_request": "Сверить уже внесённое обсуждение и добавить недостающие положения.",
+        "scope": "first distinction; absolutization; structured absence; counterweight transfer candidate",
+        "status_effect": "existing card statuses and mathematical predicates unchanged"
       }
     },
     "tags": [
@@ -3406,14 +3423,17 @@
       "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖.",
       "Наличие минуса отличать от доступности его различения.",
       "Сохранять авторскую поправку: a→a счёт не увеличивает.",
-      "Индексы e_i не назначают уровни; e_(−1), скаляр −1 и предноситель различаются."
+      "Индексы e_i не назначают уровни; e_(−1), скаляр −1 и предноситель различаются.",
+      "Разные охваты не вводят произвольных локальных уровней; сохранять авторскую роль абсолютизации.",
+      "Участие У5 для У7 объяснять по роли отказа, а не заменять У6 по числовой симметрии.",
+      "Кандидат ассистента о переносе противовеса не считать новым авторским принятием."
     ],
     "id": "WINDOW_GROUPING_13",
     "type": "window_grouping",
     "title": "Окно длины 13: шаг 12 и связанные модели",
     "symbol": "length=13; step=12; G=V4",
     "status": "candidate_math_overlay",
-    "text": "Исследовательское окно длины 13, шаг 12: группа обратимых остатков V4, 2 двоичных корневых признака; введённое R-продолжение имеет размерность 4. Сравниваются модели T4, C4, H4, S4, N4; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md Добавлены арифметические пределы, вложенность, уточнения счёта/абсолютизации, Фано, знаковые циклы и гипотеза e(−1); происхождение и границы сохранены.",
+    "text": "Исследовательское окно длины 13, шаг 12: группа обратимых остатков V4, 2 двоичных корневых признака; введённое R-продолжение имеет размерность 4. Сравниваются модели T4, C4, H4, S4, N4; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md Добавлены арифметические пределы, вложенность, уточнения счёта/абсолютизации, Фано, знаковые циклы и гипотеза e(−1); происхождение и границы сохранены. Уточнены устойчивость a→a без приращения, отличие составного возврата от удержания, первый знак и Ошибка/Допущение; выбор модели должен объяснять У5 для У7 и различать наличие знака и его доступность.",
     "path": "17_Карточки/WINDOW_GROUPING_13",
     "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
     "parent_card_id": "WINDOW_GROUPINGS",
@@ -3453,7 +3473,10 @@
       "WINDOW_NUMBER_ALGEBRA_SCOPE",
       "WINDOW_FANO_NESTED",
       "WINDOW_FANO_SIGN_CYCLE",
-      "WINDOW_COMMON_NODE_CANDIDATE"
+      "WINDOW_COMMON_NODE_CANDIDATE",
+      "WINDOW_FIRST_DISTINCTION_AUTHOR",
+      "WINDOW_ABSOLUTIZATION_AUTHOR",
+      "WINDOW_COUNTERWEIGHT_TRANSFER_CANDIDATE"
     ],
     "related_evidence": [
       "window_sign_local",
@@ -3481,7 +3504,7 @@
     ]
   },
   {
-    "version": "WG-CONTEXT-2026-10-07",
+    "version": "WG-CONTEXT-COMPLETE-2026-10-07",
     "register": "A",
     "base_release": "v13_window_grouping_cards_2026-10-07",
     "author_status": "organization_requested; joint_research_direction_accepted; geometric_and_algebraic_FTS_mappings_not_accepted",
@@ -3499,6 +3522,12 @@
         "request_quote": "внеси всё интересное.",
         "scope": "integrate arithmetic, Weierstrass, counting, author corrections and Fano dialogue",
         "status_effect": "existing candidate/canonical statuses preserved"
+      },
+      "context_completion": {
+        "date": "2026-10-07",
+        "user_request": "Сверить уже внесённое обсуждение и добавить недостающие положения.",
+        "scope": "first distinction; absolutization; structured absence; counterweight transfer candidate",
+        "status_effect": "existing card statuses and mathematical predicates unchanged"
       }
     },
     "tags": [
@@ -3518,14 +3547,17 @@
       "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖.",
       "Наличие минуса отличать от доступности его различения.",
       "Сохранять авторскую поправку: a→a счёт не увеличивает.",
-      "Индексы e_i не назначают уровни; e_(−1), скаляр −1 и предноситель различаются."
+      "Индексы e_i не назначают уровни; e_(−1), скаляр −1 и предноситель различаются.",
+      "Разные охваты не вводят произвольных локальных уровней; сохранять авторскую роль абсолютизации.",
+      "Участие У5 для У7 объяснять по роли отказа, а не заменять У6 по числовой симметрии.",
+      "Кандидат ассистента о переносе противовеса не считать новым авторским принятием."
     ],
     "id": "WINDOW_GROUPING_25",
     "type": "window_grouping",
     "title": "Окно длины 25: шаг 24 и связанные модели",
     "symbol": "length=25; step=24; G=(Z/2)^3",
     "status": "candidate_math_overlay",
-    "text": "Исследовательское окно длины 25, шаг 24: группа обратимых остатков (Z/2)^3, 3 двоичных корневых признака; введённое R-продолжение имеет размерность 8. Сравниваются модели T8, B8, O8; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md Добавлены арифметические пределы, вложенность, уточнения счёта/абсолютизации, Фано, знаковые циклы и гипотеза e(−1); происхождение и границы сохранены.",
+    "text": "Исследовательское окно длины 25, шаг 24: группа обратимых остатков (Z/2)^3, 3 двоичных корневых признака; введённое R-продолжение имеет размерность 8. Сравниваются модели T8, B8, O8; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md Добавлены арифметические пределы, вложенность, уточнения счёта/абсолютизации, Фано, знаковые циклы и гипотеза e(−1); происхождение и границы сохранены. Уточнены устойчивость уровней и перенос противовеса: роль У5 для У7 сопоставлена с У0 относительно У−1; вложенность Фано сама этот механизм не доказывает. Кандидат переноса роли отделён от авторских положений.",
     "path": "17_Карточки/WINDOW_GROUPING_25",
     "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
     "parent_card_id": "WINDOW_GROUPINGS",
@@ -3569,7 +3601,10 @@
       "WINDOW_FANO_NESTED",
       "WINDOW_FANO_SIGN_CYCLE",
       "WINDOW_COMMON_NODE_CANDIDATE",
-      "WINDOW_FANO_NUMBERING_LIMIT"
+      "WINDOW_FANO_NUMBERING_LIMIT",
+      "WINDOW_FIRST_DISTINCTION_AUTHOR",
+      "WINDOW_ABSOLUTIZATION_AUTHOR",
+      "WINDOW_COUNTERWEIGHT_TRANSFER_CANDIDATE"
     ],
     "related_evidence": [
       "window_sign_local",

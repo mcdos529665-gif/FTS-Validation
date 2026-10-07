@@ -37,7 +37,7 @@ index	sheet	range	rows	cols
 35	35_Export_tsv	A1:B385	385	2
 36	36_Export_yaml	A1:B340	340	2
 37	37_Export_md	A1:F31	31	6
-38	38_Changelog	A1:F19	19	6
+38	38_Changelog	A1:F20	20	6
 39	39_Status_Dict	A1:E21	21	5
 40	40_Reader_View	A1:B12	12	2
 41	41_Самодостаточность	A1:D9	9	4

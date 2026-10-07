@@ -1,28 +1,28 @@
 {
-  "package": "v13_window_groupings_context_2026-10-07",
-  "release_kind": "research_grouping_card_context_enrichment",
-  "base_release": "v13_window_grouping_cards_2026-10-07",
+  "package": "v13_window_groupings_completion_2026-10-07",
+  "release_kind": "research_registry_context_completion",
+  "base_release": "v13_window_groupings_context_2026-10-07",
   "base_manifest_path": "work/canon_history/v13_complex_branch_overlay_2026-06-11/MANIFEST.json",
   "canonical_update_date": "2026-10-07",
-  "canonical_update": "Enrich existing window grouping cards with arithmetic limits, Weierstrass, author counting/counterweight clarification and Fano dialogue; statuses preserved.",
+  "canonical_update": "Complete three window grouping cards with first distinction, stable levels, structured absence and separately scoped counterweight transfer candidate; preserve statuses and tested predicates.",
   "source_workbook": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-10-07T14:43:32.755628Z",
+  "exported_at_utc": "2026-10-07T15:07:53.730840Z",
   "files": [
     {
       "path": "FTS.yaml",
-      "size": 108406,
-      "sha256": "d46fba86f24399427689baa6f22b9ad17128a73815aced456a3bc87a0e4393c1"
+      "size": 112505,
+      "sha256": "bb07da982632d8c5f8ffe037ee9eeb52691166e54640444f68e372db6d44af18"
     },
     {
       "path": "FTS_v13_LLM_CONTEXT.md",
-      "size": 69250,
-      "sha256": "7a54baf3c1aba32520ecbe9500afdd20c634d99bac6ee527b63fe1f85c210a91"
+      "size": 69287,
+      "sha256": "72d751e8cad710a04405bddcc6c3efa04654fef1b1fe3411fb6952180c5ffbfe"
     },
     {
       "path": "FTS_v13_LLM_FULL_DUMP.md",
-      "size": 876267,
-      "sha256": "f4c029bca4aaf4a4e339e56610ae307af753ccab9d0f62daf43e769151eadc7c"
+      "size": 886043,
+      "sha256": "fb544b19419c2f70532acc7a6e46b1917c2fc73878c569d2e144bb9750818e2b"
     },
     {
       "path": "INSTALL.md",
@@ -36,23 +36,23 @@
     },
     {
       "path": "START_HERE.md",
-      "size": 1834,
-      "sha256": "cc9892146e3181179694a36bc946ad45e964f35d668505b6b6ec61a5ba393337"
+      "size": 1871,
+      "sha256": "a901c87235ba9dd5581fc8da18f2cd5969d5662f0d5337b3e16f2f1cad97b8b3"
     },
     {
       "path": "fts_cards.json",
-      "size": 118254,
-      "sha256": "dcfda8fa992299165c5767cc3cbb672e01358ef5dd8c0478eb4f41a55687aadd"
+      "size": 122590,
+      "sha256": "b905542e23b5de1acb943b754ff5d3233b6bbe8d84f4b880da8a783cb442eda4"
     },
     {
       "path": "fts_cards.jsonl",
-      "size": 100789,
-      "sha256": "e43cd969f70a05d9917c69e03e69cf47b95352c1673eb8816e3be08dbdf18923"
+      "size": 104885,
+      "sha256": "d5e150c4284a2ae26a719180bf404a9d9df2b63663c992d4db9bbedfbecb2500"
     },
     {
       "path": "fts_cards_table.tsv",
-      "size": 87659,
-      "sha256": "639f7970429c43212be4583970c378a4a37dca978066778110b48fa11546fb72"
+      "size": 88859,
+      "sha256": "5e89d16e86fdd0a2aafcfc1d0d6386374250d36ad9ca0376bf7e002bbca9c23e"
     },
     {
       "path": "fts_graph_full.tsv",
@@ -66,13 +66,13 @@
     },
     {
       "path": "fts_v13_workbook_sheets.json",
-      "size": 1109221,
-      "sha256": "29ea726c6d70e6fdfa25d25bd73168a17926433e8a003843b478b3ce7f8aee3c"
+      "size": 1119218,
+      "sha256": "2835cbb54d7858535a2039e3cce1b289cba30e0edd59d517de4d17c0c2df95e4"
     },
     {
       "path": "sheet_index.tsv",
       "size": 1865,
-      "sha256": "6f743420bde83a7abf965d68eb42fc55b3f53852470c9eb5c351602f3e83b853"
+      "sha256": "c4adb0208c61c80cca3e59f8797dc596cc2b57f8f319a7e0b1570f3fdec9af3b"
     }
   ],
   "counts": {
@@ -81,10 +81,10 @@
     "yaml_lines": 339,
     "sheets": 54
   },
-  "base_manifest_sha256": "a4cc7df915e88b4746627968e7320e12bbe4aa9293821a852b52ac618acf5793",
-  "base_git_commit": "020ea5a279e7b345a6f18d9b09a5c8091fceb49c",
+  "base_manifest_sha256": "40f2ddf992f0370080ecffe1df54dd4afbfd7673308781dd8499a9410ae0edec",
+  "base_git_commit": "82d7ad59afc11d1415ee48aa0a26907080f2acaa",
   "source_workbook_status": "historical_input_not_reissued",
-  "active_cards_sha256": "e43cd969f70a05d9917c69e03e69cf47b95352c1673eb8816e3be08dbdf18923",
+  "active_cards_sha256": "d5e150c4284a2ae26a719180bf404a9d9df2b63663c992d4db9bbedfbecb2500",
   "active_triples_sha256": "35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a",
   "merged_parent_commits": [
     "e521e2006cacbd6b91b34377e26bc49bf02bcce6",

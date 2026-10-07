@@ -1,4 +1,4 @@
-# FTS active canonical release — v13_window_groupings_context_2026-10-07
+# FTS active canonical release — v13_window_groupings_completion_2026-10-07
 
 Release date: 2026-10-07. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
@@ -18,7 +18,7 @@ release was produced by a new workbook round-trip.
 
 ## Active changes
 
-Enrich existing window grouping cards with arithmetic limits, Weierstrass, author counting/counterweight clarification and Fano dialogue; statuses preserved.
+Complete three window grouping cards with first distinction, stable levels, structured absence and separately scoped counterweight transfer candidate; preserve statuses and tested predicates.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.

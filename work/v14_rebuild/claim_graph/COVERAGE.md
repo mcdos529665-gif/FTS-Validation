@@ -19,12 +19,12 @@
 - `verification_nodes`: 62
 - `external_evidence_nodes`: 21
 - `internal_evidence_nodes`: 16
-- `research_claims`: 34
-- `curated_research_bridges`: 177
+- `research_claims`: 36
+- `curated_research_bridges`: 195
 - `project_entities`: 1
 - `declared_research_scopes`: 4
-- `nodes`: 908
-- `edges`: 2198
+- `nodes`: 912
+- `edges`: 2220
 - `unresolved_references`: 4
 
 ## Границы
