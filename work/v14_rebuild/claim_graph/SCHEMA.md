@@ -128,3 +128,27 @@ status assessment IDs are disambiguated by layer. Bare card-ID queries select
 the active canonical node; explicit author node IDs remain available.
 `adopts`, `has_family`, `requires_mapping_to`, and `has_math_expression` preserve
 stored typed relations; they do not infer carrier identity or automatic status promotion.
+
+## Window grouping research links — 2026-10-07
+
+`RESEARCH_CLAIM_BRIDGES.tsv` may use an existing canonical or author card ID
+in `claim_id`, in addition to a research claim ID. Targets resolve by existing
+card, research claim, evidence, or OQ ID; `target_type=document` resolves the
+explicit `source_file`. A missing source/target fails the build.
+
+Window cards use four typed navigation relations:
+
+- `indexes_claim`: card/author statement → claim/claim group;
+- `tracks_question`: card/author statement → existing open question;
+- `references_evidence`: card/author statement → evidence/verification;
+- `references_document`: card/author statement → source document.
+
+These relations collect research without asserting mathematical support or
+FTS promotion. Each row retains scope, source, locator, confidence and
+`status_effect`; `supported_by` and `verified_by` retain their prior meanings.
+The `WG-B*` rows address WINDOW_GROUPINGS, WINDOW_GROUPING_13,
+WINDOW_GROUPING_25 and the existing finite author window families.
+
+`source_location` is the locator inside the cited `source_file`.
+`registry_file` and `registry_location` retain the TSV file and its row
+separately, so a registry row is not presented as a line in the source document.

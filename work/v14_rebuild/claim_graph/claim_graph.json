@@ -20,19 +20,19 @@
     },
     {
       "path": "source/FTS_v13_LLM_FULL_DUMP.md",
-      "sha256": "442eefed988abf57825f00fcf1cdd43013fd335cf6b5bc7bd21f061029a04b92"
+      "sha256": "d0591c8082358bbf5cdb6aa8d011640e8fdcce0f4f86d14fdd74808d2093084e"
     },
     {
       "path": "source/fts_cards.jsonl",
-      "sha256": "e03d164678b0d16abb6e4c2edffedecaacecea778ba598e3f0fca77f311e6582"
+      "sha256": "d8cf5c86e07a02189749a42a9cac132540de193d29cfb349b8b52ef6ab1a3fea"
     },
     {
       "path": "source/fts_triples.tsv",
-      "sha256": "c792924d4d7bac4874c3940109d6c6d9d99b849cf4128e8f1b060b17f4941b11"
+      "sha256": "35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a"
     },
     {
       "path": "source/fts_v13_workbook_sheets.json",
-      "sha256": "fb54ff0e4c330a6430b816ea9db35d30907b6054c7ebdb536b67d7fe46b4d535"
+      "sha256": "e41153595e60b56cbb6bf6367647df3a3a0380857e665fef9130e4cdca75b69d"
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
@@ -89,6 +89,10 @@
     {
       "path": "work/v14_rebuild/addendum_2026-10-04_two_channels.md",
       "sha256": "759a05af68a54d4c3531d04453f66e202a080750a127ec5710d013ab492b2877"
+    },
+    {
+      "path": "work/v14_rebuild/addendum_2026-10-04_windows_numbers.md",
+      "sha256": "dff5360efcf478a66ead4d6638fd69b6850146bc3b4511859751fcf88ac77875"
     },
     {
       "path": "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md",
@@ -227,12 +231,24 @@
       "sha256": "958d755655a80afb8753080e17b137df41cfbbef6ac1b1086949a32519b0ec14"
     },
     {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md",
+      "sha256": "19afe2091bf88f86cff205feaba0f0c496c702a638da4efa67bfabef452d39fe"
+    },
+    {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md",
+      "sha256": "199488f1139b2ec8d3823b74b76612156ec71616b47d8ce8c82e549b2411fc1d"
+    },
+    {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md",
       "sha256": "de3bebe1559c14610166bf9e649c62c3f41bd496c688db031ec4466aee8aa727"
     },
     {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
       "sha256": "cbb40149a5492e2cf55c3d85381f9b6de195040a636e261fec65df6e811ea983"
+    },
+    {
+      "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/SOURCES.tsv",
+      "sha256": "706b279bba36be64f2a8721162737546d69978f149bd2ed9eaf49b8dc6060715"
     },
     {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md",
@@ -333,6 +349,22 @@
     {
       "path": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
       "sha256": "f7d0923328e7ed61198c7a4cbcb3e5771de3f82d3b56e7e11bf5058a44a94a2b"
+    },
+    {
+      "path": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "sha256": "4b70140d42bea723838771a1ed0631b6dcfbcb1eecc82f7b6d6e3a74a0a91b54"
+    },
+    {
+      "path": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "sha256": "516409f764a64b833ab24008e43d5817cbf760a136d54490537da082c47a096e"
+    },
+    {
+      "path": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "sha256": "be985b34b1e6a52ebea9506cec3f5539cd059db72a3cf45c161ee0f069655492"
+    },
+    {
+      "path": "work/v14_rebuild/windows_table.tsv",
+      "sha256": "c435ba1ce06b34fae35de4245d659c205e7d12e39f8e395de36d8a03e26fb615"
     }
   ],
   "nodes": [
@@ -3008,6 +3040,39 @@
       "status_effect": "research status only; no St_FTS promotion",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md",
       "source_location": "Найдено; Зависимости, вывод и что не закрыто"
+    },
+    {
+      "id": "assessment_window_grouping_13_status",
+      "type": "status_assessment",
+      "label": "WINDOW_GROUPING_13 status: candidate_math_overlay",
+      "layer": "canonical_v13",
+      "status_text": "candidate_math_overlay",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:WINDOW_GROUPING_13"
+    },
+    {
+      "id": "assessment_window_grouping_25_status",
+      "type": "status_assessment",
+      "label": "WINDOW_GROUPING_25 status: candidate_math_overlay",
+      "layer": "canonical_v13",
+      "status_text": "candidate_math_overlay",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:WINDOW_GROUPING_25"
+    },
+    {
+      "id": "assessment_window_groupings_status",
+      "type": "status_assessment",
+      "label": "WINDOW_GROUPINGS status: candidate_research_index",
+      "layer": "canonical_v13",
+      "status_text": "candidate_research_index",
+      "status_axis": "St_FTS",
+      "status_effect": "stored_only; no automatic promotion",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:WINDOW_GROUPINGS"
     },
     {
       "id": "assessment_window_node_inner_nonunique",
@@ -5900,6 +5965,57 @@
       "source_location": "card:U_m1"
     },
     {
+      "id": "card_window_grouping_13",
+      "type": "card",
+      "label": "length=13; step=12; G=V4 Окно длины 13: шаг 12 и связанные модели",
+      "layer": "canonical_v13",
+      "card_id": "WINDOW_GROUPING_13",
+      "status": "candidate_math_overlay",
+      "tags": [
+        "window_grouping",
+        "research_index",
+        "interlevel",
+        "scoped_evidence"
+      ],
+      "text": "Исследовательское окно длины 13, шаг 12: группа обратимых остатков V4, 2 двоичных корневых признака; введённое R-продолжение имеет размерность 4. Сравниваются модели T4, C4, H4, S4, N4; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:WINDOW_GROUPING_13"
+    },
+    {
+      "id": "card_window_grouping_25",
+      "type": "card",
+      "label": "length=25; step=24; G=(Z/2)^3 Окно длины 25: шаг 24 и связанные модели",
+      "layer": "canonical_v13",
+      "card_id": "WINDOW_GROUPING_25",
+      "status": "candidate_math_overlay",
+      "tags": [
+        "window_grouping",
+        "research_index",
+        "interlevel",
+        "scoped_evidence"
+      ],
+      "text": "Исследовательское окно длины 25, шаг 24: группа обратимых остатков (Z/2)^3, 3 двоичных корневых признака; введённое R-продолжение имеет размерность 8. Сравниваются модели T8, B8, O8; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:WINDOW_GROUPING_25"
+    },
+    {
+      "id": "card_window_groupings",
+      "type": "card",
+      "label": "WindowGroupings Группировки окон: карточки, находки и открытые вопросы",
+      "layer": "canonical_v13",
+      "card_id": "WINDOW_GROUPINGS",
+      "status": "candidate_research_index",
+      "tags": [
+        "window_grouping",
+        "research_index",
+        "interlevel",
+        "scoped_evidence"
+      ],
+      "text": "Исследовательский указатель группировок окон: связывает принятые конечные семейства троек, пятёрок и семёрок с отдельно адресованными арифметическими окнами 13/25, моделями знаков, совместным наблюдением, геометрией круга и открытыми вопросами. Области и статусы каждой находки сохраняются; индекс не вводит новый закон окон. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:WINDOW_GROUPINGS"
+    },
+    {
       "id": "claim_dn_20260922_absence_lift",
       "type": "claim",
       "label": "DN_20260922_ABSENCE_LIFT — В рабочем авторском чтении внутреннее отсутствие связано с отказом выполнять функцию, а включение отсутствия в собственный контур является необходимым, но не достаточным условием…",
@@ -6744,6 +6860,13 @@
       "source_file": "work/v14_rebuild/addendum_2026-10-04_two_channels.md"
     },
     {
+      "id": "doc_work_v14_rebuild_addendum_2026_10_04_windows_numbers_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/addendum_2026-10-04_windows_numbers.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/addendum_2026-10-04_windows_numbers.md"
+    },
+    {
       "id": "doc_work_v14_rebuild_addendum_2026_10_04_windows_symmetry_md",
       "type": "source_document",
       "label": "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md",
@@ -6968,6 +7091,20 @@
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/circle_probe.py"
     },
     {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_counting_and_nesting_dialogue_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_dialogue_13_points_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md"
+    },
+    {
       "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_independent_finite_cjs",
       "type": "source_document",
       "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
@@ -6994,6 +7131,13 @@
       "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
       "layer": "research",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_sources_tsv",
+      "type": "source_document",
+      "label": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/SOURCES.tsv",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/SOURCES.tsv"
     },
     {
       "id": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_wolfram_107_md",
@@ -7148,6 +7292,34 @@
       "label": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
       "layer": "research",
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_window_groupings_window_grouping_13_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_window_groupings_window_grouping_25_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_window_groupings_window_groupings_md",
+      "type": "source_document",
+      "label": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md"
+    },
+    {
+      "id": "doc_work_v14_rebuild_windows_table_tsv",
+      "type": "source_document",
+      "label": "work/v14_rebuild/windows_table.tsv",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/windows_table.tsv"
     },
     {
       "id": "event_e1",
@@ -11118,10 +11290,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/neural_skeleton_research_2026-09-15/EVIDENCE_MATRIX.tsv",
-      "source_location": "row:2",
+      "source_location": "NN-E01",
       "scope": "component-level only",
       "status_effect": "no St_FTS change",
-      "rationale": "Hierarchy/residual is a local external architecture bridge, not proof of the full ladder."
+      "rationale": "Hierarchy/residual is a local external architecture bridge, not proof of the full ladder.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:2"
     },
     {
       "id": "NB-002",
@@ -11131,10 +11305,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/neural_skeleton_research_2026-09-15/EVIDENCE_MATRIX.tsv",
-      "source_location": "row:3",
+      "source_location": "NN-E03",
       "scope": "memory and structured tasks",
       "status_effect": "no St_FTS change",
-      "rationale": "External memory is an available implementation pattern, not an FTS-specific necessity."
+      "rationale": "External memory is an available implementation pattern, not an FTS-specific necessity.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:3"
     },
     {
       "id": "NB-003",
@@ -11144,10 +11320,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/neural_skeleton_research_2026-09-15/TARGET_INDEPENDENT_AUDIT.md",
-      "source_location": "row:4",
+      "source_location": "v0.3 transfer result",
       "scope": "1D/2D synthetic domains; capacity matched",
       "status_effect": "candidate support only",
-      "rationale": "Positive transfer supports consideration within the declared synthetic scope."
+      "rationale": "Positive transfer supports consideration within the declared synthetic scope.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:4"
     },
     {
       "id": "NB-004",
@@ -11157,10 +11335,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/neural_skeleton_research_2026-09-15/GATE_CONTROL_RESULTS.md",
-      "source_location": "row:5",
+      "source_location": "v0.2 symbolic-gate control",
       "scope": "matched synthetic control",
       "status_effect": "limits uniqueness",
-      "rationale": "The same feature map is reproduced without FTS names; the effect is not unique to FTS."
+      "rationale": "The same feature map is reproduced without FTS names; the effect is not unique to FTS.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:5"
     },
     {
       "id": "NB-005",
@@ -11170,10 +11350,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/neural_skeleton_research_2026-09-15/INTERNAL_EVIDENCE.md",
-      "source_location": "row:6",
+      "source_location": "I2 — O_20 typed-absence test",
       "scope": "one limited internal test",
       "status_effect": "limits one component claim",
-      "rationale": "Typed absence was not confirmed in this setup; this does not refute the general mechanism."
+      "rationale": "Typed absence was not confirmed in this setup; this does not refute the general mechanism.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:6"
     },
     {
       "id": "NB-006",
@@ -11183,10 +11365,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/neural_skeleton_research_2026-09-15/CONSIDERATION_BRIEF.md",
-      "source_location": "row:7",
+      "source_location": "Что нужно для следующего уровня T3",
       "scope": "benchmark, cost, ablations and independent prediction",
       "status_effect": "T3 remains unverified",
-      "rationale": "The brief explicitly lists the missing threshold conditions."
+      "rationale": "The brief explicitly lists the missing threshold conditions.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:7"
     },
     {
       "id": "NB-007",
@@ -11196,10 +11380,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/neural_skeleton_research_2026-09-15/DEEP_RESEARCH_REPORT_10_INTEGRATION.md",
-      "source_location": "row:8",
+      "source_location": "Уже определённые конструкции рабочего слоя",
       "scope": "fixed q,r mathematical scope",
       "status_effect": "no St_FTS change",
-      "rationale": "The integration report narrows the statement and preserves its research-layer status."
+      "rationale": "The integration report narrows the statement and preserves its research-layer status.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:8"
     },
     {
       "id": "OQ25-B01",
@@ -11209,10 +11395,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/check_candidates.py",
-      "source_location": "row:16",
+      "source_location": "§5; OC01",
       "scope": "interlevel; только арифметическая модель окон, не смысл уровней",
       "status_effect": "no St_FTS change",
-      "rationale": "Точный модельный свидетель с ограничением области; не семантическое повышение."
+      "rationale": "Точный модельный свидетель с ограничением области; не семантическое повышение.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:16"
     },
     {
       "id": "OQ25-B02",
@@ -11222,10 +11410,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/check_candidates.py",
-      "source_location": "row:17",
+      "source_location": "§2; OC04",
       "scope": "level U4–U7; точный предложенный relational carrier",
       "status_effect": "no St_FTS change",
-      "rationale": "Точный модельный свидетель с ограничением области; не семантическое повышение."
+      "rationale": "Точный модельный свидетель с ограничением области; не семантическое повышение.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:17"
     },
     {
       "id": "OQ25-B03",
@@ -11235,10 +11425,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/check_candidates.py",
-      "source_location": "row:18",
+      "source_location": "§7; OC08",
       "scope": "interlevel; конечный кандидат Lift, не реализация канонической семантики",
       "status_effect": "no St_FTS change",
-      "rationale": "Точный модельный свидетель с ограничением области; не семантическое повышение."
+      "rationale": "Точный модельный свидетель с ограничением области; не семантическое повышение.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:18"
     },
     {
       "id": "OQ25-B04",
@@ -11248,10 +11440,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md",
-      "source_location": "row:19",
+      "source_location": "§2",
       "scope": "Точная принятая группировка У6",
       "status_effect": "no St_FTS change",
-      "rationale": "Дерево сохраняет действующую форму; обработчик предложен ассистентом."
+      "rationale": "Дерево сохраняет действующую форму; обработчик предложен ассистентом.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:19"
     },
     {
       "id": "OQ25-B05",
@@ -11261,10 +11455,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md",
-      "source_location": "row:20",
+      "source_location": "§2",
       "scope": "Точная принятая группировка У7",
       "status_effect": "no St_FTS change",
-      "rationale": "Три исхода и Close требуют отдельного правила исполнения."
+      "rationale": "Три исхода и Close требуют отдельного правила исполнения.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:20"
     },
     {
       "id": "OQ25-B06",
@@ -11274,10 +11470,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md",
-      "source_location": "row:21",
+      "source_location": "§7",
       "scope": "Проверка долга секции",
       "status_effect": "no St_FTS change",
-      "rationale": "Только внешний Set-кандидат; branch access не отождествляется с Lift."
+      "rationale": "Только внешний Set-кандидат; branch access не отождествляется с Lift.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:21"
     },
     {
       "id": "OQ25-B07",
@@ -11287,10 +11485,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md",
-      "source_location": "row:22",
+      "source_location": "§4",
       "scope": "Один из четырёх отдельно описанных пробелов",
       "status_effect": "no St_FTS change",
-      "rationale": "Кандидат закона преобразования адресован конкретному оператору; другие паспорта имеют свои локаторы."
+      "rationale": "Кандидат закона преобразования адресован конкретному оператору; другие паспорта имеют свои локаторы.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:22"
     },
     {
       "id": "OQ25-B08",
@@ -11300,10 +11500,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/addendum_2026-10-04_two_channels.md",
-      "source_location": "row:23",
+      "source_location": "§4–5",
       "scope": "Новый крест-носитель и предложенное произведение",
       "status_effect": "no St_FTS change",
-      "rationale": "Проверяется именно произведение отношения и сечения из дополнения."
+      "rationale": "Проверяется именно произведение отношения и сечения из дополнения.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:23"
     },
     {
       "id": "OQ25-B09",
@@ -11313,10 +11515,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md",
-      "source_location": "row:24",
+      "source_location": "§7",
       "scope": "Арифметический вопрос о шаге 48",
       "status_effect": "no St_FTS change",
-      "rationale": "Прямой ответ на заданный модуль; смысловой мост остаётся открытым."
+      "rationale": "Прямой ответ на заданный модуль; смысловой мост остаётся открытым.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:24"
     },
     {
       "id": "UB-001",
@@ -11326,10 +11530,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
-      "source_location": "row:9",
+      "source_location": "P01–P12",
       "scope": "finite declared model only",
       "status_effect": "candidate support only",
-      "rationale": "Проверка подтверждает совместность и границы одной модели, а не семантику ФТС."
+      "rationale": "Проверка подтверждает совместность и границы одной модели, а не семантику ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:9"
     },
     {
       "id": "UB-002",
@@ -11339,10 +11545,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
-      "source_location": "row:10",
+      "source_location": "P05–P07",
       "scope": "Q=(Σ_i v_i)^2 on declared traces",
       "status_effect": "formal counterexample in model only",
-      "rationale": "EE и NN дают одинаковое Q и разные исходы; без дополнительного ресурса факторизации нет."
+      "rationale": "EE и NN дают одинаковое Q и разные исходы; без дополнительного ресурса факторизации нет.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:10"
     },
     {
       "id": "UB-003",
@@ -11352,10 +11560,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/probe.py",
-      "source_location": "row:11",
+      "source_location": "P08–P09",
       "scope": "two explicit sign-blind translations",
       "status_effect": "limits historical bridge",
-      "rationale": "Два перевода выполняют потерю общего знака и расходятся на joint-трассе."
+      "rationale": "Два перевода выполняют потерю общего знака и расходятся на joint-трассе.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:11"
     },
     {
       "id": "UB-004",
@@ -11365,10 +11575,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
-      "source_location": "row:12",
+      "source_location": "§1; §3",
       "scope": "active U4 minimum",
       "status_effect": "no St_FTS change",
-      "rationale": "Кандидат сохраняет точную исходную М-форму У4 и отдельно добавляет исполнимый носитель."
+      "rationale": "Кандидат сохраняет точную исходную М-форму У4 и отдельно добавляет исполнимый носитель.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:12"
     },
     {
       "id": "UB-005",
@@ -11378,10 +11590,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
-      "source_location": "row:13",
+      "source_location": "§1; §3",
       "scope": "active U5 minimum",
       "status_effect": "no St_FTS change",
-      "rationale": "Кандидат сохраняет точную исходную М-форму У5 и не отождествляет OR с булевым сокращением."
+      "rationale": "Кандидат сохраняет точную исходную М-форму У5 и не отождествляет OR с булевым сокращением.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:13"
     },
     {
       "id": "UB-006",
@@ -11391,10 +11605,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
-      "source_location": "row:14",
+      "source_location": "§1; §3",
       "scope": "active U6 minimum",
       "status_effect": "no St_FTS change",
-      "rationale": "Кандидат использует активную группировку У6 буквально; D1–D4 остаются дополнительными допущениями."
+      "rationale": "Кандидат использует активную группировку У6 буквально; D1–D4 остаются дополнительными допущениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:14"
     },
     {
       "id": "UB-007",
@@ -11404,10 +11620,957 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md",
-      "source_location": "row:15",
+      "source_location": "§1; §3",
       "scope": "active U7 minimum",
       "status_effect": "no St_FTS change",
-      "rationale": "Кандидат использует активную группировку У7 буквально; ресурс D5 не содержится в самой карточке."
+      "rationale": "Кандидат использует активную группировку У7 буквально; ресурс D5 не содержится в самой карточке.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:15"
+    },
+    {
+      "id": "WG-B001",
+      "source": "card_window_groupings",
+      "target": "doc_work_v14_rebuild_window_groupings_window_groupings_md",
+      "relation": "documented_in",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Область; статус; ограничения",
+      "scope": "паспорт организационной или кандидатной карточки",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Содержимое и пределы карточки доступны отдельно от первичных источников.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:42"
+    },
+    {
+      "id": "WG-B002",
+      "source": "card_window_groupings",
+      "target": "claim_window_sign_interface_undefined",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "interlevel; окна 13/25; проверенные канонные и исследовательские источники",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:43"
+    },
+    {
+      "id": "WG-B003",
+      "source": "card_window_groupings",
+      "target": "claim_window_sign_shadow_invariant",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "interlevel; B_d; произвольная нормированная ±1-коцепь; наблюдение O_table∘π",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:44"
+    },
+    {
+      "id": "WG-B004",
+      "source": "card_window_groupings",
+      "target": "claim_window_sign_models_inequivalent",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "interlevel; объявленные R-модели; эквивалентность сменами знаков и GL(d,2)",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:45"
+    },
+    {
+      "id": "WG-B005",
+      "source": "card_window_groupings",
+      "target": "claim_window_node_inner_nonunique",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "interlevel; R-линейное сопряжение на span_R(1,I); кандидатное сопоставление узлу",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:46"
+    },
+    {
+      "id": "WG-B006",
+      "source": "card_window_groupings",
+      "target": "claim_window_relative_sign_probe",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "interlevel; окна 13/25; единичные однородные результаты в общем R-носителе",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:47"
+    },
+    {
+      "id": "WG-B007",
+      "source": "card_window_groupings",
+      "target": "claim_window_circle_candidate",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "interlevel; шаги 12/24; единичный комплексный круг и объявленные действия",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:48"
+    },
+    {
+      "id": "WG-B008",
+      "source": "card_window_groupings",
+      "target": "evidence_internal_window_sign_local",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "B_2/B_3; R-билинейные H4/S4 для сопряжения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:49"
+    },
+    {
+      "id": "WG-B009",
+      "source": "card_window_groupings",
+      "target": "evidence_internal_window_sign_separate",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "все таблицы H4/S4/O8; конечные базисные/знаковые тройки; линейное сопряжение",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:50"
+    },
+    {
+      "id": "WG-B010",
+      "source": "card_window_groupings",
+      "target": "evidence_internal_window_sign_wolfram_attempt",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "пакет A–E для моделей окон 13/25; inconclusive, математическое подтверждение не получено",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:51"
+    },
+    {
+      "id": "WG-B011",
+      "source": "card_window_groupings",
+      "target": "evidence_internal_window_relative_sign_local",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "однородные знаковые результаты; общий ортонормированный R-базис",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:52"
+    },
+    {
+      "id": "WG-B012",
+      "source": "card_window_groupings",
+      "target": "evidence_internal_window_relative_sign_wf107",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "s,t∈R и специализация ±1; постоянный знаменатель 4; поляризация, не таблицы H/O",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:53"
+    },
+    {
+      "id": "WG-B013",
+      "source": "card_window_groupings",
+      "target": "evidence_internal_window_circle_local",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "вещественные фазовые тождества; конечные U12/U24; 16 матричных произведений S4",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:54"
+    },
+    {
+      "id": "WG-B014",
+      "source": "card_window_groupings",
+      "target": "evidence_internal_window_circle_wf108",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "полиномиальное и фазовые тождества; полные конечные множества и действия",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:55"
+    },
+    {
+      "id": "WG-B015",
+      "source": "card_window_groupings",
+      "target": "oq_oq_window_family_roles",
+      "relation": "tracks_question",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Что не закрыто; следующий вопрос",
+      "scope": "исследовательский адрес; семантика и наблюдение ещё требуют определения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Существующий открытый вопрос остаётся открытым; новой гипотезой его не закрываем.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:56"
+    },
+    {
+      "id": "WG-B016",
+      "source": "card_window_groupings",
+      "target": "oq_oq_window_node_conjugation_origin",
+      "relation": "tracks_question",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Что не закрыто; следующий вопрос",
+      "scope": "исследовательский адрес; семантика и наблюдение ещё требуют определения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Существующий открытый вопрос остаётся открытым; новой гипотезой его не закрываем.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:57"
+    },
+    {
+      "id": "WG-B017",
+      "source": "card_window_groupings",
+      "target": "oq_oq_u6_u7_compositional_semantics",
+      "relation": "tracks_question",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Что не закрыто; следующий вопрос",
+      "scope": "исследовательский адрес; семантика и наблюдение ещё требуют определения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Существующий открытый вопрос остаётся открытым; новой гипотезой его не закрываем.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:58"
+    },
+    {
+      "id": "WG-B018",
+      "source": "card_window_grouping_13",
+      "target": "doc_work_v14_rebuild_window_groupings_window_grouping_13_md",
+      "relation": "documented_in",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Область; статус; ограничения",
+      "scope": "паспорт организационной или кандидатной карточки",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Содержимое и пределы карточки доступны отдельно от первичных источников.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:59"
+    },
+    {
+      "id": "WG-B019",
+      "source": "card_window_grouping_13",
+      "target": "claim_window_sign_interface_undefined",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 13; относящаяся к нему часть: interlevel; окна 13/25; проверенные канонные и исследовательские источники",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:60"
+    },
+    {
+      "id": "WG-B020",
+      "source": "card_window_grouping_13",
+      "target": "claim_window_sign_shadow_invariant",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 13; относящаяся к нему часть: interlevel; B_d; произвольная нормированная ±1-коцепь; наблюдение O_table∘π",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:61"
+    },
+    {
+      "id": "WG-B021",
+      "source": "card_window_grouping_13",
+      "target": "claim_window_sign_models_inequivalent",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 13; относящаяся к нему часть: interlevel; объявленные R-модели; эквивалентность сменами знаков и GL(d,2)",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:62"
+    },
+    {
+      "id": "WG-B022",
+      "source": "card_window_grouping_13",
+      "target": "claim_window_node_inner_nonunique",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 13; относящаяся к нему часть: interlevel; R-линейное сопряжение на span_R(1,I); кандидатное сопоставление узлу",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:63"
+    },
+    {
+      "id": "WG-B023",
+      "source": "card_window_grouping_13",
+      "target": "claim_window_relative_sign_probe",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 13; относящаяся к нему часть: interlevel; окна 13/25; единичные однородные результаты в общем R-носителе",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:64"
+    },
+    {
+      "id": "WG-B024",
+      "source": "card_window_grouping_13",
+      "target": "claim_window_circle_candidate",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 13; относящаяся к нему часть: interlevel; шаги 12/24; единичный комплексный круг и объявленные действия",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:65"
+    },
+    {
+      "id": "WG-B025",
+      "source": "card_window_grouping_13",
+      "target": "evidence_internal_window_sign_local",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 13; только соответствующий фрагмент проверки; B_2/B_3; R-билинейные H4/S4 для сопряжения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:66"
+    },
+    {
+      "id": "WG-B026",
+      "source": "card_window_grouping_13",
+      "target": "evidence_internal_window_sign_separate",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 13; только соответствующий фрагмент проверки; все таблицы H4/S4/O8; конечные базисные/знаковые тройки; линейное сопряжение",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:67"
+    },
+    {
+      "id": "WG-B027",
+      "source": "card_window_grouping_13",
+      "target": "evidence_internal_window_sign_wolfram_attempt",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 13; только соответствующий фрагмент проверки; пакет A–E для моделей окон 13/25; inconclusive, математическое подтверждение не получено",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:68"
+    },
+    {
+      "id": "WG-B028",
+      "source": "card_window_grouping_13",
+      "target": "evidence_internal_window_relative_sign_local",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 13; только соответствующий фрагмент проверки; однородные знаковые результаты; общий ортонормированный R-базис",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:69"
+    },
+    {
+      "id": "WG-B029",
+      "source": "card_window_grouping_13",
+      "target": "evidence_internal_window_relative_sign_wf107",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 13; только соответствующий фрагмент проверки; s,t∈R и специализация ±1; постоянный знаменатель 4; поляризация, не таблицы H/O",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:70"
+    },
+    {
+      "id": "WG-B030",
+      "source": "card_window_grouping_13",
+      "target": "evidence_internal_window_circle_local",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 13; только соответствующий фрагмент проверки; вещественные фазовые тождества; конечные U12/U24; 16 матричных произведений S4",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:71"
+    },
+    {
+      "id": "WG-B031",
+      "source": "card_window_grouping_13",
+      "target": "evidence_internal_window_circle_wf108",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 13; только соответствующий фрагмент проверки; полиномиальное и фазовые тождества; полные конечные множества и действия",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:72"
+    },
+    {
+      "id": "WG-B032",
+      "source": "card_window_grouping_13",
+      "target": "oq_oq_window_family_roles",
+      "relation": "tracks_question",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Что не закрыто; следующий вопрос",
+      "scope": "исследовательский адрес; семантика и наблюдение ещё требуют определения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Существующий открытый вопрос остаётся открытым; новой гипотезой его не закрываем.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:73"
+    },
+    {
+      "id": "WG-B033",
+      "source": "card_window_grouping_13",
+      "target": "oq_oq_window_node_conjugation_origin",
+      "relation": "tracks_question",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Что не закрыто; следующий вопрос",
+      "scope": "исследовательский адрес; семантика и наблюдение ещё требуют определения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Существующий открытый вопрос остаётся открытым; новой гипотезой его не закрываем.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:74"
+    },
+    {
+      "id": "WG-B034",
+      "source": "card_window_grouping_13",
+      "target": "oq_oq_u6_u7_compositional_semantics",
+      "relation": "tracks_question",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md",
+      "source_location": "Что не закрыто; следующий вопрос",
+      "scope": "исследовательский адрес; семантика и наблюдение ещё требуют определения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Существующий открытый вопрос остаётся открытым; новой гипотезой его не закрываем.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:75"
+    },
+    {
+      "id": "WG-B035",
+      "source": "card_window_grouping_25",
+      "target": "doc_work_v14_rebuild_window_groupings_window_grouping_25_md",
+      "relation": "documented_in",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Область; статус; ограничения",
+      "scope": "паспорт организационной или кандидатной карточки",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Содержимое и пределы карточки доступны отдельно от первичных источников.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:76"
+    },
+    {
+      "id": "WG-B036",
+      "source": "card_window_grouping_25",
+      "target": "claim_window_sign_interface_undefined",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 25; относящаяся к нему часть: interlevel; окна 13/25; проверенные канонные и исследовательские источники",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:77"
+    },
+    {
+      "id": "WG-B037",
+      "source": "card_window_grouping_25",
+      "target": "claim_window_sign_shadow_invariant",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 25; относящаяся к нему часть: interlevel; B_d; произвольная нормированная ±1-коцепь; наблюдение O_table∘π",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:78"
+    },
+    {
+      "id": "WG-B038",
+      "source": "card_window_grouping_25",
+      "target": "claim_window_sign_models_inequivalent",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 25; относящаяся к нему часть: interlevel; объявленные R-модели; эквивалентность сменами знаков и GL(d,2)",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:79"
+    },
+    {
+      "id": "WG-B039",
+      "source": "card_window_grouping_25",
+      "target": "claim_window_relative_sign_probe",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 25; относящаяся к нему часть: interlevel; окна 13/25; единичные однородные результаты в общем R-носителе",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:80"
+    },
+    {
+      "id": "WG-B040",
+      "source": "card_window_grouping_25",
+      "target": "claim_window_circle_candidate",
+      "relation": "indexes_claim",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Связанные находки; общие связи",
+      "scope": "окно 25; относящаяся к нему часть: interlevel; шаги 12/24; единичный комплексный круг и объявленные действия",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Адресует существующий результат; не превращает его в доказательство связи модели с ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:81"
+    },
+    {
+      "id": "WG-B041",
+      "source": "card_window_grouping_25",
+      "target": "evidence_internal_window_sign_local",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 25; только соответствующий фрагмент проверки; B_2/B_3; R-билинейные H4/S4 для сопряжения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:82"
+    },
+    {
+      "id": "WG-B042",
+      "source": "card_window_grouping_25",
+      "target": "evidence_internal_window_sign_separate",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 25; только соответствующий фрагмент проверки; все таблицы H4/S4/O8; конечные базисные/знаковые тройки; линейное сопряжение",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:83"
+    },
+    {
+      "id": "WG-B043",
+      "source": "card_window_grouping_25",
+      "target": "evidence_internal_window_sign_wolfram_attempt",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 25; только соответствующий фрагмент проверки; пакет A–E для моделей окон 13/25; inconclusive, математическое подтверждение не получено",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:84"
+    },
+    {
+      "id": "WG-B044",
+      "source": "card_window_grouping_25",
+      "target": "evidence_internal_window_relative_sign_local",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 25; только соответствующий фрагмент проверки; однородные знаковые результаты; общий ортонормированный R-базис",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:85"
+    },
+    {
+      "id": "WG-B045",
+      "source": "card_window_grouping_25",
+      "target": "evidence_internal_window_relative_sign_wf107",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 25; только соответствующий фрагмент проверки; s,t∈R и специализация ±1; постоянный знаменатель 4; поляризация, не таблицы H/O",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:86"
+    },
+    {
+      "id": "WG-B046",
+      "source": "card_window_grouping_25",
+      "target": "evidence_internal_window_circle_local",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 25; только соответствующий фрагмент проверки; вещественные фазовые тождества; конечные U12/U24; 16 матричных произведений S4; для окна25 — P24/P12 и действия; матрицы S4 относятся к окну13",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:87"
+    },
+    {
+      "id": "WG-B047",
+      "source": "card_window_grouping_25",
+      "target": "evidence_internal_window_circle_wf108",
+      "relation": "references_evidence",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Свидетельства; границы",
+      "scope": "окно 25; только соответствующий фрагмент проверки; полиномиальное и фазовые тождества; полные конечные множества и действия",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Ссылается на уже записанное свидетельство вместе с его областью и ограничениями.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:88"
+    },
+    {
+      "id": "WG-B048",
+      "source": "card_window_grouping_25",
+      "target": "oq_oq_window_family_roles",
+      "relation": "tracks_question",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Что не закрыто; следующий вопрос",
+      "scope": "исследовательский адрес; семантика и наблюдение ещё требуют определения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Существующий открытый вопрос остаётся открытым; новой гипотезой его не закрываем.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:89"
+    },
+    {
+      "id": "WG-B049",
+      "source": "card_window_grouping_25",
+      "target": "oq_oq_window_node_conjugation_origin",
+      "relation": "tracks_question",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Что не закрыто; следующий вопрос",
+      "scope": "исследовательский адрес; семантика и наблюдение ещё требуют определения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Существующий открытый вопрос остаётся открытым; новой гипотезой его не закрываем.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:90"
+    },
+    {
+      "id": "WG-B050",
+      "source": "card_window_grouping_25",
+      "target": "oq_oq_u6_u7_compositional_semantics",
+      "relation": "tracks_question",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md",
+      "source_location": "Что не закрыто; следующий вопрос",
+      "scope": "исследовательский адрес; семантика и наблюдение ещё требуют определения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Существующий открытый вопрос остаётся открытым; новой гипотезой его не закрываем.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:91"
+    },
+    {
+      "id": "WG-B051",
+      "source": "card_window_groupings",
+      "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_dialogue_13_points_md",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md",
+      "source_location": "§1–13",
+      "scope": "полная сводка исходного диалога",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Тематическая навигация к существующему материалу; сама по себе не основание математического или FTS-вывода.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:92"
+    },
+    {
+      "id": "WG-B052",
+      "source": "card_window_groupings",
+      "target": "doc_work_v14_rebuild_windows_table_tsv",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/windows_table.tsv",
+      "source_location": "длины 3…25",
+      "scope": "исследовательские параметры окон",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Тематическая навигация к существующему материалу; сама по себе не основание математического или FTS-вывода.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:93"
+    },
+    {
+      "id": "WG-B053",
+      "source": "card_window_groupings",
+      "target": "doc_work_v14_rebuild_addendum_2026_10_04_windows_symmetry_md",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md",
+      "source_location": "§3, §8",
+      "scope": "арифметические группы и корневые наблюдения",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Тематическая навигация к существующему материалу; сама по себе не основание математического или FTS-вывода.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:94"
+    },
+    {
+      "id": "WG-B054",
+      "source": "card_window_groupings",
+      "target": "doc_work_v14_rebuild_addendum_2026_10_04_windows_numbers_md",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/addendum_2026-10-04_windows_numbers.md",
+      "source_location": "окна и номера",
+      "scope": "минимальные тройки и смысл номера",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Тематическая навигация к существующему материалу; сама по себе не основание математического или FTS-вывода.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:95"
+    },
+    {
+      "id": "WG-B055",
+      "source": "card_window_groupings",
+      "target": "doc_work_v14_rebuild_addendum_2026_10_04_two_channels_md",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/addendum_2026-10-04_two_channels.md",
+      "source_location": "§3.3–3.4",
+      "scope": "форма двух каналов; перенос остаётся кандидатом",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Тематическая навигация к существующему материалу; сама по себе не основание математического или FTS-вывода.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:96"
+    },
+    {
+      "id": "WG-B056",
+      "source": "card_window_groupings",
+      "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_sources_tsv",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/SOURCES.tsv",
+      "source_location": "S01–S09",
+      "scope": "литературные основания; использовать только записи с подходящей областью",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Тематическая навигация к существующему материалу; сама по себе не основание математического или FTS-вывода.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:97"
+    },
+    {
+      "id": "WG-B057",
+      "source": "card_window_groupings",
+      "target": "doc_work_v14_rebuild_e5_literature_review_window_signed_products_2026_10_06_counting_and_nesting_dialogue_md",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md",
+      "source_location": "§1, §6, §8",
+      "scope": "новый рабочий контекст; тематическая связь, не доказательство модели",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Тематическая навигация к существующему материалу; сама по себе не основание математического или FTS-вывода.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:98"
+    },
+    {
+      "id": "WG-B058",
+      "source": "card_ac_20261003_windows_triples",
+      "target": "doc_work_v14_rebuild_window_groupings_window_groupings_md",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Карточки и области",
+      "scope": "связь принятого перечня с общим исследовательским указателем",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Авторское принятие конечного перечня сохранено; исследовательские трактовки не принимаются этой ссылкой.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:99"
+    },
+    {
+      "id": "WG-B059",
+      "source": "card_ac_20261003_windows_triples",
+      "target": "doc_work_v14_rebuild_windows_table_tsv",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/windows_table.tsv",
+      "source_location": "длина 3",
+      "scope": "только исследовательская строка соответствующей длины",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Отдельное арифметическое чтение связано с перечнем навигационно; смысловую роль семейства не устанавливает.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:100"
+    },
+    {
+      "id": "WG-B060",
+      "source": "card_ac_20261003_windows_fives",
+      "target": "doc_work_v14_rebuild_window_groupings_window_groupings_md",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Карточки и области",
+      "scope": "связь принятого перечня с общим исследовательским указателем",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Авторское принятие конечного перечня сохранено; исследовательские трактовки не принимаются этой ссылкой.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:101"
+    },
+    {
+      "id": "WG-B061",
+      "source": "card_ac_20261003_windows_fives",
+      "target": "doc_work_v14_rebuild_windows_table_tsv",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/windows_table.tsv",
+      "source_location": "длина 5",
+      "scope": "только исследовательская строка соответствующей длины",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Отдельное арифметическое чтение связано с перечнем навигационно; смысловую роль семейства не устанавливает.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:102"
+    },
+    {
+      "id": "WG-B062",
+      "source": "card_ac_20261003_windows_sevens",
+      "target": "doc_work_v14_rebuild_window_groupings_window_groupings_md",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md",
+      "source_location": "Карточки и области",
+      "scope": "связь принятого перечня с общим исследовательским указателем",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Авторское принятие конечного перечня сохранено; исследовательские трактовки не принимаются этой ссылкой.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:103"
+    },
+    {
+      "id": "WG-B063",
+      "source": "card_ac_20261003_windows_sevens",
+      "target": "doc_work_v14_rebuild_windows_table_tsv",
+      "relation": "references_document",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/windows_table.tsv",
+      "source_location": "длина 7",
+      "scope": "только исследовательская строка соответствующей длины",
+      "status_effect": "navigation only; existing evidence and St_math/St_FTS unchanged",
+      "rationale": "Отдельное арифметическое чтение связано с перечнем навигационно; смысловую роль семейства не устанавливает.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:104"
     },
     {
       "id": "WSP-B01",
@@ -11417,10 +12580,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
-      "source_location": "row:25",
+      "source_location": "§1",
       "scope": "точная группировка M_07; исполнимое знаковое умножение не следует",
       "status_effect": "no St_FTS change",
-      "rationale": "Дерево канонной формулы сохраняется; новый операционный перевод отсутствует."
+      "rationale": "Дерево канонной формулы сохраняется; новый операционный перевод отсутствует.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:25"
     },
     {
       "id": "WSP-B02",
@@ -11430,10 +12595,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
-      "source_location": "row:26",
+      "source_location": "§1",
       "scope": "обязательное сохранение группировки как выражения",
       "status_effect": "no St_FTS change",
-      "rationale": "Не заменять сохранение синтаксиса неассоциативностью значений."
+      "rationale": "Не заменять сохранение синтаксиса неассоциативностью значений.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:26"
     },
     {
       "id": "WSP-B03",
@@ -11443,10 +12610,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md",
-      "source_location": "row:27",
+      "source_location": "§1",
       "scope": "принятые конечные семейства; арифметические 13/25 отдельно",
       "status_effect": "no St_FTS change",
-      "rationale": "Начало -1 и перечни не определяют скрытый знак или произведение."
+      "rationale": "Начало -1 и перечни не определяют скрытый знак или произведение.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:27"
     },
     {
       "id": "WSP-B04",
@@ -11456,10 +12625,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
-      "source_location": "row:28",
+      "source_location": "model_results",
       "scope": "полный конечный знаковый домен моделей; общее доказательство в REVIEW §4",
       "status_effect": "no St_FTS change",
-      "rationale": "Метки перестановок и группировок совпадают; не утверждение о всех проекциях ФТС."
+      "rationale": "Метки перестановок и группировок совпадают; не утверждение о всех проекциях ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:28"
     },
     {
       "id": "WSP-B05",
@@ -11469,10 +12640,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
-      "source_location": "row:29",
+      "source_location": "main",
       "scope": "8 объявленных моделей и инварианты",
       "status_effect": "no St_FTS change",
-      "rationale": "Диагональные знаки, коммутативность и ассоциативность дают разные структуры."
+      "rationale": "Диагональные знаки, коммутативность и ассоциативность дают разные структуры.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:29"
     },
     {
       "id": "WSP-B06",
@@ -11482,10 +12655,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
-      "source_location": "row:30",
+      "source_location": "audit",
       "scope": "H4/S4/O8; независимые локальные алгоритмы",
       "status_effect": "no St_FTS change",
-      "rationale": "Все таблицы совпали с исходным знаковым построением."
+      "rationale": "Все таблицы совпали с исходным знаковым построением.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:30"
     },
     {
       "id": "WSP-B07",
@@ -11495,10 +12670,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md",
-      "source_location": "row:31",
+      "source_location": "диагноз",
       "scope": "неполученный внешний CAS",
       "status_effect": "no St_FTS change",
-      "rationale": "provider_error не служит математическим подтверждением или опровержением."
+      "rationale": "provider_error не служит математическим подтверждением или опровержением.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:31"
     },
     {
       "id": "WSP-B08",
@@ -11508,10 +12685,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/check_models.py",
-      "source_location": "row:32",
+      "source_location": "main; inner",
       "scope": "все x,y∈R на фиксированной C-подалгебре",
       "status_effect": "no St_FTS change",
-      "rationale": "Два разных знака J² дают одну операцию комплексного сопряжения."
+      "rationale": "Два разных знака J² дают одну операцию комплексного сопряжения.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:32"
     },
     {
       "id": "WSP-B09",
@@ -11521,10 +12700,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/independent_finite.cjs",
-      "source_location": "row:33",
+      "source_location": "audit; innerConjugationOnComplexBasis",
       "scope": "действие на базисе 1,I и R-линейность",
       "status_effect": "no St_FTS change",
-      "rationale": "Отдельные векторная и матричная реализации подтверждают локальное тождество."
+      "rationale": "Отдельные векторная и матричная реализации подтверждают локальное тождество.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:33"
     },
     {
       "id": "WSP-B10",
@@ -11534,10 +12715,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md",
-      "source_location": "row:34",
+      "source_location": "predicate D; диагноз",
       "scope": "внешнее CAS-подтверждение сопряжения не получено",
       "status_effect": "no St_FTS change",
-      "rationale": "Неисправная D-функция использовала H-умножение для S; результат не пригоден."
+      "rationale": "Неисправная D-функция использовала H-умножение для S; результат не пригоден.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:34"
     },
     {
       "id": "WSP-B11",
@@ -11547,10 +12730,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md",
-      "source_location": "row:35",
+      "source_location": "§8.3",
       "scope": "арифметический остаток -1 как сопряжение",
       "status_effect": "no St_FTS change",
-      "rationale": "Источник кандидатного сопоставления роли; сам не устанавливает внутренний оператор ФТС."
+      "rationale": "Источник кандидатного сопоставления роли; сам не устанавливает внутренний оператор ФТС.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:35"
     },
     {
       "id": "WSP-B12",
@@ -11560,10 +12745,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/relative_sign_probe.py",
-      "source_location": "row:36",
+      "source_location": "main",
       "scope": "конкретные пробы 8 моделей",
       "status_effect": "no St_FTS change",
-      "rationale": "Наблюдение определено до индивидуальной проекции, с общей ориентацией результатов."
+      "rationale": "Наблюдение определено до индивидуальной проекции, с общей ориентацией результатов.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:36"
     },
     {
       "id": "WSP-B13",
@@ -11573,10 +12760,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md",
-      "source_location": "row:37",
+      "source_location": "полный код; сырой результат",
       "scope": "поляризационное тождество и знаковая специализация",
       "status_effect": "no St_FTS change",
-      "rationale": "CAS подтверждает только указанное математическое ядро."
+      "rationale": "CAS подтверждает только указанное математическое ядро.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:37"
     },
     {
       "id": "WSP-B14",
@@ -11586,10 +12775,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/addendum_2026-10-04_two_channels.md",
-      "source_location": "row:38",
+      "source_location": "§3.3–3.4",
       "scope": "двухканальный кандидат; перенос на новый носитель дополнительно предполагается",
       "status_effect": "no St_FTS change",
-      "rationale": "Сумма, разность и поляризация дают местную форму протокола, не готовую семантику операций окон."
+      "rationale": "Сумма, разность и поляризация дают местную форму протокола, не готовую семантику операций окон.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:38"
     },
     {
       "id": "WSP-B15",
@@ -11599,10 +12790,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/circle_probe.py",
-      "source_location": "row:39",
+      "source_location": "main",
       "scope": "точные тождества, перестановки и матрицы выбранной модели",
       "status_effect": "no St_FTS change",
-      "rationale": "Различение повторов и линейная реализация S4 проверены в объявленном носителе."
+      "rationale": "Различение повторов и линейная реализация S4 проверены в объявленном носителе.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:39"
     },
     {
       "id": "WSP-B16",
@@ -11612,10 +12805,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_108.md",
-      "source_location": "row:40",
+      "source_location": "Точный пакет; Выполненный код и сырой результат",
       "scope": "фаза, редукция и конечные действия",
       "status_effect": "no St_FTS change",
-      "rationale": "Независимая CAS-проверка математического ядра без семантического переноса."
+      "rationale": "Независимая CAS-проверка математического ядра без семантического переноса.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:40"
     },
     {
       "id": "WSP-B17",
@@ -11625,10 +12820,12 @@
       "layer": "research_bridge",
       "confidence": "CURATED",
       "source_file": "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md",
-      "source_location": "row:41",
+      "source_location": "§8.3",
       "scope": "арифметические шаги и сопряжение как действие остатка -1",
       "status_effect": "no St_FTS change",
-      "rationale": "Геометрическое представление различает арифметическую перестановку, полуоборот и отражение."
+      "rationale": "Геометрическое представление различает арифметическую перестановку, полуоборот и отражение.",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:41"
     },
     {
       "id": "atlas_contains_pa_c01",
@@ -20506,6 +21703,84 @@
       "relationship_review_file": "work/v14_rebuild/audit/GRAPH_RELATION_PATCH.tsv",
       "relationship_review_location": "row:93",
       "review_confidence": "CURATED"
+    },
+    {
+      "id": "canonical_v13_triple_0379",
+      "source": "card_window_groupings",
+      "target": "card_ac_20261003_window_families",
+      "relation": "contains",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:380",
+      "assertion_kind": "triple",
+      "raw_subject": "WINDOW_GROUPINGS",
+      "raw_object": "AC_20261003_WINDOW_FAMILIES"
+    },
+    {
+      "id": "canonical_v13_triple_0380",
+      "source": "card_window_groupings",
+      "target": "card_ac_20261003_windows_triples",
+      "relation": "contains",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:381",
+      "assertion_kind": "triple",
+      "raw_subject": "WINDOW_GROUPINGS",
+      "raw_object": "AC_20261003_WINDOWS_TRIPLES"
+    },
+    {
+      "id": "canonical_v13_triple_0381",
+      "source": "card_window_groupings",
+      "target": "card_ac_20261003_windows_fives",
+      "relation": "contains",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:382",
+      "assertion_kind": "triple",
+      "raw_subject": "WINDOW_GROUPINGS",
+      "raw_object": "AC_20261003_WINDOWS_FIVES"
+    },
+    {
+      "id": "canonical_v13_triple_0382",
+      "source": "card_window_groupings",
+      "target": "card_ac_20261003_windows_sevens",
+      "relation": "contains",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:383",
+      "assertion_kind": "triple",
+      "raw_subject": "WINDOW_GROUPINGS",
+      "raw_object": "AC_20261003_WINDOWS_SEVENS"
+    },
+    {
+      "id": "canonical_v13_triple_0383",
+      "source": "card_window_groupings",
+      "target": "card_window_grouping_13",
+      "relation": "contains",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:384",
+      "assertion_kind": "triple",
+      "raw_subject": "WINDOW_GROUPINGS",
+      "raw_object": "WINDOW_GROUPING_13"
+    },
+    {
+      "id": "canonical_v13_triple_0384",
+      "source": "card_window_groupings",
+      "target": "card_window_grouping_25",
+      "relation": "contains",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_triples.tsv",
+      "source_location": "row:385",
+      "assertion_kind": "triple",
+      "raw_subject": "WINDOW_GROUPINGS",
+      "raw_object": "WINDOW_GROUPING_25"
     },
     {
       "id": "card_adoption_a1",
@@ -34845,6 +36120,39 @@
       "status_effect": "stored_only; no automatic promotion"
     },
     {
+      "id": "status_window_grouping_13",
+      "source": "card_window_grouping_13",
+      "target": "assessment_window_grouping_13_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:WINDOW_GROUPING_13",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_window_grouping_25",
+      "source": "card_window_grouping_25",
+      "target": "assessment_window_grouping_25_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:WINDOW_GROUPING_25",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
+      "id": "status_window_groupings",
+      "source": "card_window_groupings",
+      "target": "assessment_window_groupings_status",
+      "relation": "has_status",
+      "layer": "canonical_v13",
+      "confidence": "EXTRACTED",
+      "source_file": "source/fts_cards.jsonl",
+      "source_location": "card:WINDOW_GROUPINGS",
+      "status_effect": "stored_only; no automatic promotion"
+    },
+    {
       "id": "sumdist_ad_e01_maps_o_01",
       "source": "evidence_external_sumdist_ad_e01",
       "target": "card_o_01",
@@ -35178,10 +36486,10 @@
     }
   ],
   "coverage": {
-    "canonical_cards": 169,
-    "canonical_triples": 378,
+    "canonical_cards": 172,
+    "canonical_triples": 384,
     "canonical_card_depends_on": 167,
-    "canonical_input_assertions": 595,
+    "canonical_input_assertions": 601,
     "author_cards": 8,
     "author_triples": 32,
     "audit_claim_groups": 25,
@@ -35193,11 +36501,11 @@
     "external_evidence_nodes": 21,
     "internal_evidence_nodes": 15,
     "research_claims": 21,
-    "curated_research_bridges": 40,
+    "curated_research_bridges": 103,
     "project_entities": 1,
     "declared_research_scopes": 4,
-    "nodes": 863,
-    "edges": 2025,
+    "nodes": 877,
+    "edges": 2097,
     "unresolved_references": 4
   }
 }

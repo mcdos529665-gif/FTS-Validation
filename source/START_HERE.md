@@ -1,6 +1,6 @@
-# FTS active canonical release — v13_active_logic_provenance_2026-10-03
+# FTS active canonical release — v13_window_grouping_cards_2026-10-07
 
-Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-07. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 ## Reading rules
@@ -18,14 +18,14 @@ release was produced by a new workbook round-trip.
 
 ## Active changes
 
-Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.
+Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
 AC-2026-10-03 adds the exact finite triple/five/seven window families, with author
 and editorial statuses retained. Intersections do not automatically define carriers.
 
-Cards: 169. Triples: 378. Sheets: 54.
+Cards: 172. Triples: 384. Sheets: 54.
 
 ## Files
 

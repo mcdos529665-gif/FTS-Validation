@@ -102,6 +102,10 @@ RELATION_RULES: dict[str, tuple[set[str], set[str]]] = {
     "depends_on": ({"card", "author_statement"}, {"card", "author_statement", "source_fragment", "literal", "unresolved_reference"}),
     "applies_to": ({"card", "author_statement"}, {"card", "author_statement"}),
     "uses_analogy": ({"card", "author_statement"}, {"card", "author_statement"}),
+    "indexes_claim": ({"card", "author_statement"}, {"claim", "claim_group"}),
+    "tracks_question": ({"card", "author_statement"}, {"open_question"}),
+    "references_evidence": ({"card", "author_statement"}, {"external_evidence", "internal_evidence", "verification"}),
+    "references_document": ({"card", "author_statement"}, {"source_document"}),
 }
 
 
@@ -965,12 +969,16 @@ def build_graph() -> dict[str, Any]:
     # the already existing graph node and does not infer a relation by name.
     bridge_target_aliases.update(card_ids)
     bridge_target_aliases.update(author_ids)
+    bridge_target_aliases.update(research_claim_ids)
+    bridge_target_aliases.update(oq_ids)
     bridge_target_aliases.update({
         "neural_skeleton_consideration": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_consideration_brief_md",
         "deep_report_10_integration": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_deep_research_report_10_integration_md",
     })
     for row_no, row in enumerate(bridge_rows, 2):
-        source = research_claim_ids.get(row["claim_id"])
+        # A card may collect existing research without making those findings
+        # canonical grounds. Relation, scope and status_effect stay in the TSV.
+        source = research_claim_ids.get(row["claim_id"]) or card_ids.get(row["claim_id"]) or author_ids.get(row["claim_id"])
         if source is None:
             raise ValueError(f"bridge {row['bridge_id']} refers to unknown claim {row['claim_id']}")
         target = bridge_target_aliases.get(row["target_ref"])
@@ -979,7 +987,7 @@ def build_graph() -> dict[str, Any]:
         if target is None:
             raise ValueError(f"bridge {row['bridge_id']} target not found: {row['target_ref']}")
         bridge_source = ROOT / row["source_file"]
-        builder.edge(row["bridge_id"], source, target, row["relation"], "research_bridge", row["confidence"].upper(), bridge_source, f"row:{row_no}", scope=row["scope"], status_effect=row["status_effect"], rationale=row["rationale"])
+        builder.edge(row["bridge_id"], source, target, row["relation"], "research_bridge", row["confidence"].upper(), bridge_source, row["source_locator"], scope=row["scope"], status_effect=row["status_effect"], rationale=row["rationale"], registry_file=rel(RESEARCH_BRIDGES), registry_location=f"row:{row_no}")
 
     add_project_entity(builder, card_ids)
     graph = builder.output()

@@ -9,7 +9,7 @@
 - Формат сборки: `FTS_RESEARCH_EXPORT_V1`.
 - Версия активного канона: `source/MANIFEST.json` (включая интегрированные авторские поправки).
 - Source SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6`.
-- Покрытие канона: **169 карточка / 378 триплетов / 54 листа**.
+- Покрытие канона: **172 карточка / 384 триплетов / 54 листа**.
 - Машинная верификация текущего v14: **62 PASS / 0 FAIL из 62**.
 - Исследовательская статья: v14 rebuild.
 - Внешние публикации: только библиографические метаданные и краткая роль.
@@ -33,14 +33,14 @@
 | `work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md` | `e7e066c50b50d97f64b53ed7bf59c8e8695ce0e62eebcac37ee51d7224268f16` |
 | `work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md` | `cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b` |
 | `PROJECT_INSTRUCTIONS.md` | `ccab8cae910e7696fb0779496499464cc68edcb522b2757a180a66ea05b6cdb8` |
-| `work/STATE.md` | `33a3ce07e347fca1a865653de4dc16f0707a6163e470da3c801e5fc5f47eae34` |
+| `work/STATE.md` | `29e3cb2be6b0f68988ebdec7f9936076cd47c1728fec685d9d5be665cd2bb850` |
 | `work/notation.md` | `f70ec8e284c179d883524ddcc94144810879f734fd287160972fcca45cbd60fa` |
 | `work/DOCUMENT_MAP.md` | `18298a5dc1dfd68252d3c6c830ba1fc505eb91242da1ac5bd927f4de1422538c` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
 | `work/DECISIONS.md` | `9ad21f8b288124cbf3108c21fb9859a4376082c58fc2586524ae2829e448880e` |
-| `work/OPEN_QUESTIONS.md` | `b969a3fcfae95dee23477500795fdbbc0146319428098da1f830c332a18490cc` |
+| `work/OPEN_QUESTIONS.md` | `2f3de47e506129f11dbb660e0495cde06dae17bd446c753b0d90bd6fefd22fa4` |
 | `work/EXTERNAL_CONFLICTS.md` | `0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a` |
 | `work/v14_rebuild/FTS_v14_paper.md` | `665719501c832a62237370099606d863445c3381262e894ac7be43080a6c8f93` |
 | `work/v14_rebuild/FTS_v14_register_map.md` | `710ec5be63957527ec5baae8e43d3040179bdf243152d02d64208c520e28aa12` |
@@ -115,11 +115,11 @@
 | `work/v14_rebuild/neural_analogy_2026-09-19/REVIEW.md` | `9d5e0df0301712671d4597d936b2c8893c4b0f7a3fb7387ae0ad2510c5556ec0` |
 | `work/v14_rebuild/neural_analogy_2026-09-19/AUTHOR_MESSAGE.txt` | `63f03b5a4a98232bd431bf6f559e1adcd752eead82f9cf9760c9ed3c144332fe` |
 | `work/v14_rebuild/neural_analogy_2026-09-19/check_examples.py` | `0ec19822598e81717dfe67541a32e0147185675e976746a25a25ee1fd2b6829d` |
-| `source/MANIFEST.json` | `18e37b0af29aaf56122298ada72ddfef8e8fd3e55711908f1fbc8f4ff7be4663` |
-| `source/FTS_v13_LLM_CONTEXT.md` | `07ff127eae127a3ba8c8a7a32582df5b5de1884bdf4c7c3ca95dadc96d5e85ee` |
-| `source/FTS_v13_LLM_FULL_DUMP.md` | `442eefed988abf57825f00fcf1cdd43013fd335cf6b5bc7bd21f061029a04b92` |
-| `source/fts_cards.jsonl` | `e03d164678b0d16abb6e4c2edffedecaacecea778ba598e3f0fca77f311e6582` |
-| `source/fts_triples.tsv` | `c792924d4d7bac4874c3940109d6c6d9d99b849cf4128e8f1b060b17f4941b11` |
+| `source/MANIFEST.json` | `a4cc7df915e88b4746627968e7320e12bbe4aa9293821a852b52ac618acf5793` |
+| `source/FTS_v13_LLM_CONTEXT.md` | `a96d0bc30c8b21ea0a0d459a62dc1ebf420d3c91a1073199331c75762b090926` |
+| `source/FTS_v13_LLM_FULL_DUMP.md` | `d0591c8082358bbf5cdb6aa8d011640e8fdcce0f4f86d14fdd74808d2093084e` |
+| `source/fts_cards.jsonl` | `d8cf5c86e07a02189749a42a9cac132540de193d29cfb349b8b52ef6ab1a3fea` |
+| `source/fts_triples.tsv` | `35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a` |
 
 ### 1.3. Краткий рабочий контракт
 
@@ -765,7 +765,7 @@ scope-ребра и недопустимые адреса. Полный марш
 
 ### STATE — текущая точка
 
-Обновлено 2026-10-05. Основной каталог: `C:/Users/Mcdos/Desktop/FTS_v13_project`.
+Обновлено 2026-10-07. Основной каталог: `C:/Users/Mcdos/Desktop/FTS_v13_project`.
 
 #### Текущая работа
 
@@ -800,6 +800,8 @@ scope-ребра и недопустимые адреса. Полный марш
   взаимно обратных остатков) подтверждено, но гарантировано теорией Галуа;
   узел окна (остаток −1) = сопряжение i↔−i — наблюдение. Проверки
   `v14_rebuild/verification_c93.py` (C-93…C-95, 3 PASS).
+- **Знаковое умножение окон (2026-10-06):** [разбор](v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md): исход 3 — связь операций ФТС с правилом знаков и наблюдением не задана. Восемь моделей проверены локально; H/S/O сверены отдельной реализацией. После забывания знака порядок и скобки неразличимы; внутреннее сопряжение не выбирает H. Внешний CAS — inconclusive (ошибка кода). [Исходный контекст](v14_rebuild/windows_number_systems_context_2026-10-06.md); St_FTS сохранён.
+
 - **Таблица окон (2026-10-04):** `v14_rebuild/windows_table.tsv` — окна 3…25, 15
   столбцов (шаг, узлы, середины, группа, тип, что выпадает, теория, статус, проверки);
   сверка вычислимых столбцов: `v14_rebuild/verification_windows_table.py` (PASS).
@@ -819,14 +821,20 @@ A1/A3 — возможное заимствованное объяснение �
 ярлыка принятия исправлены; статья и граф отражают происхождение и ограничения.
 Присутствие в source/ не удостоверяет авторского принятия или доказательства.
 
-Активный релиз `v13_active_logic_provenance_2026-10-03`: 169 карточек,
-378 триплетов, 54 листа; 167 согласованных depends_on, циклов предпосылок — 0.
-Граф: 834 узла, 1989 рёбер; 595/595 входных канонных/авторских отношений.
+Активный релиз `v13_window_grouping_cards_2026-10-07`: 172 карточки,
+384 триплета, 54 листа; 167 согласованных depends_on, циклов предпосылок — 0.
+Граф: 877 узлов, 2097 рёбер; 601/601 входных канонных/авторских отношений.
 Из 212 записей 184 имеют предметный маршрут, 23 — без маршрута,
 2 — непринятая формализация, 3 — служебные. Учтены 236 Markdown-файлов,
 проверены декларации 39 основных документов; это не охват всех атомарных тезисов.
 
 #### Следующий шаг
+
+[Карточки группировок окон](v14_rebuild/window_groupings/WINDOW_GROUPINGS.md) созданы 2026-10-07: общий указатель, окно13/шаг12 и окно25/шаг24; авторские тройки/пятёрки/семёрки связаны с находками через граф. Модели и семантические мосты сохраняют кандидатные статусы. Дальше привязывать результаты к соответствующей карточке с областью и свидетельством.
+
+Автор согласовал совместное чтение результата, повторения и композиции. [Уточнение счёта и абсолютизации, §8](v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md): 0↔1 увеличивает счёт, a→a — нет; У0 из противовеса У1–У6 входит во внутреннюю структуру, отказ У5 формализуется на У7 и служит противовесом до У11. Исследовать механизм и различать наличие минуса и его доступность. Образ Серпинского — предложенная аналогия.
+
+Для моста окон 13/25 уточнить смысл повторного действия ФТС через [круг и два продолжения действий](v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md): P24→P12 забывает противоположность, геометрический поворот и арифметическая перестановка различаются при повторе. Относительная фаза продолжает двухканальную пробу; математическое ядро подтверждено WF-107/108. Связь с ФТС — кандидат; широкая попытка WF-106 остаётся inconclusive.
 
 Сопоставить варианты нового OQ-пакета с авторским замыслом: ресурс У7, четыре
 определения и операторы У14/У16. Затем продолжить уточнение адресов 23 записей;
@@ -7431,6 +7439,7 @@ if __name__ == "__main__":
   классы различимости окон 17, 21 предсказаны теорией Галуа. См.
   `v14_rebuild/addendum_2026-10-04_windows_symmetry.md` §8.
       Вариант/ограничение 2026-10-05: [исследовательский ответ](v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md#windows). Статус сохранён.
+      Ограничение 2026-10-06: [внутреннее сопряжение](v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md#4-вывод-наблюдаемость-объяснение-и-сопряжение) реализуется и в H, и в M₂(R); независимого основания роли узла пока не добавляет.
 
 ##### Верхние уровни: гиперболические и эллиптические функции (2026-10-04)
 
@@ -7475,6 +7484,7 @@ if __name__ == "__main__":
 - [ ] Определить роли семейств троек, пятёрок и семёрок. {#oq-window-family-roles}
       Точные перечни приняты автором и интегрированы; роль семейства не задана.
       Вариант/ограничение 2026-10-05: [исследовательский ответ](v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md#windows). Статус сохранён.
+      Ограничение 2026-10-06: [знаковое умножение](v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md) не определяется группой меток; перевод операций и наблюдения ФТС отсутствует. OQ и St_FTS сохранены.
 - [ ] Развести пересечение окон и узел-носитель. {#oq-window-intersection-carrier}
       Включая 1, 5, 9 для троек и 5 для семёрок; направленная обратная связь
       из факта пересечения не следует.
@@ -30798,9 +30808,9 @@ if __name__ == "__main__":
 
 ## 8. Компактный контекст канона v13
 
-### FTS active canonical release — v13_active_logic_provenance_2026-10-03
+### FTS active canonical release — v13_window_grouping_cards_2026-10-07
 
-Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-07. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 #### Reading rules
@@ -30818,14 +30828,14 @@ release was produced by a new workbook round-trip.
 
 #### Active changes
 
-Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.
+Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
 AC-2026-10-03 adds the exact finite triple/five/seven window families, with author
 and editorial statuses retained. Intersections do not automatically define carriers.
 
-Cards: 169. Triples: 378. Sheets: 54.
+Cards: 172. Triples: 384. Sheets: 54.
 
 #### Counts by card type
 
@@ -30861,6 +30871,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | operator_candidate | 1 |
 | overlay | 3 |
 | private_expression | 19 |
+| research_index | 1 |
 | statistical_analog | 6 |
 | status_promotion | 5 |
 | tensor_analog | 3 |
@@ -30868,6 +30879,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | topology_candidate | 1 |
 | window_family | 3 |
 | window_family_statement | 1 |
+| window_grouping | 2 |
 
 #### Counts by status
 
@@ -30885,10 +30897,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | candidate_bundle | 1 |
 | candidate_core | 2 |
 | candidate_logical_supplement | 2 |
+| candidate_math_overlay | 2 |
 | candidate_overlay | 9 |
 | candidate_requires_empirical_test | 1 |
 | candidate_requires_formalization | 2 |
 | candidate_requires_formalization + canonical_alignment | 3 |
+| candidate_research_index | 1 |
 | candidate_with_operational_gate | 11 |
 | canon/base | 11 |
 | canon/base_plus_user_refinement | 1 |
@@ -31192,9 +31206,9 @@ Cards: 169. Triples: 378. Sheets: 54.
 
 ## 9. Полный 54-листовый дамп канона v13
 
-### FTS active canonical release — v13_active_logic_provenance_2026-10-03
+### FTS active canonical release — v13_window_grouping_cards_2026-10-07
 
-Release date: 2026-10-03. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-07. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 #### Reading rules
@@ -31212,14 +31226,14 @@ release was produced by a new workbook round-trip.
 
 #### Active changes
 
-Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained.
+Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
 AC-2026-10-03 adds the exact finite triple/five/seven window families, with author
 and editorial statuses retained. Intersections do not automatically define carriers.
 
-Cards: 169. Triples: 378. Sheets: 54.
+Cards: 172. Triples: 384. Sheets: 54.
 
 #### Sheet index
 
@@ -31242,8 +31256,8 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 14 | 14_Mprime | A1:D16 | 16 | 4 |
 | 15 | 15_Внутр_архив | A1:G11 | 11 | 7 |
 | 16 | 16_TODO | A1:E15 | 15 | 5 |
-| 17 | 17_Карточки | A1:M170 | 170 | 13 |
-| 18 | 18_Граф | A1:H379 | 379 | 8 |
+| 17 | 17_Карточки | A1:M173 | 173 | 13 |
+| 18 | 18_Граф | A1:H385 | 385 | 8 |
 | 19 | 19_Канон_текст | A1:I80 | 80 | 9 |
 | 20 | 20_CE_метрика | A1:H16 | 16 | 8 |
 | 21 | 21_Переходы | A1:L9 | 9 | 12 |
@@ -31259,11 +31273,11 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 31 | 31_Upper_12_17 | A1:K26 | 26 | 11 |
 | 32 | 32_Integrity | A1:J11 | 11 | 10 |
 | 33 | 33_Validation | A1:F43 | 43 | 6 |
-| 34 | 34_Export_jsonl | A1:B170 | 170 | 2 |
-| 35 | 35_Export_tsv | A1:B379 | 379 | 2 |
-| 36 | 36_Export_yaml | A1:B337 | 337 | 2 |
+| 34 | 34_Export_jsonl | A1:B173 | 173 | 2 |
+| 35 | 35_Export_tsv | A1:B385 | 385 | 2 |
+| 36 | 36_Export_yaml | A1:B340 | 340 | 2 |
 | 37 | 37_Export_md | A1:F31 | 31 | 6 |
-| 38 | 38_Changelog | A1:F17 | 17 | 6 |
+| 38 | 38_Changelog | A1:F18 | 18 | 6 |
 | 39 | 39_Status_Dict | A1:E21 | 21 | 5 |
 | 40 | 40_Reader_View | A1:B12 | 12 | 2 |
 | 41 | 41_Самодостаточность | A1:D9 | 9 | 4 |
@@ -31449,7 +31463,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 
 | Поле | Значение | Комментарий | Внутренний лист |
 | --- | --- | --- | --- |
-| Версия | v13_active_logic_provenance_2026-10-03 | Active export; historical workbook remains a provenance input. | 38_Changelog |
+| Версия | v13_window_grouping_cards_2026-10-07 | Active export; historical workbook remains a provenance input. | 38_Changelog |
 | Дата | 2026-06-10 | America/New_York current session date |  |
 | Назначение | self-contained Excel canon + U7 window cycles + χ statistical + complex branch/tensor overlays | карточки + граф + встроенный канон + U7/χ + complex/tensor overlays | 17–41 + overlays |
 | Статус | candidate replacement; not machine-checked proof | ядро −1..7 сильнее 8+; О(13..20) candidate-модуль | 39_Status_Dict |
@@ -31935,6 +31949,9 @@ Cards: 169. Triples: 378. Sheets: 54.
 | AC_20261003_WINDOWS_TRIPLES | window_family | Окна длины 3: авторский перечень | (-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11) | Точный конечный авторский перечень: (-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается. | author_canonical_amendment |  | author | AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03 | AC_20261003_WINDOW_FAMILIES | author_amendment;window_family | 17_Карточки/AC_20261003_WINDOWS_TRIPLES | {"windows": [[-1, 0, 1], [1, 2, 3], [3, 4, 5], [5, 6, 7], [7, 8, 9], [9, 10, 11]], "window_length": 3, "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"} |
 | AC_20261003_WINDOWS_FIVES | window_family | Окна длины 5: авторский перечень | (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15) | Точный конечный авторский перечень: (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается. | author_canonical_amendment |  | author | AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03 | AC_20261003_WINDOW_FAMILIES | author_amendment;window_family | 17_Карточки/AC_20261003_WINDOWS_FIVES | {"windows": [[-1, 0, 1, 2, 3], [3, 4, 5, 6, 7], [7, 8, 9, 10, 11], [11, 12, 13, 14, 15]], "window_length": 5, "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"} |
 | AC_20261003_WINDOWS_SEVENS | window_family | Окна длины 7: авторский перечень | (-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17) | Точный конечный авторский перечень: (-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается. | author_canonical_amendment |  | author | AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03 | AC_20261003_WINDOW_FAMILIES | author_amendment;window_family | 17_Карточки/AC_20261003_WINDOWS_SEVENS | {"windows": [[-1, 0, 1, 2, 3, 4, 5], [5, 6, 7, 8, 9, 10, 11], [11, 12, 13, 14, 15, 16, 17]], "window_length": 7, "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"} |
+| WINDOW_GROUPINGS | research_index | Группировки окон: карточки, находки и открытые вопросы | WindowGroupings | Исследовательский указатель группировок окон: связывает принятые конечные семейства троек, пятёрок и семёрок с отдельно адресованными арифметическими окнами 13/25, моделями знаков, совместным наблюдением, геометрией круга и открытыми вопросами. Области и статусы каждой находки сохраняются; индекс не вводит новый закон окон. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md | candidate_research_index |  | A | USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS |  | window_grouping;research_index;interlevel;scoped_evidence | 17_Карточки/WINDOW_GROUPINGS | {"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md", "family_card_ids": ["AC_20261003_WINDOW_FAMILIES", "AC_20261003_WINDOWS_TRIPLES", "AC_20261003_WINDOWS_FIVES", "AC_20261003_WINDOWS_SEVENS"], "grouping_card_ids": ["WINDOW_GROUPING_13", "WINDOW_GROUPING_25"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_NODE_INNER_NONUNIQUE", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "distinction_card_ids": ["ADD_MIRROR_WINDOW", "SP_WINDOW", "U7_WINDOW_CORE"], "open_obligations": ["Определить роли семейств окон и перевод арифметических действий в операции ФТС.", "Установить доступность совместного удержания относительного знака до проекции."]} |
+| WINDOW_GROUPING_13 | window_grouping | Окно длины 13: шаг 12 и связанные модели | length=13; step=12; G=V4 | Исследовательское окно длины 13, шаг 12: группа обратимых остатков V4, 2 двоичных корневых признака; введённое R-продолжение имеет размерность 4. Сравниваются модели T4, C4, H4, S4, N4; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md | candidate_math_overlay |  | A | USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS |  | window_grouping;research_index;interlevel;scoped_evidence | 17_Карточки/WINDOW_GROUPING_13 | {"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md", "parent_card_id": "WINDOW_GROUPINGS", "window_length": 13, "arithmetic_step": 12, "residue_units": [1, 5, 7, 11], "group_structure": "V4", "root_discriminants": [-1, -3], "bit_count": 2, "candidate_real_dimension": 4, "model_ids": ["T4", "C4", "H4", "S4", "N4"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_NODE_INNER_NONUNIQUE", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "mathematical_scope": "declared finite model and carrier only; no full FTS compatibility claim", "open_obligations": ["Задать исполнимые действия ФТС и наблюдение до выбора алгебры.", "Обосновать различающий результат повтора, порядка или группировки из смысла ФТС."]} |
+| WINDOW_GROUPING_25 | window_grouping | Окно длины 25: шаг 24 и связанные модели | length=25; step=24; G=(Z/2)^3 | Исследовательское окно длины 25, шаг 24: группа обратимых остатков (Z/2)^3, 3 двоичных корневых признака; введённое R-продолжение имеет размерность 8. Сравниваются модели T8, B8, O8; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md | candidate_math_overlay |  | A | USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS |  | window_grouping;research_index;interlevel;scoped_evidence | 17_Карточки/WINDOW_GROUPING_25 | {"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md", "parent_card_id": "WINDOW_GROUPINGS", "window_length": 25, "arithmetic_step": 24, "residue_units": [1, 5, 7, 11, 13, 17, 19, 23], "group_structure": "(Z/2)^3", "root_discriminants": [-1, -3, -2], "bit_count": 3, "candidate_real_dimension": 8, "model_ids": ["T8", "B8", "O8"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "mathematical_scope": "declared finite model and carrier only; no full FTS compatibility claim", "open_obligations": ["Задать исполнимые действия ФТС и наблюдение до выбора алгебры.", "Обосновать различающий результат повтора, порядка или группировки из смысла ФТС."]} |
 
 #### Sheet 18: `18_Граф`
 
@@ -32318,6 +32335,12 @@ Cards: 169. Triples: 378. Sheets: 54.
 | TENSOR_LADDER_U11 | depends_on | TENSOR_LADDER_U10 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0377 |
 | TENSOR_LADDER_U12 | depends_on | U_12 | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_U12_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0378 |
 | TENSOR_LADDER_U12 | depends_on | U12_CHI_PI_COMPLEX_BOUNDARY | graph_dependency_reference_reconciliation | USER_DIALOG_V13 | candidate_U12_overlay | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | G_0379 |
+| WINDOW_GROUPINGS | contains | AC_20261003_WINDOW_FAMILIES | candidate_window_grouping_cards | USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS | candidate_research_index | Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained. | G_0384 |
+| WINDOW_GROUPINGS | contains | AC_20261003_WINDOWS_TRIPLES | candidate_window_grouping_cards | USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS | candidate_research_index | Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained. | G_0385 |
+| WINDOW_GROUPINGS | contains | AC_20261003_WINDOWS_FIVES | candidate_window_grouping_cards | USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS | candidate_research_index | Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained. | G_0386 |
+| WINDOW_GROUPINGS | contains | AC_20261003_WINDOWS_SEVENS | candidate_window_grouping_cards | USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS | candidate_research_index | Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained. | G_0387 |
+| WINDOW_GROUPINGS | contains | WINDOW_GROUPING_13 | candidate_window_grouping_cards | USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS | candidate_research_index | Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained. | G_0388 |
+| WINDOW_GROUPINGS | contains | WINDOW_GROUPING_25 | candidate_window_grouping_cards | USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS | candidate_research_index | Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained. | G_0389 |
 
 #### Sheet 19: `19_Канон_текст`
 
@@ -32856,6 +32879,9 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 167 | {"id": "AC_20261003_WINDOWS_TRIPLES", "type": "window_family", "title": "Окна длины 3: авторский перечень", "symbol": "(-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11)", "text": "Точный конечный авторский перечень: (-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.", "windows": [[-1, 0, 1], [1, 2, 3], [3, 4, 5], [5, 6, 7], [7, 8, 9], [9, 10, 11]], "window_length": 3, "depends_on": ["AC_20261003_WINDOW_FAMILIES"], "tags": ["author_amendment", "window_family"], "path": "17_Карточки/AC_20261003_WINDOWS_TRIPLES", "status": "author_canonical_amendment", "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"} |
 | 168 | {"id": "AC_20261003_WINDOWS_FIVES", "type": "window_family", "title": "Окна длины 5: авторский перечень", "symbol": "(-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15)", "text": "Точный конечный авторский перечень: (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.", "windows": [[-1, 0, 1, 2, 3], [3, 4, 5, 6, 7], [7, 8, 9, 10, 11], [11, 12, 13, 14, 15]], "window_length": 5, "depends_on": ["AC_20261003_WINDOW_FAMILIES"], "tags": ["author_amendment", "window_family"], "path": "17_Карточки/AC_20261003_WINDOWS_FIVES", "status": "author_canonical_amendment", "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"} |
 | 169 | {"id": "AC_20261003_WINDOWS_SEVENS", "type": "window_family", "title": "Окна длины 7: авторский перечень", "symbol": "(-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17)", "text": "Точный конечный авторский перечень: (-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.", "windows": [[-1, 0, 1, 2, 3, 4, 5], [5, 6, 7, 8, 9, 10, 11], [11, 12, 13, 14, 15, 16, 17]], "window_length": 7, "depends_on": ["AC_20261003_WINDOW_FAMILIES"], "tags": ["author_amendment", "window_family"], "path": "17_Карточки/AC_20261003_WINDOWS_SEVENS", "status": "author_canonical_amendment", "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"} |
+| 170 | {"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "internal_ref": "USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS", "depends_on": [], "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "tags": ["window_grouping", "research_index", "interlevel", "scoped_evidence"], "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "id": "WINDOW_GROUPINGS", "type": "research_index", "title": "Группировки окон: карточки, находки и открытые вопросы", "symbol": "WindowGroupings", "status": "candidate_research_index", "text": "Исследовательский указатель группировок окон: связывает принятые конечные семейства троек, пятёрок и семёрок с отдельно адресованными арифметическими окнами 13/25, моделями знаков, совместным наблюдением, геометрией круга и открытыми вопросами. Области и статусы каждой находки сохраняются; индекс не вводит новый закон окон. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md", "path": "17_Карточки/WINDOW_GROUPINGS", "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md", "family_card_ids": ["AC_20261003_WINDOW_FAMILIES", "AC_20261003_WINDOWS_TRIPLES", "AC_20261003_WINDOWS_FIVES", "AC_20261003_WINDOWS_SEVENS"], "grouping_card_ids": ["WINDOW_GROUPING_13", "WINDOW_GROUPING_25"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_NODE_INNER_NONUNIQUE", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "distinction_card_ids": ["ADD_MIRROR_WINDOW", "SP_WINDOW", "U7_WINDOW_CORE"], "open_obligations": ["Определить роли семейств окон и перевод арифметических действий в операции ФТС.", "Установить доступность совместного удержания относительного знака до проекции."]} |
+| 171 | {"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "internal_ref": "USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS", "depends_on": [], "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "tags": ["window_grouping", "research_index", "interlevel", "scoped_evidence"], "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "id": "WINDOW_GROUPING_13", "type": "window_grouping", "title": "Окно длины 13: шаг 12 и связанные модели", "symbol": "length=13; step=12; G=V4", "status": "candidate_math_overlay", "text": "Исследовательское окно длины 13, шаг 12: группа обратимых остатков V4, 2 двоичных корневых признака; введённое R-продолжение имеет размерность 4. Сравниваются модели T4, C4, H4, S4, N4; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md", "path": "17_Карточки/WINDOW_GROUPING_13", "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md", "parent_card_id": "WINDOW_GROUPINGS", "window_length": 13, "arithmetic_step": 12, "residue_units": [1, 5, 7, 11], "group_structure": "V4", "root_discriminants": [-1, -3], "bit_count": 2, "candidate_real_dimension": 4, "model_ids": ["T4", "C4", "H4", "S4", "N4"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_NODE_INNER_NONUNIQUE", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "mathematical_scope": "declared finite model and carrier only; no full FTS compatibility claim", "open_obligations": ["Задать исполнимые действия ФТС и наблюдение до выбора алгебры.", "Обосновать различающий результат повтора, порядка или группировки из смысла ФТС."]} |
+| 172 | {"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "internal_ref": "USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS", "depends_on": [], "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "tags": ["window_grouping", "research_index", "interlevel", "scoped_evidence"], "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "id": "WINDOW_GROUPING_25", "type": "window_grouping", "title": "Окно длины 25: шаг 24 и связанные модели", "symbol": "length=25; step=24; G=(Z/2)^3", "status": "candidate_math_overlay", "text": "Исследовательское окно длины 25, шаг 24: группа обратимых остатков (Z/2)^3, 3 двоичных корневых признака; введённое R-продолжение имеет размерность 8. Сравниваются модели T8, B8, O8; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md", "path": "17_Карточки/WINDOW_GROUPING_25", "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md", "parent_card_id": "WINDOW_GROUPINGS", "window_length": 25, "arithmetic_step": 24, "residue_units": [1, 5, 7, 11, 13, 17, 19, 23], "group_structure": "(Z/2)^3", "root_discriminants": [-1, -3, -2], "bit_count": 3, "candidate_real_dimension": 8, "model_ids": ["T8", "B8", "O8"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "mathematical_scope": "declared finite model and carrier only; no full FTS compatibility claim", "open_obligations": ["Задать исполнимые действия ФТС и наблюдение до выбора алгебры.", "Обосновать различающий результат повтора, порядка или группировки из смысла ФТС."]} |
 
 #### Sheet 35: `35_Export_tsv`
 
@@ -33239,12 +33265,18 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 376 | TENSOR_LADDER_U11	depends_on	TENSOR_LADDER_U10 |
 | 377 | TENSOR_LADDER_U12	depends_on	U_12 |
 | 378 | TENSOR_LADDER_U12	depends_on	U12_CHI_PI_COMPLEX_BOUNDARY |
+| 379 | WINDOW_GROUPINGS	contains	AC_20261003_WINDOW_FAMILIES |
+| 380 | WINDOW_GROUPINGS	contains	AC_20261003_WINDOWS_TRIPLES |
+| 381 | WINDOW_GROUPINGS	contains	AC_20261003_WINDOWS_FIVES |
+| 382 | WINDOW_GROUPINGS	contains	AC_20261003_WINDOWS_SEVENS |
+| 383 | WINDOW_GROUPINGS	contains	WINDOW_GROUPING_13 |
+| 384 | WINDOW_GROUPINGS	contains	WINDOW_GROUPING_25 |
 
 #### Sheet 36: `36_Export_yaml`
 
 | line_no | yaml |
 | --- | --- |
-| 1 | version: v13_active_logic_provenance_2026-10-03 |
+| 1 | version: v13_window_grouping_cards_2026-10-07 |
 | 2 | self_contained: true |
 | 3 | working_rule: "Read active cards and current PROJECT_INSTRUCTIONS; historical workbook rules are provenance." |
 | 4 | embedded_archives: |
@@ -33452,134 +33484,137 @@ Cards: 169. Triples: 378. Sheets: 54.
 | 206 |   - {"id": "AC_20261003_WINDOWS_TRIPLES", "type": "window_family", "title": "Окна длины 3: авторский перечень", "symbol": "(-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11)", "text": "Точный конечный авторский перечень: (-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.", "windows": [[-1, 0, 1], [1, 2, 3], [3, 4, 5], [5, 6, 7], [7, 8, 9], [9, 10, 11]], "window_length": 3, "depends_on": ["AC_20261003_WINDOW_FAMILIES"], "tags": ["author_amendment", "window_family"], "path": "17_Карточки/AC_20261003_WINDOWS_TRIPLES", "status": "author_canonical_amendment", "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"} |
 | 207 |   - {"id": "AC_20261003_WINDOWS_FIVES", "type": "window_family", "title": "Окна длины 5: авторский перечень", "symbol": "(-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15)", "text": "Точный конечный авторский перечень: (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.", "windows": [[-1, 0, 1, 2, 3], [3, 4, 5, 6, 7], [7, 8, 9, 10, 11], [11, 12, 13, 14, 15]], "window_length": 5, "depends_on": ["AC_20261003_WINDOW_FAMILIES"], "tags": ["author_amendment", "window_family"], "path": "17_Карточки/AC_20261003_WINDOWS_FIVES", "status": "author_canonical_amendment", "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"} |
 | 208 |   - {"id": "AC_20261003_WINDOWS_SEVENS", "type": "window_family", "title": "Окна длины 7: авторский перечень", "symbol": "(-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17)", "text": "Точный конечный авторский перечень: (-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.", "windows": [[-1, 0, 1, 2, 3, 4, 5], [5, 6, 7, 8, 9, 10, 11], [11, 12, 13, 14, 15, 16, 17]], "window_length": 7, "depends_on": ["AC_20261003_WINDOW_FAMILIES"], "tags": ["author_amendment", "window_family"], "path": "17_Карточки/AC_20261003_WINDOWS_SEVENS", "status": "author_canonical_amendment", "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"} |
-| 209 | addendum_v3: |
-| 210 |   id: ADDENDUM_V3 |
-| 211 |   status: candidate_requires_formalization |
-| 212 |   embedded_in: ['43_Добавка_v3','19_Канон_текст'] |
-| 213 |   main_additions: ['mirror_window','zero_boundary','parity_topology','U11_e_pi','U12_circle','research_export'] |
-| 214 | research_export: |
-| 215 |   primary: FTS_research_v8.md |
-| 216 |   sidecars: ['fts_cards_research_v8.jsonl','fts_triples_research_v8.tsv','FTS_research_v8.yaml'] |
-| 217 | v9_status_promotion: |
-| 218 |   status: self_contained_status_patch |
-| 219 |   date: 2026-06-09 |
-| 220 |   promoted: |
-| 221 |     - id: SP_WINDOW |
-| 222 |       target: ADD_MIRROR_WINDOW |
-| 223 |       status_after: derived_constraint |
-| 224 |     - id: SP_ZERO |
-| 225 |       target: ADD_ZERO_BOUNDARY |
-| 226 |       status_after: formal_math_fact / derived_constraint |
-| 227 |     - id: SP_U8 |
-| 228 |       target: U_08 |
-| 229 |       status_after: candidate_with_operational_gate |
-| 230 |     - id: SP_U9 |
-| 231 |       target: U_09 |
-| 232 |       status_after: FTS_candidate |
-| 233 |     - id: SP_U12 |
-| 234 |       target: U_12 |
-| 235 |       status_after: candidate_requires_formalization + canonical_alignment |
-| 236 |   not_promoted: |
-| 237 |     - e^pi remains FTS_candidate |
-| 238 |     - e^(i*pi)+1=0 remains analogy_only / low candidate |
-| 239 |     - U13-U17 remain projected_underformalized/speculative |
-| 240 | v11_u7_window_cycles: |
-| 241 |   status: self_contained_patch |
-| 242 |   date: '2026-06-10' |
-| 243 |   core: |
-| 244 |     formula: 'Answer(W)=Close(W,W)' |
-| 245 |     forgetting: 'Forgetting(W)=Close(W,Refuse(W))' |
-| 246 |     math: 'U7_author' |
-| 247 |     m_register: '(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))' |
-| 248 |   boundary_7_8: 'Answer(W)=A != Hyp(W)=A?' |
-| 249 |   agentic_gate: 'K=⟨S,0_S,κ⟩ / T7A-T7C as diagnostic layer, not core essence' |
-| 250 |   chi_square_bridge: |
-| 251 |     formula: 'χ²=Σ((O_i-E_i)^2/E_i)' |
-| 252 |     status: 'U6 statistical diagnostic; bridge to W/0_W, not U7 answer' |
-| 253 |   sheets_changed: |
-| 254 |     - U7_Window_Cycles |
-| 255 |     - ChiSquare_FTS |
-| 256 |     - 03_Уровни_У |
-| 257 |     - 06_Мат_аналогии |
-| 258 |     - 17_Карточки |
-| 259 |     - 18_Граф |
-| 260 | v12_chi_stat_ladder: |
-| 261 |   date: '2026-06-10' |
-| 262 |   status: 'statistical_overlay_candidate' |
-| 263 |   carrier: |
-| 264 |     symbol: 'χ' |
-| 265 |     definition: 'χ_i=(O_i-E_i)/sqrt(E_i); χ=(χ_i)_i' |
-| 266 |     substitution_rule: 'x:=χ, not x:=χ²' |
-| 267 |   strongest_anchor: |
-| 268 |     U6: 'χ*χ=Σχ_i²=χ²' |
-| 269 |   level_readings: |
-| 270 |     U7: '-χ*χ; !=χ*χ; Answer(W)=Close(W,W)' |
-| 271 |     U8: 'sqrt(abs(χ)); Hyp(W)=W[A?]' |
-| 272 |     U9: 'χ*χ*χ only with causal/counterfactual decomposition' |
-| 273 |     U10: 'Compare(E,E_prime,loss,df,Δχ²,ΔR*)' |
-| 274 |     U11: 'Own(W,E,loss,α,protocol)' |
-| 275 |   guardrails: |
-| 276 |     - 'χ² belongs to U6 statistics, not U7 answer' |
-| 277 |     - 'p-value / low χ² does not close W by itself' |
-| 278 |     - 'χ-ladder is an overlay, not replacement of the main FTS ladder' |
-| 279 |     - 'χ³ without causal/counterfactual decomposition is not understanding' |
-| 280 |   sheets_changed: |
-| 281 |     - Chi_Stat_Ladder |
-| 282 |     - 01_Оглавление |
-| 283 |     - 02_Паспорт |
-| 284 |     - 17_Карточки |
-| 285 |     - 18_Граф |
-| 286 |     - 25_Операторы |
-| 287 |     - 33_Validation |
-| 288 |     - 34_Export_jsonl |
-| 289 |     - 35_Export_tsv |
-| 290 |     - 36_Export_yaml |
-| 291 |     - 37_Export_md |
-| 292 |     - 38_Changelog |
-| 293 |     - 40_Reader_View |
-| 294 | v13_complex_branch_overlay: |
-| 295 |   status: candidate_overlay |
-| 296 |   sheets_changed: |
-| 297 |     - Complex_Branch_Overlay |
-| 298 |     - Tensor_Context_Overlay |
-| 299 |     - 01_Оглавление |
-| 300 |     - 02_Паспорт |
-| 301 |     - 17_Карточки |
-| 302 |     - 18_Граф |
-| 303 |     - 25_Операторы |
-| 304 |     - 31_Upper_12_17 |
-| 305 |     - 33_Validation |
-| 306 |     - 34_Export_jsonl |
-| 307 |     - 35_Export_tsv |
-| 308 |     - 36_Export_yaml |
-| 309 |     - 37_Export_md |
-| 310 |     - 38_Changelog |
-| 311 |     - 40_Reader_View |
-| 312 |   complex_overlay: |
-| 313 |     carrier: 'z or chi in C^n; z=r*e^{iθ}' |
-| 314 |     readout: 'Q(χ)=Σ conjugate(χ_i)*χ_i=Σ\|χ_i\|²' |
-| 315 |     rule: 'real square hides sign; complex norm-square hides phase' |
-| 316 |     U6: 'Q(χ) is statistical/quadratic readout' |
-| 317 |     U7: '-Q(χ); y!=Q(χ); Answer(W)=Close(W,W), but phase!=minusA' |
-| 318 |     U8: 'sqrt(z)=±sqrt(r)*e^{iθ/2}; hypothesis as branch question A_k?' |
-| 319 |     U9: 'understanding requires causal/counterfactual model of phase/branch' |
-| 320 |     U10: 'evaluation compares branch/phase/protocol/loss' |
-| 321 |     U11: 'observer/protocol fixes branch' |
-| 322 |     U12: 'Q(χ(π_k))+(y-2)^2=4; if Q>4, outside becomes imaginary branch' |
-| 323 |   tensor_overlay: |
-| 324 |     status: candidate_overlay_10plus |
-| 325 |     rule: 'tensor is multi-index transformation object, not a bigger number' |
-| 326 |     examples: |
-| 327 |       - 'χ_{iα}: residue i in context/protocol α' |
-| 328 |       - 'T_{ijαβ}: transfer/coupling between residues and contexts' |
-| 329 |       - 'G_{ij}, L_{αβ}: metric/loss tensors for evaluation' |
-| 330 |   guardrails: |
-| 331 |     - 'phase != −A' |
-| 332 |     - 'complex number != self-reference' |
-| 333 |     - 'branch access != Lift by itself' |
-| 334 |     - 'Q(χ) belongs to U6 readout, not U7 answer' |
-| 335 |     - 'array != tensor unless transformation law is specified' |
-| 336 |     - 'more indices != higher level' |
+| 209 |   - {"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "internal_ref": "USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS", "depends_on": [], "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "tags": ["window_grouping", "research_index", "interlevel", "scoped_evidence"], "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "id": "WINDOW_GROUPINGS", "type": "research_index", "title": "Группировки окон: карточки, находки и открытые вопросы", "symbol": "WindowGroupings", "status": "candidate_research_index", "text": "Исследовательский указатель группировок окон: связывает принятые конечные семейства троек, пятёрок и семёрок с отдельно адресованными арифметическими окнами 13/25, моделями знаков, совместным наблюдением, геометрией круга и открытыми вопросами. Области и статусы каждой находки сохраняются; индекс не вводит новый закон окон. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md", "path": "17_Карточки/WINDOW_GROUPINGS", "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md", "family_card_ids": ["AC_20261003_WINDOW_FAMILIES", "AC_20261003_WINDOWS_TRIPLES", "AC_20261003_WINDOWS_FIVES", "AC_20261003_WINDOWS_SEVENS"], "grouping_card_ids": ["WINDOW_GROUPING_13", "WINDOW_GROUPING_25"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_NODE_INNER_NONUNIQUE", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "distinction_card_ids": ["ADD_MIRROR_WINDOW", "SP_WINDOW", "U7_WINDOW_CORE"], "open_obligations": ["Определить роли семейств окон и перевод арифметических действий в операции ФТС.", "Установить доступность совместного удержания относительного знака до проекции."]} |
+| 210 |   - {"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "internal_ref": "USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS", "depends_on": [], "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "tags": ["window_grouping", "research_index", "interlevel", "scoped_evidence"], "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "id": "WINDOW_GROUPING_13", "type": "window_grouping", "title": "Окно длины 13: шаг 12 и связанные модели", "symbol": "length=13; step=12; G=V4", "status": "candidate_math_overlay", "text": "Исследовательское окно длины 13, шаг 12: группа обратимых остатков V4, 2 двоичных корневых признака; введённое R-продолжение имеет размерность 4. Сравниваются модели T4, C4, H4, S4, N4; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md", "path": "17_Карточки/WINDOW_GROUPING_13", "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md", "parent_card_id": "WINDOW_GROUPINGS", "window_length": 13, "arithmetic_step": 12, "residue_units": [1, 5, 7, 11], "group_structure": "V4", "root_discriminants": [-1, -3], "bit_count": 2, "candidate_real_dimension": 4, "model_ids": ["T4", "C4", "H4", "S4", "N4"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_NODE_INNER_NONUNIQUE", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "mathematical_scope": "declared finite model and carrier only; no full FTS compatibility claim", "open_obligations": ["Задать исполнимые действия ФТС и наблюдение до выбора алгебры.", "Обосновать различающий результат повтора, порядка или группировки из смысла ФТС."]} |
+| 211 |   - {"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "internal_ref": "USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS", "depends_on": [], "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "tags": ["window_grouping", "research_index", "interlevel", "scoped_evidence"], "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "id": "WINDOW_GROUPING_25", "type": "window_grouping", "title": "Окно длины 25: шаг 24 и связанные модели", "symbol": "length=25; step=24; G=(Z/2)^3", "status": "candidate_math_overlay", "text": "Исследовательское окно длины 25, шаг 24: группа обратимых остатков (Z/2)^3, 3 двоичных корневых признака; введённое R-продолжение имеет размерность 8. Сравниваются модели T8, B8, O8; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md", "path": "17_Карточки/WINDOW_GROUPING_25", "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md", "parent_card_id": "WINDOW_GROUPINGS", "window_length": 25, "arithmetic_step": 24, "residue_units": [1, 5, 7, 11, 13, 17, 19, 23], "group_structure": "(Z/2)^3", "root_discriminants": [-1, -3, -2], "bit_count": 3, "candidate_real_dimension": 8, "model_ids": ["T8", "B8", "O8"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "mathematical_scope": "declared finite model and carrier only; no full FTS compatibility claim", "open_obligations": ["Задать исполнимые действия ФТС и наблюдение до выбора алгебры.", "Обосновать различающий результат повтора, порядка или группировки из смысла ФТС."]} |
+| 212 | addendum_v3: |
+| 213 |   id: ADDENDUM_V3 |
+| 214 |   status: candidate_requires_formalization |
+| 215 |   embedded_in: ['43_Добавка_v3','19_Канон_текст'] |
+| 216 |   main_additions: ['mirror_window','zero_boundary','parity_topology','U11_e_pi','U12_circle','research_export'] |
+| 217 | research_export: |
+| 218 |   primary: FTS_research_v8.md |
+| 219 |   sidecars: ['fts_cards_research_v8.jsonl','fts_triples_research_v8.tsv','FTS_research_v8.yaml'] |
+| 220 | v9_status_promotion: |
+| 221 |   status: self_contained_status_patch |
+| 222 |   date: 2026-06-09 |
+| 223 |   promoted: |
+| 224 |     - id: SP_WINDOW |
+| 225 |       target: ADD_MIRROR_WINDOW |
+| 226 |       status_after: derived_constraint |
+| 227 |     - id: SP_ZERO |
+| 228 |       target: ADD_ZERO_BOUNDARY |
+| 229 |       status_after: formal_math_fact / derived_constraint |
+| 230 |     - id: SP_U8 |
+| 231 |       target: U_08 |
+| 232 |       status_after: candidate_with_operational_gate |
+| 233 |     - id: SP_U9 |
+| 234 |       target: U_09 |
+| 235 |       status_after: FTS_candidate |
+| 236 |     - id: SP_U12 |
+| 237 |       target: U_12 |
+| 238 |       status_after: candidate_requires_formalization + canonical_alignment |
+| 239 |   not_promoted: |
+| 240 |     - e^pi remains FTS_candidate |
+| 241 |     - e^(i*pi)+1=0 remains analogy_only / low candidate |
+| 242 |     - U13-U17 remain projected_underformalized/speculative |
+| 243 | v11_u7_window_cycles: |
+| 244 |   status: self_contained_patch |
+| 245 |   date: '2026-06-10' |
+| 246 |   core: |
+| 247 |     formula: 'Answer(W)=Close(W,W)' |
+| 248 |     forgetting: 'Forgetting(W)=Close(W,Refuse(W))' |
+| 249 |     math: 'U7_author' |
+| 250 |     m_register: '(((a=b) and (a!=b)) and ((a=b) or (a!=b))) or (((a=b) and (a!=b)) or ((a=b) or (a!=b)))' |
+| 251 |   boundary_7_8: 'Answer(W)=A != Hyp(W)=A?' |
+| 252 |   agentic_gate: 'K=⟨S,0_S,κ⟩ / T7A-T7C as diagnostic layer, not core essence' |
+| 253 |   chi_square_bridge: |
+| 254 |     formula: 'χ²=Σ((O_i-E_i)^2/E_i)' |
+| 255 |     status: 'U6 statistical diagnostic; bridge to W/0_W, not U7 answer' |
+| 256 |   sheets_changed: |
+| 257 |     - U7_Window_Cycles |
+| 258 |     - ChiSquare_FTS |
+| 259 |     - 03_Уровни_У |
+| 260 |     - 06_Мат_аналогии |
+| 261 |     - 17_Карточки |
+| 262 |     - 18_Граф |
+| 263 | v12_chi_stat_ladder: |
+| 264 |   date: '2026-06-10' |
+| 265 |   status: 'statistical_overlay_candidate' |
+| 266 |   carrier: |
+| 267 |     symbol: 'χ' |
+| 268 |     definition: 'χ_i=(O_i-E_i)/sqrt(E_i); χ=(χ_i)_i' |
+| 269 |     substitution_rule: 'x:=χ, not x:=χ²' |
+| 270 |   strongest_anchor: |
+| 271 |     U6: 'χ*χ=Σχ_i²=χ²' |
+| 272 |   level_readings: |
+| 273 |     U7: '-χ*χ; !=χ*χ; Answer(W)=Close(W,W)' |
+| 274 |     U8: 'sqrt(abs(χ)); Hyp(W)=W[A?]' |
+| 275 |     U9: 'χ*χ*χ only with causal/counterfactual decomposition' |
+| 276 |     U10: 'Compare(E,E_prime,loss,df,Δχ²,ΔR*)' |
+| 277 |     U11: 'Own(W,E,loss,α,protocol)' |
+| 278 |   guardrails: |
+| 279 |     - 'χ² belongs to U6 statistics, not U7 answer' |
+| 280 |     - 'p-value / low χ² does not close W by itself' |
+| 281 |     - 'χ-ladder is an overlay, not replacement of the main FTS ladder' |
+| 282 |     - 'χ³ without causal/counterfactual decomposition is not understanding' |
+| 283 |   sheets_changed: |
+| 284 |     - Chi_Stat_Ladder |
+| 285 |     - 01_Оглавление |
+| 286 |     - 02_Паспорт |
+| 287 |     - 17_Карточки |
+| 288 |     - 18_Граф |
+| 289 |     - 25_Операторы |
+| 290 |     - 33_Validation |
+| 291 |     - 34_Export_jsonl |
+| 292 |     - 35_Export_tsv |
+| 293 |     - 36_Export_yaml |
+| 294 |     - 37_Export_md |
+| 295 |     - 38_Changelog |
+| 296 |     - 40_Reader_View |
+| 297 | v13_complex_branch_overlay: |
+| 298 |   status: candidate_overlay |
+| 299 |   sheets_changed: |
+| 300 |     - Complex_Branch_Overlay |
+| 301 |     - Tensor_Context_Overlay |
+| 302 |     - 01_Оглавление |
+| 303 |     - 02_Паспорт |
+| 304 |     - 17_Карточки |
+| 305 |     - 18_Граф |
+| 306 |     - 25_Операторы |
+| 307 |     - 31_Upper_12_17 |
+| 308 |     - 33_Validation |
+| 309 |     - 34_Export_jsonl |
+| 310 |     - 35_Export_tsv |
+| 311 |     - 36_Export_yaml |
+| 312 |     - 37_Export_md |
+| 313 |     - 38_Changelog |
+| 314 |     - 40_Reader_View |
+| 315 |   complex_overlay: |
+| 316 |     carrier: 'z or chi in C^n; z=r*e^{iθ}' |
+| 317 |     readout: 'Q(χ)=Σ conjugate(χ_i)*χ_i=Σ\|χ_i\|²' |
+| 318 |     rule: 'real square hides sign; complex norm-square hides phase' |
+| 319 |     U6: 'Q(χ) is statistical/quadratic readout' |
+| 320 |     U7: '-Q(χ); y!=Q(χ); Answer(W)=Close(W,W), but phase!=minusA' |
+| 321 |     U8: 'sqrt(z)=±sqrt(r)*e^{iθ/2}; hypothesis as branch question A_k?' |
+| 322 |     U9: 'understanding requires causal/counterfactual model of phase/branch' |
+| 323 |     U10: 'evaluation compares branch/phase/protocol/loss' |
+| 324 |     U11: 'observer/protocol fixes branch' |
+| 325 |     U12: 'Q(χ(π_k))+(y-2)^2=4; if Q>4, outside becomes imaginary branch' |
+| 326 |   tensor_overlay: |
+| 327 |     status: candidate_overlay_10plus |
+| 328 |     rule: 'tensor is multi-index transformation object, not a bigger number' |
+| 329 |     examples: |
+| 330 |       - 'χ_{iα}: residue i in context/protocol α' |
+| 331 |       - 'T_{ijαβ}: transfer/coupling between residues and contexts' |
+| 332 |       - 'G_{ij}, L_{αβ}: metric/loss tensors for evaluation' |
+| 333 |   guardrails: |
+| 334 |     - 'phase != −A' |
+| 335 |     - 'complex number != self-reference' |
+| 336 |     - 'branch access != Lift by itself' |
+| 337 |     - 'Q(χ) belongs to U6 readout, not U7 answer' |
+| 338 |     - 'array != tensor unless transformation law is specified' |
+| 339 |     - 'more indices != higher level' |
 
 #### Sheet 37: `37_Export_md`
 
@@ -33636,6 +33671,7 @@ Cards: 169. Triples: 378. Sheets: 54.
 | v13_active_integrated_2026-10-03 | 2026-10-03 | author_integration_register_repair | Integrate AC-2026-10-03 window families and restore separate U7 mathematical and logical constraints; preserve AC-2026-09-21 and existing evidence statuses. | 17/18/34/35/36 and active renderings | active |
 | v13_active_graph_reconciled_2026-10-03 | 2026-10-03 | graph_dependency_reference_reconciliation | Reconcile all scoped dependencies and exact aliases; type application, operator and analogy links; preserve formulas, IDs, statuses and original source provenance. Decisions: work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md. | 17/18/34/35/36 and active renderings | active |
 | v13_active_logic_provenance_2026-10-03 | 2026-10-03 | author_provenance_and_adoption_correction | Author clarification: A1/A3 are possible external logical supplements; C_n and A5/A5a are assistant-proposed formalization, not author-adopted axioms. Four card types/statuses/provenance and four relations corrected; unrelated cards and mathematical predicates retained. | 17/18/34/35/36 and active renderings | active |
+| v13_window_grouping_cards_2026-10-07 | 2026-10-07 | candidate_window_grouping_cards | Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained. | 17/18/34/35/36 and active renderings | active |
 
 #### Sheet 39: `39_Status_Dict`
 
@@ -34227,6 +34263,9 @@ Cards: 169. Triples: 378. Sheets: 54.
 {"id": "AC_20261003_WINDOWS_TRIPLES", "type": "window_family", "title": "Окна длины 3: авторский перечень", "symbol": "(-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11)", "text": "Точный конечный авторский перечень: (-1,0,1)(1,2,3)(3,4,5)(5,6,7)(7,8,9)(9,10,11). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.", "windows": [[-1, 0, 1], [1, 2, 3], [3, 4, 5], [5, 6, 7], [7, 8, 9], [9, 10, 11]], "window_length": 3, "depends_on": ["AC_20261003_WINDOW_FAMILIES"], "tags": ["author_amendment", "window_family"], "path": "17_Карточки/AC_20261003_WINDOWS_TRIPLES", "status": "author_canonical_amendment", "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"}
 {"id": "AC_20261003_WINDOWS_FIVES", "type": "window_family", "title": "Окна длины 5: авторский перечень", "symbol": "(-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15)", "text": "Точный конечный авторский перечень: (-1,0,1,2,3)(3,4,5,6,7)(7,8,9,10,11)(11,12,13,14,15). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.", "windows": [[-1, 0, 1, 2, 3], [3, 4, 5, 6, 7], [7, 8, 9, 10, 11], [11, 12, 13, 14, 15]], "window_length": 5, "depends_on": ["AC_20261003_WINDOW_FAMILIES"], "tags": ["author_amendment", "window_family"], "path": "17_Карточки/AC_20261003_WINDOWS_FIVES", "status": "author_canonical_amendment", "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"}
 {"id": "AC_20261003_WINDOWS_SEVENS", "type": "window_family", "title": "Окна длины 7: авторский перечень", "symbol": "(-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17)", "text": "Точный конечный авторский перечень: (-1,0,1,2,3,4,5)(5,6,7,8,9,10,11)(11,12,13,14,15,16,17). Пересечение окон само по себе не задаёт узел-носитель или обратную связь; продолжение за перечень не утверждается.", "windows": [[-1, 0, 1, 2, 3, 4, 5], [5, 6, 7, 8, 9, 10, 11], [11, 12, 13, 14, 15, 16, 17]], "window_length": 7, "depends_on": ["AC_20261003_WINDOW_FAMILIES"], "tags": ["author_amendment", "window_family"], "path": "17_Карточки/AC_20261003_WINDOWS_SEVENS", "status": "author_canonical_amendment", "author_status": "accepted_into_author_canon", "evidence_status": "author_adopted_formal_semantics_not_given", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt"}
+{"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "internal_ref": "USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS", "depends_on": [], "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "tags": ["window_grouping", "research_index", "interlevel", "scoped_evidence"], "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "id": "WINDOW_GROUPINGS", "type": "research_index", "title": "Группировки окон: карточки, находки и открытые вопросы", "symbol": "WindowGroupings", "status": "candidate_research_index", "text": "Исследовательский указатель группировок окон: связывает принятые конечные семейства троек, пятёрок и семёрок с отдельно адресованными арифметическими окнами 13/25, моделями знаков, совместным наблюдением, геометрией круга и открытыми вопросами. Области и статусы каждой находки сохраняются; индекс не вводит новый закон окон. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md", "path": "17_Карточки/WINDOW_GROUPINGS", "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md", "family_card_ids": ["AC_20261003_WINDOW_FAMILIES", "AC_20261003_WINDOWS_TRIPLES", "AC_20261003_WINDOWS_FIVES", "AC_20261003_WINDOWS_SEVENS"], "grouping_card_ids": ["WINDOW_GROUPING_13", "WINDOW_GROUPING_25"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_NODE_INNER_NONUNIQUE", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "distinction_card_ids": ["ADD_MIRROR_WINDOW", "SP_WINDOW", "U7_WINDOW_CORE"], "open_obligations": ["Определить роли семейств окон и перевод арифметических действий в операции ФТС.", "Установить доступность совместного удержания относительного знака до проекции."]}
+{"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "internal_ref": "USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS", "depends_on": [], "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "tags": ["window_grouping", "research_index", "interlevel", "scoped_evidence"], "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "id": "WINDOW_GROUPING_13", "type": "window_grouping", "title": "Окно длины 13: шаг 12 и связанные модели", "symbol": "length=13; step=12; G=V4", "status": "candidate_math_overlay", "text": "Исследовательское окно длины 13, шаг 12: группа обратимых остатков V4, 2 двоичных корневых признака; введённое R-продолжение имеет размерность 4. Сравниваются модели T4, C4, H4, S4, N4; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md", "path": "17_Карточки/WINDOW_GROUPING_13", "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md", "parent_card_id": "WINDOW_GROUPINGS", "window_length": 13, "arithmetic_step": 12, "residue_units": [1, 5, 7, 11], "group_structure": "V4", "root_discriminants": [-1, -3], "bit_count": 2, "candidate_real_dimension": 4, "model_ids": ["T4", "C4", "H4", "S4", "N4"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_NODE_INNER_NONUNIQUE", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "mathematical_scope": "declared finite model and carrier only; no full FTS compatibility claim", "open_obligations": ["Задать исполнимые действия ФТС и наблюдение до выбора алгебры.", "Обосновать различающий результат повтора, порядка или группировки из смысла ФТС."]}
+{"version": "WG-2026-10-07", "register": "A", "base_release": "v13_active_logic_provenance_2026-10-03", "author_status": "organization_requested; semantic_candidates_not_accepted", "formulation_origin": "assistant_research_registry; user_requested_organization", "evidence_status": "existing_scoped_evidence; no_new_math_or_FTS_promotion", "internal_ref": "USER_DIALOGUE_2026-10-07_WINDOW_GROUPINGS", "depends_on": [], "provenance": {"date": "2026-10-07", "request_quote": "Мне кажется, нужно завести отдельную карточки по группировкам окон, и привязать к ним всё интересное что мы нашли.", "request_scope": "create grouping cards and link existing research", "status_effect": "new candidate records; existing St_math/St_FTS unchanged"}, "tags": ["window_grouping", "research_index", "interlevel", "scoped_evidence"], "open_questions": ["oq-window-family-roles", "oq-window-node-conjugation-origin", "oq-u6-u7-compositional-semantics"], "local_forbid": ["Не отождествлять длину окна, арифметический шаг, номер уровня и размерность алгебры.", "Не считать тематическую связь доказательством или повышением St_FTS.", "Не отождествлять арифметический минус, сопряжение, поворот и анти-моду ⊖."], "id": "WINDOW_GROUPING_25", "type": "window_grouping", "title": "Окно длины 25: шаг 24 и связанные модели", "symbol": "length=25; step=24; G=(Z/2)^3", "status": "candidate_math_overlay", "text": "Исследовательское окно длины 25, шаг 24: группа обратимых остатков (Z/2)^3, 3 двоичных корневых признака; введённое R-продолжение имеет размерность 8. Сравниваются модели T8, B8, O8; знак, порядок и скобки проверяются до и после объявленного наблюдения. Выбор модели и связь с операциями ФТС остаются кандидатными. Паспорт: work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md", "path": "17_Карточки/WINDOW_GROUPING_25", "source": "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md", "parent_card_id": "WINDOW_GROUPINGS", "window_length": 25, "arithmetic_step": 24, "residue_units": [1, 5, 7, 11, 13, 17, 19, 23], "group_structure": "(Z/2)^3", "root_discriminants": [-1, -3, -2], "bit_count": 3, "candidate_real_dimension": 8, "model_ids": ["T8", "B8", "O8"], "related_claims": ["WINDOW_SIGN_INTERFACE_UNDEFINED", "WINDOW_SIGN_SHADOW_INVARIANT", "WINDOW_SIGN_MODELS_INEQUIVALENT", "WINDOW_RELATIVE_SIGN_PROBE", "WINDOW_CIRCLE_CANDIDATE"], "related_evidence": ["window_sign_local", "window_sign_separate", "window_sign_wolfram_attempt", "window_relative_sign_local", "window_relative_sign_wf107", "window_circle_local", "window_circle_wf108"], "mathematical_scope": "declared finite model and carrier only; no full FTS compatibility claim", "open_obligations": ["Задать исполнимые действия ФТС и наблюдение до выбора алгебры.", "Обосновать различающий результат повтора, порядка или группировки из смысла ФТС."]}
 ~~~~
 
 ### 10.2. Канонические триплеты TSV
@@ -34613,4 +34652,10 @@ TENSOR_LADDER_U11	depends_on	U_11
 TENSOR_LADDER_U11	depends_on	TENSOR_LADDER_U10
 TENSOR_LADDER_U12	depends_on	U_12
 TENSOR_LADDER_U12	depends_on	U12_CHI_PI_COMPLEX_BOUNDARY
+WINDOW_GROUPINGS	contains	AC_20261003_WINDOW_FAMILIES
+WINDOW_GROUPINGS	contains	AC_20261003_WINDOWS_TRIPLES
+WINDOW_GROUPINGS	contains	AC_20261003_WINDOWS_FIVES
+WINDOW_GROUPINGS	contains	AC_20261003_WINDOWS_SEVENS
+WINDOW_GROUPINGS	contains	WINDOW_GROUPING_13
+WINDOW_GROUPINGS	contains	WINDOW_GROUPING_25
 ~~~~
