@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Проверки G60-01…G60-23 к GROUPED_OPEN_2026-10-08.md (кандидаты ассистента).
+"""Проверки G60-01…G60-28 к GROUPED_OPEN_2026-10-08.md (кандидаты ассистента).
 
 Предсказания записаны в docstring каждой проверки до первого запуска.
 Проверяют только математические факты; смысл уровней (СУ) не устанавливают.
@@ -94,7 +94,9 @@ def g02_resolvent():
     from sympy.combinatorics.named_groups import SymmetricGroup
     S4 = SymmetricGroup(4)
     V4 = PermutationGroup([Permutation([1, 0, 3, 2]), Permutation([2, 3, 0, 1])])
-    normal = V4.is_normal(S4)
+    # нормальность — явным сопряжением: в sympy 1.14 is_normal возвращает True для любой
+    # подгруппы, у которой раньше вычислен is_abelian (V4 абелева)
+    normal = all(a * g * ~a in V4.elements for a in S4.elements for g in V4.elements)
     order = S4.order() // V4.order()
     # неабелевость фактора: найдётся пара с коммутатором вне V4
     nonab = any(not V4.contains(a * b * (~a) * (~b)) for a in S4.elements for b in S4.elements)
@@ -440,12 +442,135 @@ def g23_node_groups():
           f"след {{−1,1}} {c3}; масштаб ∩ поворот = {{1}} {d1}")
 
 
+def g24_roots_of_unity_trace():
+    """G60-24. Предсказание: вещественный след группы корней n-й степени μ_n равен {1} при
+    нечётном n и {−1, 1} при чётном; значит Z/3 не содержит знакового бита, Z/2, Z/4, Z/6, Z/8
+    содержат. Конечные подгруппы U(1) — ровно μ_n (внешнее), здесь проверяется только след."""
+    ok = True
+    traces = {}
+    for n in range(1, 13):
+        roots = [sp.exp(2 * sp.pi * sp.I * k / n) for k in range(n)]
+        real = {sp.nsimplify(sp.re(z)) for z in roots if sp.simplify(sp.im(z)) == 0}
+        traces[n] = real
+        ok &= real == ({1} if n % 2 else {-1, 1})
+    check("G60-24", ok, f"след μ_3 = {traces[3]}, μ_4 = {traces[4]}, μ_6 = {traces[6]}, μ_8 = {traces[8]}")
+
+
+def g25_dft_diagonalizes_shift():
+    """G60-25. Предсказание: дискретное преобразование Фурье F_n диагонализует циклический сдвиг
+    на Z/n с собственными числами ζ^k; при n=2 F_2 — матрица Адамара H, сдвиг — перестановка σ
+    пары, и HσH⁻¹ = diag(1, −1) (совпадает с G60-13)."""
+    import cmath
+    ok = True
+    for n in range(2, 9):
+        z = cmath.exp(-2j * cmath.pi / n)
+        F = [[z**(a * b) for b in range(n)] for a in range(n)]
+        Finv = [[(z**(a * b)).conjugate() / n for b in range(n)] for a in range(n)]
+        S = [[1 if a == (b + 1) % n else 0 for b in range(n)] for a in range(n)]
+        mul = lambda A, B: [[sum(A[a][c] * B[c][b] for c in range(n)) for b in range(n)] for a in range(n)]
+        D = mul(mul(F, S), Finv)
+        ok &= all(abs(D[a][b] - (z**a if a == b else 0)) < 1e-12 for a in range(n) for b in range(n))
+    H = sp.Matrix([[1, 1], [1, -1]])
+    F2 = sp.Matrix(2, 2, lambda j, k: (-1)**(j * k))
+    sig = sp.Matrix([[0, 1], [1, 0]])
+    ok = ok and F2 == H and H * sig * H.inv() == sp.diag(1, -1)
+    check("G60-25", ok, "F_n S F_n⁻¹ = diag(ζ^k) при n=2…8; F_2 = H, HσH⁻¹ = diag(1,−1)")
+
+
+def g26_galois_mu8():
+    """G60-26. Предсказание: y⁴ − x² над Q(x) раскладывается как (y²−x)(y²+x); корни √x·{1,−1,i,−i};
+    резольвента-кубика z³ + 4x²z имеет корни 0, ±2ix (один рациональный). Поле разложения
+    Q(x)(√x, i) имеет степень 4: при t = √x многочлен y⁴ − t⁴ над Q(t) = (y−t)(y+t)(y²+t²), и y²+t²
+    неприводим, то есть i ∉ Q(t). Значит группа Галуа порядка 4 и порождена √x↦−√x (поворот корней
+    на π) и i↦−i (сопряжение, отражение); на корнях (√x, −√x, i√x, −i√x) это {e, (01)(23), (23), (01)}.
+    Это не нормальная V4 из S4; её образ в S4/V4 ≅ S3 имеет порядок 2, а не 6. Поворота на четверть
+    оборота r ↦ i·r в группе нет: он переводил бы √x в i√x, а x = (√x)² в −x."""
+    from sympy.combinatorics import Permutation, PermutationGroup
+    x, y, z, t = sp.symbols('x y z t')
+    fac = sp.factor_list(y**4 - x**2, y)
+    f1 = sorted(str(f) for f, _ in fac[1]) == sorted(['-x + y**2', 'x + y**2'])
+    p, q, r = 0, 0, -x**2
+    cubic = sp.expand(z**3 - p * z**2 - 4 * r * z + (4 * p * r - q**2))
+    f2 = sp.simplify(cubic - (z**3 + 4 * x**2 * z)) == 0 and set(sp.solve(cubic, z)) == {0, 2 * sp.I * x, -2 * sp.I * x}
+    fac_t = sp.factor_list(y**4 - t**4, y)
+    degs = sorted(sp.degree(f, y) for f, _ in fac_t[1])
+    f_deg = degs == [1, 1, 2] and sp.Poly(y**2 + t**2, y).is_irreducible  # i ∉ Q(t) ⇒ [Q(x)(√x,i):Q(x)] = 4
+    G = PermutationGroup([Permutation([1, 0, 3, 2]), Permutation([0, 1, 3, 2])])
+    V = PermutationGroup([Permutation([1, 0, 3, 2]), Permutation([2, 3, 0, 1])])
+    S4 = PermutationGroup([Permutation([1, 0, 2, 3]), Permutation([1, 2, 3, 0])])
+    inter = [g for g in G.elements if g in V.elements]
+    # нормальность — явным сопряжением (см. G60-02)
+    f3 = (G.order() == 4 and G.is_abelian and not G.is_cyclic
+          and not all(a * g * ~a in G.elements for a in S4.elements for g in G.elements))
+    image = G.order() // len(inter)
+    quarter = Permutation([2, 3, 1, 0])  # r ↦ i·r: √x→i√x→−√x→−i√x→√x
+    f4 = quarter not in G.elements and sp.expand((sp.I * t)**2) != t**2
+    ok = f1 and f2 and f_deg and f3 and image == 2 and f4
+    check("G60-26", ok, f"разложение {f1}; кубика z³+4x²z, корни 0, ±2ix {f2}; степень поля 4 {f_deg}; "
+          f"группа порядка 4, не циклическая, не нормальна в S4 {f3}; образ в S3 порядка {image}; "
+          f"четверти оборота в группе нет {f4}")
+
+
+def g27_basis_tradeoff():
+    """G60-27. Предсказание: ни одно из двух чтений пары не доминирует по вопросам одной координаты.
+    В (a,b) одной координатой решаются «a=0», «b=0», «a>0», «b>0», и ни один из них не решается
+    одной координатой s=a+b или d=a−b. В (s,d) одной координатой решаются «a=b», «a=−b», «a>b»,
+    «a+b>0», и ни один не решается одной координатой a или b. Проверка на сетке a, b ∈ {−3…3}."""
+    grid = [(a, b) for a in range(-3, 4) for b in range(-3, 4)]
+    coords = {'a': lambda a, b: a, 'b': lambda a, b: b, 's': lambda a, b: a + b, 'd': lambda a, b: a - b}
+    def decided_by(pred, c):
+        seen = {}
+        for a, b in grid:
+            k = coords[c](a, b)
+            v = pred(a, b)
+            if seen.setdefault(k, v) != v:
+                return False
+        return True
+    q_ab = {'a=0': lambda a, b: a == 0, 'b=0': lambda a, b: b == 0,
+            'a>0': lambda a, b: a > 0, 'b>0': lambda a, b: b > 0}
+    q_sd = {'a=b': lambda a, b: a == b, 'a=-b': lambda a, b: a == -b,
+            'a>b': lambda a, b: a > b, 'a+b>0': lambda a, b: a + b > 0}
+    ab_ok = all(any(decided_by(P, c) for c in 'ab') and not any(decided_by(P, c) for c in 'sd') for P in q_ab.values())
+    sd_ok = all(any(decided_by(P, c) for c in 'sd') and not any(decided_by(P, c) for c in 'ab') for P in q_sd.values())
+    check("G60-27", ab_ok and sd_ok, f"вопросы (a,b) решает одна координата a или b, но не s или d: {ab_ok}; "
+          f"вопросы (s,d) — наоборот: {sd_ok}")
+
+def g28_window_groups_and_roots():
+    """G60-28. Предсказание: столбец «группа» таблицы окон (windows_table.tsv) для окна n есть
+    (Z/(n−1))^× = Gal(Q(ζ_{n−1})/Q) во всех 12 строках; его порядок φ(n−1) — степень кругового поля.
+    Корни единицы в Q(ζ_s) при чётном s — μ_s (внешнее), поэтому поворот порядка k есть в носителе окна n
+    ровно при k | n−1: порядок 4 впервые в окне 5, порядки 3 и 6 — в окне 7, порядок 8 — в окне 9
+    (Q(ζ8), степень 4), затем 17 и 25. В самом столбце «группа» элемента порядка 8 нет ни в одном окне."""
+    from math import gcd
+    from sympy.ntheory import n_order
+    table = {3: [], 5: [2], 7: [2], 9: [2, 2], 11: [4], 13: [2, 2], 15: [6], 17: [2, 4],
+             19: [6], 21: [2, 4], 23: [10], 25: [2, 2, 2]}  # столбец «группа», 2026-10-08
+    def order_profile_units(m):
+        return sorted(n_order(a, m) if m > 1 else 1 for a in range(1, max(m, 2)) if gcd(a, m) == 1)
+    def order_profile_cyclic_product(cs):
+        prof = [1]
+        for c in cs:
+            prof = [(p * q) // gcd(p, q) for p in prof for q in [c // gcd(c, j) for j in range(c)]]
+        return sorted(prof)
+    same = all(order_profile_units(n - 1) == order_profile_cyclic_product(cs) for n, cs in table.items())
+    degree = all(len(order_profile_units(n - 1)) == sp.totient(n - 1) for n in table)
+    W = sorted(table)
+    first = {k: [n for n in W if (n - 1) % k == 0] for k in (3, 4, 6, 8)}
+    no8 = all(8 not in order_profile_units(n - 1) for n in W)
+    ok = (same and degree and first[4][0] == 5 and first[3][0] == 7 and first[6][0] == 7
+          and first[8] == [9, 17, 25] and sp.totient(8) == 4 and no8)
+    check("G60-28", ok, f"столбец «группа» = (Z/(n−1))^× во всех строках: {same}; порядок = φ(n−1): {degree}; "
+          f"поворот порядка 4 впервые в окне {first[4][0]}, 3 и 6 — {first[3][0]}, 8 — в окнах {first[8]}; "
+          f"в столбце «группа» порядка 8 нет: {no8}")
+
 if __name__ == "__main__":
     for f in [g01_chains, g02_resolvent, g03_anharmonic, g04_legendre_2torsion, g05_cross_selection,
               g06_cauchy, g07_cumulants, g08_two, g09_padic, g10_hopf, g11_sierpinski, g12_lawvere,
               g13_hadamard, g14_unit_circle, g15_crystallographic, g16_ratio_forms,
               g17_odd_square, g18_cross_d4_chains, g19_c60_new_mu7, g20_u12_radius,
-              g21_pi_9_to_7, g22_absence_witness, g23_node_groups]:
+              g21_pi_9_to_7, g22_absence_witness, g23_node_groups,
+              g24_roots_of_unity_trace, g25_dft_diagonalizes_shift, g26_galois_mu8, g27_basis_tradeoff,
+              g28_window_groups_and_roots]:
         f()
     n_ok = sum(ok for _, ok, _ in RESULTS)
     print(f"ИТОГО: {n_ok}/{len(RESULTS)} PASS")

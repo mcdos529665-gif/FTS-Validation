@@ -36,7 +36,7 @@
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
-      "sha256": "7d87d761e290cfe702657208c04890d77436a56beba86dd2e7b668a3e2bc2ddb"
+      "sha256": "6e66840077b4605307f879588fd68c0f738e0e080d67defebe1bf6c5dca57011"
     },
     {
       "path": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
@@ -136,7 +136,7 @@
     },
     {
       "path": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "sha256": "bf953b1b33a0055335c5df53807d2a9578d3a3d03a055b91958dcd602d91b970"
+      "sha256": "bcdd2aa168b330a4e34c2e4041da9d88f5c399e6f0be8cea7ad4cd6b20a66cac"
     },
     {
       "path": "work/v14_rebuild/audit/REFERENCE_RESOLUTIONS.tsv",
@@ -9160,7 +9160,7 @@
       "anchor": "oq-8plus-only-refuted",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L382"
+      "source_location": "L387"
     },
     {
       "id": "oq_oq_antitotality_diagonal_preconditions",
@@ -9170,7 +9170,7 @@
       "anchor": "oq-antitotality-diagonal-preconditions",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L556"
+      "source_location": "L582"
     },
     {
       "id": "oq_oq_arity_window_13_14",
@@ -9190,7 +9190,7 @@
       "anchor": "oq-audit-canon-reference-repair",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L471"
+      "source_location": "L497"
     },
     {
       "id": "oq_oq_audit_semantic_repromotion",
@@ -9200,7 +9200,7 @@
       "anchor": "oq-audit-semantic-repromotion",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L468"
+      "source_location": "L494"
     },
     {
       "id": "oq_oq_audit_status_promotions_done",
@@ -9210,7 +9210,7 @@
       "anchor": "oq-audit-status-promotions-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L465"
+      "source_location": "L491"
     },
     {
       "id": "oq_oq_blackwell_canonical_projection",
@@ -9220,7 +9220,7 @@
       "anchor": "oq-blackwell-canonical-projection",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L708"
+      "source_location": "L734"
     },
     {
       "id": "oq_oq_blackwell_u4_u6_witness",
@@ -9230,7 +9230,7 @@
       "anchor": "oq-blackwell-u4-u6-witness",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L705"
+      "source_location": "L731"
     },
     {
       "id": "oq_oq_c83_parity_prediction",
@@ -9240,7 +9240,7 @@
       "anchor": "oq-c83-parity-prediction",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L645"
+      "source_location": "L671"
     },
     {
       "id": "oq_oq_canon_star_fate",
@@ -9250,7 +9250,7 @@
       "anchor": "oq-canon-star-fate",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L349"
+      "source_location": "L354"
     },
     {
       "id": "oq_oq_ce_canon",
@@ -9270,7 +9270,7 @@
       "anchor": "oq-ce-weights-proof",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L307"
+      "source_location": "L312"
     },
     {
       "id": "oq_oq_chi_ladder_done",
@@ -9290,7 +9290,7 @@
       "anchor": "oq-clt-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L447"
+      "source_location": "L462"
     },
     {
       "id": "oq_oq_code_link_vs_leads_to",
@@ -9320,7 +9320,7 @@
       "anchor": "oq-cost-model-scope",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L312"
+      "source_location": "L317"
     },
     {
       "id": "oq_oq_d10_phase_test",
@@ -9330,7 +9330,7 @@
       "anchor": "oq-d10-phase-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L240"
+      "source_location": "L245"
     },
     {
       "id": "oq_oq_d11_branch_bit_test",
@@ -9350,7 +9350,7 @@
       "anchor": "oq-d2-half-overlay",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L371"
+      "source_location": "L376"
     },
     {
       "id": "oq_oq_d2_sign_retrieval_remainder",
@@ -9360,7 +9360,7 @@
       "anchor": "oq-d2-sign-retrieval-remainder",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L388"
+      "source_location": "L393"
     },
     {
       "id": "oq_oq_d4_column_precision",
@@ -9370,7 +9370,7 @@
       "anchor": "oq-d4-column-precision",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L374"
+      "source_location": "L379"
     },
     {
       "id": "oq_oq_ddelta_weights",
@@ -9380,7 +9380,7 @@
       "anchor": "oq-ddelta-weights",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L345"
+      "source_location": "L350"
     },
     {
       "id": "oq_oq_dict_d_completeness",
@@ -9400,7 +9400,7 @@
       "anchor": "oq-divorce-cases-genre",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L450"
+      "source_location": "L465"
     },
     {
       "id": "oq_oq_edgeworth_u9",
@@ -9408,9 +9408,9 @@
       "label": "oq-edgeworth-u9 — Эджворт `x³` ↔ У9-чтение асимметрии (нечётный момент умирает первым, 1/√n). Парк.",
       "layer": "audit",
       "anchor": "oq-edgeworth-u9",
-      "oq_status": "open",
+      "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L460"
+      "source_location": "L475"
     },
     {
       "id": "oq_oq_expectation_speed_fundamentality",
@@ -9460,7 +9460,7 @@
       "anchor": "oq-fourier-questiongain",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L438"
+      "source_location": "L448"
     },
     {
       "id": "oq_oq_full_audit_done",
@@ -9480,7 +9480,7 @@
       "anchor": "oq-graph-dep-sync",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L401"
+      "source_location": "L406"
     },
     {
       "id": "oq_oq_graph_reference_definitions",
@@ -9490,7 +9490,7 @@
       "anchor": "oq-graph-reference-definitions",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L743"
+      "source_location": "L769"
     },
     {
       "id": "oq_oq_kappa_provenance",
@@ -9510,7 +9510,7 @@
       "anchor": "oq-level-specific-absence",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L625"
+      "source_location": "L651"
     },
     {
       "id": "oq_oq_levy_world",
@@ -9520,7 +9520,7 @@
       "anchor": "oq-levy-world",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L458"
+      "source_location": "L473"
     },
     {
       "id": "oq_oq_lift_section_and_category",
@@ -9530,7 +9530,7 @@
       "anchor": "oq-lift-section-and-category",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L722"
+      "source_location": "L748"
     },
     {
       "id": "oq_oq_lift_typing_passport",
@@ -9540,7 +9540,7 @@
       "anchor": "oq-lift-typing-passport",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L719"
+      "source_location": "L745"
     },
     {
       "id": "oq_oq_machine_check_done",
@@ -9560,7 +9560,7 @@
       "anchor": "oq-minimal-windows-projects-to",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L642"
+      "source_location": "L668"
     },
     {
       "id": "oq_oq_mod3_channel_origin",
@@ -9570,7 +9570,7 @@
       "anchor": "oq-mod3-channel-origin",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L638"
+      "source_location": "L664"
     },
     {
       "id": "oq_oq_mprime_audit",
@@ -9580,7 +9580,7 @@
       "anchor": "oq-mprime-audit",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L327"
+      "source_location": "L332"
     },
     {
       "id": "oq_oq_mu8_inverse_vs_rotation",
@@ -9590,7 +9590,7 @@
       "anchor": "oq-mu8-inverse-vs-rotation",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L682"
+      "source_location": "L708"
     },
     {
       "id": "oq_oq_mu9_opposite_inclusion",
@@ -9600,7 +9600,7 @@
       "anchor": "oq-mu9-opposite-inclusion",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L685"
+      "source_location": "L711"
     },
     {
       "id": "oq_oq_mu9_projection_reading",
@@ -9610,7 +9610,7 @@
       "anchor": "oq-mu9-projection-reading",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L696"
+      "source_location": "L722"
     },
     {
       "id": "oq_oq_next_question_principle",
@@ -9620,7 +9620,7 @@
       "anchor": "oq-next-question-principle",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L479"
+      "source_location": "L505"
     },
     {
       "id": "oq_oq_node11_asymmetry",
@@ -9640,7 +9640,7 @@
       "anchor": "oq-number-level-semantic-bridge",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L660"
+      "source_location": "L686"
     },
     {
       "id": "oq_oq_o1_environment_substitution",
@@ -9650,7 +9650,7 @@
       "anchor": "oq-o1-environment-substitution",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L688"
+      "source_location": "L714"
     },
     {
       "id": "oq_oq_o20_missing_benchmark",
@@ -9680,7 +9680,7 @@
       "anchor": "oq-padic-carrier-channel",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L412"
+      "source_location": "L422"
     },
     {
       "id": "oq_oq_parity_witness_done",
@@ -9710,7 +9710,7 @@
       "anchor": "oq-pentad-role-cycle",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L408"
+      "source_location": "L418"
     },
     {
       "id": "oq_oq_phase_causal_u9",
@@ -9740,7 +9740,7 @@
       "anchor": "oq-pn-above-u7",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L628"
+      "source_location": "L654"
     },
     {
       "id": "oq_oq_redteam_dependent_guards",
@@ -9778,9 +9778,9 @@
       "label": "oq-roots-of-unity-z368 — Промежуточные корни единицы `Z/3,Z/6,Z/8` (нить C) — analogy_only; есть ли роль,",
       "layer": "audit",
       "anchor": "oq-roots-of-unity-z368",
-      "oq_status": "open",
+      "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L406"
+      "source_location": "L411"
     },
     {
       "id": "oq_oq_sierpinski_node_11",
@@ -9790,7 +9790,7 @@
       "anchor": "oq-sierpinski-node-11",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L691"
+      "source_location": "L717"
     },
     {
       "id": "oq_oq_sphere_u6_carrier",
@@ -9800,7 +9800,7 @@
       "anchor": "oq-sphere-u6-carrier",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L431"
+      "source_location": "L441"
     },
     {
       "id": "oq_oq_step48_symmetry",
@@ -9810,7 +9810,7 @@
       "anchor": "oq-step48-symmetry",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L651"
+      "source_location": "L677"
     },
     {
       "id": "oq_oq_strict_band_7_export",
@@ -9820,7 +9820,7 @@
       "anchor": "oq-strict-band-7-export",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L354"
+      "source_location": "L359"
     },
     {
       "id": "oq_oq_synthesis_c_assembly",
@@ -9830,7 +9830,7 @@
       "anchor": "oq-synthesis-c-assembly",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L383"
+      "source_location": "L388"
     },
     {
       "id": "oq_oq_systematic_literature_review",
@@ -9880,7 +9880,7 @@
       "anchor": "oq-two-channel-k245",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L630"
+      "source_location": "L656"
     },
     {
       "id": "oq_oq_txp_verif_done",
@@ -9890,7 +9890,7 @@
       "anchor": "oq-txp-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L435"
+      "source_location": "L445"
     },
     {
       "id": "oq_oq_typed_absence_finite_witness",
@@ -9900,7 +9900,7 @@
       "anchor": "oq-typed-absence-finite-witness",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L712"
+      "source_location": "L738"
     },
     {
       "id": "oq_oq_typed_absence_provenance_benchmark",
@@ -9910,7 +9910,7 @@
       "anchor": "oq-typed-absence-provenance-benchmark",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L560"
+      "source_location": "L586"
     },
     {
       "id": "oq_oq_u0_absence_distinction_boundary",
@@ -9930,7 +9930,7 @@
       "anchor": "oq-u0-u7-refinement-protocol",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L495"
+      "source_location": "L521"
     },
     {
       "id": "oq_oq_u12_antimode_authorfix",
@@ -9940,7 +9940,7 @@
       "anchor": "oq-u12-antimode-authorfix",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L236"
+      "source_location": "L241"
     },
     {
       "id": "oq_oq_u12_antimode_gate",
@@ -9960,7 +9960,7 @@
       "anchor": "oq-u12-hyperbolic-antimode-guard",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L676"
+      "source_location": "L702"
     },
     {
       "id": "oq_oq_u12_radius_r",
@@ -9980,7 +9980,7 @@
       "anchor": "oq-u13-boundary-union-op",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L227"
+      "source_location": "L232"
     },
     {
       "id": "oq_oq_u14_jacobi_aggregation",
@@ -9990,7 +9990,7 @@
       "anchor": "oq-u14-jacobi-aggregation",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L674"
+      "source_location": "L700"
     },
     {
       "id": "oq_oq_u14_worlds_agg_op",
@@ -10000,7 +10000,7 @@
       "anchor": "oq-u14-worlds-agg-op",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L230"
+      "source_location": "L235"
     },
     {
       "id": "oq_oq_u16_phase_hyperbolic_pair",
@@ -10010,7 +10010,7 @@
       "anchor": "oq-u16-phase-hyperbolic-pair",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L672"
+      "source_location": "L698"
     },
     {
       "id": "oq_oq_u5_cross_section",
@@ -10020,7 +10020,7 @@
       "anchor": "oq-u5-cross-section",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L607"
+      "source_location": "L633"
     },
     {
       "id": "oq_oq_u6_direction_bit",
@@ -10030,7 +10030,7 @@
       "anchor": "oq-u6-direction-bit",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L623"
+      "source_location": "L649"
     },
     {
       "id": "oq_oq_u6_u7_choice_products",
@@ -10040,7 +10040,7 @@
       "anchor": "oq-u6-u7-choice-products",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L612"
+      "source_location": "L638"
     },
     {
       "id": "oq_oq_u6_u7_compositional_semantics",
@@ -10068,7 +10068,7 @@
       "label": "oq-unit-circle-z15 — Что в единичной границе у комплексного носителя: |z|=1 (узел 15!) —",
       "layer": "audit",
       "anchor": "oq-unit-circle-z15",
-      "oq_status": "open",
+      "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L225"
     },
@@ -10090,7 +10090,7 @@
       "anchor": "oq-vieta-cubic-s3",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L461"
+      "source_location": "L482"
     },
     {
       "id": "oq_oq_window25_sqrt_minus2",
@@ -10100,7 +10100,7 @@
       "anchor": "oq-window25-sqrt-minus2",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L655"
+      "source_location": "L681"
     },
     {
       "id": "oq_oq_window_7_9_irrational_test",
@@ -10110,7 +10110,7 @@
       "anchor": "oq-window-7-9-irrational-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L632"
+      "source_location": "L658"
     },
     {
       "id": "oq_oq_window_family_continuation",
@@ -10120,7 +10120,7 @@
       "anchor": "oq-window-family-continuation",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L737"
+      "source_location": "L763"
     },
     {
       "id": "oq_oq_window_family_roles",
@@ -10130,7 +10130,7 @@
       "anchor": "oq-window-family-roles",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L729"
+      "source_location": "L755"
     },
     {
       "id": "oq_oq_window_intersection_carrier",
@@ -10140,7 +10140,7 @@
       "anchor": "oq-window-intersection-carrier",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L733"
+      "source_location": "L759"
     },
     {
       "id": "oq_oq_window_node_conjugation_origin",
@@ -10150,7 +10150,7 @@
       "anchor": "oq-window-node-conjugation-origin",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L663"
+      "source_location": "L689"
     },
     {
       "id": "oq_oq_windows11_15_quadratic_meaning",
@@ -10160,7 +10160,7 @@
       "anchor": "oq-windows11-15-quadratic-meaning",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L658"
+      "source_location": "L684"
     },
     {
       "id": "oq_oq_witnesses_verif_done",
@@ -10170,7 +10170,7 @@
       "anchor": "oq-witnesses-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L379"
+      "source_location": "L384"
     },
     {
       "id": "oq_oq_zero_classes_chi_e",
@@ -10180,7 +10180,7 @@
       "anchor": "oq-zero-classes-chi-e",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L440"
+      "source_location": "L455"
     },
     {
       "id": "pattern_pa_c01",
