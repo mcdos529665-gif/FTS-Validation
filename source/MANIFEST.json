@@ -1,28 +1,28 @@
 {
-  "package": "v13_window_groupings_completion_2026-10-07",
-  "release_kind": "research_registry_context_completion",
-  "base_release": "v13_window_groupings_context_2026-10-07",
+  "package": "v13_u7_forbid_lifted_2026-10-08b",
+  "release_kind": "integrated_author_amendment_and_register_repair",
+  "base_release": "v13_u7_forbid_lifted_2026-10-08",
   "base_manifest_path": "work/canon_history/v13_complex_branch_overlay_2026-06-11/MANIFEST.json",
-  "canonical_update_date": "2026-10-07",
-  "canonical_update": "Complete three window grouping cards with first distinction, stable levels, structured absence and separately scoped counterweight transfer candidate; preserve statuses and tested predicates.",
+  "canonical_update_date": "2026-10-08",
+  "canonical_update": "МУ7 = |y|=x*x: с 7 противоположность входит в структуру (уточнение автора)",
   "source_workbook": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-10-07T15:07:53.730840Z",
+  "exported_at_utc": "2026-10-08T12:38:19.666234Z",
   "files": [
     {
       "path": "FTS.yaml",
-      "size": 112505,
-      "sha256": "bb07da982632d8c5f8ffe037ee9eeb52691166e54640444f68e372db6d44af18"
+      "size": 113919,
+      "sha256": "9975ce5dd73c91d10daa8c26c599d06078bda0f96be0bcdf94c3baa230abbcad"
     },
     {
       "path": "FTS_v13_LLM_CONTEXT.md",
-      "size": 69287,
-      "sha256": "72d751e8cad710a04405bddcc6c3efa04654fef1b1fe3411fb6952180c5ffbfe"
+      "size": 70537,
+      "sha256": "3aa3535ef572ad4cca29159ad0715c6001853fb32437b6070309546292ff5e7f"
     },
     {
       "path": "FTS_v13_LLM_FULL_DUMP.md",
-      "size": 886043,
-      "sha256": "fb544b19419c2f70532acc7a6e46b1917c2fc73878c569d2e144bb9750818e2b"
+      "size": 890770,
+      "sha256": "62accb4f838f8a3fcf6247ab88b0c2f4c8c01dcbdae54e457683f9f48abd385c"
     },
     {
       "path": "INSTALL.md",
@@ -36,23 +36,23 @@
     },
     {
       "path": "START_HERE.md",
-      "size": 1871,
-      "sha256": "a901c87235ba9dd5581fc8da18f2cd5969d5662f0d5337b3e16f2f1cad97b8b3"
+      "size": 1795,
+      "sha256": "714b7910494b6cfb1dc90855c3544c4c9831bd1cfddfbf34add13ca3e66a5fdc"
     },
     {
       "path": "fts_cards.json",
-      "size": 122590,
-      "sha256": "b905542e23b5de1acb943b754ff5d3233b6bbe8d84f4b880da8a783cb442eda4"
+      "size": 124014,
+      "sha256": "1c4c16f4cd0830306b40aa4eb996c709e33b3fd6aa5ccab353c95cbc65a24e4d"
     },
     {
       "path": "fts_cards.jsonl",
-      "size": 104885,
-      "sha256": "d5e150c4284a2ae26a719180bf404a9d9df2b63663c992d4db9bbedfbecb2500"
+      "size": 106309,
+      "sha256": "e0e92b5fd921373b452bdb072fecbcf5749c16d9f7541760e5aa9c83744e2a0e"
     },
     {
       "path": "fts_cards_table.tsv",
-      "size": 88859,
-      "sha256": "5e89d16e86fdd0a2aafcfc1d0d6386374250d36ad9ca0376bf7e002bbca9c23e"
+      "size": 90283,
+      "sha256": "51d2136cfe19c62ea4fc4c648e654af05ad2b3ab71c6873ed524e1c1b6a0d650"
     },
     {
       "path": "fts_graph_full.tsv",
@@ -66,13 +66,13 @@
     },
     {
       "path": "fts_v13_workbook_sheets.json",
-      "size": 1119218,
-      "sha256": "2835cbb54d7858535a2039e3cce1b289cba30e0edd59d517de4d17c0c2df95e4"
+      "size": 1124164,
+      "sha256": "88c30c0b5986339a154e5ce6d26f88782ef1df2bd0d1aeebb26241d999c59d4e"
     },
     {
       "path": "sheet_index.tsv",
       "size": 1865,
-      "sha256": "c4adb0208c61c80cca3e59f8797dc596cc2b57f8f319a7e0b1570f3fdec9af3b"
+      "sha256": "df898fd3bdce1352e93c543d0eca4dc55eb330bb29ce7bbc38b5fe43e8f210d6"
     }
   ],
   "counts": {
@@ -81,10 +81,10 @@
     "yaml_lines": 339,
     "sheets": 54
   },
-  "base_manifest_sha256": "40f2ddf992f0370080ecffe1df54dd4afbfd7673308781dd8499a9410ae0edec",
-  "base_git_commit": "82d7ad59afc11d1415ee48aa0a26907080f2acaa",
+  "base_manifest_sha256": "0f97002f1e3b4c6703fa3b2c25728a9166c62cb1c76b7b47e590db9e5fd0a167",
+  "base_git_commit": "f31d9c1c5fec3e41be62c7c9ba95dee02d7db46f",
   "source_workbook_status": "historical_input_not_reissued",
-  "active_cards_sha256": "d5e150c4284a2ae26a719180bf404a9d9df2b63663c992d4db9bbedfbecb2500",
+  "active_cards_sha256": "e0e92b5fd921373b452bdb072fecbcf5749c16d9f7541760e5aa9c83744e2a0e",
   "active_triples_sha256": "35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a",
   "merged_parent_commits": [
     "e521e2006cacbd6b91b34377e26bc49bf02bcce6",

@@ -1,6 +1,6 @@
-# FTS active canonical release — v13_window_groupings_completion_2026-10-07
+# FTS active canonical release — v13_u7_forbid_lifted_2026-10-08b
 
-Release date: 2026-10-07. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-08. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 ## Reading rules
@@ -18,7 +18,7 @@ release was produced by a new workbook round-trip.
 
 ## Active changes
 
-Complete three window grouping cards with first distinction, stable levels, structured absence and separately scoped counterweight transfer candidate; preserve statuses and tested predicates.
+МУ7 = |y|=x*x: с 7 противоположность входит в структуру (уточнение автора)
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
@@ -101,10 +101,11 @@ Cards: 172. Triples: 384. Sheets: 54.
 | canonical_node_underformalized_semantics | 3 |
 | canonical_note | 1 |
 | canonical_strict | 24 |
-| derived_constraint | 4 |
+| derived_constraint | 3 |
 | editorial_check | 1 |
 | formal_math_fact / candidate_requires_formalization + canonical_alignment | 1 |
 | formal_math_fact / derived_constraint | 2 |
+| lifted_by_author | 1 |
 | operational_diagnostic_layer | 1 |
 | projected_underformalized | 6 |
 | reserved_overlay | 2 |
@@ -119,8 +120,8 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 | id | status | text |
 | --- | --- | --- |
-| U7_MATH_LOCAL_FORBID | derived_constraint | Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6. |
-| A_07 | candidate_with_operational_gate | А-регистр для У(7): y=-x*x; y!=x*x. Математический аналог сохраняется отдельно от логической формы M_07; мост между регистрами открыт. |
+| U7_MATH_LOCAL_FORBID | lifted_by_author | Запрет снят автором 2026-10-08. Прежнее требование: МУ7 обязан включать local_forbid y=-x*x и y!=x*x; без правой части МУ7 схлопывается в МУ6. Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Различение МУ6/МУ7 теперь держится не запретом, а включением противоположности: МУ6 y=x*x (y!=-x*x), МУ7 \|y\|=x*x. |
+| A_07 | candidate_with_operational_gate | А-регистр (МУ7): \|y\|=x*x, то есть y=-x*x вместе с y=x*x (пара парабол). Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Запрет y!=x*x снят. Отличие от МУ6 (y=x*x): в МУ6 противоположность исключена, в МУ7 входит в структуру. Математический аналог сохраняется отдельно от логической формы M_07 (ЛУ7); мост между регистрами открыт. |
 | U7_LOGIC_GROUPING | derived_constraint | Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму. |
 | AC_20261003_AUTHOR_DECISION | author_canonical_amendment | Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки. |
 | AC_20261003_WINDOW_FAMILIES | author_canonical_amendment | Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню. |

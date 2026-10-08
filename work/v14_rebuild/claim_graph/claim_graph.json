@@ -20,11 +20,11 @@
     },
     {
       "path": "source/FTS_v13_LLM_FULL_DUMP.md",
-      "sha256": "fb544b19419c2f70532acc7a6e46b1917c2fc73878c569d2e144bb9750818e2b"
+      "sha256": "62accb4f838f8a3fcf6247ab88b0c2f4c8c01dcbdae54e457683f9f48abd385c"
     },
     {
       "path": "source/fts_cards.jsonl",
-      "sha256": "d5e150c4284a2ae26a719180bf404a9d9df2b63663c992d4db9bbedfbecb2500"
+      "sha256": "e0e92b5fd921373b452bdb072fecbcf5749c16d9f7541760e5aa9c83744e2a0e"
     },
     {
       "path": "source/fts_triples.tsv",
@@ -32,7 +32,7 @@
     },
     {
       "path": "source/fts_v13_workbook_sheets.json",
-      "sha256": "2835cbb54d7858535a2039e3cce1b289cba30e0edd59d517de4d17c0c2df95e4"
+      "sha256": "88c30c0b5986339a154e5ce6d26f88782ef1df2bd0d1aeebb26241d999c59d4e"
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
@@ -80,7 +80,7 @@
     },
     {
       "path": "work/notation.md",
-      "sha256": "f70ec8e284c179d883524ddcc94144810879f734fd287160972fcca45cbd60fa"
+      "sha256": "dbd661f7469bd54e1829d251f26f6f7e66c04bf3641c5d74426eb9ba2497d9ec"
     },
     {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
@@ -2819,9 +2819,9 @@
     {
       "id": "assessment_u7_math_local_forbid_status",
       "type": "status_assessment",
-      "label": "U7_MATH_LOCAL_FORBID status: derived_constraint",
+      "label": "U7_MATH_LOCAL_FORBID status: lifted_by_author",
       "layer": "canonical_v13",
-      "status_text": "derived_constraint",
+      "status_text": "lifted_by_author",
       "status_axis": "St_FTS",
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
@@ -3638,7 +3638,7 @@
     {
       "id": "card_a_07",
       "type": "card",
-      "label": "y=-x*x; y!=x*x Математический регистр У7",
+      "label": "|y|=x*x  (y=-x*x; y=x*x) Математический регистр У7",
       "layer": "canonical_v13",
       "card_id": "A_07",
       "status": "candidate_with_operational_gate",
@@ -3647,7 +3647,7 @@
         "U7",
         "local_forbid"
       ],
-      "text": "А-регистр для У(7): y=-x*x; y!=x*x. Математический аналог сохраняется отдельно от логической формы M_07; мост между регистрами открыт.",
+      "text": "А-регистр (МУ7): |y|=x*x, то есть y=-x*x вместе с y=x*x (пара парабол). Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Запрет y!=x*x снят. Отличие от МУ6 (y=x*x): в МУ6 противоположность исключена, в МУ7 входит в структуру. Математический аналог сохраняется отдельно от логической формы M_07 (ЛУ7); мост между регистрами открыт.",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:A_07"
     },
@@ -5809,17 +5809,17 @@
     {
       "id": "card_u7_math_local_forbid",
       "type": "card",
-      "label": "y=-x*x; y!=x*x У7: y=-x*x обязан читаться с y!=x*x",
+      "label": "|y|=x*x МУ7: запрет y!=x*x снят; уровень не выражается одной формулой",
       "layer": "canonical_v13",
       "card_id": "U7_MATH_LOCAL_FORBID",
-      "status": "derived_constraint",
+      "status": "lifted_by_author",
       "tags": [
         "U7",
         "math",
         "local_forbid",
         "mirror_window"
       ],
-      "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.",
+      "text": "Запрет снят автором 2026-10-08. Прежнее требование: МУ7 обязан включать local_forbid y=-x*x и y!=x*x; без правой части МУ7 схлопывается в МУ6. Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Различение МУ6/МУ7 теперь держится не запретом, а включением противоположности: МУ6 y=x*x (y!=-x*x), МУ7 |y|=x*x.",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:U7_MATH_LOCAL_FORBID"
     },

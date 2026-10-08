@@ -41,17 +41,17 @@
 | `work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md` | `e7e066c50b50d97f64b53ed7bf59c8e8695ce0e62eebcac37ee51d7224268f16` |
 | `work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md` | `cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b` |
 | `PROJECT_INSTRUCTIONS.md` | `ccab8cae910e7696fb0779496499464cc68edcb522b2757a180a66ea05b6cdb8` |
-| `work/STATE.md` | `06210038b993afef7591af8c486354f27047f8f26d53b6aeb116bd231bd2a004` |
-| `work/notation.md` | `f70ec8e284c179d883524ddcc94144810879f734fd287160972fcca45cbd60fa` |
+| `work/STATE.md` | `9632f9854d1f933e4817745b083bebb6ff701b96f779ee9ebff67274f89705a1` |
+| `work/notation.md` | `dbd661f7469bd54e1829d251f26f6f7e66c04bf3641c5d74426eb9ba2497d9ec` |
 | `work/DOCUMENT_MAP.md` | `18298a5dc1dfd68252d3c6c830ba1fc505eb91242da1ac5bd927f4de1422538c` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
-| `work/DECISIONS.md` | `9ad21f8b288124cbf3108c21fb9859a4376082c58fc2586524ae2829e448880e` |
+| `work/DECISIONS.md` | `817db0945d0733637facdf27940c9376d961b56f12ecef75a55e4a5b3017d515` |
 | `work/OPEN_QUESTIONS.md` | `2f3de47e506129f11dbb660e0495cde06dae17bd446c753b0d90bd6fefd22fa4` |
 | `work/EXTERNAL_CONFLICTS.md` | `0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a` |
 | `work/v14_rebuild/FTS_v14_paper.md` | `665719501c832a62237370099606d863445c3381262e894ac7be43080a6c8f93` |
-| `work/v14_rebuild/FTS_v14_register_map.md` | `710ec5be63957527ec5baae8e43d3040179bdf243152d02d64208c520e28aa12` |
+| `work/v14_rebuild/FTS_v14_register_map.md` | `fc1c82e9367c0fffaada5c92f226e75b840a0253bf6b4b0edb0463b6f27dda9b` |
 | `work/v14_rebuild/status_patch_v14.md` | `f366b4d9534a4090483b45eb2c96720ff702e0a053395f27cda2920eb71d4ed0` |
 | `work/v14_rebuild/red_team_F3.md` | `0ed37c74e2c80ff46d8c292df45539767f636445ba9f8a1d9fa1016cd35a6139` |
 | `work/v14_rebuild/verification_report.md` | `97e8f9c5f158d2942c9ceced6f8c8d36d2dc35a1dae6905f1c022311617267e4` |
@@ -123,10 +123,10 @@
 | `work/v14_rebuild/neural_analogy_2026-09-19/REVIEW.md` | `9d5e0df0301712671d4597d936b2c8893c4b0f7a3fb7387ae0ad2510c5556ec0` |
 | `work/v14_rebuild/neural_analogy_2026-09-19/AUTHOR_MESSAGE.txt` | `63f03b5a4a98232bd431bf6f559e1adcd752eead82f9cf9760c9ed3c144332fe` |
 | `work/v14_rebuild/neural_analogy_2026-09-19/check_examples.py` | `0ec19822598e81717dfe67541a32e0147185675e976746a25a25ee1fd2b6829d` |
-| `source/MANIFEST.json` | `69c241bfb16118eb6fd7279f8f66f17c8c1a20a012be5c582176cd2df7dde3e5` |
-| `source/FTS_v13_LLM_CONTEXT.md` | `72d751e8cad710a04405bddcc6c3efa04654fef1b1fe3411fb6952180c5ffbfe` |
-| `source/FTS_v13_LLM_FULL_DUMP.md` | `fb544b19419c2f70532acc7a6e46b1917c2fc73878c569d2e144bb9750818e2b` |
-| `source/fts_cards.jsonl` | `d5e150c4284a2ae26a719180bf404a9d9df2b63663c992d4db9bbedfbecb2500` |
+| `source/MANIFEST.json` | `f6b88c92166a8101eec094720b7b31f3b0ef4e5296adaab87e87c1d234f79d6e` |
+| `source/FTS_v13_LLM_CONTEXT.md` | `3aa3535ef572ad4cca29159ad0715c6001853fb32437b6070309546292ff5e7f` |
+| `source/FTS_v13_LLM_FULL_DUMP.md` | `62accb4f838f8a3fcf6247ab88b0c2f4c8c01dcbdae54e457683f9f48abd385c` |
+| `source/fts_cards.jsonl` | `e0e92b5fd921373b452bdb072fecbcf5749c16d9f7541760e5aa9c83744e2a0e` |
 | `source/fts_triples.tsv` | `35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a` |
 
 ### 1.3. Краткий рабочий контракт
@@ -776,6 +776,8 @@ scope-ребра и недопустимые адреса. Полный марш
 Обновлено 2026-10-07. Основной каталог: `C:/Users/Mcdos/Desktop/FTS_v13_project`.
 
 #### Текущая работа
+
+- **Нотация и МУ7 (2026-10-08):** ЛУ/СУ/МУ — [notation.md](notation.md); запрет `y≠x²` в МУ7 снят автором (`A_07`, `U7_MATH_LOCAL_FORBID`), релиз `v13_u7_forbid_lifted_2026-10-08`. МУ7 = `|y|=x²`: с 7 противоположность входит в структуру; МУ8 по тому же правилу — `y²=|x|` (кандидат C-76).
 
 - **OQ и варианты через Undermind (2026-10-05):** [разбор](v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md),
   [покрытие 82 входных OQ](v14_rebuild/e5_literature_review/oq_closure_2026-10-05/COVERAGE.tsv).
@@ -2982,7 +2984,7 @@ derived/formal ограничения. Карточки SP_PARITY нет. Нов
 | `M_*` / М-регистр | Минимальная проекция выражения уровня |
 | `CH_*` / Ч-регистр | Частное/операциональное чтение: Dist₃, Select, Agg, Close |
 | А-регистр | Математическая запись/аналог; карта и области — [здесь](v14_rebuild/FTS_v14_register_map.md) |
-| `У(n)`, `U_n` | Уровень; `U_m1` — У(−1) |
+| `У(n)`, `U_n` (устар.) | Уровень без уточнения: читать как `СУn`; для логики писать `ЛУn`, для формул `МУn`; `U_m1` — СУ(−1) |
 | `window` | Прежнее поле окна уровня: пятёрка соседних индексов; новые семейства троек/пятёрок/семёрок адресуются отдельно |
 | `min_window` | Минимальное окно, тройка `(2k−1,2k,2k+1)`: `(-1,0,1)`, `(1,2,3)`, …, `(9,10,11)`; соседние сцеплены в нечётных уровнях; обе системы окон начинаются с −1 (авторская фиксация 2026-10-04; перечень — [AC_20261003_WINDOWS_TRIPLES]) |
 | carrier / pre-carrier | Носитель / предноситель различимости |
@@ -2991,6 +2993,19 @@ derived/formal ограничения. Карточки SP_PARITY нет. Нов
 М-регистр и Ч-регистр читать раздельно. Точные действующие формулы и статусы
 получать по ID из `source/fts_cards.jsonl` через `tools/query.py`.
 Формы У6/У7: [принятая поправка](author_canon/2026-09-21/AMENDMENT.md).
+
+##### Три лестницы: ЛУ, СУ, МУ (авторское правило, 2026-10-08)
+
+Номер уровня без приставки неоднозначен. Писать с приставкой:
+
+| Запись | О чём | Где в каноне |
+|---|---|---|
+| `ЛУn` | логическая лестница: `a=b`, `a≠b`, `∧`, `∨` и т. д. | М-регистр, карточки `M_NN` |
+| `СУn` | семантическая лестница: Информация, Вероятность, Понимание и т. д. | карточки `U_NN` |
+| `МУn` | математическая лестница с формулами: `y=x²`, `y=−x²`, … | А-регистр, [карта](v14_rebuild/FTS_v14_register_map.md) |
+
+Прежние `У(n)`, `U_n`, `M_n`, `A_n` остаются в старых файлах; в новых записях писать ЛУ/СУ/МУ.
+Соответствие: `ЛУn` ≈ `M_NN`, `СУn` ≈ `U_NN`, `МУn` ≈ А-регистр (на уровне 7 — `A_07`).
 
 ##### Обозначения
 
@@ -3049,8 +3064,9 @@ DN-0017–DN-0027: [разбор по каждой записи](v14_rebuild/dia
 
 ##### Active integration (2026-10-03)
 
-U7 mathematical reading: `A_07`, `U7_MATH_LOCAL_FORBID` (`y=-x*x; y!=x*x`).
-The logical grouping obligation is `U7_LOGIC_GROUPING`; logical `M_07` and
+МУ7: `A_07`, `U7_MATH_LOCAL_FORBID` (`|y|=x*x`, то есть `y=-x*x` вместе с `y=x*x`; запрет `y!=x*x` снят автором 2026-10-08,
+МУ7 не выражается одной формулой; прежняя запись 2026-10-03: `y=-x*x; y!=x*x`).
+The logical grouping obligation (ЛУ7) is `U7_LOGIC_GROUPING`; logical `M_07` and
 operational `CH_07` retain their own scopes. The bridge remains open.
 Level window families: [author statement and integration](author_canon/2026-10-03/INTEGRATION.md).
 
@@ -3222,7 +3238,7 @@ rule; он не обращает канонное ребро `has_minimal_expres
 
 ##### 1. Главная карта: лестница × регистры × инварианты
 
-| У | Смысл | М-регистр | Ч-регистр | А-регистр (math) | Чёт. | Правая часть | Нуль |
+| n | СУn (смысл) | ЛУn (М-регистр) | Ч-регистр | МУn (А-регистр, math) | Чёт. | Правая часть | Нуль |
 |---:|---|---|---|---|---|---|---|
 | −1 | Шум | `a≈□` | — | `y≈□` | — | — | — |
 | 0 | Ошибка | `a≠a` | — | `y≠y` | — | `y=−y` | `y=0` |
@@ -3232,7 +3248,7 @@ rule; он не обращает канонное ребро `has_minimal_expres
 | 4 | Вероятность | `(a=b)∧(a≠b)` | Field | `y=\|x\|` | чёт | `y≠−\|x\|` | `x=0` |
 | 5 | Выбор | `(a=b)∨(a≠b)` | `Select` | `y=−\|x\|` | чёт | `y≠\|x\|` | `x=0` |
 | 6 | Статистика | `((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))` | `Aggᵢ(Vᵢ)` | `y=x²` | чёт | `y≠−x²` | `x=0` |
-| 7 | Знание | `(((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))` | `Close(W,W)` | `y=−x²` | чёт | `y≠x²` | `x=0` |
+| 7 | Знание | `(((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b)))` | `Close(W,W)` | `\|y\|=x²`: `y=−x²` и `y=x²` (с 7 противоположность входит в структуру) | чёт | запрет `y≠x²` снят автором 2026-10-08 | `x=0` |
 | 8 | Предположение | `?(V·V)` | `Hyp=W[A?]` | `y=√\|x\|` | чёт | `A?≠A` | `A? unres.` |
 | 9 | Понимание | `Δ·(V·V)` | «почему ветвь» | `y=x³` | нечёт | `y≠−x³` | `x=0` |
 | 10 | Оценка | `Δ²Ц=−Ц` | `Compare` | `y=cos x` | чёт | `Ц≠−Ц вне реш.` | `π/2+πk` |
@@ -3401,6 +3417,13 @@ Sem(U_n) требует M_n как минимальный носитель; M_n 
 Q:  |F|              (величина; склеивает {F,−F})
 R:  F/−F = {+1,−1}   (ветвь; различает; Tot = коллапс Z/2→{1})
 ```
+
+##### Нотация ЛУ/СУ/МУ (2026-10-08)
+
+В шапке таблицы §1: ЛУn — логическая лестница, СУn — семантическая, МУn — математическая
+(определение — [notation.md](../notation.md)). Для МУ7 запрет `y≠x²` снят авторским решением
+2026-10-08: на седьмом уровне уровень нельзя полноценно выразить одной формулой; карточки
+`A_07`, `U7_MATH_LOCAL_FORBID` обновлены. Ниже раздел 2026-10-03 сохранён как история.
 
 ##### Register preservation at integration (2026-10-03)
 
@@ -6854,6 +6877,18 @@ if __name__ == "__main__":
   У17. Проверки фактов C-96…C-99 (`v14_rebuild/verification_c96.py`, 4 PASS).
   Гардрейл «фаза ≠ −A» для чтения «гипербола = Разрыв» не проверен. Подробно —
   `v14_rebuild/addendum_2026-10-04_upper_levels.md`.
+
+- 2026-10-08 — НОТАЦИЯ ЛУ/СУ/МУ И СНЯТИЕ ЗАПРЕТА `y≠x²` В МУ7 (авторское решение). Номер уровня
+  без приставки неоднозначен: ЛУn — логическая лестница (`a=b`, …), СУn — семантическая
+  (Информация, Понимание, …), МУn — математическая (формулы). Автор: на седьмом уровне уровень
+  нельзя полноценно выразить одной формулой; запрет `y≠x²` снят, `y=x²` допустима в МУ7 рядом с
+  `y=−x²` (пара парабол). Карточки `A_07`, `U7_MATH_LOCAL_FORBID` (статус `lifted_by_author`)
+  обновлены, релиз пересобран. Старые записи `У(n)` в массовом порядке не переписаны (3886
+  вхождений, смысл зависит от контекста): переименованы шапки таблицы `FTS_v14_register_map.md`,
+  `notation.md`; остальное — по мере правок. Уточнение автора (2026-10-08, 12:40): до МУ7 противоположная функция исключается из уровня (точно
+  до МУ3), с 7 противоположность (отсутствие) входит в структуру — поэтому МУ7 = `|y|=x²`; отличие от
+  МУ6 — включение противоположности. Следствие для МУ8: полное обращение `|y|=x²` даёт `y²=|x|`, обе
+  ветви `±√|x|`; одна `√|x|` — скрытый выбор главной ветви (как `y=|x|` в кресте МУ4), см. C-76.
 
 ### 6.2. Открытые вопросы
 
@@ -32408,9 +32443,9 @@ if __name__ == "__main__":
 
 ## 8. Компактный контекст канона v13
 
-### FTS active canonical release — v13_window_groupings_completion_2026-10-07
+### FTS active canonical release — v13_u7_forbid_lifted_2026-10-08b
 
-Release date: 2026-10-07. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-08. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 #### Reading rules
@@ -32428,7 +32463,7 @@ release was produced by a new workbook round-trip.
 
 #### Active changes
 
-Complete three window grouping cards with first distinction, stable levels, structured absence and separately scoped counterweight transfer candidate; preserve statuses and tested predicates.
+МУ7 = |y|=x*x: с 7 противоположность входит в структуру (уточнение автора)
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
@@ -32511,10 +32546,11 @@ Cards: 172. Triples: 384. Sheets: 54.
 | canonical_node_underformalized_semantics | 3 |
 | canonical_note | 1 |
 | canonical_strict | 24 |
-| derived_constraint | 4 |
+| derived_constraint | 3 |
 | editorial_check | 1 |
 | formal_math_fact / candidate_requires_formalization + canonical_alignment | 1 |
 | formal_math_fact / derived_constraint | 2 |
+| lifted_by_author | 1 |
 | operational_diagnostic_layer | 1 |
 | projected_underformalized | 6 |
 | reserved_overlay | 2 |
@@ -32529,8 +32565,8 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 | id | status | text |
 | --- | --- | --- |
-| U7_MATH_LOCAL_FORBID | derived_constraint | Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6. |
-| A_07 | candidate_with_operational_gate | А-регистр для У(7): y=-x*x; y!=x*x. Математический аналог сохраняется отдельно от логической формы M_07; мост между регистрами открыт. |
+| U7_MATH_LOCAL_FORBID | lifted_by_author | Запрет снят автором 2026-10-08. Прежнее требование: МУ7 обязан включать local_forbid y=-x*x и y!=x*x; без правой части МУ7 схлопывается в МУ6. Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Различение МУ6/МУ7 теперь держится не запретом, а включением противоположности: МУ6 y=x*x (y!=-x*x), МУ7 \|y\|=x*x. |
+| A_07 | candidate_with_operational_gate | А-регистр (МУ7): \|y\|=x*x, то есть y=-x*x вместе с y=x*x (пара парабол). Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Запрет y!=x*x снят. Отличие от МУ6 (y=x*x): в МУ6 противоположность исключена, в МУ7 входит в структуру. Математический аналог сохраняется отдельно от логической формы M_07 (ЛУ7); мост между регистрами открыт. |
 | U7_LOGIC_GROUPING | derived_constraint | Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму. |
 | AC_20261003_AUTHOR_DECISION | author_canonical_amendment | Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки. |
 | AC_20261003_WINDOW_FAMILIES | author_canonical_amendment | Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню. |
@@ -32806,9 +32842,9 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 ## 9. Полный 54-листовый дамп канона v13
 
-### FTS active canonical release — v13_window_groupings_completion_2026-10-07
+### FTS active canonical release — v13_u7_forbid_lifted_2026-10-08b
 
-Release date: 2026-10-07. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-08. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 #### Reading rules
@@ -32826,7 +32862,7 @@ release was produced by a new workbook round-trip.
 
 #### Active changes
 
-Complete three window grouping cards with first distinction, stable levels, structured absence and separately scoped counterweight transfer candidate; preserve statuses and tested predicates.
+МУ7 = |y|=x*x: с 7 противоположность входит в структуру (уточнение автора)
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
@@ -32877,7 +32913,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | 35 | 35_Export_tsv | A1:B385 | 385 | 2 |
 | 36 | 36_Export_yaml | A1:B340 | 340 | 2 |
 | 37 | 37_Export_md | A1:F31 | 31 | 6 |
-| 38 | 38_Changelog | A1:F20 | 20 | 6 |
+| 38 | 38_Changelog | A1:F22 | 22 | 6 |
 | 39 | 39_Status_Dict | A1:E21 | 21 | 5 |
 | 40 | 40_Reader_View | A1:B12 | 12 | 2 |
 | 41 | 41_Самодостаточность | A1:D9 | 9 | 4 |
@@ -33063,7 +33099,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 | Поле | Значение | Комментарий | Внутренний лист |
 | --- | --- | --- | --- |
-| Версия | v13_window_groupings_completion_2026-10-07 | Active export; historical workbook remains a provenance input. | 38_Changelog |
+| Версия | v13_u7_forbid_lifted_2026-10-08b | Active export; historical workbook remains a provenance input. | 38_Changelog |
 | Дата | 2026-06-10 | America/New_York current session date |  |
 | Назначение | self-contained Excel canon + U7 window cycles + χ statistical + complex branch/tensor overlays | карточки + граф + встроенный канон + U7/χ + complex/tensor overlays | 17–41 + overlays |
 | Статус | candidate replacement; not machine-checked proof | ядро −1..7 сильнее 8+; О(13..20) candidate-модуль | 39_Status_Dict |
@@ -33512,7 +33548,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | U7_FORGET_CLOSE | anti_mode | Забывание как закрытие ожидания отказом от ожидания | Close(W,Refuse(W)) | Забывание: W закрывается Refuse(W), то есть отказом от ожидания; это не простое отсутствие памяти и не честное незнание. | candidate_core | 7+ | anti-mode | USER_DIALOG_V11 + CANON_EN | U7_WINDOW_CORE;OP_Refuse;OP_Sever | U7;forgetting;Refuse;Sever;anti-mode | U7_Window_Cycles/U7_FORGET_CLOSE | Уточняет −A У7 |
 | U7_U8_ANSWER_QUESTION_BOUNDARY | boundary | Граница У7/У8: ответ не вопрос | Answer(W)=A vs Hyp(W)=A? | У7 даёт ответ/закрытие окна; У8 задаёт вопрос/открытие окна. Предположение не является слабым предсказанием. | candidate_boundary | 7-8 | boundary | USER_DIALOG_V11 | U_07;U_08;U7_WINDOW_CORE | U7;U8;answer;question;hypothesis | U7_Window_Cycles/U7_U8_ANSWER_QUESTION_BOUNDARY | A? нельзя выдавать за A |
 | U7_AGENTIC_GATE_LAYER | guardrail | κ/T7 как agentic gate, не сущность У7 | agentic_gate(Answer)=κ/T7A/T7B/T7C | κ, provenance, Refuse/Sever, T7A/T7B/T7C остаются операциональным слоем для агентных/обновляемых реализаций, но не ядром У7. | operational_diagnostic_layer | 7+ | guardrail | CANON_EN + USER_DIALOG_V11 | OP_kappa;T7A;T7B;T7C;U7_WINDOW_CORE | U7;agentic_gate;kappa;T7;guardrail | U7_Window_Cycles/U7_AGENTIC_GATE_LAYER | Снимает перегруз У7 частным воплощением знания |
-| U7_MATH_LOCAL_FORBID | constraint | У7: y=-x*x обязан читаться с y!=x*x | y=-x*x; y!=x*x | Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6. | derived_constraint | 7 | composition | RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 | U_06;SP_WINDOW;SP_ZERO | U7;math;local_forbid;mirror_window | 06_Мат_аналогии/U7 | Группировка является локальной границей |
+| U7_MATH_LOCAL_FORBID | constraint | МУ7: запрет y!=x*x снят; уровень не выражается одной формулой | \|y\|=x*x | Запрет снят автором 2026-10-08. Прежнее требование: МУ7 обязан включать local_forbid y=-x*x и y!=x*x; без правой части МУ7 схлопывается в МУ6. Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Различение МУ6/МУ7 теперь держится не запретом, а включением противоположности: МУ6 y=x*x (y!=-x*x), МУ7 \|y\|=x*x. | lifted_by_author | 7 | composition | RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 + AUTHOR_2026-10-08_LIFT_U7_FORBID | U_06;SP_WINDOW;SP_ZERO | U7;math;local_forbid;mirror_window | 06_Мат_аналогии/U7 | Группировка является локальной границей |
 | CHI_STAT_LADDER | overlay | χ как статистический носитель дополнительной лестницы | x:=χ | Статистический overlay: использовать χ как нормированный остаток ожидания вместо плоского x; χ*χ=χ² даёт сильный аналог У6. | statistical_overlay_candidate | -1..11 | overlay | USER_DIALOG_V12 | OP_ChiCarrier;OP_ChiOverlayMap;OP_ChiSquareDiagnostic | chi;statistics;overlay;expectation_window | Chi_Stat_Ladder/CHI_STAT_LADDER | Не заменяет основной канон; добавляет локальный носитель. |
 | CHI_CARRIER | definition | χ-носитель как нормированный остаток ожидания | χ_i=(O_i-E_i)/sqrt(E_i) | χ_i фиксирует signed/normalized expectation residue; χ=(χ_i)_i сохраняет компонентность до агрегации. | statistical_overlay_candidate | 6→11 | definition | USER_DIALOG_V12 | U_06;U7_WINDOW_CORE | chi;residual;expectation;U6 | Chi_Stat_Ladder/CHI_CARRIER | x:=χ, не x:=χ². |
 | OP_ChiCarrier | operator | Оператор χ-носителя | χ_i=(O_i-E_i)/sqrt(E_i) | Оператор строит χ-носитель из наблюдаемого O_i и ожидаемого E_i; это вход для χ-лестницы. | statistical_overlay_candidate | 6→11 | operator | USER_DIALOG_V12 | OP_ChiSquareDiagnostic | operator;chi;residual | 25_Операторы/OP_ChiCarrier | Сохранять sign/component before χ² aggregation. |
@@ -33541,7 +33577,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | TENSOR_LADDER_U10 | tensor_analog | У10 как тензорная метрика | G_{ij}, L_{αβ} | У10 может сравнивать модели/ветви по нескольким критериям и контекстам. | candidate_overlay | 10 | tensor_ladder | USER_DIALOG_V13 | U_10;OP_TensorContextMap | U10;tensor;evaluation | Tensor_Context_Overlay | criterion explicit. |
 | TENSOR_LADDER_U11 | tensor_analog | У11 как индекс протокола | χ_{iα}; protocol α | У11 включает протокол/наблюдателя как индекс собственного обновления/ответственности. | candidate_overlay | 11 | tensor_ladder | USER_DIALOG_V13 | U_11;TENSOR_LADDER_U10 | U11;tensor;observer | Tensor_Context_Overlay | observer index != truth. |
 | TENSOR_LADDER_U12 | tensor_analog | У12 как тензор контуров | B(χ_{iα},c_β,R_{αβ}) | У12-кандидат может держать несколько контуров конфликт/союз, если задан оператор и закон переноса. | candidate_U12_overlay | 12 | tensor_ladder | USER_DIALOG_V13 | U_12;U12_CHI_PI_COMPLEX_BOUNDARY | U12;tensor;boundary | Tensor_Context_Overlay | not canonical without tests. |
-| A_07 | mathematical_expression | Математический регистр У7 | y=-x*x; y!=x*x | А-регистр для У(7): y=-x*x; y!=x*x. Математический аналог сохраняется отдельно от логической формы M_07; мост между регистрами открыт. | candidate_with_operational_gate |  | A | CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03 | U_06;U7_MATH_LOCAL_FORBID | math;U7;local_forbid | 17_Карточки/A_07 | {"register": "A"} |
+| A_07 | mathematical_expression | Математический регистр У7 | \|y\|=x*x  (y=-x*x; y=x*x) | А-регистр (МУ7): \|y\|=x*x, то есть y=-x*x вместе с y=x*x (пара парабол). Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Запрет y!=x*x снят. Отличие от МУ6 (y=x*x): в МУ6 противоположность исключена, в МУ7 входит в структуру. Математический аналог сохраняется отдельно от логической формы M_07 (ЛУ7); мост между регистрами открыт. | candidate_with_operational_gate |  | A | CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03 + AUTHOR_2026-10-08_LIFT_U7_FORBID | U_06;U7_MATH_LOCAL_FORBID | math;U7;local_forbid | 17_Карточки/A_07 | {"register": "A"} |
 | U7_LOGIC_GROUPING | constraint | У7: вложенная группировка обязательна | U7_author | Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму. | derived_constraint |  | M | AUTHOR_CORRECTION_2026-09-21 + RESEARCH_STATUS_V9 + REGISTER_REPAIR_2026-10-03 | M_07;U_06 | U7;composition;local_forbid | 17_Карточки/U7_LOGIC_GROUPING | {} |
 | AC_20261003_AUTHOR_DECISION | author_decision | Прямая авторская запись семейств окон | AC_20261003_AUTHOR_DECISION | Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки. | author_canonical_amendment |  | author | AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03 |  | author_amendment;window_families | 17_Карточки/AC_20261003_AUTHOR_DECISION | {"version": "AC-2026-10-03", "author_status": "accepted_into_author_canon", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt", "base_release": "v13_complex_branch_overlay", "supersedes_version": null, "evidence_status": "direct_author_statement"} |
 | AC_20261003_WINDOW_FAMILIES | window_family_statement | Семейства окон нечётной длины | AC_20261003_WINDOW_FAMILIES | Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню. | author_canonical_amendment |  | author | AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03 | AC_20261003_AUTHOR_DECISION;U_m1;U_03;U_07;U_11;U_15 | author_amendment;window_families | 17_Карточки/AC_20261003_WINDOW_FAMILIES | {"version": "AC-2026-10-03", "author_status": "accepted_into_author_canon", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt", "base_release": "v13_complex_branch_overlay", "families": {"triples": [[-1, 0, 1], [1, 2, 3], [3, 4, 5], [5, 6, 7], [7, 8, 9], [9, 10, 11]], "fives": [[-1, 0, 1, 2, 3], [3, 4, 5, 6, 7], [7, 8, 9, 10, 11], [11, 12, 13, 14, 15]], "sevens": [[-1, 0, 1, 2, 3, 4, 5], [5, 6, 7, 8, 9, 10, 11], [11, 12, 13, 14, 15, 16, 17]]}, "evidence_status": "author_adopted_formal_semantics_not_given", "local_forbid": ["Не отождествлять окна уровней с зеркальным окном Window(F) и окном ожидания W.", "Не выводить из пересечения окон направленную обратную связь или статус узла-носителя без отдельного определения.", "Не считать перечень продолжением выше указанных окон."], "open_obligations": ["Роль каждого семейства (тройки/пятёрки/семёрки): какая сущность определяется окном и чем семейства различаются по содержанию.", "Соотношение пересечения окон и узла-носителя, включая уровни 1, 5, 9 для троек и 5 для семёрок.", "Правило построения последующих окон."], "integration_record": "work/author_canon/2026-10-03/INTEGRATION.md"} |
@@ -34442,7 +34478,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | 130 | {"id": "U7_FORGET_CLOSE", "type": "anti_mode", "text": "Забывание: W закрывается Refuse(W), то есть отказом от ожидания; это не простое отсутствие памяти и не честное незнание.", "depends_on": ["U7_WINDOW_CORE", "OP_Refuse", "OP_Sever"], "tags": ["U7", "forgetting", "Refuse", "Sever", "anti-mode"], "path": "U7_Window_Cycles/U7_FORGET_CLOSE", "status": "candidate_core", "internal_ref": "USER_DIALOG_V11 + CANON_EN", "symbol": "Close(W,Refuse(W))", "title": "Забывание как закрытие ожидания отказом от ожидания"} |
 | 131 | {"id": "U7_U8_ANSWER_QUESTION_BOUNDARY", "type": "boundary", "text": "У7 даёт ответ/закрытие окна; У8 задаёт вопрос/открытие окна. Предположение не является слабым предсказанием.", "depends_on": ["U_07", "U_08", "U7_WINDOW_CORE"], "tags": ["U7", "U8", "answer", "question", "hypothesis"], "path": "U7_Window_Cycles/U7_U8_ANSWER_QUESTION_BOUNDARY", "status": "candidate_boundary", "internal_ref": "USER_DIALOG_V11", "symbol": "Answer(W)=A vs Hyp(W)=A?", "title": "Граница У7/У8: ответ не вопрос"} |
 | 132 | {"id": "U7_AGENTIC_GATE_LAYER", "type": "guardrail", "text": "κ, provenance, Refuse/Sever, T7A/T7B/T7C остаются операциональным слоем для агентных/обновляемых реализаций, но не ядром У7.", "depends_on": ["OP_kappa", "T7A", "T7B", "T7C", "U7_WINDOW_CORE"], "tags": ["U7", "agentic_gate", "kappa", "T7", "guardrail"], "path": "U7_Window_Cycles/U7_AGENTIC_GATE_LAYER", "status": "operational_diagnostic_layer", "internal_ref": "CANON_EN + USER_DIALOG_V11", "symbol": "agentic_gate(Answer)=κ/T7A/T7B/T7C", "title": "κ/T7 как agentic gate, не сущность У7"} |
-| 133 | {"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.", "depends_on": ["U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "У7: y=-x*x обязан читаться с y!=x*x"} |
+| 133 | {"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Запрет снят автором 2026-10-08. Прежнее требование: МУ7 обязан включать local_forbid y=-x*x и y!=x*x; без правой части МУ7 схлопывается в МУ6. Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Различение МУ6/МУ7 теперь держится не запретом, а включением противоположности: МУ6 y=x*x (y!=-x*x), МУ7 \|y\|=x*x.", "depends_on": ["U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "lifted_by_author", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 + AUTHOR_2026-10-08_LIFT_U7_FORBID", "symbol": "\|y\|=x*x", "title": "МУ7: запрет y!=x*x снят; уровень не выражается одной формулой"} |
 | 134 | {"id": "CHI_STAT_LADDER", "type": "overlay", "text": "Статистический overlay: использовать χ как нормированный остаток ожидания вместо плоского x; χ*χ=χ² даёт сильный аналог У6.", "depends_on": ["OP_ChiCarrier", "OP_ChiOverlayMap", "OP_ChiSquareDiagnostic"], "tags": ["chi", "statistics", "overlay", "expectation_window"], "path": "Chi_Stat_Ladder/CHI_STAT_LADDER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "x:=χ", "title": "χ как статистический носитель дополнительной лестницы", "notes": "Не заменяет основной канон; добавляет локальный носитель."} |
 | 135 | {"id": "CHI_CARRIER", "type": "definition", "text": "χ_i фиксирует signed/normalized expectation residue; χ=(χ_i)_i сохраняет компонентность до агрегации.", "depends_on": ["U_06", "U7_WINDOW_CORE"], "tags": ["chi", "residual", "expectation", "U6"], "path": "Chi_Stat_Ladder/CHI_CARRIER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "χ-носитель как нормированный остаток ожидания", "notes": "x:=χ, не x:=χ²."} |
 | 136 | {"id": "OP_ChiCarrier", "type": "operator", "text": "Оператор строит χ-носитель из наблюдаемого O_i и ожидаемого E_i; это вход для χ-лестницы.", "depends_on": ["OP_ChiSquareDiagnostic"], "tags": ["operator", "chi", "residual"], "path": "25_Операторы/OP_ChiCarrier", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "Оператор χ-носителя", "notes": "Сохранять sign/component before χ² aggregation."} |
@@ -34471,7 +34507,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | 159 | {"id": "TENSOR_LADDER_U10", "type": "tensor_analog", "text": "У10 может сравнивать модели/ветви по нескольким критериям и контекстам.", "depends_on": ["U_10", "OP_TensorContextMap"], "tags": ["U10", "tensor", "evaluation"], "path": "Tensor_Context_Overlay", "status": "candidate_overlay", "internal_ref": "USER_DIALOG_V13", "symbol": "G_{ij}, L_{αβ}", "title": "У10 как тензорная метрика", "notes": "criterion explicit."} |
 | 160 | {"id": "TENSOR_LADDER_U11", "type": "tensor_analog", "text": "У11 включает протокол/наблюдателя как индекс собственного обновления/ответственности.", "depends_on": ["U_11", "TENSOR_LADDER_U10"], "tags": ["U11", "tensor", "observer"], "path": "Tensor_Context_Overlay", "status": "candidate_overlay", "internal_ref": "USER_DIALOG_V13", "symbol": "χ_{iα}; protocol α", "title": "У11 как индекс протокола", "notes": "observer index != truth."} |
 | 161 | {"id": "TENSOR_LADDER_U12", "type": "tensor_analog", "text": "У12-кандидат может держать несколько контуров конфликт/союз, если задан оператор и закон переноса.", "depends_on": ["U_12", "U12_CHI_PI_COMPLEX_BOUNDARY"], "tags": ["U12", "tensor", "boundary"], "path": "Tensor_Context_Overlay", "status": "candidate_U12_overlay", "internal_ref": "USER_DIALOG_V13", "symbol": "B(χ_{iα},c_β,R_{αβ})", "title": "У12 как тензор контуров", "notes": "not canonical without tests."} |
-| 162 | {"id": "A_07", "type": "mathematical_expression", "text": "А-регистр для У(7): y=-x*x; y!=x*x. Математический аналог сохраняется отдельно от логической формы M_07; мост между регистрами открыт.", "depends_on": ["U_06", "U7_MATH_LOCAL_FORBID"], "tags": ["math", "U7", "local_forbid"], "path": "17_Карточки/A_07", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "Математический регистр У7", "register": "A"} |
+| 162 | {"id": "A_07", "type": "mathematical_expression", "text": "А-регистр (МУ7): \|y\|=x*x, то есть y=-x*x вместе с y=x*x (пара парабол). Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Запрет y!=x*x снят. Отличие от МУ6 (y=x*x): в МУ6 противоположность исключена, в МУ7 входит в структуру. Математический аналог сохраняется отдельно от логической формы M_07 (ЛУ7); мост между регистрами открыт.", "depends_on": ["U_06", "U7_MATH_LOCAL_FORBID"], "tags": ["math", "U7", "local_forbid"], "path": "17_Карточки/A_07", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03 + AUTHOR_2026-10-08_LIFT_U7_FORBID", "symbol": "\|y\|=x*x  (y=-x*x; y=x*x)", "title": "Математический регистр У7", "register": "A"} |
 | 163 | {"id": "U7_LOGIC_GROUPING", "type": "constraint", "text": "Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму.", "depends_on": ["M_07", "U_06"], "tags": ["U7", "composition", "local_forbid"], "path": "17_Карточки/U7_LOGIC_GROUPING", "status": "derived_constraint", "internal_ref": "AUTHOR_CORRECTION_2026-09-21 + RESEARCH_STATUS_V9 + REGISTER_REPAIR_2026-10-03", "symbol": "U7_author", "title": "У7: вложенная группировка обязательна"} |
 | 164 | {"id": "AC_20261003_AUTHOR_DECISION", "type": "author_decision", "version": "AC-2026-10-03", "author_status": "accepted_into_author_canon", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt", "base_release": "v13_complex_branch_overlay", "status": "author_canonical_amendment", "supersedes_version": null, "title": "Прямая авторская запись семейств окон", "text": "Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки.", "evidence_status": "direct_author_statement", "depends_on": [], "tags": ["author_amendment", "window_families"], "path": "17_Карточки/AC_20261003_AUTHOR_DECISION", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "symbol": "AC_20261003_AUTHOR_DECISION"} |
 | 165 | {"id": "AC_20261003_WINDOW_FAMILIES", "type": "window_family_statement", "version": "AC-2026-10-03", "author_status": "accepted_into_author_canon", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt", "base_release": "v13_complex_branch_overlay", "status": "author_canonical_amendment", "title": "Семейства окон нечётной длины", "text": "Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню.", "families": {"triples": [[-1, 0, 1], [1, 2, 3], [3, 4, 5], [5, 6, 7], [7, 8, 9], [9, 10, 11]], "fives": [[-1, 0, 1, 2, 3], [3, 4, 5, 6, 7], [7, 8, 9, 10, 11], [11, 12, 13, 14, 15]], "sevens": [[-1, 0, 1, 2, 3, 4, 5], [5, 6, 7, 8, 9, 10, 11], [11, 12, 13, 14, 15, 16, 17]]}, "depends_on": ["AC_20261003_AUTHOR_DECISION", "U_m1", "U_03", "U_07", "U_11", "U_15"], "evidence_status": "author_adopted_formal_semantics_not_given", "local_forbid": ["Не отождествлять окна уровней с зеркальным окном Window(F) и окном ожидания W.", "Не выводить из пересечения окон направленную обратную связь или статус узла-носителя без отдельного определения.", "Не считать перечень продолжением выше указанных окон."], "open_obligations": ["Роль каждого семейства (тройки/пятёрки/семёрки): какая сущность определяется окном и чем семейства различаются по содержанию.", "Соотношение пересечения окон и узла-носителя, включая уровни 1, 5, 9 для троек и 5 для семёрок.", "Правило построения последующих окон."], "tags": ["author_amendment", "window_families"], "path": "17_Карточки/AC_20261003_WINDOW_FAMILIES", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "symbol": "AC_20261003_WINDOW_FAMILIES", "integration_record": "work/author_canon/2026-10-03/INTEGRATION.md"} |
@@ -34876,7 +34912,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 | line_no | yaml |
 | --- | --- |
-| 1 | version: v13_window_groupings_completion_2026-10-07 |
+| 1 | version: v13_u7_forbid_lifted_2026-10-08b |
 | 2 | self_contained: true |
 | 3 | working_rule: "Read active cards and current PROJECT_INSTRUCTIONS; historical workbook rules are provenance." |
 | 4 | embedded_archives: |
@@ -35047,7 +35083,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | 169 |   - {"id": "U7_FORGET_CLOSE", "type": "anti_mode", "text": "Забывание: W закрывается Refuse(W), то есть отказом от ожидания; это не простое отсутствие памяти и не честное незнание.", "depends_on": ["U7_WINDOW_CORE", "OP_Refuse", "OP_Sever"], "tags": ["U7", "forgetting", "Refuse", "Sever", "anti-mode"], "path": "U7_Window_Cycles/U7_FORGET_CLOSE", "status": "candidate_core", "internal_ref": "USER_DIALOG_V11 + CANON_EN", "symbol": "Close(W,Refuse(W))", "title": "Забывание как закрытие ожидания отказом от ожидания"} |
 | 170 |   - {"id": "U7_U8_ANSWER_QUESTION_BOUNDARY", "type": "boundary", "text": "У7 даёт ответ/закрытие окна; У8 задаёт вопрос/открытие окна. Предположение не является слабым предсказанием.", "depends_on": ["U_07", "U_08", "U7_WINDOW_CORE"], "tags": ["U7", "U8", "answer", "question", "hypothesis"], "path": "U7_Window_Cycles/U7_U8_ANSWER_QUESTION_BOUNDARY", "status": "candidate_boundary", "internal_ref": "USER_DIALOG_V11", "symbol": "Answer(W)=A vs Hyp(W)=A?", "title": "Граница У7/У8: ответ не вопрос"} |
 | 171 |   - {"id": "U7_AGENTIC_GATE_LAYER", "type": "guardrail", "text": "κ, provenance, Refuse/Sever, T7A/T7B/T7C остаются операциональным слоем для агентных/обновляемых реализаций, но не ядром У7.", "depends_on": ["OP_kappa", "T7A", "T7B", "T7C", "U7_WINDOW_CORE"], "tags": ["U7", "agentic_gate", "kappa", "T7", "guardrail"], "path": "U7_Window_Cycles/U7_AGENTIC_GATE_LAYER", "status": "operational_diagnostic_layer", "internal_ref": "CANON_EN + USER_DIALOG_V11", "symbol": "agentic_gate(Answer)=κ/T7A/T7B/T7C", "title": "κ/T7 как agentic gate, не сущность У7"} |
-| 172 |   - {"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.", "depends_on": ["U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "У7: y=-x*x обязан читаться с y!=x*x"} |
+| 172 |   - {"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Запрет снят автором 2026-10-08. Прежнее требование: МУ7 обязан включать local_forbid y=-x*x и y!=x*x; без правой части МУ7 схлопывается в МУ6. Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Различение МУ6/МУ7 теперь держится не запретом, а включением противоположности: МУ6 y=x*x (y!=-x*x), МУ7 \|y\|=x*x.", "depends_on": ["U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "lifted_by_author", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 + AUTHOR_2026-10-08_LIFT_U7_FORBID", "symbol": "\|y\|=x*x", "title": "МУ7: запрет y!=x*x снят; уровень не выражается одной формулой"} |
 | 173 |   - {"id": "CHI_STAT_LADDER", "type": "overlay", "text": "Статистический overlay: использовать χ как нормированный остаток ожидания вместо плоского x; χ*χ=χ² даёт сильный аналог У6.", "depends_on": ["OP_ChiCarrier", "OP_ChiOverlayMap", "OP_ChiSquareDiagnostic"], "tags": ["chi", "statistics", "overlay", "expectation_window"], "path": "Chi_Stat_Ladder/CHI_STAT_LADDER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "x:=χ", "title": "χ как статистический носитель дополнительной лестницы", "notes": "Не заменяет основной канон; добавляет локальный носитель."} |
 | 174 |   - {"id": "CHI_CARRIER", "type": "definition", "text": "χ_i фиксирует signed/normalized expectation residue; χ=(χ_i)_i сохраняет компонентность до агрегации.", "depends_on": ["U_06", "U7_WINDOW_CORE"], "tags": ["chi", "residual", "expectation", "U6"], "path": "Chi_Stat_Ladder/CHI_CARRIER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "χ-носитель как нормированный остаток ожидания", "notes": "x:=χ, не x:=χ²."} |
 | 175 |   - {"id": "OP_ChiCarrier", "type": "operator", "text": "Оператор строит χ-носитель из наблюдаемого O_i и ожидаемого E_i; это вход для χ-лестницы.", "depends_on": ["OP_ChiSquareDiagnostic"], "tags": ["operator", "chi", "residual"], "path": "25_Операторы/OP_ChiCarrier", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "Оператор χ-носителя", "notes": "Сохранять sign/component before χ² aggregation."} |
@@ -35076,7 +35112,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | 198 |   - {"id": "TENSOR_LADDER_U10", "type": "tensor_analog", "text": "У10 может сравнивать модели/ветви по нескольким критериям и контекстам.", "depends_on": ["U_10", "OP_TensorContextMap"], "tags": ["U10", "tensor", "evaluation"], "path": "Tensor_Context_Overlay", "status": "candidate_overlay", "internal_ref": "USER_DIALOG_V13", "symbol": "G_{ij}, L_{αβ}", "title": "У10 как тензорная метрика", "notes": "criterion explicit."} |
 | 199 |   - {"id": "TENSOR_LADDER_U11", "type": "tensor_analog", "text": "У11 включает протокол/наблюдателя как индекс собственного обновления/ответственности.", "depends_on": ["U_11", "TENSOR_LADDER_U10"], "tags": ["U11", "tensor", "observer"], "path": "Tensor_Context_Overlay", "status": "candidate_overlay", "internal_ref": "USER_DIALOG_V13", "symbol": "χ_{iα}; protocol α", "title": "У11 как индекс протокола", "notes": "observer index != truth."} |
 | 200 |   - {"id": "TENSOR_LADDER_U12", "type": "tensor_analog", "text": "У12-кандидат может держать несколько контуров конфликт/союз, если задан оператор и закон переноса.", "depends_on": ["U_12", "U12_CHI_PI_COMPLEX_BOUNDARY"], "tags": ["U12", "tensor", "boundary"], "path": "Tensor_Context_Overlay", "status": "candidate_U12_overlay", "internal_ref": "USER_DIALOG_V13", "symbol": "B(χ_{iα},c_β,R_{αβ})", "title": "У12 как тензор контуров", "notes": "not canonical without tests."} |
-| 201 |   - {"id": "A_07", "type": "mathematical_expression", "text": "А-регистр для У(7): y=-x*x; y!=x*x. Математический аналог сохраняется отдельно от логической формы M_07; мост между регистрами открыт.", "depends_on": ["U_06", "U7_MATH_LOCAL_FORBID"], "tags": ["math", "U7", "local_forbid"], "path": "17_Карточки/A_07", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "Математический регистр У7", "register": "A"} |
+| 201 |   - {"id": "A_07", "type": "mathematical_expression", "text": "А-регистр (МУ7): \|y\|=x*x, то есть y=-x*x вместе с y=x*x (пара парабол). Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Запрет y!=x*x снят. Отличие от МУ6 (y=x*x): в МУ6 противоположность исключена, в МУ7 входит в структуру. Математический аналог сохраняется отдельно от логической формы M_07 (ЛУ7); мост между регистрами открыт.", "depends_on": ["U_06", "U7_MATH_LOCAL_FORBID"], "tags": ["math", "U7", "local_forbid"], "path": "17_Карточки/A_07", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03 + AUTHOR_2026-10-08_LIFT_U7_FORBID", "symbol": "\|y\|=x*x  (y=-x*x; y=x*x)", "title": "Математический регистр У7", "register": "A"} |
 | 202 |   - {"id": "U7_LOGIC_GROUPING", "type": "constraint", "text": "Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму.", "depends_on": ["M_07", "U_06"], "tags": ["U7", "composition", "local_forbid"], "path": "17_Карточки/U7_LOGIC_GROUPING", "status": "derived_constraint", "internal_ref": "AUTHOR_CORRECTION_2026-09-21 + RESEARCH_STATUS_V9 + REGISTER_REPAIR_2026-10-03", "symbol": "U7_author", "title": "У7: вложенная группировка обязательна"} |
 | 203 |   - {"id": "AC_20261003_AUTHOR_DECISION", "type": "author_decision", "version": "AC-2026-10-03", "author_status": "accepted_into_author_canon", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt", "base_release": "v13_complex_branch_overlay", "status": "author_canonical_amendment", "supersedes_version": null, "title": "Прямая авторская запись семейств окон", "text": "Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки.", "evidence_status": "direct_author_statement", "depends_on": [], "tags": ["author_amendment", "window_families"], "path": "17_Карточки/AC_20261003_AUTHOR_DECISION", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "symbol": "AC_20261003_AUTHOR_DECISION"} |
 | 204 |   - {"id": "AC_20261003_WINDOW_FAMILIES", "type": "window_family_statement", "version": "AC-2026-10-03", "author_status": "accepted_into_author_canon", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt", "base_release": "v13_complex_branch_overlay", "status": "author_canonical_amendment", "title": "Семейства окон нечётной длины", "text": "Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню.", "families": {"triples": [[-1, 0, 1], [1, 2, 3], [3, 4, 5], [5, 6, 7], [7, 8, 9], [9, 10, 11]], "fives": [[-1, 0, 1, 2, 3], [3, 4, 5, 6, 7], [7, 8, 9, 10, 11], [11, 12, 13, 14, 15]], "sevens": [[-1, 0, 1, 2, 3, 4, 5], [5, 6, 7, 8, 9, 10, 11], [11, 12, 13, 14, 15, 16, 17]]}, "depends_on": ["AC_20261003_AUTHOR_DECISION", "U_m1", "U_03", "U_07", "U_11", "U_15"], "evidence_status": "author_adopted_formal_semantics_not_given", "local_forbid": ["Не отождествлять окна уровней с зеркальным окном Window(F) и окном ожидания W.", "Не выводить из пересечения окон направленную обратную связь или статус узла-носителя без отдельного определения.", "Не считать перечень продолжением выше указанных окон."], "open_obligations": ["Роль каждого семейства (тройки/пятёрки/семёрки): какая сущность определяется окном и чем семейства различаются по содержанию.", "Соотношение пересечения окон и узла-носителя, включая уровни 1, 5, 9 для троек и 5 для семёрок.", "Правило построения последующих окон."], "tags": ["author_amendment", "window_families"], "path": "17_Карточки/AC_20261003_WINDOW_FAMILIES", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "symbol": "AC_20261003_WINDOW_FAMILIES", "integration_record": "work/author_canon/2026-10-03/INTEGRATION.md"} |
@@ -35274,6 +35310,8 @@ Cards: 172. Triples: 384. Sheets: 54.
 | v13_window_grouping_cards_2026-10-07 | 2026-10-07 | candidate_window_grouping_cards | Added WINDOW_GROUPINGS, WINDOW_GROUPING_13 and WINDOW_GROUPING_25 as scoped research cards. Linked existing author window families, signed models, paired readout, circle geometry, evidence and open questions; prior formulas and statuses retained. | 17/18/34/35/36 and active renderings | active |
 | v13_window_groupings_context_2026-10-07 | 2026-10-07 | research_grouping_card_context_enrichment | Enrich existing window grouping cards with arithmetic limits, Weierstrass, author counting/counterweight clarification and Fano dialogue; statuses preserved. | 17/18/34/35/36 and active renderings | active |
 | v13_window_groupings_completion_2026-10-07 | 2026-10-07 | research_registry_context_completion | Complete three window grouping cards with first distinction, stable levels, structured absence and separately scoped counterweight transfer candidate; preserve statuses and tested predicates. | 17/18/34/35/36 and active renderings | active |
+| v13_u7_forbid_lifted_2026-10-08 | 2026-10-08 | integrated_author_amendment_and_register_repair | МУ7: запрет y!=x*x снят автором; A_07 и U7_MATH_LOCAL_FORBID обновлены | 17/18/34/35/36 and active renderings | active |
+| v13_u7_forbid_lifted_2026-10-08b | 2026-10-08 | integrated_author_amendment_and_register_repair | МУ7 = \|y\|=x*x: с 7 противоположность входит в структуру (уточнение автора) | 17/18/34/35/36 and active renderings | active |
 
 #### Sheet 39: `39_Status_Dict`
 
@@ -35828,7 +35866,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 {"id": "U7_FORGET_CLOSE", "type": "anti_mode", "text": "Забывание: W закрывается Refuse(W), то есть отказом от ожидания; это не простое отсутствие памяти и не честное незнание.", "depends_on": ["U7_WINDOW_CORE", "OP_Refuse", "OP_Sever"], "tags": ["U7", "forgetting", "Refuse", "Sever", "anti-mode"], "path": "U7_Window_Cycles/U7_FORGET_CLOSE", "status": "candidate_core", "internal_ref": "USER_DIALOG_V11 + CANON_EN", "symbol": "Close(W,Refuse(W))", "title": "Забывание как закрытие ожидания отказом от ожидания"}
 {"id": "U7_U8_ANSWER_QUESTION_BOUNDARY", "type": "boundary", "text": "У7 даёт ответ/закрытие окна; У8 задаёт вопрос/открытие окна. Предположение не является слабым предсказанием.", "depends_on": ["U_07", "U_08", "U7_WINDOW_CORE"], "tags": ["U7", "U8", "answer", "question", "hypothesis"], "path": "U7_Window_Cycles/U7_U8_ANSWER_QUESTION_BOUNDARY", "status": "candidate_boundary", "internal_ref": "USER_DIALOG_V11", "symbol": "Answer(W)=A vs Hyp(W)=A?", "title": "Граница У7/У8: ответ не вопрос"}
 {"id": "U7_AGENTIC_GATE_LAYER", "type": "guardrail", "text": "κ, provenance, Refuse/Sever, T7A/T7B/T7C остаются операциональным слоем для агентных/обновляемых реализаций, но не ядром У7.", "depends_on": ["OP_kappa", "T7A", "T7B", "T7C", "U7_WINDOW_CORE"], "tags": ["U7", "agentic_gate", "kappa", "T7", "guardrail"], "path": "U7_Window_Cycles/U7_AGENTIC_GATE_LAYER", "status": "operational_diagnostic_layer", "internal_ref": "CANON_EN + USER_DIALOG_V11", "symbol": "agentic_gate(Answer)=κ/T7A/T7B/T7C", "title": "κ/T7 как agentic gate, не сущность У7"}
-{"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Математический аналог У7 обязан включать local_forbid: y=-x*x и y!=x*x; без правой части У7 схлопывается в У6.", "depends_on": ["U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "derived_constraint", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "У7: y=-x*x обязан читаться с y!=x*x"}
+{"id": "U7_MATH_LOCAL_FORBID", "type": "constraint", "text": "Запрет снят автором 2026-10-08. Прежнее требование: МУ7 обязан включать local_forbid y=-x*x и y!=x*x; без правой части МУ7 схлопывается в МУ6. Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Различение МУ6/МУ7 теперь держится не запретом, а включением противоположности: МУ6 y=x*x (y!=-x*x), МУ7 |y|=x*x.", "depends_on": ["U_06", "SP_WINDOW", "SP_ZERO"], "tags": ["U7", "math", "local_forbid", "mirror_window"], "path": "06_Мат_аналогии/U7", "status": "lifted_by_author", "internal_ref": "RESEARCH_STATUS_V9 + USER_DIALOG_V11 + REGISTER_REPAIR_2026-10-03 + AUTHOR_2026-10-08_LIFT_U7_FORBID", "symbol": "|y|=x*x", "title": "МУ7: запрет y!=x*x снят; уровень не выражается одной формулой"}
 {"id": "CHI_STAT_LADDER", "type": "overlay", "text": "Статистический overlay: использовать χ как нормированный остаток ожидания вместо плоского x; χ*χ=χ² даёт сильный аналог У6.", "depends_on": ["OP_ChiCarrier", "OP_ChiOverlayMap", "OP_ChiSquareDiagnostic"], "tags": ["chi", "statistics", "overlay", "expectation_window"], "path": "Chi_Stat_Ladder/CHI_STAT_LADDER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "x:=χ", "title": "χ как статистический носитель дополнительной лестницы", "notes": "Не заменяет основной канон; добавляет локальный носитель."}
 {"id": "CHI_CARRIER", "type": "definition", "text": "χ_i фиксирует signed/normalized expectation residue; χ=(χ_i)_i сохраняет компонентность до агрегации.", "depends_on": ["U_06", "U7_WINDOW_CORE"], "tags": ["chi", "residual", "expectation", "U6"], "path": "Chi_Stat_Ladder/CHI_CARRIER", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "χ-носитель как нормированный остаток ожидания", "notes": "x:=χ, не x:=χ²."}
 {"id": "OP_ChiCarrier", "type": "operator", "text": "Оператор строит χ-носитель из наблюдаемого O_i и ожидаемого E_i; это вход для χ-лестницы.", "depends_on": ["OP_ChiSquareDiagnostic"], "tags": ["operator", "chi", "residual"], "path": "25_Операторы/OP_ChiCarrier", "status": "statistical_overlay_candidate", "internal_ref": "USER_DIALOG_V12", "symbol": "χ_i=(O_i-E_i)/sqrt(E_i)", "title": "Оператор χ-носителя", "notes": "Сохранять sign/component before χ² aggregation."}
@@ -35857,7 +35895,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 {"id": "TENSOR_LADDER_U10", "type": "tensor_analog", "text": "У10 может сравнивать модели/ветви по нескольким критериям и контекстам.", "depends_on": ["U_10", "OP_TensorContextMap"], "tags": ["U10", "tensor", "evaluation"], "path": "Tensor_Context_Overlay", "status": "candidate_overlay", "internal_ref": "USER_DIALOG_V13", "symbol": "G_{ij}, L_{αβ}", "title": "У10 как тензорная метрика", "notes": "criterion explicit."}
 {"id": "TENSOR_LADDER_U11", "type": "tensor_analog", "text": "У11 включает протокол/наблюдателя как индекс собственного обновления/ответственности.", "depends_on": ["U_11", "TENSOR_LADDER_U10"], "tags": ["U11", "tensor", "observer"], "path": "Tensor_Context_Overlay", "status": "candidate_overlay", "internal_ref": "USER_DIALOG_V13", "symbol": "χ_{iα}; protocol α", "title": "У11 как индекс протокола", "notes": "observer index != truth."}
 {"id": "TENSOR_LADDER_U12", "type": "tensor_analog", "text": "У12-кандидат может держать несколько контуров конфликт/союз, если задан оператор и закон переноса.", "depends_on": ["U_12", "U12_CHI_PI_COMPLEX_BOUNDARY"], "tags": ["U12", "tensor", "boundary"], "path": "Tensor_Context_Overlay", "status": "candidate_U12_overlay", "internal_ref": "USER_DIALOG_V13", "symbol": "B(χ_{iα},c_β,R_{αβ})", "title": "У12 как тензор контуров", "notes": "not canonical without tests."}
-{"id": "A_07", "type": "mathematical_expression", "text": "А-регистр для У(7): y=-x*x; y!=x*x. Математический аналог сохраняется отдельно от логической формы M_07; мост между регистрами открыт.", "depends_on": ["U_06", "U7_MATH_LOCAL_FORBID"], "tags": ["math", "U7", "local_forbid"], "path": "17_Карточки/A_07", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03", "symbol": "y=-x*x; y!=x*x", "title": "Математический регистр У7", "register": "A"}
+{"id": "A_07", "type": "mathematical_expression", "text": "А-регистр (МУ7): |y|=x*x, то есть y=-x*x вместе с y=x*x (пара парабол). Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Запрет y!=x*x снят. Отличие от МУ6 (y=x*x): в МУ6 противоположность исключена, в МУ7 входит в структуру. Математический аналог сохраняется отдельно от логической формы M_07 (ЛУ7); мост между регистрами открыт.", "depends_on": ["U_06", "U7_MATH_LOCAL_FORBID"], "tags": ["math", "U7", "local_forbid"], "path": "17_Карточки/A_07", "status": "candidate_with_operational_gate", "internal_ref": "CANON_V43 + user_current + REGISTER_REPAIR_2026-10-03 + AUTHOR_2026-10-08_LIFT_U7_FORBID", "symbol": "|y|=x*x  (y=-x*x; y=x*x)", "title": "Математический регистр У7", "register": "A"}
 {"id": "U7_LOGIC_GROUPING", "type": "constraint", "text": "Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму.", "depends_on": ["M_07", "U_06"], "tags": ["U7", "composition", "local_forbid"], "path": "17_Карточки/U7_LOGIC_GROUPING", "status": "derived_constraint", "internal_ref": "AUTHOR_CORRECTION_2026-09-21 + RESEARCH_STATUS_V9 + REGISTER_REPAIR_2026-10-03", "symbol": "U7_author", "title": "У7: вложенная группировка обязательна"}
 {"id": "AC_20261003_AUTHOR_DECISION", "type": "author_decision", "version": "AC-2026-10-03", "author_status": "accepted_into_author_canon", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt", "base_release": "v13_complex_branch_overlay", "status": "author_canonical_amendment", "supersedes_version": null, "title": "Прямая авторская запись семейств окон", "text": "Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки.", "evidence_status": "direct_author_statement", "depends_on": [], "tags": ["author_amendment", "window_families"], "path": "17_Карточки/AC_20261003_AUTHOR_DECISION", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "symbol": "AC_20261003_AUTHOR_DECISION"}
 {"id": "AC_20261003_WINDOW_FAMILIES", "type": "window_family_statement", "version": "AC-2026-10-03", "author_status": "accepted_into_author_canon", "source": "work/author_canon/2026-10-03/AUTHOR_MESSAGE.txt", "base_release": "v13_complex_branch_overlay", "status": "author_canonical_amendment", "title": "Семейства окон нечётной длины", "text": "Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню.", "families": {"triples": [[-1, 0, 1], [1, 2, 3], [3, 4, 5], [5, 6, 7], [7, 8, 9], [9, 10, 11]], "fives": [[-1, 0, 1, 2, 3], [3, 4, 5, 6, 7], [7, 8, 9, 10, 11], [11, 12, 13, 14, 15]], "sevens": [[-1, 0, 1, 2, 3, 4, 5], [5, 6, 7, 8, 9, 10, 11], [11, 12, 13, 14, 15, 16, 17]]}, "depends_on": ["AC_20261003_AUTHOR_DECISION", "U_m1", "U_03", "U_07", "U_11", "U_15"], "evidence_status": "author_adopted_formal_semantics_not_given", "local_forbid": ["Не отождествлять окна уровней с зеркальным окном Window(F) и окном ожидания W.", "Не выводить из пересечения окон направленную обратную связь или статус узла-носителя без отдельного определения.", "Не считать перечень продолжением выше указанных окон."], "open_obligations": ["Роль каждого семейства (тройки/пятёрки/семёрки): какая сущность определяется окном и чем семейства различаются по содержанию.", "Соотношение пересечения окон и узла-носителя, включая уровни 1, 5, 9 для троек и 5 для семёрок.", "Правило построения последующих окон."], "tags": ["author_amendment", "window_families"], "path": "17_Карточки/AC_20261003_WINDOW_FAMILIES", "internal_ref": "AC-2026-10-03 + AUTHOR_MESSAGE_2026-10-03", "symbol": "AC_20261003_WINDOW_FAMILIES", "integration_record": "work/author_canon/2026-10-03/INTEGRATION.md"}
