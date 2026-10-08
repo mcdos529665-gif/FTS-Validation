@@ -47,7 +47,7 @@
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
-| `work/DECISIONS.md` | `851d0b3a6c7520be3f8c81d943a700046efc990d8dc2e96948829439711c226f` |
+| `work/DECISIONS.md` | `de511def06431bf293d691ddb7ad374fc10fca2e3172e80b5cb70e92b0df606a` |
 | `work/OPEN_QUESTIONS.md` | `7d87d761e290cfe702657208c04890d77436a56beba86dd2e7b668a3e2bc2ddb` |
 | `work/EXTERNAL_CONFLICTS.md` | `0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a` |
 | `work/v14_rebuild/FTS_v14_paper.md` | `665719501c832a62237370099606d863445c3381262e894ac7be43080a6c8f93` |
@@ -6937,7 +6937,11 @@ if __name__ == "__main__":
   18/31 (фактор по отождествлению миров, затем смесь), 12/41 (группы узлов: 3, 7, 15 — фаза,
   11 — масштаб; прежнее «Серпинский только до 7» снято). Почему кандидаты: К2/К4/К5 не
   проводились, мосты к семантике уровней не доказаны. OQ обновлены (закрыты 39 и
-  `oq-u6-u7-choice-products`; 35, 20, 57 — частично), `source/` и `St_FTS` не менялись.
+  `oq-u6-u7-choice-products`; 35, 20, 57 — частично). Карта `v14_rebuild/audit/PATTERN_OQ_MAP.tsv`
+  приведена в соответствие (аудит требует совпадения с действующими OQ): строки двух закрытых
+  вопросов убраны, три вопроса переведены в partial, паттерны PA-F11, PA-G01, PA-R02 (прежде
+  только у `oq-strict-band-7-export`) отнесены к `oq-audit-semantic-repromotion` курируемым
+  мостом (mixed). `source/` и `St_FTS` не менялись.
 
 ### 6.2. Открытые вопросы
 
