@@ -24,6 +24,7 @@ diagnosis, not a full verdict.
 | `candidate_c85` | `python -X utf8 work/v14_rebuild/verification_c85.py` | Candidate predicates C85–C92 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
 | `candidate_c93` | `python -X utf8 work/v14_rebuild/verification_c93.py` | Candidate predicates C93–C95 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
 | `candidate_c96` | `python -X utf8 work/v14_rebuild/verification_c96.py` | Candidate predicates C96–C99 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
+| `candidate_c100` | `python -X utf8 work/v14_rebuild/verification_c100.py` | Candidate predicates C100–C104 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
 | `windows_table` | `python -X utf8 work/v14_rebuild/verification_windows_table.py` | Computable table columns and existence of cited C-check IDs | 0: PASS; 1: FAIL. Writes nothing; semantic columns need manual review. |
 | `audit` | `python -X utf8 work/v14_rebuild/audit/run_audit.py all` | Canon schema/links, claim/OQ/article traceability, review copies/checksums, static suite safeguards, historical artifacts | 0: no unresolved P0/P1; 1: P0/P1; 2: invalid mode. Writes nothing. |
 | `research_export` | `python -X utf8 tools/build_research_export.py --check` | Combined export equals the deterministic build from current inputs byte-for-byte | 0: current; 1: missing/stale/invalid build. Writes nothing. |

@@ -90,6 +90,12 @@ CHECKS: tuple[Check, ...] = (
         (),
     ),
     Check(
+        "candidate_c100",
+        "кандидатные предикаты C100–C104 в области локальных проверок",
+        "work/v14_rebuild/verification_c100.py",
+        (),
+    ),
+    Check(
         "windows_table",
         "вычислимые столбцы и ссылки таблицы окон",
         "work/v14_rebuild/verification_windows_table.py",

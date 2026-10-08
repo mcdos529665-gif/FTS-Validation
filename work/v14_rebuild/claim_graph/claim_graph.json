@@ -36,7 +36,7 @@
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
-      "sha256": "2f3de47e506129f11dbb660e0495cde06dae17bd446c753b0d90bd6fefd22fa4"
+      "sha256": "35b0729b440e6c44335d131455108d64d4c9047048cf6220fc5b67d6a5e26cfb"
     },
     {
       "path": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
@@ -136,7 +136,7 @@
     },
     {
       "path": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "sha256": "13c75f259b15bb4b7e5fd80cc1f11acc63360cb9b570f81b00ad011ce515d631"
+      "sha256": "9b905a74438a4e7c0261c53a16112a064f0547703f107ac64202080db1693280"
     },
     {
       "path": "work/v14_rebuild/audit/REFERENCE_RESOLUTIONS.tsv",
@@ -9220,7 +9220,7 @@
       "anchor": "oq-blackwell-canonical-projection",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L610"
+      "source_location": "L626"
     },
     {
       "id": "oq_oq_blackwell_u4_u6_witness",
@@ -9230,7 +9230,7 @@
       "anchor": "oq-blackwell-u4-u6-witness",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L607"
+      "source_location": "L623"
     },
     {
       "id": "oq_oq_c83_parity_prediction",
@@ -9490,7 +9490,7 @@
       "anchor": "oq-graph-reference-definitions",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L645"
+      "source_location": "L661"
     },
     {
       "id": "oq_oq_kappa_provenance",
@@ -9530,7 +9530,7 @@
       "anchor": "oq-lift-section-and-category",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L624"
+      "source_location": "L640"
     },
     {
       "id": "oq_oq_lift_typing_passport",
@@ -9540,7 +9540,7 @@
       "anchor": "oq-lift-typing-passport",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L621"
+      "source_location": "L637"
     },
     {
       "id": "oq_oq_machine_check_done",
@@ -9583,6 +9583,36 @@
       "source_location": "L275"
     },
     {
+      "id": "oq_oq_mu8_inverse_vs_rotation",
+      "type": "open_question",
+      "label": "oq-mu8-inverse-vs-rotation — Шаг МУ6/МУ7 → МУ8: обращение `x↔y` или поворот на 90°? На склеенных парах",
+      "layer": "audit",
+      "anchor": "oq-mu8-inverse-vs-rotation",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L603"
+    },
+    {
+      "id": "oq_oq_mu9_opposite_inclusion",
+      "type": "open_question",
+      "label": "oq-mu9-opposite-inclusion — МУ9: снимать ли запрет `y≠−x³` по правилу «с 7 противоположность входит в структуру»",
+      "layer": "audit",
+      "anchor": "oq-mu9-opposite-inclusion",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L606"
+    },
+    {
+      "id": "oq_oq_mu9_projection_reading",
+      "type": "open_question",
+      "label": "oq-mu9-projection-reading — МУ9 как уровень проекций (`t³=t`, `t=P−Q`, `t²=P+Q`): связь с СУ9 Понимание и с ребром",
+      "layer": "audit",
+      "anchor": "oq-mu9-projection-reading",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L614"
+    },
+    {
       "id": "oq_oq_next_question_principle",
       "type": "open_question",
       "label": "oq-next-question-principle — NEXT-QUESTION-PRINCIPLE: задать независимое правило выбора следующего",
@@ -9611,6 +9641,16 @@
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L581"
+    },
+    {
+      "id": "oq_oq_o1_environment_substitution",
+      "type": "open_question",
+      "label": "oq-o1-environment-substitution — Правило О1 как подстановка `x=n−1` в МУn: что значат 25 (МУ6), ±36 (МУ7), 512 (МУ9)",
+      "layer": "audit",
+      "anchor": "oq-o1-environment-substitution",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L609"
     },
     {
       "id": "oq_oq_o20_missing_benchmark",
@@ -9743,6 +9783,16 @@
       "source_location": "L342"
     },
     {
+      "id": "oq_oq_sierpinski_node_11",
+      "type": "open_question",
+      "label": "oq-sierpinski-node-11 — Узел 11: того же рода, что 3/7/15 (полные строки Серпинского `2^k−1`), или другого?",
+      "layer": "audit",
+      "anchor": "oq-sierpinski-node-11",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L612"
+    },
+    {
       "id": "oq_oq_sphere_u6_carrier",
       "type": "open_question",
       "label": "oq-sphere-u6-carrier — Носитель «сферы У6»: задать конкретно, какое пространство (иначе провал К1 —",
@@ -9850,7 +9900,7 @@
       "anchor": "oq-typed-absence-finite-witness",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L614"
+      "source_location": "L630"
     },
     {
       "id": "oq_oq_typed_absence_provenance_benchmark",
@@ -10070,7 +10120,7 @@
       "anchor": "oq-window-family-continuation",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L639"
+      "source_location": "L655"
     },
     {
       "id": "oq_oq_window_family_roles",
@@ -10080,7 +10130,7 @@
       "anchor": "oq-window-family-roles",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L631"
+      "source_location": "L647"
     },
     {
       "id": "oq_oq_window_intersection_carrier",
@@ -10090,7 +10140,7 @@
       "anchor": "oq-window-intersection-carrier",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L635"
+      "source_location": "L651"
     },
     {
       "id": "oq_oq_window_node_conjugation_origin",
@@ -28633,6 +28683,36 @@
       "source_location": "row:30"
     },
     {
+      "id": "oq_map_contains_oq_mu8_inverse_vs_rotation",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_mu8_inverse_vs_rotation",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81"
+    },
+    {
+      "id": "oq_map_contains_oq_mu9_opposite_inclusion",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_mu9_opposite_inclusion",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82"
+    },
+    {
+      "id": "oq_map_contains_oq_mu9_projection_reading",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_mu9_projection_reading",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:85"
+    },
+    {
       "id": "oq_map_contains_oq_next_question_principle",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_next_question_principle",
@@ -28661,6 +28741,16 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:76"
+    },
+    {
+      "id": "oq_map_contains_oq_o1_environment_substitution",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_o1_environment_substitution",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83"
     },
     {
       "id": "oq_map_contains_oq_o20_missing_benchmark",
@@ -28771,6 +28861,16 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:38"
+    },
+    {
+      "id": "oq_map_contains_oq_sierpinski_node_11",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_sierpinski_node_11",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:84"
     },
     {
       "id": "oq_map_contains_oq_sphere_u6_carrier",
@@ -30183,6 +30283,116 @@
       "source_location": "row:30"
     },
     {
+      "id": "oq_oq_mu8_inverse_vs_rotation_event",
+      "source": "oq_oq_mu8_inverse_vs_rotation",
+      "target": "event_e10",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81"
+    },
+    {
+      "id": "oq_oq_mu8_inverse_vs_rotation_meta_mp_a",
+      "source": "oq_oq_mu8_inverse_vs_rotation",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81"
+    },
+    {
+      "id": "oq_oq_mu8_inverse_vs_rotation_program",
+      "source": "oq_oq_mu8_inverse_vs_rotation",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81"
+    },
+    {
+      "id": "oq_oq_mu9_opposite_inclusion_event",
+      "source": "oq_oq_mu9_opposite_inclusion",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82"
+    },
+    {
+      "id": "oq_oq_mu9_opposite_inclusion_meta_mp_a",
+      "source": "oq_oq_mu9_opposite_inclusion",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82"
+    },
+    {
+      "id": "oq_oq_mu9_opposite_inclusion_meta_mp_c",
+      "source": "oq_oq_mu9_opposite_inclusion",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82"
+    },
+    {
+      "id": "oq_oq_mu9_opposite_inclusion_program",
+      "source": "oq_oq_mu9_opposite_inclusion",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82"
+    },
+    {
+      "id": "oq_oq_mu9_projection_reading_event",
+      "source": "oq_oq_mu9_projection_reading",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:85"
+    },
+    {
+      "id": "oq_oq_mu9_projection_reading_meta_mp_a",
+      "source": "oq_oq_mu9_projection_reading",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:85"
+    },
+    {
+      "id": "oq_oq_mu9_projection_reading_meta_mp_b",
+      "source": "oq_oq_mu9_projection_reading",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:85"
+    },
+    {
+      "id": "oq_oq_mu9_projection_reading_program",
+      "source": "oq_oq_mu9_projection_reading",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:85"
+    },
+    {
       "id": "oq_oq_next_question_principle_event",
       "source": "oq_oq_next_question_principle",
       "target": "event_e3",
@@ -30301,6 +30511,46 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:76"
+    },
+    {
+      "id": "oq_oq_o1_environment_substitution_event",
+      "source": "oq_oq_o1_environment_substitution",
+      "target": "event_e10",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83"
+    },
+    {
+      "id": "oq_oq_o1_environment_substitution_meta_mp_b",
+      "source": "oq_oq_o1_environment_substitution",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83"
+    },
+    {
+      "id": "oq_oq_o1_environment_substitution_meta_mp_c",
+      "source": "oq_oq_o1_environment_substitution",
+      "target": "meta_mp_c",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83"
+    },
+    {
+      "id": "oq_oq_o1_environment_substitution_program",
+      "source": "oq_oq_o1_environment_substitution",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83"
     },
     {
       "id": "oq_oq_o20_missing_benchmark_event",
@@ -30681,6 +30931,36 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:38"
+    },
+    {
+      "id": "oq_oq_sierpinski_node_11_event",
+      "source": "oq_oq_sierpinski_node_11",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:84"
+    },
+    {
+      "id": "oq_oq_sierpinski_node_11_meta_mp_b",
+      "source": "oq_oq_sierpinski_node_11",
+      "target": "meta_mp_b",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:84"
+    },
+    {
+      "id": "oq_oq_sierpinski_node_11_program",
+      "source": "oq_oq_sierpinski_node_11",
+      "target": "program_rp_3",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:84"
     },
     {
       "id": "oq_oq_sphere_u6_carrier_event",
@@ -32031,6 +32311,18 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c02_oq_mu9_opposite_inclusion_navigation_support_for",
+      "source": "pattern_pa_c02",
+      "target": "oq_oq_mu9_opposite_inclusion",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82",
+      "scope": "Правило включения противоположности конфликтует с возвратом знака МУ9.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c02_oq_node11_asymmetry_curated_bridge_to",
       "source": "pattern_pa_c02",
       "target": "oq_oq_node11_asymmetry",
@@ -32304,6 +32596,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:11",
       "scope": "Следствие О1+О3+О8 удерживает У6/У7 в У8 структурно, но конкретная π-формула выше У7 отсутствует.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c03_oq_sierpinski_node_11_navigation_support_for",
+      "source": "pattern_pa_c03",
+      "target": "oq_oq_sierpinski_node_11",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:84",
+      "scope": "Узлы 3/7/15 совпадают с полными строками, узел 11 — нет.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -33111,6 +33415,18 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_f02_oq_mu8_inverse_vs_rotation_navigation_support_for",
+      "source": "pattern_pa_f02",
+      "target": "oq_oq_mu8_inverse_vs_rotation",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81",
+      "scope": "Поворот и обращение совпадают на склеенных парах; различающий случай не найден.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_f02_oq_vieta_cubic_s3_curated_bridge_to",
       "source": "pattern_pa_f02",
       "target": "oq_oq_vieta_cubic_s3",
@@ -33144,6 +33460,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:46",
       "scope": "Аналогия нечётного момента с У9 не имеет уровня-свидетеля.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_f03_oq_mu9_opposite_inclusion_navigation_support_for",
+      "source": "pattern_pa_f03",
+      "target": "oq_oq_mu9_opposite_inclusion",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:82",
+      "scope": "Правило включения противоположности конфликтует с возвратом знака МУ9.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -33204,6 +33532,30 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:72",
       "scope": "Продолжение projects_to не следует из пересечения окон.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_f04_oq_mu8_inverse_vs_rotation_navigation_support_for",
+      "source": "pattern_pa_f04",
+      "target": "oq_oq_mu8_inverse_vs_rotation",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:81",
+      "scope": "Поворот и обращение совпадают на склеенных парах; различающий случай не найден.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_f04_oq_mu9_projection_reading_navigation_support_for",
+      "source": "pattern_pa_f04",
+      "target": "oq_oq_mu9_projection_reading",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:85",
+      "scope": "Тождество t³=t задаёт проекции, но не смысл Понимания.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -33459,6 +33811,30 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_f07_oq_mu9_projection_reading_navigation_support_for",
+      "source": "pattern_pa_f07",
+      "target": "oq_oq_mu9_projection_reading",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:85",
+      "scope": "Тождество t³=t задаёт проекции, но не смысл Понимания.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_f07_oq_o1_environment_substitution_navigation_support_for",
+      "source": "pattern_pa_f07",
+      "target": "oq_oq_o1_environment_substitution",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83",
+      "scope": "Числовая подстановка по О1 не задаёт смысл уровня; совпадения с окнами дёшевы.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_f07_oq_padic_carrier_channel_directly_traced_to",
       "source": "pattern_pa_f07",
       "target": "oq_oq_padic_carrier_channel",
@@ -33636,6 +34012,30 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:64",
       "scope": "Нет точных исходных определений Lambda_link, TA1, U12_CHI_PI_BOUNDARY и NODE_SIGNATURES.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_g02_oq_o1_environment_substitution_navigation_support_for",
+      "source": "pattern_pa_g02",
+      "target": "oq_oq_o1_environment_substitution",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:83",
+      "scope": "Числовая подстановка по О1 не задаёт смысл уровня; совпадения с окнами дёшевы.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_g02_oq_sierpinski_node_11_navigation_support_for",
+      "source": "pattern_pa_g02",
+      "target": "oq_oq_sierpinski_node_11",
+      "relation": "navigation_support_for",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:84",
+      "scope": "Узлы 3/7/15 совпадают с полными строками, узел 11 — нет.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -38831,8 +39231,8 @@
     "audit_claim_groups": 25,
     "audit_findings": 20,
     "patterns": 31,
-    "open_question_anchors": 98,
-    "mapped_open_questions": 79,
+    "open_question_anchors": 103,
+    "mapped_open_questions": 84,
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
     "internal_evidence_nodes": 18,
@@ -38840,8 +39240,8 @@
     "curated_research_bridges": 201,
     "project_entities": 1,
     "declared_research_scopes": 4,
-    "nodes": 919,
-    "edges": 2230,
+    "nodes": 924,
+    "edges": 2263,
     "unresolved_references": 4
   }
 }
