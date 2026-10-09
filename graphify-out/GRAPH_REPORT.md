@@ -1,15 +1,15 @@
-# Graph Report - .  (2026-09-29)
+# Graph Report - .  (2026-10-09)
 
 ## Corpus Check
 - cluster-only mode — file stats not available
 
 ## Summary
-- 637 nodes · 1332 edges · 47 communities (21 shown, 26 thin omitted)
-- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 147 edges (avg confidence: 0.6)
+- 663 nodes · 1533 edges · 47 communities (21 shown, 26 thin omitted)
+- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 163 edges (avg confidence: 0.59)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9a17dffe`
+- Built from commit: `b66225c7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -62,16 +62,16 @@
 - [[_COMMUNITY_Аудит закономерности ↔ OQ|Аудит: закономерности ↔ OQ]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `PATTERN ↔ OQ MAP — мосты, программы и события` - 86 edges
-2. `MP-C — независимое повышение статуса (candidate)` - 70 edges
-3. `Система якорей {#oq-*}: 71 стабильных ID для всех пунктов (инструмент: tools/oq_anchor.py, guarded)` - 62 edges
-4. `MP-A — баланс различимости (candidate)` - 53 edges
-5. `MP-B — оконный перенос (candidate)` - 35 edges
+1. `PATTERN ↔ OQ MAP — мосты, программы и события` - 112 edges
+2. `Система якорей {#oq-*}: 103 стабильных ID для всех пунктов (инструмент: tools/oq_anchor.py, guarded)` - 88 edges
+3. `MP-C — независимое повышение статуса (candidate)` - 88 edges
+4. `MP-A — баланс различимости (candidate)` - 64 edges
+5. `MP-B — оконный перенос (candidate)` - 53 edges
 6. `PATTERN ATLAS — 31 закономерность` - 33 edges
-7. `CLAIM MATRIX — 25 групп утверждений` - 27 edges
-8. `ФТС v14: лестница различимости (статья, пересборка)` - 26 edges
-9. `PA-C04 — Правило П и паспорт П6` - 25 edges
-10. `FINDINGS — 20 аудиторских находок` - 22 edges
+7. `Событие E7` - 32 edges
+8. `PA-C04 — Правило П и паспорт П6` - 31 edges
+9. `RP-2 — исследовательская программа` - 31 edges
+10. `CLAIM MATRIX — 25 групп утверждений` - 27 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `O_20 — О(20) Лестница не-события как данных (connectivity_ground)` --references--> `Основания связности О1–О20`  [EXTRACTED]
@@ -177,7 +177,7 @@ Nodes (10): Решение: двухслойный триаж OQ (машинны
 
 ### Community 47 - "Аудит: закономерности ↔ OQ"
 Cohesion: 0.04
-Nodes (166): Аудит 2026-07-13/14: закономерности ↔ OQ, PATTERN ATLAS — 31 закономерность, PATTERN ↔ OQ MAP — мосты, программы и события, CLAIM MATRIX — 25 групп утверждений, FINDINGS — 20 аудиторских находок, REVIEW CONCLUSION — краткий вердикт, PA-F01 — Нулевая граница зеркала, PA-F02 — Зеркальный фактор модуля (+158 more)
+Nodes (192): Аудит 2026-07-13/14: закономерности ↔ OQ, PATTERN ATLAS — 31 закономерность, PATTERN ↔ OQ MAP — мосты, программы и события, CLAIM MATRIX — 25 групп утверждений, FINDINGS — 20 аудиторских находок, REVIEW CONCLUSION — краткий вердикт, PA-F01 — Нулевая граница зеркала, PA-F02 — Зеркальный фактор модуля (+184 more)
 
 ## Ambiguous Edges - Review These
 - `CH_07 — Частное чтение У(7) K_core=⟨W,0_W,Ans⟩` → `U7_AGENTIC_GATE_LAYER — κ/T7 как agentic gate`  [AMBIGUOUS]
@@ -190,7 +190,7 @@ Nodes (166): Аудит 2026-07-13/14: закономерности ↔ OQ, PATT
 
 ## Audit Navigation Overlay (deterministic)
 
-- 31 patterns ↔ 60 OQ; 25 claims; 20 findings.
-- Bridges: 34 direct EXTRACTED; 99 curated INFERRED; 8 support EXTRACTED.
+- 31 patterns ↔ 82 OQ; 25 claims; 20 findings.
+- Bridges: 29 direct EXTRACTED; 112 curated INFERRED; 39 support EXTRACTED.
 - Boundary: this is navigation only; it neither amends the canon nor raises status.
 - See `AUDIT_NAVIGATION.md` and `audit_navigation_manifest.json`.
