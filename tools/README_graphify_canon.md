@@ -28,6 +28,7 @@ python -X utf8 tools/graphify_canon_edges.py            # → graphify-out/canon
 python -X utf8 tools/graphify_canon_edges.py --stats    # только сводка (чистый stdlib, без graphify)
 python -X utf8 tools/graphify_canon_edges.py --out P    # свой путь вывода фрагмента
 python -X utf8 tools/graphify_canon_edges.py --inject   # влить в graphify-out/graph.json + рекластеризовать
+python -X utf8 tools/graphify_canon_edges.py --inject --project-root ROOT --out-dir OUT  # изолированная сборка
 ```
 
 `emit` и `--stats` — **только stdlib**. `graphify` импортируется лениво и нужен

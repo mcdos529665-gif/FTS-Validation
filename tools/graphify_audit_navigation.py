@@ -18,6 +18,7 @@
 
     python -X utf8 tools/graphify_audit_navigation.py --stats
     python -X utf8 tools/graphify_audit_navigation.py
+    python -X utf8 tools/graphify_audit_navigation.py --inject --project-root ROOT --out-dir OUT
     E:\\Codex\\mcp\\graphify\\tools\\graphifyy\\Scripts\\python.exe -X utf8 \
         tools/graphify_audit_navigation.py --inject
     E:\\Codex\\mcp\\graphify\\tools\\graphifyy\\Scripts\\python.exe -X utf8 \
@@ -76,6 +77,27 @@ META_LABELS = {
     "MP-C": "MP-C — независимое повышение статуса (candidate)",
     "MP-S": "MP-S — служебный контур целостности",
 }
+
+
+def configure_paths(project_root: str | Path | None = None, out_dir: str | Path | None = None) -> None:
+    """Read project inputs from one root and write graph outputs elsewhere."""
+    global ROOT, AUDIT, OPEN_QUESTIONS, OUT_DIR, GRAPH_PATH, LABELS_PATH
+    global FRAGMENT_PATH, OVERLAY_REPORT, OVERLAY_MANIFEST
+    global ATLAS_PATH, MAP_PATH, CLAIMS_PATH, FINDINGS_PATH, REVIEW_PATH
+    ROOT = Path(project_root).resolve() if project_root else Path(__file__).resolve().parent.parent
+    AUDIT = ROOT / "work" / "v14_rebuild" / "audit"
+    OPEN_QUESTIONS = ROOT / "work" / "OPEN_QUESTIONS.md"
+    OUT_DIR = Path(out_dir).resolve() if out_dir else ROOT / "graphify-out"
+    GRAPH_PATH = OUT_DIR / "graph.json"
+    LABELS_PATH = OUT_DIR / ".graphify_labels.json"
+    FRAGMENT_PATH = OUT_DIR / "audit_navigation_fragment.json"
+    OVERLAY_REPORT = OUT_DIR / "AUDIT_NAVIGATION.md"
+    OVERLAY_MANIFEST = OUT_DIR / "audit_navigation_manifest.json"
+    ATLAS_PATH = AUDIT / "PATTERN_ATLAS.tsv"
+    MAP_PATH = AUDIT / "PATTERN_OQ_MAP.tsv"
+    CLAIMS_PATH = AUDIT / "CLAIM_MATRIX.tsv"
+    FINDINGS_PATH = AUDIT / "FINDINGS.tsv"
+    REVIEW_PATH = AUDIT / "REVIEW_CONCLUSION.md"
 
 
 def rel(path: Path) -> str:
@@ -289,6 +311,15 @@ def build_fragment() -> tuple[dict[str, object], dict[str, object]]:
     def add_edge(item: dict[str, object]) -> None:
         add_unique_edge(edges, edge_seen, item)
 
+    add_node(node(
+        ANCHOR_SYSTEM,
+        f"Система якорей {{#oq-*}}: {len(anchors)} стабильных ID для всех пунктов "
+        "(инструмент: tools/oq_anchor.py, guarded)",
+        rel(OPEN_QUESTIONS),
+        "anchors",
+        file_type="document",
+        anchor_count=len(anchors),
+    ))
     add_node(node(
         NAV_HUB,
         "Аудит 2026-07-13/14: закономерности ↔ OQ",
@@ -581,7 +612,7 @@ def merge_fragment(
             # Узлы этого детерминированного overlay принадлежат ему, поэтому
             # обновляем их целиком вместо ложного collision; чужие узлы по-прежнему
             # защищены от случайной подмены.
-            if prior.get("navigation_layer") == "audit":
+            if node_id == ANCHOR_SYSTEM or prior.get("navigation_layer") == "audit":
                 item["community"] = nav_community
                 prior.update(item)
                 continue
@@ -840,6 +871,8 @@ def main() -> int:
     args = sys.argv[1:]
     flags: set[str] = set()
     output: Path | None = None
+    project_root: Path | None = None
+    out_dir: Path | None = None
     index = 0
     while index < len(args):
         arg = args[index]
@@ -853,10 +886,22 @@ def main() -> int:
             output = Path(args[index + 1])
             index += 2
             continue
+        if arg in {"--project-root", "--out-dir"}:
+            if index + 1 >= len(args):
+                raise SystemExit(f"{arg} требует путь")
+            value = Path(args[index + 1])
+            if arg == "--project-root":
+                project_root = value
+            else:
+                out_dir = value
+            index += 2
+            continue
         raise SystemExit(f"неизвестный аргумент: {arg}")
     if "-h" in flags or "--help" in flags:
         print(__doc__)
+        print("Опции: --project-root PATH, --out-dir PATH")
         return 0
+    configure_paths(project_root, out_dir)
     fragment, summary = build_fragment()
     print_summary(summary)
     if "--stats" in flags:

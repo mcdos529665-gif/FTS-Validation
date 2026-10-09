@@ -36,9 +36,12 @@ Usage (из корня репозитория; на Windows-консоли до�
   python -X utf8 tools/graphify_canon_edges.py --inject   # влить фрагмент в graphify-out/graph.json,
                                                           #   рекластеризовать, перегенерить GRAPH_REPORT.md
                                                           #   (ТРЕБУЕТ graphify; затем: graphify export html)
+  python -X utf8 tools/graphify_canon_edges.py --inject --project-root ROOT --out-dir OUT
+                                                          # входы из ROOT; граф записывается в OUT
 
 Только stdlib для emit/--stats. graphify импортируется ЛЕНИВО и только для --inject.
 """
+import argparse
 import json
 import os
 import re
@@ -50,6 +53,16 @@ SRC = os.path.join(ROOT, "source")
 CARDS = os.path.join(SRC, "fts_cards.jsonl")
 TRIPLES = os.path.join(SRC, "fts_triples.tsv")
 OUT_DIR = os.path.join(ROOT, "graphify-out")
+
+
+def configure_paths(project_root=None, out_dir=None):
+    """Resolve inputs from the project and allow outputs in an isolated build dir."""
+    global ROOT, SRC, CARDS, TRIPLES, OUT_DIR
+    ROOT = os.path.abspath(project_root or ROOT)
+    SRC = os.path.join(ROOT, "source")
+    CARDS = os.path.join(SRC, "fts_cards.jsonl")
+    TRIPLES = os.path.join(SRC, "fts_triples.tsv")
+    OUT_DIR = os.path.abspath(out_dir or os.path.join(ROOT, "graphify-out"))
 
 # Должно совпадать с соглашением graphify об ID для source/fts_cards.json.
 NODE_PREFIX = "source_fts_cards_"
@@ -197,15 +210,40 @@ def inject(nodes, edges):
     g = json.loads(open(gpath, encoding="utf-8").read())
     links = g.get("links", g.get("edges", []))
 
-    # существующий граф -> extraction-формат, затем + канон-фрагмент (dedupe узлов по id)
+    # Карточный фрагмент владеет карточками: обновляем совпавшие ID метаданными
+    # активного канона, сохраняя только кластерную метку старой проекции.
+    canonical_by_id = {str(n["id"]): n for n in nodes}
     seen, merged_nodes = set(), []
-    for n in g.get("nodes", []) + nodes:
-        if n["id"] not in seen:
-            seen.add(n["id"])
-            merged_nodes.append(n)
+    for old in g.get("nodes", []):
+        node_id = str(old["id"])
+        if node_id in seen:
+            continue
+        current = canonical_by_id.get(node_id)
+        if current is not None:
+            replacement = {**old, **current}
+            if isinstance(old.get("community"), int):
+                replacement["community"] = old["community"]
+            merged_nodes.append(replacement)
+        else:
+            merged_nodes.append(old)
+        seen.add(node_id)
+    for current in nodes:
+        if str(current["id"]) not in seen:
+            merged_nodes.append(current)
+            seen.add(str(current["id"]))
+    merged_edges = [dict(e) for e in links]
+    edge_keys = {
+        (str(e.get("source")), str(e.get("target")), str(e.get("relation", "")))
+        for e in merged_edges
+    }
+    for item in edges:
+        key = (str(item["source"]), str(item["target"]), str(item.get("relation", "")))
+        if key not in edge_keys:
+            merged_edges.append(item)
+            edge_keys.add(key)
     extraction = {
         "nodes": merged_nodes,
-        "edges": [dict(e) for e in links] + edges,
+        "edges": merged_edges,
         "hyperedges": g.get("hyperedges", []),
         "input_tokens": 0, "output_tokens": 0,
     }
@@ -246,27 +284,27 @@ def inject(nodes, edges):
 
 
 def main():
-    args = sys.argv[1:]
-    do_stats = "--stats" in args
-    do_inject = "--inject" in args
-    out_path = None
-    if "--out" in args:
-        i = args.index("--out")
-        if i + 1 < len(args):
-            out_path = args[i + 1]
+    parser = argparse.ArgumentParser(description="Emit or inject the active FTS canon graph layer")
+    parser.add_argument("--stats", action="store_true")
+    parser.add_argument("--inject", action="store_true")
+    parser.add_argument("--out")
+    parser.add_argument("--project-root", help="project root containing source/")
+    parser.add_argument("--out-dir", help="graphify output directory (defaults to <project-root>/graphify-out)")
+    args = parser.parse_args()
+    configure_paths(args.project_root, args.out_dir)
 
     cards = load_cards()
     triples = load_triples()
     nodes, edges, summary = build_fragment(cards, triples)
     print_summary(summary)
 
-    if do_inject:
+    if args.inject:
         inject(nodes, edges)
         return
-    if do_stats:
+    if args.stats:
         return
 
-    out_path = out_path or os.path.join(OUT_DIR, "canon_fragment.json")
+    out_path = args.out or os.path.join(OUT_DIR, "canon_fragment.json")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump({"nodes": nodes, "edges": edges, "hyperedges": []}, f, ensure_ascii=False, indent=2)

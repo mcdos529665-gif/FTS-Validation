@@ -1,0 +1,18 @@
+{
+  "count": 2,
+  "items": [
+    {
+      "id": "v13_complex_branch_overlay_2026_06_11_fts_v13_llm_full_dump_u7_window_cycle",
+      "members": [
+        "work_canon_history_v13_complex_branch_overlay_2026_06_11_fts_v13_llm_full_dump_answer_w_close_w_w"
+      ]
+    },
+    {
+      "id": "v14_rebuild_fts_v14_paper_absence_grammar",
+      "members": [
+        "work_v14_rebuild_fts_v14_paper_antimode_a"
+      ]
+    }
+  ],
+  "policy": "invalid members are retained as explicit unresolved_members metadata; no ghost nodes added"
+}

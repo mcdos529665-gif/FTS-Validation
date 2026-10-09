@@ -1,272 +1,259 @@
 {
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\MANIFEST.json": {
-    "mtime": 1781199998.0574727,
-    "ast_hash": "a2bf32591f2c4c19130f9dd2215c6700",
-    "semantic_hash": "a2bf32591f2c4c19130f9dd2215c6700"
+  "manifest_version": 2,
+  "built_at": "2026-10-09T15:40:00+03:00",
+  "project_root": "C:/Users/Mcdos/Desktop/FTS_v13_project",
+  "snapshot_root": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\snapshot",
+  "snapshot_git_head": "eaebf225f1619ffe12413faf25e635f2c41a20ce",
+  "graphify_version": "0.9.14",
+  "deep_mode": true,
+  "recognized_files": {
+    "code": 137,
+    "document": 276,
+    "paper": 7,
+    "image": 0,
+    "video": 0
   },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\fts_cards.json": {
-    "mtime": 1781148182.0,
-    "ast_hash": "b9e5318901cd0191fdff2ebc21e17b36",
-    "semantic_hash": "b9e5318901cd0191fdff2ebc21e17b36"
+  "recognized_file_count": 420,
+  "unclassified_files": 81,
+  "semantic_chunks": 82,
+  "semantic_inputs": 283,
+  "fallback_structural_chunks": 45,
+  "deep_agent_chunks": 37,
+  "estimated_input_tokens_chars_div_2_5": 3122553.0,
+  "token_counters": {
+    "input": null,
+    "output": null
   },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\fts_v13_workbook_sheets.json": {
-    "mtime": 1781148182.0,
-    "ast_hash": "94579d35f0131eadcabcbc5f1d6756fa",
-    "semantic_hash": "94579d35f0131eadcabcbc5f1d6756fa"
+  "cache_audit": {
+    "matching_entries": 7,
+    "proven_deep_entries": 0,
+    "matching_paths": [
+      ".claude/agents/fts-routine.md",
+      "SLASH_COMMANDS.md",
+      "work/v14_rebuild/d2_sign/PREREGISTRATION.md",
+      "work/v14_rebuild/d2_sign/RESULTS.md",
+      "work/v14_rebuild/half_hypothesis.md",
+      "work/v14_rebuild/o20/PREREGISTRATION.md",
+      "work/v14_rebuild/o20/RESULTS.md"
+    ],
+    "action": "re-extract all; existing cache entries do not record deep mode"
   },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\import_from.py": {
-    "mtime": 1781199998.0584724,
-    "ast_hash": "24c34b1419df6d5159db41ef0c241f34",
-    "semantic_hash": "24c34b1419df6d5159db41ef0c241f34"
+  "input_manifest_sha256": "f018c44b4d360090bdf46391d71fd5587da4a29cd446d7770139dff404ed0d2e",
+  "segment_integrity": {
+    "entries": 793,
+    "line_ranged_segments": 519,
+    "non_line_ranged_entries": 274,
+    "unique_read_paths": 711,
+    "paths_shared_by_multiple_sources": 82,
+    "missing_paths": [],
+    "errors": [],
+    "verified_at_snapshot": true
   },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\oq_pool.py": {
-    "mtime": 1783325960.0312824,
-    "ast_hash": "4fafdaee28d85ceb8b7701faf86e8b90",
-    "semantic_hash": "4fafdaee28d85ceb8b7701faf86e8b90"
+  "collision_repair": {
+    "repair": "basename segment collision between E5-H02/source.en.md and E5-H05/source.en.md",
+    "repaired_segments": 19,
+    "source_file": "work/v14_rebuild/e5_literature_review/papers/E5-H02/source.en.md",
+    "source_sha256": "e4cf4d71ae126066bd513cd6d0878432b8274092f39575a16b1f21ab37e153fa",
+    "entries": [
+      {
+        "chunk": 31,
+        "location": "lines 1-8; document start",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0001_0008.md",
+        "chars": 608
+      },
+      {
+        "chunk": 31,
+        "location": "lines 9-14; ## Abstract",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0009_0014.md",
+        "chars": 1237
+      },
+      {
+        "chunk": 31,
+        "location": "lines 15-31; ## Contents",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0015_0031.md",
+        "chars": 846
+      },
+      {
+        "chunk": 31,
+        "location": "lines 32-103; ## 1 Introduction",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0032_0103.md",
+        "chars": 12554
+      },
+      {
+        "chunk": 31,
+        "location": "lines 104-105; ## 2 Markov Categories",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0104_0105.md",
+        "chars": 24
+      },
+      {
+        "chunk": 31,
+        "location": "lines 106-209; ## 2.1 Definition of Markov Categories and Basic Theory",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0106_0209.md",
+        "chars": 8203
+      },
+      {
+        "chunk": 31,
+        "location": "lines 210-246; ## 2.2 Parametric Markov Categories",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0210_0246.md",
+        "chars": 3461
+      },
+      {
+        "chunk": 31,
+        "location": "lines 247-248; ## 3 Representable Markov Categories",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0247_0248.md",
+        "chars": 38
+      },
+      {
+        "chunk": 31,
+        "location": "lines 249-392; ## 3.1 Kleisli Categories as Markov Categories",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0249_0392.md",
+        "chars": 12399
+      },
+      {
+        "chunk": 32,
+        "location": "lines 393-641; ## 3.2 Markov Categories as Kleisli Categories",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0393_0641.md",
+        "chars": 22381
+      },
+      {
+        "chunk": 32,
+        "location": "lines 642-750; ## 3.3 Almost-Surely-Compatible Representability",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0642_0750.md",
+        "chars": 8927
+      },
+      {
+        "chunk": 32,
+        "location": "lines 751-901; ## 4 Second-Order Stochastic Dominance",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0751_0901.md",
+        "chars": 9142
+      },
+      {
+        "chunk": 32,
+        "location": "lines 902-903; ## 5 Comparison of Statistical Experiments",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0902_0903.md",
+        "chars": 44
+      },
+      {
+        "chunk": 32,
+        "location": "lines 904-1064; ## 5.1 Informativeness of Statistical Experiments",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_0904_1064.md",
+        "chars": 11960
+      },
+      {
+        "chunk": 32,
+        "location": "lines 1065-1132; ## 5.2 The Classical Blackwell–Sherman–Stein Theorem",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_1065_1132.md",
+        "chars": 6640
+      },
+      {
+        "chunk": 32,
+        "location": "lines 1133-1302; ## 5.3 The Blackwell–Sherman–Stein Theorem in Markov Categories",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_1133_1302.md",
+        "chars": 12297
+      },
+      {
+        "chunk": 32,
+        "location": "lines 1303-1543; ## 5.4 The Blackwell–Sherman–Stein Theorem Parametrized by Priors",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_1303_1543.md",
+        "chars": 18747
+      },
+      {
+        "chunk": 33,
+        "location": "lines 1544-1798; ## 6 Strongly Representable Markov Categories",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_1544_1798.md",
+        "chars": 17497
+      },
+      {
+        "chunk": 33,
+        "location": "lines 1799-1960; ## References",
+        "path": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\segments\\by_source\\943ea8f1ee_e5_h02_source_en_1799_1960.md",
+        "chars": 4660
+      }
+    ],
+    "verified_chars": true
   },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\query.py": {
-    "mtime": 1781199998.0594726,
-    "ast_hash": "367873086aa479fb4e5c7e20f5a0bc14",
-    "semantic_hash": "367873086aa479fb4e5c7e20f5a0bc14"
+  "projection_audit": {
+    "raw_nodes": 9650,
+    "raw_edges": 14837,
+    "raw_hyperedges": 95,
+    "raw_unordered_pair_groups": 14267,
+    "raw_parallel_pair_groups": 528,
+    "raw_parallel_edge_surplus": 570,
+    "final_nodes": 9869,
+    "final_links": 14878,
+    "final_hyperedges": 96,
+    "direction_fields_preserved_in_graph_json": false,
+    "direction_source": "combined_extraction.json preserves source/target; authoritative claim_graph remains separate",
+    "note": "Graphify's undirected projection collapses multiple predicates sharing an endpoint pair; navigation interface is unchanged."
   },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\verify.py": {
-    "mtime": 1781199998.0594726,
-    "ast_hash": "0a06f548dc7cc8c25403923369dc2dbe",
-    "semantic_hash": "0a06f548dc7cc8c25403923369dc2dbe"
+  "graph": {
+    "nodes": 9869,
+    "links": 14878,
+    "hyperedges": 96
   },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\crosscheck.py": {
-    "mtime": 1781201245.3108723,
-    "ast_hash": "3cb23efb4992e86c5a922dc5623f4db8",
-    "semantic_hash": "3cb23efb4992e86c5a922dc5623f4db8"
+  "outputs": {
+    ".graphify_analysis.json": {
+      "bytes": 822589,
+      "sha256": "b6ccaeb5a3b1377d1f5681a7947ec891b7d9367f667b28a268a3fe21c96690ee"
+    },
+    ".graphify_labels.json": {
+      "bytes": 59676,
+      "sha256": "037abcd807658b4ca71404bdd9d8923b60738e2a5e62d5b884ec977ddcdacc4f"
+    },
+    "AUDIT_NAVIGATION.md": {
+      "bytes": 1737,
+      "sha256": "341802df50308b0fc0a18d829860ee17bbdfa8d823cababd299a7660512e7634"
+    },
+    "audit_navigation_fragment.json": {
+      "bytes": 493131,
+      "sha256": "e42fd3a7cfd21181758aee6a14e27d9945e9c08c504c6960b624b5bee747d4ff"
+    },
+    "audit_navigation_manifest.json": {
+      "bytes": 1517,
+      "sha256": "795710cb1abd54ada8a7ab3148d6ad50e74355005346f22e18ed42ffac97db78"
+    },
+    "canon_fragment.json": {
+      "bytes": 152869,
+      "sha256": "995da6550e281ad1186fd456e3f96c63761f5ca835d4e21d946e0732a17d7845"
+    },
+    "cost.json": {
+      "bytes": 1850,
+      "sha256": "6d3c606cefcff672dfef29f416ba7e3c438cca5f0c102863731d998e22dcb6b6"
+    },
+    "graph.html": {
+      "bytes": 11664651,
+      "sha256": "cfffc7387eb6ed6e6ceeb85ac1f54f1fb2328bbec64ddee6779b8b1731f1e0d5"
+    },
+    "graph.json": {
+      "bytes": 12477834,
+      "sha256": "88f8b0a2ac9df82efce8b48ba51577262edb45e01f7ca490261925491585e7ef"
+    },
+    "GRAPH_REPORT.md": {
+      "bytes": 318340,
+      "sha256": "6c298d5bb82fc4d9d9ba6e78f4ccf117ab424e6313e17cb51b7b8feae7e9ab87"
+    },
+    "unresolved_hyperedges.json": {
+      "bytes": 528,
+      "sha256": "d4211a8873807e44a89a8882a7ac5242f675cc20ac17928c666821b6acd817c5"
+    }
   },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\d2_sign\\results.json": {
-    "mtime": 1781513136.3564193,
-    "ast_hash": "da480d9fc9a91abebf8ca74d234e048f",
-    "semantic_hash": "da480d9fc9a91abebf8ca74d234e048f"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\d2_sign\\run_d2.py": {
-    "mtime": 1781513036.36567,
-    "ast_hash": "2db385df042d252afa48542ec78ea6c0",
-    "semantic_hash": "2db385df042d252afa48542ec78ea6c0"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\o20\\probe.py": {
-    "mtime": 1781369207.8837745,
-    "ast_hash": "68fef8bd333e8ccffa43afa2b8efb269",
-    "semantic_hash": "68fef8bd333e8ccffa43afa2b8efb269"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\o20\\results.json": {
-    "mtime": 1781369628.6036427,
-    "ast_hash": "e1ebbd491d6610738117a6f65bf712cb",
-    "semantic_hash": "e1ebbd491d6610738117a6f65bf712cb"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\o20\\run_o20.py": {
-    "mtime": 1781369475.2650645,
-    "ast_hash": "b50c162df82a422a788070f752762377",
-    "semantic_hash": "b50c162df82a422a788070f752762377"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\probes.py": {
-    "mtime": 1783348496.2473066,
-    "ast_hash": "850e71d3a0e156f9209941db79aebfda",
-    "semantic_hash": "850e71d3a0e156f9209941db79aebfda"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\sheet_dump.py": {
-    "mtime": 1781201464.5395796,
-    "ast_hash": "1a745d5ab01bec278abf8f74935d3740",
-    "semantic_hash": "1a745d5ab01bec278abf8f74935d3740"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\verification.py": {
-    "mtime": 1783348303.350975,
-    "ast_hash": "1c5c06bf8df391b12f5e9430b275e8a2",
-    "semantic_hash": "1c5c06bf8df391b12f5e9430b275e8a2"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\CLAUDE.md": {
-    "mtime": 1783348517.4774625,
-    "ast_hash": "fde37d978a01a4842a36dce0c8df944d",
-    "semantic_hash": "fde37d978a01a4842a36dce0c8df944d"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\PROJECT_INSTRUCTIONS.md": {
-    "mtime": 1781199998.0544732,
-    "ast_hash": "d27c1bea45da72add4a4cda997e35af8",
-    "semantic_hash": "d27c1bea45da72add4a4cda997e35af8"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\README.md": {
-    "mtime": 1781199998.0554738,
-    "ast_hash": "c768156e144708f53890eccba64b601a",
-    "semantic_hash": "c768156e144708f53890eccba64b601a"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\FTS.yaml": {
-    "mtime": 1781148182.0,
-    "ast_hash": "741519b52bc47257b20984bc9ae11f7f",
-    "semantic_hash": "741519b52bc47257b20984bc9ae11f7f"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\FTS_v13_LLM_CONTEXT.md": {
-    "mtime": 1781148182.0,
-    "ast_hash": "5046ded5e304e2c649baea3075a6bd84",
-    "semantic_hash": "5046ded5e304e2c649baea3075a6bd84"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\FTS_v13_LLM_FULL_DUMP.md": {
-    "mtime": 1781148182.0,
-    "ast_hash": "e685c84b5324fc900bd074bd7a26673b",
-    "semantic_hash": "e685c84b5324fc900bd074bd7a26673b"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\INSTALL.md": {
-    "mtime": 1781148182.0,
-    "ast_hash": "80bfbe83b8af7e5f76bcceb13868e381",
-    "semantic_hash": "80bfbe83b8af7e5f76bcceb13868e381"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\LLM_IMPORT_PROMPT.txt": {
-    "mtime": 1781148182.0,
-    "ast_hash": "4abe12623f07371faa7456e7834127fd",
-    "semantic_hash": "4abe12623f07371faa7456e7834127fd"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\source\\START_HERE.md": {
-    "mtime": 1781148182.0,
-    "ast_hash": "a463e50d2736753982cefa7f2494d67b",
-    "semantic_hash": "a463e50d2736753982cefa7f2494d67b"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\DECISIONS.md": {
-    "mtime": 1783349727.1392798,
-    "ast_hash": "f94771681fb399c4f91d0c806d72de73",
-    "semantic_hash": "f94771681fb399c4f91d0c806d72de73"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\OPEN_QUESTIONS.md": {
-    "mtime": 1783329635.959538,
-    "ast_hash": "76e48048228f1085057f43d2a7205a9d",
-    "semantic_hash": "76e48048228f1085057f43d2a7205a9d"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\OQ_POOLS.md": {
-    "mtime": 1783329672.8517153,
-    "ast_hash": "fa7a541f37d55acaf34604f84dc43468",
-    "semantic_hash": "fa7a541f37d55acaf34604f84dc43468"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\OQ_TRIAGE.md": {
-    "mtime": 1783329658.1023672,
-    "ast_hash": "0690e7f2320ff8993dc4e45e82448b7f",
-    "semantic_hash": "0690e7f2320ff8993dc4e45e82448b7f"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\REFUTED.md": {
-    "mtime": 1783172614.3469377,
-    "ast_hash": "5dfe122d037a6aab62d95ad7bd76a11a",
-    "semantic_hash": "5dfe122d037a6aab62d95ad7bd76a11a"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\STATE.md": {
-    "mtime": 1783349732.6385274,
-    "ast_hash": "a2588bf8b3a8c9ecfe94409aaf1e79a2",
-    "semantic_hash": "a2588bf8b3a8c9ecfe94409aaf1e79a2"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\notation.md": {
-    "mtime": 1782238632.3892663,
-    "ast_hash": "e2157d6008e13e22f0c3083f71b528c3",
-    "semantic_hash": "e2157d6008e13e22f0c3083f71b528c3"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\FTS_v14_paper.md": {
-    "mtime": 1783349699.4389746,
-    "ast_hash": "903ab00a2f3e221bed8690e4de5c3e59",
-    "semantic_hash": "903ab00a2f3e221bed8690e4de5c3e59"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\FTS_v14_register_map.md": {
-    "mtime": 1783349706.2652595,
-    "ast_hash": "c450fea1bc1e70a78105943c29a99a36",
-    "semantic_hash": "c450fea1bc1e70a78105943c29a99a36"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\canon_coverage_v14.md": {
-    "mtime": 1782238425.7883341,
-    "ast_hash": "24582280f3b496479e04099227a03155",
-    "semantic_hash": "24582280f3b496479e04099227a03155"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\clt_u6_note.md": {
-    "mtime": 1783158044.3945315,
-    "ast_hash": "4ae96fae729d17167548d78f4bf09d60",
-    "semantic_hash": "4ae96fae729d17167548d78f4bf09d60"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\d2_sign\\PREREGISTRATION.md": {
-    "mtime": 1781512916.4062543,
-    "ast_hash": "5ea67ce8afb82111f3fe8462f7bc4cb1",
-    "semantic_hash": "5ea67ce8afb82111f3fe8462f7bc4cb1"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\d2_sign\\RESULTS.md": {
-    "mtime": 1781513221.156604,
-    "ast_hash": "8d421d0312b40c7afdfccf9542151d6b",
-    "semantic_hash": "8d421d0312b40c7afdfccf9542151d6b"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\half_hypothesis.md": {
-    "mtime": 1782238425.7726407,
-    "ast_hash": "e8c5527b3211275ce728ee6006b60fc3",
-    "semantic_hash": "e8c5527b3211275ce728ee6006b60fc3"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\ladder_table.md": {
-    "mtime": 1783348464.0826893,
-    "ast_hash": "8e91eab3613b1f3b60dadd86761f663c",
-    "semantic_hash": "8e91eab3613b1f3b60dadd86761f663c"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\o20\\PREREGISTRATION.md": {
-    "mtime": 1781369435.8094873,
-    "ast_hash": "3c0a38124dc808fa9b8e13621c5a3dfe",
-    "semantic_hash": "3c0a38124dc808fa9b8e13621c5a3dfe"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\o20\\RESULTS.md": {
-    "mtime": 1781369698.4089882,
-    "ast_hash": "ddd0d695d47223642c0d8dccf0860b91",
-    "semantic_hash": "ddd0d695d47223642c0d8dccf0860b91"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\red_team_F3.md": {
-    "mtime": 1782238425.7863336,
-    "ast_hash": "1627ffba3358e6e8f0c1f8c5b168e108",
-    "semantic_hash": "1627ffba3358e6e8f0c1f8c5b168e108"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\status_patch_v14.md": {
-    "mtime": 1782238649.7062533,
-    "ast_hash": "35888fde7d730f91c2cca3c4261ba764",
-    "semantic_hash": "35888fde7d730f91c2cca3c4261ba764"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\topo_chi_note.md": {
-    "mtime": 1783173247.4918618,
-    "ast_hash": "2de017dfc5fc0da16e98ab891d26b77f",
-    "semantic_hash": "2de017dfc5fc0da16e98ab891d26b77f"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\verification_report.md": {
-    "mtime": 1783349752.5010064,
-    "ast_hash": "f20857834a909a5dd4e8181c7f0cb5da",
-    "semantic_hash": "f20857834a909a5dd4e8181c7f0cb5da"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\.claude\\agents\\fts-routine.md": {
-    "mtime": 1783234202.814403,
-    "ast_hash": "da48b3e48034421e5c51a8cd6c4a6447",
-    "semantic_hash": "da48b3e48034421e5c51a8cd6c4a6447"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\SLASH_COMMANDS.md": {
-    "mtime": 1783245016.2777212,
-    "ast_hash": "650bfbacf8f126aa4f4e788b2ef7cc5c",
-    "semantic_hash": "650bfbacf8f126aa4f4e788b2ef7cc5c"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\graphify_canon_edges.py": {
-    "mtime": 1783267589.032018,
-    "ast_hash": "7400b43f6a2bc9952c388f11bb280aae",
-    "semantic_hash": "7400b43f6a2bc9952c388f11bb280aae"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\oq_anchor.py": {
-    "mtime": 1783329644.4402199,
-    "ast_hash": "cbd472ca1d472b478b816049df69730c",
-    "semantic_hash": "cbd472ca1d472b478b816049df69730c"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\tools\\README_graphify_canon.md": {
-    "mtime": 1783267674.993456,
-    "ast_hash": "274f3ab79edd56cd1fa36514f8e454e9",
-    "semantic_hash": "274f3ab79edd56cd1fa36514f8e454e9"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\OQ_INTERSECTS.md": {
-    "mtime": 1783329672.9331272,
-    "ast_hash": "e0184e7d978b0f6da8d259ccfcf3d476",
-    "semantic_hash": "e0184e7d978b0f6da8d259ccfcf3d476"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\OQ_INTERSECT_PLAN.md": {
-    "mtime": 1783325851.6148942,
-    "ast_hash": "7c6d8bfbf72f737b68e3954eaed46871",
-    "semantic_hash": "7c6d8bfbf72f737b68e3954eaed46871"
-  },
-  "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project\\.claude\\worktrees\\agitated-khorana-ac2ec6\\work\\v14_rebuild\\questiongain_criterion.md": {
-    "mtime": 1783326962.5519867,
-    "ast_hash": "6cee335e7e52e923e18a33d626341823",
-    "semantic_hash": "6cee335e7e52e923e18a33d626341823"
+  "paths_policy": "all source_file entries are root-relative; no stale worktree paths",
+  "unresolved_hyperedges": {
+    "count": 2,
+    "items": [
+      {
+        "id": "v13_complex_branch_overlay_2026_06_11_fts_v13_llm_full_dump_u7_window_cycle",
+        "members": [
+          "work_canon_history_v13_complex_branch_overlay_2026_06_11_fts_v13_llm_full_dump_answer_w_close_w_w"
+        ]
+      },
+      {
+        "id": "v14_rebuild_fts_v14_paper_absence_grammar",
+        "members": [
+          "work_v14_rebuild_fts_v14_paper_antimode_a"
+        ]
+      }
+    ],
+    "policy": "invalid members are retained as explicit unresolved_members metadata; no ghost nodes added"
   }
 }

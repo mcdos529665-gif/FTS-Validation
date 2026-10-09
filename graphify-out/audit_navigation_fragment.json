@@ -1,6 +1,17 @@
 {
   "nodes": [
     {
+      "id": "work_open_questions_anchor_system",
+      "label": "Система якорей {#oq-*}: 103 стабильных ID для всех пунктов (инструмент: tools/oq_anchor.py, guarded)",
+      "file_type": "document",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "anchors",
+      "_origin": "audit_navigation",
+      "navigation_layer": "audit",
+      "navigation_only": true,
+      "anchor_count": 103
+    },
+    {
       "id": "audit_navigation_hub",
       "label": "Аудит 2026-07-13/14: закономерности ↔ OQ",
       "file_type": "concept",

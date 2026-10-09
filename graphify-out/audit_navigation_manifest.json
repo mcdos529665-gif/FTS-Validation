@@ -7,7 +7,7 @@
     "work/v14_rebuild/audit/CLAIM_MATRIX.tsv": "d92a2a1bb777ff4dda3c97cb3754a214d0eb7f928a3bc46a7cbf8910980f2c0c",
     "work/v14_rebuild/audit/FINDINGS.tsv": "305017c0267883d361689177d785df576a01dd2c2b5695cbc32974c2be9bf646",
     "work/v14_rebuild/audit/REVIEW_CONCLUSION.md": "a9bca28add191dbe4a58590229fa138e0b738b2eba85f55a7541c81afe6b8245",
-    "work/OPEN_QUESTIONS.md": "2220ade4f40c6b77d87af13b72b62a20de63e088996924de1a69f5cc6e8f763a"
+    "work/OPEN_QUESTIONS.md": "d8387c544bdf04eb8fd39a480edf8eb3072bf8673ef08f35419e7c3546f6c399"
   },
   "counts": {
     "patterns": 31,
@@ -17,7 +17,7 @@
     "programs": 7,
     "events": 12,
     "meta_patterns": 4,
-    "nodes": 187,
+    "nodes": 188,
     "edges": 830,
     "hyperedges": 1,
     "bridge_direct": 29,
@@ -25,10 +25,10 @@
     "bridge_support": 39,
     "finding_claim_links": 6
   },
-  "community": 47,
-  "graph_nodes": 663,
-  "graph_edges": 1533,
-  "built_at_commit": "b66225c74533d72618171a57f66afa12c52f0b52",
+  "community": 1584,
+  "graph_nodes": 9869,
+  "graph_edges": 14878,
+  "built_at_commit": "eaebf225f1619ffe12413faf25e635f2c41a20ce",
   "trust_boundary": {
     "EXTRACTED": "буквальные связи TSV/Markdown",
     "INFERRED": "курируемые indirect и непрямой фрагмент mixed",
