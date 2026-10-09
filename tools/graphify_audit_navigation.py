@@ -824,7 +824,7 @@ def verify(fragment: dict[str, object], summary: dict[str, object]) -> None:
         raise AssertionError(f"graph.json: отсутствуют audit-рёбра {missing_edges[:5]} (всего {len(missing_edges)})")
     if wrong_confidence:
         raise AssertionError(f"graph.json: нарушена метка доверия {wrong_confidence[:3]}")
-    expected = {"patterns": 31, "open_questions": 60, "claims": 25, "findings": 20}
+    expected = {"patterns": 31, "open_questions": 82, "claims": 25, "findings": 20}
     for key, value in expected.items():
         if summary[key] != value:
             raise AssertionError(f"неожиданное покрытие {key}: {summary[key]} != {value}")
