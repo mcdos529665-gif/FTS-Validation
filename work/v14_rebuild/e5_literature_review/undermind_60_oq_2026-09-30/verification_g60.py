@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Проверки G60-01…G60-47 к GROUPED_OPEN_2026-10-08.md (кандидаты ассистента).
+"""Проверки G60-01…G60-53 к GROUPED_OPEN_2026-10-08.md (кандидаты ассистента).
 
 Предсказания записаны в docstring каждой проверки до первого запуска.
 Проверяют только математические факты; смысл уровней (СУ) не устанавливают.
@@ -854,9 +854,10 @@ def _mi(joint):
 def g42_typed_absence_witness():
     """G60-42. Предсказание: Y∈{0,1} равновероятно, q∈(0,1). Два механизма пропуска: H — пропуск при Y=1
     с вероятностью q, L — пропуск при Y=0 с вероятностью q. Флаг пропуска (¬A) независим от Y:
-    I(Y;flag)=0. Тип пропуска (0_A: H/L/наблюдено) несёт I(Y;type | пропуск) = 1 бит. Если же оба
-    механизма однонаправлены (оба при Y=1 с q/2), то I(Y;type | flag) = 0: тип ничего не добавляет к флагу.
-    Это форма SHADOW-5: различение доступно ⟺ у механизма есть нечётная по Y компонента."""
+    I(Y;flag)=0. Тип пропуска (0_A: H/L/наблюдено) несёт I(Y;type | пропуск) = 1 бит. Если же отношения
+    правдоподобия механизмов равны (здесь оба пропускают только при Y=1, по q/2), то I(Y;type | flag) = 0:
+    тип ничего не добавляет к флагу. Поправка 2026-10-09: прежняя подпись этого случая «однонаправленные»
+    неверна в общем случае — однонаправленные механизмы разной силы тип различает; критерий — G60-49."""
     q = sp.Rational(1, 3)
     half = sp.Rational(1, 2)
     # противоположные механизмы
@@ -870,14 +871,14 @@ def g42_typed_absence_witness():
     mi_flag_opp = _mi(collapse(opp, flag))
     miss_opp = {k: v / sum(p for (y, t), p in opp.items() if t != 'obs') for k, v in opp.items() if k[1] != 'obs'}
     mi_type_given_miss_opp = _mi(miss_opp)
-    # однонаправленные механизмы: оба при Y=1, по q/2
+    # равные отношения правдоподобия: оба механизма пропускают только при Y=1, по q/2
     same = {(1, 'H'): half * q / 2, (1, 'L'): half * q / 2, (1, 'obs'): half * (1 - q), (0, 'obs'): half}
     miss_same = {k: v / sum(p for (y, t), p in same.items() if t != 'obs') for k, v in same.items() if k[1] != 'obs'}
     mi_type_given_miss_same = _mi(miss_same)
     mi_flag_same = _mi(collapse(same, flag))
     ok = mi_flag_opp == 0 and mi_type_given_miss_opp == 1 and mi_type_given_miss_same == 0 and mi_flag_same > 0
     check("G60-42", ok, f"противоположные механизмы: I(Y;флаг)={mi_flag_opp}, I(Y;тип|пропуск)={mi_type_given_miss_opp} бит; "
-          f"однонаправленные: I(Y;флаг)={float(mi_flag_same):.4f}, I(Y;тип|пропуск)={mi_type_given_miss_same}")
+          f"равные отношения: I(Y;флаг)={float(mi_flag_same):.4f}, I(Y;тип|пропуск)={mi_type_given_miss_same}")
 
 
 def g43_misspecified_bayes():
@@ -931,7 +932,8 @@ def g45_blackwell_flag_garbling():
     """G60-45. Предсказание: флаг пропуска — функция типа (огрубление по Блэкуэллу), поэтому в любой задаче
     решения ценность типа ≥ ценности флага. На свидетеле G60-42 (противоположные механизмы, q=1/3) в задаче
     «угадать Y» с выигрышем 1 за верный ответ: с типом точность 1 − (1−q)/2 = 2/3, с флагом 1/2 — строго
-    больше. При однонаправленных механизмах точности совпадают (тип не добавляет к флагу)."""
+    больше. При равных отношениях правдоподобия механизмов точности совпадают (тип не добавляет к флагу);
+    подпись «однонаправленные» исправлена 2026-10-09, см. G60-49."""
     half, q = sp.Rational(1, 2), sp.Rational(1, 3)
     def bayes_acc(joint, view):
         # joint: {(y, t): p}; view(t) — что видит решающий; оптимум — argmax по y внутри каждого вида
@@ -948,7 +950,7 @@ def g45_blackwell_flag_garbling():
     s_type, s_flag = bayes_acc(same, ident), bayes_acc(same, flag)
     ok = a_type == sp.Rational(2, 3) and a_flag == half and s_type == s_flag
     check("G60-45", ok, f"противоположные: точность с типом {a_type}, с флагом {a_flag}; "
-          f"однонаправленные: {s_type} = {s_flag}")
+          f"равные отношения: {s_type} = {s_flag}")
 
 
 def g46_pareto_minimal_chain():
@@ -1015,6 +1017,162 @@ def g47_weight_free_dominance():
           f"при весах e1, e2: {opposite}")
 
 
+def _d4_on_cross():
+    """D4 на кресте (±1,±1) как перестановки индексов; возвращает (V, G, closure, orbits, named)."""
+    V = [(1, 1), (1, -1), (-1, 1), (-1, -1)]
+    def as_perm(f):
+        return tuple(V.index(f(v)) for v in V)
+    def compose(g, h):
+        return tuple(g[h[i]] for i in range(4))
+    ident = (0, 1, 2, 3)
+    def closure(gs):
+        H = {ident}
+        fr = [ident]
+        while fr:
+            nw = []
+            for g in fr:
+                for h in gs:
+                    k = compose(h, g)
+                    if k not in H:
+                        H.add(k)
+                        nw.append(k)
+            fr = nw
+        return frozenset(H)
+    named = {'sigma': as_perm(lambda p: (p[1], p[0])), 'nu': as_perm(lambda p: (-p[0], -p[1])),
+             'signu': as_perm(lambda p: (-p[1], -p[0])), 'mu_a': as_perm(lambda p: (-p[0], p[1])),
+             'mu_b': as_perm(lambda p: (p[0], -p[1]))}
+    G = closure([named['sigma'], named['mu_b']])
+    def orbits(H):
+        return frozenset(frozenset(V[g[i]] for g in H) for i in range(4))
+    return V, G, closure, orbits, named, ident
+
+
+def g48_composition_series():
+    """G60-48. Предсказание: у D4 семь композиционных рядов D4 ⊃ H₄ ⊃ H₂ ⊃ 1 (все факторы Z/2).
+    Строго дробят орбиты на каждом шаге (1→2→3→4 блока) ровно два, и это ровно две допустимые цепи G60-18:
+    D4 ⊃ V4 ⊃ ⟨σ⟩ ⊃ 1 и D4 ⊃ V4 ⊃ ⟨σν⟩ ⊃ 1, где V4 = {id, σ, ν, σν} — группа двухканального чтения (C-65).
+    Индекс каждого шага 2 (простой), поэтому промежуточной подгруппы нет (Лагранж): атомарность = один бит
+    на шаг. Инвариант первого шага (орбиты V4) — sign(ab), бит R-канала (G60-44)."""
+    V, G, closure, orbits, named, ident = _d4_on_cross()
+    subs = {closure(list(c)) for r in range(0, 3) for c in itertools.combinations(sorted(G), r)}
+    by_order = {}
+    for H in subs:
+        by_order.setdefault(len(H), []).append(H)
+    series = [(G, H4, H2, frozenset({ident})) for H4 in by_order[4] for H2 in by_order[2] if H2 <= H4]
+    strict = [s for s in series if [len(orbits(H)) for H in s] == [1, 2, 3, 4]]
+    V4_two = closure([named['sigma'], named['nu']])
+    targets = {closure([named['sigma']]), closure([named['signu']])}
+    sign_ab = {frozenset(c for c in V if c[0] * c[1] == s) for s in (1, -1)}
+    ok = (len(series) == 7 and len(strict) == 2 and all(s[1] == V4_two for s in strict)
+          and {s[2] for s in strict} == targets and orbits(V4_two) == sign_ab
+          and V4_two == frozenset({ident, named['sigma'], named['nu'], named['signu']}))
+    check("G60-48", ok, f"композиционных рядов D4: {len(series)}; строго дробящих орбиты: {len(strict)}; "
+          f"оба через V4={{id,σ,ν,σν}}: {all(s[1] == V4_two for s in strict)}; орбиты V4 = блоки sign(ab): "
+          f"{orbits(V4_two) == sign_ab}")
+
+
+def g49_likelihood_ratio_criterion():
+    """G60-49. Предсказание (поправка к формулировке G60-42/45): тип пропуска добавляет к флагу информацию
+    о Y ⟺ отношения правдоподобия механизмов m_k(1)/m_k(0) не все равны. Три случая, Y равновероятно:
+    (а) противоположные (H: 1/3 при Y=1, 0 при Y=0; L: наоборот) — флаг бесполезен, тип даёт 1 бит;
+    (б) однонаправленные, но разной силы (H: 0.3 при Y=1 / 0.1 при Y=0, отношение 3; L: 0.2 / 0.1,
+        отношение 2) — флаг информативен, и тип добавляет к нему информацию (I(Y;тип|пропуск) > 0);
+    (в) равные отношения (H: 0.2/0.1, L: 0.4/0.2) — тип не добавляет ничего (I = 0).
+    Прежняя подпись «однонаправленные ⇒ тип ничего не добавляет» верна только для (в)."""
+    half = sp.Rational(1, 2)
+    def joint(mech):  # mech: {k: (m_k(1), m_k(0))}
+        J = {}
+        for y in (1, 0):
+            miss = 0
+            for k, (m1, m0) in mech.items():
+                p = m1 if y == 1 else m0
+                J[(y, k)] = half * p
+                miss += p
+            J[(y, 'obs')] = half * (1 - miss)
+        return J
+    def cmi_type_given_miss(J):
+        tot = sum(p for (y, t), p in J.items() if t != 'obs')
+        cond = {k: v / tot for k, v in J.items() if k[1] != 'obs' and v != 0}
+        return _mi(cond)
+    def mi_flag(J):
+        F = {}
+        for (y, t), p in J.items():
+            key = (y, 'miss' if t != 'obs' else 'obs')
+            F[key] = F.get(key, 0) + p
+        return _mi(F)
+    r = sp.Rational
+    opp = joint({'H': (r(1, 3), 0), 'L': (0, r(1, 3))})
+    same_diff = joint({'H': (r(3, 10), r(1, 10)), 'L': (r(2, 10), r(1, 10))})   # отношения 3 и 2
+    equal = joint({'H': (r(2, 10), r(1, 10)), 'L': (r(4, 10), r(2, 10))})       # отношения 2 и 2
+    a = (mi_flag(opp) == 0, cmi_type_given_miss(opp) == 1)
+    b = (mi_flag(same_diff) > 0, sp.N(cmi_type_given_miss(same_diff)) > 1e-6)
+    c = (sp.simplify(cmi_type_given_miss(equal)) == 0,)
+    ok = all(a) and all(b) and all(c)
+    check("G60-49", ok, f"(а) противоположные: флаг 0, тип 1 бит: {all(a)}; (б) однонаправленные разной силы: "
+          f"I(Y;тип|пропуск)={float(sp.N(cmi_type_given_miss(same_diff))):.4f} > 0: {all(b)}; "
+          f"(в) равные отношения: тип 0: {all(c)}")
+
+
+def g50_mu7_ratio_orbit():
+    """G60-50. Предсказание: при МУ7 = |y|=x² отношение y/x² на МУ7 (x≠0) пробегает всю группу {+1, −1}
+    (у ветви y=−x² — только −1, как в C44). МУ7 — Z/2-орбита МУ6. Коллапс Z/2→{1} (лемма Tot) оставляет
+    ровно точки с y/x² = 1, то есть МУ6: Tot(МУ7) = МУ6 — режим вырождения C61 («схлопывает в нижнюю»)."""
+    pts = [sp.Integer(-3), sp.Integer(-1), sp.Rational(-1, 2), sp.Rational(1, 3), sp.Integer(2)]
+    mu7 = [(v, s * v**2) for v in pts for s in (1, -1)]
+    ratios = {Y / X**2 for X, Y in mu7}
+    branch_ratios = {(-(v**2)) / v**2 for v in pts}
+    tot = [(X, Y) for X, Y in mu7 if Y / X**2 == 1]
+    ok = ratios == {1, -1} and branch_ratios == {-1} and tot == [(v, v**2) for v in pts]
+    check("G60-50", ok, f"отношения y/x² на МУ7: {sorted(ratios)}; у ветви: {sorted(branch_ratios)}; "
+          f"Tot(МУ7) = МУ6: {tot == [(v, v**2) for v in pts]}")
+
+
+def g51_diagonal_triviality():
+    """G60-51. Предсказание (поправка к G60-40): строки f(·,G)=sign(·/G) на T из 7 ненулевых значений дают
+    всего 2 различные функции T→{±1} из 2⁷=128. Непредставимость диагонали тут тривиальна: класс строк заведомо
+    не полон, предпосылка «кодирования» (строки должны покрывать класс, содержащий диагональ) не выполнена."""
+    T = [-3, -1, sp.Rational(-1, 2), sp.Rational(1, 2), 1, 2, 5]
+    rows = {tuple(sp.sign(sp.Rational(F) / G) for F in T) for G in T}
+    ok = len(rows) == 2 and 2**len(T) == 128
+    check("G60-51", ok, f"различных строк {len(rows)} из {2**len(T)}: диагональный ход здесь тривиален")
+
+
+def g52_half_a_modulus():
+    """G60-52. Предсказание: значения комплексного оверлея У8 √z = ±√r·e^{iθ/2} (COMPLEX_LADDER_U8) на
+    вещественной оси: при x>0 — ±√x, при x<0 — ±i√|x|. Их модуль всюду √|x|, знак ветви ± сохраняется.
+    Пара «Половина_A» {+√|x|, −√|x|} (half_hypothesis §2: {A,−A} как вопрос) = модуль значений оверлея со
+    знаком ветви; оверлей добавляет фазу e^{iθ/2} (при x<0 — множитель i)."""
+    ok = True
+    for x in [-4, -sp.Rational(1, 4), sp.Rational(9, 4), 9]:
+        z = sp.Integer(x) if isinstance(x, int) else x
+        r, th = sp.Abs(z), sp.arg(z)
+        branches = [s * sp.sqrt(r) * sp.exp(sp.I * th / 2) for s in (1, -1)]
+        half_a = [s * sp.sqrt(sp.Abs(z)) for s in (1, -1)]
+        mods = [sp.simplify(sp.Abs(b)) for b in branches]
+        phase_factor = sp.simplify(branches[0] / half_a[0])
+        expected = sp.I if z < 0 else 1
+        ok = ok and all(sp.simplify(m - sp.sqrt(sp.Abs(z))) == 0 for m in mods) and phase_factor == expected
+    check("G60-52", ok, "|±√r·e^{iθ/2}| = √|x|; множитель оверлея к паре ±√|x|: 1 при x>0, i при x<0")
+
+
+def g53_ratio_bit_joint_channels():
+    """G60-53. Предсказание (поправка к рекомендации по 23): бит sign(ab) не функция d и не функция (|a|,|b|)
+    по отдельности (G60-44), но функция их совокупности: при a,b≠0 sign(ab)=+1 ⟺ |a−b| = ||a|−|b||
+    (иначе |a−b| = |a|+|b|). Null «модель на d и (|a|,|b|)» вычисляет цель точно и негоден как null."""
+    R = [v for v in range(-4, 5) if v != 0]
+    pairs = [(a, b) for a in R for b in R]
+    rule = all((1 if a * b > 0 else -1) == (1 if abs(a - b) == abs(abs(a) - abs(b)) else -1) for a, b in pairs)
+    seen, func = {}, True
+    for a, b in pairs:
+        k = (a - b, abs(a), abs(b))
+        bit = 1 if a * b > 0 else -1
+        if k in seen and seen[k] != bit:
+            func = False
+        seen[k] = bit
+    ok = rule and func
+    check("G60-53", ok, f"sign(ab) = [|a−b| = ||a|−|b||]: {rule}; функция совокупности (d, |a|, |b|): {func}")
+
+
 if __name__ == "__main__":
     for f in [g01_chains, g02_resolvent, g03_anharmonic, g04_legendre_2torsion, g05_cross_selection,
               g06_cauchy, g07_cumulants, g08_two, g09_padic, g10_hopf, g11_sierpinski, g12_lawvere,
@@ -1027,7 +1185,9 @@ if __name__ == "__main__":
               g36_neighbor_average, g37_padic_units, g38_ratio_sphere_indices, g39_levy_thresholds,
               g40_diagonal_ratio, g41_mu7_set_reading, g42_typed_absence_witness, g43_misspecified_bayes,
               g44_ratio_bit_vs_channels, g45_blackwell_flag_garbling,
-              g46_pareto_minimal_chain, g47_weight_free_dominance]:
+              g46_pareto_minimal_chain, g47_weight_free_dominance, g48_composition_series,
+              g49_likelihood_ratio_criterion, g50_mu7_ratio_orbit, g51_diagonal_triviality,
+              g52_half_a_modulus, g53_ratio_bit_joint_channels]:
         f()
     n_ok = sum(ok for _, ok, _ in RESULTS)
     print(f"ИТОГО: {n_ok}/{len(RESULTS)} PASS")
