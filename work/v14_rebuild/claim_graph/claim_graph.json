@@ -36,7 +36,7 @@
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
-      "sha256": "fdb1f7c2ed3dcb5830216269b6d314af9f666945ff413fd515ee9e2ee70276a0"
+      "sha256": "d8387c544bdf04eb8fd39a480edf8eb3072bf8673ef08f35419e7c3546f6c399"
     },
     {
       "path": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
@@ -84,7 +84,7 @@
     },
     {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
-      "sha256": "665719501c832a62237370099606d863445c3381262e894ac7be43080a6c8f93"
+      "sha256": "3c6e36f36d674eec91c88fa2eb1f0a779c23e92adb5f419a77f0abe910e0945a"
     },
     {
       "path": "work/v14_rebuild/addendum_2026-10-04_two_channels.md",
@@ -9160,7 +9160,7 @@
       "anchor": "oq-8plus-only-refuted",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L418"
+      "source_location": "L420"
     },
     {
       "id": "oq_oq_antitotality_diagonal_preconditions",
@@ -9170,7 +9170,7 @@
       "anchor": "oq-antitotality-diagonal-preconditions",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L626"
+      "source_location": "L629"
     },
     {
       "id": "oq_oq_arity_window_13_14",
@@ -9180,7 +9180,7 @@
       "anchor": "oq-arity-window-13-14",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L182"
+      "source_location": "L183"
     },
     {
       "id": "oq_oq_audit_canon_reference_repair",
@@ -9190,7 +9190,7 @@
       "anchor": "oq-audit-canon-reference-repair",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L540"
+      "source_location": "L543"
     },
     {
       "id": "oq_oq_audit_semantic_repromotion",
@@ -9200,7 +9200,7 @@
       "anchor": "oq-audit-semantic-repromotion",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L536"
+      "source_location": "L539"
     },
     {
       "id": "oq_oq_audit_status_promotions_done",
@@ -9210,7 +9210,7 @@
       "anchor": "oq-audit-status-promotions-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L533"
+      "source_location": "L536"
     },
     {
       "id": "oq_oq_blackwell_canonical_projection",
@@ -9220,7 +9220,7 @@
       "anchor": "oq-blackwell-canonical-projection",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L780"
+      "source_location": "L783"
     },
     {
       "id": "oq_oq_blackwell_u4_u6_witness",
@@ -9230,7 +9230,7 @@
       "anchor": "oq-blackwell-u4-u6-witness",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L777"
+      "source_location": "L780"
     },
     {
       "id": "oq_oq_c83_parity_prediction",
@@ -9240,7 +9240,7 @@
       "anchor": "oq-c83-parity-prediction",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L717"
+      "source_location": "L720"
     },
     {
       "id": "oq_oq_canon_star_fate",
@@ -9250,7 +9250,7 @@
       "anchor": "oq-canon-star-fate",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L382"
+      "source_location": "L383"
     },
     {
       "id": "oq_oq_ce_canon",
@@ -9270,7 +9270,7 @@
       "anchor": "oq-ce-weights-proof",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L337"
+      "source_location": "L338"
     },
     {
       "id": "oq_oq_chi_ladder_done",
@@ -9280,7 +9280,7 @@
       "anchor": "oq-chi-ladder-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L36"
+      "source_location": "L37"
     },
     {
       "id": "oq_oq_clt_verif_done",
@@ -9290,7 +9290,7 @@
       "anchor": "oq-clt-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L501"
+      "source_location": "L503"
     },
     {
       "id": "oq_oq_code_link_vs_leads_to",
@@ -9300,7 +9300,7 @@
       "anchor": "oq-code-link-vs-leads-to",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L95"
+      "source_location": "L96"
     },
     {
       "id": "oq_oq_const_statistics_code",
@@ -9310,7 +9310,7 @@
       "anchor": "oq-const-statistics-code",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L245"
+      "source_location": "L246"
     },
     {
       "id": "oq_oq_cost_model_scope",
@@ -9320,7 +9320,7 @@
       "anchor": "oq-cost-model-scope",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L343"
+      "source_location": "L344"
     },
     {
       "id": "oq_oq_d10_phase_test",
@@ -9330,7 +9330,7 @@
       "anchor": "oq-d10-phase-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L269"
+      "source_location": "L270"
     },
     {
       "id": "oq_oq_d11_branch_bit_test",
@@ -9340,7 +9340,7 @@
       "anchor": "oq-d11-branch-bit-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L209"
+      "source_location": "L210"
     },
     {
       "id": "oq_oq_d2_half_overlay",
@@ -9350,7 +9350,7 @@
       "anchor": "oq-d2-half-overlay",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L406"
+      "source_location": "L408"
     },
     {
       "id": "oq_oq_d2_sign_retrieval_remainder",
@@ -9360,7 +9360,7 @@
       "anchor": "oq-d2-sign-retrieval-remainder",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L425"
+      "source_location": "L427"
     },
     {
       "id": "oq_oq_d4_column_precision",
@@ -9370,7 +9370,7 @@
       "anchor": "oq-d4-column-precision",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L410"
+      "source_location": "L412"
     },
     {
       "id": "oq_oq_ddelta_weights",
@@ -9380,7 +9380,7 @@
       "anchor": "oq-ddelta-weights",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L377"
+      "source_location": "L378"
     },
     {
       "id": "oq_oq_dict_d_completeness",
@@ -9390,7 +9390,7 @@
       "anchor": "oq-dict-d-completeness",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L166"
+      "source_location": "L167"
     },
     {
       "id": "oq_oq_divorce_cases_genre",
@@ -9400,7 +9400,7 @@
       "anchor": "oq-divorce-cases-genre",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L504"
+      "source_location": "L506"
     },
     {
       "id": "oq_oq_edgeworth_u9",
@@ -9410,7 +9410,7 @@
       "anchor": "oq-edgeworth-u9",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L517"
+      "source_location": "L520"
     },
     {
       "id": "oq_oq_expectation_speed_fundamentality",
@@ -9420,7 +9420,7 @@
       "anchor": "oq-expectation-speed-fundamentality",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L107"
+      "source_location": "L108"
     },
     {
       "id": "oq_oq_export_refs_done",
@@ -9430,7 +9430,7 @@
       "anchor": "oq-export-refs-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L143"
+      "source_location": "L144"
     },
     {
       "id": "oq_oq_forms8plus_ratio",
@@ -9440,7 +9440,7 @@
       "anchor": "oq-forms8plus-ratio",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L221"
+      "source_location": "L222"
     },
     {
       "id": "oq_oq_formulas_7_11_done",
@@ -9460,7 +9460,7 @@
       "anchor": "oq-fourier-questiongain",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L485"
+      "source_location": "L487"
     },
     {
       "id": "oq_oq_full_audit_done",
@@ -9470,7 +9470,7 @@
       "anchor": "oq-full-audit-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L43"
+      "source_location": "L44"
     },
     {
       "id": "oq_oq_graph_dep_sync",
@@ -9480,7 +9480,7 @@
       "anchor": "oq-graph-dep-sync",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L439"
+      "source_location": "L441"
     },
     {
       "id": "oq_oq_graph_reference_definitions",
@@ -9490,7 +9490,7 @@
       "anchor": "oq-graph-reference-definitions",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L815"
+      "source_location": "L818"
     },
     {
       "id": "oq_oq_kappa_provenance",
@@ -9510,7 +9510,7 @@
       "anchor": "oq-level-specific-absence",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L697"
+      "source_location": "L700"
     },
     {
       "id": "oq_oq_levy_world",
@@ -9520,7 +9520,7 @@
       "anchor": "oq-levy-world",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L513"
+      "source_location": "L515"
     },
     {
       "id": "oq_oq_lift_section_and_category",
@@ -9530,7 +9530,7 @@
       "anchor": "oq-lift-section-and-category",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L794"
+      "source_location": "L797"
     },
     {
       "id": "oq_oq_lift_typing_passport",
@@ -9540,7 +9540,7 @@
       "anchor": "oq-lift-typing-passport",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L791"
+      "source_location": "L794"
     },
     {
       "id": "oq_oq_machine_check_done",
@@ -9560,7 +9560,7 @@
       "anchor": "oq-minimal-windows-projects-to",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L714"
+      "source_location": "L717"
     },
     {
       "id": "oq_oq_mod3_channel_origin",
@@ -9570,7 +9570,7 @@
       "anchor": "oq-mod3-channel-origin",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L710"
+      "source_location": "L713"
     },
     {
       "id": "oq_oq_mprime_audit",
@@ -9580,7 +9580,7 @@
       "anchor": "oq-mprime-audit",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L358"
+      "source_location": "L359"
     },
     {
       "id": "oq_oq_mu8_inverse_vs_rotation",
@@ -9590,7 +9590,7 @@
       "anchor": "oq-mu8-inverse-vs-rotation",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L754"
+      "source_location": "L757"
     },
     {
       "id": "oq_oq_mu9_opposite_inclusion",
@@ -9600,7 +9600,7 @@
       "anchor": "oq-mu9-opposite-inclusion",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L757"
+      "source_location": "L760"
     },
     {
       "id": "oq_oq_mu9_projection_reading",
@@ -9610,7 +9610,7 @@
       "anchor": "oq-mu9-projection-reading",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L768"
+      "source_location": "L771"
     },
     {
       "id": "oq_oq_next_question_principle",
@@ -9620,7 +9620,7 @@
       "anchor": "oq-next-question-principle",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L548"
+      "source_location": "L551"
     },
     {
       "id": "oq_oq_node11_asymmetry",
@@ -9630,7 +9630,7 @@
       "anchor": "oq-node11-asymmetry",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L122"
+      "source_location": "L123"
     },
     {
       "id": "oq_oq_number_level_semantic_bridge",
@@ -9640,7 +9640,7 @@
       "anchor": "oq-number-level-semantic-bridge",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L732"
+      "source_location": "L735"
     },
     {
       "id": "oq_oq_o1_environment_substitution",
@@ -9650,7 +9650,7 @@
       "anchor": "oq-o1-environment-substitution",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L760"
+      "source_location": "L763"
     },
     {
       "id": "oq_oq_o20_missing_benchmark",
@@ -9670,7 +9670,7 @@
       "anchor": "oq-o3-twolists",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L228"
+      "source_location": "L229"
     },
     {
       "id": "oq_oq_padic_carrier_channel",
@@ -9680,7 +9680,7 @@
       "anchor": "oq-padic-carrier-channel",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L456"
+      "source_location": "L458"
     },
     {
       "id": "oq_oq_parity_witness_done",
@@ -9690,7 +9690,7 @@
       "anchor": "oq-parity-witness-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L240"
+      "source_location": "L241"
     },
     {
       "id": "oq_oq_passport_u14_u15",
@@ -9700,7 +9700,7 @@
       "anchor": "oq-passport-u14-u15",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L189"
+      "source_location": "L190"
     },
     {
       "id": "oq_oq_pentad_role_cycle",
@@ -9710,7 +9710,7 @@
       "anchor": "oq-pentad-role-cycle",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L451"
+      "source_location": "L453"
     },
     {
       "id": "oq_oq_phase_causal_u9",
@@ -9720,7 +9720,7 @@
       "anchor": "oq-phase-causal-u9",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L41"
+      "source_location": "L42"
     },
     {
       "id": "oq_oq_pi_projection_above_u7",
@@ -9730,7 +9730,7 @@
       "anchor": "oq-pi-projection-above-u7",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L132"
+      "source_location": "L133"
     },
     {
       "id": "oq_oq_pn_above_u7",
@@ -9740,7 +9740,7 @@
       "anchor": "oq-pn-above-u7",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L700"
+      "source_location": "L703"
     },
     {
       "id": "oq_oq_redteam_dependent_guards",
@@ -9750,7 +9750,7 @@
       "anchor": "oq-redteam-dependent-guards",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L205"
+      "source_location": "L206"
     },
     {
       "id": "oq_oq_redteam_f3_done",
@@ -9760,7 +9760,7 @@
       "anchor": "oq-redteam-f3-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L192"
+      "source_location": "L193"
     },
     {
       "id": "oq_oq_reflection_label_internalization",
@@ -9770,7 +9770,7 @@
       "anchor": "oq-reflection-label-internalization",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L152"
+      "source_location": "L153"
     },
     {
       "id": "oq_oq_roots_of_unity_z368",
@@ -9780,7 +9780,7 @@
       "anchor": "oq-roots-of-unity-z368",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L444"
+      "source_location": "L446"
     },
     {
       "id": "oq_oq_sierpinski_node_11",
@@ -9790,7 +9790,7 @@
       "anchor": "oq-sierpinski-node-11",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L763"
+      "source_location": "L766"
     },
     {
       "id": "oq_oq_sphere_u6_carrier",
@@ -9800,7 +9800,7 @@
       "anchor": "oq-sphere-u6-carrier",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L476"
+      "source_location": "L478"
     },
     {
       "id": "oq_oq_step48_symmetry",
@@ -9810,7 +9810,7 @@
       "anchor": "oq-step48-symmetry",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L723"
+      "source_location": "L726"
     },
     {
       "id": "oq_oq_strict_band_7_export",
@@ -9820,7 +9820,7 @@
       "anchor": "oq-strict-band-7-export",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L389"
+      "source_location": "L391"
     },
     {
       "id": "oq_oq_synthesis_c_assembly",
@@ -9830,7 +9830,7 @@
       "anchor": "oq-synthesis-c-assembly",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L419"
+      "source_location": "L421"
     },
     {
       "id": "oq_oq_systematic_literature_review",
@@ -9840,7 +9840,7 @@
       "anchor": "oq-systematic-literature-review",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L50"
+      "source_location": "L51"
     },
     {
       "id": "oq_oq_third_boundary",
@@ -9850,7 +9850,7 @@
       "anchor": "oq-third-boundary",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L233"
+      "source_location": "L234"
     },
     {
       "id": "oq_oq_tot_groups_8_11",
@@ -9860,7 +9860,7 @@
       "anchor": "oq-tot-groups-8-11",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L224"
+      "source_location": "L225"
     },
     {
       "id": "oq_oq_train_reflection_test",
@@ -9870,7 +9870,7 @@
       "anchor": "oq-train-reflection-test",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L171"
+      "source_location": "L172"
     },
     {
       "id": "oq_oq_two_channel_k245",
@@ -9880,7 +9880,7 @@
       "anchor": "oq-two-channel-k245",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L702"
+      "source_location": "L705"
     },
     {
       "id": "oq_oq_txp_verif_done",
@@ -9890,7 +9890,7 @@
       "anchor": "oq-txp-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L482"
+      "source_location": "L484"
     },
     {
       "id": "oq_oq_typed_absence_finite_witness",
@@ -9900,7 +9900,7 @@
       "anchor": "oq-typed-absence-finite-witness",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L784"
+      "source_location": "L787"
     },
     {
       "id": "oq_oq_typed_absence_provenance_benchmark",
@@ -9910,7 +9910,7 @@
       "anchor": "oq-typed-absence-provenance-benchmark",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L631"
+      "source_location": "L634"
     },
     {
       "id": "oq_oq_u0_absence_distinction_boundary",
@@ -9920,7 +9920,7 @@
       "anchor": "oq-u0-absence-distinction-boundary",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L114"
+      "source_location": "L115"
     },
     {
       "id": "oq_oq_u0_u7_refinement_protocol",
@@ -9930,7 +9930,7 @@
       "anchor": "oq-u0-u7-refinement-protocol",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L564"
+      "source_location": "L567"
     },
     {
       "id": "oq_oq_u12_antimode_authorfix",
@@ -9940,7 +9940,7 @@
       "anchor": "oq-u12-antimode-authorfix",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L265"
+      "source_location": "L266"
     },
     {
       "id": "oq_oq_u12_antimode_gate",
@@ -9950,7 +9950,7 @@
       "anchor": "oq-u12-antimode-gate",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L202"
+      "source_location": "L203"
     },
     {
       "id": "oq_oq_u12_hyperbolic_antimode_guard",
@@ -9960,7 +9960,7 @@
       "anchor": "oq-u12-hyperbolic-antimode-guard",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L748"
+      "source_location": "L751"
     },
     {
       "id": "oq_oq_u12_radius_r",
@@ -9970,7 +9970,7 @@
       "anchor": "oq-u12-radius-r",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L194"
+      "source_location": "L195"
     },
     {
       "id": "oq_oq_u13_boundary_union_op",
@@ -9980,7 +9980,7 @@
       "anchor": "oq-u13-boundary-union-op",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L255"
+      "source_location": "L256"
     },
     {
       "id": "oq_oq_u14_jacobi_aggregation",
@@ -9990,7 +9990,7 @@
       "anchor": "oq-u14-jacobi-aggregation",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L746"
+      "source_location": "L749"
     },
     {
       "id": "oq_oq_u14_worlds_agg_op",
@@ -10000,7 +10000,7 @@
       "anchor": "oq-u14-worlds-agg-op",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L259"
+      "source_location": "L260"
     },
     {
       "id": "oq_oq_u16_phase_hyperbolic_pair",
@@ -10010,7 +10010,7 @@
       "anchor": "oq-u16-phase-hyperbolic-pair",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L744"
+      "source_location": "L747"
     },
     {
       "id": "oq_oq_u5_cross_section",
@@ -10020,7 +10020,7 @@
       "anchor": "oq-u5-cross-section",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L679"
+      "source_location": "L682"
     },
     {
       "id": "oq_oq_u6_direction_bit",
@@ -10030,7 +10030,7 @@
       "anchor": "oq-u6-direction-bit",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L695"
+      "source_location": "L698"
     },
     {
       "id": "oq_oq_u6_u7_choice_products",
@@ -10040,7 +10040,7 @@
       "anchor": "oq-u6-u7-choice-products",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L684"
+      "source_location": "L687"
     },
     {
       "id": "oq_oq_u6_u7_compositional_semantics",
@@ -10050,7 +10050,7 @@
       "anchor": "oq-u6-u7-compositional-semantics",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L68"
+      "source_location": "L69"
     },
     {
       "id": "oq_oq_u8_u10_optests",
@@ -10060,7 +10060,7 @@
       "anchor": "oq-u8-u10-optests",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L148"
+      "source_location": "L149"
     },
     {
       "id": "oq_oq_unit_circle_z15",
@@ -10070,7 +10070,7 @@
       "anchor": "oq-unit-circle-z15",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L248"
+      "source_location": "L249"
     },
     {
       "id": "oq_oq_upper_12_17_done",
@@ -10080,7 +10080,7 @@
       "anchor": "oq-upper-12-17-done",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L31"
+      "source_location": "L32"
     },
     {
       "id": "oq_oq_vieta_cubic_s3",
@@ -10090,7 +10090,7 @@
       "anchor": "oq-vieta-cubic-s3",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L524"
+      "source_location": "L527"
     },
     {
       "id": "oq_oq_window25_sqrt_minus2",
@@ -10100,7 +10100,7 @@
       "anchor": "oq-window25-sqrt-minus2",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L727"
+      "source_location": "L730"
     },
     {
       "id": "oq_oq_window_7_9_irrational_test",
@@ -10110,7 +10110,7 @@
       "anchor": "oq-window-7-9-irrational-test",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L704"
+      "source_location": "L707"
     },
     {
       "id": "oq_oq_window_family_continuation",
@@ -10120,7 +10120,7 @@
       "anchor": "oq-window-family-continuation",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L809"
+      "source_location": "L812"
     },
     {
       "id": "oq_oq_window_family_roles",
@@ -10130,7 +10130,7 @@
       "anchor": "oq-window-family-roles",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L801"
+      "source_location": "L804"
     },
     {
       "id": "oq_oq_window_intersection_carrier",
@@ -10140,7 +10140,7 @@
       "anchor": "oq-window-intersection-carrier",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L805"
+      "source_location": "L808"
     },
     {
       "id": "oq_oq_window_node_conjugation_origin",
@@ -10150,7 +10150,7 @@
       "anchor": "oq-window-node-conjugation-origin",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L735"
+      "source_location": "L738"
     },
     {
       "id": "oq_oq_windows11_15_quadratic_meaning",
@@ -10160,7 +10160,7 @@
       "anchor": "oq-windows11-15-quadratic-meaning",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L730"
+      "source_location": "L733"
     },
     {
       "id": "oq_oq_witnesses_verif_done",
@@ -10170,7 +10170,7 @@
       "anchor": "oq-witnesses-verif-done",
       "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L415"
+      "source_location": "L417"
     },
     {
       "id": "oq_oq_zero_classes_chi_e",
@@ -10180,7 +10180,7 @@
       "anchor": "oq-zero-classes-chi-e",
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L492"
+      "source_location": "L494"
     },
     {
       "id": "pattern_pa_c01",
@@ -11167,7 +11167,7 @@
       "verification_id": "C02",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L71",
+      "source_location": "L72",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11178,7 +11178,7 @@
       "verification_id": "C03",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L78",
+      "source_location": "L79",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11189,7 +11189,7 @@
       "verification_id": "C04",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L90",
+      "source_location": "L91",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11200,7 +11200,7 @@
       "verification_id": "C05",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L116",
+      "source_location": "L117",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11211,7 +11211,7 @@
       "verification_id": "C06",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L124",
+      "source_location": "L125",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11222,7 +11222,7 @@
       "verification_id": "C07",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L131",
+      "source_location": "L132",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11233,7 +11233,7 @@
       "verification_id": "C08",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L138",
+      "source_location": "L139",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11244,7 +11244,7 @@
       "verification_id": "C09",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L145",
+      "source_location": "L146",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11255,7 +11255,7 @@
       "verification_id": "C10",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L152",
+      "source_location": "L153",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11266,7 +11266,7 @@
       "verification_id": "C11",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L163",
+      "source_location": "L164",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11277,7 +11277,7 @@
       "verification_id": "C12",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L169",
+      "source_location": "L170",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11288,7 +11288,7 @@
       "verification_id": "C13",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L179",
+      "source_location": "L180",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11299,7 +11299,7 @@
       "verification_id": "C14",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L187",
+      "source_location": "L188",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11310,7 +11310,7 @@
       "verification_id": "C15",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L197",
+      "source_location": "L198",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11321,7 +11321,7 @@
       "verification_id": "C16",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L211",
+      "source_location": "L212",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11332,7 +11332,7 @@
       "verification_id": "C17",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L222",
+      "source_location": "L223",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11343,7 +11343,7 @@
       "verification_id": "C18",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L232",
+      "source_location": "L233",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11354,7 +11354,7 @@
       "verification_id": "C19",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L239",
+      "source_location": "L240",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11365,7 +11365,7 @@
       "verification_id": "C20",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L249",
+      "source_location": "L250",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11376,7 +11376,7 @@
       "verification_id": "C21",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L256",
+      "source_location": "L257",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11387,7 +11387,7 @@
       "verification_id": "C22",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L266",
+      "source_location": "L267",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11398,7 +11398,7 @@
       "verification_id": "C23",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L274",
+      "source_location": "L275",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11409,7 +11409,7 @@
       "verification_id": "C24",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L284",
+      "source_location": "L285",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11420,7 +11420,7 @@
       "verification_id": "C25",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L293",
+      "source_location": "L294",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11431,7 +11431,7 @@
       "verification_id": "C26",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L303",
+      "source_location": "L304",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11442,7 +11442,7 @@
       "verification_id": "C27",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L316",
+      "source_location": "L317",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11453,7 +11453,7 @@
       "verification_id": "C28",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L332",
+      "source_location": "L333",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11464,7 +11464,7 @@
       "verification_id": "C29",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L341",
+      "source_location": "L342",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11475,7 +11475,7 @@
       "verification_id": "C30",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L351",
+      "source_location": "L352",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11486,7 +11486,7 @@
       "verification_id": "C31",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L360",
+      "source_location": "L361",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11497,7 +11497,7 @@
       "verification_id": "C32",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L394",
+      "source_location": "L395",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11508,7 +11508,7 @@
       "verification_id": "C33",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L417",
+      "source_location": "L418",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11519,7 +11519,7 @@
       "verification_id": "C34",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L429",
+      "source_location": "L430",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11530,7 +11530,7 @@
       "verification_id": "C35",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L435",
+      "source_location": "L437",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11541,7 +11541,7 @@
       "verification_id": "C36",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L445",
+      "source_location": "L448",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11552,7 +11552,7 @@
       "verification_id": "C37",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L455",
+      "source_location": "L458",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11563,7 +11563,7 @@
       "verification_id": "C38",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L464",
+      "source_location": "L467",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11574,7 +11574,7 @@
       "verification_id": "C39",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L475",
+      "source_location": "L478",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11585,7 +11585,7 @@
       "verification_id": "C40",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L484",
+      "source_location": "L487",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11596,7 +11596,7 @@
       "verification_id": "C41",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L498",
+      "source_location": "L501",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11607,7 +11607,7 @@
       "verification_id": "C42",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L511",
+      "source_location": "L514",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11618,7 +11618,7 @@
       "verification_id": "C43",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L524",
+      "source_location": "L527",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11629,7 +11629,7 @@
       "verification_id": "C44",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L537",
+      "source_location": "L540",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11640,7 +11640,7 @@
       "verification_id": "C45",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L550",
+      "source_location": "L553",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11651,7 +11651,7 @@
       "verification_id": "C46",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L559",
+      "source_location": "L562",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11662,7 +11662,7 @@
       "verification_id": "C47",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L569",
+      "source_location": "L572",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11673,7 +11673,7 @@
       "verification_id": "C48",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L583",
+      "source_location": "L586",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11684,7 +11684,7 @@
       "verification_id": "C49",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L592",
+      "source_location": "L595",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11695,7 +11695,7 @@
       "verification_id": "C50",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L601",
+      "source_location": "L604",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11706,7 +11706,7 @@
       "verification_id": "C51",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L611",
+      "source_location": "L614",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11717,7 +11717,7 @@
       "verification_id": "C52",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L622",
+      "source_location": "L625",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11728,7 +11728,7 @@
       "verification_id": "C53",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L642",
+      "source_location": "L646",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11739,7 +11739,7 @@
       "verification_id": "C54",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L653",
+      "source_location": "L657",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11750,7 +11750,7 @@
       "verification_id": "C55",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L663",
+      "source_location": "L667",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11761,7 +11761,7 @@
       "verification_id": "C56",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L673",
+      "source_location": "L677",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11772,7 +11772,7 @@
       "verification_id": "C57",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L691",
+      "source_location": "L695",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11783,7 +11783,7 @@
       "verification_id": "C58",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L701",
+      "source_location": "L706",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11794,7 +11794,7 @@
       "verification_id": "C59",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L716",
+      "source_location": "L722",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11805,7 +11805,7 @@
       "verification_id": "C60",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L733",
+      "source_location": "L741",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11816,7 +11816,7 @@
       "verification_id": "C61",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L751",
+      "source_location": "L760",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     },
     {
@@ -11827,7 +11827,7 @@
       "verification_id": "C62",
       "evidence_kind": "formal_machine_check",
       "source_file": "work/v14_rebuild/verification.py",
-      "source_location": "L763",
+      "source_location": "L772",
       "status_effect": "math predicate only; no automatic St_FTS promotion"
     }
   ],
