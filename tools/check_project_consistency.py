@@ -96,6 +96,12 @@ CHECKS: tuple[Check, ...] = (
         (),
     ),
     Check(
+        "candidate_c105",
+        "кандидатные предикаты C105–C108 (МУ7 как множество) в области локальных проверок",
+        "work/v14_rebuild/verification_c105.py",
+        (),
+    ),
+    Check(
         "windows_table",
         "вычислимые столбцы и ссылки таблицы окон",
         "work/v14_rebuild/verification_windows_table.py",

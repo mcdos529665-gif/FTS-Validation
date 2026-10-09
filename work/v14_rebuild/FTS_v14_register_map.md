@@ -147,7 +147,7 @@ v13 — комплексный оверлей. `κ/T7` относится к д�
 | 4 | Вероятность | `y=\|x\|` | `y=\|χ\|` | `\|χ\|≠−\|χ\|` | working_overlay |
 | 5 | Выбор | `y=−\|x\|` | `y=−\|χ\|` | selection ≠ explanation | working_overlay |
 | 6 | Статистика | `y=x²` | `y=χ·χ=Σχᵢ²=χ²` | `χ²≠−χ²`; statistic ≠ answer | **strong_statistical_analog** |
-| 7 | Знание | `y=−x²` | `y=−χ²; y≠χ²` | `Answer(W)≠χ²`; p-value ≠ knowledge | candidate_bridge |
+| 7 | Знание | `\|y\|=x²` (ветвь `y=−x²`) | `y=−χ²` (ветвь); запрет `y≠χ²` снят вместе с `y≠x²` (автор 2026-10-08) | `Answer(W)≠χ²`; p-value ≠ knowledge | candidate_bridge |
 | 8 | Предположение | `y=√\|x\|` | `y=√\|χ\|` / `backtrace(χ²)` | `A?≠A`; hypothesis ≠ weak prediction | candidate_with_gate |
 | 9 | Понимание | `y=x³` | `y=χ³` только с causal/cf декомпозицией | `χ³ ≠ понимание` без причинности | FTS_candidate / guarded |
 | 10 | Оценка | `y=cos x` | `Compare(E,E′,loss,df,Δχ²,ΔR*)` | comparison ≠ refusal | reserved_overlay |
@@ -232,7 +232,7 @@ Sem(U_n) требует M_n как минимальный носитель; M_n 
 (external_bridge_candidate, без повышения статуса).
 
 М:  a≠a → a=a → a=b → a≠b → (∧) → (∨) → V·V → −(V·V) → ?(V·V) → Δ·(V·V) → …
-А:  y≠y → y=y → y=x → −x → |x| → −|x| → x² → −x² → √|x| → x³ → cos x → eˣ → окр.
+А:  y≠y → y=y → y=x → −x → |x| → −|x| → x² → |y|=x² (ветвь −x²) → √|x| → x³ → cos x → eˣ → окр.
 Q:  |F|              (величина; склеивает {F,−F})
 R:  F/−F = {+1,−1}   (ветвь; различает; Tot = коллапс Z/2→{1})
 ```

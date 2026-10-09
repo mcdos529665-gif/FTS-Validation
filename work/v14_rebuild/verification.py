@@ -68,7 +68,8 @@ def verify_c02(context):
     # C02: пары лестницы (F, -F) пересекаются только на нулевой границе
     pairs = [(x, -x), (Abs(x), -Abs(x)), (x**2, -(x**2))]
     ok = all(solveset(Eq(F, G), x, domain=S.Reals) == sp.FiniteSet(0) for F, G in pairs)
-    check("C02", "Пары уровней (y=x|y=-x), (|x| | -|x|), (x² | -x²) совпадают только в x=0", ok)
+    # У7 здесь — ветвь y=−x² множества |y|=x² (A_07, решение автора 2026-10-08); множество — verification_c105.py
+    check("C02", "Пары форм (F, −F): (x,−x), (|x|,−|x|), (x²,−x²) совпадают только в x=0 [У7 — ветвь y=−x² множества |y|=x²; см. C105–C108]", ok)
     return {}
 
 
@@ -101,7 +102,7 @@ def verify_c05(context):
         ("U4:  y=|x|", Abs(x), "even"),
         ("U5:  y=-|x|", -Abs(x), "even"),
         ("U6:  y=x^2", x**2, "even"),
-        ("U7:  y=-x^2", -(x**2), "even"),
+        ("U7 (ветвь):  y=-x^2", -(x**2), "even"),
         ("U8:  y=sqrt(|x|)", sqrt(Abs(x)), "even"),
         ("U9:  y=x^3", x**3, "odd"),
         ("U10: y=cos(x)", cos(x), "even"),
@@ -425,14 +426,16 @@ def verify_c34(context):
     ok = (simplify(pi_q - Abs(x)) == 0                       # У4 = У2(π(x)) = |x|
           and simplify((-t).subs(t, pi_q) - (-Abs(x))) == 0   # У5 = У3(π(x)) = -|x|
           and simplify(Abs(x) * pi_q - x**2) == 0             # У6 = У4·π = |x|·|x| = x²
-          and simplify(-Abs(x) * pi_q - (-(x**2))) == 0)      # У7 = У5·π = -|x|·|x| = -x²
-    check("C34", "Полушаги проекции: У4=У2∘π, У5=У3∘π, У6=У4·π, У7=У5·π при π(x)=|x| (шаг 4 = два шага 2)", ok)
+          and simplify(-Abs(x) * pi_q - (-(x**2))) == 0)      # У7 = У5·π = -|x|·|x| = -x² (ветвь МУ7)
+    check("C34", "Полушаги проекции: У4=У2∘π, У5=У3∘π, У6=У4·π, У7=У5·π при π(x)=|x| (шаг 4 = два шага 2) "
+          "[У7=У5·π даёт ветвь y=−x²; МУ7 как множество |y|=x² — C105]", ok)
     return {}
 
 
 def verify_c35(context):
     # C35: пентадный свидетель узлов 3 и 7: один и тот же оператор «минус» (≠) поднят с кода на агрегат
-    check("C35", "В выбранной А-записи форм выполняется F3=−F2 и F7=−F6",
+    check("C35", "В выбранной А-записи форм выполняется F3=−F2 и F7=−F6 "
+          "[F7 — ветвь МУ7; на множестве |y|=x² МУ7 = МУ6 ∪ (−МУ6), C105]",
           simplify(-(x) - (-x)) == 0 and simplify(-(x**2) - (-(x**2))) == 0)
     return {}
 
@@ -619,7 +622,8 @@ def verify_c52(context):
     deg = (simplify((x**2 - x).subs(x, 1)) == 0          # У6=У2
            and simplify((-x**2 - (-x)).subs(x, 1)) == 0   # У7=У3
            and simplify((sqrt(Abs(x)) - Abs(x)).subs(x, 1)) == 0)  # У8=У4
-    check("C52", "При x=1 совпадают пары форм (У6,У2), (У7,У3), (У8,У4); x²=x только при x∈{0,1}",
+    check("C52", "При x=1 совпадают пары форм (У6,У2), (У7,У3), (У8,У4); x²=x только при x∈{0,1} "
+          "[У7 — ветвь: МУ7(1)={1,−1} как множество, включение вместо равенства — C108]",
           deg and idem == sp.FiniteSet(0, 1))
     return {}
 
@@ -639,7 +643,7 @@ def verify_c53(context):
         ("9", x * x * x, chi * chi * chi),
     ]
     overlay_ok = all(simplify(flat.subs(x, chi) - chiform) == 0 for _lvl, flat, chiform in flat_vs_chi)
-    check("C53", "Для перечисленных форм У3..У9 χ-формула получается точной подстановкой x:=χ",
+    check("C53", "Для перечисленных форм У3..У9 χ-формула получается точной подстановкой x:=χ [У7 — ветвь −χ²]",
           overlay_ok, "проверено совпадение семи пар форм после подстановки")
     return {"chi": chi}
 
@@ -688,7 +692,8 @@ def verify_c57(context):
                        for thread in (proj, anti) for a, b in zip(thread, thread[1:]))
     not_mirror = all(simplify(a + b) != 0 for thread in (proj, anti) for a, b in zip(thread, thread[1:]))
     embedding = solveset(Abs(x) - x, x, S.Reals) == sp.Interval(0, oo)
-    check("C57", "Соседние формы нитей {x,|x|,x²} и {−x,−|x|,−x²} совпадают при x=0,1, не являются зеркальными; x=|x| на [0,∞)",
+    check("C57", "Соседние формы нитей {x,|x|,x²} и {−x,−|x|,−x²} совпадают при x=0,1, не являются зеркальными; x=|x| на [0,∞) "
+          "[−x² — ветвь МУ7]",
           both_anchors and not_mirror and embedding)
     return {"anti": anti, "proj": proj}
 
@@ -698,7 +703,8 @@ def verify_c58(context):
     mirror = [(x, -x), (Abs(x), -Abs(x)), (x**2, -(x**2))]
     only_zero = all(solveset(Eq(f, g), x, S.Reals) == sp.FiniteSet(0) for f, g in mirror)
     opp_unit = all(f.subs(x, 1) == -(g.subs(x, 1)) and f.subs(x, 1) != g.subs(x, 1) for f, g in mirror)
-    check("C58", "Пары (x,−x), (|x|,−|x|), (x²,−x²) совпадают только при x=0 и противоположны при x=1",
+    check("C58", "Пары (x,−x), (|x|,−|x|), (x²,−x²) совпадают только при x=0 и противоположны при x=1 "
+          "[пара (x²,−x²) — формы F и −F; МУ7 как множество |y|=x² содержит обе, C105–C106]",
           only_zero and opp_unit)
     return {"mirror": mirror}
 
@@ -713,7 +719,8 @@ def verify_c59(context):
     unit_splits_mirror = all(f.subs(x, 1) != g.subs(x, 1) for f, g in mirror)
     unit_keeps_proj = (len({f.subs(x, 1) for f in proj}) == 1
                        and len({f.subs(x, 1) for f in anti}) == 1)
-    check("C59", "При x=0 перечисленные формы равны нулю; при x=1 зеркальные пары различны, а формы каждой проекционной нити совпадают",
+    check("C59", "При x=0 перечисленные формы равны нулю; при x=1 зеркальные пары различны, а формы каждой проекционной нити совпадают "
+          "[−x² — ветвь МУ7]",
           zero_blind and unit_splits_mirror and unit_keeps_proj)
     return {}
 
@@ -730,7 +737,9 @@ def verify_c60(context):
     mirror_next = all(simplify(-LF[2*k] - LF[2*k + 1]) == 0 for k in (1, 2, 3))
     parity_updown = all(((n ^ 1) == n + 1) == (n % 2 == 0) for n in range(8))
     break8 = simplify(-LF[8] - LF[9]) != 0 and simplify(-LF[9] - LF[10]) != 0
-    check("C60", "В таблице А-форм −F(2k)=F(2k+1) для пар {2,3},{4,5},{6,7}; для У8/У9 и У9/У10 равенство зеркала отсутствует",
+    # LF[7] — ветвь y=−x² множества |y|=x²: для множества −МУ6 ⊂ МУ7, но не равно (C108)
+    check("C60", "В таблице А-форм −F(2k)=F(2k+1) для пар {2,3},{4,5},{6,7} при F(7) = ветвь y=−x² "
+          "(МУ7 как множество: −МУ6 ⊂ МУ7, не равно — C108); для У8/У9 и У9/У10 равенство зеркала отсутствует",
           mirror_next and parity_updown and break8)
     return {}
 
