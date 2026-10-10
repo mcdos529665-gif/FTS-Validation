@@ -14,7 +14,7 @@ QO-X2.12	O-X2	uniqueness				partial	C-34 C-73	unanswered		2026-10-10	2026-10-10	
 QO-X2.13	O-X2	role		QO-ROLE.1	instance	open	CHI_LADDER_U6 oq-const-statistics-code	unanswered		2026-10-10			Почему именно x² отвечает «статистике»: что в квадрате соответствует агрегации, а не просто степени 2?
 QO-X2.14	O-X2	neighbor	overlay			covered	C-53 C-54 C-55	unanswered		2026-10-10			Что даёт подстановка x:=χ в x² и чем она отличается от x:=χ²?
 QO-X2.15	O-X2	role	complex	QO-ROLE.1	instance	partial	COMPLEX_BRANCH_OVERLAY COMPLEX_LADDER_U6 C-47 C-40	unanswered		2026-10-10			Что x² делает в комплексном носителе: |z|² прячет фазу, а z² прячет знак?
-QO-X2.16	O-X2	external	variance			external		unanswered		2026-10-10	2026-10-10	Как x² связана с дисперсией и с V·V: что сохраняют квадрат суммы и сумма квадратов?	[внешнее] Как x² связана с дисперсией и с V·V: что сохраняют квадрат суммы и сумма квадратов?
+QO-X2.16	O-X2	identity	variance			partial	C-61 C-107 U6_VSTAR_BRIDGE_UNDERDETERMINED	unanswered		2026-10-10	2026-10-10		Как x² связана с дисперсией и с V·V: что сохраняют квадрат суммы и сумма квадратов?
 QO-X2.17	O-X2	external	smoothness			external		unanswered		2026-10-10	2026-10-10	Какова производная x² и что она значит для У6: касание параболы оси в нуле?	[внешнее] Какова производная x² и что она значит для У6: касание параболы оси в нуле?
 QO-X.1	O-X	definition				partial	U_02 M_02 CH_02	unanswered		2026-10-10			Что такое y=x на У2: тождественное отображение или код a=₂b?
 QO-X.2	O-X	symmetry				covered	C-05 C-83	unanswered		2026-10-10			Нечётна ли y=x и что значит «минус не спрятан»?
@@ -62,7 +62,7 @@ QO-COS.2	O-COS	image	range			covered	C-16	unanswered		2026-10-10			Каковы 
 QO-COS.3	O-COS	symmetry				covered	C-05 C-17 C-43	unanswered		2026-10-10			Почему cos чётна и как чётность обнуляет sin-компоненту решения?
 QO-COS.4	O-COS	uniqueness				covered	C-15	unanswered		2026-10-10			В каком смысле cos единственна: при каких начальных условиях?
 QO-COS.5	O-COS	neighbor	relation			covered	C-96 C-31	unanswered		2026-10-10			Как cos связан с cosh и с e^{iθ}?
-QO-COS.6	O-COS	external	convergence			external		unanswered		2026-10-10	2026-10-10	Чем область сходимости ряда cos отличается от области геометрического ряда Σ(−1)^k x^{2k}?	[внешнее] Чем область сходимости ряда cos отличается от области геометрического ряда Σ(−1)^k x^{2k}?
+QO-COS.6	O-COS	identity	convergence			covered	C-13 C-14	unanswered		2026-10-10	2026-10-10		Чем область сходимости ряда cos отличается от области геометрического ряда Σ(−1)^k x^{2k}?
 QO-COS.7	O-COS	role		QO-ROLE.1	instance	open	CM-004	unanswered		2026-10-10			Почему cos — «оценка»: что в ОДУ F''=−F соответствует сравнению по критерию?
 QO-EXP.1	O-EXP	definition				covered	C-18 C-20	unanswered		2026-10-10			Что такое eˣ: решение F'=F или ряд Σxᵏ/k!?
 QO-EXP.2	O-EXP	symmetry				covered	C-21 C-96	unanswered		2026-10-10			Почему eˣ ни чётна, ни нечётна и как раскладывается на cosh и sinh?
