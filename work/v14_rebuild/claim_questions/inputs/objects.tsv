@@ -1,0 +1,21 @@
+object_id	label	role	kind	primary_group	aliases_regex	defining_cards	definition_note
+O-X2	y = x²	МУ6 (У6 «Статистика»)	formula	G02	x²(?!\+\(y)|x\*x|x\*\*2|y=x\^2|парабол	C-34 C-73	формула У6 задана построением У6=У4·π (C-34); агрегат x·x (C-73)
+O-X	y = x	МУ2 (У2 «Код»)	formula	G02	(?<![\w−-])y\s*=\s*x(?![\w²³^*|])	M_02	
+O-NEGX	y = −x	МУ3 (У3 «Информация»)	formula	G02	y\s*=\s*[−-]x(?![\w²³^*|])	M_03	
+O-ABS	y = |x|	МУ4 (У4 «Вероятность»)	formula	G02	\|x\||[Aa]bs\(x\)|модул	C-34	У4=У2∘π, карточки M_04 нет
+O-NEGABS	y = −|x|	МУ5 (У5 «Выбор»)	formula	G02	[−-]\s*\|x\||[−-]abs\(x\)	C-34	У5=У3∘π; карточки M_05 нет
+O-MU7	|y| = x²	МУ7 (У7 «Знание»), множество	formula	G03	\|y\|\s*=\s*x|МУ7|[−-]x²	M_07 A_07 C-105	
+O-SQRT	y = √|x|	МУ8 (У8 «Предположение»)	formula	G04	√\|x\||sqrt\(\s*[Aa]bs|sqrt\|x\|	C-08	карточка M_08 — TBD; определение из проверки C-08
+O-X3	y = x³	МУ9 (У9 «Понимание»)	formula	G04	x³|x\*x\*x|x\*\*3	C-10	карточка M_09 — TBD; x³=x·x² из C-10
+O-COS	y = cos x	МУ10 (У10 «Оценка»)	formula	G04	\bcos\b	C-15	карточка M_10 — TBD; ОДУ F''=−F из C-15
+O-EXP	y = eˣ	МУ11 (У11 «Осознание Я»)	formula	G04	eˣ|e\^x|exp\(x\)|e\^\{?x	C-18	карточка M_11 — Fix(E,…); ОДУ F'=F из C-18
+O-CIRCLE	x²+(y−2)²=4	МУ12 (У12 «Конфликт/Союз»)	formula	G05	окружност	M_12 C-41	
+O-ZEROPROD	∏Bₖ = 0	МУ13 (У13 «Мир-Мы»)	formula	G05	zero-product|нули произведения|∏Bₖ|произведени\w+ уравнени	C-28 C-29 C-30	карточка M_13 — TBD
+O-EIT	e^{iθ}	МУ15 / Д10, комплексная орбита	formula	G05	e\^\{?iθ|exp\(iθ\)|орбит		определения в каноне нет: карточка M_15 — TBD; орбита см. C-100
+T-RATIO	ratio-канал y/x²	термин, Д11	term	G06	ratio|Д11|y/x²	PA-C01	словарь Д1…Д11 — кандидатный паттерн
+T-TOT	Tot	оператор, коллапс группы	operator	G01	\bTot\b	OP_Tot OP_TotPlus OP_TotMinus	
+T-ABSENCE	¬A, 0_A, −A	термин, три отсутствия	operator	G01	0_A|¬A	O_05 A2 OP_event0A	
+T-UNIT	единичная граница	термин, x=1	term	G06	единичн\w+ границ|UNIT_BOUNDARY		определения в каноне нет (единичная граница упоминается в C-28…C-30)
+T-MIRROR	F = −F ⇔ F = 0	термин, зеркало и нулевая граница	term	G06	зеркал	ADD_MIRROR_WINDOW C-01	
+T-WINDOW	окна и узлы	термин	term	G07	\bокн	SP_WINDOW	определения окна как термина в карточке нет
+T-CHI	χ-оверлей	термин	term	G08	χ(?!_E)	CHI_STAT_LADDER CHI_CARRIER	

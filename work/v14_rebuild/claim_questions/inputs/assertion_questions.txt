@@ -1,0 +1,403 @@
+question_id	source_kind	source_id	question_kind	parent_question_id	question	previous_question	revised	added	answer_status	answer_pointer	premise_note	checked	corpus_coverage	known_in_corpus
+Q-U_m1	card	U_m1	answered		Что такое У(−1) «шум/неизвестное» — из чего выделяется различимость, если сигнала ещё нет?				unanswered				covered	U_m1
+Q-M_m1	card	M_m1	answered		Какое минимальное выражение задаёт У(−1) и что означает 0 знака/места в «a≈□»?				unanswered				covered	M_m1
+Q-CH_m1	card	CH_m1	answered		Какое операциональное действие соответствует У(−1): пустой сегмент Seg(W)=∅ — что это проверяет?				unanswered				covered	CH_m1
+Q-U_00	card	U_00	answered		Что такое У(0) «ошибка» и как отличить ошибку от отсутствия сигнала?				unanswered				covered	U_00
+Q-M_00	card	M_00	answered		Какое выражение задаёт У(0), и почему a≠a — первое различение?				unanswered				covered	M_00
+Q-CH_00	card	CH_00	answered		Как операционально проверить У(0): Eq₀(a,a)=false — это тест или определение?				unanswered				covered	CH_00
+Q-U_01	card	U_01	answered		Что такое У(1) «сигнал»: что означает тождество a=a как первое полагание?				unanswered				covered	U_01
+Q-M_01	card	M_01	answered		Какое выражение задаёт У(1), и что оно ещё не различает?				unanswered				covered	M_01
+Q-CH_01	card	CH_01	answered		Как У(1) работает операционально: сигнал как аксиома или как стабилизация?				unanswered				covered	CH_01
+Q-U_02	card	U_02	answered		Что такое У(2) «код»: при каком условии два объекта считаются кодом друг друга?				unanswered				covered	U_02
+Q-M_02	card	M_02	answered		Какое выражение задаёт У(2), и чем a=b отличается от a=a?				unanswered				covered	M_02
+Q-CH_02	card	CH_02	answered		Как проверяется код операционально: какой тест стоит за a=₂b?				unanswered				covered	CH_02
+Q-U_03	card	U_03	answered		Что такое У(3) «информация»: чем различие a≠b несёт информацию?				unanswered				covered	U_03
+Q-M_03	card	M_03	answered		Какое выражение задаёт У(3): I=(a≠b; a−b) — где здесь минус и что он значит?				unanswered				covered	M_03
+Q-CH_03	card	CH_03	answered		Как измеряется информация операционально: какое расстояние Dist₃(A,B;0_A^C)?				unanswered				covered	CH_03
+Q-U_04	card	U_04	answered		Что такое У(4) «вероятность/закономерная случайность» и как связано (a=b)∧(a≠b)?				unanswered				covered	U_04
+Q-M_04	card	M_04	answered		Какое выражение задаёт У(4), и почему конъюнкция равенства и неравенства — вероятность?				unanswered				covered	M_04
+Q-CH_04	card	CH_04	answered		Как У(4) проверяется операционально: что означает B=(a=₂b)∧(a≠₃b)?				unanswered				covered	CH_04
+Q-U_05	card	U_05	answered		Что такое У(5) «выбор»: что меняет дизъюнкция в (a=b)∨(a≠b)?				unanswered				covered	U_05
+Q-M_05	card	M_05	answered		Какое выражение задаёт У(5), и почему выбор — дизъюнкция двух членов пары?				unanswered				covered	M_05
+Q-CH_05	card	CH_05	answered		Как У(5) проверяется операционально: что выбирает Select(B)?				unanswered				covered	CH_05
+Q-U_06	card	U_06	answered		Что такое У(6) «статистика»: почему активная форма — конъюнкция двух пар и что агрегирует?				unanswered				covered	U_06
+Q-M_06	card	M_06	answered		Какое выражение задаёт У(6), и сохраняется ли вложенная группировка?				unanswered				covered	M_06
+Q-CH_06	card	CH_06	answered		Как У(6) проверяется операционально: что является семейством i в Agg_i(V_i)?				unanswered				covered	CH_06
+Q-U_07	card	U_07	answered		Что такое У(7) «знание»: почему закрытие окна ожидания есть ответ?				unanswered				covered	U_07
+Q-M_07	card	M_07	answered		Какое выражение задаёт У(7), и почему две вложенные группы не заменяются булевой тенью?				unanswered				covered	M_07
+Q-CH_07	card	CH_07	answered		Как У(7) проверяется операционально: что закрывает K_core=⟨W,0_W,Ans⟩ и κ-гейт?				unanswered				covered	CH_07
+Q-U_08	card	U_08	answered		Что такое У(8) «предположение» и чем предположение отличается от слабого предсказания?				unanswered				covered	U_08
+Q-M_08	card	M_08	answered		Какое выражение задаёт У(8): Link(0_K,M) — что здесь остаётся TBD?				unanswered				covered	M_08
+Q-CH_08	card	CH_08	answered		Как У(8) проверяется операционально: какая связь Link(K(0_A),M;κ) проверяется?				unanswered				covered	CH_08
+Q-U_09	card	U_09	answered		Что такое У(9) «понимание»: почему понимание — это объяснение выбора ветви?				unanswered				covered	U_09
+Q-M_09	card	M_09	answered		Какое выражение задаёт У(9): Analogy_κ(...) — что именно аналогия должна переносить?				unanswered				covered	M_09
+Q-CH_09	card	CH_09	answered		Как У(9) проверяется операционально: что изменится при другом пути или контрфакте?				unanswered				covered	CH_09
+Q-U_10	card	U_10	answered		Что такое У(10) «оценка»: по какому критерию сравнивают варианты?				unanswered				covered	U_10
+Q-M_10	card	M_10	answered		Какое выражение задаёт У(10): Compare_κ(...) — какие аргументы у сравнения?				unanswered				covered	M_10
+Q-CH_10	card	CH_10	answered		Как У(10) проверяется операционально: кто задаёт критерии Compare_κ(options,criteria)?				unanswered				covered	CH_10
+Q-U_11	card	U_11	answered		Что такое У(11) «осознание Я»: что означает включение субъекта в собственный контур?				unanswered				covered	U_11
+Q-M_11	card	M_11	answered		Какое выражение задаёт У(11): Fix(E,Agent,Consequences;...) — кто фиксирует?				unanswered				covered	M_11
+Q-CH_11	card	CH_11	answered		Как У(11) проверяется операционально: что наблюдаемо в self-reference и agent-in-loop?				unanswered				covered	CH_11
+Q-U_12	card	U_12	answered		Что такое У(12) «конфликт/союз»: что означает замкнутая граница окружности?				unanswered				covered	U_12
+Q-M_12	card	M_12	answered		Какая математическая форма у У(12): окружность с центром (0,2), r=2, касанием (0,0)?				unanswered				covered	M_12
+Q-CH_12	card	CH_12	answered		Как У(12) проверяется операционально: какой оператор или тест закрывает границу?				unanswered				covered	CH_12
+Q-U_13	card	U_13	answered		Что такое У(13) «мир-мы/космос-острова» и что значит ∏Bₖ=0 на уровне смысла?				unanswered				covered	U_13
+Q-M_13	card	M_13	gap		Какая форма заменяет TBD в У(13)?				unanswered				open	
+Q-CH_13	card	CH_13	gap		Какое действие соответствует У(13) операционально?				unanswered				open	
+Q-U_14	card	U_14	answered		Что такое У(14) «воображение/вычисления-логика»?				unanswered				covered	U_14
+Q-M_14	card	M_14	gap		Какая форма заменяет TBD в У(14)?				unanswered				open	
+Q-CH_14	card	CH_14	gap		Какое действие соответствует У(14) операционально?				unanswered				open	
+Q-U_15	card	U_15	answered		Что такое У(15) «красота» как узел и что означает его носитель?				unanswered				covered	U_15
+Q-M_15	card	M_15	gap		Какая форма заменяет TBD в У(15)?				unanswered				open	
+Q-CH_15	card	CH_15	gap		Какое действие соответствует У(15) операционально?				unanswered				open	
+Q-U_16	card	U_16	answered		Что такое У(16) «музыка» как спекулятивный уровень?				unanswered				covered	U_16
+Q-M_16	card	M_16	gap		Какая форма заменяет TBD в У(16)?				unanswered				open	
+Q-CH_16	card	CH_16	gap		Какое действие соответствует У(16) операционально?				unanswered				open	
+Q-U_17	card	U_17	answered		Что такое У(17) «искусство» как спекулятивный уровень?				unanswered				covered	U_17
+Q-M_17	card	M_17	gap		Какая форма заменяет TBD в У(17)?				unanswered				open	
+Q-CH_17	card	CH_17	gap		Какое действие соответствует У(17) операционально?				unanswered				open	
+Q-O_01	card	O_01	answered		Может ли уровень n+1 существовать без среды уровня n?				unanswered				covered	O_01
+Q-O_02	card	O_02	answered		Почему тотальность уровня n делает невозможным уровень n+1?				unanswered				covered	O_02
+Q-O_03	card	O_03	answered		Откуда берётся A_{n+1} из A_n и 0_A_n?				unanswered				covered	O_03
+Q-O_04	card	O_04	answered		Образуют ли уровни цепочку минимальных выражений и что её скрепляет?				unanswered				covered	O_04
+Q-O_05	card	O_05	answered		Чем −A отличается от A и 0_A и почему оно прерывает тотальность?				unanswered				covered	O_05
+Q-O_06	card	O_06	answered		Как задаётся минимум выражения: знак, связь и место относительно 0?				unanswered				covered	O_06
+Q-O_07	card	O_07	answered		Что делает плотная лестница Dense_FTS(−1..7) и почему вставки X контролируются?				unanswered				covered	O_07
+Q-O_08	card	O_08	answered		Как соседние уровни связаны проекцией π_{n+2→n} и развёрткой Expand₂?				unanswered				covered	O_08
+Q-O_09	card	O_09	answered		Что должна покрыть альтернативная M′, чтобы её не объявляли скрытой ФТС?				unanswered				covered	O_09
+Q-O_10	card	O_10	answered		Усиливает ли процедурная лестница минимум и не заменяет ли его?				unanswered				covered	O_10
+Q-O_11	card	O_11	answered		Какая область применения у минимальной грамматики различимости?				unanswered				covered	O_11
+Q-O_12	card	O_12	answered		Какие фальсификации F1–F5 не дают теории иммунизироваться?				unanswered				covered	O_12
+Q-O_13	card	O_13	answered		Нужна ли роль r_{n+1} для уровня n+1: что ломается без неё?				unanswered				covered	O_13
+Q-O_14	card	O_14	answered		Выразим ли Q_{n+1} ниже без скрытого аппарата (QuestionGain)?				unanswered				covered	O_14
+Q-O_15	card	O_15	answered		Что считается законным закрытием знания: критерий κ?				unanswered				covered	O_15
+Q-O_16	card	O_16	answered		Оставляет ли новый уровень наблюдаемый след (Trace)?				unanswered				covered	O_16
+Q-O_17	card	O_17	answered		Вводит ли новый уровень новую границу (BoundaryGain)?				unanswered				covered	O_17
+Q-O_18	card	O_18	answered		Делает ли новый уровень видимой новую ошибку (ErrTypeGain)?				unanswered				covered	O_18
+Q-O_19	card	O_19	answered		Почему Select имеет арность 1, а Agg требует семейство i?				unanswered				covered	O_19
+Q-O_20	card	O_20	answered		Улучшает ли типизированное отсутствие предсказание для missing/OOD/provenance?				unanswered				covered	O_20
+Q-OP_Tot	card	OP_Tot	answered		Что делает Tot с 0_A и почему это булева тень?				unanswered				covered	OP_Tot
+Q-OP_TotPlus	card	OP_TotPlus	answered		Какое локальное закрытие допустимо без потери Res_n?				unanswered				covered	OP_TotPlus
+Q-OP_TotMinus	card	OP_TotMinus	answered		Когда тотализация стирает остаток и блокирует Lift?				unanswered				covered	OP_TotMinus
+Q-OP_Lift	card	OP_Lift	answered		Как остаток становится выразимым объектом нового уровня?				unanswered				covered	OP_Lift
+Q-OP_Promote	card	OP_Promote	answered		Когда метка n→n+1 ложна, то есть без новой выразимости?				unanswered				covered	OP_Promote
+Q-OP_Refuse	card	OP_Refuse	answered		Какой фильтр g(e) отказывает в допуске опыта?				unanswered				covered	OP_Refuse
+Q-OP_Sever	card	OP_Sever	answered		Когда обрыв provenance разрывает перенос оснований?				unanswered				covered	OP_Sever
+Q-OP_kappa	card	OP_kappa	answered		Какой критерий κ(S,0_S,Prov,Rev) легитимирует закрытие и обновление?				unanswered				covered	OP_kappa
+Q-OP_event0A	card	OP_event0A	answered		Можно ли вывести ¬A→0_A из булевой проекции event(0_A)?				unanswered				covered	OP_event0A
+Q-OP_Unpack	card	OP_Unpack	answered		Сохраняет ли распаковка сложность C(x)=C(Unpack(x))?				unanswered				covered	OP_Unpack
+Q-OP_Compress2	card	OP_Compress2	answered		Как двухшаговая свёртка даёт M_n* из M_{n+2}?				unanswered				covered	OP_Compress2
+Q-OP_Expand2	card	OP_Expand2	answered		Как двухшаговая развёртка даёт M_{n+2} из M_n, Op_{n+1}, Res_n?				unanswered				covered	OP_Expand2
+Q-OP_pi	card	OP_pi	answered		Сохраняет ли проекция π_n старый слой?				unanswered				covered	OP_pi
+Q-OP_iota	card	OP_iota	answered		Выполняется ли π∘ι=id для встраивания ι_n?				unanswered				covered	OP_iota
+Q-A0	card	A0	answered		Что порождает различимость Δ0 и что первично: лестница или операторы?				unanswered				covered	A0
+Q-A0b	card	A0b	answered		Почему узлы 3/7/11/15 меняют носитель симметрии?				unanswered				covered	A0b
+Q-A1	card	A1	answered		Как устроена логическая надстройка v(A)=(t,f) с четырьмя значениями?				unanswered				covered	A1
+Q-A2	card	A2	answered		Что такое 0_A как структура на U\A и чем это отличается от ¬A?				unanswered				covered	A2
+Q-A3	card	A3	answered		Почему каналы истинности и ложности независимы?				unanswered				covered	A3
+Q-A4	card	A4	answered		Что теряет Tot при схлопывании 0_A в ¬A и делает ли f производной от t?				unanswered				covered	A4
+Q-A5	card	A5	answered		При каком R*_n тотальность уровня ложна в классе I_n?				unanswered				covered	A5
+Q-A5a	card	A5a	answered		Почему диагностика должна опираться на ΔR*(op), а не на голое R*>0?				unanswered				covered	A5a
+Q-A6	card	A6	answered		Как Lift превращает остаток в выразимое выражение нового уровня?				unanswered				covered	A6
+Q-A7	card	A7	answered		Сохраняют ли ι_n и π_n старый слой (π∘ι=id)?				unanswered				covered	A7
+Q-A8	card	A8	answered		Почему с 7+ Refuse и Sever определимы внутри и почему −A не равно ¬A или 0_A?				unanswered				covered	A8
+Q-A9	card	A9	answered		Что делает анти-форму следующим конструктивным уровнем без выразимости?				unanswered				covered	A9
+Q-F1	card	F1	answered		Можно ли найти X между M_n и M_{n+1}, не являющийся повтором или ранней формой?				unanswered				covered	F1
+Q-F2	card	F2	answered		Что сохраняется при схлопывании двух соседних уровней без потери роли и вопроса?				unanswered				covered	F2
+Q-F3	card	F3	answered		Может ли M′ быть независимой, покрывать −1..7 и иметь C(M′)≤C(FTS-core)?				unanswered				covered	F3
+Q-F4	card	F4	answered		Можно ли показать редукцию 0_A к ¬A без потери структуры?				unanswered				covered	F4
+Q-F5	card	F5	answered		Можно ли получить знание без κ, сохранив provenance, revision и defeaters?				unanswered				covered	F5
+Q-T7A	card	T7A	answered		Какое наблюдение e изменит f(A) или решение?				unanswered				covered	T7A
+Q-T7B	card	T7B	answered		Предсказуемо ли поведение при интервенции в g(e) или Λ?				unanswered				covered	T7B
+Q-T7C	card	T7C	answered		Переносятся ли контрсвидетельства между контекстами, если Sever не применён?				unanswered				covered	T7C
+Q-ADDENDUM_V3	card	ADDENDUM_V3	answered		Какие кандидатные дополнения входят в версию v3 и каков их статус?				unanswered				covered	ADDENDUM_V3
+Q-ADD_NOTATION_ABS	card	ADD_NOTATION_ABS	answered		Почему в таблицах используется abs(x) вместо |x|?				unanswered				covered	ADD_NOTATION_ABS
+Q-ADD_MIRROR_WINDOW	card	ADD_MIRROR_WINDOW	answered		Какую структуру задаёт уровень: разрешённая форма, запрещённая зеркальная и нулевая граница?				unanswered				covered	ADD_MIRROR_WINDOW
+Q-ADD_ZERO_BOUNDARY	card	ADD_ZERO_BOUNDARY	answered		Что значит F=−F тогда и только тогда, когда F=0, для ФТС?				unanswered				covered	ADD_ZERO_BOUNDARY
+Q-ADD_PARITY_TOPOLOGY	card	ADD_PARITY_TOPOLOGY	answered		Как чётность задаёт топологические слои и локальность запретов?				unanswered				covered	ADD_PARITY_TOPOLOGY
+Q-ADD_TOPO_INVARIANTS	card	ADD_TOPO_INVARIANTS	answered		Какие классы нулевых узлов различаются: один ноль, бесконечно много, ни одного?				unanswered				covered	ADD_TOPO_INVARIANTS
+Q-ADD_HALF_PHI	card	ADD_HALF_PHI	answered		Почему φ появляется как граница, где кубический избыток возвращает квадратный агрегат?				unanswered				covered	ADD_HALF_PHI
+Q-ADD_CONSTANTS	card	ADD_CONSTANTS	answered		При каком условии математическая константа считается ФТС-релевантной?	В каком смысле константы ФТС релевантны, и только ли как следы операций?	2026-10-10		unanswered				covered	ADD_CONSTANTS
+Q-ADD_U11_EPI	card	ADD_U11_EPI	answered		Как e^x (У11) отличается от e^π как окна 11–15?				unanswered				covered	ADD_U11_EPI
+Q-ADD_U12_CIRCLE	card	ADD_U12_CIRCLE	answered		Какую роль играет окружность У12 как замкнутое отношение с границей π?				unanswered				covered	ADD_U12_CIRCLE
+Q-ADD_RESEARCH_FORMAT	card	ADD_RESEARCH_FORMAT	answered		Почему для исследования выбраны Markdown, JSONL, TSV и YAML и что каждый формат хранит?				unanswered				covered	ADD_RESEARCH_FORMAT
+Q-SP_WINDOW	card	SP_WINDOW	answered		Почему при F≠0 исключение одной ветви выбирает другую и каков статус этого правила?				unanswered				covered	SP_WINDOW
+Q-SP_ZERO	card	SP_ZERO	answered		Что здесь математический факт, а что ФТС-ограничение в нулевой границе?				unanswered				covered	SP_ZERO
+Q-SP_U8	card	SP_U8	answered		Почему У8 считается кандидатом с операционным гейтом через sqrt(|x|)?				unanswered				covered	SP_U8
+Q-SP_U9	card	SP_U9	answered		Почему x³ — минимальный мультипликативный избыток над квадратом для У9?				unanswered				covered	SP_U9
+Q-SP_U12	card	SP_U12	answered		Какой статус у геометрии У12 как формальной математики и как канонического согласования?				unanswered				covered	SP_U12
+Q-U7_WINDOW_CORE	card	U7_WINDOW_CORE	answered		Может ли окно ожидания закрыться самим окном, и что такое ответ в У7?				unanswered				covered	U7_WINDOW_CORE
+Q-OP_WindowClose	card	OP_WindowClose	answered		Что означает Close(W,W) как продуктивная тавтология У7?				unanswered				covered	OP_WindowClose
+Q-U7_FORGET_CLOSE	card	U7_FORGET_CLOSE	answered		Что такое забывание как закрытие Refuse(W), а не простое отсутствие памяти?				unanswered				covered	U7_FORGET_CLOSE
+Q-U7_U8_ANSWER_QUESTION_BOUNDARY	card	U7_U8_ANSWER_QUESTION_BOUNDARY	answered		Где проходит граница между ответом У7 и вопросом У8?				unanswered				covered	U7_U8_ANSWER_QUESTION_BOUNDARY
+Q-U7_AGENTIC_GATE_LAYER	card	U7_AGENTIC_GATE_LAYER	answered		Что в У7 относится к операциональному диагностическому слою (κ, provenance, Refuse/Sever, T7A/T7B/T7C), а что остаётся ядром K_core?	Какой операциональный слой не входит в ядро У7?	2026-10-10		unanswered				covered	U7_AGENTIC_GATE_LAYER
+Q-U7_MATH_LOCAL_FORBID	card	U7_MATH_LOCAL_FORBID	answered		Почему запрет y≠x² снят и что обосновало это решение автора?				unanswered				covered	U7_MATH_LOCAL_FORBID
+Q-CHI_STAT_LADDER	card	CHI_STAT_LADDER	answered		Почему χ как нормированный остаток лучше плоского x для статистического оверлея?				unanswered				covered	CHI_STAT_LADDER
+Q-CHI_CARRIER	card	CHI_CARRIER	answered		Что сохраняет носитель χ=(χ_i) до агрегации?				unanswered				covered	CHI_CARRIER
+Q-OP_ChiCarrier	card	OP_ChiCarrier	answered		Как строится χ-носитель из наблюдаемого O_i и ожидаемого E_i?				unanswered				covered	OP_ChiCarrier
+Q-CHI_LADDER_U6	card	CHI_LADDER_U6	answered		Какой статистический аналог У6 даёт квадратичная агрегация остатков?				unanswered				covered	CHI_LADDER_U6
+Q-CHI_LADDER_U7	card	CHI_LADDER_U7	answered		Как разворот χ² даёт оконное закрытие У7 и почему это не p-value?				unanswered				covered	CHI_LADDER_U7
+Q-CHI_LADDER_U8	card	CHI_LADDER_U8	answered		Какой вопрос о гипотезе открывает остаток в χ-оверлее У8?				unanswered				covered	CHI_LADDER_U8
+Q-CHI_LADDER_U9	card	CHI_LADDER_U9	answered		Что нужно для понимания в χ-оверлее У9, кроме χ³?				unanswered				covered	CHI_LADDER_U9
+Q-CHI_LADDER_U10	card	CHI_LADDER_U10	answered		Как оценка У10 в χ-оверлее выбирает между окнами моделей?				unanswered				covered	CHI_LADDER_U10
+Q-CHI_LADDER_U11	card	CHI_LADDER_U11	answered		Как субъект У11 включает собственный выбор в причинную петлю?				unanswered				covered	CHI_LADDER_U11
+Q-COMPLEX_BRANCH_OVERLAY	card	COMPLEX_BRANCH_OVERLAY	answered		Что видит комплексный оверлей, чего не видит вещественный квадрат?				unanswered				covered	COMPLEX_BRANCH_OVERLAY
+Q-COMPLEX_CARRIER	card	COMPLEX_CARRIER	answered		Что хранит комплексный носитель: модуль и фазу или только модуль?				unanswered				covered	COMPLEX_CARRIER
+Q-OP_ComplexNormReadout	card	OP_ComplexNormReadout	answered		Какой квадратичный readout даёт норма комплексного носителя?				unanswered				covered	OP_ComplexNormReadout
+Q-OP_ComplexBranchAccess	card	OP_ComplexBranchAccess	answered		Какая ветвь могла породить наблюдаемое?				unanswered				covered	OP_ComplexBranchAccess
+Q-OP_ComplexBoundaryBranch	card	OP_ComplexBoundaryBranch	answered		Как различить вещественную совместимость и мнимую ветвь напряжения для У12?				unanswered				covered	OP_ComplexBoundaryBranch
+Q-COMPLEX_LADDER_U6	card	COMPLEX_LADDER_U6	answered		Что теряет У6 в комплексном носителе: phase или branch?				unanswered				covered	COMPLEX_LADDER_U6
+Q-COMPLEX_LADDER_U7	card	COMPLEX_LADDER_U7	answered		Может ли закрытие У7 требовать скрытой ветви, и совпадает ли phase с −A?				unanswered				covered	COMPLEX_LADDER_U7
+Q-COMPLEX_LADDER_U8	card	COMPLEX_LADDER_U8	answered		Становится ли предположение вопросом о фазе или листе?				unanswered				covered	COMPLEX_LADDER_U8
+Q-COMPLEX_LADDER_U9	card	COMPLEX_LADDER_U9	answered		Объясняет ли понимание выбор фазы и изменение при другом branch cut?				unanswered				covered	COMPLEX_LADDER_U9
+Q-COMPLEX_LADDER_U10	card	COMPLEX_LADDER_U10	answered		Задаёт ли оценка критерий выбора ветви и цену ошибки?				unanswered				covered	COMPLEX_LADDER_U10
+Q-COMPLEX_LADDER_U11	card	COMPLEX_LADDER_U11	answered		Фиксирует ли наблюдатель ветвь и несёт ли он ответственность за чтение?				unanswered				covered	COMPLEX_LADDER_U11
+Q-COMPLEX_LADDER_U12	card	COMPLEX_LADDER_U12	answered		Сохраняется ли outside как мнимое напряжение у У12?				unanswered				covered	COMPLEX_LADDER_U12
+Q-U12_CHI_PI_COMPLEX_BOUNDARY	card	U12_CHI_PI_COMPLEX_BOUNDARY	answered		Куда уходит остаток вне R² в статистически нагруженной границе?				unanswered				covered	U12_CHI_PI_COMPLEX_BOUNDARY
+Q-TENSOR_CONTEXT_OVERLAY	card	TENSOR_CONTEXT_OVERLAY	answered		Что тензорный слой добавляет сверх комплексной фазы?				unanswered				covered	TENSOR_CONTEXT_OVERLAY
+Q-TENSOR_CARRIER	card	TENSOR_CARRIER	answered		Как размечаются остатки и переносы индексами ячейки, контекста и протокола?				unanswered				covered	TENSOR_CARRIER
+Q-OP_TensorContextMap	card	OP_TensorContextMap	answered		При каком законе преобразования строится многоиндексное представление?				unanswered				covered	OP_TensorContextMap
+Q-TENSOR_LADDER_U10	card	TENSOR_LADDER_U10	answered		Может ли У10 сравнивать модели по нескольким критериям и контекстам?				unanswered				covered	TENSOR_LADDER_U10
+Q-TENSOR_LADDER_U11	card	TENSOR_LADDER_U11	answered		Является ли протокол У11 индексом собственного обновления?				unanswered				covered	TENSOR_LADDER_U11
+Q-TENSOR_LADDER_U12	card	TENSOR_LADDER_U12	answered		Может ли У12 держать несколько контуров конфликта при заданном законе переноса?				unanswered				covered	TENSOR_LADDER_U12
+Q-A_07	card	A_07	answered		Почему МУ7 — пара парабол |y|=x², а не одна ветвь?				unanswered				covered	A_07
+Q-U7_LOGIC_GROUPING	card	U7_LOGIC_GROUPING	answered		Почему вложенная группировка У7 обязательна и не заменяется булевой тенью?				unanswered				covered	U7_LOGIC_GROUPING
+Q-AC_20261003_AUTHOR_DECISION	card	AC_20261003_AUTHOR_DECISION	answered		Почему окна строятся группами нечётной длины?				unanswered				covered	AC_20261003_AUTHOR_DECISION
+Q-AC_20261003_WINDOW_FAMILIES	card	AC_20261003_WINDOW_FAMILIES	answered		Какие семейства окон и где их пересечения по одному уровню?				unanswered				covered	AC_20261003_WINDOW_FAMILIES
+Q-AC_20261003_WINDOW_FIVES_ALIGNMENT	card	AC_20261003_WINDOW_FIVES_ALIGNMENT	answered		Совпадает ли семейство пятёрок с окнами карточек уровней 3/7/11/15?				unanswered				covered	AC_20261003_WINDOW_FIVES_ALIGNMENT
+Q-AC_20261003_WINDOWS_TRIPLES	card	AC_20261003_WINDOWS_TRIPLES	answered		Каков конечный перечень троек и продолжается ли он за пределы?				unanswered				covered	AC_20261003_WINDOWS_TRIPLES
+Q-AC_20261003_WINDOWS_FIVES	card	AC_20261003_WINDOWS_FIVES	answered		Каков конечный перечень пятёрок и задаёт ли пересечение узел?				unanswered				covered	AC_20261003_WINDOWS_FIVES
+Q-AC_20261003_WINDOWS_SEVENS	card	AC_20261003_WINDOWS_SEVENS	answered		Каков конечный перечень семёрок и что дальше 17?				unanswered				covered	AC_20261003_WINDOWS_SEVENS
+Q-WINDOW_GROUPINGS	card	WINDOW_GROUPINGS	answered		Как организован указатель группировок окон и какие находки (арифметические окна 13/25, знаковые модели, Фано, круг) он связывает с принятыми семействами троек, пятёрок и семёрок?	Какие арифметические окна 13/25 связаны с семействами окон и геометрией?	2026-10-10		unanswered				covered	WINDOW_GROUPINGS
+Q-WINDOW_GROUPING_13	card	WINDOW_GROUPING_13	answered		Какую группу задаёт окно длины 13 и что проверяется до и после наблюдения?				unanswered				covered	WINDOW_GROUPING_13
+Q-WINDOW_GROUPING_25	card	WINDOW_GROUPING_25	answered		Какую группу задаёт окно длины 25 и какие модели сравниваются?				unanswered				covered	WINDOW_GROUPING_25
+Q-DN_20260922_ABSENCE_LIFT	claim	DN_20260922_ABSENCE_LIFT	answered		Достаточно ли включения отсутствия в собственный контур для Lift или оно лишь необходимо?				unanswered				covered	DN_20260922_ABSENCE_LIFT
+Q-DN_20260922_GEOMETRY_SELF	claim	DN_20260922_GEOMETRY_SELF	answered		Может ли совпадение формул У6–У12 с тороидальной опорой Я установить переходы, носитель или сознание?				unanswered				covered	DN_20260922_GEOMETRY_SELF
+Q-DN_20260922_INTERNAL_CONTOUR	claim	DN_20260922_INTERNAL_CONTOUR	answered		Какая метрика выбирает внутренний контур из вопроса, веры, проекции, мотиватора и свободы инструмента?				unanswered				covered	DN_20260922_INTERNAL_CONTOUR
+Q-DN_20260922_SENSITIVITY_RESIDUAL	claim	DN_20260922_SENSITIVITY_RESIDUAL	answered		Устанавливают ли формулы sensitivity и residual новый уровень, Lift или early exit?				unanswered				covered	DN_20260922_SENSITIVITY_RESIDUAL
+Q-DR10_QG_WITNESS	claim	DR10_QG_WITNESS	answered		При каких q и r отношение ~(q,r) строго уже ~q?				unanswered				covered	DR10_QG_WITNESS
+Q-CM-001	claim_group	CM-001	answered		Совпадают ли зеркальные пары F и −F только на нулевой границе, инвариантен ли модуль к знаку и какова чётность перечисленных форм?	Что сохраняет модуль и зеркальные пары и на какой границе они совпадают?	2026-10-10		unanswered				covered	CM-001
+Q-CM-002	claim_group	CM-002	answered		Чему равен корень из x² для вещественного x, инъективен ли квадрат и как sqrt(|x|) связан с четвёртым корнем из x²?	Что отвечает на вопрос о корне из x² и является ли корень вопросом?	2026-10-10		unanswered				covered	CM-002
+Q-CM-003	claim_group	CM-003	answered		Верно ли x³=x·x² и sign(x³)=sign(x), чётна ли x⁴ и отличается ли она от x³?	Выбирает ли основанная ветвь кубического ядра понимание?	2026-10-10		unanswered				covered	CM-003
+Q-CM-004	claim_group	CM-004	answered		Каковы ряд cos x, его область сходимости без весов, ОДУ, диапазон и нули?	Является ли cos оценкой или только решением ОДУ и рядом?	2026-10-10		unanswered				covered	CM-004
+Q-CM-005	claim_group	CM-005	answered		Что задаёт ОДУ F'=F с F(0)=1, положительна ли exp, есть ли у неё ряд и чётна ли она?	Что отвечает экспонента ОДУ F'=F и вводит ли она Я?	2026-10-10		unanswered				covered	CM-005
+Q-CM-006	claim_group	CM-006	answered		Проходит ли окружность r=2 через ноль, является ли она графиком y=f(x), сколько у неё ветвей и каковы дифференциал, зеркальный образ и касание?	На какой вопрос отвечает окружность r=2 через ноль: конфликт или союз?	2026-10-10		unanswered				covered	CM-006
+Q-CM-007	claim_group	CM-007	answered		Чему равны нули произведения двух многочленов окружностей и инвариантна ли эта пара зеркально?	На какой вопрос отвечает объединение нулей произведения окружностей: миры или острова?	2026-10-10		unanswered				covered	CM-007
+Q-CM-008	claim_group	CM-008	answered		Чему равны модуль и производная орбиты z=exp(iθ)?	На какой вопрос отвечает орбита exp(iθ): красота?	2026-10-10		unanswered				covered	CM-008
+Q-CM-009	claim_group	CM-009	answered		В каких уровнях канонические окна перекрываются ровно, каков шаг projects_to и реализуются ли полушаги 2…7 модулем?	На какой вопрос отвечают конечные перекрытия окон: узел или обратная связь?	2026-10-10		unanswered				covered	CM-009
+Q-CM-010	claim_group	CM-010	answered		Зеркальны ли выбранные А-формы 3/7, локально ли квадратична нижняя ветвь окружности и параметризует ли cos окружность?	На какой вопрос отвечают равенства А-форм и асимптотика: уровневые связи?	2026-10-10		unanswered				covered	CM-010
+Q-CM-011	claim_group	CM-011	answered		При каком θ в фундаментальном интервале exp(iθ)=−1, какие вещественные точки у орбиты при x>0 и инвариантен ли модуль?	На какой вопрос отвечает exp(iθ)=−1: фаза ФТС?	2026-10-10		unanswered				covered	CM-011
+Q-CM-012	claim_group	CM-012	answered		Какие общие свойства у класса окружностей r>0, сколько корней у куба и квадрата и убирает ли чётное решение ОДУ sin-компоненту?	На какой вопрос отвечают обобщённые окружности и ОДУ: общий класс или интерпретация?	2026-10-10		unanswered				covered	CM-012
+Q-CM-013	claim_group	CM-013	answered		Равны ли отношения зеркальных пар −1 вне нуля, извлекает ли нормировка знак и фазу, мультипликативен ли знак?	На какой вопрос отвечают отношения зеркальных пар вне нуля: знак или фаза?	2026-10-10		unanswered				covered	CM-013
+Q-CM-014	claim_group	CM-014	answered		Каковы идемпотенты x²=x и как ведут себя перечисленные формы в точке x=1?	На какой вопрос отвечают идемпотенты x²=x: уровень 0 или 1?	2026-10-10		unanswered				covered	CM-014
+Q-CM-015	claim_group	CM-015	answered		Получается ли χ-оверлей У3…У9 подстановкой x:=χ и чем она отличается от x:=χ² на toy-таблице χ²=2.72?	На какой вопрос отвечает подстановка x:=χ: содержание уровня или только перенос форм?	2026-10-10		unanswered				covered	CM-015
+Q-CM-016	claim_group	CM-016	answered		Выполняются ли заявленные совпадения, зеркальные различия, пары А-форм и булевы тождества в точках 0/1 и на трёх примерах?	Полны ли проверенные примеры в 0/1 и трёх случаях как законы ФТС?	2026-10-10		unanswered				covered	CM-016
+Q-CM-017	claim_group	CM-017	answered		Могут ли У7–У12 считаться canonical_v14 по К1–К5?				unanswered				covered	CM-017
+Q-CM-018	claim_group	CM-018	answered		Достаточно ли рёбер SP_PARITY для повышения, или нужна отдельная карточка?				unanswered				covered	CM-018
+Q-CM-019	claim_group	CM-019	answered		Ссылаются ли все depends_on и субъекты триплетов на существующие карточки?				unanswered				covered	CM-019
+Q-CM-020	claim_group	CM-020	answered		Улучшает ли O_20 предсказание относительно плоского флага?				unanswered				covered	CM-020
+Q-CM-021	claim_group	CM-021	answered		Даёт ли D2 внешнюю роль сверх плоского флага?				unanswered				covered	CM-021
+Q-CM-022	claim_group	CM-022	answered		Даёт ли D10 предсказанный выигрыш при CFO/RadioML?				unanswered				covered	CM-022
+Q-CM-023	claim_group	CM-023	answered		Полон ли словарь Д и вынуждено ли правило П?				unanswered				covered	CM-023
+Q-CM-024	claim_group	CM-024	answered		Образуют ли пентадная рекурсия и эскалация симметрии единый закон всей лестницы?				unanswered				covered	CM-024
+Q-CM-025	claim_group	CM-025	answered		Есть ли у ФТС подтверждённый внешний контакт или установленная новизна?				unanswered				covered	CM-025
+Q-NEURAL_T2_SCAFFOLD	claim	NEURAL_T2_SCAFFOLD	answered		Может ли ФТС служить кандидатным функциональным scaffold для искусственных нейросетей?				unanswered				covered	NEURAL_T2_SCAFFOLD
+Q-NEURAL_T3_NOT_VERIFIED	claim	NEURAL_T3_NOT_VERIFIED	answered		Установлена ли биологическая модель и архитектурный claim T3?				unanswered				covered	NEURAL_T3_NOT_VERIFIED
+Q-OQ25_DEFINITION_OPTIONS	claim	OQ25_DEFINITION_OPTIONS	answered		Какие определения Lambda_link, TA1, χ/π-границы и NODE_SIGNATURES предлагаются?				unanswered				covered	OQ25_DEFINITION_OPTIONS
+Q-OQ25_RELATION_PRODUCT	claim	OQ25_RELATION_PRODUCT	answered		Даёт ли произведение креста на сечение одну ветвь или обе?				unanswered				covered	OQ25_RELATION_PRODUCT
+Q-OQ25_SECTION_NATURALITY	claim	OQ25_SECTION_NATURALITY	answered		Существует ли секция проекции, эквивариантная перестановке ветвей?				unanswered				covered	OQ25_SECTION_NATURALITY
+Q-OQ25_U6_PROVENANCE	claim	OQ25_U6_PROVENANCE	answered		Как сохранять провенанс дерева М_06/М_07 и нужен ли обработчик Close?				unanswered				covered	OQ25_U6_PROVENANCE
+Q-OQ25_UNITS48	claim	OQ25_UNITS48	answered		Какова структура единиц mod 48?				unanswered				covered	OQ25_UNITS48
+Q-U4_U7_TYPED_CANDIDATE	claim	U4_U7_TYPED_CANDIDATE	answered		Есть ли конечная candidate-реализация переходов У4→У7 при допущениях D1–D6?				unanswered				covered	U4_U7_TYPED_CANDIDATE
+Q-U6_Q_NOT_SUFFICIENT_FOR_U7	claim	U6_Q_NOT_SUFFICIENT_FOR_U7	answered		Факторизуются ли исходы У7 через одну сводку Q из У6?				unanswered				covered	U6_Q_NOT_SUFFICIENT_FOR_U7
+Q-U6_VSTAR_BRIDGE_UNDERDETERMINED	claim	U6_VSTAR_BRIDGE_UNDERDETERMINED	answered		Задаёт ли историческое V*V единственный мост к активной У6?				unanswered				covered	U6_VSTAR_BRIDGE_UNDERDETERMINED
+Q-WINDOW_ABSOLUTIZATION_AUTHOR	claim	WINDOW_ABSOLUTIZATION_AUTHOR	answered		Как абсолютизация с У−1 обеспечивает устойчивость уровней?				unanswered				covered	WINDOW_ABSOLUTIZATION_AUTHOR
+Q-WINDOW_ARITHMETIC_CATALOG	claim	WINDOW_ARITHMETIC_CATALOG	answered		Какие арифметические роли адресуют окна 3–25?				unanswered				covered	WINDOW_ARITHMETIC_CATALOG
+Q-WINDOW_ARITHMETIC_LIMITS	claim	WINDOW_ARITHMETIC_LIMITS	answered		Где обратимость элементов ломается на шагах 48 и 96?				unanswered				covered	WINDOW_ARITHMETIC_LIMITS
+Q-WINDOW_BOUNDARY_22	claim	WINDOW_BOUNDARY_22	answered		Что происходит на шагах 22 и 24 с классами подгрупп?				unanswered				covered	WINDOW_BOUNDARY_22
+Q-WINDOW_CIRCLE_CANDIDATE	claim	WINDOW_CIRCLE_CANDIDATE	answered		Может ли относительная фаза реализовать двухканальную пробу окружности?				unanswered				covered	WINDOW_CIRCLE_CANDIDATE
+Q-WINDOW_COMMON_NODE_CANDIDATE	claim	WINDOW_COMMON_NODE_CANDIDATE	answered		Какую роль играет e(−1), связанный со всеми семью: единицы, общего квадрата или предносителя?				unanswered				covered	WINDOW_COMMON_NODE_CANDIDATE
+Q-WINDOW_COUNTERWEIGHT_AUTHOR	claim	WINDOW_COUNTERWEIGHT_AUTHOR	answered		Каким механизмом роль противовеса У5 переносится на У7?				unanswered				covered	WINDOW_COUNTERWEIGHT_AUTHOR
+Q-WINDOW_COUNTERWEIGHT_TRANSFER_CANDIDATE	claim	WINDOW_COUNTERWEIGHT_TRANSFER_CANDIDATE	answered		Удерживает ли абсолютизация построенное и формализует ли она следующий уровень?				unanswered				covered	WINDOW_COUNTERWEIGHT_TRANSFER_CANDIDATE
+Q-WINDOW_COUNTING_AUTHOR	claim	WINDOW_COUNTING_AUTHOR	answered		Как состояния 0/1 связаны с У0/У1 и со счётом?				unanswered				covered	WINDOW_COUNTING_AUTHOR
+Q-WINDOW_FANO_NESTED	claim	WINDOW_FANO_NESTED	answered		Согласована ли линия Фано с H4 и полная таблица с O8?				unanswered				covered	WINDOW_FANO_NESTED
+Q-WINDOW_FANO_NUMBERING_LIMIT	claim	WINDOW_FANO_NUMBERING_LIMIT	answered		Задаёт ли нумерация Фано отображение на переход 6→7?				unanswered				covered	WINDOW_FANO_NUMBERING_LIMIT
+Q-WINDOW_FANO_SIGN_CYCLE	claim	WINDOW_FANO_SIGN_CYCLE	answered		Какую фазу mod4 хранит знаковый цикл?				unanswered				covered	WINDOW_FANO_SIGN_CYCLE
+Q-WINDOW_FIRST_DISTINCTION_AUTHOR	claim	WINDOW_FIRST_DISTINCTION_AUTHOR	answered		Чем первое полагание отличается от последующих определений?				unanswered				covered	WINDOW_FIRST_DISTINCTION_AUTHOR
+Q-WINDOW_JOINT_SCOPE_DIRECTION	claim	WINDOW_JOINT_SCOPE_DIRECTION	answered		Как читать результат при разных охватах уровней и связей?				unanswered				covered	WINDOW_JOINT_SCOPE_DIRECTION
+Q-WINDOW_NESTING_SIERPINSKI	claim	WINDOW_NESTING_SIERPINSKI	answered		Образует ли M_07⊃M_06 строгую самоподобную рекурсию?				unanswered				covered	WINDOW_NESTING_SIERPINSKI
+Q-WINDOW_NODE_INNER_NONUNIQUE	claim	WINDOW_NODE_INNER_NONUNIQUE	answered		Какую роль узла ФТС выбирает внутреннее сопряжение J, если оно неединственно?				unanswered				covered	WINDOW_NODE_INNER_NONUNIQUE
+Q-WINDOW_NUMBER_ALGEBRA_SCOPE	claim	WINDOW_NUMBER_ALGEBRA_SCOPE	answered		Где сохраняются свойства R/C/H/O на расширенном носителе?				unanswered				covered	WINDOW_NUMBER_ALGEBRA_SCOPE
+Q-WINDOW_RELATIVE_SIGN_PROBE	claim	WINDOW_RELATIVE_SIGN_PROBE	answered		Различает ли совместное считывание суммы и разности относительный знак и доступно ли это в ФТС?				unanswered				covered	WINDOW_RELATIVE_SIGN_PROBE
+Q-WINDOW_SIGN_INTERFACE_UNDEFINED	claim	WINDOW_SIGN_INTERFACE_UNDEFINED	answered		Как переводятся операции ФТС в знаковое произведение?				unanswered				covered	WINDOW_SIGN_INTERFACE_UNDEFINED
+Q-WINDOW_SIGN_MODELS_INEQUIVALENT	claim	WINDOW_SIGN_MODELS_INEQUIVALENT	answered		Эквивалентны ли знаковые модели H4/S4 и O8/B8?				unanswered				covered	WINDOW_SIGN_MODELS_INEQUIVALENT
+Q-WINDOW_SIGN_SHADOW_INVARIANT	claim	WINDOW_SIGN_SHADOW_INVARIANT	answered		Не различает ли знаковая метка порядок и дерево?				unanswered				covered	WINDOW_SIGN_SHADOW_INVARIANT
+Q-WINDOW_WEIERSTRASS_CONTEXT	claim	WINDOW_WEIERSTRASS_CONTEXT	answered		Соответствует ли ℘ уровням 5/7 и кандидату У17?				unanswered				covered	WINDOW_WEIERSTRASS_CONTEXT
+Q-AF-001	finding	AF-001	answered		Был ли PASS C28 истинным свидетельством?				unanswered				covered	AF-001
+Q-AF-002	finding	AF-002	answered		Соответствовал ли PASS тексту сильных формулировок?				unanswered				covered	AF-002
+Q-AF-003	finding	AF-003	answered		Разделены ли статусы St_math и St_FTS?				unanswered				covered	AF-003
+Q-AF-004	finding	AF-004	answered		Повышает ли арифметическая полоса семантику знания?				unanswered				covered	AF-004
+Q-AF-005	finding	AF-005	answered		Годится ли исходная оценка для strong claim без preprocessing leakage?				unanswered				covered	AF-005
+Q-AF-006	finding	AF-006	answered		Доказывает ли pooled fold-level p перенос между датасетами?				unanswered				covered	AF-006
+Q-AF-007	finding	AF-007	answered		Идентифицирует ли какой-либо прогон роль фазы ФТС?				unanswered				covered	AF-007
+Q-AF-008	finding	AF-008	answered		Ограничивает ли prior art компоненты и доказывает ли отрицательный поиск новизну?				unanswered				covered	AF-008
+Q-AF-009	finding	AF-009	answered		Влечёт ли математический факт интерпретацию ФТС без моста К1–К5?				unanswered				covered	AF-009
+Q-AF-010	finding	AF-010	answered		Соответствовала ли сводка исправленной единице вывода?				unanswered				covered	AF-010
+Q-AF-011	finding	AF-011	answered		Можно ли исправлять дефекты неизменяемого канона выдумыванием сущностей?				unanswered				covered	AF-011
+Q-AF-012	finding	AF-012	answered		Является ли TSV полным графом зависимостей?				unanswered				covered	AF-012
+Q-AF-013	finding	AF-013	answered		Является ли depends_on DAG и доказывает ли он порядок оснований?				unanswered				covered	AF-013
+Q-AF-014	finding	AF-014	answered		Можно ли восстановить предрегистрационную чистоту кода задним числом?				unanswered				covered	AF-014
+Q-AF-015	finding	AF-015	answered		Можно ли считать вариант строго предзарегистрированным воспроизводимым тестом?				unanswered				covered	AF-015
+Q-AF-016	finding	AF-016	answered		Насколько долговременно доступна панель по сравнению с другими датасетами?				unanswered				covered	AF-016
+Q-AF-017	finding	AF-017	answered		Можно ли объявить review-пакет каноном v14?				unanswered				covered	AF-017
+Q-AF-018	finding	AF-018	answered		Есть ли прямой внешний контакт у У2–У5 и доказана ли абсолютная новизна?				unanswered				covered	AF-018
+Q-AF-019	finding	AF-019	answered		Можно ли переписывать исторические записи при исправлении сводки?				unanswered				covered	AF-019
+Q-AF-020	finding	AF-020	answered		Вводит ли несинхронный review-пакет рецензента в заблуждение?				unanswered				covered	AF-020
+Q-PA-C01	pattern	PA-C01	answered		Есть ли один словарь, сопоставляющий анти-форму, удержание, вопрос, основание, критерий и ratio?				unanswered				covered	PA-C01
+Q-PA-C02	pattern	PA-C02	answered		Согласуются ли возможные чтения форм с К1–К5 и операционными абляциями?				unanswered				covered	PA-C02
+Q-PA-C03	pattern	PA-C03	answered		Повторяется ли паттерн «анти-форма→симметрия оператора→инвариант группы» по пятиместным окнам?				unanswered				covered	PA-C03
+Q-PA-C04	pattern	PA-C04	answered		Задаёт ли носитель, словарь, чётность, граница и паспорт процедуру допуска уровня?				unanswered				covered	PA-C04
+Q-PA-C05	pattern	PA-C05	answered		Повторяется ли Select→Agg (У5→У6, У9→У10) и предсказывает ли он У13→У14?				unanswered				covered	PA-C05
+Q-PA-C06	pattern	PA-C06	answered		Организуют ли виды неоднозначности колонку и поэтапную сборку комплексного оверлея?				unanswered				covered	PA-C06
+Q-PA-C07	pattern	PA-C07	answered		Интерпретируется ли Tot(A) как схлопывание ветвей {±1}→{1}?				unanswered				covered	PA-C07
+Q-PA-C08	pattern	PA-C08	answered		Предлагают ли оверлеи альтернативные носители без изменения канона?				unanswered				covered	PA-C08
+Q-PA-C09	pattern	PA-C09	answered		Есть ли прямой компонентный формальный контакт У2–У5 и доказана ли готовая лестница?				unanswered				covered	PA-C09
+Q-PA-F01	pattern	PA-F01	answered		При каком F совпадают F и −F?				unanswered				covered	PA-F01
+Q-PA-F02	pattern	PA-F02	answered		Сохраняет ли модуль орбиту зеркала и стирает ли выбор ветви?				unanswered				covered	PA-F02
+Q-PA-F03	pattern	PA-F03	answered		Какие формы имеют чётность и каков их топологический смысл?				unanswered				covered	PA-F03
+Q-PA-F04	pattern	PA-F04	answered		Перекрываются ли соседние окна в 3/7/11/15 и идут ли projects_to на два уровня вниз?				unanswered				covered	PA-F04
+Q-PA-F05	pattern	PA-F05	answered		Что доказано для Rotπ и модуля по фазе в орбите e^{iθ}x?				unanswered				covered	PA-F05
+Q-PA-F06	pattern	PA-F06	answered		Нормируются ли зеркальные отношения к −1 и извлекают ли x/|x| и z/|z| знак и фазу?				unanswered				covered	PA-F06
+Q-PA-F07	pattern	PA-F07	answered		Какие решения у x²=x и что схлопывается в x=1?				unanswered				covered	PA-F07
+Q-PA-F08	pattern	PA-F08	answered		Что доказано о геометрии окружности и её квадратичном контакте?				unanswered				covered	PA-F08
+Q-PA-F09	pattern	PA-F09	answered		Чему равно нулевое множество произведения многочленов?				unanswered				covered	PA-F09
+Q-PA-F10	pattern	PA-F10	answered		Что переносит подстановка x:=χ и не является ли она подстановкой x:=χ²?				unanswered				covered	PA-F10
+Q-PA-F11	pattern	PA-F11	answered		Совпадают ли модули пар в проверенной таблице и ломается ли шаблон в У8?				unanswered				covered	PA-F11
+Q-PA-G01	pattern	PA-G01	answered		Сохранены ли канонические статусы уровней −1…6?				unanswered				covered	PA-G01
+Q-PA-G02	pattern	PA-G02	answered		Совпадают ли 167 зависимостей и есть ли циклы предпосылок?				unanswered				covered	PA-G02
+Q-PA-G03	pattern	PA-G03	answered		Различаются ли ¬A, 0_A и −A и не смешиваются ли регистры М, Ч, А?				unanswered				covered	PA-G03
+Q-PA-G04	pattern	PA-G04	answered		Выполнено ли условие повышения статуса: SP-карточка, целевое ребро и К1–К5?				unanswered				covered	PA-G04
+Q-PA-R01	pattern	PA-R01	answered		Подтверждает ли элементарное равенство уровневую интерпретацию?				unanswered				covered	PA-R01
+Q-PA-R02	pattern	PA-R02	answered		Была ли proposal ошибочно записана как SP-карточка повышения У7?				unanswered				covered	PA-R02
+Q-PA-R03	pattern	PA-R03	answered		Стабильно ли T3 лучше T2 и даёт ли он внешний контакт?				unanswered				covered	PA-R03
+Q-PA-R04	pattern	PA-R04	answered		Даёт ли sign/phase-кодировка устойчивый внешний выигрыш?				unanswered				covered	PA-R04
+Q-PA-R05	pattern	PA-R05	answered		Идентифицирует ли модель роль непрерывной фазы ФТС?				unanswered				covered	PA-R05
+Q-PA-R06	pattern	PA-R06	answered		Считаются ли мнимость У7, 3D-cross У12 и периодичность У10 прямыми смыслами?				unanswered				covered	PA-R06
+Q-PA-R07	pattern	PA-R07	answered		Доказывает ли отсутствие найденного аналога мировую новизну всех компонентов?				unanswered				covered	PA-R07
+Q-CM-001.2	claim_group	CM-001	obligation	Q-CM-001	Почему из CM-001 удалено ложное повышение SP_PARITY и что нужно для законного повышения чётности?			2026-10-10	unanswered				open	
+Q-CM-002.2	claim_group	CM-002	test	Q-CM-002	Какая абляция вопросной роли У8 покажет, что «корень = вопрос» не сводится к равенству sqrt(x²)=|x|?			2026-10-10	unanswered				open	
+Q-CM-003.2	claim_group	CM-003	test	Q-CM-003	Какой тест роли основания различит выбор основанной ветви и понимание У9, если x³=x·x² доказано?			2026-10-10	unanswered				open	
+Q-CM-004.2	claim_group	CM-004	obligation	Q-CM-004	Какие SP_U10 и операциональный тест нужны, чтобы «Оценка» следовала из свойств cos?			2026-10-10	unanswered				open	
+Q-CM-005.2	claim_group	CM-005	obligation	Q-CM-005	Что должны содержать SP_U11 и К1–К5, чтобы exp читалась как «Я» и «тотал нижних форм»?			2026-10-10	unanswered				open	
+Q-CM-006.2	claim_group	CM-006	bridge	Q-CM-006	Что остаётся открытым в гейте У12, чтобы окружность читалась как «Конфликт/Союз»?			2026-10-10	unanswered				open	
+Q-CM-007.2	claim_group	CM-007	bridge	Q-CM-007	Что превращает объединение нулей произведения в предсказание о «мирах/островах» У13?			2026-10-10	unanswered				open	
+Q-CM-008.2	claim_group	CM-008	bridge	Q-CM-008	Что должно добавиться к орбите exp(iθ), чтобы она читалась как «Красота» У15?			2026-10-10	unanswered				open	
+Q-CM-009.2	claim_group	CM-009	limit	Q-CM-009	Что нужно доказать, чтобы обобщить проверенный диапазон 2…7 для projects_to и полушагов на уровни выше 7?			2026-10-10	unanswered				open	
+Q-CM-010.2	claim_group	CM-010	bridge	Q-CM-010	Какие из связей «3/7 зеркальны», «окружность локально квадратична» и «cos параметризует окружность» остаются аналогиями, а не уровневыми связями?			2026-10-10	unanswered				open	
+Q-CM-011.2	claim_group	CM-011	bridge	Q-CM-011	Какие данные превратят θ=π из свойства комплексной орбиты в фазу ФТС?			2026-10-10	unanswered				open	
+Q-CM-012.2	claim_group	CM-012	limit	Q-CM-012	Какие свойства класса окружностей, кубов и квадратов действуют только в указанных доменах r>0 и c>0?			2026-10-10	unanswered				open	
+Q-CM-013.2	claim_group	CM-013	limit	Q-CM-013	Почему отношения зеркальных пар и нормировка требуют ненулевых областей и что происходит в нуле?			2026-10-10	unanswered				open	
+Q-CM-014.2	claim_group	CM-014	bridge	Q-CM-014	Что уровневое чтение x=1 добавляет к арифметическому факту об идемпотентах?			2026-10-10	unanswered				open	
+Q-CM-015.2	claim_group	CM-015	bridge	Q-CM-015	Добавляет ли χ-оверлей что-то к содержанию уровней, кроме подстановки x:=χ?			2026-10-10	unanswered				open	
+Q-CM-016.2	claim_group	CM-016	limit	Q-CM-016	Какие обобщения, стоящие за тремя примерами и точками 0/1, остаются proposal, а не законами ФТС?			2026-10-10	unanswered				open	
+Q-AF-001.2	finding	AF-001	limit	Q-AF-001	Какой областью ограничен исправленный предикат zero-product в C28?			2026-10-10	unanswered				open	
+Q-AF-002.2	finding	AF-002	obligation	Q-AF-002	Нужна ли и возможна ли независимая формализация C-проверок в theorem-prover вне SymPy?			2026-10-10	unanswered				open	
+Q-AF-003.2	finding	AF-003	obligation	Q-AF-003	Какие отдельные SP и операциональные тесты нужны для повторного повышения У8…У12?			2026-10-10	unanswered				open	
+Q-AF-004.2	finding	AF-004	obligation	Q-AF-004	В каком виде может быть добавлена workbook-карточка SP_STRICT_BAND_7: как proposal без семантического повышения?			2026-10-10	unanswered				open	
+Q-AF-005.2	finding	AF-005	test	Q-AF-005	Подтвердится ли D2 при препроцессинге внутри train-fold в новой предрегистрированной репликации, а не в post-hoc реанализе?			2026-10-10	unanswered				open	
+Q-AF-006.2	finding	AF-006	limit	Q-AF-006	Что можно вывести при четырёх независимых датасетах, если минимальный односторонний sign p при 4/4 равен 0.0625?			2026-10-10	unanswered				open	
+Q-AF-007.2	finding	AF-007	test	Q-AF-007	Какая площадка с одинаковой частотой и независимо рандомизированной фазой идентифицирует независимую роль фазы ФТС?			2026-10-10	unanswered				open	
+Q-AF-008.2	finding	AF-008	obligation	Q-AF-008	Каким должен быть систематический поиск с claim-driven матрицей, если OpenAlex MCP был недоступен?			2026-10-10	unanswered				open	
+Q-AF-009.2	finding	AF-009	obligation	Q-AF-009	Какие операционные role/defeat-тесты нужны большинству уровневых чтений?			2026-10-10	unanswered				open	
+Q-AF-010.2	finding	AF-010	limit	Q-AF-010	Почему исторические RESULTS.md остаются неизменными и как они помечены как исторические?			2026-10-10	unanswered				open	
+Q-AF-011.2	finding	AF-011	obligation	Q-AF-011	Как восстановить оригинальные workbook-строки для ID, которых нет в v13?			2026-10-10	partially_answered_elsewhere	OPEN_QUESTIONS.md#oq-audit-canon-reference-repair; остаток — #oq-graph-reference-definitions		2026-10-10	partial	oq-audit-canon-reference-repair oq-graph-reference-definitions
+Q-AF-012.2	finding	AF-012	obligation	Q-AF-012	Как привести JSONL и TSV к одному графу зависимостей через workbook round-trip v14?			2026-10-10	answered_elsewhere	OPEN_QUESTIONS.md#oq-graph-dep-sync (2026-10-03: 167 зависимостей совпадают, 0/0)		2026-10-10	answered_elsewhere	oq-graph-dep-sync
+Q-AF-013.2	finding	AF-013	obligation	Q-AF-013	Является ли пара ADD_MIRROR_WINDOW↔ADD_ZERO_BOUNDARY взаимным определением или направленным основанием?			2026-10-10	answered_elsewhere	work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md#вывод-по-трём-циклам; OPEN_QUESTIONS.md#oq-graph-dep-sync		2026-10-10	answered_elsewhere	oq-graph-dep-sync
+Q-AF-013.3	finding	AF-013	obligation	Q-AF-013	Является ли пара M_07↔U7_MATH_LOCAL_FORBID взаимным определением или направленным основанием?			2026-10-10	answered_elsewhere	work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md#вывод-по-трём-циклам; OPEN_QUESTIONS.md#oq-graph-dep-sync	Цикл разобран для пары A_07↔U7_MATH_LOCAL_FORBID; имя M_07 в находке AF-013 историческое.	2026-10-10	answered_elsewhere	oq-graph-dep-sync
+Q-AF-013.4	finding	AF-013	obligation	Q-AF-013	Является ли пара OP_WindowClose↔U7_WINDOW_CORE взаимным определением или направленным основанием?			2026-10-10	answered_elsewhere	work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md#вывод-по-трём-циклам; OPEN_QUESTIONS.md#oq-graph-dep-sync		2026-10-10	answered_elsewhere	oq-graph-dep-sync
+Q-AF-014.2	finding	AF-014	limit	Q-AF-014	Можно ли заново провести D2 с зафиксированным до просмотра кодом, чтобы получить чистую предрегистрацию?			2026-10-10	unanswered				open	
+Q-AF-015.2	finding	AF-015	limit	Q-AF-015	Как отражается в отчёте, что результат synthetic-v1 Д10 зафиксирован раньше кода?			2026-10-10	unanswered				open	
+Q-AF-016.2	finding	AF-016	obligation	Q-AF-016	Какая активная площадка может заменить cylinder-bands без post-hoc изменения предрегистрации?			2026-10-10	unanswered				open	
+Q-AF-017.2	finding	AF-017	obligation	Q-AF-017	Что нужно для авторского workbook round-trip и нового MANIFEST, чтобы объявить пакет каноном v14?			2026-10-10	unanswered				open	
+Q-AF-018.2	finding	AF-018	obligation	Q-AF-018	Какие базы и двойной скрининг нужны для систематического обзора внешнего контакта У1–У5?			2026-10-10	unanswered				open	
+Q-AF-020.2	finding	AF-020	obligation	Q-AF-020	Как синхронизировать workbook v14 с review-копиями и CHECKSUMS?			2026-10-10	unanswered				open	
+Q-DN_20260922_ABSENCE_LIFT.2	claim	DN_20260922_ABSENCE_LIFT	gap	Q-DN_20260922_ABSENCE_LIFT	Что, кроме включения отсутствия в собственный контур, нужно для Lift?			2026-10-10	unanswered				open	
+Q-DN_20260922_GEOMETRY_SELF.2	claim	DN_20260922_GEOMETRY_SELF	obligation	Q-DN_20260922_GEOMETRY_SELF	Какой носитель и какая роль нужны, чтобы линия У6–У12 и тороидальная опора Я перестали быть analogy_only?			2026-10-10	unanswered				open	
+Q-DN_20260922_INTERNAL_CONTOUR.2	claim	DN_20260922_INTERNAL_CONTOUR	obligation	Q-DN_20260922_INTERNAL_CONTOUR	Какую единую метрику можно выбрать для кандидатного внутреннего контура «вопрос, Вера, проекция, мотиватор, свобода инструмента, скорость и фундаментальность»?			2026-10-10	unanswered				open	
+Q-DN_20260922_SENSITIVITY_RESIDUAL.2	claim	DN_20260922_SENSITIVITY_RESIDUAL	limit	Q-DN_20260922_SENSITIVITY_RESIDUAL	Какой типизированный охват нужен внешним формулам sensitivity и residual, чтобы их использовать?			2026-10-10	unanswered				open	
+Q-DR10_QG_WITNESS.2	claim	DR10_QG_WITNESS	limit	Q-DR10_QG_WITNESS	Достаточно ли свидетеля QuestionGain для роли уровня, если достаточность роли не доказана?			2026-10-10	unanswered				open	
+Q-NEURAL_T2_SCAFFOLD.2	claim	NEURAL_T2_SCAFFOLD	test	Q-NEURAL_T2_SCAFFOLD	Какой единый benchmark contract и capacity-matched evidence подтвердят T2 для искусственных архитектур?			2026-10-10	unanswered				open	
+Q-NEURAL_T3_NOT_VERIFIED.2	claim	NEURAL_T3_NOT_VERIFIED	obligation	Q-NEURAL_T3_NOT_VERIFIED	Какой отдельный neuroscience protocol нужен, чтобы проверять биологическую модель T3?			2026-10-10	unanswered				open	
+Q-OQ25_DEFINITION_OPTIONS.2	claim	OQ25_DEFINITION_OPTIONS	gap	Q-OQ25_DEFINITION_OPTIONS	Остаются ли reference gaps Lambda_link, TA1, вещественной χ/π-границы и NODE_SIGNATURES открытыми после кандидатных паспортов?			2026-10-10	unanswered				open	
+Q-OQ25_RELATION_PRODUCT.2	claim	OQ25_RELATION_PRODUCT	test	Q-OQ25_RELATION_PRODUCT	Какой реляционный носитель даёт только ветвь −x², а не обе ±x²?			2026-10-10	unanswered				open	
+Q-OQ25_SECTION_NATURALITY.2	claim	OQ25_SECTION_NATURALITY	bridge	Q-OQ25_SECTION_NATURALITY	Что означает отсутствие эквивариантной секции для кандидата Lift?			2026-10-10	unanswered				open	
+Q-OQ25_U6_PROVENANCE.2	claim	OQ25_U6_PROVENANCE	test	Q-OQ25_U6_PROVENANCE	Нужен ли ресурс сохранения дерева M_06/M_07 по критерию равной цены?			2026-10-10	unanswered				open	
+Q-U4_U7_TYPED_CANDIDATE.2	claim	U4_U7_TYPED_CANDIDATE	limit	Q-U4_U7_TYPED_CANDIDATE	Какие из допущений D1–D6 нужно ослабить, чтобы модель выходила за конечные двухсобытийные трассы?			2026-10-10	unanswered				open	
+Q-U6_Q_NOT_SUFFICIENT_FOR_U7.2	claim	U6_Q_NOT_SUFFICIENT_FOR_U7	test	Q-U6_Q_NOT_SUFFICIENT_FOR_U7	Какой дополнительный признак следа, кроме Q=(Σv_i)², различает следы EE и NN?			2026-10-10	unanswered				open	
+Q-U6_VSTAR_BRIDGE_UNDERDETERMINED.2	claim	U6_VSTAR_BRIDGE_UNDERDETERMINED	obligation	Q-U6_VSTAR_BRIDGE_UNDERDETERMINED	Какой мост к активной У6 выберет автор: квадрат суммы или сумма квадратов?			2026-10-10	unanswered				open	
+Q-WINDOW_ABSOLUTIZATION_AUTHOR.2	claim	WINDOW_ABSOLUTIZATION_AUTHOR	term	Q-WINDOW_ABSOLUTIZATION_AUTHOR	Почему Допущение/Ошибка необходимо для формализации Неизвестного и присутствует на каждом уровне?			2026-10-10	unanswered				open	
+Q-WINDOW_ARITHMETIC_CATALOG.2	claim	WINDOW_ARITHMETIC_CATALOG	limit	Q-WINDOW_ARITHMETIC_CATALOG	Какая часть узора окон 3–25 следует из классической арифметики без участия ФТС?			2026-10-10	unanswered				open	
+Q-WINDOW_ARITHMETIC_LIMITS.2	claim	WINDOW_ARITHMETIC_LIMITS	limit	Q-WINDOW_ARITHMETIC_LIMITS	Какие классы склеивает выбранное чтение при шаге 96 из четырёх генераторов?			2026-10-10	unanswered				open	
+Q-WINDOW_BOUNDARY_22.2	claim	WINDOW_BOUNDARY_22	bridge	Q-WINDOW_BOUNDARY_22	Какую роль в ФТС играют классы {3,5,9,15} и {7,13,17,19} шага 22?			2026-10-10	unanswered				open	
+Q-WINDOW_CIRCLE_CANDIDATE.2	claim	WINDOW_CIRCLE_CANDIDATE	term	Q-WINDOW_CIRCLE_CANDIDATE	Почему квадрат P24→P12 забывает противоположность?			2026-10-10	unanswered				open	
+Q-WINDOW_COUNTERWEIGHT_AUTHOR.2	claim	WINDOW_COUNTERWEIGHT_AUTHOR	term	Q-WINDOW_COUNTERWEIGHT_AUTHOR	Почему отказ У5 формализуется на У7 и действует до У11?			2026-10-10	unanswered				open	
+Q-WINDOW_COUNTERWEIGHT_TRANSFER_CANDIDATE.2	claim	WINDOW_COUNTERWEIGHT_TRANSFER_CANDIDATE	test	Q-WINDOW_COUNTERWEIGHT_TRANSFER_CANDIDATE	Какое свойство модели покажет, что перенос противовеса — механизм, а не совпадение?			2026-10-10	unanswered				open	
+Q-WINDOW_COUNTING_AUTHOR.2	claim	WINDOW_COUNTING_AUTHOR	term	Q-WINDOW_COUNTING_AUTHOR	Почему оба направления перехода увеличивают счёт, а a→a не увеличивает?			2026-10-10	unanswered				open	
+Q-WINDOW_FANO_NESTED.2	claim	WINDOW_FANO_NESTED	limit	Q-WINDOW_FANO_NESTED	Какие явные переименования и смены знаков связывают полную таблицу Фано с O8?			2026-10-10	unanswered				open	
+Q-WINDOW_FANO_SIGN_CYCLE.2	claim	WINDOW_FANO_SIGN_CYCLE	limit	Q-WINDOW_FANO_SIGN_CYCLE	Какую длину истории цикл 1→e_i→−1→−e_i→1 не хранит, если хранит фазу mod 4?			2026-10-10	unanswered				open	
+Q-WINDOW_FIRST_DISTINCTION_AUTHOR.2	claim	WINDOW_FIRST_DISTINCTION_AUTHOR	obligation	Q-WINDOW_FIRST_DISTINCTION_AUTHOR	Как записать направление A=Не_А → полнота в неклассической записи, сохранив роль отождествления?			2026-10-10	unanswered				open	
+Q-WINDOW_JOINT_SCOPE_DIRECTION.2	claim	WINDOW_JOINT_SCOPE_DIRECTION	limit	Q-WINDOW_JOINT_SCOPE_DIRECTION	Что означает «не принятие модели» в согласованном совместном чтении результата, повторения и композиции?			2026-10-10	unanswered				open	
+Q-WINDOW_NESTING_SIERPINSKI.2	claim	WINDOW_NESTING_SIERPINSKI	test	Q-WINDOW_NESTING_SIERPINSKI	Какие условия строгой самоподобной рекурсии M_07⊃M_06⊃… нужно проверить?			2026-10-10	unanswered				open	
+Q-WINDOW_NODE_INNER_NONUNIQUE.2	claim	WINDOW_NODE_INNER_NONUNIQUE	gap	Q-WINDOW_NODE_INNER_NONUNIQUE	Какую модель, H или M₂(R), выбирает узел ФТС и почему внешний CAS не дал результата?			2026-10-10	unanswered				open	
+Q-WINDOW_NUMBER_ALGEBRA_SCOPE.2	claim	WINDOW_NUMBER_ALGEBRA_SCOPE	limit	Q-WINDOW_NUMBER_ALGEBRA_SCOPE	Какие точные условия нужны для порядка, обратимости и деления на расширенном носителе?			2026-10-10	unanswered				open	
+Q-WINDOW_RELATIVE_SIGN_PROBE.2	claim	WINDOW_RELATIVE_SIGN_PROBE	obligation	Q-WINDOW_RELATIVE_SIGN_PROBE	Как сделать относительный знак доступным в операциях ФТС?			2026-10-10	unanswered				open	
+Q-WINDOW_SIGN_INTERFACE_UNDEFINED.2	claim	WINDOW_SIGN_INTERFACE_UNDEFINED	obligation	Q-WINDOW_SIGN_INTERFACE_UNDEFINED	Как определить перевод операций ФТС в знаковое произведение и наблюдение дополнительного знака?			2026-10-10	unanswered				open	
+Q-WINDOW_SIGN_MODELS_INEQUIVALENT.2	claim	WINDOW_SIGN_MODELS_INEQUIVALENT	test	Q-WINDOW_SIGN_MODELS_INEQUIVALENT	Какое наблюдение выберет между моделями, различающимися квадратами (H4/S4) и ассоциативностью (O8/B8)?			2026-10-10	unanswered				open	
+Q-WINDOW_SIGN_SHADOW_INVARIANT.2	claim	WINDOW_SIGN_SHADOW_INVARIANT	test	Q-WINDOW_SIGN_SHADOW_INVARIANT	Какое наблюдение различит знаковые результаты, если метка XOR листьев их не различает?			2026-10-10	unanswered				open	
+Q-WINDOW_WEIERSTRASS_CONTEXT.2	claim	WINDOW_WEIERSTRASS_CONTEXT	test	Q-WINDOW_WEIERSTRASS_CONTEXT	Что нужно доказать, чтобы связать тор ℘ с кандидатом У17?			2026-10-10	unanswered				open	
+Q-PA-C01.2	pattern	PA-C01	obligation	Q-PA-C01	Что нужно для канонизации словаря Д1…Д11?			2026-10-10	unanswered				open	
+Q-PA-C02.2	pattern	PA-C02	obligation	Q-PA-C02	Какие операционные абляции нужны для К1–К5 по чтениям У7…У12?			2026-10-10	unanswered				open	
+Q-PA-C03.2	pattern	PA-C03	test	Q-PA-C03	Какой независимый инстанс «анти-форма→симметрия оператора→инвариант группы» превратит гипотезу в закон?			2026-10-10	unanswered				open	
+Q-PA-C04.2	pattern	PA-C04	test	Q-PA-C04	Какой результат опровергнет правило П и пятичастный паспорт П6?			2026-10-10	unanswered				open	
+Q-PA-C05.2	pattern	PA-C05	test	Q-PA-C05	Подтвердится ли предсказание Select→Agg на паре У13→У14?			2026-10-10	unanswered				open	
+Q-PA-C06.2	pattern	PA-C06	term	Q-PA-C06	Какие виды неоднозначности соответствуют уровням 0/4/8/12 колонки неопределённости?			2026-10-10	unanswered				open	
+Q-PA-C07.2	pattern	PA-C07	bridge	Q-PA-C07	Какой семантический мост связывает коллапс {±1}→{1} с операцией Tot?			2026-10-10	unanswered				open	
+Q-PA-C08.2	pattern	PA-C08	compare	Q-PA-C08	Какие уровневые роли берёт на себя каждый оверлей: статистический, χ и тензорный?			2026-10-10	unanswered				open	
+Q-PA-C09.2	pattern	PA-C09	obligation	Q-PA-C09	Какие явные объекты и законы нужны, чтобы перенести Blackwell, категорный и HoTT-аппарат?			2026-10-10	unanswered				open	
+Q-PA-F02.2	pattern	PA-F02	test	Q-PA-F02	Можно ли восстановить выбор ветви из |x|, если модуль стирает его?			2026-10-10	unanswered				open	
+Q-PA-F11.2	pattern	PA-F11	term	Q-PA-F11	Почему шаблон пар {2,3}, {4,5}, {6,7} ломается на У8?			2026-10-10	unanswered				open	
+Q-PA-G02.2	pattern	PA-G02	gap	Q-PA-G02	Какие четыре определения остаются открытыми в графе окон и проекций?			2026-10-10	unanswered				open	
+Q-PA-G04.2	pattern	PA-G04	compare	Q-PA-G04	Какие повышения статусов отозваны, а какие SP-карточки существуют?			2026-10-10	unanswered				open	
+Q-PA-R04.2	pattern	PA-R04	test	Q-PA-R04	Какой дизайн проверит внутреннюю роль sign/phase, а не внешний выигрыш?			2026-10-10	unanswered				open	
+Q-PA-R05.2	pattern	PA-R05	test	Q-PA-R05	Какой дизайн даст фазовый вердикт без confounds representation, CFO и site?			2026-10-10	unanswered				open	
+Q-PA-R06.2	pattern	PA-R06	compare	Q-PA-R06	Какие ограниченные ядра сохранены из отброшенных отождествлений?			2026-10-10	unanswered				open	
+Q-PA-R07.2	pattern	PA-R07	limit	Q-PA-R07	Какой формулировкой допустимо сообщать об отсутствии найденного аналога?			2026-10-10	unanswered				open	
+Q-U_03.2	card	U_03	term	Q-U_03	Почему У(3) — узел-носитель node-3 и как окно (3,4,5,6,7) начинается с него?			2026-10-10	unanswered				open	
+Q-U_06.2	card	U_06	term	Q-U_06	Что означает носитель threshold-to-7 для У(6)?			2026-10-10	unanswered				open	
+Q-U_07.2	card	U_07	term	Q-U_07	Что означает носитель node-7 для У(7) и как окно (3,4,5,6,7) заканчивается на нём?			2026-10-10	unanswered				open	
+Q-U_10.2	card	U_10	term	Q-U_10	Что означает носитель threshold-to-11 для У(10)?			2026-10-10	unanswered				open	
+Q-U_11.2	card	U_11	term	Q-U_11	Что означает носитель node-11 для У(11)?			2026-10-10	unanswered				open	
+Q-U_14.2	card	U_14	term	Q-U_14	Что означает носитель threshold-to-15 для У(14)?			2026-10-10	unanswered				open	
+Q-U_15.2	card	U_15	term	Q-U_15	Что означает носитель node-15 для У(15) и почему окно открыто (15,16,17,…)?			2026-10-10	unanswered				open	
+Q-A1.2	card	A1	compare	Q-A1	Совпадают ли A1 и A3 как два описания двухканальной оценки v(A)=(t,f)?			2026-10-10	unanswered				open	
+Q-A5.2	card	A5	limit	Q-A5	Почему A5 и A5a — формализации ассистента, не принятые автором?			2026-10-10	unanswered				open	
+Q-OP_Tot.2	card	OP_Tot	compare	Q-OP_Tot	Чем Tot отличается от Tot⁺ и Tot⁻?			2026-10-10	unanswered				open	
+Q-OP_kappa.2	card	OP_kappa	obligation	Q-OP_kappa	Как формализовать κ(S,0_S,Prov,Rev) без смешения с p-value?			2026-10-10	unanswered				open	
+Q-ADD_HALF_PHI.2	card	ADD_HALF_PHI	term	Q-ADD_HALF_PHI	Что такое «кубический избыток» и «факторная ось» в условии границы для φ?			2026-10-10	unanswered				open	
+Q-M_12.2	card	M_12	term	Q-M_12	Почему центр (0,2) и радиус 2, а не другие параметры окружности?			2026-10-10	unanswered	OPEN_QUESTIONS.md#oq-u12-radius-r	Решение автора 2026-10-08: r — свободный параметр класса, r=2 не принят; текст карточки M_12 этого ещё не отражает.	2026-10-10	open	
+Q-SP_U8.2	card	SP_U8	term	Q-SP_U8	Почему sqrt(|x|) — частичная обратная к квадрату на знаковом факторе?			2026-10-10	unanswered				open	
+Q-SP_ZERO.2	card	SP_ZERO	compare	Q-SP_ZERO	Что добавляет SP_ZERO к ADD_ZERO_BOUNDARY, если оба говорят о F=−F⇔F=0?			2026-10-10	unanswered				open	
+Q-SP_WINDOW.2	card	SP_WINDOW	compare	Q-SP_WINDOW	Чем SP_WINDOW отличается от ADD_MIRROR_WINDOW как правило?			2026-10-10	unanswered				open	
+Q-AC_20261003_WINDOW_FAMILIES.2	card	AC_20261003_WINDOW_FAMILIES	limit	Q-AC_20261003_WINDOW_FAMILIES	Почему перечни троек, пятёрок и семёрок конечны и не продолжаются?			2026-10-10	unanswered				open	
+Q-AC_20261003_WINDOW_FIVES_ALIGNMENT.2	card	AC_20261003_WINDOW_FIVES_ALIGNMENT	term	Q-AC_20261003_WINDOW_FIVES_ALIGNMENT	Почему открытое окно (15,16,17,…) карточки U_15 не входит в авторское перечисление?			2026-10-10	unanswered				open	
+Q-A_07.2	card	A_07	bridge	Q-A_07	Каков мост между математической формой МУ7 и логической формой M_07 (ЛУ7), который остаётся открытым?			2026-10-10	unanswered				open	
+Q-U7_MATH_LOCAL_FORBID.2	card	U7_MATH_LOCAL_FORBID	term	Q-U7_MATH_LOCAL_FORBID	Что именно входит во внутреннюю структуру МУ7 при включении противоположности, чего нет в МУ6?			2026-10-10	unanswered				open	
+Q-WINDOW_GROUPING_13.2	card	WINDOW_GROUPING_13	test	Q-WINDOW_GROUPING_13	Какая из моделей T4, C4, H4, S4, N4 объясняет роль У5 для У7 и различает наличие знака и его доступность?			2026-10-10	unanswered				open	
+Q-WINDOW_GROUPING_25.2	card	WINDOW_GROUPING_25	test	Q-WINDOW_GROUPING_25	Объясняет ли вложенность Фано механизм переноса роли У5 на У7 или она лишь согласуется с ним?			2026-10-10	unanswered				open	
+Q-O_08.2	card	O_08	term	Q-O_08	Что такое M_n* и чем оно отличается от M_n?			2026-10-10	unanswered				open	
+Q-OP_Unpack.2	card	OP_Unpack	test	Q-OP_Unpack	Какие скрытые примитивы нужно распаковать, чтобы C(x)=C(Unpack(x)) проверялось?			2026-10-10	unanswered				open	
+Q-OP_Promote.2	card	OP_Promote	term	Q-OP_Promote	Какой признак отличает definability gain от ложного повышения Promote?			2026-10-10	unanswered				open	
+Q-T7A.2	card	T7A	test	Q-T7A	Как измерить увеличение f(A) после наблюдения e?			2026-10-10	unanswered				open	
+Q-T7B.2	card	T7B	test	Q-T7B	Как организовать интервенцию в g(e) или Λ для проверки предсказуемости поведения?			2026-10-10	unanswered				open	
+Q-U12_CHI_PI_COMPLEX_BOUNDARY.2	card	U12_CHI_PI_COMPLEX_BOUNDARY	term	Q-U12_CHI_PI_COMPLEX_BOUNDARY	Что значит «остаток вне R²» и как он уходит в комплексную ветвь?			2026-10-10	unanswered				open	
+Q-TENSOR_CARRIER.2	card	TENSOR_CARRIER	term	Q-TENSOR_CARRIER	Чем тензорный носитель отличается от многомерного массива индексов?			2026-10-10	unanswered				open	
