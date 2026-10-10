@@ -20,11 +20,11 @@
     },
     {
       "path": "source/FTS_v13_LLM_FULL_DUMP.md",
-      "sha256": "62accb4f838f8a3fcf6247ab88b0c2f4c8c01dcbdae54e457683f9f48abd385c"
+      "sha256": "85cdffbdcef8af6457ccf9dfc529ece6da9f8190f2295eda3a78e384ee42754a"
     },
     {
       "path": "source/fts_cards.jsonl",
-      "sha256": "e0e92b5fd921373b452bdb072fecbcf5749c16d9f7541760e5aa9c83744e2a0e"
+      "sha256": "eca8f43b5e09095d211201d47e407bb8dda49b14d2ae22eec271b7db788ef69f"
     },
     {
       "path": "source/fts_triples.tsv",
@@ -32,7 +32,7 @@
     },
     {
       "path": "source/fts_v13_workbook_sheets.json",
-      "sha256": "88c30c0b5986339a154e5ce6d26f88782ef1df2bd0d1aeebb26241d999c59d4e"
+      "sha256": "9ff8e13a2d521e2197ad6e6420128a03cb1fc6a66ba531bf835521248b8381b5"
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
@@ -3877,7 +3877,7 @@
     {
       "id": "card_add_u12_circle",
       "type": "card",
-      "label": "x*x+(y-2)*(y-2)=4 У12: окружность и замкнутая boundary",
+      "label": "x*x+(y-r)*(y-r)=r*r У12: окружность и замкнутая boundary",
       "layer": "canonical_v13",
       "card_id": "ADD_U12_CIRCLE",
       "status": "candidate_requires_formalization",
@@ -3887,7 +3887,7 @@
         "pi",
         "closed_boundary"
       ],
-      "text": "У12 как closed relation: окружность с центром (0,2), радиусом 2, касанием нуля и pi-boundary.",
+      "text": "У12 как closed relation: окружность x²+(y−r)²=r² со свободным радиусом r>0 (решение автора 2026-10-08; r=2 — представитель), касанием нуля и pi-boundary.",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:ADD_U12_CIRCLE"
     },
@@ -4791,7 +4791,7 @@
     {
       "id": "card_m_12",
       "type": "card",
-      "label": "x*x+(y-2)*(y-2)=4 Минимум У(12)",
+      "label": "x*x+(y-r)*(y-r)=r*r Минимум У(12)",
       "layer": "canonical_v13",
       "card_id": "M_12",
       "status": "formal_math_fact / candidate_requires_formalization + canonical_alignment",
@@ -4802,7 +4802,7 @@
         "closed_boundary",
         "status_promoted_v9"
       ],
-      "text": "М-регистр/математический мотив У(12): окружность как closed boundary, центр (0,2), r=2, касание (0,0).",
+      "text": "М-регистр/математический мотив У(12): окружность как closed boundary — класс x²+(y−r)²=r², радиус r>0 — свободный параметр (решение автора 2026-10-08; r=2 — представитель, не выделенное значение); касание (0,0).",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:M_12"
     },
@@ -5529,7 +5529,7 @@
     {
       "id": "card_sp_u12",
       "type": "card",
-      "label": "x*x+(y-2)*(y-2)=4 У12 как closed boundary",
+      "label": "x*x+(y-r)*(y-r)=r*r У12 как closed boundary",
       "layer": "canonical_v13",
       "card_id": "SP_U12",
       "status": "candidate_requires_formalization + canonical_alignment",

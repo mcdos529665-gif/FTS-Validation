@@ -1,8 +1,8 @@
 {
   "source": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-10-08T12:38:19.666234Z",
-  "version": "v13_u7_forbid_lifted_2026-10-08b",
+  "exported_at_utc": "2026-10-10T13:39:30.423124Z",
+  "version": "v13_u12_radius_free_2026-10-10",
   "sheet_count": 54,
   "sheets": [
     {
@@ -1350,7 +1350,7 @@
         ],
         [
           "Версия",
-          "v13_u7_forbid_lifted_2026-10-08b",
+          "v13_u12_radius_free_2026-10-10",
           "Active export; historical workbook remains a provenance input.",
           "38_Changelog"
         ],
@@ -4414,8 +4414,8 @@
           "M_12",
           "minimal_expression",
           "Минимум У(12)",
-          "x*x+(y-2)*(y-2)=4",
-          "М-регистр/математический мотив У(12): окружность как closed boundary, центр (0,2), r=2, касание (0,0).",
+          "x*x+(y-r)*(y-r)=r*r",
+          "М-регистр/математический мотив У(12): окружность как closed boundary — класс x²+(y−r)²=r², радиус r>0 — свободный параметр (решение автора 2026-10-08; r=2 — представитель, не выделенное значение); касание (0,0).",
           "formal_math_fact / candidate_requires_formalization + canonical_alignment",
           "12",
           "M-register",
@@ -5614,8 +5614,8 @@
           "ADD_U12_CIRCLE",
           "level_candidate",
           "У12: окружность и замкнутая boundary",
-          "x*x+(y-2)*(y-2)=4",
-          "У12 как closed relation: окружность с центром (0,2), радиусом 2, касанием нуля и pi-boundary.",
+          "x*x+(y-r)*(y-r)=r*r",
+          "У12 как closed relation: окружность x²+(y−r)²=r² со свободным радиусом r>0 (решение автора 2026-10-08; r=2 — представитель), касанием нуля и pi-boundary.",
           "candidate_requires_formalization",
           "U12",
           "math_analogy",
@@ -5704,7 +5704,7 @@
           "SP_U12",
           "status_promotion",
           "У12 как closed boundary",
-          "x*x+(y-2)*(y-2)=4",
+          "x*x+(y-r)*(y-r)=r*r",
           "У12 получает formal_math_fact по геометрии и canonical_alignment как closed boundary candidate.",
           "candidate_requires_formalization + canonical_alignment",
           "12",
@@ -13795,7 +13795,7 @@
         ],
         [
           41,
-          "{\"id\": \"M_12\", \"type\": \"minimal_expression\", \"text\": \"М-регистр/математический мотив У(12): окружность как closed boundary, центр (0,2), r=2, касание (0,0).\", \"depends_on\": [], \"tags\": [\"minimal\", \"U12\", \"formal_math_fact\", \"closed_boundary\", \"status_promoted_v9\"], \"path\": \"17_Карточки/M_12\", \"status\": \"formal_math_fact / candidate_requires_formalization + canonical_alignment\", \"internal_ref\": \"CANON_V43 + user_current\", \"symbol\": \"x*x+(y-2)*(y-2)=4\", \"title\": \"Минимум У(12)\"}"
+          "{\"id\": \"M_12\", \"type\": \"minimal_expression\", \"text\": \"М-регистр/математический мотив У(12): окружность как closed boundary — класс x²+(y−r)²=r², радиус r>0 — свободный параметр (решение автора 2026-10-08; r=2 — представитель, не выделенное значение); касание (0,0).\", \"depends_on\": [], \"tags\": [\"minimal\", \"U12\", \"formal_math_fact\", \"closed_boundary\", \"status_promoted_v9\"], \"path\": \"17_Карточки/M_12\", \"status\": \"formal_math_fact / candidate_requires_formalization + canonical_alignment\", \"internal_ref\": \"CANON_V43 + user_current\", \"symbol\": \"x*x+(y-r)*(y-r)=r*r\", \"title\": \"Минимум У(12)\"}"
         ],
         [
           42,
@@ -14115,7 +14115,7 @@
         ],
         [
           121,
-          "{\"id\": \"ADD_U12_CIRCLE\", \"type\": \"level_candidate\", \"text\": \"У12 как closed relation: окружность с центром (0,2), радиусом 2, касанием нуля и pi-boundary.\", \"depends_on\": [\"ADD_U11_EPI\", \"ADD_ZERO_BOUNDARY\"], \"tags\": [\"U12\", \"circle\", \"pi\", \"closed_boundary\"], \"path\": \"43_Добавка_v3/ADD_U12_CIRCLE\", \"status\": \"candidate_requires_formalization\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"x*x+(y-2)*(y-2)=4\", \"title\": \"У12: окружность и замкнутая boundary\"}"
+          "{\"id\": \"ADD_U12_CIRCLE\", \"type\": \"level_candidate\", \"text\": \"У12 как closed relation: окружность x²+(y−r)²=r² со свободным радиусом r>0 (решение автора 2026-10-08; r=2 — представитель), касанием нуля и pi-boundary.\", \"depends_on\": [\"ADD_U11_EPI\", \"ADD_ZERO_BOUNDARY\"], \"tags\": [\"U12\", \"circle\", \"pi\", \"closed_boundary\"], \"path\": \"43_Добавка_v3/ADD_U12_CIRCLE\", \"status\": \"candidate_requires_formalization\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"x*x+(y-r)*(y-r)=r*r\", \"title\": \"У12: окружность и замкнутая boundary\"}"
         ],
         [
           122,
@@ -14139,7 +14139,7 @@
         ],
         [
           127,
-          "{\"id\": \"SP_U12\", \"type\": \"status_promotion\", \"text\": \"У12 получает formal_math_fact по геометрии и canonical_alignment как closed boundary candidate.\", \"depends_on\": [\"U_12\", \"ADD_U12_CIRCLE\"], \"tags\": [\"status\", \"U12\", \"closed_boundary\"], \"path\": \"45_Статус_гипотез_v9/SP_U12\", \"status\": \"candidate_requires_formalization + canonical_alignment\", \"internal_ref\": \"RESEARCH_STATUS_V9\", \"symbol\": \"x*x+(y-2)*(y-2)=4\", \"title\": \"У12 как closed boundary\"}"
+          "{\"id\": \"SP_U12\", \"type\": \"status_promotion\", \"text\": \"У12 получает formal_math_fact по геометрии и canonical_alignment как closed boundary candidate.\", \"depends_on\": [\"U_12\", \"ADD_U12_CIRCLE\"], \"tags\": [\"status\", \"U12\", \"closed_boundary\"], \"path\": \"45_Статус_гипотез_v9/SP_U12\", \"status\": \"candidate_requires_formalization + canonical_alignment\", \"internal_ref\": \"RESEARCH_STATUS_V9\", \"symbol\": \"x*x+(y-r)*(y-r)=r*r\", \"title\": \"У12 как closed boundary\"}"
         ],
         [
           128,
@@ -15885,7 +15885,7 @@
         ],
         [
           1,
-          "version: v13_u7_forbid_lifted_2026-10-08b"
+          "version: v13_u12_radius_free_2026-10-10"
         ],
         [
           2,
@@ -16201,7 +16201,7 @@
         ],
         [
           80,
-          "  - {\"id\": \"M_12\", \"type\": \"minimal_expression\", \"text\": \"М-регистр/математический мотив У(12): окружность как closed boundary, центр (0,2), r=2, касание (0,0).\", \"depends_on\": [], \"tags\": [\"minimal\", \"U12\", \"formal_math_fact\", \"closed_boundary\", \"status_promoted_v9\"], \"path\": \"17_Карточки/M_12\", \"status\": \"formal_math_fact / candidate_requires_formalization + canonical_alignment\", \"internal_ref\": \"CANON_V43 + user_current\", \"symbol\": \"x*x+(y-2)*(y-2)=4\", \"title\": \"Минимум У(12)\"}"
+          "  - {\"id\": \"M_12\", \"type\": \"minimal_expression\", \"text\": \"М-регистр/математический мотив У(12): окружность как closed boundary — класс x²+(y−r)²=r², радиус r>0 — свободный параметр (решение автора 2026-10-08; r=2 — представитель, не выделенное значение); касание (0,0).\", \"depends_on\": [], \"tags\": [\"minimal\", \"U12\", \"formal_math_fact\", \"closed_boundary\", \"status_promoted_v9\"], \"path\": \"17_Карточки/M_12\", \"status\": \"formal_math_fact / candidate_requires_formalization + canonical_alignment\", \"internal_ref\": \"CANON_V43 + user_current\", \"symbol\": \"x*x+(y-r)*(y-r)=r*r\", \"title\": \"Минимум У(12)\"}"
         ],
         [
           81,
@@ -16521,7 +16521,7 @@
         ],
         [
           160,
-          "  - {\"id\": \"ADD_U12_CIRCLE\", \"type\": \"level_candidate\", \"text\": \"У12 как closed relation: окружность с центром (0,2), радиусом 2, касанием нуля и pi-boundary.\", \"depends_on\": [\"ADD_U11_EPI\", \"ADD_ZERO_BOUNDARY\"], \"tags\": [\"U12\", \"circle\", \"pi\", \"closed_boundary\"], \"path\": \"43_Добавка_v3/ADD_U12_CIRCLE\", \"status\": \"candidate_requires_formalization\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"x*x+(y-2)*(y-2)=4\", \"title\": \"У12: окружность и замкнутая boundary\"}"
+          "  - {\"id\": \"ADD_U12_CIRCLE\", \"type\": \"level_candidate\", \"text\": \"У12 как closed relation: окружность x²+(y−r)²=r² со свободным радиусом r>0 (решение автора 2026-10-08; r=2 — представитель), касанием нуля и pi-boundary.\", \"depends_on\": [\"ADD_U11_EPI\", \"ADD_ZERO_BOUNDARY\"], \"tags\": [\"U12\", \"circle\", \"pi\", \"closed_boundary\"], \"path\": \"43_Добавка_v3/ADD_U12_CIRCLE\", \"status\": \"candidate_requires_formalization\", \"internal_ref\": \"ADDENDUM_V3\", \"symbol\": \"x*x+(y-r)*(y-r)=r*r\", \"title\": \"У12: окружность и замкнутая boundary\"}"
         ],
         [
           161,
@@ -16545,7 +16545,7 @@
         ],
         [
           166,
-          "  - {\"id\": \"SP_U12\", \"type\": \"status_promotion\", \"text\": \"У12 получает formal_math_fact по геометрии и canonical_alignment как closed boundary candidate.\", \"depends_on\": [\"U_12\", \"ADD_U12_CIRCLE\"], \"tags\": [\"status\", \"U12\", \"closed_boundary\"], \"path\": \"45_Статус_гипотез_v9/SP_U12\", \"status\": \"candidate_requires_formalization + canonical_alignment\", \"internal_ref\": \"RESEARCH_STATUS_V9\", \"symbol\": \"x*x+(y-2)*(y-2)=4\", \"title\": \"У12 как closed boundary\"}"
+          "  - {\"id\": \"SP_U12\", \"type\": \"status_promotion\", \"text\": \"У12 получает formal_math_fact по геометрии и canonical_alignment как closed boundary candidate.\", \"depends_on\": [\"U_12\", \"ADD_U12_CIRCLE\"], \"tags\": [\"status\", \"U12\", \"closed_boundary\"], \"path\": \"45_Статус_гипотез_v9/SP_U12\", \"status\": \"candidate_requires_formalization + canonical_alignment\", \"internal_ref\": \"RESEARCH_STATUS_V9\", \"symbol\": \"x*x+(y-r)*(y-r)=r*r\", \"title\": \"У12 как closed boundary\"}"
         ],
         [
           167,
@@ -17501,8 +17501,8 @@
     {
       "name": "38_Changelog",
       "index": 38,
-      "range": "A1:F22",
-      "rows": 22,
+      "range": "A1:F23",
+      "rows": 23,
       "cols": 6,
       "values": [
         [
@@ -17678,6 +17678,14 @@
           "2026-10-08",
           "integrated_author_amendment_and_register_repair",
           "МУ7 = |y|=x*x: с 7 противоположность входит в структуру (уточнение автора)",
+          "17/18/34/35/36 and active renderings",
+          "active"
+        ],
+        [
+          "v13_u12_radius_free_2026-10-10",
+          "2026-10-10",
+          "integrated_author_amendment_and_register_repair",
+          "Author decision 2026-10-08: U12 circle radius r is a free class parameter; M_12, ADD_U12_CIRCLE, SP_U12 updated (r=2 only a representative)",
           "17/18/34/35/36 and active renderings",
           "active"
         ]

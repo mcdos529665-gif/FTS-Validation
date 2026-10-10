@@ -678,7 +678,7 @@
   {
     "id": "M_12",
     "type": "minimal_expression",
-    "text": "М-регистр/математический мотив У(12): окружность как closed boundary, центр (0,2), r=2, касание (0,0).",
+    "text": "М-регистр/математический мотив У(12): окружность как closed boundary — класс x²+(y−r)²=r², радиус r>0 — свободный параметр (решение автора 2026-10-08; r=2 — представитель, не выделенное значение); касание (0,0).",
     "depends_on": [],
     "tags": [
       "minimal",
@@ -690,7 +690,7 @@
     "path": "17_Карточки/M_12",
     "status": "formal_math_fact / candidate_requires_formalization + canonical_alignment",
     "internal_ref": "CANON_V43 + user_current",
-    "symbol": "x*x+(y-2)*(y-2)=4",
+    "symbol": "x*x+(y-r)*(y-r)=r*r",
     "title": "Минимум У(12)"
   },
   {
@@ -2041,7 +2041,7 @@
   {
     "id": "ADD_U12_CIRCLE",
     "type": "level_candidate",
-    "text": "У12 как closed relation: окружность с центром (0,2), радиусом 2, касанием нуля и pi-boundary.",
+    "text": "У12 как closed relation: окружность x²+(y−r)²=r² со свободным радиусом r>0 (решение автора 2026-10-08; r=2 — представитель), касанием нуля и pi-boundary.",
     "depends_on": [
       "ADD_U11_EPI",
       "ADD_ZERO_BOUNDARY"
@@ -2055,7 +2055,7 @@
     "path": "43_Добавка_v3/ADD_U12_CIRCLE",
     "status": "candidate_requires_formalization",
     "internal_ref": "ADDENDUM_V3",
-    "symbol": "x*x+(y-2)*(y-2)=4",
+    "symbol": "x*x+(y-r)*(y-r)=r*r",
     "title": "У12: окружность и замкнутая boundary"
   },
   {
@@ -2168,7 +2168,7 @@
     "path": "45_Статус_гипотез_v9/SP_U12",
     "status": "candidate_requires_formalization + canonical_alignment",
     "internal_ref": "RESEARCH_STATUS_V9",
-    "symbol": "x*x+(y-2)*(y-2)=4",
+    "symbol": "x*x+(y-r)*(y-r)=r*r",
     "title": "У12 как closed boundary"
   },
   {

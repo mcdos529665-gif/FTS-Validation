@@ -1,28 +1,28 @@
 {
-  "package": "v13_u7_forbid_lifted_2026-10-08b",
+  "package": "v13_u12_radius_free_2026-10-10",
   "release_kind": "integrated_author_amendment_and_register_repair",
-  "base_release": "v13_u7_forbid_lifted_2026-10-08",
+  "base_release": "v13_u7_forbid_lifted_2026-10-08b",
   "base_manifest_path": "work/canon_history/v13_complex_branch_overlay_2026-06-11/MANIFEST.json",
-  "canonical_update_date": "2026-10-08",
-  "canonical_update": "МУ7 = |y|=x*x: с 7 противоположность входит в структуру (уточнение автора)",
+  "canonical_update_date": "2026-10-10",
+  "canonical_update": "Author decision 2026-10-08: U12 circle radius r is a free class parameter; M_12, ADD_U12_CIRCLE, SP_U12 updated (r=2 only a representative)",
   "source_workbook": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-10-08T12:38:19.666234Z",
+  "exported_at_utc": "2026-10-10T13:39:30.423124Z",
   "files": [
     {
       "path": "FTS.yaml",
-      "size": 113919,
-      "sha256": "9975ce5dd73c91d10daa8c26c599d06078bda0f96be0bcdf94c3baa230abbcad"
+      "size": 114208,
+      "sha256": "8ab2d4e16393b0745095ccc3d38402a061b9296434cf0023bb5e2bbc492fa014"
     },
     {
       "path": "FTS_v13_LLM_CONTEXT.md",
-      "size": 70537,
-      "sha256": "3aa3535ef572ad4cca29159ad0715c6001853fb32437b6070309546292ff5e7f"
+      "size": 70549,
+      "sha256": "36b77a64635419bfb0c2ab78ea11e31503526d7fcc9b2411df87f59cfe85b4ff"
     },
     {
       "path": "FTS_v13_LLM_FULL_DUMP.md",
-      "size": 890770,
-      "sha256": "62accb4f838f8a3fcf6247ab88b0c2f4c8c01dcbdae54e457683f9f48abd385c"
+      "size": 891939,
+      "sha256": "85cdffbdcef8af6457ccf9dfc529ece6da9f8190f2295eda3a78e384ee42754a"
     },
     {
       "path": "INSTALL.md",
@@ -36,23 +36,23 @@
     },
     {
       "path": "START_HERE.md",
-      "size": 1795,
-      "sha256": "714b7910494b6cfb1dc90855c3544c4c9831bd1cfddfbf34add13ca3e66a5fdc"
+      "size": 1807,
+      "sha256": "3c7c3b2199488543af9afeb9c1eb07c1175175814aa80a368191d69e18593220"
     },
     {
       "path": "fts_cards.json",
-      "size": 124014,
-      "sha256": "1c4c16f4cd0830306b40aa4eb996c709e33b3fd6aa5ccab353c95cbc65a24e4d"
+      "size": 124305,
+      "sha256": "07d48719970b3174ab78caddc1d4e04f3374057fc53654781cc29af7bb6184cd"
     },
     {
       "path": "fts_cards.jsonl",
-      "size": 106309,
-      "sha256": "e0e92b5fd921373b452bdb072fecbcf5749c16d9f7541760e5aa9c83744e2a0e"
+      "size": 106600,
+      "sha256": "eca8f43b5e09095d211201d47e407bb8dda49b14d2ae22eec271b7db788ef69f"
     },
     {
       "path": "fts_cards_table.tsv",
-      "size": 90283,
-      "sha256": "51d2136cfe19c62ea4fc4c648e654af05ad2b3ab71c6873ed524e1c1b6a0d650"
+      "size": 90574,
+      "sha256": "fcbdaf9f6e2f18c1b406353deae4f41beb849488b99886776bb4b26b422bb118"
     },
     {
       "path": "fts_graph_full.tsv",
@@ -66,13 +66,13 @@
     },
     {
       "path": "fts_v13_workbook_sheets.json",
-      "size": 1124164,
-      "sha256": "88c30c0b5986339a154e5ce6d26f88782ef1df2bd0d1aeebb26241d999c59d4e"
+      "size": 1125403,
+      "sha256": "9ff8e13a2d521e2197ad6e6420128a03cb1fc6a66ba531bf835521248b8381b5"
     },
     {
       "path": "sheet_index.tsv",
       "size": 1865,
-      "sha256": "df898fd3bdce1352e93c543d0eca4dc55eb330bb29ce7bbc38b5fe43e8f210d6"
+      "sha256": "fdd0356c321122248ef42f80920ad1122ade2935d6e4cb43c9a77543f8c74803"
     }
   ],
   "counts": {
@@ -81,10 +81,10 @@
     "yaml_lines": 339,
     "sheets": 54
   },
-  "base_manifest_sha256": "0f97002f1e3b4c6703fa3b2c25728a9166c62cb1c76b7b47e590db9e5fd0a167",
-  "base_git_commit": "f31d9c1c5fec3e41be62c7c9ba95dee02d7db46f",
+  "base_manifest_sha256": "f6b88c92166a8101eec094720b7b31f3b0ef4e5296adaab87e87c1d234f79d6e",
+  "base_git_commit": "b40c18e3d10eff1df81e5091dbd138b502e34b51",
   "source_workbook_status": "historical_input_not_reissued",
-  "active_cards_sha256": "e0e92b5fd921373b452bdb072fecbcf5749c16d9f7541760e5aa9c83744e2a0e",
+  "active_cards_sha256": "eca8f43b5e09095d211201d47e407bb8dda49b14d2ae22eec271b7db788ef69f",
   "active_triples_sha256": "35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a",
   "merged_parent_commits": [
     "e521e2006cacbd6b91b34377e26bc49bf02bcce6",
