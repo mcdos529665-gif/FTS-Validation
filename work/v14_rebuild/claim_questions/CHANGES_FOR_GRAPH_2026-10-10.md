@@ -79,7 +79,7 @@
 - Почти-дубли: 81 пара в `DUPLICATE_CANDIDATES.tsv` — рёбра `similar_to` добавлять только после чтения.
 
 ## 7. Группы (`QUESTION_GROUPS.md/.tsv`)
-640 строк: 536 карточек + 103 пункта `OPEN_QUESTIONS.md` + 1 пункт журнала. Для `open_question` добавить
+641 строка: 536 карточек + 103 пункта `OPEN_QUESTIONS.md` + 2 пункта журнала. Для `open_question` добавить
 свойства `question_group` (назначена вручную, `inputs/oq_groups.tsv`) и рёбра `in_group`.
 
 ## 8. Проверки после внесения

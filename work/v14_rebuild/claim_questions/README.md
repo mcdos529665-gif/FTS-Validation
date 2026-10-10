@@ -10,7 +10,7 @@
 | `QUESTION_CARDS.jsonl` | **Единый файл карточек**, 536 записей: `layer: assertion` (402 вопроса к 285 утверждениям) и `layer: object` (134 вопроса к 29 объектам). |
 | `OBJECT_QUESTION_CARDS.jsonl` | Производный вид: только `layer: object`. |
 | `OBJECTS.md` | Реестр объектов (формулы МУ2–МУ15, операторы Δ, κ, Close, Refuse, Sever, π/ι, Lift, 0_A по уровням, термины) и их вопросы. |
-| `QUESTION_GROUPS.md`, `QUESTION_GROUPS.tsv` | Группы всех вопросов проекта: 640 вопросов (карточки обоих слоёв, 103 пункта `OPEN_QUESTIONS.md`, 1 пункт журнала). Построчно — в TSV, с извлечёнными ссылками. |
+| `QUESTION_GROUPS.md`, `QUESTION_GROUPS.tsv` | Группы всех вопросов проекта: 641 вопрос (карточки обоих слоёв, 103 пункта `OPEN_QUESTIONS.md`, 2 пункта журнала). Построчно — в TSV, с извлечёнными ссылками. |
 | `QUESTION_CROSSREF.tsv` | Ручные связи вопросов с пунктами `OPEN_QUESTIONS.md`: 117 строк (`same`, `instance`, `related`, `answered_by_closed`, `premise_outdated`). |
 | `DUPLICATE_CANDIDATES.tsv` | Почти-дубли для ручного решения (81 пара). Автоматически не исправляются. |
 | `inputs/` | Входы, которые правит человек или ассистент (см. ниже). |

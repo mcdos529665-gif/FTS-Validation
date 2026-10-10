@@ -11,7 +11,7 @@
 Дисциплина доверия:
 
 * буквальная связь из атласа / таблицы -> ``EXTRACTED``;
-* ``indirect`` и непрямой кусок ``mixed`` -> ``INFERRED`` (0.50);
+* ``indirect`` и непрямой кусок ``mixed`` -> ``INFERRED`` (0.55);
 * ``support`` -> ``EXTRACTED`` как служебная навигация, не теоретический вывод.
 
 Использование (из корня репозитория):
@@ -194,7 +194,7 @@ def edge(
     score: float | None = None,
 ) -> dict[str, object]:
     if score is None:
-        score = {"EXTRACTED": 1.0, "INFERRED": 0.5, "AMBIGUOUS": 0.2}[confidence]
+        score = {"EXTRACTED": 1.0, "INFERRED": 0.55, "AMBIGUOUS": 0.2}[confidence]
     return {
         "source": source,
         "target": target,
@@ -717,7 +717,7 @@ def write_overlay_report(summary: dict[str, object], community: int, graph: dict
 ## Доверие к мостам
 
 - {summary['bridge_direct']} прямых мостов — `EXTRACTED`;
-- {summary['bridge_indirect']} кураторских мостов — `INFERRED` с confidence 0.50;
+- {summary['bridge_indirect']} кураторских мостов — `INFERRED` с confidence 0.55;
 - {summary['bridge_support']} служебных мостов — `EXTRACTED`, но без теоретической статусной силы.
 
 `direct` восстанавливается буквально из `PATTERN_ATLAS.tsv`; `indirect` и

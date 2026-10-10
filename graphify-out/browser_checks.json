@@ -1,0 +1,16 @@
+{
+  "checks": "PASS",
+  "html_opened": true,
+  "search_and_node_info": true,
+  "journal_status": "DN-0034 pending visible",
+  "source_href": "../work/v14_rebuild/claim_graph/claim_graph.html",
+  "source_opened": true,
+  "source_graph_counts": {
+    "nodes": 924,
+    "directed_edges": 2250
+  },
+  "all_html_nodes": 16893,
+  "all_html_edges": 30914,
+  "layout": "fixed positions by the same communities; physics disabled",
+  "screenshot": "E:\\Codex\\work\\fts_graphify_rebuild_20261009_a\\finish_20261010\\published_graph.png"
+}

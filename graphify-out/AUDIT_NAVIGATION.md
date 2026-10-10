@@ -14,7 +14,7 @@
 ## Доверие к мостам
 
 - 29 прямых мостов — `EXTRACTED`;
-- 112 кураторских мостов — `INFERRED` с confidence 0.50;
+- 112 кураторских мостов — `INFERRED` с confidence 0.55;
 - 39 служебных мостов — `EXTRACTED`, но без теоретической статусной силы.
 
 `direct` восстанавливается буквально из `PATTERN_ATLAS.tsv`; `indirect` и
@@ -29,4 +29,4 @@
 - [Findings](../work/v14_rebuild/audit/FINDINGS.tsv)
 - [Review Conclusion](../work/v14_rebuild/audit/REVIEW_CONCLUSION.md)
 
-Состояние графа: 9869 узлов, 14878 рёбер, community `1584`.
+Состояние графа: 16893 узлов, 30914 рёбер, community `13`.

@@ -1,0 +1,8 @@
+{
+  "raw_directed_edges": 35110,
+  "parallel_pair_groups": 2231,
+  "parallel_surplus": 4111,
+  "raw_hyperedges": 244,
+  "unresolved_hyperedges": 0,
+  "external_AST_symbols": 62
+}

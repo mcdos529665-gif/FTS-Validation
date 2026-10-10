@@ -1,0 +1,52 @@
+{
+  "question_counts": {
+    "assertion": 402,
+    "object": 134
+  },
+  "question_groups": 14,
+  "question_objects": 29,
+  "authoritative_claim_nodes": 924,
+  "authoritative_claim_edges": 2250,
+  "coverage": {
+    "covered": 346,
+    "open": 150,
+    "partial": 32,
+    "answered_elsewhere": 5,
+    "external": 3
+  },
+  "unresolved_term_references": [
+    {
+      "kind": "criteria",
+      "reference": "К1",
+      "state": "referenced_term_only"
+    },
+    {
+      "kind": "criteria",
+      "reference": "К5",
+      "state": "referenced_term_only"
+    },
+    {
+      "kind": "files",
+      "reference": "RESULTS.md",
+      "state": "referenced_term_only"
+    },
+    {
+      "kind": "dict",
+      "reference": "Д10",
+      "state": "referenced_term_only"
+    },
+    {
+      "kind": "dict",
+      "reference": "Д1",
+      "state": "referenced_term_only"
+    },
+    {
+      "kind": "dict",
+      "reference": "Д11",
+      "state": "referenced_term_only"
+    }
+  ],
+  "nodes": 1306,
+  "edges": 4761,
+  "duplicate_candidates_policy": "81 candidate pairs retained in source; no similar_to edges inferred automatically"
+}

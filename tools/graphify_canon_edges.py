@@ -120,9 +120,13 @@ def build_fragment(cards, triples):
     resolve = make_resolver(ids)
 
     nodes = [{
+        **{key: value for key, value in c.items() if key != "id"},
         "id": nid(cid),
-        "label": (c.get("symbol", "") + " " + c.get("title", "")).strip() or cid,
+        "card_id": cid,
+        "label": cid + " · " + ((c.get("symbol", "") + " " + c.get("title", "")).strip() or cid),
         "file_type": "concept",
+        "_origin": "canonical_cards",
+        "status_effect": "stored_only; no automatic promotion",
         "source_file": "source/fts_cards.jsonl",
         "source_location": c.get("path"),
         "source_url": None, "captured_at": None, "author": None, "contributor": None,
@@ -308,7 +312,15 @@ def main():
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump({"nodes": nodes, "edges": edges, "hyperedges": []}, f, ensure_ascii=False, indent=2)
-    print(f"\nfragment -> {os.path.relpath(out_path, ROOT)}")
+    # os.path.relpath raises ValueError when the project root and output are
+    # on different Windows drives (for example, C:\\ and E:\\ staging).
+    # Keep the concise relative path on one drive and report the absolute
+    # destination otherwise; the fragment has already been written either way.
+    try:
+        display_path = os.path.relpath(out_path, ROOT)
+    except ValueError:
+        display_path = os.path.abspath(out_path)
+    print(f"\nfragment -> {display_path}")
 
 
 if __name__ == "__main__":

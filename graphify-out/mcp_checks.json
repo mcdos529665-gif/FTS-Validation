@@ -1,0 +1,128 @@
+{
+  "checks": "PASS",
+  "project_root": "C:\\Users\\Mcdos\\Desktop\\FTS_v13_project",
+  "nodes": 16893,
+  "links": 30914,
+  "evidence": [
+    {
+      "label": "source_fts_cards_op_tot",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Node: OP_Tot · Tot(0_A)=event(0_A)=¬A Tot\n  ID: source_fts_cards_op_tot\n  Source: source/fts_cards.jsonl 25_Операторы/OP_Tot\n  Type: concept\n  Community: Вопросы и объекты · G01 · Грамматика лестницы: операторы, отсутствия, принципы\n  Degree: 13"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "label": "source_fts_cards_a_07",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Node: A_07 · |y|=x*x  (y=-x*x; y=x*x) Математический регистр У7\n  ID: source_fts_cards_a_07\n  Source: source/fts_cards.jsonl 17_Карточки/A_07\n  Type: concept\n  Community: Канон ФТС · У(7)\n  Degree: 12"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "label": "source_fts_cards_m_07",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Node: M_07 · (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b))) Минимум У(7)\n  ID: source_fts_cards_m_07\n  Source: source/fts_cards.jsonl 17_Карточки/M_07\n  Type: concept\n  Community: Канон ФТС · M_07 · (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b))) Минимум У(7)\n  Degree: 27"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "label": "source_fts_cards_m_12",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Node: M_12 · x*x+(y-r)*(y-r)=r*r Минимум У(12)\n  ID: source_fts_cards_m_12\n  Source: source/fts_cards.jsonl 17_Карточки/M_12\n  Type: concept\n  Community: Канон ФТС · У(7)\n  Degree: 8"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "label": "dialogue_dn_0034",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Node: DN-0034 · Лестница как последовательность элементарных операций симметрии\n  ID: dialogue_dn_0034\n  Source: work/DIALOGUE_NUANCE_JOURNAL.md L36\n  Type: concept\n  Community: Канон ФТС · M_07 · (((a=b) ∧ (a≠b)) ∧ ((a=b) ∨ (a≠b))) ∨ (((a=b) ∧ (a≠b)) ∨ ((a=b) ∨ (a≠b))) Минимум У(7)\n  Degree: 8"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "label": "fts_question_qo_x2_17",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Node: QO-X2.17 · [внешнее] Какова производная x² и что она значит для У6: касание параболы оси в нуле?\n  ID: fts_question_qo_x2_17\n  Source: work/v14_rebuild/claim_questions/QUESTION_CARDS.jsonl L419\n  Type: concept\n  Community: Аудит и основания · [Опровергнуто как смешение St_math/St_FTS] · CM-017 — U_07…U_12 прошли К1–К5 и могут быть canonical_v14\n  Degree: 4"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "label": "work_v14_rebuild_addendum_2026_10_08_rotation_projection_absolute_value_cross",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Node: Крест |y|=|x|\n  ID: work_v14_rebuild_addendum_2026_10_08_rotation_projection_absolute_value_cross\n  Source: work/v14_rebuild/addendum_2026-10-08_rotation_projection.md None\n  Type: concept\n  Community: Понятия ФТС · addendum_2026-10-08_rotation_projection.md\n  Degree: 2"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "label": "c_users_mcdos_desktop_fts_v13_project_work_v14_rebuild_verification_c105_py",
+      "result": {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Node: verification_c105.py\n  ID: c_users_mcdos_desktop_fts_v13_project_work_v14_rebuild_verification_c105_py\n  Source: work/v14_rebuild/verification_c105.py L1\n  Type: code\n  Community: Литература и внешние основания · check_blackwell_bridge.py\n  Degree: 4"
+            }
+          ],
+          "isError": false
+        }
+      }
+    }
+  ]
+}

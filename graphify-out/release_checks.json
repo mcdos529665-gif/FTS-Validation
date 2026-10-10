@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "nodes": 16893,
+    "links": 30914,
+    "hyperedges": 244,
+    "communities": 1201
+  },
+  "canonical_fields": "all exact",
+  "idempotency": "two passes preserve node/edge sets",
+  "input_sha256": "all current",
+  "base_fragments": 793,
+  "deep_replaced": 45,
+  "unresolved_hyperedges": 0,
+  "checks": "PASS"
+}
