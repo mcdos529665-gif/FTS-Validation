@@ -1,0 +1,93 @@
+question_id	open_question	relation	note
+Q-U6_Q_NOT_SUFFICIENT_FOR_U7	oq-u6-u7-compositional-semantics	same	Оба спрашивают, чем исход У7 богаче сводки У6; карточка даёт конечный контрпример.
+Q-U4_U7_TYPED_CANDIDATE	oq-u6-u7-compositional-semantics	instance	Типизированная конечная модель — кандидат исполнимой семантики У6/У7.
+Q-A_07.2	oq-u6-u7-compositional-semantics	same	Мост между МУ7 и ЛУ7 открыт; это и есть формализация композиции.
+Q-U6_VSTAR_BRIDGE_UNDERDETERMINED.2	oq-u6-u7-choice-products	answered_by_closed	Решено автором 2026-10-08; AC-2026-09-21 заменил V*V М-формой, выбор между квадратом суммы и суммой квадратов, вероятно, снят. Проверить.
+Q-PA-C03	oq-node11-asymmetry	same	Эскалация симметрии узлов 3/7/11/15.
+Q-PA-C03.2	oq-node11-asymmetry	same	Третий инстанс цепочки «анти-форма→оператор→группа».
+Q-A0b	oq-node11-asymmetry	instance	A0b подтверждает смену носителя, общего оператора нет.
+Q-CM-024	oq-node11-asymmetry	same	Единый закон пентад и эскалации не доказан.
+Q-CM-022	oq-d10-phase-test	same	Выигрыш фаза-осознанной модели (Д10).
+Q-PA-R05	oq-d10-phase-test	same	Фазовый вердикт без confounds.
+Q-PA-R05.2	oq-d10-phase-test	same	Дизайн теста фазы.
+Q-AF-007.2	oq-d10-phase-test	same	Площадка с независимо рандомизированной фазой.
+Q-CM-021	oq-d2-sign-retrieval-remainder	same	D2: внешняя роль sign/phase не подтверждена.
+Q-PA-R04.2	oq-d2-sign-retrieval-remainder	same	Внутренняя роль формы У8/У9 тестом не покрыта.
+Q-AF-005.2	oq-d2-sign-retrieval-remainder	same	Новая предрегистрация с train-only препроцессингом.
+Q-CM-002.2	oq-d2-half-overlay	same	Решающий тест — phase/sign retrieval (восстановить x из |x|).
+Q-PA-F02.2	oq-d2-half-overlay	same	Восстановление ветви из |x|.
+Q-COMPLEX_LADDER_U8	oq-d2-half-overlay	related	Роль «Половины_А» против комплексного оверлея У8.
+Q-O_20	oq-o20-missing-benchmark	same	O_20 и проведённый отрицательный benchmark.
+Q-CM-020	oq-o20-missing-benchmark	same	Результат O_20 не подтверждён.
+Q-AF-006.2	oq-o20-missing-benchmark	instance	Предел вывода при четырёх датасетах.
+Q-O_20	oq-typed-absence-provenance-benchmark	related	Следующий допустимый тест после отрицательного o20.
+Q-AF-016.2	oq-o20-missing-benchmark	same	Замена неактивной площадки cylinder-bands отложена, чтобы не менять предрегистрацию.
+Q-CM-025	oq-systematic-literature-review	same	Внешний контакт и новизна.
+Q-AF-008.2	oq-systematic-literature-review	same	Систематический поиск с claim-driven матрицей.
+Q-AF-018.2	oq-systematic-literature-review	same	Базы и двойной скрининг.
+Q-PA-R07.2	oq-systematic-literature-review	related	Допустимая формулировка новизны.
+Q-PA-C09.2	oq-canon-star-fate	same	Перенос Blackwell, категорий и HoTT; HoTT вынесен из v14 (решение 38).
+Q-CM-023	oq-dict-d-completeness	same	Полнота и атомарность словаря Д.
+Q-CM-023	oq-next-question-principle	related	Невставляемость O_07 не доказывает единственный порядок.
+Q-PA-C01.2	oq-dict-d-completeness	related	Канонизация словаря Д1…Д11.
+Q-CM-017	oq-audit-semantic-repromotion	same	Повторная канонизация У7…У12 после К1–К5.
+Q-AF-003.2	oq-audit-semantic-repromotion	same	Отдельные SP и операционные тесты для повышения.
+Q-PA-C02.2	oq-audit-semantic-repromotion	same	Абляции для К1–К5 по У7…У12.
+Q-AF-009.2	oq-u8-u10-optests	same	Операционные role/defeat-тесты.
+Q-U7_AGENTIC_GATE_LAYER	oq-u8-u10-optests	related	T7A–T7C — единственные гейты; уровневых тестов нет.
+Q-CM-004.2	oq-u8-u10-optests	instance	Операционный тест «Оценки» (У10).
+Q-CH_10	oq-u8-u10-optests	instance	Кто задаёт критерии сравнения У10.
+Q-OQ25_DEFINITION_OPTIONS.2	oq-graph-reference-definitions	same	Четыре ссылки без определений.
+Q-PA-G02.2	oq-graph-reference-definitions	same	Четыре открытых определения графа.
+Q-OP_TensorContextMap	oq-graph-reference-definitions	same	Lambda_link: носители, связь и закон преобразования.
+Q-TENSOR_CARRIER.2	oq-graph-reference-definitions	related	Тензор ≠ массив требует закона преобразования (Lambda_link).
+Q-U12_CHI_PI_COMPLEX_BOUNDARY	oq-graph-reference-definitions	same	U12_CHI_PI_BOUNDARY: вещественная χ/π-граница и комплексное продолжение.
+Q-AF-011.2	oq-audit-canon-reference-repair	answered_by_closed	Девять алиасов исправлены 2026-10-03; остаток — четыре определения (oq-graph-reference-definitions).
+Q-AF-012.2	oq-graph-dep-sync	answered_by_closed	2026-10-03: 167 зависимостей совпадают, расхождение 0/0.
+Q-AF-013.2	oq-graph-dep-sync	answered_by_closed	Цикл разобран 2026-10-03: граница applies_to окну (GRAPH_RECONCILIATION_2026-10-03.md).
+Q-AF-013.3	oq-graph-dep-sync	answered_by_closed	Цикл разобран 2026-10-03 для пары A_07↔U7_MATH_LOCAL_FORBID; в вопросе устаревшее имя M_07.
+Q-AF-013.4	oq-graph-dep-sync	answered_by_closed	Цикл разобран 2026-10-03: ядро has_operator OP_WindowClose.
+Q-AF-017.2	oq-strict-band-7-export	related	Экспорт и MANIFEST подготовлены; авторский workbook round-trip — отдельный шаг.
+Q-CM-009.2	oq-pi-projection-above-u7	same	Обобщение projects_to и полушагов выше 7.
+Q-CM-009.2	oq-minimal-windows-projects-to	related	Рёбра 9→7 и 11→9.
+Q-PA-C05.2	oq-arity-window-13-14	same	Select→Agg на паре У13→У14.
+Q-O_19	oq-arity-window-13-14	related	Арность Select и Agg.
+Q-PA-C04.2	oq-passport-u14-u15	related	Паспорт П6 для У14–У15.
+Q-CM-006.2	oq-u12-antimode-gate	same	Гейт У12 открыт.
+Q-CH_12	oq-u12-antimode-gate	same	Оператор или тест замкнутой границы.
+Q-M_12.2	oq-u12-radius-r	premise_outdated	Решение автора 2026-10-08: r — свободный параметр класса; r=2 не принят. Карточка M_12 по-прежнему пишет r=2.
+Q-CM-007.2	oq-u13-boundary-union-op	same	Объединение нулей как оператор У13.
+Q-U_13	oq-u13-boundary-union-op	instance	Смысл ∏Bₖ=0.
+Q-U_14	oq-u14-worlds-agg-op	instance	Оператор агрегации миров.
+Q-U_16	oq-u16-phase-hyperbolic-pair	instance	Форма У16.
+Q-CM-008.2	oq-unit-circle-z15	related	Орбита |z|=1 и узел 15.
+Q-CM-014.2	oq-third-boundary	related	Единичная граница и x=±1.
+Q-CM-014.2	oq-const-statistics-code	related	Статистическое чтение единичной границы.
+Q-PA-C07.2	oq-tot-groups-8-11	related	Tot как коллапс группы; групповое чтение 8–11.
+Q-OP_kappa.2	oq-kappa-provenance	same	Формализация κ.
+Q-O_15	oq-kappa-provenance	same	κ как критерий закрытия знания.
+Q-F5	oq-kappa-provenance	related	Знание без κ как фальсификатор.
+Q-F3	oq-mprime-audit	same	Независимая альтернатива M′.
+Q-O_09	oq-mprime-audit	same	Что должна покрыть M′.
+Q-ADD_TOPO_INVARIANTS	oq-zero-classes-chi-e	same	Классы нулей ↔ χ_E.
+Q-WINDOW_NESTING_SIERPINSKI.2	oq-sierpinski-node-11	related	Самоподобие и узел 11.
+Q-WINDOW_ARITHMETIC_LIMITS.2	oq-step48-symmetry	answered_by_closed	Шаг 48 перечислен полностью (OC01); предел на шаге 96 — остаток.
+Q-AC_20261003_WINDOW_FAMILIES.2	oq-window-family-continuation	same	Правило продолжения конечных перечней.
+Q-AC_20261003_WINDOW_FAMILIES	oq-window-family-roles	same	Роли семейств окон.
+Q-AC_20261003_WINDOWS_FIVES	oq-window-intersection-carrier	same	Пересечение окон ≠ узел-носитель.
+Q-WINDOW_SIGN_INTERFACE_UNDEFINED.2	oq-window-family-roles	related	Ограничение 2026-10-06: знаковое умножение.
+Q-CHI_LADDER_U9	oq-edgeworth-u9	related	x³ и асимметрия на У9.
+Q-COMPLEX_LADDER_U9	oq-phase-causal-u9	same	Причинно-контрфактная модель фазы для У9.
+Q-OQ25_SECTION_NATURALITY.2	oq-lift-section-and-category	same	Обоснованная секция для Lift.
+Q-OP_Lift	oq-lift-section-and-category	related	Lift и тип Res_n.
+Q-OP_event0A	oq-level-specific-absence	related	¬A и 0_A не выводятся друг из друга.
+Q-A2	oq-typed-absence-finite-witness	related	0_A как структура на U\A.
+Q-DN_20260922_INTERNAL_CONTOUR.2	oq-expectation-speed-fundamentality	same	Метрика скорости и фундаментальности.
+Q-WINDOW_FIRST_DISTINCTION_AUTHOR	oq-u0-absence-distinction-boundary	related	Первое полагание и граница не-предмета и отсутствия.
+Q-U_00	oq-u0-absence-distinction-boundary	related	Ошибка и отсутствие сигнала.
+Q-M_02	oq-code-link-vs-leads-to	related	Код a=b и «ведёт к».
+Q-U_08	oq-mu8-inverse-vs-rotation	related	Шаг к МУ8: обращение или поворот.
+Q-M_09	oq-mu9-projection-reading	related	МУ9 как уровень проекций.
+Q-U7_MATH_LOCAL_FORBID.2	oq-mu9-opposite-inclusion	related	Правило «с 7 противоположность входит в структуру» для МУ9.
+Q-A1.2	oq-two-channel-k245	related	Двухканальная оценка и гейты К2/К4/К5.
+Q-CHI_LADDER_U6	oq-levy-world	related	У6 без V·V на тяжёлых хвостах.
