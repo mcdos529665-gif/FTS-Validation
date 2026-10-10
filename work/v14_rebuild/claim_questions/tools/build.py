@@ -526,7 +526,7 @@ def write_objects_md(I, obj_records):
     return '\n'.join(L) + '\n'
 
 
-def write_groups_md(I, assertion, obj_records, oq_items, dn_items):
+def write_groups_md(I, assertion, obj_records, oq_items, dn_items, n_dup):
     groups = I['groups']
     all_q = [dict(layer=r['layer'], group=r['primary_group'], coverage=r['corpus_coverage'],
                   refs=r['refs'], secondary=r['secondary_groups'], classes=r['classes'],
@@ -591,6 +591,34 @@ def write_groups_md(I, assertion, obj_records, oq_items, dn_items):
         if clo:
             L.append('Закрытые: ' + ', '.join(f'`{q["qid"]}`' for q in clo) + '.\n')
         L.append('')
+    # --- наблюдения: числа берутся из данных сборки
+    by_g = collections.Counter(q['group'] for q in all_q)
+    top = by_g.most_common(1)[0]
+    low = min(by_g.items(), key=lambda kv: (kv[1], kv[0]))
+    opn = collections.Counter(q['group'] for q in all_q if q['coverage'] == 'open')
+    ext_n = sum(1 for q in all_q if q['coverage'] == 'external')
+    role_children = sum(1 for r in obj_records if r['parent_question_id'] == 'QO-ROLE.1')
+    sec_n = sum(1 for q in all_q if q['secondary'])
+    L.append('## Наблюдения\n')
+    L.append(f'1. **Вопросы распределены неравномерно.** Больше всего в группе {top[0]} ({top[1]}), меньше всего в '
+             f'{low[0]} ({low[1]}). Всего вопросов {len(all_q)}: к утверждениям {len(assertion)}, к объектам '
+             f'{len(obj_records)}, пунктов OPEN_QUESTIONS {len(oq_items)}, журнал {len(dn_items)}.')
+    L.append('2. **Пробелы без ответа в корпусе** (`open`) сильнее всего в группах: ' +
+             ', '.join(f'{g} ({n})' for g, n in opn.most_common(4)) + f'. Всего `open`: {sum(opn.values())}.')
+    L.append(f'3. **Внешние понятия** (`external`) вынесены из пробелов: {ext_n} вопросов, в том числе гладкость, '
+             'дисперсия и сходимость рядов. Они не считаются пробелом ФТС.')
+    L.append(f'4. **Роль формы.** {role_children} вопросов о роли форм МУ2…МУ15 сведены к одному мосту '
+             '`QO-ROLE.1` (связь `instance`); мост по К1–К5 сам открыт.')
+    L.append(f'5. **Вторичные группы** назначены у {sec_n} вопросов из {len(all_q)}: они отражают внешние области, '
+             'данные, инфраструктуру или решение автора; основная группа — по семейству источника, объекту или ручной записи.')
+    L.append('6. **Почти-дубли** не исправлены: ' + str(n_dup) +
+             ' пар в [DUPLICATE_CANDIDATES.tsv](DUPLICATE_CANDIDATES.tsv) ждут решения.\n')
+    L.append('## Уже отвечены и устаревшие предпосылки\n')
+    for r in assertion + obj_records:
+        if r['answer_status'] != 'unanswered' or r.get('premise_note'):
+            note = f"; предпосылка: {r['premise_note']}" if r.get('premise_note') else ''
+            L.append(f"- `{r['question_id']}` — {r['answer_status']}: {r.get('answer_pointer') or '—'}{note}")
+    L.append('')
     L.append('## Что не закрыто\n')
     L.append('- Группы назначены одной основной меткой; вторичные отражают только тематические семейства, '
              'а не полный смысл вопроса.')
@@ -634,12 +662,12 @@ def main():
     write_jsonl(CQ / 'QUESTION_CARDS.jsonl', assertion + obj_records)
     write_jsonl(CQ / 'OBJECT_QUESTION_CARDS.jsonl', obj_records)
     (CQ / 'OBJECTS.md').write_text(write_objects_md(I, obj_records), encoding='utf-8', newline='\n')
-    md, _ = write_groups_md(I, assertion, obj_records, oq_items, dn_items)
+    dup = near_duplicates(assertion + obj_records)
+    md, _ = write_groups_md(I, assertion, obj_records, oq_items, dn_items, len(dup))
     (CQ / 'QUESTION_GROUPS.md').write_text(md, encoding='utf-8', newline='\n')
     write_groups_tsv(CQ / 'QUESTION_GROUPS.tsv', I, assertion, obj_records, oq_items, dn_items)
     write_tsv(CQ / 'QUESTION_CROSSREF.tsv', CROSSREF_HEADER,
               [[r['question_id'], r['open_question'], r['relation'], r['note']] for r in xref])
-    dup = near_duplicates(assertion + obj_records)
     write_tsv(CQ / 'DUPLICATE_CANDIDATES.tsv',
               ['question_a', 'question_b', 'scope', 'overlap', 'text_a', 'text_b'], dup)
 
