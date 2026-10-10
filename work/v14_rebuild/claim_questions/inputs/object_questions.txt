@@ -1,110 +1,135 @@
-question_id	object_id	aspect	aspect_detail	parent_question_id	parent_relation	corpus_coverage	known_in_corpus	answer_status	answer_pointer	added	question
-QO-X2.1	O-X2	definition				partial	C-34 C-73 C-09 U_06 M_06 CH_06	unanswered		2026-10-10	Что такое x² как форма У6: функция, агрегат x·x или произведение выборов |x|·|x|, и какое из этих определений действующее?
-QO-X2.2	O-X2	identity				covered	C-06 C-10 C-12 C-34	unanswered		2026-10-10	Какие тождества верны для x²: √(x²)=|x|, x³=x·x², (x²)²=x⁴, x²=|x|·|x|?
-QO-X2.3	O-X2	symmetry				covered	C-03 C-05 C-84	unanswered		2026-10-10	Чётна ли x² и почему (−x)²=x² остаётся формой У6, несмотря на 3²=9?
-QO-X2.4	O-X2	image				partial	C-42 C-56 C-61	unanswered		2026-10-10	Каков образ x² на вещественной оси и где её нули: какие значения она принимает и каких не принимает?
-QO-X2.5	O-X2	preimage				covered	C-07 C-09 C-42 C-61	unanswered		2026-10-10	Почему прообраз x² двузначен и что теряется при возведении в квадрат?
-QO-X2.6	O-X2	branch				partial	C-07 C-107 oq-u6-direction-bit	unanswered		2026-10-10	Какой бит ветви стирает x² и как его хранить под чётной степенью?
-QO-X2.7	O-X2	neighbor				covered	C-34 C-73	unanswered		2026-10-10	Как x² получается из соседних форм: У4·π и (−|x|)²?
-QO-X2.8	O-X2	inverse				covered	C-08 C-76	unanswered		2026-10-10	Как x² связана с √|x| и с обращением y²=|x|: обратима ли она на знаковом факторе?
-QO-X2.9	O-X2	mirror				covered	C-02 C-35 C-58 C-60 C-105 C-108	unanswered		2026-10-10	С чем зеркально сопряжена x²: с ветвью −x² или с множеством МУ7?
-QO-X2.10	O-X2	limit				covered	C-49 C-52	unanswered		2026-10-10	Что делает x² в точках 0 и 1 и почему x²=x только при x∈{0,1}?
-QO-X2.11	O-X2	contact				covered	C-36 C-41	unanswered		2026-10-10	Как x² связана с нижней ветвью окружности: контакт x²/(2r) и при каком r он ровно У6?
-QO-X2.12	O-X2	uniqueness				open	C-15 C-18	unanswered		2026-10-10	Единственна ли x² как форма У6, как cos единственна по ОДУ F''=−F, а eˣ по F'=F?
-QO-X2.13	O-X2	role				open	CHI_LADDER_U6 oq-const-statistics-code	unanswered		2026-10-10	Почему именно x² отвечает «статистике»: что в квадрате соответствует агрегации, а не просто степени 2?
-QO-X2.14	O-X2	overlay				covered	C-53 C-54 C-55	unanswered		2026-10-10	Что даёт подстановка x:=χ в x² и чем она отличается от x:=χ²?
-QO-X2.15	O-X2	complex				partial	COMPLEX_BRANCH_OVERLAY COMPLEX_LADDER_U6 C-47 C-40	unanswered		2026-10-10	Что x² делает в комплексном носителе: |z|² прячет фазу, а z² прячет знак?
-QO-X2.16	O-X2	variance				partial	C-61 U6_VSTAR_BRIDGE_UNDERDETERMINED	unanswered		2026-10-10	Как x² связана с дисперсией и с V·V: что сохраняют квадрат суммы и сумма квадратов?
-QO-X2.17	O-X2	smoothness				open		unanswered		2026-10-10	Какова производная x² и что она значит для У6: касание параболы оси в нуле?
-QO-X.1	O-X	definition				partial	U_02 M_02 CH_02	unanswered		2026-10-10	Что такое y=x на У2: тождественное отображение или код a=₂b?
-QO-X.2	O-X	symmetry				covered	C-05 C-83	unanswered		2026-10-10	Нечётна ли y=x и что значит «минус не спрятан»?
-QO-X.3	O-X	mirror				covered	C-02 C-58	unanswered		2026-10-10	Где y=x и y=−x совпадают и почему только в нуле?
-QO-X.4	O-X	forbid				partial	ADD_MIRROR_WINDOW SP_WINDOW	unanswered		2026-10-10	Какую форму У2 запрещает и локален ли этот запрет?
-QO-NEGX.1	O-NEGX	definition				partial	U_03 M_03 ADD_MIRROR_WINDOW	unanswered		2026-10-10	Что такое y=−x на У3: арифметический минус или анти-форма x?
-QO-NEGX.2	O-NEGX	identity				covered	C-44 C-45	unanswered		2026-10-10	Чему равно отношение (−x)/x вне нуля и почему оно всегда −1?
-QO-NEGX.3	O-NEGX	limit				covered	C-46	unanswered		2026-10-10	Что происходит с разностью x−(−x)=2x и отношением 1/0 в нуле?
-QO-NEGX.4	O-NEGX	role				open	M_03 CH_03	unanswered		2026-10-10	Почему различие a≠b несёт информацию именно в виде −x, а не другой нечётной функции?
-QO-ABS.1	O-ABS	definition				covered	C-03 C-04 C-72	unanswered		2026-10-10	Что такое |x|: модуль, фактор по зеркалу или верхняя половина креста?
-QO-ABS.2	O-ABS	symmetry				covered	C-03 C-05	unanswered		2026-10-10	Чётна ли |x| и почему она инвариант зеркала?
-QO-ABS.3	O-ABS	branch				partial	C-04 C-07 oq-d2-half-overlay	unanswered		2026-10-10	Почему |x| стирает выбор ветви и можно ли восстановить x из |x|?
-QO-ABS.4	O-ABS	identity				covered	C-57 C-61	unanswered		2026-10-10	Когда |x|=x: что верно на [0,∞) и что на всей оси?
-QO-ABS.5	O-ABS	neighbor				covered	C-34	unanswered		2026-10-10	Как |x| получается из У2: что значит У4=У2∘π?
-QO-ABS.6	O-ABS	smoothness				open		unanswered		2026-10-10	Что значит излом |x| в нуле: недифференцируема ли форма и важно ли это для У4?
-QO-ABS.7	O-ABS	role				open	U_04 M_04	unanswered		2026-10-10	Почему |x| соответствует «закономерной случайности» У4?
-QO-NEGABS.1	O-NEGABS	definition				covered	C-90 oq-u5-cross-section	unanswered		2026-10-10	Что такое −|x| как сечение креста y=ε(x)x с ε=−sgn?
-QO-NEGABS.2	O-NEGABS	arbitrariness				partial	oq-u5-cross-section	unanswered		2026-10-10	Почему ε(0) произвольно в {−1,+1} и влияет ли это на форму У5?
-QO-NEGABS.3	O-NEGABS	role				partial	O_19 U_05 M_05	unanswered		2026-10-10	Почему сечение креста — «выбор» и почему Select имеет арность 1?
-QO-NEGABS.4	O-NEGABS	identity				covered	C-73	unanswered		2026-10-10	Чему равно (−|x|)·(−|x|) и чем оно отличается от |x|·(−|x|)?
-QO-NEGABS.5	O-NEGABS	mirror				covered	C-02 C-58	unanswered		2026-10-10	Как −|x| сопряжена с |x| и где они совпадают?
-QO-MU7.1	O-MU7	definition				covered	C-105 A_07	unanswered		2026-10-10	Что такое МУ7: множество |y|=x² (пара парабол), а не график функции?
-QO-MU7.2	O-MU7	inclusion				covered	C-105 C-108	unanswered		2026-10-10	Как МУ6 лежит в МУ7 и что такое разность МУ7 минус МУ6?
-QO-MU7.3	O-MU7	symmetry				covered	C-106	unanswered		2026-10-10	Замкнута ли МУ7 по x↦−x и y↦−y и что несёт y/x²∈{+1,−1}?
-QO-MU7.4	O-MU7	tot				covered	C-107	unanswered		2026-10-10	Что остаётся от МУ7 при Tot и почему это МУ6?
-QO-MU7.5	O-MU7	history				covered	C-02 C-34 C-35 C-60	unanswered		2026-10-10	Что в прежних проверках относится к ветви y=−x², а что к множеству МУ7?
-QO-MU7.6	O-MU7	next				partial	C-100 C-76 oq-mu8-inverse-vs-rotation	unanswered		2026-10-10	Как МУ7 переходит в МУ8: обращением x↔y или поворотом на 90°?
-QO-MU7.7	O-MU7	logic				open	A_07 M_07	unanswered		2026-10-10	Как математическая форма МУ7 связана с логической формой ЛУ7 (M_07)?
-QO-SQRT.1	O-SQRT	definition				covered	C-76	unanswered		2026-10-10	Что такое √|x|: главная ветвь обращения y²=|x| или полная пара ±√|x|?
-QO-SQRT.2	O-SQRT	identity				covered	C-08 C-06	unanswered		2026-10-10	Как √|x| выражается через x²: (x²)^{1/4}?
-QO-SQRT.3	O-SQRT	mirror				covered	C-60 C-05	unanswered		2026-10-10	Чётна ли √|x| и почему её зеркало −√|x| запрещённое, но не рунг?
-QO-SQRT.4	O-SQRT	role				open	SP_U8 oq-d2-half-overlay	unanswered		2026-10-10	Даёт ли √|x| роль «Половины_А» сверх переименования?
-QO-SQRT.5	O-SQRT	limit				partial	C-61 C-102	unanswered		2026-10-10	Что остаётся от вопроса «чему равен корень» при t²=−1: пустое множество в ℝ?
-QO-SQRT.6	O-SQRT	smoothness				open		unanswered		2026-10-10	Какова гладкость √|x| в нуле и что это значит для У8?
-QO-X3.1	O-X3	definition				covered	C-10 SP_U9	unanswered		2026-10-10	Что такое x³: x·x², то есть минимальный мультипликативный избыток над квадратом?
-QO-X3.2	O-X3	symmetry				covered	C-05 C-11	unanswered		2026-10-10	Нечётна ли x³ и как она сохраняет знак?
-QO-X3.3	O-X3	distinction				covered	C-12	unanswered		2026-10-10	Чем x³ отличается от x⁴ как функция?
-QO-X3.4	O-X3	preimage				covered	C-42	unanswered		2026-10-10	Сколько вещественных корней у t³=c и чем это отличается от квадрата?
-QO-X3.5	O-X3	fixed				covered	C-104	unanswered		2026-10-10	Почему x³=x ⇔ x∈{−1,0,1}?
-QO-X3.6	O-X3	mirror				partial	C-60 C-83	unanswered		2026-10-10	Почему у x³ нет зеркальной пары на рунге (запрещённое зеркало −x³)?
-QO-X3.7	O-X3	role				open	CM-003 oq-mu9-projection-reading	unanswered		2026-10-10	Почему x³ — «понимание»: что в ней объясняет выбор ветви?
-QO-X3.8	O-X3	uniqueness				open		unanswered		2026-10-10	Единственна ли x³ как форма У9?
-QO-COS.1	O-COS	definition				covered	C-13 C-15 C-37	unanswered		2026-10-10	Что такое cos x: ряд, решение ОДУ F''=−F или параметризация окружности?
-QO-COS.2	O-COS	range				covered	C-16	unanswered		2026-10-10	Каковы диапазон и нули cos x?
-QO-COS.3	O-COS	symmetry				covered	C-05 C-17 C-43	unanswered		2026-10-10	Почему cos чётна и как чётность обнуляет sin-компоненту решения?
-QO-COS.4	O-COS	uniqueness				covered	C-15	unanswered		2026-10-10	В каком смысле cos единственна: при каких начальных условиях?
-QO-COS.5	O-COS	relation				covered	C-96 C-31	unanswered		2026-10-10	Как cos связан с cosh и с e^{iθ}?
-QO-COS.6	O-COS	convergence				covered	C-13 C-14	unanswered		2026-10-10	Чем область сходимости ряда cos отличается от области геометрического ряда Σ(−1)^k x^{2k}?
-QO-COS.7	O-COS	role				open	CM-004	unanswered		2026-10-10	Почему cos — «оценка»: что в ОДУ F''=−F соответствует сравнению по критерию?
-QO-EXP.1	O-EXP	definition				covered	C-18 C-20	unanswered		2026-10-10	Что такое eˣ: решение F'=F или ряд Σxᵏ/k!?
-QO-EXP.2	O-EXP	symmetry				covered	C-21 C-96	unanswered		2026-10-10	Почему eˣ ни чётна, ни нечётна и как раскладывается на cosh и sinh?
-QO-EXP.3	O-EXP	positivity				covered	C-19	unanswered		2026-10-10	Почему у eˣ нет вещественных нулей и что это значит для зеркала?
-QO-EXP.4	O-EXP	relation				covered	C-31	unanswered		2026-10-10	Как eˣ связана с орбитой e^{iθ}?
-QO-EXP.5	O-EXP	unit				covered	C-51	unanswered		2026-10-10	Почему e≠±1 и cos(1)≠±1: чем eˣ и cos отличаются в точке x=1?
-QO-EXP.6	O-EXP	role				open	CM-005 ADD_U11_EPI	unanswered		2026-10-10	Почему eˣ — «осознание Я»: что в F'=F соответствует неподвижной точке?
-QO-CIRCLE.1	O-CIRCLE	definition				covered	C-22 C-23	unanswered		2026-10-10	Что такое окружность x²+(y−2)²=4: график функции или отношение?
-QO-CIRCLE.2	O-CIRCLE	branches				covered	C-24 C-25	unanswered		2026-10-10	Каковы две ветви окружности и её дифференциал?
-QO-CIRCLE.3	O-CIRCLE	mirror				covered	C-26 C-27	unanswered		2026-10-10	Что даёт y↦−y для окружности и как касаются две окружности?
-QO-CIRCLE.4	O-CIRCLE	parameter				partial	C-41 oq-u12-radius-r	unanswered		2026-10-10	Что значит свободный радиус r и что происходит при r=1/2, когда контакт ровно x²?
-QO-CIRCLE.5	O-CIRCLE	param-cos				covered	C-37	unanswered		2026-10-10	Как параметризация x=2cos t, y=2+2sin t связывает окружность с cos?
-QO-CIRCLE.6	O-CIRCLE	role				open	CM-006	unanswered		2026-10-10	Почему окружность — «конфликт/союз»?
-QO-ZEROPROD.1	O-ZEROPROD	definition				covered	C-28 C-29	unanswered		2026-10-10	Что значит произведение уравнений: объединение нулей?
-QO-ZEROPROD.2	O-ZEROPROD	intersection				covered	C-29	unanswered		2026-10-10	Какова общая точка двух окружностей?
-QO-ZEROPROD.3	O-ZEROPROD	symmetry				covered	C-30	unanswered		2026-10-10	Почему произведение инвариантно относительно y↦−y?
-QO-ZEROPROD.4	O-ZEROPROD	role				open	CM-007 oq-u13-boundary-union-op	unanswered		2026-10-10	Почему объединение границ читается как «миры/острова»?
-QO-ZEROPROD.5	O-ZEROPROD	operator				open	oq-u13-boundary-union-op	unanswered		2026-10-10	Какой оператор объединения границ реализует это на У13?
-QO-EIT.1	O-EIT	definition				covered	C-31	unanswered		2026-10-10	Чему равны |e^{iθ}| и производная по θ?
-QO-EIT.2	O-EIT	point				covered	C-38	unanswered		2026-10-10	При каком θ e^{iθ}=−1?
-QO-EIT.3	O-EIT	trace				covered	C-39	unanswered		2026-10-10	Какие вещественные значения принимает e^{iθ}x?
-QO-EIT.4	O-EIT	phase				covered	C-47	unanswered		2026-10-10	Как z раскладывается на |z| и z/|z|?
-QO-EIT.5	O-EIT	role				open	CM-008 oq-unit-circle-z15	unanswered		2026-10-10	Почему орбита |z|=1 — «красота» и узел 15?
-QO-T-RATIO.1	T-RATIO	definition				covered	C-44 C-106	unanswered		2026-10-10	Что такое ratio-канал y/x²: какие значения он принимает и почему на ветви −1?
-QO-T-RATIO.2	T-RATIO	normalization				covered	C-45 C-47 C-48	unanswered		2026-10-10	Как нормировка x/|x| и z/|z| извлекает знак и фазу и почему знак мультипликативен?
-QO-T-RATIO.3	T-RATIO	pole				covered	C-46	unanswered		2026-10-10	Что происходит с ratio в нуле?
-QO-T-RATIO.4	T-RATIO	test				open	oq-d11-branch-bit-test	unanswered		2026-10-10	Какая задача различает бит ветви ratio-канала, недоступный разности?
-QO-T-TOT.1	T-TOT	definition				partial	C-107 PA-C07 OP_Tot	unanswered		2026-10-10	Что такое Tot как коллапс ratio-группы {±1}→{1}?
-QO-T-TOT.2	T-TOT	instance				covered	C-107	unanswered		2026-10-10	Что даёт Tot на МУ7?
-QO-T-TOT.3	T-TOT	groups				open	oq-tot-groups-8-11	unanswered		2026-10-10	Какие группы коллапсируют при Tot на уровнях 8–11?
-QO-T-TOT.4	T-TOT	uniform				open		unanswered		2026-10-10	Можно ли записать Tot единым определением «коллапс группы» для всех уровней?
-QO-T-ABSENCE.1	T-ABSENCE	distinction				partial	PA-G03 oq-level-specific-absence	unanswered		2026-10-10	Как различаются ¬A, 0_A и −A на каждом уровне?
-QO-T-ABSENCE.2	T-ABSENCE	boolean				partial	C-62 OP_event0A	unanswered		2026-10-10	Что делает булева проекция event(0_A) и почему нельзя вывести ¬A→0_A?
-QO-T-UNIT.1	T-UNIT	definition				covered	C-49 C-50	unanswered		2026-10-10	Что такое единичная граница x=1 и какие формы в ней совпадают?
-QO-T-UNIT.2	T-UNIT	sign				partial	C-44 C-58 oq-third-boundary	unanswered		2026-10-10	Чем x=−1 отличается от x=1 и почему это знаковый бит, а не третья граница?
-QO-T-UNIT.3	T-UNIT	nontrivial				covered	C-51	unanswered		2026-10-10	Какие формы не лежат в {+1,−1} при x=1?
-QO-T-MIRROR.1	T-MIRROR	definition				covered	C-01 C-17 C-56	unanswered		2026-10-10	Что значит F=−F⇔F=0 и для каких форм это проверено?
-QO-T-MIRROR.2	T-MIRROR	table				covered	C-58 C-60	unanswered		2026-10-10	Какие пары форм зеркальны и где зеркало рвётся?
-QO-T-MIRROR.3	T-MIRROR	orientation				covered	C-60	unanswered		2026-10-10	Почему чётный уровень видит зеркало сверху, а нечётный снизу (n XOR 1)?
-QO-T-WINDOW.1	T-WINDOW	definition				covered	C-32 C-77 C-78	unanswered		2026-10-10	Чем канонические окна по пять отличаются от минимальных по три?
-QO-T-WINDOW.2	T-WINDOW	node				covered	C-80	unanswered		2026-10-10	Что значит узел окна ≡3 mod 4 и середина ≡1 mod 4?
-QO-T-WINDOW.3	T-WINDOW	role				open	oq-window-family-roles oq-window-intersection-carrier	unanswered		2026-10-10	Какую роль играют семейства окон и их пересечения?
-QO-T-CHI.1	T-CHI	definition				covered	C-53 C-54	unanswered		2026-10-10	Что такое χ-оверлей: подстановка x:=χ и что даёт Σχ²=2.72?
-QO-T-CHI.2	T-CHI	limit				covered	C-55 C-56	unanswered		2026-10-10	Чем x:=χ отличается от x:=χ² и когда χ²=0?
-QO-T-CHI.3	T-CHI	role				open	CHI_STAT_LADDER oq-chi-ladder-done	unanswered		2026-10-10	Какое содержание χ-оверлей добавляет к самим формам?
+question_id	object_id	aspect	aspect_detail	parent_question_id	parent_relation	corpus_coverage	known_in_corpus	answer_status	answer_pointer	added	revised	previous_question	question
+QO-X2.1	O-X2	definition				partial	C-34 C-73 C-09 U_06 M_06 CH_06	unanswered		2026-10-10			Что такое x² как форма У6: функция, агрегат x·x или произведение выборов |x|·|x|, и какое из этих определений действующее?
+QO-X2.2	O-X2	identity				covered	C-06 C-10 C-12 C-34	unanswered		2026-10-10			Какие тождества верны для x²: √(x²)=|x|, x³=x·x², (x²)²=x⁴, x²=|x|·|x|?
+QO-X2.3	O-X2	symmetry				covered	C-03 C-05 C-84	unanswered		2026-10-10			Чётна ли x² и почему (−x)²=x² остаётся формой У6, несмотря на 3²=9?
+QO-X2.4	O-X2	image				partial	C-42 C-56 C-61	unanswered		2026-10-10			Каков образ x² на вещественной оси и где её нули: какие значения она принимает и каких не принимает?
+QO-X2.5	O-X2	preimage				covered	C-07 C-09 C-42 C-61	unanswered		2026-10-10			Почему прообраз x² двузначен и что теряется при возведении в квадрат?
+QO-X2.6	O-X2	preimage	branch			partial	C-07 C-107 oq-u6-direction-bit	unanswered		2026-10-10			Какой бит ветви стирает x² и как его хранить под чётной степенью?
+QO-X2.7	O-X2	neighbor				covered	C-34 C-73	unanswered		2026-10-10			Как x² получается из соседних форм: У4·π и (−|x|)²?
+QO-X2.8	O-X2	preimage	inverse			covered	C-08 C-76	unanswered		2026-10-10			Как x² связана с √|x| и с обращением y²=|x|: обратима ли она на знаковом факторе?
+QO-X2.9	O-X2	mirror				covered	C-02 C-35 C-58 C-60 C-105 C-108	unanswered		2026-10-10			С чем зеркально сопряжена x²: с ветвью −x² или с множеством МУ7?
+QO-X2.10	O-X2	identity	limit			covered	C-49 C-52	unanswered		2026-10-10			Что делает x² в точках 0 и 1 и почему x²=x только при x∈{0,1}?
+QO-X2.11	O-X2	neighbor	contact			covered	C-36 C-41	unanswered		2026-10-10			Как x² связана с нижней ветвью окружности: контакт x²/(2r) и при каком r он ровно У6?
+QO-X2.12	O-X2	uniqueness				partial	C-34 C-73	unanswered		2026-10-10	2026-10-10	Единственна ли x² как форма У6, как cos единственна по ОДУ F''=−F, а eˣ по F'=F?	Вынуждено ли правило построения У6 = У4·π (C-34), или оно выбрано; и что из этого следует для агрегата x·x (C-73)?
+QO-X2.13	O-X2	role		QO-ROLE.1	instance	open	CHI_LADDER_U6 oq-const-statistics-code	unanswered		2026-10-10			Почему именно x² отвечает «статистике»: что в квадрате соответствует агрегации, а не просто степени 2?
+QO-X2.14	O-X2	neighbor	overlay			covered	C-53 C-54 C-55	unanswered		2026-10-10			Что даёт подстановка x:=χ в x² и чем она отличается от x:=χ²?
+QO-X2.15	O-X2	role	complex	QO-ROLE.1	instance	partial	COMPLEX_BRANCH_OVERLAY COMPLEX_LADDER_U6 C-47 C-40	unanswered		2026-10-10			Что x² делает в комплексном носителе: |z|² прячет фазу, а z² прячет знак?
+QO-X2.16	O-X2	external	variance			external		unanswered		2026-10-10	2026-10-10	Как x² связана с дисперсией и с V·V: что сохраняют квадрат суммы и сумма квадратов?	[внешнее] Как x² связана с дисперсией и с V·V: что сохраняют квадрат суммы и сумма квадратов?
+QO-X2.17	O-X2	external	smoothness			external		unanswered		2026-10-10	2026-10-10	Какова производная x² и что она значит для У6: касание параболы оси в нуле?	[внешнее] Какова производная x² и что она значит для У6: касание параболы оси в нуле?
+QO-X.1	O-X	definition				partial	U_02 M_02 CH_02	unanswered		2026-10-10			Что такое y=x на У2: тождественное отображение или код a=₂b?
+QO-X.2	O-X	symmetry				covered	C-05 C-83	unanswered		2026-10-10			Нечётна ли y=x и что значит «минус не спрятан»?
+QO-X.3	O-X	mirror				covered	C-02 C-58	unanswered		2026-10-10			Где y=x и y=−x совпадают и почему только в нуле?
+QO-X.4	O-X	uniqueness	forbid			partial	ADD_MIRROR_WINDOW SP_WINDOW	unanswered		2026-10-10			Какую форму У2 запрещает и локален ли этот запрет?
+QO-NEGX.1	O-NEGX	definition				partial	U_03 M_03 ADD_MIRROR_WINDOW	unanswered		2026-10-10			Что такое y=−x на У3: арифметический минус или анти-форма x?
+QO-NEGX.2	O-NEGX	identity				covered	C-44 C-45	unanswered		2026-10-10			Чему равно отношение (−x)/x вне нуля и почему оно всегда −1?
+QO-NEGX.3	O-NEGX	symmetry	limit			covered	C-46	unanswered		2026-10-10			Что происходит с разностью x−(−x)=2x и отношением 1/0 в нуле?
+QO-NEGX.4	O-NEGX	role		QO-ROLE.1	instance	open	M_03 CH_03	unanswered		2026-10-10			Почему различие a≠b несёт информацию именно в виде −x, а не другой нечётной функции?
+QO-ABS.1	O-ABS	definition				covered	C-03 C-04 C-72	unanswered		2026-10-10			Что такое |x|: модуль, фактор по зеркалу или верхняя половина креста?
+QO-ABS.2	O-ABS	symmetry				covered	C-03 C-05	unanswered		2026-10-10			Чётна ли |x| и почему она инвариант зеркала?
+QO-ABS.3	O-ABS	preimage	branch			partial	C-04 C-07 oq-d2-half-overlay	unanswered		2026-10-10			Почему |x| стирает выбор ветви и можно ли восстановить x из |x|?
+QO-ABS.4	O-ABS	identity				covered	C-57 C-61	unanswered		2026-10-10			Когда |x|=x: что верно на [0,∞) и что на всей оси?
+QO-ABS.5	O-ABS	neighbor				covered	C-34	unanswered		2026-10-10			Как |x| получается из У2: что значит У4=У2∘π?
+QO-ABS.6	O-ABS	external	smoothness			external		unanswered		2026-10-10	2026-10-10	Что значит излом |x| в нуле: недифференцируема ли форма и важно ли это для У4?	[внешнее] Что значит излом |x| в нуле: недифференцируема ли форма и важно ли это для У4?
+QO-ABS.7	O-ABS	role		QO-ROLE.1	instance	open	U_04 M_04	unanswered		2026-10-10			Почему |x| соответствует «закономерной случайности» У4?
+QO-NEGABS.1	O-NEGABS	definition				covered	C-90 oq-u5-cross-section	unanswered		2026-10-10			Что такое −|x| как сечение креста y=ε(x)x с ε=−sgn?
+QO-NEGABS.2	O-NEGABS	uniqueness	arbitrariness			partial	oq-u5-cross-section	unanswered		2026-10-10			Почему ε(0) произвольно в {−1,+1} и влияет ли это на форму У5?
+QO-NEGABS.3	O-NEGABS	role		QO-ROLE.1	instance	partial	O_19 U_05 M_05	unanswered		2026-10-10			Почему сечение креста — «выбор» и почему Select имеет арность 1?
+QO-NEGABS.4	O-NEGABS	identity				covered	C-73	unanswered		2026-10-10			Чему равно (−|x|)·(−|x|) и чем оно отличается от |x|·(−|x|)?
+QO-NEGABS.5	O-NEGABS	mirror				covered	C-02 C-58	unanswered		2026-10-10			Как −|x| сопряжена с |x| и где они совпадают?
+QO-MU7.1	O-MU7	definition				covered	C-105 A_07	unanswered		2026-10-10			Что такое МУ7: множество |y|=x² (пара парабол), а не график функции?
+QO-MU7.2	O-MU7	neighbor	inclusion			covered	C-105 C-108	unanswered		2026-10-10			Как МУ6 лежит в МУ7 и что такое разность МУ7 минус МУ6?
+QO-MU7.3	O-MU7	symmetry				covered	C-106	unanswered		2026-10-10			Замкнута ли МУ7 по x↦−x и y↦−y и что несёт y/x²∈{+1,−1}?
+QO-MU7.4	O-MU7	image	tot			covered	C-107	unanswered		2026-10-10			Что остаётся от МУ7 при Tot и почему это МУ6?
+QO-MU7.5	O-MU7	identity	history			covered	C-02 C-34 C-35 C-60	unanswered		2026-10-10			Что в прежних проверках относится к ветви y=−x², а что к множеству МУ7?
+QO-MU7.6	O-MU7	neighbor	next			partial	C-100 C-76 oq-mu8-inverse-vs-rotation	unanswered		2026-10-10			Как МУ7 переходит в МУ8: обращением x↔y или поворотом на 90°?
+QO-MU7.7	O-MU7	neighbor	logic			open	A_07 M_07	unanswered		2026-10-10			Как математическая форма МУ7 связана с логической формой ЛУ7 (M_07)?
+QO-SQRT.1	O-SQRT	definition				covered	C-76	unanswered		2026-10-10			Что такое √|x|: главная ветвь обращения y²=|x| или полная пара ±√|x|?
+QO-SQRT.2	O-SQRT	identity				covered	C-08 C-06	unanswered		2026-10-10			Как √|x| выражается через x²: (x²)^{1/4}?
+QO-SQRT.3	O-SQRT	mirror				covered	C-60 C-05	unanswered		2026-10-10			Чётна ли √|x| и почему её зеркало −√|x| запрещённое, но не рунг?
+QO-SQRT.4	O-SQRT	role		QO-ROLE.1	instance	open	SP_U8 oq-d2-half-overlay	unanswered		2026-10-10			Даёт ли √|x| роль «Половины_А» сверх переименования?
+QO-SQRT.5	O-SQRT	image	limit			partial	C-61 C-102	unanswered		2026-10-10			Что остаётся от вопроса «чему равен корень» при t²=−1: пустое множество в ℝ?
+QO-SQRT.6	O-SQRT	external	smoothness			external		unanswered		2026-10-10	2026-10-10	Какова гладкость √|x| в нуле и что это значит для У8?	[внешнее] Какова гладкость √|x| в нуле и что это значит для У8?
+QO-X3.1	O-X3	definition				covered	C-10 SP_U9	unanswered		2026-10-10			Что такое x³: x·x², то есть минимальный мультипликативный избыток над квадратом?
+QO-X3.2	O-X3	symmetry				covered	C-05 C-11	unanswered		2026-10-10			Нечётна ли x³ и как она сохраняет знак?
+QO-X3.3	O-X3	neighbor	distinction			covered	C-12	unanswered		2026-10-10			Чем x³ отличается от x⁴ как функция?
+QO-X3.4	O-X3	preimage				covered	C-42	unanswered		2026-10-10			Сколько вещественных корней у t³=c и чем это отличается от квадрата?
+QO-X3.5	O-X3	identity	fixed			covered	C-104	unanswered		2026-10-10			Почему x³=x ⇔ x∈{−1,0,1}?
+QO-X3.6	O-X3	mirror				partial	C-60 C-83	unanswered		2026-10-10			Почему у x³ нет зеркальной пары на рунге (запрещённое зеркало −x³)?
+QO-X3.7	O-X3	role		QO-ROLE.1	instance	open	CM-003 oq-mu9-projection-reading	unanswered		2026-10-10			Почему x³ — «понимание»: что в ней объясняет выбор ветви?
+QO-X3.8	O-X3	uniqueness				open		unanswered		2026-10-10			Единственна ли x³ как форма У9?
+QO-COS.1	O-COS	definition				covered	C-13 C-15 C-37	unanswered		2026-10-10			Что такое cos x: ряд, решение ОДУ F''=−F или параметризация окружности?
+QO-COS.2	O-COS	image	range			covered	C-16	unanswered		2026-10-10			Каковы диапазон и нули cos x?
+QO-COS.3	O-COS	symmetry				covered	C-05 C-17 C-43	unanswered		2026-10-10			Почему cos чётна и как чётность обнуляет sin-компоненту решения?
+QO-COS.4	O-COS	uniqueness				covered	C-15	unanswered		2026-10-10			В каком смысле cos единственна: при каких начальных условиях?
+QO-COS.5	O-COS	neighbor	relation			covered	C-96 C-31	unanswered		2026-10-10			Как cos связан с cosh и с e^{iθ}?
+QO-COS.6	O-COS	external	convergence			external		unanswered		2026-10-10	2026-10-10	Чем область сходимости ряда cos отличается от области геометрического ряда Σ(−1)^k x^{2k}?	[внешнее] Чем область сходимости ряда cos отличается от области геометрического ряда Σ(−1)^k x^{2k}?
+QO-COS.7	O-COS	role		QO-ROLE.1	instance	open	CM-004	unanswered		2026-10-10			Почему cos — «оценка»: что в ОДУ F''=−F соответствует сравнению по критерию?
+QO-EXP.1	O-EXP	definition				covered	C-18 C-20	unanswered		2026-10-10			Что такое eˣ: решение F'=F или ряд Σxᵏ/k!?
+QO-EXP.2	O-EXP	symmetry				covered	C-21 C-96	unanswered		2026-10-10			Почему eˣ ни чётна, ни нечётна и как раскладывается на cosh и sinh?
+QO-EXP.3	O-EXP	image	positivity			covered	C-19	unanswered		2026-10-10			Почему у eˣ нет вещественных нулей и что это значит для зеркала?
+QO-EXP.4	O-EXP	neighbor	relation			covered	C-31	unanswered		2026-10-10			Как eˣ связана с орбитой e^{iθ}?
+QO-EXP.5	O-EXP	identity	unit			covered	C-51	unanswered		2026-10-10			Почему e≠±1 и cos(1)≠±1: чем eˣ и cos отличаются в точке x=1?
+QO-EXP.6	O-EXP	role		QO-ROLE.1	instance	open	CM-005 ADD_U11_EPI	unanswered		2026-10-10			Почему eˣ — «осознание Я»: что в F'=F соответствует неподвижной точке?
+QO-CIRCLE.1	O-CIRCLE	definition				covered	C-22 C-23	unanswered		2026-10-10			Что такое окружность x²+(y−2)²=4: график функции или отношение?
+QO-CIRCLE.2	O-CIRCLE	preimage	branches			covered	C-24 C-25	unanswered		2026-10-10			Каковы две ветви окружности и её дифференциал?
+QO-CIRCLE.3	O-CIRCLE	mirror				covered	C-26 C-27	unanswered		2026-10-10			Что даёт y↦−y для окружности и как касаются две окружности?
+QO-CIRCLE.4	O-CIRCLE	definition	parameter			partial	C-41 oq-u12-radius-r	unanswered		2026-10-10			Что значит свободный радиус r и что происходит при r=1/2, когда контакт ровно x²?
+QO-CIRCLE.5	O-CIRCLE	image	param-cos			covered	C-37	unanswered		2026-10-10			Как параметризация x=2cos t, y=2+2sin t связывает окружность с cos?
+QO-CIRCLE.6	O-CIRCLE	role		QO-ROLE.1	instance	open	CM-006	unanswered		2026-10-10			Почему окружность — «конфликт/союз»?
+QO-ZEROPROD.1	O-ZEROPROD	definition				covered	C-28 C-29	unanswered		2026-10-10			Что значит произведение уравнений: объединение нулей?
+QO-ZEROPROD.2	O-ZEROPROD	image	intersection			covered	C-29	unanswered		2026-10-10			Какова общая точка двух окружностей?
+QO-ZEROPROD.3	O-ZEROPROD	symmetry				covered	C-30	unanswered		2026-10-10			Почему произведение инвариантно относительно y↦−y?
+QO-ZEROPROD.4	O-ZEROPROD	role		QO-ROLE.1	instance	open	CM-007 oq-u13-boundary-union-op	unanswered		2026-10-10			Почему объединение границ читается как «миры/острова»?
+QO-ZEROPROD.5	O-ZEROPROD	definition	operator			open	oq-u13-boundary-union-op	unanswered		2026-10-10			Какой оператор объединения границ реализует это на У13?
+QO-EIT.1	O-EIT	definition				covered	C-31	unanswered		2026-10-10			Чему равны |e^{iθ}| и производная по θ?
+QO-EIT.2	O-EIT	preimage	point			covered	C-38	unanswered		2026-10-10			При каком θ e^{iθ}=−1?
+QO-EIT.3	O-EIT	image	trace			covered	C-39	unanswered		2026-10-10			Какие вещественные значения принимает e^{iθ}x?
+QO-EIT.4	O-EIT	definition	phase			covered	C-47	unanswered		2026-10-10			Как z раскладывается на |z| и z/|z|?
+QO-EIT.5	O-EIT	role		QO-ROLE.1	instance	open	CM-008 oq-unit-circle-z15	unanswered		2026-10-10			Почему орбита |z|=1 — «красота» и узел 15?
+QO-T-RATIO.1	T-RATIO	definition				covered	C-44 C-106	unanswered		2026-10-10			Что такое ratio-канал y/x²: какие значения он принимает и почему на ветви −1?
+QO-T-RATIO.2	T-RATIO	definition	normalization			covered	C-45 C-47 C-48	unanswered		2026-10-10			Как нормировка x/|x| и z/|z| извлекает знак и фазу и почему знак мультипликативен?
+QO-T-RATIO.3	T-RATIO	image	pole			covered	C-46	unanswered		2026-10-10			Что происходит с ratio в нуле?
+QO-T-RATIO.4	T-RATIO	role	test			open	oq-d11-branch-bit-test	unanswered		2026-10-10			Какая задача различает бит ветви ratio-канала, недоступный разности?
+QO-T-TOT.1	T-TOT	definition				partial	C-107 PA-C07 OP_Tot	unanswered		2026-10-10			Что такое Tot как коллапс ratio-группы {±1}→{1}?
+QO-T-TOT.2	T-TOT	image	instance			covered	C-107	unanswered		2026-10-10			Что даёт Tot на МУ7?
+QO-T-TOT.3	T-TOT	image	groups			open	oq-tot-groups-8-11	unanswered		2026-10-10			Какие группы коллапсируют при Tot на уровнях 8–11?
+QO-T-TOT.4	T-TOT	definition	uniform			open		unanswered		2026-10-10			Можно ли записать Tot единым определением «коллапс группы» для всех уровней?
+QO-T-ABSENCE.1	T-ABSENCE	identity	distinction			partial	PA-G03 oq-level-specific-absence	unanswered		2026-10-10			Как различаются ¬A, 0_A и −A на каждом уровне?
+QO-T-ABSENCE.2	T-ABSENCE	image	boolean			partial	C-62 OP_event0A	unanswered		2026-10-10			Что делает булева проекция event(0_A) и почему нельзя вывести ¬A→0_A?
+QO-T-UNIT.1	T-UNIT	definition				covered	C-49 C-50	unanswered		2026-10-10			Что такое единичная граница x=1 и какие формы в ней совпадают?
+QO-T-UNIT.2	T-UNIT	symmetry	sign			partial	C-44 C-58 oq-third-boundary	unanswered		2026-10-10			Чем x=−1 отличается от x=1 и почему это знаковый бит, а не третья граница?
+QO-T-UNIT.3	T-UNIT	image	nontrivial			covered	C-51	unanswered		2026-10-10			Какие формы не лежат в {+1,−1} при x=1?
+QO-T-MIRROR.1	T-MIRROR	definition				covered	C-01 C-17 C-56	unanswered		2026-10-10			Что значит F=−F⇔F=0 и для каких форм это проверено?
+QO-T-MIRROR.2	T-MIRROR	mirror	table			covered	C-58 C-60	unanswered		2026-10-10			Какие пары форм зеркальны и где зеркало рвётся?
+QO-T-MIRROR.3	T-MIRROR	mirror	orientation			covered	C-60	unanswered		2026-10-10			Почему чётный уровень видит зеркало сверху, а нечётный снизу (n XOR 1)?
+QO-T-WINDOW.1	T-WINDOW	definition				covered	C-32 C-77 C-78	unanswered		2026-10-10			Чем канонические окна по пять отличаются от минимальных по три?
+QO-T-WINDOW.2	T-WINDOW	definition	node			covered	C-80	unanswered		2026-10-10			Что значит узел окна ≡3 mod 4 и середина ≡1 mod 4?
+QO-T-WINDOW.3	T-WINDOW	role				open	oq-window-family-roles oq-window-intersection-carrier	unanswered		2026-10-10			Какую роль играют семейства окон и их пересечения?
+QO-T-CHI.1	T-CHI	definition				covered	C-53 C-54	unanswered		2026-10-10			Что такое χ-оверлей: подстановка x:=χ и что даёт Σχ²=2.72?
+QO-T-CHI.2	T-CHI	neighbor	limit			covered	C-55 C-56	unanswered		2026-10-10			Чем x:=χ отличается от x:=χ² и когда χ²=0?
+QO-T-CHI.3	T-CHI	role				open	CHI_STAT_LADDER oq-chi-ladder-done	unanswered		2026-10-10			Какое содержание χ-оверлей добавляет к самим формам?
+QO-ROLE.1	O-FORMS	role				open	oq-audit-semantic-repromotion	unanswered		2026-10-10			Почему каждая форма МУn отвечает смыслу своего уровня: каков мост от формы к смыслу по К1–К5?
+QO-DELTA.1	O-DELTA	definition				partial	A0 M_03 U_00 U_01	unanswered		2026-10-10			Что такое Δ0 как генератор различимости: оператор, множество исходных различений или само первое различение?
+QO-DELTA.2	O-DELTA	identity				open	A0 M_03 U_01 M_01	unanswered		2026-10-10			Совпадает ли Δ0 с первым различением У(1) (a=a) или с У(0) (a≠a), и отличается ли Δ(a,b) из М-регистра У(3) от Δ0?
+QO-DELTA.3	O-DELTA	role				partial	A0 O_07	unanswered		2026-10-10			Почему лестница начинается с Δ0 («ladder-first»), а операторы — ядром, а формализации — вторичными?
+QO-KAPPA.1	O-KAPPA	definition				partial	OP_kappa oq-kappa-provenance	unanswered		2026-10-10			Какова сигнатура κ(S,0_S,Prov,Rev): что такое S, 0_S, Prov и Rev, и является ли κ функцией или предикатом легитимности?
+QO-KAPPA.2	O-KAPPA	role				covered	U7_AGENTIC_GATE_LAYER CH_07	unanswered		2026-10-10			Входит ли κ в ядро У7 или только в операциональный слой агентных реализаций?
+QO-KAPPA.3	O-KAPPA	neighbor				open	oq-ce-canon	unanswered		2026-10-10			Совпадает ли κ с канонизацией C(E) или это отдельный критерий допуска закрытия и обновления?
+QO-CLOSE.1	O-CLOSE	definition				partial	OP_WindowClose U7_WINDOW_CORE	unanswered		2026-10-10			Что такое Close(W,W): операция над окном или сам акт закрытия ожидания ожиданием, и чем он отличается от Close(W,X) при X≠W?
+QO-CLOSE.2	O-CLOSE	identity				partial	OP_WindowClose U_01	unanswered		2026-10-10			Совпадает ли Close(W,W) с a=a (У1) в операциональном смысле или это «не плоское a=a» — и где граница?
+QO-CLOSE.3	O-CLOSE	uniqueness				partial	U7_WINDOW_CORE U_07	unanswered		2026-10-10			Сводятся ли знание, познание и предсказание к одной операции Close(W,W), или это три различных закрытия окна?
+QO-REFUSE.1	O-REFUSE	definition				partial	OP_Refuse U7_FORGET_CLOSE	unanswered		2026-10-10			Refuse(W) — фильтр обновлений g(e) (OP_Refuse): действует ли он на окно W или на отдельные обновления e, и какова его область?
+QO-REFUSE.2	O-REFUSE	neighbor				open	A8 OP_Sever	unanswered		2026-10-10			Чем Refuse отличается от Sever, если оба внутренне определимы с уровня 7 (A8)?
+QO-REFUSE.3	O-REFUSE	role				covered	U7_FORGET_CLOSE U_07	unanswered		2026-10-10			Почему забывание — это Close(W,Refuse(W)), а не простое отсутствие памяти?
+QO-SEVER.1	O-SEVER	definition				open	OP_Sever	unanswered		2026-10-10			Что такое Λ в формулировке «обрыв Λ/provenance/transfer» (OP_Sever): какой объект разрывается?
+QO-SEVER.2	O-SEVER	role				partial	T7C OP_Sever	unanswered		2026-10-10			Какой тест различает Sever и отсутствие Sever на переносе контрсвидетельств?
+QO-SEVER.3	O-SEVER	neighbor				open	OP_Promote	unanswered		2026-10-10			Какой случай ложного повышения (OP_Promote) требует именно Sever, а не Refuse или Tot?
+QO-PI.1	O-PI	identity				partial	A7 OP_iota	unanswered		2026-10-10			Выполняется ли π∘ι=id (A7), и верно ли обратное ι∘π=id?
+QO-PI.2	O-PI	image				open	OP_iota O_08	unanswered		2026-10-10			Что образует ι_n(X_n) внутри X_{n+1}: весь старый слой или только сохраняемую его часть?
+QO-PI.3	O-PI	uniqueness				open	A7 OP_pi	unanswered		2026-10-10			Однозначно ли задана π_n при данном ι_n, если π∘ι=id определяет π лишь на образе ι?
+QO-LIFT.1	O-LIFT	definition				answered_elsewhere	oq-lift-typing-passport	answered_elsewhere	OPEN_QUESTIONS.md#oq-lift-typing-passport (закрытый пункт: паспорт X,R,L,ι,π,ρ сохранён)	2026-10-10			Каков категориальный паспорт Lift: какие типы X, R, L и отображения ι, π, ρ он использует?
+QO-LIFT.2	O-LIFT	neighbor				partial	OP_Lift OP_Promote	unanswered		2026-10-10			Чем Lift отличается от Promote, если оба повышают номер уровня, и что здесь «прирост выразимости» (definability gain)?
+QO-LIFT.3	O-LIFT	role				open	A6	unanswered		2026-10-10			Что такое остаток Res_n, который Lift делает выразимым объектом нового уровня?
+QO-ABSLVL.1	O-ABSLVL	definition				partial	O_03 O_05	unanswered		2026-10-10			Что такое 0_A на уровне n: один объект на всех уровнях или отдельный 0_A_n на каждом уровне, как в записи O_03?
+QO-ABSLVL.2	O-ABSLVL	identity				open	A6 oq-level-specific-absence	unanswered		2026-10-10			Совпадает ли 0_A_n с 0_A_{n+1} как объект, или 0_A переходит на следующий уровень только через Lift?
+QO-ABSLVL.3	O-ABSLVL	image				covered	OP_event0A OP_Tot	unanswered		2026-10-10			Какой образ даёт проекция event(0_A)=¬A и стирает ли она структуру 0_A (Tot)?

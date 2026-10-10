@@ -384,7 +384,7 @@ Q-A5.2	card	A5	limit	Q-A5	Почему A5 и A5a — формализации а
 Q-OP_Tot.2	card	OP_Tot	compare	Q-OP_Tot	Чем Tot отличается от Tot⁺ и Tot⁻?			2026-10-10	unanswered				open	
 Q-OP_kappa.2	card	OP_kappa	obligation	Q-OP_kappa	Как формализовать κ(S,0_S,Prov,Rev) без смешения с p-value?			2026-10-10	unanswered				open	
 Q-ADD_HALF_PHI.2	card	ADD_HALF_PHI	term	Q-ADD_HALF_PHI	Что такое «кубический избыток» и «факторная ось» в условии границы для φ?			2026-10-10	unanswered				open	
-Q-M_12.2	card	M_12	term	Q-M_12	Почему центр (0,2) и радиус 2, а не другие параметры окружности?			2026-10-10	unanswered	OPEN_QUESTIONS.md#oq-u12-radius-r	Решение автора 2026-10-08: r — свободный параметр класса, r=2 не принят; текст карточки M_12 этого ещё не отражает.	2026-10-10	open	
+Q-M_12.2	card	M_12	term	Q-M_12	Почему центр (0,2) и радиус 2, а не другие параметры окружности? [r по решению автора 2026-10-08 — свободный параметр класса, oq-u12-radius-r]	Почему центр (0,2) и радиус 2, а не другие параметры окружности?	2026-10-10	2026-10-10	unanswered	OPEN_QUESTIONS.md#oq-u12-radius-r	Решение автора 2026-10-08: r — свободный параметр класса, r=2 не принят; текст карточки M_12 этого ещё не отражает.	2026-10-10	open	
 Q-SP_U8.2	card	SP_U8	term	Q-SP_U8	Почему sqrt(|x|) — частичная обратная к квадрату на знаковом факторе?			2026-10-10	unanswered				open	
 Q-SP_ZERO.2	card	SP_ZERO	compare	Q-SP_ZERO	Что добавляет SP_ZERO к ADD_ZERO_BOUNDARY, если оба говорят о F=−F⇔F=0?			2026-10-10	unanswered				open	
 Q-SP_WINDOW.2	card	SP_WINDOW	compare	Q-SP_WINDOW	Чем SP_WINDOW отличается от ADD_MIRROR_WINDOW как правило?			2026-10-10	unanswered				open	

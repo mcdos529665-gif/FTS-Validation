@@ -227,7 +227,8 @@ ASSERT_HEADER = ['question_id', 'source_kind', 'source_id', 'question_kind', 'pa
                  'previous_question', 'revised', 'added', 'answer_status', 'answer_pointer', 'premise_note',
                  'checked', 'corpus_coverage', 'known_in_corpus']
 OBJECT_HEADER = ['question_id', 'object_id', 'aspect', 'aspect_detail', 'parent_question_id', 'parent_relation',
-                 'corpus_coverage', 'known_in_corpus', 'answer_status', 'answer_pointer', 'added', 'question']
+                 'corpus_coverage', 'known_in_corpus', 'answer_status', 'answer_pointer', 'added', 'revised',
+                 'previous_question', 'question']
 OBJECTS_HEADER = ['object_id', 'label', 'role', 'kind', 'primary_group', 'aliases_regex', 'defining_cards',
                   'definition_note']
 GROUPS_HEADER = ['group_id', 'name', 'criteria', 'asks', 'points_to']
@@ -365,6 +366,8 @@ def build_records(I):
             'question_origin': 'assistant_derived',
             'author_review': 'none',
             'added': r['added'] or None,
+            'revised': r['revised'] or None,
+            'previous_question': r['previous_question'] or None,
         }
         obj_records.append(rec)
 

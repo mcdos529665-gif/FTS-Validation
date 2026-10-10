@@ -91,3 +91,28 @@ Q-WINDOW_ARITHMETIC_LIMITS.2	oq-step48-symmetry	answered_by_closed	Шаг 48 п�
 Q-WINDOW_FIRST_DISTINCTION_AUTHOR	oq-u0-absence-distinction-boundary	related	Первое полагание и граница не-предмета и отсутствия.
 Q-WINDOW_NESTING_SIERPINSKI.2	oq-sierpinski-node-11	related	Самоподобие и узел 11.
 Q-WINDOW_SIGN_INTERFACE_UNDEFINED.2	oq-window-family-roles	related	Ограничение 2026-10-06: знаковое умножение.
+QO-ABSLVL.1	oq-level-specific-absence	related	уровневое чтение отсутствия
+QO-ABSLVL.2	oq-level-specific-absence	same	тот же вопрос о 0_A по уровням
+QO-CIRCLE.4	oq-u12-radius-r	same	свободный радиус r
+QO-EIT.5	oq-unit-circle-z15	instance	орбита |z|=1 и узел 15
+QO-KAPPA.1	oq-kappa-provenance	same	определение κ — тот же пункт
+QO-KAPPA.3	oq-ce-canon	related	C(E) и κ — смежные критерии
+QO-LIFT.1	oq-lift-typing-passport	answered_by_closed	паспорт закрыт
+QO-LIFT.3	oq-lift-section-and-category	related	остаток Res_n связан с переходом окна
+QO-MU7.6	oq-mu8-inverse-vs-rotation	same	переход МУ7→МУ8
+QO-MU7.7	oq-u6-u7-compositional-semantics	related	МУ7 и ЛУ7
+QO-PI.1	oq-pi-projection-above-u7	related	проекция над У7
+QO-PI.2	oq-pi-projection-above-u7	related	образ ι над У7
+QO-ROLE.1	oq-audit-semantic-repromotion	related	мост форма→смысл общий для повторной канонизации
+QO-SQRT.4	oq-d2-half-overlay	same	роль √|x| как полуоверлея
+QO-T-ABSENCE.1	oq-typed-absence-finite-witness	related	типизация отсутствия
+QO-T-CHI.3	oq-chi-ladder-done	related	χ-оверлей
+QO-T-RATIO.4	oq-d11-branch-bit-test	same	бит ветви ratio-канала
+QO-T-TOT.3	oq-tot-groups-8-11	same	группы при Tot на 8–11
+QO-T-TOT.4	oq-tot-groups-8-11	related	единое определение Tot
+QO-T-WINDOW.3	oq-window-family-roles	same	роли семейств окон
+QO-X2.14	oq-chi-ladder-done	related	подстановка χ в x²
+QO-X2.6	oq-d11-branch-bit-test	related	бит ветви x²
+QO-X2.8	oq-mu8-inverse-vs-rotation	related	обращение y²=|x|
+QO-ZEROPROD.4	oq-u13-boundary-union-op	related	миры/острова по объединению границ
+QO-ZEROPROD.5	oq-u13-boundary-union-op	same	оператор объединения границ

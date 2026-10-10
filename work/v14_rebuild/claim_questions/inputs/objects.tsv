@@ -19,3 +19,12 @@ T-UNIT	единичная граница	термин, x=1	term	G06	единич
 T-MIRROR	F = −F ⇔ F = 0	термин, зеркало и нулевая граница	term	G06	зеркал	ADD_MIRROR_WINDOW C-01	
 T-WINDOW	окна и узлы	термин	term	G07	\bокн	SP_WINDOW	определения окна как термина в карточке нет
 T-CHI	χ-оверлей	термин	term	G08	χ(?!_E)	CHI_STAT_LADDER CHI_CARRIER	
+O-FORMS	формы МУ2…МУ15 (общее)	мост «форма → смысл уровня» (К1–К5)	meta	G10	(?!x)x		общего определения в каноне нет; мост по К1–К5 — критерий (oq-audit-semantic-repromotion)
+O-DELTA	Δ (Δ0, генератор различимости)	исходный генератор различимости	term	G01	Δ	A0 M_03 A5a	формального определения Δ0 в каноне нет: A0 называет его генератором
+O-KAPPA	κ(S,0_S,Prov,Rev)	критерий легитимного закрытия/обновления (У7)	operator	G10	κ|kappa	OP_kappa U7_AGENTIC_GATE_LAYER	сигнатура дана, семантика underformalized (OP_kappa)
+O-CLOSE	Close(W,W)	закрытие окна ожидания самим окном (У7)	operator	G03	Close\(W,\s*W\)|Close\(W,W\)	OP_WindowClose U7_WINDOW_CORE	
+O-REFUSE	Refuse(W)	отказ от обновлений: фильтр g(e) (A8, У7)	operator	G03	Refuse	OP_Refuse U7_FORGET_CLOSE	
+O-SEVER	Sever	обрыв переноса оснований и контрсвидетельств (A8, T7C)	operator	G03	Sever	OP_Sever A8 T7C	Λ в определении не раскрыто (см. QO-SEVER.1)
+O-PI	π / ι	проекция и вложение старого слоя	operator	G01	π|ι	OP_pi OP_iota A7 O_08	
+O-LIFT	Lift	делает остаток выразимым объектом нового уровня (A6)	operator	G01	Lift	OP_Lift A6	категориальный паспорт закрыт (oq-lift-typing-passport)
+O-ABSLVL	0_A по уровням	структурированное отсутствие на каждом уровне	term	G01	0_A	OP_event0A A2 O_05 O_03	отдельной карточки «0_A на уровне n» нет; общее — A2 и O_03

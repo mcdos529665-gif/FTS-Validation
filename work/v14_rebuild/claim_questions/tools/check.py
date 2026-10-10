@@ -21,7 +21,8 @@ import build as B  # noqa: E402
 
 CQ = HERE.parent
 # Решётка аспектов объектов проверяется только после нормализации аспектов (см. README).
-LATTICE_ENFORCED = False
+LATTICE_ENFORCED = True
+NEW_OBJECTS = ['O-DELTA', 'O-KAPPA', 'O-CLOSE', 'O-REFUSE', 'O-SEVER', 'O-PI', 'O-LIFT', 'O-ABSLVL']
 ASSERTION_SOURCE_KINDS = ('card', 'claim', 'claim_group', 'finding', 'pattern')
 DEFINING_RE = re.compile(r'C-\d{2,3}|G60-\d{2}')
 
@@ -144,11 +145,23 @@ def main():
                 bad_def.append(f"{o['object_id']}:{d}")
     ok('карточки-определения объектов существуют (канон, утверждения или проверки)', not bad_def,
        '; '.join(bad_def[:6]))
-    if LATTICE_ENFORCED:
-        ok('аспекты объектов из решётки', all(r['aspect'] in B.LAT_OBJECT for r in obj),
-           str([r['question_id'] for r in obj if r['aspect'] not in B.LAT_OBJECT][:6]))
-    else:
-        print('INFO решётка аспектов объектов не проверяется: аспекты ещё не нормализованы')
+    ok('аспекты объектов из решётки', all(r['aspect'] in B.LAT_OBJECT for r in obj),
+       str([r['question_id'] for r in obj if r['aspect'] not in B.LAT_OBJECT][:6]))
+
+    ok('у каждого объекта есть карточка-определение или пометка «определения в каноне нет»',
+       all(o['defining_cards'].strip() or o['definition_note'].strip() for o in I['objects']))
+    per_obj = collections.Counter(r['object_id'] for r in obj)
+    ok('новые объекты (Δ, κ, Close, Refuse, Sever, π/ι, Lift, 0_A по уровням): 2–4 вопроса каждому',
+       all(2 <= per_obj[o] <= 4 for o in NEW_OBJECTS), str({o: per_obj[o] for o in NEW_OBJECTS}))
+    form_ids = {o['object_id'] for o in I['objects'] if o['kind'] == 'formula'}
+    role_forms = [r for r in obj if r['aspect'] == 'role' and r['object_id'] in form_ids]
+    ok('роль формы: все вопросы role по формам ссылаются на родителя QO-ROLE.1 (instance)',
+       role_forms and all(r['parent_question_id'] == 'QO-ROLE.1' and r['parent_relation'] == 'instance'
+                          for r in role_forms), str(len(role_forms)))
+    ok('QO-ROLE.1 существует и не имеет родителя', any(r['question_id'] == 'QO-ROLE.1' and not r['parent_question_id']
+                                                       for r in obj))
+    ok('у проверяемых объектов есть смысловой аспект из решётки (без «прочего»)',
+       all(r['aspect'] in B.LAT_OBJECT for r in obj))
 
     # --- 8. производные файлы
     ok('OBJECT_QUESTION_CARDS.jsonl — срез слоя object',
