@@ -81,3 +81,11 @@ oq-mu9-opposite-inclusion	open	RP-2	MP-A;MP-C	PA-F03;PA-C02	support	Правил
 oq-o1-environment-substitution	open	RP-3	MP-B;MP-C	PA-G02;PA-F07	support	Числовая подстановка по О1 не задаёт смысл уровня; совпадения с окнами дёшевы.	E10	formalization	Навигационный мост 2026-10-08 к дополнению addendum_2026-10-08_rotation_projection.md; не доказательство и не повышение статуса.
 oq-sierpinski-node-11	open	RP-3	MP-B	PA-C03;PA-G02	support	Узлы 3/7/15 совпадают с полными строками, узел 11 — нет.	E7	author_decision	Навигационный мост 2026-10-08 к дополнению addendum_2026-10-08_rotation_projection.md; не доказательство и не повышение статуса.
 oq-mu9-projection-reading	open	RP-2	MP-A;MP-B	PA-F07;PA-F04	support	Тождество t³=t задаёт проекции, но не смысл Понимания.	E7	formalization	Навигационный мост 2026-10-08 к дополнению addendum_2026-10-08_rotation_projection.md; не доказательство и не повышение статуса.
+oq-u7-hold-vs-hyp-w	open	RP-2	MP-A	PA-F04	indirect	Связь удержания ожидания на У7 с Hyp(W) не задана.	E7	formalization	DN-0033; не отождествлено и не разведено.
+oq-nine-operations-levels	open	RP-2	MP-A;MP-B	PA-F07	indirect	Перечень девяти операций симметрии не сопоставлен шагам лестницы.	E7	formalization	DN-0034: перечень принят, соответствие шагам открыто.
+oq-tot-level7-plus	open	RP-2	MP-A	PA-C04	indirect	Вид абсолютизации на У7 и выше, если отсутствие входит в уровень.	E7	formalization	DN-0035; связано с oq-tot-groups-8-11.
+oq-torus-on-9-shape	open	RP-3	MP-A;MP-B	PA-F08;PA-C08	indirect	Форма тора на У9 (шестиугольный или квадратный) не выбрана.	E10	author_decision	Три точки на равном расстоянии от линзы квадратного тора не дают (lens_torus_check L4c).
+oq-lens-two-objects	open	RP-3	MP-A	PA-F08	indirect	«Два замкнутых объекта» в линзировании не определены.	E10	formalization	DN-0039.
+oq-closed-object-torus-or-body	open	RP-3	MP-A	PA-F08	indirect	«Замкнутый трёхмерный объект» на У9: тор или тело.	E10	author_decision	DN-0037; текст реплики оборван.
+oq-mu9-counterweight	open	RP-2	MP-A;MP-B	PA-F07	indirect	Противовес У9 (что блокирует и дополняет x³) не задан.	E7	author_decision	DN-0040; вопрос автору, ответа нет.
+oq-phase-modulus-12-15	open	RP-1	MP-A;MP-B	PA-F08;PA-C08	indirect	Уровни 12, 13, 15 в схеме блоков фазы и модуля — прогноз.	E10	formalization	DN-0041/0042; вариант §6 заметки; статус не повышен.
