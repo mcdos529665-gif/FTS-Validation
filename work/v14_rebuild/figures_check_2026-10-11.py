@@ -34,6 +34,42 @@ okd = all(abs(max(abs(u1), abs(u2)) - max(u1*a1 + u2*b1 for a1, b1 in ((1, 0), (
           for u1, u2 in ((random.uniform(-3, 3), random.uniform(-3, 3)) for _ in range(200)))
 check("S1e полярное тело ромба — квадрат; самодвойственно только p=2", okd and sp.solve(sp.Eq(1/x + 1/x, 1), x) == [2])
 
+# S1f. n=1/2: дуга √x+√y=1 — парабола (x−y)²−2(x+y)+1=0 с осью вдоль y=x.
+X0 = sp.symbols('X0', positive=True)
+check("S1f n=1/2 — дуги парабол с осью y=x",
+      sp.simplify(((X0 - (1 - sp.sqrt(X0))**2)**2 - 2*(X0 + (1 - sp.sqrt(X0))**2) + 1)) == 0)
+# S1g. Росток у вершины (0,1): 1−(1−xⁿ)^{1/n} ~ xⁿ/n — форма |x|ⁿ (n=1/2: √|x|, 1: |x|, 2: x², 3: |x|³).
+germ_ok = all(sp.limit((1 - (1 - X0**nn)**(1/nn)) / X0**nn, X0, 0, '+') == 1/nn
+              for nn in (sp.Rational(1, 2), sp.Integer(1), sp.Integer(2), sp.Integer(3)))
+check("S1g росток у вершины = |x|ⁿ/n", germ_ok)
+
+# T1. Роговой тор: вращение M_12 x²+(y−r)²=r² вокруг оси x (касательной в нуле):
+#     (√(y²+z²)−r)²+x²=r². Сечение z=0 — две окружности, касающиеся в нуле (форма У13, статья §10.2, r=2);
+#     на оси (y=z=0) лежит только начало координат.
+r0, t0 = sp.Integer(2), sp.symbols('t0', real=True)
+up = (r0*sp.sin(t0), r0 - r0*sp.cos(t0))      # точка M_12 (y>=0)
+dn = (r0*sp.sin(t0), -(r0 - r0*sp.cos(t0)))   # зеркальная (y<=0)
+horn = lambda X1, Y1, Z1: (sp.sqrt(Y1**2 + Z1**2) - r0)**2 + X1**2 - r0**2
+u13 = lambda X1, Y1: (X1**2 + (Y1 - 2)**2 - 4) * (X1**2 + (Y1 + 2)**2 - 4)
+sec_ok = all(sp.simplify(horn(p[0], p[1], 0).subs(t0, tv)) == 0 and sp.simplify(u13(*p).subs(t0, tv)) == 0
+             for p in (up, dn) for tv in (sp.pi/7, sp.pi/2, 2*sp.pi/3))
+check("T1a сечение рогового тора = две окружности У13", sec_ok)
+xs = sp.symbols('xs', real=True)
+check("T1b на оси только начало координат", sp.solve(sp.Eq(horn(xs, 0, 0), 0), xs) == [0])
+
+# C2. Коста: данные Вейерштрасса f=℘, g=A/℘' [внешнее]. Квадратная решётка: 4x³−g₂x, корни 0, ±√g₂/2.
+#     ℘''=6℘²−g₂/2: в точке ℘=0 это −g₂/2≠0 ⇒ у ℘ двойной нуль в (1+i)/2; в ℘=±√g₂/2 ℘≠0.
+#     Порядок метрики |f|(1+|g|²): ord f + 2·min(0, ord g). Конец ⇔ порядок < 0.
+G2 = sp.symbols('G2', positive=True)
+xx = sp.symbols('xx')
+rts = sp.solve(4*xx**3 - G2*xx, xx)
+d2 = {rv: sp.simplify(6*rv**2 - G2/2) for rv in rts}
+check("C2a ℘''≠0 во всех точках порядка 2 (простые нули ℘', двойной нуль ℘ в (1+i)/2)",
+      all(v != 0 for v in d2.values()) and 0 in rts)
+orders = {"0": (-2, 3), "1/2": (0, -1), "i/2": (0, -1), "(1+i)/2": (2, -1)}
+metric = {k: f_ + 2*min(0, g_) for k, (f_, g_) in orders.items()}
+check("C2b концы в 0, 1/2, i/2; (1+i)/2 регулярна", metric == {"0": -2, "1/2": -2, "i/2": -2, "(1+i)/2": 0}, str(metric))
+
 # S2. Комплексные кривые Ферма x^n+y^n=1: род (n-1)(n-2)/2 = 0,1,3 при n=2,3,4.
 check("S2a род Ферма n=2,3,4 = 0,1,3", [(k-1)*(k-2)//2 for k in (2, 3, 4)] == [0, 1, 3])
 # S2b. Кубика Ферма — шестиугольный тор: X=12/(x+y), Y=36(x-y)/(x+y) переводит x^3+y^3=1 в Y^2=X^3-432 (j=0).
