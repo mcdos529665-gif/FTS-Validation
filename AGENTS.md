@@ -51,6 +51,7 @@ Reply in plain Russian, with examples when useful. Follow explicit language requ
 | Commands or verification | [Commands](PROJECT_INSTRUCTIONS.md#commands), [checks](PROJECT_INSTRUCTIONS.md#checks) |
 | Graph / arXiv / completing work | Sections `graph` / `arxiv` / `save` in `PROJECT_INSTRUCTIONS.md` |
 | Where to write new material | [Document map](work/DOCUMENT_MAP.md) |
+| OpenResearch (`orx`) experiment, branch `orx/*` | [Experiment contract](experiments/AGENTS.md) — read first; write only `experiments/<slug>/` |
 
 ## Responses
 

@@ -1,0 +1,17 @@
+#!/bin/sh
+# Граница записи экспериментов OpenResearch (experiments/AGENTS.md):
+# в ветке orx/* коммит может затрагивать только experiments/.
+# Установка: cp tools/hooks/pre-commit .git/hooks/pre-commit
+branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+case "$branch" in
+  orx/*) ;;
+  *) exit 0 ;;
+esac
+bad=$(git diff --cached --name-only | grep -v '^experiments/')
+if [ -n "$bad" ]; then
+  echo "pre-commit: ветка $branch может менять только experiments/. Вне границы:" >&2
+  echo "$bad" | sed 's/^/  /' >&2
+  echo "Контракт: experiments/AGENTS.md" >&2
+  exit 1
+fi
+exit 0
