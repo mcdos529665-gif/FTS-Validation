@@ -21,6 +21,7 @@ following a link does not require loading neighbouring documents.
 | Research on a specific question | Thematic package in `v14_rebuild/` | Grounds, analysis, model, witness, limits; look for an existing package first |
 | General theory presentation | [FTS_v14_paper.md](v14_rebuild/FTS_v14_paper.md) | Coherent result, links, status; intermediate detail stays in research packages |
 | Open question | [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) | Unresolved issue, needed witness, next step; extend existing OQ where possible |
+| Candidate proposals (collected, grouped) | [Candidate register](v14_rebuild/candidates_register_2026-10-15/REGISTER.md) | Index only: group, level address, references (cards, OQ, checks, DN); full text stays in the primary document; add rows via `src/G*.tsv` and `build_register.py` |
 | Author answers to graph questions | [AUTHOR_ANSWERS_60.md](AUTHOR_ANSWERS_60.md) | 60 unique linked OQs: short text, context link, answer field |
 | Research answers to 60 OQs | [Undermind review](v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md) | Verbatim question, working assistant answer, missing grounds; sources/protocol in the same package |
 | Additional seven-element window | [Torus and Klein group](v14_rebuild/seven_window_torus_klein_2026-09-30.md) | Author quotations, phase model ℤ₄ × ℤ₆, reflection group V₄, FTS correspondence limits, separate Wolfram record |

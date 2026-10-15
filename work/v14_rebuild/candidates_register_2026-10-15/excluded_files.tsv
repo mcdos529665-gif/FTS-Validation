@@ -1,0 +1,23 @@
+path	class	reason
+EXTERNAL_CONFLICTS.md	log	журнал решений о внешних источниках; «кандидат» повторяет статусы из первичных документов, новых предложений не вводит
+project_consistency/GRAPH_RECONCILIATION_2026-10-03.md	procedure	аудит/сверка графа и охвата; «кандидаты» — категория учёта, не предложение ФТС
+project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md	procedure	аудит/сверка графа и охвата; «кандидаты» — категория учёта, не предложение ФТС
+OQ_INTERSECT_PLAN.md	procedure	план поиска точек пересечения OQ; «кандидаты в точки пересечения» — рабочие гипотезы плана, а не утверждения о ФТС
+v14_rebuild/audit/BASELINE.md	procedure	базовый прогон проверок; «кандидатные пробы» — служебное имя набора probes.py
+v14_rebuild/e5_literature_review/DEEP_RESEARCH_REQUESTS_CONNECTIVITY.md	procedure	тексты запросов на внешний поиск по кандидатным основаниям О13–О20; сами основания учтены в таблице карточек
+v14_rebuild/claim_graph/CHANGE_REPORT.md	derived	машинный отчёт сборки графа утверждений; повторяет формулировки из RESEARCH_CLAIMS.tsv (строки реестра ссылаются на первоисточники)
+v14_rebuild/claim_questions/OBJECTS.md	derived	слой вопросов к утверждениям (assistant_derived); «кандидатный паттерн» цитирует PATTERN_ATLAS
+v14_rebuild/claim_questions/README.md	derived	слой вопросов к утверждениям; «автоматический поиск кандидатов» — про способ связывания вопросов
+v14_rebuild/claim_questions/RECORDS_PENDING.md	derived	слой вопросов; «почти-дубли остаются кандидатами» — про дубликаты вопросов, а не предложения ФТС
+author_canon/2026-09-19/AMENDMENT.md	status_note	констатирует, что логическая форма У6 — уже принятое содержание, «а не только кандидат»
+v14_rebuild/canon_coverage_v14.md	status_note	таблица покрытия канона: «7+ — кандидат», «оверлей-кандидат» повторяют статусы карточек (раздел 2 реестра)
+v14_rebuild/e5_literature_review/INDEX.md	lit_protocol	оглавление пакета E5; «раздельные кандидаты для 0_A и Lift» названы в строках реестра по первоисточникам
+v14_rebuild/e5_literature_review/PROTOCOL.md	lit_protocol	протокол поиска литературы; «кандидаты» — найденные записи (до 200 уникальных)
+v14_rebuild/e5_literature_review/PROTOCOL_AMENDMENT_002.md	lit_protocol	поправка протокола поиска; «кандидаты» — найденные записи
+v14_rebuild/e5_literature_review/PROVIDER_STATUS.md	lit_protocol	состояние поисковых провайдеров; «кандидаты» — найденные записи
+v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/PROTOCOL.md	lit_protocol	протокол поиска Undermind; «кандидатные работы» — выдача поиска
+v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/SOURCES.md	lit_protocol	список источников; «кандидаты с неуточнённой идентичностью» — отброшенные записи библиографии
+v14_rebuild/interpretation_descent_undermind_2026-09-12/EVIDENCE_MATRIX.md	lit_protocol	матрица источников; «кандидат словаря сопоставления» — рабочая пометка к источнику
+v14_rebuild/interpretation_descent_undermind_2026-09-12/SOURCE_AUDIT.md	lit_protocol	аудит источников; «262 кандидата» — число записей выдачи
+v14_rebuild/e5_literature_review/dr_core_2026-09-11/CONFLICT_ROUTING.md	lit_review	маршрутизация конфликтов deep-research ядра; внешний «кандидат X» свидетеля невставляемости не вводится в ФТС (EXTERNAL_CONFLICTS)
+v14_rebuild/e5_literature_review/dr_core_2026-09-11/REVIEW.md	lit_review	разбор deep-research ядра; внешний «кандидат X» свидетеля невставляемости не вводится в ФТС (EXTERNAL_CONFLICTS)
