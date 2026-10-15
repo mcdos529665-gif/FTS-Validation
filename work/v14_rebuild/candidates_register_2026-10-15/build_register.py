@@ -37,18 +37,19 @@ KINDS = {"form", "reading", "operator", "protocol", "bridge", "prediction", "obs
 ORIGINS = {"author", "author_delegated", "mixed", "assistant", "assistant_accepted_text",
            "other_model", "external"}
 AXES = ["authored", "mixed", "delegated", "working_accepted", "text_accepted",
-        "not_accepted", "needs_author"]
+        "delegated_accepted", "not_accepted", "needs_author"]
 AXIS_RU = {
     "authored": "сформулировано автором",
     "mixed": "тезис автора + формализация ассистента",
     "delegated": "выбор делегирован ассистенту",
     "working_accepted": "принято автором как рабочее чтение",
     "text_accepted": "принят текст ответа ассистента",
+    "delegated_accepted": "принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md)",
     "not_accepted": "не принято автором",
     "needs_author": "ждёт решения автора",
 }
 AXIS_SHORT = {"authored": "авт.", "mixed": "смеш.", "delegated": "делег.",
-              "working_accepted": "раб.", "text_accepted": "текст",
+              "working_accepted": "раб.", "text_accepted": "текст", "delegated_accepted": "поруч.",
               "not_accepted": "нет", "needs_author": "ждёт"}
 ORIGIN_RU = {
     "author": "автор",
@@ -342,6 +343,25 @@ def main():
         for m in re.findall(r"CP-\d{3}", r["claim"] + " " + r["status"]):
             if m not in ids:
                 errors.append(f"{r['id']}: ссылка на несуществующую {m}")
+
+    # --- решения о принятии: каждая открытая строка решена ровно один раз ---
+    acc_path = PKG / "ACCEPTANCE_2026-10-15.md"
+    if acc_path.exists():
+        at = acc_path.read_text(encoding="utf-8")
+        body = at[at.index("## 2."):at.index("## 5.")]
+        acc_part = body[:body.index("## 3.")]
+        seen = []
+        for a_, b_ in re.findall(r"CP-(\d{3})(?:…CP-(\d{3}))?", body):
+            a_ = int(a_); b_ = int(b_) if b_ else a_
+            seen += [f"CP-{k:03d}" for k in range(a_, b_ + 1)]
+        accepted = {m.group(1) for m in re.finditer(r"^\| (CP-\d{3}) \|", acc_part, re.M)}
+        if accepted != {i for i in ids if axes.get(i) == "delegated_accepted"}:
+            errors.append(f"ACCEPTANCE §2 и axes.tsv расходятся: {sorted(accepted ^ {i for i in ids if axes.get(i) == 'delegated_accepted'})}")
+        open_ids = {i for i in ids if axes.get(i) in ("not_accepted", "mixed", "needs_author", "delegated_accepted")}
+        cnt = collections.Counter(s_ for s_ in seen if s_ in open_ids)
+        miss_dec = sorted(open_ids - set(cnt))
+        if miss_dec:
+            errors.append(f"ACCEPTANCE: нет решения для {miss_dec}")
 
     for nm in ("REGISTER_head.md", "REGISTER_tail.md"):
         for m in sorted(set(re.findall(r"CP-\d{3}", (PKG / nm).read_text(encoding="utf-8")))):
