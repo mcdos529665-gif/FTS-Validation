@@ -8,7 +8,7 @@
 |---|---|---|
 | 1 RESEARCH | skipped (автор: «давай 2 этап», 2026-10-17) | материал: канон ФТС + PLAN_SESSION + 2 внешних ссылки; литобзор для Хабра не нужен |
 | 2 WRITE | **черновик готов, ждёт подтверждения** | [habr_draft_v1.md](habr_draft_v1.md): ≈ 4000 слов (план ≈ 8000), 8 глав + «О тексте» + «Источники»; стиль — мягкая калибровка [STYLE_PROFILE](STYLE_PROFILE.md) |
-| 2.5 INTEGRITY | pending | обязательна |
+| 2.5 INTEGRITY | **PASS с исправлениями — ждёт подтверждения автора (MANDATORY)** | [INTEGRITY_2_5](INTEGRITY_2_5.md): источники 4/4 VERIFIED, 6 проблем найдено и исправлено, 7 режимов отказа ИИ без SUSPECTED |
 | 3 REVIEW | pending | 5 рецензентов + Devil's Advocate |
 | 4 / 3' / 4' | pending | ≤ 1 круг каждого |
 | 4.5 FINAL INTEGRITY | pending | обязательна |
@@ -39,5 +39,5 @@
 
 - Draft написан одним проходом основной сессией, **без** разбиения на Phase 4a/4b (contract-gated writer/evaluator), без
   отдельных агентов `citation_compliance` и `abstract_bilingual`, без in-pair Phase 6. Эти проверки частично перенесены на Stage 2.5/3.
-- Ссылки Ackoff 1989, Rowley 2007, Hinton et al. 2015 **не верифицированы** в сессии (верифицирован только Holtzman et al.).
+- Ссылки проверены на Stage 2.5 (см. INTEGRITY_2_5): Ackoff и Rowley — по метаданным/аннотации, Hinton — по разделу 2, Holtzman — по аннотации.
 - Объём ≈ 4000 слов против оценки ≈ 8000: оценка была моей, автор сказал «без ограничения».
