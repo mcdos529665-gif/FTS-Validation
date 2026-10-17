@@ -11,8 +11,8 @@
 | 2.5 INTEGRITY | **PASS с исправлениями — ждёт подтверждения автора (MANDATORY)** | [INTEGRITY_2_5](INTEGRITY_2_5.md): источники 4/4 VERIFIED, 6 проблем найдено и исправлено, 7 режимов отказа ИИ без SUSPECTED |
 | 3 REVIEW | раунд 1: Major Revision (5/5); перепроверка Opus [REVIEW_ROUND1_OPUS_CHECK](REVIEW_ROUND1_OPUS_CHECK.md); решения автора [AUTHOR_ADJUDICATION_R1](AUTHOR_ADJUDICATION_R1.md) | [REVIEW_ROUND1](REVIEW_ROUND1.md): 25 пунктов дорожной карты, 2 DA-CRITICAL подтверждены |
 | 4 REVISE | готово | [habr_draft_v2.md](habr_draft_v2.md) ≈ 4200 слов; [RESPONSE_R1](RESPONSE_R1.md) |
-| 3' RE-REVIEW | **Major Revision → 4′; ждёт решений автора (MANDATORY)** | [REVIEW_ROUND2](REVIEW_ROUND2.md): 21 закрыто, 4 частично, DA-2 CRITICAL подтверждён |
-| 4' RE-REVISE | pending | один круг, затем 4.5 без возврата к рецензии |
+| 3' RE-REVIEW | Major Revision → 4′; решения автора: «1. хорошо. 2. в.» | [REVIEW_ROUND2](REVIEW_ROUND2.md): 21 закрыто, 4 частично, DA-2 CRITICAL подтверждён |
+| 4' RE-REVISE | **готово, ждёт подтверждения** | [habr_draft_v3.md](habr_draft_v3.md) ≈ 4800 слов; [RESPONSE_R2](RESPONSE_R2.md) |
 | 4.5 FINAL INTEGRITY | pending | обязательна |
 | 5 FINALIZE | pending | Markdown |
 | 6 PROCESS SUMMARY | pending | по желанию |
