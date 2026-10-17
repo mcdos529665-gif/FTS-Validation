@@ -1,4 +1,4 @@
-version: v13_u12_radius_free_2026-10-10
+version: v13_u7_counterfeit_intuition_2026-10-17
 self_contained: true
 working_rule: "Read active cards and current PROJECT_INSTRUCTIONS; historical workbook rules are provenance."
 embedded_archives:

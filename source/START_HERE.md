@@ -1,6 +1,6 @@
-# FTS active canonical release — v13_u12_radius_free_2026-10-10
+# FTS active canonical release — v13_u7_counterfeit_intuition_2026-10-17
 
-Release date: 2026-10-10. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-17. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 ## Reading rules
@@ -18,7 +18,7 @@ release was produced by a new workbook round-trip.
 
 ## Active changes
 
-Author decision 2026-10-08: U12 circle radius r is a free class parameter; M_12, ADD_U12_CIRCLE, SP_U12 updated (r=2 only a representative)
+DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.

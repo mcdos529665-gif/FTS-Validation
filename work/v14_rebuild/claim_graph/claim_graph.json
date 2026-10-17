@@ -20,7 +20,7 @@
     },
     {
       "path": "source/FTS_v13_LLM_FULL_DUMP.md",
-      "sha256": "85cdffbdcef8af6457ccf9dfc529ece6da9f8190f2295eda3a78e384ee42754a"
+      "sha256": "ce9806459dd2e1a27f13d733b802350d36986757679620008b60f6dd0a687c2a"
     },
     {
       "path": "source/fts_cards.jsonl",
@@ -32,7 +32,7 @@
     },
     {
       "path": "source/fts_v13_workbook_sheets.json",
-      "sha256": "9ff8e13a2d521e2197ad6e6420128a03cb1fc6a66ba531bf835521248b8381b5"
+      "sha256": "60b31d787bcdb0772bc0926e0908baa5269673185bb8fc10cf3eb7c1f6eb9634"
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
@@ -84,7 +84,7 @@
     },
     {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
-      "sha256": "3c6e36f36d674eec91c88fa2eb1f0a779c23e92adb5f419a77f0abe910e0945a"
+      "sha256": "e89e6e31bdd4ce5d269a13448d1c2cd0380a8c638bcbaa71045f1df4a5571722"
     },
     {
       "path": "work/v14_rebuild/addendum_2026-10-04_two_channels.md",

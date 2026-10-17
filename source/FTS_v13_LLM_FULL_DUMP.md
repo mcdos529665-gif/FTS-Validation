@@ -1,6 +1,6 @@
-# FTS active canonical release — v13_u12_radius_free_2026-10-10
+# FTS active canonical release — v13_u7_counterfeit_intuition_2026-10-17
 
-Release date: 2026-10-10. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-17. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 ## Reading rules
@@ -18,7 +18,7 @@ release was produced by a new workbook round-trip.
 
 ## Active changes
 
-Author decision 2026-10-08: U12 circle radius r is a free class parameter; M_12, ADD_U12_CIRCLE, SP_U12 updated (r=2 only a representative)
+DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
@@ -69,7 +69,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | 35 | 35_Export_tsv | A1:B385 | 385 | 2 |
 | 36 | 36_Export_yaml | A1:B340 | 340 | 2 |
 | 37 | 37_Export_md | A1:F31 | 31 | 6 |
-| 38 | 38_Changelog | A1:F23 | 23 | 6 |
+| 38 | 38_Changelog | A1:F24 | 24 | 6 |
 | 39 | 39_Status_Dict | A1:E21 | 21 | 5 |
 | 40 | 40_Reader_View | A1:B12 | 12 | 2 |
 | 41 | 41_Самодостаточность | A1:D9 | 9 | 4 |
@@ -255,7 +255,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 | Поле | Значение | Комментарий | Внутренний лист |
 | --- | --- | --- | --- |
-| Версия | v13_u12_radius_free_2026-10-10 | Active export; historical workbook remains a provenance input. | 38_Changelog |
+| Версия | v13_u7_counterfeit_intuition_2026-10-17 | Active export; historical workbook remains a provenance input. | 38_Changelog |
 | Дата | 2026-06-10 | America/New_York current session date |  |
 | Назначение | self-contained Excel canon + U7 window cycles + χ statistical + complex branch/tensor overlays | карточки + граф + встроенный канон + U7/χ + complex/tensor overlays | 17–41 + overlays |
 | Статус | candidate replacement; not machine-checked proof | ядро −1..7 сильнее 8+; О(13..20) candidate-модуль | 39_Status_Dict |
@@ -311,7 +311,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | Этот лист исправляет верхние пары: не просто “Знание/Забывание”, а Знание / Забывание(отказ от ожидания) и далее. |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |
 | У | Конструктивный уровень A | −A / anti-mode нормальная запись | Что именно отказывается делать | Ложное повышение | Статус | Ч-регистр/оператор | Комментарий | Ссылка |
-| 7 | Знание / Познание / Предсказание | Забывание(закрытие ожидания отказом от ожидания) | закрывает W через Refuse(W), вместо Close(W,W); Sever — частный разрыв связи/переноса | забывание/отказ ожидать выдаётся за знание или объективный ответ | candidate_with_operational_gate | Answer(W)=Close(W,W); Forgetting(W)=Close(W,Refuse(W)); agentic K=⟨S,0_S,κ⟩ | v11: ядро У7 = оконная комбинаторика, κ/T7 = диагностический слой |  |
+| 7 | Знание / Познание / Предсказание | Забывание(закрытие ожидания отказом от ожидания) | закрывает W через Refuse(W), вместо Close(W,W); Sever — частный разрыв связи/переноса | забывание/отказ ожидать выдаётся за интуицию, то есть за предположение (У8), а не за знание [автор, 2026-10-17, DN-0044] | candidate_with_operational_gate | Answer(W)=Close(W,W); Forgetting(W)=Close(W,Refuse(W)); agentic K=⟨S,0_S,κ⟩ | v11: ядро У7 = оконная комбинаторика, κ/T7 = диагностический слой |  |
 | 8 | Предположение | Вера(отказ от вопросной формы) | отказ держать A? как вопрос; незаконное превращение A? в A | вера выдаётся за понимание/ответ | candidate_with_operational_gate | Hyp(W)=W[A?] | v11: предположение задаёт вопрос, а не даёт слабый ответ | к уровням |
 | 9 | Понимание | Упрощение, оскорбление, отказ от сложности | отказ удерживать сложность/контрфакты; фильтрация несогласного | оскорбление/упрощение выдаётся за оценку | reserved_underformalized | Analogy_κ / counterfactual structure | Исправлено: три элемента anti-mode сохранены | к уровням |
 | 10 | Сравнение, оценка | Догматизм, отказ от сравнения | отказ от метрики, сравнения, цены ошибки | догматизм выдаётся за осознание Я | reserved_underformalized | Compare_κ | Исправлено: конструктивное и anti-mode разделены | к уровням |
@@ -2068,7 +2068,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 | line_no | yaml |
 | --- | --- |
-| 1 | version: v13_u12_radius_free_2026-10-10 |
+| 1 | version: v13_u7_counterfeit_intuition_2026-10-17 |
 | 2 | self_contained: true |
 | 3 | working_rule: "Read active cards and current PROJECT_INSTRUCTIONS; historical workbook rules are provenance." |
 | 4 | embedded_archives: |
@@ -2469,6 +2469,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | v13_u7_forbid_lifted_2026-10-08 | 2026-10-08 | integrated_author_amendment_and_register_repair | МУ7: запрет y!=x*x снят автором; A_07 и U7_MATH_LOCAL_FORBID обновлены | 17/18/34/35/36 and active renderings | active |
 | v13_u7_forbid_lifted_2026-10-08b | 2026-10-08 | integrated_author_amendment_and_register_repair | МУ7 = \|y\|=x*x: с 7 противоположность входит в структуру (уточнение автора) | 17/18/34/35/36 and active renderings | active |
 | v13_u12_radius_free_2026-10-10 | 2026-10-10 | integrated_author_amendment_and_register_repair | Author decision 2026-10-08: U12 circle radius r is a free class parameter; M_12, ADD_U12_CIRCLE, SP_U12 updated (r=2 only a representative) | 17/18/34/35/36 and active renderings | active |
+| v13_u7_counterfeit_intuition_2026-10-17 | 2026-10-17 | author_correction | DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17. | 17/18/34/35/36 and active renderings | active |
 
 ## Sheet 39: `39_Status_Dict`
 

@@ -36,21 +36,21 @@
 | `work/v14_rebuild/window_groupings/FANO_RESULTS.json` | `fcce36e624945a21ad027a34ae5262d308e84b660976d2469364af67be736ea1` |
 | `work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md` | `199488f1139b2ec8d3823b74b76612156ec71616b47d8ce8c82e549b2411fc1d` |
 | `work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md` | `19afe2091bf88f86cff205feaba0f0c496c702a638da4efa67bfabef452d39fe` |
-| `AGENTS.md` | `382c79ffd6f2eee96c581c6f4c0ab3b6e79eb05ce743c9ba1ef695ff082be295` |
+| `AGENTS.md` | `46be4e2564cac8744e01a3c52989e25a5a9264335a96c9f2509d03bbb63232a9` |
 | `PROJECT.json` | `717b1ff9ee55f90afb6e95965210d66d655810d87df15adbb29f2a78c7b49832` |
 | `work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md` | `e7e066c50b50d97f64b53ed7bf59c8e8695ce0e62eebcac37ee51d7224268f16` |
 | `work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md` | `cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b` |
 | `PROJECT_INSTRUCTIONS.md` | `ccab8cae910e7696fb0779496499464cc68edcb522b2757a180a66ea05b6cdb8` |
-| `work/STATE.md` | `b268d99d6823b736b383da6fef28bef16291944a289c60f7b036d37ce156d872` |
+| `work/STATE.md` | `db3cfbe456917c169ae131de12a3c9e4a6d185cf3598c9c39e59f110408a0bf5` |
 | `work/notation.md` | `dbd661f7469bd54e1829d251f26f6f7e66c04bf3641c5d74426eb9ba2497d9ec` |
 | `work/DOCUMENT_MAP.md` | `18298a5dc1dfd68252d3c6c830ba1fc505eb91242da1ac5bd927f4de1422538c` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
-| `work/DECISIONS.md` | `a6bc77dec96d29674883bbf868443886087d5bbc5e2429e7b66d358110bfbfe4` |
+| `work/DECISIONS.md` | `08ef15584bf78c527566741ecb95be4fac6c2c6dec9177bbb24eb8295a43d793` |
 | `work/OPEN_QUESTIONS.md` | `b1c8b9f50765e99395dc22c27f73a84b75995fd59290b06e3bf1a08ec34ee5d4` |
 | `work/EXTERNAL_CONFLICTS.md` | `0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a` |
-| `work/v14_rebuild/FTS_v14_paper.md` | `3c6e36f36d674eec91c88fa2eb1f0a779c23e92adb5f419a77f0abe910e0945a` |
+| `work/v14_rebuild/FTS_v14_paper.md` | `e89e6e31bdd4ce5d269a13448d1c2cd0380a8c638bcbaa71045f1df4a5571722` |
 | `work/v14_rebuild/FTS_v14_register_map.md` | `fea2edd18ba7b1901530e95140d5dee39b16e2637c5f66aeb11c377a6ccae384` |
 | `work/v14_rebuild/status_patch_v14.md` | `f366b4d9534a4090483b45eb2c96720ff702e0a053395f27cda2920eb71d4ed0` |
 | `work/v14_rebuild/red_team_F3.md` | `f920f3ef3b3e3b48cc1ad667dd4112b60e82e977e5c0af04b8f59c3c85d05ed4` |
@@ -123,9 +123,9 @@
 | `work/v14_rebuild/neural_analogy_2026-09-19/REVIEW.md` | `9d5e0df0301712671d4597d936b2c8893c4b0f7a3fb7387ae0ad2510c5556ec0` |
 | `work/v14_rebuild/neural_analogy_2026-09-19/AUTHOR_MESSAGE.txt` | `63f03b5a4a98232bd431bf6f559e1adcd752eead82f9cf9760c9ed3c144332fe` |
 | `work/v14_rebuild/neural_analogy_2026-09-19/check_examples.py` | `0ec19822598e81717dfe67541a32e0147185675e976746a25a25ee1fd2b6829d` |
-| `source/MANIFEST.json` | `626aad73baa1be691337f28786d5bb4d7fecd4a5c7946d3b6ad029bd55cbeacb` |
-| `source/FTS_v13_LLM_CONTEXT.md` | `36b77a64635419bfb0c2ab78ea11e31503526d7fcc9b2411df87f59cfe85b4ff` |
-| `source/FTS_v13_LLM_FULL_DUMP.md` | `85cdffbdcef8af6457ccf9dfc529ece6da9f8190f2295eda3a78e384ee42754a` |
+| `source/MANIFEST.json` | `8ecf01bf5cb1dcf4294b2d7da7faa91f838572e1cbd716428716c7426964c610` |
+| `source/FTS_v13_LLM_CONTEXT.md` | `e0cae11f4e20a01d6d514802ec1f528bf5d95b6e4d264e9500cfccdbc0b6980e` |
+| `source/FTS_v13_LLM_FULL_DUMP.md` | `ce9806459dd2e1a27f13d733b802350d36986757679620008b60f6dd0a687c2a` |
 | `source/fts_cards.jsonl` | `eca8f43b5e09095d211201d47e407bb8dda49b14d2ae22eec271b7db788ef69f` |
 | `source/fts_triples.tsv` | `35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a` |
 
@@ -186,6 +186,7 @@ Reply in plain Russian, with examples when useful. Follow explicit language requ
 | Commands or verification | [Commands](PROJECT_INSTRUCTIONS.md#commands), [checks](PROJECT_INSTRUCTIONS.md#checks) |
 | Graph / arXiv / completing work | Sections `graph` / `arxiv` / `save` in `PROJECT_INSTRUCTIONS.md` |
 | Where to write new material | [Document map](work/DOCUMENT_MAP.md) |
+| OpenResearch (`orx`) experiment, branch `orx/*` | [Experiment contract](experiments/AGENTS.md) — read first; write only `experiments/<slug>/` |
 
 ##### Responses
 
@@ -777,6 +778,8 @@ scope-ребра и недопустимые адреса. Полный марш
 
 #### Текущая работа
 
+- **План статьи для Хабра (2026-10-16…17, ARS plan):** [PLAN_SESSION](v14_rebuild/paper_plan/PLAN_SESSION.md) — тезис и вклад словами автора, 8 глав, INSIGHT-коллекция. Журнал DN-0044…0047 (`pending`): интуиция — подделка предположения (ошибка в листе 04, У7, и в статье §4 О5), путаница ≠ подделка, смешение внутри уровня, «знаю/не знаю» на закрытых списках. 2026-10-17: гипотеза о данных быстрее света убрана (автор); DN-0044 интегрирован — релиз канона `v13_u7_counterfeit_intuition_2026-10-17` (лист 04, У7: забывание выдаётся за интуицию = предположение), статья §4 О5 исправлена; Holtzman et al. (ICLR 2020) проверено. Следующий шаг — `/ars-full` по плану. DN-0045…0047 `pending`. Статусы не менялись.
+
 - **Интеграция журнала DN-0033…0042 (2026-10-11, «из журнала»):** рабочая сводка — [dialogue_integration_2026-10-11](v14_rebuild/dialogue_integration_2026-10-11.md). Перенесено в [SOURCES](DIALOGUE_NUANCE_SOURCES.md) 9 записей; `DN-0040` остаётся `needs_author` (вопрос автору: что блокирует и дополняет x³). Новые открытые вопросы — раздел «Диалог 2026-10-10…11» в [OPEN_QUESTIONS](OPEN_QUESTIONS.md); решение — DECISIONS 2026-10-11; исправления — REFUTED 2026-10-11. `topo_chi_note` §1 — уточнение «6→7 сфера→тор» заменено растяжкой 6–9 (статус не повышен). Проверки: `verify.py --strict` 13/13 OK; полный маршрут `check_project_consistency.py` 13/13 (одно документированное ограничение). Статусы, `St_FTS`, канон не менялись.
 
 - **Сфера/тор на 6–9 (2026-10-10…11, продолжить отсюда):** образ сферы автора (основание 0, верхушка ∞) и его согласование «6 — сфера без дыр, 7 и 8 — половины дыр, 9 — замыкание» записаны в журнал `DN-0036`, `DN-0037` (`pending`). Расчёты и открытые пункты: [sphere_holes_note_2026-10-11](v14_rebuild/sphere_holes_note_2026-10-11.md), свидетель `sphere_torus_check_2026-10-11.py`. Ждут: правка `topo_chi_note` §1, проверки C-109…C-111, ответ автора «тор или тело» на 9. 2026-10-11: автор уточнил — дыры *выявляются* поворотом, отражение даёт идеализированную сферу; операция У9 — «линзирование» (3 точки + линза) — журнал `DN-0038`, `DN-0039`; разбор — заметка §5, свидетель `lens_torus_check_2026-10-11.py` (23 PASS). Главное: Морс (сёдла = дыры, 6→9 = диск→кольцо→две петли→тор); тор из МУ7∩МУ8 над {0,1,ω,ω²} шестиугольный (j=0), с поворотом на 90° (j=1728) в напряжении — за автором выбор. Вариант согласования ассистента (9 — замыкание, 9→10 — линза → cos как x² на повёрнутой сфере, 10→11 — масштаб; блоки фазы 5–9 и модуля 9–13 по пентаде §8.2) — заметка §6, свидетель `phase_modulus_check_2026-10-11.py` (28 PASS); автором не принят.
@@ -849,9 +852,9 @@ A1/A3 — возможное заимствованное объяснение �
 ярлыка принятия исправлены; статья и граф отражают происхождение и ограничения.
 Присутствие в source/ не удостоверяет авторского принятия или доказательства.
 
-Активный релиз `v13_u12_radius_free_2026-10-10`: 172 карточки,
+Активный релиз `v13_u7_counterfeit_intuition_2026-10-17` (база `v13_u12_radius_free_2026-10-10`): 172 карточки,
 384 триплета, 54 листа; 167 согласованных depends_on, циклов предпосылок — 0.
-Граф утверждений: 924 узла, 2250 рёбер; 601/601 входных канонных/авторских отношений.
+Граф утверждений: 932 узла, 2296 рёбер (пересобран 2026-10-17); 601/601 входных канонных/авторских отношений.
 По аудиту исследовательского охвата от 2026-10-03 из 212 записей 184 имеют предметный маршрут, 23 — без маршрута,
 2 — непринятая формализация, 3 — служебные. Учтены 236 Markdown-файлов,
 проверены декларации 39 основных документов; это не охват всех атомарных тезисов.
@@ -1389,7 +1392,7 @@ Tot                  список А объявлен полным ⟹ спис�
 
 | У | Уровень | ⊖A (анти-мода) | Подделка |
 |---|---------|----------------|----------|
-| 7 | Знание | Забывание `Close(W,Refuse(W))`; Sever | «интуиция» / знание |
+| 7 | Знание | Забывание `Close(W,Refuse(W))`; Sever | «интуиция» = предположение (У8), не знание [DN-0044] |
 | 8 | Предположение | Вера (отказ от вопросной формы) | «понимание» |
 | 9 | Понимание | Упрощение / оскорбление | «оценка» |
 | 10 | Оценка | Догматизм (отказ от сравнения) | «осознание Я» |
@@ -7092,6 +7095,9 @@ if __name__ == "__main__":
 - 2026-10-10 — АВТОР ПРИНЯЛ 39 ОТВЕТОВ АССИСТЕНТА ИЗ ГРУПП 4–10 (GROUPED_OPEN, 2026-10-09). Слово автора: «39 ответов я принимаю». В `OPEN_QUESTIONS.md` у 39 строк «Ответ ассистента 2026-10-09» пометка «кандидат, не принят автором» заменена на «принят автором 2026-10-10»; в `GROUPED_OPEN_2026-10-08.md` исправлены статусные строки разделов 4–10. Что это значит: приняты тексты ответов (формулировки, кандидаты тестов, оценки, указанные условия поражения). Что это не значит: статусы пунктов `[ ]/[~]/[x]` не менялись (принятие ответа ≠ закрытие вопроса, как при принятии выборов 2026-10-08), статусы канона и `St_FTS` не менялись, решения по поручению автора через консультацию (2026-10-09, семь пунктов: `oq-formulas-7-11-done`, `oq-redteam-dependent-guards`, `oq-tot-groups-8-11`, `oq-canon-star-fate`, `oq-sphere-u6-carrier`, `oq-zero-classes-chi-e`, `oq-levy-world`) остаются отмеченными как принятые по поручению, а не как отдельно проверенные автором. Остаток за автором: классификация шага 6→7 в §8.1б, единое определение «Tot = коллапс группы», различающий тест F2 для пары {6,7}.
 
 - 2026-10-11 — ИНТЕГРАЦИЯ ЖУРНАЛА DN-0033…0042 (рабочий слой; канон и статусы не менялись). (1) Автор принял как рабочее чтение: на 6 — идеализированная сфера; дыры на 7–8 выявляются поворотом, а не появляются (DN-0037/0038); на 9 — замкнутая аналоговая форма, линзирование — шаг 9→10; на 10 — идеализированный объект cos; 10→11 — масштаб (DN-0039, DN-0041, DN-0042). Источник — [dialogue_integration_2026-10-11](v14_rebuild/dialogue_integration_2026-10-11.md). (2) `topo_chi_note` §1: «6→7 сфера→тор» заменено уточнением (candidate / analogy_only, статус не повышен). (3) Перечень девяти операций (DN-0034) принят как список; соответствие шагам — открыто (`oq-nine-operations-levels`). (4) Ответ автора на вариант ассистента «я с тобой согласен» (DN-0042) принят как согласие с рабочим чтением, не как доказательство. Не закрыто, за автором: тор или тело на 9; форма тора на 9; «два замкнутых объекта»; противовес x³ (DN-0040, `needs_author`). Прежний ответ ассистента «линза собирает 9» снят (см. REFUTED).
+- 2026-10-17 — ИНТЕГРАЦИЯ DN-0044 (канон изменён; статусы не менялись). Найдено: в листе `04_7plus_minusA` столбец «Ложное повышение» строки 8–10 следует образцу «отказ У(n) выдаётся за У(n+1)» (вера→понимание, оскорбление→оценка, догматизм→осознание Я), строка 7 его нарушала («забывание/отказ ожидать выдаётся за знание или объективный ответ»). Зависимости: авторская поправка «интуиция подделка предположения» (DN-0044); слово «интуиция» в прежнем `source/` отсутствовало, в статье v14 §4 О5 стояло «"интуиция" / знание». Вывод: У7 — забывание выдаётся за интуицию = предположение (У8). Релиз `v13_u7_counterfeit_intuition_2026-10-17` (`rebuild_canon.py`, kind `author_correction`); статья §4 О5 исправлена. Не закрыто: статус пункта «догматизм → осознание Я» (автор: «спорнее и сложнее всего»); строка `U7_FORGET_V11` в LLM_CONTEXT («если отказ ожидать выдаётся за ответ или объективность») — условие поражения, не таблица подделок, не менялась.
+
+- 2026-10-14 — ЭКСПЕРИМЕНТЫ OPENRESEARCH (`orx`) В ПОДПАПКЕ `experiments/`. Решение автора: агенты OpenResearch работают в этом же репозитории, знают правила проекта и пишут в отдельную подпапку. Эксперимент orx — ветка `orx/<slug>`; контракт `experiments/AGENTS.md` (при конфликте сильнее playbook orx): запись только в `experiments/<slug>/`, результаты — candidate/overlay, статусы и `St_FTS` не повышаются, в `master` не сливать, не пушить; перенос в теорию — основная сессия по решению автора. Граница проверяется хуком `tools/hooks/pre-commit` (установлен в `.git/hooks`) и `experiments/run.py`; проверено: коммит вне `experiments/` отклонён, внутри принят, грязный путь вне границы даёт FAIL перед запуском. Команда проекта в orx: `py -3.11 -X utf8 experiments/run.py` (выбор эксперимента — файл `experiments/ACTIVE`); базовый узел — `verify.py --strict`, 13/13. Канон, статусы и статья не менялись.
 
 ### 6.2. Открытые вопросы
 
@@ -32838,9 +32844,9 @@ if __name__ == "__main__":
 
 ## 8. Компактный контекст канона v13
 
-### FTS active canonical release — v13_u12_radius_free_2026-10-10
+### FTS active canonical release — v13_u7_counterfeit_intuition_2026-10-17
 
-Release date: 2026-10-10. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-17. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 #### Reading rules
@@ -32858,7 +32864,7 @@ release was produced by a new workbook round-trip.
 
 #### Active changes
 
-Author decision 2026-10-08: U12 circle radius r is a free class parameter; M_12, ADD_U12_CIRCLE, SP_U12 updated (r=2 only a representative)
+DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
@@ -33237,9 +33243,9 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 ## 9. Полный 54-листовый дамп канона v13
 
-### FTS active canonical release — v13_u12_radius_free_2026-10-10
+### FTS active canonical release — v13_u7_counterfeit_intuition_2026-10-17
 
-Release date: 2026-10-10. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-17. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 #### Reading rules
@@ -33257,7 +33263,7 @@ release was produced by a new workbook round-trip.
 
 #### Active changes
 
-Author decision 2026-10-08: U12 circle radius r is a free class parameter; M_12, ADD_U12_CIRCLE, SP_U12 updated (r=2 only a representative)
+DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
@@ -33308,7 +33314,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | 35 | 35_Export_tsv | A1:B385 | 385 | 2 |
 | 36 | 36_Export_yaml | A1:B340 | 340 | 2 |
 | 37 | 37_Export_md | A1:F31 | 31 | 6 |
-| 38 | 38_Changelog | A1:F23 | 23 | 6 |
+| 38 | 38_Changelog | A1:F24 | 24 | 6 |
 | 39 | 39_Status_Dict | A1:E21 | 21 | 5 |
 | 40 | 40_Reader_View | A1:B12 | 12 | 2 |
 | 41 | 41_Самодостаточность | A1:D9 | 9 | 4 |
@@ -33494,7 +33500,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 | Поле | Значение | Комментарий | Внутренний лист |
 | --- | --- | --- | --- |
-| Версия | v13_u12_radius_free_2026-10-10 | Active export; historical workbook remains a provenance input. | 38_Changelog |
+| Версия | v13_u7_counterfeit_intuition_2026-10-17 | Active export; historical workbook remains a provenance input. | 38_Changelog |
 | Дата | 2026-06-10 | America/New_York current session date |  |
 | Назначение | self-contained Excel canon + U7 window cycles + χ statistical + complex branch/tensor overlays | карточки + граф + встроенный канон + U7/χ + complex/tensor overlays | 17–41 + overlays |
 | Статус | candidate replacement; not machine-checked proof | ядро −1..7 сильнее 8+; О(13..20) candidate-модуль | 39_Status_Dict |
@@ -33550,7 +33556,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | Этот лист исправляет верхние пары: не просто “Знание/Забывание”, а Знание / Забывание(отказ от ожидания) и далее. |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |
 | У | Конструктивный уровень A | −A / anti-mode нормальная запись | Что именно отказывается делать | Ложное повышение | Статус | Ч-регистр/оператор | Комментарий | Ссылка |
-| 7 | Знание / Познание / Предсказание | Забывание(закрытие ожидания отказом от ожидания) | закрывает W через Refuse(W), вместо Close(W,W); Sever — частный разрыв связи/переноса | забывание/отказ ожидать выдаётся за знание или объективный ответ | candidate_with_operational_gate | Answer(W)=Close(W,W); Forgetting(W)=Close(W,Refuse(W)); agentic K=⟨S,0_S,κ⟩ | v11: ядро У7 = оконная комбинаторика, κ/T7 = диагностический слой |  |
+| 7 | Знание / Познание / Предсказание | Забывание(закрытие ожидания отказом от ожидания) | закрывает W через Refuse(W), вместо Close(W,W); Sever — частный разрыв связи/переноса | забывание/отказ ожидать выдаётся за интуицию, то есть за предположение (У8), а не за знание [автор, 2026-10-17, DN-0044] | candidate_with_operational_gate | Answer(W)=Close(W,W); Forgetting(W)=Close(W,Refuse(W)); agentic K=⟨S,0_S,κ⟩ | v11: ядро У7 = оконная комбинаторика, κ/T7 = диагностический слой |  |
 | 8 | Предположение | Вера(отказ от вопросной формы) | отказ держать A? как вопрос; незаконное превращение A? в A | вера выдаётся за понимание/ответ | candidate_with_operational_gate | Hyp(W)=W[A?] | v11: предположение задаёт вопрос, а не даёт слабый ответ | к уровням |
 | 9 | Понимание | Упрощение, оскорбление, отказ от сложности | отказ удерживать сложность/контрфакты; фильтрация несогласного | оскорбление/упрощение выдаётся за оценку | reserved_underformalized | Analogy_κ / counterfactual structure | Исправлено: три элемента anti-mode сохранены | к уровням |
 | 10 | Сравнение, оценка | Догматизм, отказ от сравнения | отказ от метрики, сравнения, цены ошибки | догматизм выдаётся за осознание Я | reserved_underformalized | Compare_κ | Исправлено: конструктивное и anti-mode разделены | к уровням |
@@ -35307,7 +35313,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 | line_no | yaml |
 | --- | --- |
-| 1 | version: v13_u12_radius_free_2026-10-10 |
+| 1 | version: v13_u7_counterfeit_intuition_2026-10-17 |
 | 2 | self_contained: true |
 | 3 | working_rule: "Read active cards and current PROJECT_INSTRUCTIONS; historical workbook rules are provenance." |
 | 4 | embedded_archives: |
@@ -35708,6 +35714,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | v13_u7_forbid_lifted_2026-10-08 | 2026-10-08 | integrated_author_amendment_and_register_repair | МУ7: запрет y!=x*x снят автором; A_07 и U7_MATH_LOCAL_FORBID обновлены | 17/18/34/35/36 and active renderings | active |
 | v13_u7_forbid_lifted_2026-10-08b | 2026-10-08 | integrated_author_amendment_and_register_repair | МУ7 = \|y\|=x*x: с 7 противоположность входит в структуру (уточнение автора) | 17/18/34/35/36 and active renderings | active |
 | v13_u12_radius_free_2026-10-10 | 2026-10-10 | integrated_author_amendment_and_register_repair | Author decision 2026-10-08: U12 circle radius r is a free class parameter; M_12, ADD_U12_CIRCLE, SP_U12 updated (r=2 only a representative) | 17/18/34/35/36 and active renderings | active |
+| v13_u7_counterfeit_intuition_2026-10-17 | 2026-10-17 | author_correction | DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17. | 17/18/34/35/36 and active renderings | active |
 
 #### Sheet 39: `39_Status_Dict`
 

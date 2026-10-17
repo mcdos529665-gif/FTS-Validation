@@ -1,8 +1,8 @@
 {
   "source": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-10-10T13:39:30.423124Z",
-  "version": "v13_u12_radius_free_2026-10-10",
+  "exported_at_utc": "2026-10-17T15:48:46.541463Z",
+  "version": "v13_u7_counterfeit_intuition_2026-10-17",
   "sheet_count": 54,
   "sheets": [
     {
@@ -1350,7 +1350,7 @@
         ],
         [
           "Версия",
-          "v13_u12_radius_free_2026-10-10",
+          "v13_u7_counterfeit_intuition_2026-10-17",
           "Active export; historical workbook remains a provenance input.",
           "38_Changelog"
         ],
@@ -1886,7 +1886,7 @@
           "Знание / Познание / Предсказание",
           "Забывание(закрытие ожидания отказом от ожидания)",
           "закрывает W через Refuse(W), вместо Close(W,W); Sever — частный разрыв связи/переноса",
-          "забывание/отказ ожидать выдаётся за знание или объективный ответ",
+          "забывание/отказ ожидать выдаётся за интуицию, то есть за предположение (У8), а не за знание [автор, 2026-10-17, DN-0044]",
           "candidate_with_operational_gate",
           "Answer(W)=Close(W,W); Forgetting(W)=Close(W,Refuse(W)); agentic K=⟨S,0_S,κ⟩",
           "v11: ядро У7 = оконная комбинаторика, κ/T7 = диагностический слой",
@@ -15885,7 +15885,7 @@
         ],
         [
           1,
-          "version: v13_u12_radius_free_2026-10-10"
+          "version: v13_u7_counterfeit_intuition_2026-10-17"
         ],
         [
           2,
@@ -17501,8 +17501,8 @@
     {
       "name": "38_Changelog",
       "index": 38,
-      "range": "A1:F23",
-      "rows": 23,
+      "range": "A1:F24",
+      "rows": 24,
       "cols": 6,
       "values": [
         [
@@ -17686,6 +17686,14 @@
           "2026-10-10",
           "integrated_author_amendment_and_register_repair",
           "Author decision 2026-10-08: U12 circle radius r is a free class parameter; M_12, ADD_U12_CIRCLE, SP_U12 updated (r=2 only a representative)",
+          "17/18/34/35/36 and active renderings",
+          "active"
+        ],
+        [
+          "v13_u7_counterfeit_intuition_2026-10-17",
+          "2026-10-17",
+          "author_correction",
+          "DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17.",
           "17/18/34/35/36 and active renderings",
           "active"
         ]
@@ -21337,6 +21345,6 @@
       ]
     }
   ],
-  "release_kind": "integrated_author_amendment_and_register_repair",
+  "release_kind": "author_correction",
   "source_workbook_status": "historical_input_not_reissued"
 }

@@ -441,3 +441,13 @@
 - supersedes: none
 - integrated_at: 2026-10-11
 - targets: work/v14_rebuild/sphere_holes_note_2026-10-11.md §6; work/DECISIONS.md (2026-10-11); work/REFUTED.md
+
+<a id="dn-0044"></a>
+## DN-0044 · Интуиция — подделка предположения, не знания
+- recorded_at: 2026-10-17
+- author_claim:
+  > в каноне ошибка - подделка знания не интуиция, интуиция подделка предположения.
+  > Подделка - выдача отказа за вышестоящий уровень. Забывание причин выдают за интуицию, веру выдают за понимание, оскорбление выдают за оценку, принципы, догматизм - за своё я. вот последнее спорнее и сложнее всего.
+- supersedes: none
+- integrated_at: 2026-10-17
+- targets: source/ лист 04_7plus_minusA (релиз v13_u7_counterfeit_intuition_2026-10-17); work/v14_rebuild/FTS_v14_paper.md §4 О5; work/DECISIONS.md (2026-10-17); work/REFUTED.md

@@ -1,28 +1,28 @@
 {
-  "package": "v13_u12_radius_free_2026-10-10",
-  "release_kind": "integrated_author_amendment_and_register_repair",
-  "base_release": "v13_u7_forbid_lifted_2026-10-08b",
+  "package": "v13_u7_counterfeit_intuition_2026-10-17",
+  "release_kind": "author_correction",
+  "base_release": "v13_u12_radius_free_2026-10-10",
   "base_manifest_path": "work/canon_history/v13_complex_branch_overlay_2026-06-11/MANIFEST.json",
-  "canonical_update_date": "2026-10-10",
-  "canonical_update": "Author decision 2026-10-08: U12 circle radius r is a free class parameter; M_12, ADD_U12_CIRCLE, SP_U12 updated (r=2 only a representative)",
+  "canonical_update_date": "2026-10-17",
+  "canonical_update": "DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17.",
   "source_workbook": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-10-10T13:39:30.423124Z",
+  "exported_at_utc": "2026-10-17T15:48:46.541463Z",
   "files": [
     {
       "path": "FTS.yaml",
-      "size": 114208,
-      "sha256": "8ab2d4e16393b0745095ccc3d38402a061b9296434cf0023bb5e2bbc492fa014"
+      "size": 114217,
+      "sha256": "cace2aa528989607d11c2d1a2e5b9b2178ccedf414f15110dd7a7036a4491811"
     },
     {
       "path": "FTS_v13_LLM_CONTEXT.md",
-      "size": 70549,
-      "sha256": "36b77a64635419bfb0c2ab78ea11e31503526d7fcc9b2411df87f59cfe85b4ff"
+      "size": 70802,
+      "sha256": "e0cae11f4e20a01d6d514802ec1f528bf5d95b6e4d264e9500cfccdbc0b6980e"
     },
     {
       "path": "FTS_v13_LLM_FULL_DUMP.md",
-      "size": 891939,
-      "sha256": "85cdffbdcef8af6457ccf9dfc529ece6da9f8190f2295eda3a78e384ee42754a"
+      "size": 892798,
+      "sha256": "ce9806459dd2e1a27f13d733b802350d36986757679620008b60f6dd0a687c2a"
     },
     {
       "path": "INSTALL.md",
@@ -36,8 +36,8 @@
     },
     {
       "path": "START_HERE.md",
-      "size": 1807,
-      "sha256": "3c7c3b2199488543af9afeb9c1eb07c1175175814aa80a368191d69e18593220"
+      "size": 2060,
+      "sha256": "b230c11eb52dd30bf903331741643496c21c196e3e96bf9ff7d9885515092220"
     },
     {
       "path": "fts_cards.json",
@@ -66,13 +66,13 @@
     },
     {
       "path": "fts_v13_workbook_sheets.json",
-      "size": 1125403,
-      "sha256": "9ff8e13a2d521e2197ad6e6420128a03cb1fc6a66ba531bf835521248b8381b5"
+      "size": 1126072,
+      "sha256": "60b31d787bcdb0772bc0926e0908baa5269673185bb8fc10cf3eb7c1f6eb9634"
     },
     {
       "path": "sheet_index.tsv",
       "size": 1865,
-      "sha256": "fdd0356c321122248ef42f80920ad1122ade2935d6e4cb43c9a77543f8c74803"
+      "sha256": "ba92be19a94d396f37932f4f2ab62f17d8a5addcc2fc17f25104dd248714d4c7"
     }
   ],
   "counts": {
@@ -81,8 +81,8 @@
     "yaml_lines": 339,
     "sheets": 54
   },
-  "base_manifest_sha256": "f6b88c92166a8101eec094720b7b31f3b0ef4e5296adaab87e87c1d234f79d6e",
-  "base_git_commit": "b40c18e3d10eff1df81e5091dbd138b502e34b51",
+  "base_manifest_sha256": "626aad73baa1be691337f28786d5bb4d7fecd4a5c7946d3b6ad029bd55cbeacb",
+  "base_git_commit": "028cb4b99b7e09bf28c2fd1dd6f9e1ff9a55ebb8",
   "source_workbook_status": "historical_input_not_reissued",
   "active_cards_sha256": "eca8f43b5e09095d211201d47e407bb8dda49b14d2ae22eec271b7db788ef69f",
   "active_triples_sha256": "35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a",
