@@ -36,7 +36,7 @@
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
-      "sha256": "b1c8b9f50765e99395dc22c27f73a84b75995fd59290b06e3bf1a08ec34ee5d4"
+      "sha256": "032c6cc769efe877881a1113a563fdbdf715881b5f9ceb379a14584310547946"
     },
     {
       "path": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
@@ -84,7 +84,7 @@
     },
     {
       "path": "work/v14_rebuild/FTS_v14_paper.md",
-      "sha256": "e89e6e31bdd4ce5d269a13448d1c2cd0380a8c638bcbaa71045f1df4a5571722"
+      "sha256": "49a7e94400b549e37cbd3f5a9cb7a87f8bcc8ef49a632b43d5a1bdd2e0a1af07"
     },
     {
       "path": "work/v14_rebuild/addendum_2026-10-04_two_channels.md",
@@ -136,7 +136,7 @@
     },
     {
       "path": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "sha256": "30da4284f2ea45d2a6f6678c9c45009b62120e1755374104c5e166fbb4382efd"
+      "sha256": "c5342f5b34b7d7e129d6a190d8501dc972e43f5aee05e3c46ba82730383e814a"
     },
     {
       "path": "work/v14_rebuild/audit/REFERENCE_RESOLUTIONS.tsv",
@@ -9283,6 +9283,16 @@
       "source_location": "L37"
     },
     {
+      "id": "oq_oq_closed_lists_and_haste",
+      "type": "open_question",
+      "label": "oq-closed-lists-and-haste — «Закрытые списки значений» и «спешка»: на каком уровне появляется спешка, как она связана с ожиданием (У7) и закрытием окна",
+      "layer": "audit",
+      "anchor": "oq-closed-lists-and-haste",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L859"
+    },
+    {
       "id": "oq_oq_closed_object_torus_or_body",
       "type": "open_question",
       "label": "oq-closed-object-torus-or-body — «Замкнутый трёхмерный объект» на 9 (DN-0037, текст оборван): тор или тело",
@@ -9313,6 +9323,16 @@
       "source_location": "L96"
     },
     {
+      "id": "oq_oq_confusion_vs_counterfeit",
+      "type": "open_question",
+      "label": "oq-confusion-vs-counterfeit — Для каких пар уровней путаница (вложенный за верхний) и подделка (отказ за верхний) различаются явно; бывает ли путаница в обратную сторону",
+      "layer": "audit",
+      "anchor": "oq-confusion-vs-counterfeit",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L855"
+    },
+    {
       "id": "oq_oq_const_statistics_code",
       "type": "open_question",
       "label": "oq-const-statistics-code — Статистическое чтение единичной границы: «статистика константы = код» —",
@@ -9331,6 +9351,16 @@
       "oq_status": "partial",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L344"
+    },
+    {
+      "id": "oq_oq_counterfeit_dogma_self",
+      "type": "open_question",
+      "label": "oq-counterfeit-dogma-self — Статус пункта «догматизм → осознание Я» в таблице подделок (автор: «спорнее и сложнее всего»)",
+      "layer": "audit",
+      "anchor": "oq-counterfeit-dogma-self",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L861"
     },
     {
       "id": "oq_oq_d10_phase_test",
@@ -9581,6 +9611,16 @@
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L717"
+    },
+    {
+      "id": "oq_oq_mixing_within_level_rule",
+      "type": "open_question",
+      "label": "oq-mixing-within-level-rule — Правило «смешивать можно внутри уровня, через уровень нельзя»: формулировка для `notation.md`, область (все уровни или до У6), связь с «гардрейлом минимального носителя»",
+      "layer": "audit",
+      "anchor": "oq-mixing-within-level-rule",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L857"
     },
     {
       "id": "oq_oq_mod3_channel_origin",
@@ -28523,6 +28563,16 @@
       "source_location": "row:29"
     },
     {
+      "id": "oq_map_contains_oq_closed_lists_and_haste",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_closed_lists_and_haste",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:94"
+    },
+    {
       "id": "oq_map_contains_oq_closed_object_torus_or_body",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_closed_object_torus_or_body",
@@ -28543,6 +28593,16 @@
       "source_location": "row:55"
     },
     {
+      "id": "oq_map_contains_oq_confusion_vs_counterfeit",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_confusion_vs_counterfeit",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:92"
+    },
+    {
       "id": "oq_map_contains_oq_const_statistics_code",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
       "target": "oq_oq_const_statistics_code",
@@ -28561,6 +28621,16 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:3"
+    },
+    {
+      "id": "oq_map_contains_oq_counterfeit_dogma_self",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_counterfeit_dogma_self",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:95"
     },
     {
       "id": "oq_map_contains_oq_d10_phase_test",
@@ -28761,6 +28831,16 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:70"
+    },
+    {
+      "id": "oq_map_contains_oq_mixing_within_level_rule",
+      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
+      "target": "oq_oq_mixing_within_level_rule",
+      "relation": "contains",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:93"
     },
     {
       "id": "oq_map_contains_oq_mod3_channel_origin",
@@ -29623,6 +29703,36 @@
       "source_location": "row:29"
     },
     {
+      "id": "oq_oq_closed_lists_and_haste_event",
+      "source": "oq_oq_closed_lists_and_haste",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:94"
+    },
+    {
+      "id": "oq_oq_closed_lists_and_haste_meta_mp_a",
+      "source": "oq_oq_closed_lists_and_haste",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:94"
+    },
+    {
+      "id": "oq_oq_closed_lists_and_haste_program",
+      "source": "oq_oq_closed_lists_and_haste",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:94"
+    },
+    {
       "id": "oq_oq_closed_object_torus_or_body_event",
       "source": "oq_oq_closed_object_torus_or_body",
       "target": "event_e10",
@@ -29683,6 +29793,36 @@
       "source_location": "row:55"
     },
     {
+      "id": "oq_oq_confusion_vs_counterfeit_event",
+      "source": "oq_oq_confusion_vs_counterfeit",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:92"
+    },
+    {
+      "id": "oq_oq_confusion_vs_counterfeit_meta_mp_a",
+      "source": "oq_oq_confusion_vs_counterfeit",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:92"
+    },
+    {
+      "id": "oq_oq_confusion_vs_counterfeit_program",
+      "source": "oq_oq_confusion_vs_counterfeit",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:92"
+    },
+    {
       "id": "oq_oq_const_statistics_code_event",
       "source": "oq_oq_const_statistics_code",
       "target": "event_e10",
@@ -29741,6 +29881,36 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:3"
+    },
+    {
+      "id": "oq_oq_counterfeit_dogma_self_event",
+      "source": "oq_oq_counterfeit_dogma_self",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:95"
+    },
+    {
+      "id": "oq_oq_counterfeit_dogma_self_meta_mp_a",
+      "source": "oq_oq_counterfeit_dogma_self",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:95"
+    },
+    {
+      "id": "oq_oq_counterfeit_dogma_self_program",
+      "source": "oq_oq_counterfeit_dogma_self",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:95"
     },
     {
       "id": "oq_oq_d10_phase_test_event",
@@ -30421,6 +30591,36 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:70"
+    },
+    {
+      "id": "oq_oq_mixing_within_level_rule_event",
+      "source": "oq_oq_mixing_within_level_rule",
+      "target": "event_e7",
+      "relation": "planned_resolution_event",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:93"
+    },
+    {
+      "id": "oq_oq_mixing_within_level_rule_meta_mp_a",
+      "source": "oq_oq_mixing_within_level_rule",
+      "target": "meta_mp_a",
+      "relation": "grouped_by_meta_pattern",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:93"
+    },
+    {
+      "id": "oq_oq_mixing_within_level_rule_program",
+      "source": "oq_oq_mixing_within_level_rule",
+      "target": "program_rp_2",
+      "relation": "belongs_to_program",
+      "layer": "audit",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:93"
     },
     {
       "id": "oq_oq_mod3_channel_origin_event",
@@ -32569,6 +32769,18 @@
       "status_effect": "navigation only; no status change"
     },
     {
+      "id": "pa_c02_oq_closed_lists_and_haste_curated_bridge_to",
+      "source": "pattern_pa_c02",
+      "target": "oq_oq_closed_lists_and_haste",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:94",
+      "scope": "Термин «спешка» и уровень появления закрытых списков значений не определены.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
       "id": "pa_c02_oq_code_link_vs_leads_to_curated_bridge_to",
       "source": "pattern_pa_c02",
       "target": "oq_oq_code_link_vs_leads_to",
@@ -32578,6 +32790,30 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:55",
       "scope": "Не задан свидетель различения кодового соответствия и направленного «ведёт к» на переходе У2→У3.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c02_oq_confusion_vs_counterfeit_curated_bridge_to",
+      "source": "pattern_pa_c02",
+      "target": "oq_oq_confusion_vs_counterfeit",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:92",
+      "scope": "Для каких пар уровней путаница (вложенный за верхний) и подделка (отказ за верхний) различаются явно, не определено.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_c02_oq_counterfeit_dogma_self_curated_bridge_to",
+      "source": "pattern_pa_c02",
+      "target": "oq_oq_counterfeit_dogma_self",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:95",
+      "scope": "Статус пункта «догматизм → осознание Я» в таблице подделок не определён (автор: спорнее всего).",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -34474,6 +34710,18 @@
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:47",
       "scope": "Математические факты, канонные основания и операционный смысл ещё не сведены по К1–К5.",
+      "status_effect": "navigation only; no status change"
+    },
+    {
+      "id": "pa_g03_oq_mixing_within_level_rule_curated_bridge_to",
+      "source": "pattern_pa_g03",
+      "target": "oq_oq_mixing_within_level_rule",
+      "relation": "curated_bridge_to",
+      "layer": "audit",
+      "confidence": "INFERRED",
+      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
+      "source_location": "row:93",
+      "scope": "Правило «смешивать можно внутри уровня, через уровень нельзя»: формулировка и область не заданы.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -39657,8 +39905,8 @@
     "audit_claim_groups": 25,
     "audit_findings": 20,
     "patterns": 31,
-    "open_question_anchors": 111,
-    "mapped_open_questions": 90,
+    "open_question_anchors": 115,
+    "mapped_open_questions": 94,
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
     "internal_evidence_nodes": 18,
@@ -39666,8 +39914,8 @@
     "curated_research_bridges": 201,
     "project_entities": 1,
     "declared_research_scopes": 4,
-    "nodes": 932,
-    "edges": 2296,
+    "nodes": 936,
+    "edges": 2316,
     "unresolved_references": 4
   }
 }

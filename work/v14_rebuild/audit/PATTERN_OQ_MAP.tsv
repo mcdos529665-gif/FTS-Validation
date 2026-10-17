@@ -89,3 +89,7 @@ oq-lens-two-objects	open	RP-3	MP-A	PA-F08	indirect	«Два замкнутых �
 oq-closed-object-torus-or-body	open	RP-3	MP-A	PA-F08	indirect	«Замкнутый трёхмерный объект» на У9: тор или тело.	E10	author_decision	DN-0037; текст реплики оборван.
 oq-mu9-counterweight	open	RP-2	MP-A;MP-B	PA-F07	indirect	Противовес У9 (что блокирует и дополняет x³) не задан.	E7	author_decision	DN-0040; вопрос автору, ответа нет.
 oq-phase-modulus-12-15	open	RP-1	MP-A;MP-B	PA-F08;PA-C08	indirect	Уровни 12, 13, 15 в схеме блоков фазы и модуля — прогноз.	E10	formalization	DN-0041/0042; вариант §6 заметки; статус не повышен.
+oq-confusion-vs-counterfeit	open	RP-2	MP-A	PA-C02	indirect	Для каких пар уровней путаница (вложенный за верхний) и подделка (отказ за верхний) различаются явно, не определено.	E7	formalization	DN-0045; рабочее различение принято, статус не менялся.
+oq-mixing-within-level-rule	open	RP-2	MP-A	PA-G03	indirect	Правило «смешивать можно внутри уровня, через уровень нельзя»: формулировка и область не заданы.	E7	author_decision	DN-0046; явного запрета «носитель ≠ уровень» в артефактах нет.
+oq-closed-lists-and-haste	open	RP-2	MP-A	PA-C02	indirect	Термин «спешка» и уровень появления закрытых списков значений не определены.	E7	author_decision	DN-0047; вопрос автору; совпадает по смыслу с О5 и двухсписочной О3.
+oq-counterfeit-dogma-self	open	RP-2	MP-A	PA-C02	indirect	Статус пункта «догматизм → осознание Я» в таблице подделок не определён (автор: спорнее всего).	E7	author_decision	DN-0044; вопрос автору.
