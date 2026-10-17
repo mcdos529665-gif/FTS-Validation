@@ -13,8 +13,8 @@
 | 4 REVISE | готово | [habr_draft_v2.md](habr_draft_v2.md) ≈ 4200 слов; [RESPONSE_R1](RESPONSE_R1.md) |
 | 3' RE-REVIEW | Major Revision → 4′; решения автора: «1. хорошо. 2. в.» | [REVIEW_ROUND2](REVIEW_ROUND2.md): 21 закрыто, 4 частично, DA-2 CRITICAL подтверждён |
 | 4' RE-REVISE | готово | [habr_draft_v3.md](habr_draft_v3.md) ≈ 4800 слов; [RESPONSE_R2](RESPONSE_R2.md) |
-| 4.5 FINAL INTEGRITY | **PASS после исправлений — ждёт подтверждения (MANDATORY, вход в Stage 5)** | [INTEGRITY_4_5](INTEGRITY_4_5.md); итог [habr_draft_v4.md](habr_draft_v4.md) ≈ 5000 слов |
-| 5 FINALIZE | pending | Markdown |
+| 4.5 FINAL INTEGRITY | PASS после исправлений; вход в Stage 5 подтверждён автором («дальше») | [INTEGRITY_4_5](INTEGRITY_4_5.md); итог [habr_draft_v4.md](habr_draft_v4.md) ≈ 5000 слов |
+| 5 FINALIZE | **готово** | [habr_final.md](habr_final.md) — Markdown для Хабра (= v4); другие форматы не запрошены |
 | 6 PROCESS SUMMARY | pending | по желанию |
 
 ## Paper Configuration Record — черновик (IRON RULE: подтверждение автора до Phase 1)
