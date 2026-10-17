@@ -2,7 +2,7 @@
 
 Начато 2026-10-17. Вход: завершённый plan mode → [PLAN_SESSION.md](PLAN_SESSION.md).
 
-## Точка входа (ожидает подтверждения автора)
+## Состояние: **completed** (2026-10-17)
 
 | Stage | Статус | Решение |
 |---|---|---|
@@ -15,7 +15,7 @@
 | 4' RE-REVISE | готово | [habr_draft_v3.md](habr_draft_v3.md) ≈ 4800 слов; [RESPONSE_R2](RESPONSE_R2.md) |
 | 4.5 FINAL INTEGRITY | PASS после исправлений; вход в Stage 5 подтверждён автором («дальше») | [INTEGRITY_4_5](INTEGRITY_4_5.md); итог [habr_draft_v4.md](habr_draft_v4.md) ≈ 5000 слов |
 | 5 FINALIZE | **готово** | [habr_final.md](habr_final.md) — Markdown для Хабра (= v4); другие форматы не запрошены |
-| 6 PROCESS SUMMARY | pending | по желанию |
+| 6 PROCESS SUMMARY | skipped (автор: «пропустить.», 2026-10-17) | — |
 
 ## Paper Configuration Record — черновик (IRON RULE: подтверждение автора до Phase 1)
 

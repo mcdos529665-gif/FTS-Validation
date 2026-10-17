@@ -41,7 +41,7 @@
 | `work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md` | `e7e066c50b50d97f64b53ed7bf59c8e8695ce0e62eebcac37ee51d7224268f16` |
 | `work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md` | `cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b` |
 | `PROJECT_INSTRUCTIONS.md` | `ccab8cae910e7696fb0779496499464cc68edcb522b2757a180a66ea05b6cdb8` |
-| `work/STATE.md` | `9dae032392875726a23b41a1ce4f01d2f3baf69996dc1ccdce742c09a0f7c54e` |
+| `work/STATE.md` | `ecd1367245709e04c12f0d188ca985166f498a8307f03537b24ebb6e3d086938` |
 | `work/notation.md` | `dbd661f7469bd54e1829d251f26f6f7e66c04bf3641c5d74426eb9ba2497d9ec` |
 | `work/DOCUMENT_MAP.md` | `18298a5dc1dfd68252d3c6c830ba1fc505eb91242da1ac5bd927f4de1422538c` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
@@ -778,7 +778,7 @@ scope-ребра и недопустимые адреса. Полный марш
 
 #### Текущая работа
 
-- **План статьи для Хабра (2026-10-16…17, ARS plan):** [PLAN_SESSION](v14_rebuild/paper_plan/PLAN_SESSION.md) — тезис и вклад словами автора, 8 глав, INSIGHT-коллекция. Журнал DN-0044…0047 (`pending`): интуиция — подделка предположения (ошибка в листе 04, У7, и в статье §4 О5), путаница ≠ подделка, смешение внутри уровня, «знаю/не знаю» на закрытых списках. 2026-10-17: гипотеза о данных быстрее света убрана (автор); DN-0044 интегрирован — релиз канона `v13_u7_counterfeit_intuition_2026-10-17` (лист 04, У7: забывание выдаётся за интуицию = предположение), статья §4 О5 исправлена; Holtzman et al. (ICLR 2020) проверено. Следующий шаг — `/ars-full` по плану. DN-0045…0047 интегрированы ([dialogue_integration_2026-10-17](v14_rebuild/dialogue_integration_2026-10-17.md); четыре новых OQ, «спешка» — вопрос автору). Статусы не менялись.
+- **План статьи для Хабра (2026-10-16…17, ARS plan):** [PLAN_SESSION](v14_rebuild/paper_plan/PLAN_SESSION.md) — тезис и вклад словами автора, 8 глав, INSIGHT-коллекция. Журнал DN-0044…0047 (`pending`): интуиция — подделка предположения (ошибка в листе 04, У7, и в статье §4 О5), путаница ≠ подделка, смешение внутри уровня, «знаю/не знаю» на закрытых списках. 2026-10-17: гипотеза о данных быстрее света убрана (автор); DN-0044 интегрирован — релиз канона `v13_u7_counterfeit_intuition_2026-10-17` (лист 04, У7: забывание выдаётся за интуицию = предположение), статья §4 О5 исправлена; Holtzman et al. (ICLR 2020) проверено. Конвейер ARS завершён 2026-10-17: финал [habr_final.md](v14_rebuild/paper_plan/habr_final.md) (≈ 5000 слов), рецензии R1/R2, проверки целостности 2.5/4.5 — в `paper_plan/`. DN-0045…0047 интегрированы ([dialogue_integration_2026-10-17](v14_rebuild/dialogue_integration_2026-10-17.md); четыре новых OQ, «спешка» — вопрос автору). Статусы не менялись.
 
 - **Интеграция журнала DN-0033…0042 (2026-10-11, «из журнала»):** рабочая сводка — [dialogue_integration_2026-10-11](v14_rebuild/dialogue_integration_2026-10-11.md). Перенесено в [SOURCES](DIALOGUE_NUANCE_SOURCES.md) 9 записей; `DN-0040` остаётся `needs_author` (вопрос автору: что блокирует и дополняет x³). Новые открытые вопросы — раздел «Диалог 2026-10-10…11» в [OPEN_QUESTIONS](OPEN_QUESTIONS.md); решение — DECISIONS 2026-10-11; исправления — REFUTED 2026-10-11. `topo_chi_note` §1 — уточнение «6→7 сфера→тор» заменено растяжкой 6–9 (статус не повышен). Проверки: `verify.py --strict` 13/13 OK; полный маршрут `check_project_consistency.py` 13/13 (одно документированное ограничение). Статусы, `St_FTS`, канон не менялись.
 
