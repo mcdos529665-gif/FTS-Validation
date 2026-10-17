@@ -6,8 +6,8 @@
 
 | Stage | Статус | Решение |
 |---|---|---|
-| 1 RESEARCH | skip (предложено) | материал: канон ФТС + PLAN_SESSION + 2 внешних ссылки; литобзор для Хабра не нужен |
-| 2 WRITE | next | `academic-paper full` по Chapter Plan |
+| 1 RESEARCH | skipped (автор: «давай 2 этап», 2026-10-17) | материал: канон ФТС + PLAN_SESSION + 2 внешних ссылки; литобзор для Хабра не нужен |
+| 2 WRITE | **черновик готов, ждёт подтверждения** | [habr_draft_v1.md](habr_draft_v1.md): ≈ 4000 слов (план ≈ 8000), 8 глав + «О тексте» + «Источники»; стиль — мягкая калибровка [STYLE_PROFILE](STYLE_PROFILE.md) |
 | 2.5 INTEGRITY | pending | обязательна |
 | 3 REVIEW | pending | 5 рецензентов + Devil's Advocate |
 | 4 / 3' / 4' | pending | ≤ 1 круг каждого |
@@ -32,4 +32,12 @@
 | Existing Materials | Chapter Plan + INSIGHT (PLAN_SESSION.md); канон `v13_u7_counterfeit_intuition_2026-10-17`; статья v14; DN-0045…0047 (`pending`) |
 | Citation Verification | advisory (mark only, default) |
 | Mandatory inclusions | блок «О тексте»: источники, роль ИИ, конфликт интересов/финансирование — нет (предложено вместо журнальных деклараций) |
-| Style Calibration | возможна по авторскому тексту CANON_HABR из workbook (1 образец, <3 — мягкая калибровка) — ждёт решения |
+| Style Calibration | мягкая, утверждена автором 2026-10-17; образцов недостаточно (два усечённых фрагмента), см. STYLE_PROFILE |
+| PCR confirmed | неявно: автор ответил «из журнала», «давай мягкую калибровку», «давай 2 этап» (2026-10-17) |
+
+## Отклонения от протокола academic-paper full (честно)
+
+- Draft написан одним проходом основной сессией, **без** разбиения на Phase 4a/4b (contract-gated writer/evaluator), без
+  отдельных агентов `citation_compliance` и `abstract_bilingual`, без in-pair Phase 6. Эти проверки частично перенесены на Stage 2.5/3.
+- Ссылки Ackoff 1989, Rowley 2007, Hinton et al. 2015 **не верифицированы** в сессии (верифицирован только Holtzman et al.).
+- Объём ≈ 4000 слов против оценки ≈ 8000: оценка была моей, автор сказал «без ограничения».
