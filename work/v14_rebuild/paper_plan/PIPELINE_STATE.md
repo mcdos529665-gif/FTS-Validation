@@ -12,8 +12,8 @@
 | 3 REVIEW | раунд 1: Major Revision (5/5); перепроверка Opus [REVIEW_ROUND1_OPUS_CHECK](REVIEW_ROUND1_OPUS_CHECK.md); решения автора [AUTHOR_ADJUDICATION_R1](AUTHOR_ADJUDICATION_R1.md) | [REVIEW_ROUND1](REVIEW_ROUND1.md): 25 пунктов дорожной карты, 2 DA-CRITICAL подтверждены |
 | 4 REVISE | готово | [habr_draft_v2.md](habr_draft_v2.md) ≈ 4200 слов; [RESPONSE_R1](RESPONSE_R1.md) |
 | 3' RE-REVIEW | Major Revision → 4′; решения автора: «1. хорошо. 2. в.» | [REVIEW_ROUND2](REVIEW_ROUND2.md): 21 закрыто, 4 частично, DA-2 CRITICAL подтверждён |
-| 4' RE-REVISE | **готово, ждёт подтверждения** | [habr_draft_v3.md](habr_draft_v3.md) ≈ 4800 слов; [RESPONSE_R2](RESPONSE_R2.md) |
-| 4.5 FINAL INTEGRITY | pending | обязательна |
+| 4' RE-REVISE | готово | [habr_draft_v3.md](habr_draft_v3.md) ≈ 4800 слов; [RESPONSE_R2](RESPONSE_R2.md) |
+| 4.5 FINAL INTEGRITY | **PASS после исправлений — ждёт подтверждения (MANDATORY, вход в Stage 5)** | [INTEGRITY_4_5](INTEGRITY_4_5.md); итог [habr_draft_v4.md](habr_draft_v4.md) ≈ 5000 слов |
 | 5 FINALIZE | pending | Markdown |
 | 6 PROCESS SUMMARY | pending | по желанию |
 
