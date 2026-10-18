@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "source_sha256": {
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "lakefile.toml": "571b588f51d36d12a7ed88bd16a26ba002ffd2d25ad9f2dccad9225b54eef6f9",
+    "proofs.tsv": "ad81ad1edac95ff02f0651f0b1137ba227dfd892fa446797dad1f5b4bada72da",
+    "FTS/Boundaries.lean": "e15bb3121f01ca6497d078a4e0b0bccb6ea0b90d94129acff1f349691e494e81",
+    "FTS.lean": "769873e405b46c2e0369cc3e3e4d988cfb21fba1dc7fc0c25a06c29c4a1c1069",
+    "lake-manifest.json": "e1688239fe8d39057a98556581f1a84abf589dc388659f3461a9cc81db7cd6c4"
+  },
+  "python_verification_sha256": "59f318f6cb9811c442d1e350b29c479bd55b0d08b8a04dc53557f0a20f32c422",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "proofs": [
+    {
+      "check_id": "C01",
+      "theorem": "FTS.antiform_eq_iff_zero",
+      "module": "FTS/Boundaries.lean",
+      "domain": "ℝ",
+      "statement": "a = -a ↔ a = 0",
+      "source": "work/v14_rebuild/verification.py#verify_c01",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "lean_type": "∀ a : ℝ, a = -a ↔ a = 0",
+      "status": "PASS",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "check_id": "C03",
+      "theorem": "FTS.abs_reflection",
+      "module": "FTS/Boundaries.lean",
+      "domain": "ℝ",
+      "statement": "|(-x)| = |x|",
+      "source": "work/v14_rebuild/verification.py#verify_c03",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "lean_type": "∀ x : ℝ, |(-x)| = |x|",
+      "status": "PASS",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "check_id": "C04",
+      "theorem": "FTS.abs_fiber",
+      "module": "FTS/Boundaries.lean",
+      "domain": "ℝ",
+      "statement": "|a| = |b| ↔ a = b ∨ a = -b",
+      "source": "work/v14_rebuild/verification.py#verify_c04",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "lean_type": "∀ a b : ℝ, |a| = |b| ↔ a = b ∨ a = -b",
+      "status": "PASS",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "check_id": "C09",
+      "theorem": "FTS.square_branch_collision",
+      "module": "FTS/Boundaries.lean",
+      "domain": "ℝ",
+      "statement": "1² = (-1)² ∧ 1 ≠ -1",
+      "source": "work/v14_rebuild/verification.py#verify_c09",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "lean_type": "(1 : ℝ) ^ 2 = (-1 : ℝ) ^ 2 ∧ (1 : ℝ) ≠ -1",
+      "status": "PASS",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "check_id": "C49",
+      "theorem": "FTS.square_idempotents",
+      "module": "FTS/Boundaries.lean",
+      "domain": "ℝ",
+      "statement": "x² = x ↔ x = 0 ∨ x = 1",
+      "source": "work/v14_rebuild/verification.py#verify_c49",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "lean_type": "∀ x : ℝ, x ^ 2 = x ↔ x = 0 ∨ x = 1",
+      "status": "PASS",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "scope": "Only the listed real mathematical predicates; no semantic or St_FTS promotion."
+}

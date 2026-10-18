@@ -49,6 +49,7 @@ Reply in plain Russian, with examples when useful. Follow explicit language requ
 | Canon revision | [Replacement procedure](PROJECT_INSTRUCTIONS.md#canon) |
 | Evidence / status / FAIL | [Status procedure](PROJECT_INSTRUCTIONS.md#status) |
 | Substantive mathematical conclusion | [Wolfram check](PROJECT_INSTRUCTIONS.md#wolfram) |
+| Lean formal proof or changing a covered predicate | [Lean procedure](PROJECT_INSTRUCTIONS.md#lean), `work/v14_rebuild/lean/README.md` |
 | External scientific grounding | [Academic research](PROJECT_INSTRUCTIONS.md#academic) |
 | Commands or verification | [Commands](PROJECT_INSTRUCTIONS.md#commands), [checks](PROJECT_INSTRUCTIONS.md#checks) |
 | Graph / arXiv / completing work | Sections `graph` / `arxiv` / `save` in `PROJECT_INSTRUCTIONS.md` |

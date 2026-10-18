@@ -36,18 +36,18 @@
 | `work/v14_rebuild/window_groupings/FANO_RESULTS.json` | `fcce36e624945a21ad027a34ae5262d308e84b660976d2469364af67be736ea1` |
 | `work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md` | `199488f1139b2ec8d3823b74b76612156ec71616b47d8ce8c82e549b2411fc1d` |
 | `work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md` | `19afe2091bf88f86cff205feaba0f0c496c702a638da4efa67bfabef452d39fe` |
-| `AGENTS.md` | `34caee408508241edaa8b030cc73e62728a8d1c05aca74d075a3e5625b483217` |
+| `AGENTS.md` | `f09a7544b5e5490456cf3c8b3ed2df58a7479eec59ddaa4761ba6aa5b6b98d6f` |
 | `PROJECT.json` | `717b1ff9ee55f90afb6e95965210d66d655810d87df15adbb29f2a78c7b49832` |
 | `work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md` | `e7e066c50b50d97f64b53ed7bf59c8e8695ce0e62eebcac37ee51d7224268f16` |
 | `work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md` | `cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b` |
-| `PROJECT_INSTRUCTIONS.md` | `789969c83ffcb24596d498e6c6d3925758503418adfc25108249ee0e3a4f8675` |
-| `work/STATE.md` | `8f52a64d0045a4faf95a713cb0a29411edb6a3332bf183cdc44585374c7e860a` |
+| `PROJECT_INSTRUCTIONS.md` | `312748242dc10c63f0b4835ef32d7dec94e3f2c8f29ee5bc80bc875bb41ca4f3` |
+| `work/STATE.md` | `5ca0a22d97eb554013bfba0d4c2756b37c84598c93e2e6a8c6f9d8ea5940a4aa` |
 | `work/notation.md` | `f92d153ddbcae9159e206698e1f7344830476d94bdbf40c9660e70982516d87d` |
-| `work/DOCUMENT_MAP.md` | `d9277d76821567f44e5b1e1d244f33a0ef094b318389f867a03d864671f3bdf2` |
+| `work/DOCUMENT_MAP.md` | `d4ff2d575bdadf9b7663485f957fd70ca8f4e048b22ec752d74d52e392648fea` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
-| `work/DECISIONS.md` | `aa890b3642ca91f0063841048acc156f631cfa3db979bc66a3fc0086868c55f9` |
+| `work/DECISIONS.md` | `f400baaf00839f8c905726c7e70750fe37220d2905f1ac51e0cc7116eca18400` |
 | `work/OPEN_QUESTIONS.md` | `e2246f9c476434c4d67c0dcd0b1e013650b6b36ceada0241db667462a6ebc6bb` |
 | `work/EXTERNAL_CONFLICTS.md` | `0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a` |
 | `work/v14_rebuild/FTS_v14_paper.md` | `6cf33ee6572fda0ab5668d3131d34322bcfce998518b2fa8602942716a96c554` |
@@ -184,6 +184,7 @@ Reply in plain Russian, with examples when useful. Follow explicit language requ
 | Canon revision | [Replacement procedure](PROJECT_INSTRUCTIONS.md#canon) |
 | Evidence / status / FAIL | [Status procedure](PROJECT_INSTRUCTIONS.md#status) |
 | Substantive mathematical conclusion | [Wolfram check](PROJECT_INSTRUCTIONS.md#wolfram) |
+| Lean formal proof or changing a covered predicate | [Lean procedure](PROJECT_INSTRUCTIONS.md#lean), `work/v14_rebuild/lean/README.md` |
 | External scientific grounding | [Academic research](PROJECT_INSTRUCTIONS.md#academic) |
 | Commands or verification | [Commands](PROJECT_INSTRUCTIONS.md#commands), [checks](PROJECT_INSTRUCTIONS.md#checks) |
 | Graph / arXiv / completing work | Sections `graph` / `arxiv` / `save` in `PROJECT_INSTRUCTIONS.md` |
@@ -379,6 +380,26 @@ and status remain with the primary model. Do not delegate an incomplete packet.
 Wait at most 60 seconds total for the external Wolfram call; then stop the worker
 and record `provider_timeout → inconclusive`, without an automatic retry.
 
+<a id="lean"></a>
+##### Lean proofs
+
+The live Lean package is `work/v14_rebuild/lean/`; run `tools/lean.py check`.
+It is a mandatory gate in the full consistency route. Installation is explicit:
+`tools/lean.py setup`; Windows tools, dependencies, caches and build workspaces
+default to `E:/Codex/tools/lean`. Read its README before extending the package.
+
+When changing a predicate already in `proofs.tsv`, update the corresponding Lean
+theorem and exact type, rerun the check, explicitly refresh the saved result and
+rebuild affected graph/export derivatives. For a new exact mathematical claim,
+assess whether a Lean formalization is appropriate and record the actual coverage.
+A successful check requires the declared type and an accepted axiom audit;
+`sorry`, custom assumptions used as axioms, and unlisted axioms cannot substitute
+for proof. This proves only the formal predicate in its stated domain; the
+informal-to-formal translation, FTS role and evidential promotion remain separate.
+Unchanged predicates already verified do not require another CAS run solely
+because their Lean proofs are added. The existing Wolfram procedure still applies
+when an independent CAS witness is needed.
+
 <a id="academic"></a>
 ##### Academic research
 
@@ -411,6 +432,8 @@ use **`-X utf8`** to avoid `UnicodeEncodeError`.
 ```
 python -X utf8 tools/check_project_consistency.py       # Full consistency route, including C63..C99 and windows table
 python -X utf8 tools/verify.py                          # Canon SHA256 integrity; must have 0 mismatch
+python -X utf8 tools/lean.py setup                      # Explicit one-time Lean/Mathlib setup on E:
+python -X utf8 tools/lean.py check                      # Kernel proofs + exact types + axiom audit
 python -X utf8 tools/query.py stats                     # Card counts by type/status
 python -X utf8 tools/query.py card U_07                 # Card and incoming/outgoing edges
 python -X utf8 tools/query.py context U_07 1            # Card and neighbours for session context
@@ -806,6 +829,8 @@ scope-ребра и недопустимые адреса. Полный марш
 
 #### Текущая работа
 
+- **Lean (2026-10-18):** встроен [пакет формальных доказательств](v14_rebuild/lean/README.md): C01/C03/C04/C09/C49 над ℝ, точные типы и аудит аксиом. Lean v4.35.0 и Mathlib закреплены; окружение и кеши — E:/Codex/tools/lean. tools/lean.py check входит в полный маршрут как lean_proofs; свидетельство — verification_result.json и LEAN_CNN в графе. Следующее расширение — формализация следующих точных предикатов по мере необходимости; смысловые статусы ФТС сохранены.
+
 - **Кандидаты в канон (2026-10-18):** правило автора «если нет альтернативы — писать в канон» закреплено в AGENTS.md, PROJECT_INSTRUCTIONS.md#canon, карточке CANON_NO_ALTERNATIVE. Принято 94 предложения (CP_NNN) и 64 прежние карточки; новый релиз v13_candidates_no_alternative_2026-10-18. Все 214 решений и оставшиеся развилки — [CANONIZATION](v14_rebuild/candidates_register_2026-10-15/CANONIZATION_2026-10-18.md). canonical_adopted — ось принятия; доказательные St_FTS/evidence_status сохранены. Следующий содержательный шаг — выбор между перечисленными альтернативами и закрытие проверочных обязательств.
 
 - **План статьи для Хабра (2026-10-16…17, ARS plan):** [PLAN_SESSION](v14_rebuild/paper_plan/PLAN_SESSION.md) — тезис и вклад словами автора, 8 глав, INSIGHT-коллекция. Журнал DN-0044…0047 (`pending`): интуиция — подделка предположения (ошибка в листе 04, У7, и в статье §4 О5), путаница ≠ подделка, смешение внутри уровня, «знаю/не знаю» на закрытых списках. 2026-10-17: гипотеза о данных быстрее света убрана (автор); DN-0044 интегрирован — релиз канона `v13_u7_counterfeit_intuition_2026-10-17` (лист 04, У7: забывание выдаётся за интуицию = предположение), статья §4 О5 исправлена; Holtzman et al. (ICLR 2020) проверено. Конвейер ARS завершён 2026-10-17: финал [habr_final.md](v14_rebuild/paper_plan/habr_final.md) (≈ 5000 слов), рецензии R1/R2, проверки целостности 2.5/4.5 — в `paper_plan/`. DN-0045…0047 интегрированы ([dialogue_integration_2026-10-17](v14_rebuild/dialogue_integration_2026-10-17.md); четыре новых OQ, «спешка» — вопрос автору). Статусы не менялись.
@@ -885,7 +910,7 @@ A1/A3 — возможное заимствованное объяснение �
 
 Активный релиз `v13_candidates_no_alternative_2026-10-18` (база `v13_u7_counterfeit_intuition_2026-10-17`): 268 карточек,
 543 триплета, 54 листа; 168 согласованных depends_on, циклов предпосылок — 0.
-Граф утверждений: 1130 узлов, 2735 рёбер (пересобран 2026-10-18); 761/761 входных канонных/авторских отношений.
+Граф утверждений: 1143 узла, 2751 ребро (пересобран 2026-10-18); 761/761 входных канонных/авторских отношений.
 По аудиту исследовательского охвата от 2026-10-03 из 212 записей 184 имеют предметный маршрут, 23 — без маршрута,
 2 — непринятая формализация, 3 — служебные. Учтены 236 Markdown-файлов,
 проверены декларации 39 основных документов; это не охват всех атомарных тезисов.
@@ -3233,6 +3258,7 @@ following a link does not require loading neighbouring documents.
 | Status promotion | [status_patch_v14.md](v14_rebuild/status_patch_v14.md) and SP card | Promotion conditions; separate mathematical/semantic axes |
 | Canonical admission without alternatives | [Decision and complete inventory](v14_rebuild/candidates_register_2026-10-15/CANONIZATION_2026-10-18.md) | Rule in PROJECT_INSTRUCTIONS#canon; 127 research + 87 card decisions, canonical CP_NNN records, retained evidence axes |
 | Machine derivatives | `claim_graph/`, `export/` | Update with standard generators after changes to working source documents |
+| Lean mathematical proofs | [Lean package](v14_rebuild/lean/README.md) | Exact C-check predicates, pinned Lean/Mathlib, proofs.tsv, saved SHA256-bound result; command tools/lean.py check |
 | Earlier document versions | `state_history/`, `notation_history/`, `instruction_history/`, Git | Transfer/recovery history; read when verifying an earlier version |
 
 <a id="куда-отнесены-разделы-прежней-нотации"></a>
@@ -7162,6 +7188,8 @@ if __name__ == "__main__":
 - 2026-10-15 — ПРИНЯТЫ 10 КАНДИДАТОВ ИЗ РЕЕСТРА ПО ПОРУЧЕНИЮ АВТОРА. Слово автора: «мы создали кандидатный список. прими те, которые не создают противоречий и при этом решают определенные проблемы». Выбор сделан ассистентом по поручению (как 2026-10-09), это рабочее принятие, не независимая авторская оценка и не повышение статуса; `source/`, `St_FTS`, статья, `verification.py` не менялись. Критерии: нет противоречия с действующими карточками, `A_07`, REFUTED, DECISIONS и нет открытой конкурирующей альтернативы; решает названную проблему (OQ, пробел, мостовое обязательство); есть проверенное ядро или протокол/определение с условием поражения. Принято (с областью): CP-001 двухканальное чтение (У7 — только ветвь `−x²`); CP-004 МУ8 = `y²=|x|`, табличная `√|x|` — её Tot; CP-006 окно 7–9 ↔ способы решения иррациональных уравнений (без устаревшего обоснования `y≠x²`); CP-007 протокол гейта У7–У9; CP-072 «свобода от кода» как вопрос, не факторизуемый через код; CP-073 степень интерпретации при У3→У2 и метод проверки; CP-074 информационное ядро QuestionGain и `Dec_q`; CP-099 `0_A*(ℓ)=⟨A,ℓ,m,p,w⟩`; CP-100 Lift в Set (`X×R`, секция `r₀`, прирост `∄q:ρ=q∘π`); CP-123 ядро «Виета как нижняя тень пары». Не принято из-за противоречия или конкурирующего выбора: CP-002 (новое напряжение: крест У4 содержит `−|x|`, а правило 2026-10-08 исключает противоположность до МУ7 — OQ `oq-mu4-cross-opposite-rule`), CP-008 (кроме уже принятой части DN-0036), CP-009, CP-010, CP-016, CP-095, CP-097, CP-127 (H1 противоречит `A_07`), CP-087 (ждёт правки порогов по решению 5), CP-084/085, CP-015/059, CP-054/058; остальные — нет явного прогресса или опоры. Подробно: [ACCEPTANCE_2026-10-15](v14_rebuild/candidates_register_2026-10-15/ACCEPTANCE_2026-10-15.md); в реестре ось `delegated_accepted`, согласованность решений проверяет `build_register.py --check`. Новый OQ внесён в `PATTERN_OQ_MAP.tsv`; производные пересобраны стандартными генераторами: `claim_graph` (933 узла, 2301 ребро, идемпотентен), выгрузка `build_research_export.py --rebuild-package` (была устаревшей ещё до 2026-10-15); `check_project_consistency` 13/13.
 
 - 2026-10-18 — КАНОНИЧЕСКОЕ ПРИНЯТИЕ БЕЗ АЛЬТЕРНАТИВ. Поручение автора: «перевести всех кандидатов без альтернативных в канон. записать правило - если нет альтернативы писать в канон». Правило закреплено в AGENTS.md и PROJECT_INSTRUCTIONS#canon, карточка CANON_NO_ALTERNATIVE. Из 127 предложений принято 94, из 87 прежних карточек — 64; все 214 решений с причинами и областями — [CANONIZATION](v14_rebuild/candidates_register_2026-10-15/CANONIZATION_2026-10-18.md). Реальная запись в source/: CP_NNN, status=canonical_adopted; прежний St_FTS/evidence_status и происхождение сохранены. 56 записей оставлены из-за явного выбора, конфликта, замены, пустого TBD либо исторического назначения. SP_CANON_NO_ALTERNATIVE_20261018 фиксирует авторское принятие, не доказательное повышение; гипотезы и протоколы сохраняют тип. Релиз v13_candidates_no_alternative_2026-10-18, база v13_u7_counterfeit_intuition_2026-10-17.
+
+- 2026-10-18 — LEAN В ПРОЕКТЕ. Поручение автора: «Ты можешь встроить lean в проект?». Добавлен work/v14_rebuild/lean: Lean v4.35.0, Mathlib 56a005855ea17e0b0958f73ec801ae140b0a1679, закреплённые зависимости. Пять неизменённых математических ядер C01/C03/C04/C09/C49 доказаны над ℝ; сборка, точные типы и аудит аксиом прошли. Разрешены propext, Classical.choice, Quot.sound; sorryAx и пользовательские аксиомы запрещены. lean_proofs — обязательная 14-я проверка полного маршрута. Установка/кеши/сборка на E:/Codex/tools/lean; ручная загрузка официального архива Lean сверена по SHA256 893fde3f52b48c647e3edcf33844cbb61f8ef70fcd88e0536bfc83f29844081e. Свидетельство — verification_result.json, граф LEAN_CNN → lean_kernel_20261018. Повторный CAS для неизменённых предикатов не запускался; семантика, канон и St_FTS не повышены.
 
 ### 6.2. Открытые вопросы
 

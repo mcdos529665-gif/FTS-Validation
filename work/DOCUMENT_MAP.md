@@ -31,6 +31,7 @@ following a link does not require loading neighbouring documents.
 | Status promotion | [status_patch_v14.md](v14_rebuild/status_patch_v14.md) and SP card | Promotion conditions; separate mathematical/semantic axes |
 | Canonical admission without alternatives | [Decision and complete inventory](v14_rebuild/candidates_register_2026-10-15/CANONIZATION_2026-10-18.md) | Rule in PROJECT_INSTRUCTIONS#canon; 127 research + 87 card decisions, canonical CP_NNN records, retained evidence axes |
 | Machine derivatives | `claim_graph/`, `export/` | Update with standard generators after changes to working source documents |
+| Lean mathematical proofs | [Lean package](v14_rebuild/lean/README.md) | Exact C-check predicates, pinned Lean/Mathlib, proofs.tsv, saved SHA256-bound result; command tools/lean.py check |
 | Earlier document versions | `state_history/`, `notation_history/`, `instruction_history/`, Git | Transfer/recovery history; read when verifying an earlier version |
 
 <a id="куда-отнесены-разделы-прежней-нотации"></a>

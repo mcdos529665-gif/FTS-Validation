@@ -161,6 +161,26 @@ and status remain with the primary model. Do not delegate an incomplete packet.
 Wait at most 60 seconds total for the external Wolfram call; then stop the worker
 and record `provider_timeout → inconclusive`, without an automatic retry.
 
+<a id="lean"></a>
+## Lean proofs
+
+The live Lean package is `work/v14_rebuild/lean/`; run `tools/lean.py check`.
+It is a mandatory gate in the full consistency route. Installation is explicit:
+`tools/lean.py setup`; Windows tools, dependencies, caches and build workspaces
+default to `E:/Codex/tools/lean`. Read its README before extending the package.
+
+When changing a predicate already in `proofs.tsv`, update the corresponding Lean
+theorem and exact type, rerun the check, explicitly refresh the saved result and
+rebuild affected graph/export derivatives. For a new exact mathematical claim,
+assess whether a Lean formalization is appropriate and record the actual coverage.
+A successful check requires the declared type and an accepted axiom audit;
+`sorry`, custom assumptions used as axioms, and unlisted axioms cannot substitute
+for proof. This proves only the formal predicate in its stated domain; the
+informal-to-formal translation, FTS role and evidential promotion remain separate.
+Unchanged predicates already verified do not require another CAS run solely
+because their Lean proofs are added. The existing Wolfram procedure still applies
+when an independent CAS witness is needed.
+
 <a id="academic"></a>
 ## Academic research
 
@@ -193,6 +213,8 @@ use **`-X utf8`** to avoid `UnicodeEncodeError`.
 ```
 python -X utf8 tools/check_project_consistency.py       # Full consistency route, including C63..C99 and windows table
 python -X utf8 tools/verify.py                          # Canon SHA256 integrity; must have 0 mismatch
+python -X utf8 tools/lean.py setup                      # Explicit one-time Lean/Mathlib setup on E:
+python -X utf8 tools/lean.py check                      # Kernel proofs + exact types + axiom audit
 python -X utf8 tools/query.py stats                     # Card counts by type/status
 python -X utf8 tools/query.py card U_07                 # Card and incoming/outgoing edges
 python -X utf8 tools/query.py context U_07 1            # Card and neighbours for session context

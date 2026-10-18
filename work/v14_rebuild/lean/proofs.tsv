@@ -1,0 +1,6 @@
+check_id	theorem	module	domain	statement	source	status_effect	lean_type
+C01	FTS.antiform_eq_iff_zero	FTS/Boundaries.lean	ℝ	a = -a ↔ a = 0	work/v14_rebuild/verification.py#verify_c01	kernel_checked_math_only; no St_FTS promotion	∀ a : ℝ, a = -a ↔ a = 0
+C03	FTS.abs_reflection	FTS/Boundaries.lean	ℝ	|(-x)| = |x|	work/v14_rebuild/verification.py#verify_c03	kernel_checked_math_only; no St_FTS promotion	∀ x : ℝ, |(-x)| = |x|
+C04	FTS.abs_fiber	FTS/Boundaries.lean	ℝ	|a| = |b| ↔ a = b ∨ a = -b	work/v14_rebuild/verification.py#verify_c04	kernel_checked_math_only; no St_FTS promotion	∀ a b : ℝ, |a| = |b| ↔ a = b ∨ a = -b
+C09	FTS.square_branch_collision	FTS/Boundaries.lean	ℝ	1² = (-1)² ∧ 1 ≠ -1	work/v14_rebuild/verification.py#verify_c09	kernel_checked_math_only; no St_FTS promotion	(1 : ℝ) ^ 2 = (-1 : ℝ) ^ 2 ∧ (1 : ℝ) ≠ -1
+C49	FTS.square_idempotents	FTS/Boundaries.lean	ℝ	x² = x ↔ x = 0 ∨ x = 1	work/v14_rebuild/verification.py#verify_c49	kernel_checked_math_only; no St_FTS promotion	∀ x : ℝ, x ^ 2 = x ↔ x = 0 ∨ x = 1

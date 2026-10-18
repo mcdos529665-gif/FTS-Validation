@@ -9,7 +9,7 @@ python -X utf8 tools/check_project_consistency.py
 ```
 
 The command reads the project without repairing `source/` or rebuilding the graph,
-review package, or Graphify navigation. Exit `0` means all eleven required checks
+review package, or Graphify navigation. Exit `0` means all required checks
 passed; exit `1` means an error or a required check not run. `--verbose` shows full
 output; `--json` returns the same collected result as JSON. `--only <id>` is partial
 diagnosis, not a full verdict.
@@ -19,6 +19,7 @@ diagnosis, not a full verdict.
 | `canon_manifest` | `python -X utf8 tools/verify.py --strict` | SHA256/size of every active `source/` file; no unaccounted files | 0: all accounted for; 1: missing/mismatch/extra; 2: no MANIFEST. Writes nothing. |
 | `claim_graph` | `python -X utf8 tools/claim_graph.py validate --idempotent` | Directed edges, types, locators, all SHA256 inputs including `OPEN_QUESTIONS.md`, canonical assertion/parallel-predicate coverage, research claims/bridges, deterministic build | 0: PASS; nonzero: structural error or missing/changed/unaccounted input. Writes nothing. |
 | `formal_suite` | `python -X utf8 work/v14_rebuild/verification.py` | Exact paper predicates C01–C62 | `0`: all PASS; `1`: FAIL; `2`: ERROR/NOT_RUN. Writes a short `verification_report.md` on PASS and detailed diagnostics for negative outcomes. |
+| `lean_proofs` | `python -X utf8 tools/lean.py check` | Lean kernel proofs for C01/C03/C04/C09/C49 over ℝ; exact types, pinned dependencies, allowed axioms | 0: PASS; nonzero: required proof/environment check failed. Run `tools/lean.py setup` once; tools/cache/workspace are on E:. |
 | `candidate_c63` | `python -X utf8 work/v14_rebuild/verification_c63.py` | Candidate predicates C63–C76 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
 | `candidate_c77` | `python -X utf8 work/v14_rebuild/verification_c77.py` | Candidate predicates C77–C84 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |
 | `candidate_c85` | `python -X utf8 work/v14_rebuild/verification_c85.py` | Candidate predicates C85–C92 within each script's stated scope | 0: all PASS; 1: FAIL. Prints results; writes nothing. |

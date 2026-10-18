@@ -60,6 +60,12 @@ CHECKS: tuple[Check, ...] = (
         (),
     ),
     Check(
+        "lean_proofs",
+        "Lean: точные вещественные предикаты и аудит аксиом",
+        "tools/lean.py",
+        ("check",),
+    ),
+    Check(
         "candidate_c63",
         "кандидатные предикаты C63–C76 в области локальных проверок",
         "work/v14_rebuild/verification_c63.py",

@@ -152,7 +152,7 @@
     },
     {
       "path": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
-      "sha256": "125741becd817fe57addcc0cfbf52ee39285e7cc846505f6af858de9daa90d49"
+      "sha256": "e4789d2591ccd9f7e8feaca50c7f5a90f2968e4d63ee242e05dac49f50a8a6e1"
     },
     {
       "path": "work/v14_rebuild/d10_phase/PREREGISTRATION.md",
@@ -289,6 +289,14 @@
     {
       "path": "work/v14_rebuild/external_bridge_u1_u5.md",
       "sha256": "3ae0b6af574a3928bbe34fe4d52b5b04c096547a164f5a95ab135e3455643ed3"
+    },
+    {
+      "path": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "sha256": "e15bb3121f01ca6497d078a4e0b0bccb6ea0b90d94129acff1f349691e494e81"
+    },
+    {
+      "path": "work/v14_rebuild/lean/verification_result.json",
+      "sha256": "53f1d1c9df5ba8cd510834e8b9ef2ed1440bf8af8b4508054a42c773458d93ac"
     },
     {
       "path": "work/v14_rebuild/neural_skeleton_research_2026-09-15/CONSIDERATION_BRIEF.md",
@@ -3039,6 +3047,61 @@
       "status_effect": "stored_only; no automatic promotion",
       "source_file": "source/fts_cards.jsonl",
       "source_location": "card:F5"
+    },
+    {
+      "id": "assessment_lean_c01",
+      "type": "status_assessment",
+      "label": "LEAN_C01: kernel_checked",
+      "layer": "research",
+      "status_text": "kernel_checked",
+      "status_axis": "St_math",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.antiform_eq_iff_zero"
+    },
+    {
+      "id": "assessment_lean_c03",
+      "type": "status_assessment",
+      "label": "LEAN_C03: kernel_checked",
+      "layer": "research",
+      "status_text": "kernel_checked",
+      "status_axis": "St_math",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.abs_reflection"
+    },
+    {
+      "id": "assessment_lean_c04",
+      "type": "status_assessment",
+      "label": "LEAN_C04: kernel_checked",
+      "layer": "research",
+      "status_text": "kernel_checked",
+      "status_axis": "St_math",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.abs_fiber"
+    },
+    {
+      "id": "assessment_lean_c09",
+      "type": "status_assessment",
+      "label": "LEAN_C09: kernel_checked",
+      "layer": "research",
+      "status_text": "kernel_checked",
+      "status_axis": "St_math",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.square_branch_collision"
+    },
+    {
+      "id": "assessment_lean_c49",
+      "type": "status_assessment",
+      "label": "LEAN_C49: kernel_checked",
+      "layer": "research",
+      "status_text": "kernel_checked",
+      "status_axis": "St_math",
+      "status_effect": "research status only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.square_idempotents"
     },
     {
       "id": "assessment_m_00_status",
@@ -10818,6 +10881,71 @@
       "source_location": "row:26"
     },
     {
+      "id": "claim_lean_c01",
+      "type": "claim",
+      "label": "LEAN_C01 — ∀ a : ℝ, a = -a ↔ a = 0",
+      "layer": "research",
+      "claim_id": "LEAN_C01",
+      "granularity": "statement",
+      "scope": "Exact real mathematical kernel of C01",
+      "status_axis": "St_math",
+      "status_text": "kernel_checked",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.antiform_eq_iff_zero"
+    },
+    {
+      "id": "claim_lean_c03",
+      "type": "claim",
+      "label": "LEAN_C03 — ∀ x : ℝ, |(-x)| = |x|",
+      "layer": "research",
+      "claim_id": "LEAN_C03",
+      "granularity": "statement",
+      "scope": "Exact real mathematical kernel of C03",
+      "status_axis": "St_math",
+      "status_text": "kernel_checked",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.abs_reflection"
+    },
+    {
+      "id": "claim_lean_c04",
+      "type": "claim",
+      "label": "LEAN_C04 — ∀ a b : ℝ, |a| = |b| ↔ a = b ∨ a = -b",
+      "layer": "research",
+      "claim_id": "LEAN_C04",
+      "granularity": "statement",
+      "scope": "Exact real mathematical kernel of C04",
+      "status_axis": "St_math",
+      "status_text": "kernel_checked",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.abs_fiber"
+    },
+    {
+      "id": "claim_lean_c09",
+      "type": "claim",
+      "label": "LEAN_C09 — (1 : ℝ) ^ 2 = (-1 : ℝ) ^ 2 ∧ (1 : ℝ) ≠ -1",
+      "layer": "research",
+      "claim_id": "LEAN_C09",
+      "granularity": "statement",
+      "scope": "Exact real mathematical kernel of C09",
+      "status_axis": "St_math",
+      "status_text": "kernel_checked",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.square_branch_collision"
+    },
+    {
+      "id": "claim_lean_c49",
+      "type": "claim",
+      "label": "LEAN_C49 — ∀ x : ℝ, x ^ 2 = x ↔ x = 0 ∨ x = 1",
+      "layer": "research",
+      "claim_id": "LEAN_C49",
+      "granularity": "statement",
+      "scope": "Exact real mathematical kernel of C49",
+      "status_axis": "St_math",
+      "status_text": "kernel_checked",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.square_idempotents"
+    },
+    {
       "id": "claim_neural_t2_scaffold",
       "type": "claim",
       "label": "NEURAL_T2_SCAFFOLD — ФТС имеет достаточные компонентные и первые интегральные основания, чтобы рассматриваться как кандидатный функциональный scaffold для искусственных нейронных архитектур.",
@@ -11734,6 +11862,20 @@
       "source_file": "work/v14_rebuild/FTS_v14_paper.md"
     },
     {
+      "id": "doc_work_v14_rebuild_lean_fts_boundaries_lean",
+      "type": "source_document",
+      "label": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "layer": "research",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean"
+    },
+    {
+      "id": "doc_work_v14_rebuild_lean_verification_result_json",
+      "type": "source_document",
+      "label": "work/v14_rebuild/lean/verification_result.json",
+      "layer": "internal_research",
+      "source_file": "work/v14_rebuild/lean/verification_result.json"
+    },
+    {
       "id": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_consideration_brief_md",
       "type": "source_document",
       "label": "work/v14_rebuild/neural_skeleton_research_2026-09-15/CONSIDERATION_BRIEF.md",
@@ -12528,6 +12670,19 @@
       "source_file": "work/v14_rebuild/neural_skeleton_research_2026-09-15/INTERNAL_EVIDENCE.md",
       "source_location": "L24",
       "limitation": "см. документ и локатор; результат ограничен заявленной средой"
+    },
+    {
+      "id": "evidence_internal_lean_kernel_20261018",
+      "type": "internal_evidence",
+      "label": "lean_kernel_20261018 — Lean kernel: C01/C03/C04/C09/C49",
+      "layer": "internal_research",
+      "evidence_id": "lean_kernel_20261018",
+      "evidence_kind": "lean_kernel_proof",
+      "scope": "Five exact real predicates registered in proofs.tsv; Lean v4.35.0, pinned Mathlib",
+      "limitation": "Formal translation reviewed locally; trusted pinned Mathlib artifacts; no proof of FTS semantics",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "source_file": "work/v14_rebuild/lean/verification_result.json",
+      "source_location": "proofs; source_sha256; allowed_axioms"
     },
     {
       "id": "evidence_internal_neural_symbolic_gate_control",
@@ -16102,6 +16257,81 @@
     }
   ],
   "edges": [
+    {
+      "id": "LEAN-B-C01",
+      "source": "claim_lean_c01",
+      "target": "evidence_internal_lean_kernel_20261018",
+      "relation": "verified_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/lean/verification_result.json",
+      "source_location": "FTS.antiform_eq_iff_zero",
+      "scope": "∀ a : ℝ, a = -a ↔ a = 0",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "rationale": "Live Lean build, exact type check and transitive axiom audit; Python origin work/v14_rebuild/verification.py#verify_c01",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:203"
+    },
+    {
+      "id": "LEAN-B-C03",
+      "source": "claim_lean_c03",
+      "target": "evidence_internal_lean_kernel_20261018",
+      "relation": "verified_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/lean/verification_result.json",
+      "source_location": "FTS.abs_reflection",
+      "scope": "∀ x : ℝ, |(-x)| = |x|",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "rationale": "Live Lean build, exact type check and transitive axiom audit; Python origin work/v14_rebuild/verification.py#verify_c03",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:204"
+    },
+    {
+      "id": "LEAN-B-C04",
+      "source": "claim_lean_c04",
+      "target": "evidence_internal_lean_kernel_20261018",
+      "relation": "verified_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/lean/verification_result.json",
+      "source_location": "FTS.abs_fiber",
+      "scope": "∀ a b : ℝ, |a| = |b| ↔ a = b ∨ a = -b",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "rationale": "Live Lean build, exact type check and transitive axiom audit; Python origin work/v14_rebuild/verification.py#verify_c04",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:205"
+    },
+    {
+      "id": "LEAN-B-C09",
+      "source": "claim_lean_c09",
+      "target": "evidence_internal_lean_kernel_20261018",
+      "relation": "verified_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/lean/verification_result.json",
+      "source_location": "FTS.square_branch_collision",
+      "scope": "(1 : ℝ) ^ 2 = (-1 : ℝ) ^ 2 ∧ (1 : ℝ) ≠ -1",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "rationale": "Live Lean build, exact type check and transitive axiom audit; Python origin work/v14_rebuild/verification.py#verify_c09",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:206"
+    },
+    {
+      "id": "LEAN-B-C49",
+      "source": "claim_lean_c49",
+      "target": "evidence_internal_lean_kernel_20261018",
+      "relation": "verified_by",
+      "layer": "research_bridge",
+      "confidence": "CURATED",
+      "source_file": "work/v14_rebuild/lean/verification_result.json",
+      "source_location": "FTS.square_idempotents",
+      "scope": "∀ x : ℝ, x ^ 2 = x ↔ x = 0 ∨ x = 1",
+      "status_effect": "kernel_checked_math_only; no St_FTS promotion",
+      "rationale": "Live Lean build, exact type check and transitive axiom audit; Python origin work/v14_rebuild/verification.py#verify_c49",
+      "registry_file": "work/v14_rebuild/claim_graph/RESEARCH_CLAIM_BRIDGES.tsv",
+      "registry_location": "row:207"
+    },
     {
       "id": "NB-001",
       "source": "claim_neural_t2_scaffold",
@@ -36612,6 +36842,111 @@
       "source_location": "L24"
     },
     {
+      "id": "lean_c01_documented_in",
+      "source": "claim_lean_c01",
+      "target": "doc_work_v14_rebuild_lean_fts_boundaries_lean",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.antiform_eq_iff_zero"
+    },
+    {
+      "id": "lean_c01_has_status",
+      "source": "claim_lean_c01",
+      "target": "assessment_lean_c01",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.antiform_eq_iff_zero",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "lean_c03_documented_in",
+      "source": "claim_lean_c03",
+      "target": "doc_work_v14_rebuild_lean_fts_boundaries_lean",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.abs_reflection"
+    },
+    {
+      "id": "lean_c03_has_status",
+      "source": "claim_lean_c03",
+      "target": "assessment_lean_c03",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.abs_reflection",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "lean_c04_documented_in",
+      "source": "claim_lean_c04",
+      "target": "doc_work_v14_rebuild_lean_fts_boundaries_lean",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.abs_fiber"
+    },
+    {
+      "id": "lean_c04_has_status",
+      "source": "claim_lean_c04",
+      "target": "assessment_lean_c04",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.abs_fiber",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "lean_c09_documented_in",
+      "source": "claim_lean_c09",
+      "target": "doc_work_v14_rebuild_lean_fts_boundaries_lean",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.square_branch_collision"
+    },
+    {
+      "id": "lean_c09_has_status",
+      "source": "claim_lean_c09",
+      "target": "assessment_lean_c09",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.square_branch_collision",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
+      "id": "lean_c49_documented_in",
+      "source": "claim_lean_c49",
+      "target": "doc_work_v14_rebuild_lean_fts_boundaries_lean",
+      "relation": "documented_in",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.square_idempotents"
+    },
+    {
+      "id": "lean_c49_has_status",
+      "source": "claim_lean_c49",
+      "target": "assessment_lean_c49",
+      "relation": "has_status",
+      "layer": "research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/lean/FTS/Boundaries.lean",
+      "source_location": "FTS.square_idempotents",
+      "status_effect": "research status only; no St_FTS promotion"
+    },
+    {
       "id": "neural_doc_contains_nn_e01",
       "source": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_evidence_matrix_tsv",
       "target": "evidence_external_neural_nn_e01",
@@ -45429,6 +45764,16 @@
       "status_effect": "declared objective; no automatic claim assignment"
     },
     {
+      "id": "research_evidence_contains_lean_kernel_20261018",
+      "source": "doc_work_v14_rebuild_lean_verification_result_json",
+      "target": "evidence_internal_lean_kernel_20261018",
+      "relation": "contains",
+      "layer": "internal_research",
+      "confidence": "EXTRACTED",
+      "source_file": "work/v14_rebuild/claim_graph/RESEARCH_EVIDENCE.tsv",
+      "source_location": "row:18"
+    },
+    {
       "id": "research_evidence_contains_neural_symbolic_gate_control",
       "source": "doc_work_v14_rebuild_neural_skeleton_research_2026_09_15_gate_control_results_md",
       "target": "evidence_internal_neural_symbolic_gate_control",
@@ -49583,13 +49928,13 @@
     "mapped_open_questions": 95,
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
-    "internal_evidence_nodes": 18,
-    "research_claims": 37,
-    "curated_research_bridges": 201,
+    "internal_evidence_nodes": 19,
+    "research_claims": 42,
+    "curated_research_bridges": 206,
     "project_entities": 1,
     "declared_research_scopes": 4,
-    "nodes": 1130,
-    "edges": 2735,
+    "nodes": 1143,
+    "edges": 2751,
     "unresolved_references": 4
   }
 }
