@@ -543,6 +543,8 @@ def build_graph() -> dict[str, Any]:
             layer,
             card_id=card.get("id"),
             status=card.get("status"),
+            evidence_status=card.get("evidence_status", card.get("status")),
+            canonical_membership=card.get("canonical_membership"),
             tags=card.get("tags", []),
             text=card.get("text", ""),
             source_file=rel(card_path),
@@ -559,7 +561,7 @@ def build_graph() -> dict[str, Any]:
                          f"card:{card['id']}:adoption_source",
                          scope=card["adoption_scope"],
                          status_effect="author provenance/adoption clarification; no evidence promotion")
-        status_value = card.get("status") or card.get("author_status") or "unknown"
+        status_value = card.get("St_FTS") or card.get("status") or card.get("author_status") or "unknown"
         if layer == "author_canon":
             status_value = card.get("author_status") or card.get("status") or "unknown"
             status_value = f"{status_value}; evidence_status={card.get('evidence_status', 'unknown')}"
@@ -572,6 +574,7 @@ def build_graph() -> dict[str, Any]:
             status_text=status_value,
             status_axis="author_status" if layer == "author_canon" else "St_FTS",
             status_effect="stored_only; no automatic promotion",
+            canonical_status=card.get("status") if card.get("canonical_membership") else None,
             source_file=rel(card_path),
             source_location=f"card:{card['id']}",
         )

@@ -1,28 +1,28 @@
 {
-  "package": "v13_u7_counterfeit_intuition_2026-10-17",
-  "release_kind": "author_correction",
-  "base_release": "v13_u12_radius_free_2026-10-10",
+  "package": "v13_candidates_no_alternative_2026-10-18",
+  "release_kind": "author_rule_canon_admission",
+  "base_release": "v13_u7_counterfeit_intuition_2026-10-17",
   "base_manifest_path": "work/canon_history/v13_complex_branch_overlay_2026-06-11/MANIFEST.json",
-  "canonical_update_date": "2026-10-17",
-  "canonical_update": "DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17.",
+  "canonical_update_date": "2026-10-18",
+  "canonical_update": "Правило автора: нет альтернативы — писать в канон; 94 предложения и 64 карточки приняты с сохранением доказательных осей; 56 записей оставлены с причинами.",
   "source_workbook": "ФТС_табличный_канон_v13_complex_branch_overlay.xlsx",
   "source_sha256": "32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6",
-  "exported_at_utc": "2026-10-17T15:48:46.541463Z",
+  "exported_at_utc": "2026-10-18T09:54:06.300423Z",
   "files": [
     {
       "path": "FTS.yaml",
-      "size": 114217,
-      "sha256": "cace2aa528989607d11c2d1a2e5b9b2178ccedf414f15110dd7a7036a4491811"
+      "size": 489023,
+      "sha256": "1d060505300fb40ad5fba44463542025575516e9c4e790ddd8e68fb71565af60"
     },
     {
       "path": "FTS_v13_LLM_CONTEXT.md",
-      "size": 70802,
-      "sha256": "e0cae11f4e20a01d6d514802ec1f528bf5d95b6e4d264e9500cfccdbc0b6980e"
+      "size": 70826,
+      "sha256": "38db3f3f8261c6e296b3268128fae237c4e86022f4bf9a893563e816e2a58ded"
     },
     {
       "path": "FTS_v13_LLM_FULL_DUMP.md",
-      "size": 892798,
-      "sha256": "ce9806459dd2e1a27f13d733b802350d36986757679620008b60f6dd0a687c2a"
+      "size": 2095031,
+      "sha256": "6953829e7f4d0d108a1958fa97903bac0af5948c3e25f00923a6b492d1feefb4"
     },
     {
       "path": "INSTALL.md",
@@ -36,56 +36,56 @@
     },
     {
       "path": "START_HERE.md",
-      "size": 2060,
-      "sha256": "b230c11eb52dd30bf903331741643496c21c196e3e96bf9ff7d9885515092220"
+      "size": 2509,
+      "sha256": "4859a867f43cd045caa3c0c36e8c2502514ee3659a6012824b716523521eacde"
     },
     {
       "path": "fts_cards.json",
-      "size": 124305,
-      "sha256": "07d48719970b3174ab78caddc1d4e04f3374057fc53654781cc29af7bb6184cd"
+      "size": 517216,
+      "sha256": "5914547a4801fa43e1971f559b49f37d1271b5e61e8532a8300dbc6785a71837"
     },
     {
       "path": "fts_cards.jsonl",
-      "size": 106600,
-      "sha256": "eca8f43b5e09095d211201d47e407bb8dda49b14d2ae22eec271b7db788ef69f"
+      "size": 481021,
+      "sha256": "3fa1ba95612df9a3d921139e1bf38c61b6e938853ffae2c253dad13e57eb64a0"
     },
     {
       "path": "fts_cards_table.tsv",
-      "size": 90574,
-      "sha256": "fcbdaf9f6e2f18c1b406353deae4f41beb849488b99886776bb4b26b422bb118"
+      "size": 462126,
+      "sha256": "5ab1e580a6e6c15d67b52a19640df5e62e29194608d12b5f12aeff086ca677c3"
     },
     {
       "path": "fts_graph_full.tsv",
-      "size": 76155,
-      "sha256": "510d82953f25487bc349c3e2c84130a6eceb997f6ad617b6c7bc78316c3f08ae"
+      "size": 149990,
+      "sha256": "a8c0e8b1ebccb0a9ee07f3d244c6b9046ef058933c66e7523e9339c9a98cd454"
     },
     {
       "path": "fts_triples.tsv",
-      "size": 13505,
-      "sha256": "35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a"
+      "size": 21338,
+      "sha256": "c16b98c4115faa6375681541d6cb53813e76b09a590713daa40c331ab3b53215"
     },
     {
       "path": "fts_v13_workbook_sheets.json",
-      "size": 1126072,
-      "sha256": "60b31d787bcdb0772bc0926e0908baa5269673185bb8fc10cf3eb7c1f6eb9634"
+      "size": 2413497,
+      "sha256": "fc0bfcbdfefad79b767512bbdeb65e8c164e79d196274b439c513f34fe8f2244"
     },
     {
       "path": "sheet_index.tsv",
       "size": 1865,
-      "sha256": "ba92be19a94d396f37932f4f2ab62f17d8a5addcc2fc17f25104dd248714d4c7"
+      "sha256": "bdf19606a580ca838ba7e1fc2d226e9fb7205861303cde2355712d67dff01bfb"
     }
   ],
   "counts": {
-    "cards": 172,
-    "triples": 384,
-    "yaml_lines": 339,
+    "cards": 268,
+    "triples": 543,
+    "yaml_lines": 435,
     "sheets": 54
   },
-  "base_manifest_sha256": "626aad73baa1be691337f28786d5bb4d7fecd4a5c7946d3b6ad029bd55cbeacb",
-  "base_git_commit": "028cb4b99b7e09bf28c2fd1dd6f9e1ff9a55ebb8",
+  "base_manifest_sha256": "8ecf01bf5cb1dcf4294b2d7da7faa91f838572e1cbd716428716c7426964c610",
+  "base_git_commit": "f2657ae61b0d1938d791e204cdf79cef565f561a",
   "source_workbook_status": "historical_input_not_reissued",
-  "active_cards_sha256": "eca8f43b5e09095d211201d47e407bb8dda49b14d2ae22eec271b7db788ef69f",
-  "active_triples_sha256": "35ec769737da5f6c2aee5e60999a86c3f3fb4bc7bcb26a7bbf5dcbccd6b5ce3a",
+  "active_cards_sha256": "3fa1ba95612df9a3d921139e1bf38c61b6e938853ffae2c253dad13e57eb64a0",
+  "active_triples_sha256": "c16b98c4115faa6375681541d6cb53813e76b09a590713daa40c331ab3b53215",
   "merged_parent_commits": [
     "e521e2006cacbd6b91b34377e26bc49bf02bcce6",
     "930878a6dacfaf53cc1b96126b27c170bbda1f9f"

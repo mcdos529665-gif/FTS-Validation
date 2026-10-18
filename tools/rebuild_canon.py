@@ -81,6 +81,21 @@ def rebuild(release: str, date: str, description: str,
             row['register'] = card.get('register', 'author' if card.get('author_status') else 'A' if card['id']=='A_07' else 'M')
             standard = {'id', 'type', 'title', 'symbol', 'text', 'status', 'path', 'internal_ref', 'depends_on', 'tags'}
             row['notes'] = json.dumps({key:value for key,value in card.items() if key not in standard}, ensure_ascii=False)
+        elif card.get('canonical_membership'):
+            adoption_fields = {key: card[key] for key in (
+                'canonical_membership', 'canonical_rule', 'canonical_date', 'previous_status',
+                'St_FTS', 'evidence_status', 'author_status', 'adoption_source', 'adoption_scope',
+                'revision_condition') if key in card}
+            note = row.get('notes', '')
+            try:
+                metadata = json.loads(note)
+            except (ValueError, TypeError):
+                metadata = None
+            if isinstance(metadata, dict):
+                metadata.update(adoption_fields)
+                row['notes'] = json.dumps(metadata, ensure_ascii=False)
+            else:
+                row['notes'] = note.split(' | canonical_adoption=', 1)[0] + ' | canonical_adoption=' + json.dumps(adoption_fields, ensure_ascii=False)
         rows.append(row)
     write_text(table_path, tsv(rows, fields))
     write_text(SOURCE / 'fts_cards.json', json.dumps(cards, ensure_ascii=False, indent=2) + '\n')
@@ -102,6 +117,7 @@ def rebuild(release: str, date: str, description: str,
                        status=by_id.get(triple['subject'], {}).get('status', 'stored_assertion'),
                        comment=description)
             used_ids.add(row['graph_id']); next_id += 1
+        row['status'] = by_id.get(triple['subject'], {}).get('status', row.get('status', 'stored_assertion'))
         graph_rows.append(row)
     write_text(graph_path, tsv(graph_rows, graph_fields))
     yaml_path = SOURCE / 'FTS.yaml'
@@ -178,6 +194,14 @@ AC-2026-10-03 adds the exact finite triple/five/seven window families, with auth
 and editorial statuses retained. Intersections do not automatically define carriers.
 
 Cards: {len(cards)}. Triples: {len(triples)}. Sheets: {len(book['sheets'])}.
+
+Author rule (2026-10-18): a substantive proposal without an explicit competing
+alternative is admitted to canon. `canonical_adopted` records author admission;
+read `St_FTS` / `evidence_status` for the retained evidential assessment. This is
+not `canonical_strict`, proof, or empirical confirmation. Read `adoption_scope`
+and source restrictions. Historical candidate wording in sheets/research is
+superseded only on the admission axis by the active card; limitations remain.
+Decision: `SP_CANON_NO_ALTERNATIVE_20261018`; rule: `CANON_NO_ALTERNATIVE`.
 '''
     full = reading + '\n## Sheet index\n\n' + table([index_fields] + [[row[key] for key in index_fields] for row in index_rows])+'\n'
     for sheet in book['sheets']:

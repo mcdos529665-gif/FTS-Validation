@@ -57,6 +57,8 @@ def fmt(c):
             + f"\n  type={c.get('type')}  status={c.get('status')}"
             + (f"  deps={c['depends_on']}" if c.get('depends_on') else "")
             + (f"  tags={c.get('tags')}" if c.get('tags') else "")
+            + (f"\n  St_FTS={c['St_FTS']}" if 'St_FTS' in c else "")
+            + (f"\n  Область принятия: {c['adoption_scope']}" if c.get('canonical_membership') else "")
             + f"\n  {c.get('text','')}")
 
 

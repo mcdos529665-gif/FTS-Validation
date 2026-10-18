@@ -1,5 +1,12 @@
 # Audited v14 status patch
 
+**2026-10-18:** the author's [canon-admission rule](../../PROJECT_INSTRUCTIONS.md#canon)
+introduces `canonical_adopted` for proposals without alternatives. Historical
+tables below describe evidence and semantic verification; they do not veto that
+author admission. Read the preserved assessment from `St_FTS` / `evidence_status`
+on admitted cards. No `canonical_strict` or evidential promotion is assigned by
+the rule. [Complete admission decisions](candidates_register_2026-10-15/CANONIZATION_2026-10-18.md).
+
 This is a conservative proposal for a future v14 workbook export. It does not
 edit the v13 canon in `source/`. The audit confirmed canon integrity
 (`13 ok / 0 missing / 0 mismatch`) and 62 mathematical checks, but no new semantic

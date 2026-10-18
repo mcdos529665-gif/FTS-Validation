@@ -1,9 +1,12 @@
 # Реестр кандидатных предложений ФТС (2026-10-15)
 
-Статус: рабочий слой (candidate / overlay), не `canonical_strict`. Канон (`source/`), `St_FTS`, статусы
-карточек, статья и `verification.py` **не менялись**. Реестр ничего не повышает, не принимает за автора и не
-доказывает: предложения ассистента автору не приписываются, а принятие автора, математическая проверка и
-эмпирика остаются разными осями. Все ссылки — на первоисточники; при расхождении побеждает первоисточник.
+Обновлено 2026-10-18: **94 предложения и 64 прежние карточки приняты в канон**
+по правилу автора «если нет альтернативы — писать в канон».
+[Решение и области](CANONIZATION_2026-10-18.md), [все 214 решений](dispositions_2026-10-18.tsv).
+У принятых записей `status=canonical_adopted`; доказательная ось `St_FTS` и ограничения сохранены.
+Дальнейший текст хранит происхождение и прежние оценки. Историческая пометка «кандидат» в первичном
+исследовании не отменяет нового канонического принятия; точную область читать в активной карточке.
+Принятие автора, математическая проверка и эмпирика остаются разными осями.
 
 > Это файл-сборник. Добавлять новые предложения сюда не нужно: первичное место каждого — в тематическом
 > документе (`DOCUMENT_MAP.md`, «Research on a specific question»). Реестр только собирает, группирует и
@@ -41,7 +44,7 @@
 |---|---|---|
 | Происхождение | кто сформулировал предложение (автор / ассистент / другая модель / внешнее) | принято ли оно |
 | Авторская ось | принял ли автор: как рабочее чтение, как текст ответа, делегировал выбор, ждёт решения | что предложение верно или доказано |
-| Статус в источнике | слова самого документа (`candidate`, `[наблюд.]`, `needs_author`, …) | повышение статуса — только через `SP_*` и К1–К5 |
+| Статус в источнике | прежняя оценка и новое `canonical_adopted`, где применимо | доказательное повышение — через `SP_*` и К1–К5; каноническое принятие — по правилу 2026-10-18 |
 | Проверки | какие C-NN / WF / G60 / свидетели относятся к математическому ядру | смысл уровня и принадлежность ФТС: проверка фиксирует математику (FAIL ≠ контрпример, PASS ≠ повышение) |
 
 Пометка `[внешнее]` в источниках означает общую математику или литературу; соответствие ФТС в таких строках —
@@ -61,22 +64,22 @@
 
 ## 1. Сводка
 
-Строк реестра (исследовательский слой): **127** в 9 группах. Карточек канона со статусом кандидата: **87** в 14 семействах. Файлов `work/` со словом «кандидат»: 116 (94 использованы как источники строк, 22 исключены с причиной).
+Строк реестра (исследовательский слой): **127** в 9 группах. Карточек канона со статусом кандидата: **87** в 14 семействах. Файлов `work/` со словом «кандидат»: 128 (94 использованы как источники строк, 34 исключены с причиной).
 
-Авторская ось (сколько строк в каждой группе): `авт.` — сформулировано автором; `смеш.` — тезис автора + формализация ассистента; `делег.` — выбор делегирован ассистенту; `раб.` — принято автором как рабочее чтение; `текст` — принят текст ответа ассистента; `поруч.` — принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md); `нет` — не принято автором; `ждёт` — ждёт решения автора.
+Авторская ось (сколько строк в каждой группе): `канон` — канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md); `авт.` — сформулировано автором; `смеш.` — тезис автора + формализация ассистента; `делег.` — выбор делегирован ассистенту; `раб.` — принято автором как рабочее чтение; `текст` — принят текст ответа ассистента; `поруч.` — принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md); `нет` — не принято автором; `ждёт` — ждёт решения автора.
 
-| Группа | Куда относится | Строк | авт. | смеш. | делег. | раб. | текст | поруч. | нет | ждёт |
-|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| [G1](#g1) Нижняя лестница: формы и каналы (МУ2–МУ9) | математическая лестница МУ2–МУ9, нижние СУ/ЛУ2–7 | 15 | · | 7 | 1 | · | · | 4 | 2 | 1 |
-| [G2](#g2) Окна, номера и арифметические симметрии | семейства окон (длины 3…25), номера уровней, знаковое умножение окон | 18 | 1 | 4 | · | · | · | · | 13 | · |
-| [G3](#g3) Верхние уровни 8–17: формы, группы, операторы | МУ/СУ8–17, узлы 11 и 15, паспорта П6 | 17 | · | · | · | 5 | 9 | · | 3 | · |
-| [G4](#g4) Сфера, дыры, тор, линза (МУ6–МУ13) | геометрическая линия 6→13, операции симметрии, Tot | 22 | 2 | · | · | 9 | 1 | · | 10 | · |
-| [G5](#g5) Семантика переходов: код, вопрос, интерпретация, ресурс У7 | СУ1–СУ11, переходы, проекции, пентада | 25 | 2 | 4 | · | 3 | 3 | 4 | 8 | 1 |
-| [G6](#g6) Логика ЛУ и М-регистр | логическая лестница ЛУ0–ЛУ13, грамматика М+Ч | 8 | 1 | · | · | 1 | · | · | 6 | · |
-| [G7](#g7) Отсутствие, Lift и внешние формальные мосты | оператор Lift, типизированное отсутствие 0_A, мост Blackwell, определения-пробелы | 6 | · | · | · | · | · | 2 | 4 | · |
-| [G8](#g8) Эмпирические и операциональные протоколы | проверки ролей (фаза, рефлексия), предрегистрации | 3 | · | 1 | · | · | · | · | 2 | · |
-| [G9](#g9) Кандидаты статьи §11.3 и паттерны PA-C | раздел статьи «Оставлено кандидатами» и атлас закономерностей | 13 | · | · | · | · | · | · | 13 | · |
-| **Итого** | | **127** | **6** | **16** | **1** | **18** | **13** | **10** | **61** | **2** |
+| Группа | Куда относится | Строк | канон | авт. | смеш. | делег. | раб. | текст | поруч. | нет | ждёт |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| [G1](#g1) Нижняя лестница: формы и каналы (МУ2–МУ9) | математическая лестница МУ2–МУ9, нижние СУ/ЛУ2–7 | 15 | 8 | · | 4 | · | · | · | · | 2 | 1 |
+| [G2](#g2) Окна, номера и арифметические симметрии | семейства окон (длины 3…25), номера уровней, знаковое умножение окон | 18 | 15 | · | · | · | · | · | · | 3 | · |
+| [G3](#g3) Верхние уровни 8–17: формы, группы, операторы | МУ/СУ8–17, узлы 11 и 15, паспорта П6 | 17 | 14 | · | · | · | 1 | 1 | · | 1 | · |
+| [G4](#g4) Сфера, дыры, тор, линза (МУ6–МУ13) | геометрическая линия 6→13, операции симметрии, Tot | 22 | 12 | 1 | · | · | 1 | 1 | · | 7 | · |
+| [G5](#g5) Семантика переходов: код, вопрос, интерпретация, ресурс У7 | СУ1–СУ11, переходы, проекции, пентада | 25 | 21 | · | 1 | · | · | · | · | 2 | 1 |
+| [G6](#g6) Логика ЛУ и М-регистр | логическая лестница ЛУ0–ЛУ13, грамматика М+Ч | 8 | 4 | · | · | · | · | · | · | 4 | · |
+| [G7](#g7) Отсутствие, Lift и внешние формальные мосты | оператор Lift, типизированное отсутствие 0_A, мост Blackwell, определения-пробелы | 6 | 4 | · | · | · | · | · | · | 2 | · |
+| [G8](#g8) Эмпирические и операциональные протоколы | проверки ролей (фаза, рефлексия), предрегистрации | 3 | 3 | · | · | · | · | · | · | · | · |
+| [G9](#g9) Кандидаты статьи §11.3 и паттерны PA-C | раздел статьи «Оставлено кандидатами» и атлас закономерностей | 13 | 13 | · | · | · | · | · | · | · | · |
+| **Итого** | | **127** | **94** | **1** | **5** | **0** | **2** | **2** | **0** | **21** | **2** |
 
 Строки, которые источники прямо помечают как ждущие автора: CP-015, CP-085. Остальные вопросы «за автором» — в разделе 7.
 
@@ -90,16 +93,16 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `U_07` | level | candidate_with_operational_gate | U_06 | CP-001, CP-006, CP-007, CP-015, CP-030, CP-031, CP-034, CP-050, CP-051, CP-053, CP-063, CP-083, CP-084, CP-085, CP-090, CP-114 |
-| `M_07` | minimal_expression | candidate_with_operational_gate | U_06 | CP-005, CP-084, CP-085, CP-092, CP-094, CP-095 |
-| `CH_07` | private_expression | candidate_with_operational_gate | U7_WINDOW_CORE, OP_WindowClose, OP_AgenticGate | CP-084, CP-085, CP-086, CP-094 |
-| `U_08` | level | candidate_with_operational_gate | U_07 | CP-004, CP-006, CP-007, CP-009, CP-015, CP-033, CP-045, CP-047, CP-051, CP-053, CP-078, CP-082, CP-114 |
+| `U_07` | level | canonical_adopted | U_06 | CP-001, CP-006, CP-007, CP-015, CP-030, CP-031, CP-034, CP-050, CP-051, CP-053, CP-063, CP-083, CP-084, CP-085, CP-090, CP-114 |
+| `M_07` | minimal_expression | canonical_adopted | U_06 | CP-005, CP-084, CP-085, CP-092, CP-094, CP-095 |
+| `CH_07` | private_expression | canonical_adopted | U7_WINDOW_CORE, OP_WindowClose, OP_AgenticGate | CP-084, CP-085, CP-086, CP-094 |
+| `U_08` | level | canonical_adopted | U_07 | CP-004, CP-006, CP-007, CP-009, CP-015, CP-033, CP-045, CP-047, CP-051, CP-053, CP-078, CP-082, CP-114 |
 | `M_08` | minimal_expression | candidate_with_operational_gate | — | CP-004, CP-095 |
-| `CH_08` | private_expression | candidate_with_operational_gate | — | — |
-| `U_09` | level | FTS_candidate | U_08 | CP-006, CP-007, CP-010, CP-011, CP-015, CP-033, CP-034, CP-047, CP-051, CP-053, CP-054, CP-055, CP-056, CP-057, CP-059, CP-064, CP-067, CP-068, CP-089, CP-090, CP-114 |
+| `CH_08` | private_expression | canonical_adopted | — | — |
+| `U_09` | level | canonical_adopted | U_08 | CP-006, CP-007, CP-010, CP-011, CP-015, CP-033, CP-034, CP-047, CP-051, CP-053, CP-054, CP-055, CP-056, CP-057, CP-059, CP-064, CP-067, CP-068, CP-089, CP-090, CP-114 |
 | `M_09` | minimal_expression | FTS_candidate | — | CP-010, CP-011, CP-095 |
-| `CH_09` | private_expression | FTS_candidate | — | — |
-| `A_07` | mathematical_expression | candidate_with_operational_gate | U_06, U7_MATH_LOCAL_FORBID | CP-004, CP-008, CP-015, CP-050, CP-054 |
+| `CH_09` | private_expression | canonical_adopted | — | — |
+| `A_07` | mathematical_expression | canonical_adopted | U_06, U7_MATH_LOCAL_FORBID | CP-004, CP-008, CP-015, CP-050, CP-054 |
 
 ### FAM-L10-11 · Уровни 10–11
 
@@ -107,12 +110,12 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `U_10` | level | reserved_underformalized | U_09 | CP-033, CP-047, CP-051, CP-055, CP-056, CP-057, CP-060, CP-068, CP-069, CP-109, CP-114 |
+| `U_10` | level | canonical_adopted | U_09 | CP-033, CP-047, CP-051, CP-055, CP-056, CP-057, CP-060, CP-068, CP-069, CP-109, CP-114 |
 | `M_10` | minimal_expression | reserved_underformalized | — | CP-095 |
-| `CH_10` | private_expression | reserved_underformalized | — | — |
-| `U_11` | level | reserved_underformalized | U_10 | CP-014, CP-033, CP-035, CP-040, CP-047, CP-051, CP-056, CP-057, CP-062, CP-064, CP-070, CP-106, CP-114 |
+| `CH_10` | private_expression | canonical_adopted | — | — |
+| `U_11` | level | canonical_adopted | U_10 | CP-014, CP-033, CP-035, CP-040, CP-047, CP-051, CP-056, CP-057, CP-062, CP-064, CP-070, CP-106, CP-114 |
 | `M_11` | minimal_expression | reserved_underformalized | — | CP-095 |
-| `CH_11` | private_expression | reserved_underformalized | — | — |
+| `CH_11` | private_expression | canonical_adopted | — | — |
 
 ### FAM-L12 · Уровень 12
 
@@ -120,9 +123,9 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `U_12` | level | candidate_requires_formalization + canonical_alignment | U_11 | CP-036, CP-041, CP-044, CP-049, CP-057, CP-058, CP-064, CP-065, CP-071, CP-078, CP-114 |
-| `M_12` | minimal_expression | formal_math_fact / candidate_requires_formalization + canonical_alignment | — | CP-036, CP-044, CP-049, CP-058, CP-071, CP-078, CP-095 |
-| `CH_12` | private_expression | candidate_requires_formalization + canonical_alignment | — | — |
+| `U_12` | level | canonical_adopted | U_11 | CP-036, CP-041, CP-044, CP-049, CP-057, CP-058, CP-064, CP-065, CP-071, CP-078, CP-114 |
+| `M_12` | minimal_expression | canonical_adopted | — | CP-036, CP-044, CP-049, CP-058, CP-071, CP-078, CP-095 |
+| `CH_12` | private_expression | canonical_adopted | — | — |
 
 ### FAM-L13-14 · Уровни 13–14
 
@@ -130,10 +133,10 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `U_13` | level | projected_underformalized | U_12 | CP-019, CP-041, CP-042, CP-049, CP-057, CP-058, CP-071 |
+| `U_13` | level | canonical_adopted | U_12 | CP-019, CP-041, CP-042, CP-049, CP-057, CP-058, CP-071 |
 | `M_13` | minimal_expression | projected_underformalized | — | CP-095 |
 | `CH_13` | private_expression | projected_underformalized | — | — |
-| `U_14` | level | projected_underformalized | U_13 | CP-037, CP-041, CP-042, CP-045, CP-049 |
+| `U_14` | level | canonical_adopted | U_13 | CP-037, CP-041, CP-042, CP-045, CP-049 |
 | `M_14` | minimal_expression | projected_underformalized | — | CP-037 |
 | `CH_14` | private_expression | projected_underformalized | — | — |
 
@@ -143,10 +146,10 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `U_16` | level | speculative | U_15 | CP-038 |
+| `U_16` | level | canonical_adopted | U_15 | CP-038 |
 | `M_16` | minimal_expression | speculative | — | CP-038 |
 | `CH_16` | private_expression | speculative | — | — |
-| `U_17` | level | speculative | U_16 | CP-032, CP-039, CP-045, CP-060 |
+| `U_17` | level | canonical_adopted | U_16 | CP-032, CP-039, CP-045, CP-060 |
 | `M_17` | minimal_expression | speculative | — | CP-039 |
 | `CH_17` | private_expression | speculative | — | — |
 
@@ -156,15 +159,15 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `O_13` | connectivity_ground | candidate | — | CP-079, CP-106, CP-113, CP-116, CP-126 |
-| `O_14` | connectivity_ground | candidate | — | CP-046, CP-072, CP-073, CP-074, CP-075, CP-076, CP-081, CP-086, CP-102, CP-113, CP-116, CP-125, CP-126, CP-127 |
-| `O_15` | connectivity_ground | candidate | — | CP-077, CP-116 |
-| `O_16` | connectivity_ground | candidate | — | CP-116 |
-| `O_17` | connectivity_ground | candidate | — | CP-116 |
-| `O_18` | connectivity_ground | candidate | — | CP-116 |
-| `O_19` | connectivity_ground | candidate | — | CP-042, CP-084, CP-112, CP-116, CP-126 |
-| `O_20` | connectivity_ground | candidate_requires_empirical_test | — | CP-107, CP-116, CP-126 |
-| `OP_kappa` | operator | candidate_with_operational_gate | O_15 | CP-077 |
+| `O_13` | connectivity_ground | canonical_adopted | — | CP-079, CP-106, CP-113, CP-116, CP-126 |
+| `O_14` | connectivity_ground | canonical_adopted | — | CP-046, CP-072, CP-073, CP-074, CP-075, CP-076, CP-081, CP-086, CP-102, CP-113, CP-116, CP-125, CP-126, CP-127 |
+| `O_15` | connectivity_ground | canonical_adopted | — | CP-077, CP-116 |
+| `O_16` | connectivity_ground | canonical_adopted | — | CP-116 |
+| `O_17` | connectivity_ground | canonical_adopted | — | CP-116 |
+| `O_18` | connectivity_ground | canonical_adopted | — | CP-116 |
+| `O_19` | connectivity_ground | canonical_adopted | — | CP-042, CP-084, CP-112, CP-116, CP-126 |
+| `O_20` | connectivity_ground | canonical_adopted | — | CP-107, CP-116, CP-126 |
+| `OP_kappa` | operator | canonical_adopted | O_15 | CP-077 |
 
 ### FAM-LOGIC · Логическое приложение A1/A3 и формализации A5/A5a
 
@@ -183,12 +186,12 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `ADDENDUM_V3` | candidate_bundle | candidate_bundle | — | — |
-| `ADD_TOPO_INVARIANTS` | invariant_candidate | candidate | ADD_ZERO_BOUNDARY | CP-052, CP-053, CP-061, CP-062, CP-063 |
-| `ADD_HALF_PHI` | hypothesis_candidate | candidate | ADD_PARITY_TOPOLOGY | — |
-| `ADD_CONSTANTS` | classification_candidate | candidate | ADD_ZERO_BOUNDARY | — |
-| `ADD_U11_EPI` | level_variant_candidate | candidate | ADD_CONSTANTS | CP-035 |
-| `ADD_U12_CIRCLE` | level_candidate | candidate_requires_formalization | ADD_U11_EPI, ADD_ZERO_BOUNDARY | CP-036, CP-043, CP-049, CP-058, CP-065 |
+| `ADDENDUM_V3` | candidate_bundle | canonical_adopted | — | — |
+| `ADD_TOPO_INVARIANTS` | invariant_candidate | canonical_adopted | ADD_ZERO_BOUNDARY | CP-052, CP-053, CP-061, CP-062, CP-063 |
+| `ADD_HALF_PHI` | hypothesis_candidate | canonical_adopted | ADD_PARITY_TOPOLOGY | — |
+| `ADD_CONSTANTS` | classification_candidate | canonical_adopted | ADD_ZERO_BOUNDARY | — |
+| `ADD_U11_EPI` | level_variant_candidate | canonical_adopted | ADD_CONSTANTS | CP-035 |
+| `ADD_U12_CIRCLE` | level_candidate | canonical_adopted | ADD_U11_EPI, ADD_ZERO_BOUNDARY | CP-036, CP-043, CP-049, CP-058, CP-065 |
 
 ### FAM-SP · Карточки повышения статуса У8, У9, У12
 
@@ -206,10 +209,10 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `U7_WINDOW_CORE` | definition | candidate_with_operational_gate | U_07, M_07 | CP-077, CP-083, CP-084, CP-086, CP-094 |
-| `OP_WindowClose` | operator | candidate_core | U7_WINDOW_CORE, OP_Window | — |
-| `U7_FORGET_CLOSE` | anti_mode | candidate_core | U7_WINDOW_CORE, OP_Refuse, OP_Sever | — |
-| `U7_U8_ANSWER_QUESTION_BOUNDARY` | boundary | candidate_boundary | U_07, U_08, U7_WINDOW_CORE | — |
+| `U7_WINDOW_CORE` | definition | canonical_adopted | U_07, M_07 | CP-077, CP-083, CP-084, CP-086, CP-094 |
+| `OP_WindowClose` | operator | canonical_adopted | U7_WINDOW_CORE, OP_Window | — |
+| `U7_FORGET_CLOSE` | anti_mode | canonical_adopted | U7_WINDOW_CORE, OP_Refuse, OP_Sever | — |
+| `U7_U8_ANSWER_QUESTION_BOUNDARY` | boundary | canonical_adopted | U_07, U_08, U7_WINDOW_CORE | — |
 
 ### FAM-CHI · χ-оверлей (статистическая лестница)
 
@@ -217,14 +220,14 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `CHI_STAT_LADDER` | overlay | statistical_overlay_candidate | OP_ChiCarrier, OP_ChiOverlayMap, OP_ChiSquareDiagnostic | CP-119 |
-| `CHI_CARRIER` | definition | statistical_overlay_candidate | U_06, U7_WINDOW_CORE | CP-104 |
-| `OP_ChiCarrier` | operator | statistical_overlay_candidate | OP_ChiSquareDiagnostic | CP-104 |
+| `CHI_STAT_LADDER` | overlay | canonical_adopted | OP_ChiCarrier, OP_ChiOverlayMap, OP_ChiSquareDiagnostic | CP-119 |
+| `CHI_CARRIER` | definition | canonical_adopted | U_06, U7_WINDOW_CORE | CP-104 |
+| `OP_ChiCarrier` | operator | canonical_adopted | OP_ChiSquareDiagnostic | CP-104 |
 | `CHI_LADDER_U7` | statistical_analog | candidate_bridge | U_07, U7_WINDOW_CORE, CHI_LADDER_U6 | — |
-| `CHI_LADDER_U8` | statistical_analog | candidate_with_operational_gate | U_08, U7_U8_ANSWER_QUESTION_BOUNDARY, CHI_CARRIER | — |
-| `CHI_LADDER_U9` | statistical_analog | FTS_candidate_guarded | U_09, SP_U9, CHI_LADDER_U8 | CP-089 |
-| `CHI_LADDER_U10` | statistical_analog | reserved_underformalized_overlay | U_10, OP_dDelta, CHI_LADDER_U9 | — |
-| `CHI_LADDER_U11` | statistical_analog | reserved_underformalized_overlay | U_11, CHI_LADDER_U10 | — |
+| `CHI_LADDER_U8` | statistical_analog | canonical_adopted | U_08, U7_U8_ANSWER_QUESTION_BOUNDARY, CHI_CARRIER | — |
+| `CHI_LADDER_U9` | statistical_analog | canonical_adopted | U_09, SP_U9, CHI_LADDER_U8 | CP-089 |
+| `CHI_LADDER_U10` | statistical_analog | canonical_adopted | U_10, OP_dDelta, CHI_LADDER_U9 | — |
+| `CHI_LADDER_U11` | statistical_analog | canonical_adopted | U_11, CHI_LADDER_U10 | — |
 
 ### FAM-CPLX · Комплексный фазово-ветвевой оверлей 7+
 
@@ -232,19 +235,19 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `COMPLEX_BRANCH_OVERLAY` | overlay | candidate_overlay | CHI_CARRIER, U7_WINDOW_CORE | CP-080, CP-105, CP-117, CP-119 |
-| `COMPLEX_CARRIER` | definition | candidate_overlay | CHI_CARRIER | CP-080, CP-105 |
-| `OP_ComplexNormReadout` | operator | candidate_overlay | OP_ChiCarrier | CP-105 |
-| `OP_ComplexBranchAccess` | operator | candidate_overlay | M_08, TA1 | CP-103 |
-| `OP_ComplexBoundaryBranch` | operator | candidate_U12_overlay | SP_U12, U12_CHI_PI_BOUNDARY | — |
-| `COMPLEX_LADDER_U6` | complex_analog | strong_overlay_for_U6 | U_06, CHI_LADDER_U6 | — |
+| `COMPLEX_BRANCH_OVERLAY` | overlay | canonical_adopted | CHI_CARRIER, U7_WINDOW_CORE | CP-080, CP-105, CP-117, CP-119 |
+| `COMPLEX_CARRIER` | definition | canonical_adopted | CHI_CARRIER | CP-080, CP-105 |
+| `OP_ComplexNormReadout` | operator | canonical_adopted | OP_ChiCarrier | CP-105 |
+| `OP_ComplexBranchAccess` | operator | canonical_adopted | M_08, TA1 | CP-103 |
+| `OP_ComplexBoundaryBranch` | operator | canonical_adopted | SP_U12, U12_CHI_PI_BOUNDARY | — |
+| `COMPLEX_LADDER_U6` | complex_analog | canonical_adopted | U_06, CHI_LADDER_U6 | — |
 | `COMPLEX_LADDER_U7` | complex_analog | candidate_bridge | U_07, U7_WINDOW_CORE, COMPLEX_LADDER_U6 | — |
-| `COMPLEX_LADDER_U8` | complex_analog | candidate | U_08, OP_ComplexBranchAccess | — |
-| `COMPLEX_LADDER_U9` | complex_analog | FTS_candidate_guarded | U_09, SP_U9, COMPLEX_LADDER_U8 | — |
-| `COMPLEX_LADDER_U10` | complex_analog | reserved_overlay | U_10, CHI_LADDER_U10 | — |
-| `COMPLEX_LADDER_U11` | complex_analog | reserved_overlay | U_11, CHI_LADDER_U11 | — |
-| `COMPLEX_LADDER_U12` | complex_analog | candidate_U12_overlay | U_12, SP_U12, OP_ComplexBoundaryBranch | — |
-| `U12_CHI_PI_COMPLEX_BOUNDARY` | candidate_overlay | candidate_requires_formalization | U12_CHI_PI_BOUNDARY, COMPLEX_LADDER_U12 | CP-103 |
+| `COMPLEX_LADDER_U8` | complex_analog | canonical_adopted | U_08, OP_ComplexBranchAccess | — |
+| `COMPLEX_LADDER_U9` | complex_analog | canonical_adopted | U_09, SP_U9, COMPLEX_LADDER_U8 | — |
+| `COMPLEX_LADDER_U10` | complex_analog | canonical_adopted | U_10, CHI_LADDER_U10 | — |
+| `COMPLEX_LADDER_U11` | complex_analog | canonical_adopted | U_11, CHI_LADDER_U11 | — |
+| `COMPLEX_LADDER_U12` | complex_analog | canonical_adopted | U_12, SP_U12, OP_ComplexBoundaryBranch | — |
+| `U12_CHI_PI_COMPLEX_BOUNDARY` | candidate_overlay | canonical_adopted | U12_CHI_PI_BOUNDARY, COMPLEX_LADDER_U12 | CP-103 |
 
 ### FAM-TENSOR · Тензорный контекстный оверлей 10+
 
@@ -252,12 +255,12 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `TENSOR_CONTEXT_OVERLAY` | overlay | candidate_overlay | U_10, U_11, U_12 | CP-119 |
-| `TENSOR_CARRIER` | definition | candidate_overlay | CHI_CARRIER, Lambda_link | CP-103 |
-| `OP_TensorContextMap` | operator | candidate_overlay | Lambda_link, U_10, U_11 | — |
-| `TENSOR_LADDER_U10` | tensor_analog | candidate_overlay | U_10, OP_TensorContextMap | — |
-| `TENSOR_LADDER_U11` | tensor_analog | candidate_overlay | U_11, TENSOR_LADDER_U10 | — |
-| `TENSOR_LADDER_U12` | tensor_analog | candidate_U12_overlay | U_12, U12_CHI_PI_COMPLEX_BOUNDARY | — |
+| `TENSOR_CONTEXT_OVERLAY` | overlay | canonical_adopted | U_10, U_11, U_12 | CP-119 |
+| `TENSOR_CARRIER` | definition | canonical_adopted | CHI_CARRIER, Lambda_link | CP-103 |
+| `OP_TensorContextMap` | operator | canonical_adopted | Lambda_link, U_10, U_11 | — |
+| `TENSOR_LADDER_U10` | tensor_analog | canonical_adopted | U_10, OP_TensorContextMap | — |
+| `TENSOR_LADDER_U11` | tensor_analog | canonical_adopted | U_11, TENSOR_LADDER_U10 | — |
+| `TENSOR_LADDER_U12` | tensor_analog | canonical_adopted | U_12, U12_CHI_PI_COMPLEX_BOUNDARY | — |
 
 ### FAM-WIN · Группировки окон
 
@@ -265,7 +268,7 @@
 
 | Карточка | Тип | Статус | Зависит от | Строки реестра |
 |---|---|---|---|---|
-| `WINDOW_GROUPINGS` | research_index | candidate_research_index | — | CP-025 |
+| `WINDOW_GROUPINGS` | research_index | canonical_adopted | — | CP-025 |
 | `WINDOW_GROUPING_13` | window_grouping | candidate_math_overlay | — | CP-025 |
 | `WINDOW_GROUPING_25` | window_grouping | candidate_math_overlay | — | CP-025 |
 
@@ -283,8 +286,8 @@
 
 Двухканальное чтение нижних уровней: s=a+b — канал У3 (опора У0, «ссылка в 0»), d=a−b — канал У2 (опора У1, «ссылка в 1»); перестановка σ, смена знака ν и σν вместе с id образуют V4; одна конструкция P_N(a,b)=[N(a+b)−N(a−b)]/c, N∈{t,|t|,t²}, даёт формы У2–У7.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md).
-- **Статус в источнике:** кандидат v14: К1 (C-63…C-71), К2/К4/К5 не проводились; мост мат./лог. регистров и «ссылки в 0 и 1 направлены» — авторские, V4 и P_N — ассистент. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_001); прежняя доказательная ось: кандидат v14: К1 (C-63…C-71), К2/К4/К5 не проводились; мост мат./лог. регистров и «ссылки в 0 и 1 направлены» — авторские, V4 и P_N — ассистент. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
 - **Ссылается на:** карточки `U_02`, `U_03`, `U_04`, `U_05`, `U_06`, `U_07`; проверки `C-63`, `C-64`, `C-65`, `C-66`, `C-67`, `C-68`, `C-69`, `C-70`, `C-71`; OQ `oq-two-channel-k245`, `oq-u6-direction-bit`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_two_channels.md](../addendum_2026-10-04_two_channels.md), §3. Также: [v14_rebuild/window_groupings/WINDOW_GROUPINGS.md](../window_groupings/WINDOW_GROUPINGS.md); [DECISIONS.md](../../DECISIONS.md).
 
@@ -301,8 +304,8 @@
 
 МУ5 — сечение креста y=ε(x)·x, где ε(x)∈{+1 (a=b), −1 (a≠b)} хранится явно; каноническая −|x| — представитель (ε=−sgn x); четыре сечения x, −x, |x|, −|x| дают формы У2, У3, старой У4, У5, их метки образуют V4.
 
-- **Происхождение:** выбор делегирован. **Авторская ось:** выбор делегирован ассистенту.
-- **Статус в источнике:** выбор кандидатной формы закрыт (oq_closure 2026-10-05), статус не повышен; при x=0 знак ветви произволен.
+- **Происхождение:** выбор делегирован. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_003); прежняя доказательная ось: выбор кандидатной формы закрыт (oq_closure 2026-10-05), статус не повышен; при x=0 знак ветви произволен.
 - **Ссылается на:** карточки `U_05`; проверки `C-90`; OQ `oq-u5-cross-section`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_windows_symmetry.md](../addendum_2026-10-04_windows_symmetry.md), §1. Также: [v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md](../e5_literature_review/oq_closure_2026-10-05/REVIEW.md).
 
@@ -310,8 +313,8 @@
 
 МУ8 — отношение y²=|x| (⟺ y⁴=x²) с двумя ветвями ±√|x| вместо функции y=√|x|; нынешняя табличная форма y=√|x| читается как Tot этой формы-кандидата.
 
-- **Происхождение:** ассистент. **Авторская ось:** принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md).
-- **Статус в источнике:** кандидат C-76 («по тому же правилу», что МУ7); К2/К4/К5 не проводились. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_004); прежняя доказательная ось: кандидат C-76 («по тому же правилу», что МУ7); К2/К4/К5 не проводились. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
 - **Ссылается на:** карточки `U_08`, `M_08`, `A_07`; проверки `C-76`; OQ `oq-mu8-inverse-vs-rotation`, `oq-tot-groups-8-11`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_two_channels.md](../addendum_2026-10-04_two_channels.md), §4. Также: [v14_rebuild/addendum_2026-10-08_rotation_projection.md](../addendum_2026-10-08_rotation_projection.md); [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md); [STATE.md](../../STATE.md).
 
@@ -328,8 +331,8 @@
 
 Окно 7–9 соответствует способам решения иррациональных уравнений (пример √(x+2)=x): 7 — возвести в квадрат и проверить подстановкой; 8 — вопрос к ответу о ветви (анти-уравнение −√(x+2)=x); 9 — равносильный переход √A=B ⟺ A=B², B≥0 (кратко B|B|=A).
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md).
-- **Статус в источнике:** кандидатное сопоставление (наблюдение автора, одобрено к записи); привязка трёх умений к У7/У8/У9 кандидатна (oq_closure 2026-10-05). Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_006); прежняя доказательная ось: кандидатное сопоставление (наблюдение автора, одобрено к записи); привязка трёх умений к У7/У8/У9 кандидатна (oq_closure 2026-10-05). Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
 - **Ссылается на:** карточки `U_07`, `U_08`, `U_09`; проверки `C-74`, `C-75`, `C-12`; OQ `oq-window-7-9-irrational-test`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_two_channels.md](../addendum_2026-10-04_two_channels.md), §6. Также: [v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md](../e5_literature_review/oq_closure_2026-10-05/REVIEW.md).
 
@@ -337,8 +340,8 @@
 
 Операционный гейт для открытых тестов У7–У9: решает с проверкой (7), объясняет лишний корень через анти-уравнение (8), решает равносильно без проверки (9); библиотека задач √A(x)=B(x) с заданными областями, перенос на новые A,B при равном бюджете.
 
-- **Происхождение:** ассистент. **Авторская ось:** принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md).
-- **Статус в источнике:** кандидат (протокол операционализации, не пройденный гейт). Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_007); прежняя доказательная ось: кандидат (протокол операционализации, не пройденный гейт). Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
 - **Ссылается на:** карточки `U_07`, `U_08`, `U_09`; проверки `C-74`, `C-75`; OQ `oq-window-7-9-irrational-test`, `oq-u8-u10-optests`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_two_channels.md](../addendum_2026-10-04_two_channels.md), §6. Также: [v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md](../e5_literature_review/oq_closure_2026-10-05/REVIEW.md).
 
@@ -373,8 +376,8 @@
 
 МУ9 и проекции: x³=x на трёх точках {−1,0,1} (первое минимальное окно (−1,0,1)); всякий t с t³=t есть разность ортогональных проекций t=P−Q, t²=P+Q; в плоскости Фано две точки дают третью, тройка — прямая. Связь с СУ9 (Понимание) не показана.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** кандидат; вопрос автора «9 уровень — уровень проекций?», остальное [внешнее].
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_011); прежняя доказательная ось: кандидат; вопрос автора «9 уровень — уровень проекций?», остальное [внешнее].
 - **Ссылается на:** карточки `U_09`, `M_09`, `AC_20261003_WINDOWS_TRIPLES`; проверки `C-104`; OQ `oq-mu9-projection-reading`, `oq-minimal-windows-projects-to`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-08_rotation_projection.md](../addendum_2026-10-08_rotation_projection.md), §6.
 
@@ -382,8 +385,8 @@
 
 Двойка: x+x=x·x ⟺ x∈{0,2}; при x=2 МУ2, МУ6, МУ9 дают 2, 4, 8 (2¹, 2², 2³ — числа состояний одного, двух, трёх битов). Граница: в двойке любая степень даёт 2ⁿ, совпадение с группами окон числовое.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** кандидат; вопрос автора «8 — это двойка в кубе», факты [внешнее].
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_012); прежняя доказательная ось: кандидат; вопрос автора «8 — это двойка в кубе», факты [внешнее].
 - **Ссылается на:** карточки `ADD_ZERO_BOUNDARY`; проверки `C-101`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-08_rotation_projection.md](../addendum_2026-10-08_rotation_projection.md), §3.
 
@@ -391,8 +394,8 @@
 
 Правило среды О1 как подстановка x=n−1 в формулу МУn: МУ2(1)=1, МУ3(2)=−2, МУ4(3)=±3, МУ5(4)=−4 воспроизводят счёт со знаком; МУ8(7) в форме y⁴=x² даёт ±√7, ±i√7, где i√7=√−7 — число окна 15. Контроль подгонки: по числу совпадений с таблицей окон правило не выделяется.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** кандидат; семёрка выбрана правилом до счёта (авторское), согласованность с каноном не независимое подтверждение.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_013); прежняя доказательная ось: кандидат; семёрка выбрана правилом до счёта (авторское), согласованность с каноном не независимое подтверждение.
 - **Ссылается на:** карточки `O_01`; проверки `C-102`; OQ `oq-o1-environment-substitution`, `oq-windows11-15-quadratic-meaning`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-08_rotation_projection.md](../addendum_2026-10-08_rotation_projection.md), §4.
 
@@ -435,8 +438,8 @@
 
 Тезис автора о номерах уровней: номера не случайны («как самая первая аксиома от всех остальных»); арифметические свойства номеров допустимы как гипотезы об уровнях, но каждое проходит К1–К5 отдельно, совпадение номеров статус не повышает.
 
-- **Происхождение:** автор. **Авторская ось:** сформулировано автором.
-- **Статус в источнике:** рабочее следствие; no-smuggling; мост «свойства чисел → свойства уровней» не доказан.
+- **Происхождение:** автор. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_017); прежняя доказательная ось: рабочее следствие; no-smuggling; мост «свойства чисел → свойства уровней» не доказан.
 - **Ссылается на:** карточки `AC_20261003_WINDOW_FAMILIES`; OQ `oq-number-level-semantic-bridge`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_windows_numbers.md](../addendum_2026-10-04_windows_numbers.md), §2. Также: [v14_rebuild/addendum_2026-10-04_windows_symmetry.md](../addendum_2026-10-04_windows_symmetry.md).
 
@@ -444,8 +447,8 @@
 
 Модуль 12 и группа Клейна: (Z/12)^×={1,5,7,11}=V4 (два знаковых бита mod 3 и mod 4); точки сцепки 3 и 9 вне V4 (квадрат уходит в идемпотент 9); x³≡x для нечётных x; 12 — наибольший модуль, где квадрат есть проекция.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** кандидат; канал mod 3 в каноне не обоснован, без него период 12 — кандидат.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_018); прежняя доказательная ось: кандидат; канал mod 3 в каноне не обоснован, без него период 12 — кандидат.
 - **Ссылается на:** карточки `AC_20261003_WINDOWS_TRIPLES`; проверки `C-81`, `C-82`, `C-84`; OQ `oq-mod3-channel-origin`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_windows_numbers.md](../addendum_2026-10-04_windows_numbers.md), §4.
 
@@ -453,8 +456,8 @@
 
 Наблюдение о чётности форм: на нечётных уровнях 3..11 форма нечётна ровно у 3 (−x) и 9 (x³), то есть у номеров ≡0 (mod 3). Предсказание: форма У15 нечётна, форма У13 — нет; проверять при фиксации форм без подгонки.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** кандидат/наблюдение (пять точек, случайность не исключена); предсказание не проверено, нужен единый тип формы (oq_closure).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_019); прежняя доказательная ось: кандидат/наблюдение (пять точек, случайность не исключена); предсказание не проверено, нужен единый тип формы (oq_closure).
 - **Ссылается на:** карточки `U_13`, `U_15`; проверки `C-83`, `C-05`; OQ `oq-c83-parity-prediction`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_windows_numbers.md](../addendum_2026-10-04_windows_numbers.md), §5. Также: [v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md](../e5_literature_review/oq_closure_2026-10-05/REVIEW.md).
 
@@ -462,8 +465,8 @@
 
 Окна длины 3…15 и 25: какие остатки выпадают и какая симметрия остатков (пятёрки: узлы ≡3 mod 4, суммы двух квадратов; девятки: узлы ≡7 mod 8, суммы трёх квадратов; 13: 3 и 9, V4; 25: 3, 9, 15, 21, (Z/2)³; 11 и 15: повороты C4 и C6 внутри остатков).
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** подтверждены предсказания автора для пятёрок (C-85) и окна 25 (C-89); девятки и остальные окна — [наблюд.]; числа — [внешнее].
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_020); прежняя доказательная ось: подтверждены предсказания автора для пятёрок (C-85) и окна 25 (C-89); девятки и остальные окна — [наблюд.]; числа — [внешнее].
 - **Ссылается на:** карточки `AC_20261003_WINDOWS_TRIPLES`, `AC_20261003_WINDOWS_FIVES`, `AC_20261003_WINDOWS_SEVENS`; проверки `C-85`, `C-86`, `C-87`, `C-88`, `C-89`, `C-92`; OQ `oq-window25-sqrt-minus2`, `oq-windows11-15-quadratic-meaning`, `oq-window-family-continuation`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_windows_symmetry.md](../addendum_2026-10-04_windows_symmetry.md), §3. Также: [v14_rebuild/windows_table.tsv](../windows_table.tsv).
 
@@ -471,8 +474,8 @@
 
 Цепочка симметрий окон: V4 (тройки, два бита без смысла) → C4 (пятёрки, знак рождается из поворота i²=−1) → C6 (семёрки, ω³=1) → V4 с содержанием (окно 13) → (Z/2)³ (окно 25); групп порядка 4 ровно две. Шаг 48 даёт C4×C2×C2, правило не продолжается без ограничения.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** [наблюд.]; цепочка с содержанием — кандидат, мост к смыслу не доказан.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_021); прежняя доказательная ось: [наблюд.]; цепочка с содержанием — кандидат, мост к смыслу не доказан.
 - **Ссылается на:** карточки `AC_20261003_WINDOWS_FIVES`, `AC_20261003_WINDOWS_SEVENS`; проверки `C-91`; OQ `oq-step48-symmetry`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_windows_symmetry.md](../addendum_2026-10-04_windows_symmetry.md), §4. Также: [v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md](../e5_literature_review/oq_closure_2026-10-05/REVIEW.md).
 
@@ -480,8 +483,8 @@
 
 Окна 17 и 21 (смешанные C2×C4): неразличимы ровно пары взаимно обратных остатков — стирается направление поворота, как знак под чётной степенью в кресте У4. Исход гарантирован теорией Галуа и не считается свидетельством в пользу ФТС.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** предсказание автора подтверждено на простых до 1500; от ФТС только прочтение «потеря направления = потеря знака».
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_022); прежняя доказательная ось: предсказание автора подтверждено на простых до 1500; от ФТС только прочтение «потеря направления = потеря знака».
 - **Ссылается на:** карточки `AC_20261003_WINDOW_FAMILIES`; проверки `C-93`, `C-94`; OQ `oq-window-family-continuation`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_windows_symmetry.md](../addendum_2026-10-04_windows_symmetry.md), §8.
 
@@ -489,8 +492,8 @@
 
 Начало окон с −1 не нейтрально: узел окна — число с остатком −1, простые с остатком −1 действуют на круговое поле как комплексное сопряжение (при 4|s также i↔−i); среди остатков только 1 и −1 расщепляются в вещественном подполе. Чтение: автор поставил в узел элемент, означающий отражение знака.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** [наблюд.]; совпадение роли, не вывод одного из другого; мост «арифметика ↔ лестница» новизной не проверялся.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_023); прежняя доказательная ось: [наблюд.]; совпадение роли, не вывод одного из другого; мост «арифметика ↔ лестница» новизной не проверялся.
 - **Ссылается на:** карточки `AC_20261003_WINDOW_FAMILIES`; проверки `C-95`; OQ `oq-window-node-conjugation-origin`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_windows_symmetry.md](../addendum_2026-10-04_windows_symmetry.md), §8.
 
@@ -498,8 +501,8 @@
 
 Граница окон: шаг 22 (окно 23) — первый чётный шаг, где классы неразличимых остатков больше пары; при шаге 24 различимость восстанавливается; примеры 48 и 96 нарушают разные свойства. Роль окна 23 в ФТС открыта.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** наблюдение; WINDOW_BOUNDARY_22, WF-109 согласован с локальным перебором.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_024); прежняя доказательная ось: наблюдение; WINDOW_BOUNDARY_22, WF-109 согласован с локальным перебором.
 - **Ссылается на:** карточки `AC_20261003_WINDOW_FAMILIES`; проверки `WF-109`; OQ `oq-step48-symmetry`, `oq-window-family-continuation`.
 - **Первичное место:** [v14_rebuild/window_groupings/BOUNDARY_RECHECK.md](../window_groupings/BOUNDARY_RECHECK.md). Также: [v14_rebuild/window_groupings/WINDOW_GROUPINGS.md](../window_groupings/WINDOW_GROUPINGS.md); [v14_rebuild/audit/WOLFRAM_CHECKS.md](../audit/WOLFRAM_CHECKS.md).
 
@@ -525,8 +528,8 @@
 
 Проба относительного знака: совместное наблюдение двух путей до забывания знака сохраняет относительную ориентацию (индивидуальные квадраты совпадают, поляризация различает); перенос двухканальной поляризации на новый носитель — кандидат.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** математическое ядро подтверждено WF-107/108; связь с ФТС — кандидат.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_027); прежняя доказательная ось: математическое ядро подтверждено WF-107/108; связь с ФТС — кандидат.
 - **Ссылается на:** карточки `AC_20261003_WINDOW_FAMILIES`; проверки `WF-107`, `WF-108`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md](../e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md). Также: [v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md](../e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md); [v14_rebuild/audit/WOLFRAM_CHECKS.md](../audit/WOLFRAM_CHECKS.md); [v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md](../e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md).
 
@@ -534,8 +537,8 @@
 
 Круговая модель: наблюдение p(z)=z² удваивает угол mod 360° и забывает один двоичный выбор (P24→P12 забывает противоположность); геометрический поворот и арифметическая перестановка различаются при повторе.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** WINDOW_CIRCLE_CANDIDATE: ядро подтверждено WF-107/108, широкая попытка WF-106 inconclusive; связь с ФТС — кандидат.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_028); прежняя доказательная ось: WINDOW_CIRCLE_CANDIDATE: ядро подтверждено WF-107/108, широкая попытка WF-106 inconclusive; связь с ФТС — кандидат.
 - **Ссылается на:** карточки `AC_20261003_WINDOW_FAMILIES`; проверки `WF-106`, `WF-107`, `WF-108`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md](../e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md). Также: [v14_rebuild/audit/WOLFRAM_CHECKS.md](../audit/WOLFRAM_CHECKS.md); [STATE.md](../../STATE.md).
 
@@ -543,8 +546,8 @@
 
 Фано, вложенные структуры и общий узел: схема умножения октонионов (плоскость Фано), общий элемент e(−1) для семи точек; период 4 памяти знака (1→e→−1→−e→1). Общая сцена/предноситель У−1 — кандидатное чтение ФТС; назначение e_i уровням и роль e(−1) автором не установлены.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** смысловые мосты к ФТС — кандидаты; формулы уровней не заменены.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_029); прежняя доказательная ось: смысловые мосты к ФТС — кандидаты; формулы уровней не заменены.
 - **Ссылается на:** карточки `AC_20261003_WINDOWS_SEVENS`.
 - **Первичное место:** [v14_rebuild/window_groupings/FANO_AND_COMMON_NODE.md](../window_groupings/FANO_AND_COMMON_NODE.md).
 
@@ -552,8 +555,8 @@
 
 Кандидат ассистента WINDOW_COUNTERWEIGHT_TRANSFER_CANDIDATE: устойчивость построенного обеспечивается абсолютизацией; прежний противовес входит во внутреннюю структуру, а для следующего участка формализуется новый (роль У5 при У7; присутствие знака отделено от его доступности).
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** кандидат ассистента, не принят автором, не закон лестницы.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_030); прежняя доказательная ось: кандидат ассистента, не принят автором, не закон лестницы.
 - **Ссылается на:** карточки `U_05`, `U_07`; OQ `oq-u6-u7-compositional-semantics`.
 - **Первичное место:** [v14_rebuild/window_groupings/WINDOW_GROUPINGS.md](../window_groupings/WINDOW_GROUPINGS.md). Также: [v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md](../e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md).
 
@@ -561,8 +564,8 @@
 
 Кандидатное чтение счёта: в бинарной модели N=Σδ_j² считает переключения независимо от направления; путь 0→1→0 даёт N=2 при нулевом итоговом изменении; кандидат усложнения — удерживать отношения между переходами и сравнивать их до потери знака. Рост длины истории не доказывает рост структурной сложности.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** предложение ассистента по авторскому счёту (0↔1 увеличивает счёт, a→a — нет); кандидат механизма.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_031); прежняя доказательная ось: предложение ассистента по авторскому счёту (0↔1 увеличивает счёт, a→a — нет); кандидат механизма.
 - **Ссылается на:** карточки `U_05`, `U_07`; OQ `oq-u6-u7-compositional-semantics`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md](../e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md), §4. Также: [v14_rebuild/window_groupings/FANO_AND_COMMON_NODE.md](../window_groupings/FANO_AND_COMMON_NODE.md).
 
@@ -570,8 +573,8 @@
 
 Контекст функции Вейерштрасса ℘ для окон 5 и 7: квадратная решётка Z[i] (лемнискатический случай, g₃=0) и треугольная Z[ω] (эквиангармонический, g₂=0); кандидат У17 — эллиптические функции на торе. Окно 17 и уровень У17 — разные адреса.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** WINDOW_WEIERSTRASS_CONTEXT: external_reference_context; assistant_candidate; соответствие окнам и уровням не доказано.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_032); прежняя доказательная ось: WINDOW_WEIERSTRASS_CONTEXT: external_reference_context; assistant_candidate; соответствие окнам и уровням не доказано.
 - **Ссылается на:** карточки `U_17`; OQ `oq-torus-on-9-shape`; журнал `DN-0043`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_upper_levels.md](../addendum_2026-10-04_upper_levels.md), §6. Также: [v14_rebuild/windows_table.tsv](../windows_table.tsv); [v14_rebuild/sphere_holes_note_2026-10-11.md](../sphere_holes_note_2026-10-11.md).
 
@@ -579,8 +582,8 @@
 
 Дополнительное окно из семи компонент (сопоставление −1…5 с 5…11): дискретный тор (фазовая модель ℤ₄×ℤ₆) и четверная группа Клейна V₄ (группа отражений) как возможное дополнение ФТС. Принятие расширенного окна и смысл его операторов — отдельные вопросы.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** предложение модели / candidate; канонический window остаётся пятиэлементным; соответствие ФТС ограничено (раздел 5 заметки).
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_121); прежняя доказательная ось: предложение модели / candidate; канонический window остаётся пятиэлементным; соответствие ФТС ограничено (раздел 5 заметки).
 - **Ссылается на:** карточки `AC_20261003_WINDOWS_SEVENS`; журнал `DN-0008`.
 - **Первичное место:** [v14_rebuild/seven_window_torus_klein_2026-09-30.md](../seven_window_torus_klein_2026-09-30.md).
 
@@ -605,8 +608,8 @@
 
 Проекция 9→7: π(x³)=x|x| (π(v)=sign(v)|v|^{2/3}) — сохраняет знак, порядок, умножение и три точки t³=t, не сохраняет сложение; обратима (смена шкалы, не фактор). Для 8→6 не построена.
 
-- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** принят кандидатом 2026-10-08 («принят вариант ассистента, не авторская формулировка»); π выше У7 не канонизирована.
+- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_034); прежняя доказательная ось: принят кандидатом 2026-10-08 («принят вариант ассистента, не авторская формулировка»); π выше У7 не канонизирована.
 - **Ссылается на:** карточки `U_09`, `U_07`, `OP_pi`; проверки `C-104`, `G60-17`; OQ `oq-pi-projection-above-u7`, `oq-minimal-windows-projects-to`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md). Также: [AUTHOR_ANSWERS_60.md](../../AUTHOR_ANSWERS_60.md).
 
@@ -614,8 +617,8 @@
 
 У11: eˣ=cosh x+sinh x — ровно чётная часть плюс нечётная (ни чётная, ни нечётная в целом).
 
-- **Происхождение:** ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** кандидат v14, предсказание; расстановка по уровням — прочтение.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_035); прежняя доказательная ось: кандидат v14, предсказание; расстановка по уровням — прочтение.
 - **Ссылается на:** карточки `U_11`, `ADD_U11_EPI`; проверки `C-96`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_upper_levels.md](../addendum_2026-10-04_upper_levels.md), §2.
 
@@ -623,8 +626,8 @@
 
 У12: гипербола x²−y²=1 (cosh, sinh) как форма анти-моды «Разрыв» (знак при y² сменён, контур не замкнут, две ветви не встречаются). Гардрейл «фаза ≠ −A»: путь через y→iy нельзя отождествлять с ⊖; смена сигнатуры предложена как отдельный кандидат Split.
 
-- **Происхождение:** ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** кандидат v14, предсказание; требует проверки на гардрейл; автор принял анти-моду «Разрыв» (2026-06-12), форма Разрыва — кандидат.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_036); прежняя доказательная ось: кандидат v14, предсказание; требует проверки на гардрейл; автор принял анти-моду «Разрыв» (2026-06-12), форма Разрыва — кандидат.
 - **Ссылается на:** карточки `U_12`, `M_12`, `ADD_U12_CIRCLE`; проверки `C-96`; OQ `oq-u12-hyperbolic-antimode-guard`, `oq-u12-antimode-gate`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_upper_levels.md](../addendum_2026-10-04_upper_levels.md), §2. Также: [v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md](../e5_literature_review/oq_closure_2026-10-05/REVIEW.md).
 
@@ -632,8 +635,8 @@
 
 У14: функции Якоби sn(u,k) — k=0 даёт sin (круг), k=1 даёт tanh (гипербола); модуль k как кандидат параметра θ семейства границ F(x,y;θ)=0; физически — маятник (малый размах cos, большой — эллиптические, предельный — гиперболические). Оператор агрегации не задан.
 
-- **Происхождение:** ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** кандидат v14, предсказание.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_037); прежняя доказательная ось: кандидат v14, предсказание.
 - **Ссылается на:** карточки `U_14`, `M_14`; проверки `C-97`; OQ `oq-u14-jacobi-aggregation`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_upper_levels.md](../addendum_2026-10-04_upper_levels.md), §2. Также: [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md).
 
@@ -650,8 +653,8 @@
 
 У17: эллиптические функции — функции на торе (два независимых периода = две симметрии сразу); точки порядка 2 эллиптической кривой образуют V4 (V4 внизу в (Z/12)^× и наверху).
 
-- **Происхождение:** ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** кандидат v14, предсказание; два периода сами не устанавливают семантику «композиции симметрий».
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_039); прежняя доказательная ось: кандидат v14, предсказание; два периода сами не устанавливают семантику «композиции симметрий».
 - **Ссылается на:** карточки `U_17`, `M_17`; проверки `C-99`; OQ `oq-u14-jacobi-aggregation`.
 - **Первичное место:** [v14_rebuild/addendum_2026-10-04_upper_levels.md](../addendum_2026-10-04_upper_levels.md), §2. Также: [v14_rebuild/sphere_holes_note_2026-10-11.md](../sphere_holes_note_2026-10-11.md).
 
@@ -659,8 +662,8 @@
 
 Эскалация симметрии узлов (hypothesis_candidate): узлы 3/7 — анти-форма F↔−F; узел 11 — симметрия оператора ΔF=F; узел 15 — инвариант группы g·F∼F. Канон A0b фиксирует только смену носителя симметрии.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** hypothesis_candidate (paper §8.3); единого оператора узла и условия поражения цепочки нет.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_040); прежняя доказательная ось: hypothesis_candidate (paper §8.3); единого оператора узла и условия поражения цепочки нет.
 - **Ссылается на:** карточки `A0b`, `U_11`, `U_15`; проверки `C-18`, `C-20`, `C-31`; OQ `oq-node11-asymmetry`, `oq-passport-u14-u15`.
 - **Первичное место:** [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md), §83.
 
@@ -668,8 +671,8 @@
 
 Операторы и свидетели-кандидаты для 12–15: 12 — ветви и возврат; 13 — произведение и тип особых точек; 14 — фактор по отождествлению миров; 15 — поворот U(1); 16–17 без оператора. Прогоны по П6 не проведены.
 
-- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** текст принят автором 2026-10-10; статусы не повышены (П6 требует прогонов).
+- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_041); прежняя доказательная ось: текст принят автором 2026-10-10; статусы не повышены (П6 требует прогонов).
 - **Ссылается на:** карточки `U_12`, `U_13`, `U_14`, `U_15`; OQ `oq-upper-12-17-done`, `oq-u13-boundary-union-op`, `oq-u14-worlds-agg-op`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md). Также: [OPEN_QUESTIONS.md](../../OPEN_QUESTIONS.md).
 
@@ -677,8 +680,8 @@
 
 Скачок арности 13→14 и агрегация миров У14: оператор на маркированном семействе имеет арность 1, если действует послойно; скачок — когда оператор сравнивает члены семейства (шесть замен λ дают одну кривую, j-инвариант один). Кандидат оператора миров — смесь Agg=Σθ w_θ P_θ (w_θ≥0, Σw_θ=1) для миров-вероятностных законов; соответствие У14 не установлено.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** кандидат; смесь предложена другой моделью, критерий арности и отождествление миров — ассистент (ответ принят автором как текст); смысл мира и закон допустимости θ не заданы.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_042); прежняя доказательная ось: кандидат; смесь предложена другой моделью, критерий арности и отождествление миров — ассистент (ответ принят автором как текст); смысл мира и закон допустимости θ не заданы.
 - **Ссылается на:** карточки `U_13`, `U_14`, `O_19`; проверки `G60-03`, `G60-04`; OQ `oq-u14-worlds-agg-op`, `oq-arity-window-13-14`, `oq-u14-jacobi-aggregation`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md). Также: [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md](../e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md).
 
@@ -686,8 +689,8 @@
 
 Третья граница — 2: −1 не даёт новой границы (значения МУ2…МУ9 при x=−1 лежат в {−1,1}, как при x=1); рядом с границами 0 (F=−F) и 1 (F·F=F) двойка — точка, где сложение и умножение совпадают. Радиус окружности У12 из этого не выводится (r свободен).
 
-- **Происхождение:** ассистент. **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** «кандидат третьей границы»; ответ принят автором как текст, r=2 из третьей границы не принимать.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_043); прежняя доказательная ось: «кандидат третьей границы»; ответ принят автором как текст, r=2 из третьей границы не принимать.
 - **Ссылается на:** карточки `ADD_ZERO_BOUNDARY`, `ADD_U12_CIRCLE`; проверки `C-101`, `G60-08`; OQ `oq-third-boundary`, `oq-u12-radius-r`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md). Также: [v14_rebuild/addendum_2026-10-08_rotation_projection.md](../addendum_2026-10-08_rotation_projection.md).
 
@@ -695,8 +698,8 @@
 
 Операционный gate анти-моды У12: наблюдаемые для «двух сторон и замкнутого контура» — связность, компактность и число прообразов над осью (окружность: 1 компонента, компактна; Разрыв-гипербола: 2 компоненты, щель |x|<1, некомпактна).
 
-- **Происхождение:** ассистент. **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** новый кандидат (ответ принят автором как текст); gate анти-моды остаётся открытым (лист 31: gate needed).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_044); прежняя доказательная ось: новый кандидат (ответ принят автором как текст); gate анти-моды остаётся открытым (лист 31: gate needed).
 - **Ссылается на:** карточки `U_12`, `M_12`; проверки `G60-16`; OQ `oq-u12-antimode-gate`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md).
 
@@ -704,8 +707,8 @@
 
 V4 и S3 на пяти адресах: S3 как симметрия выбора, какой из трёх битов V4 назвать первым; цепочка-кандидат Z/2 → V4 → S3 для МУ8 (образ в S3 порядка 2: полного S3 нет); S4/V4≅S3 — резольвента кубики общего уравнения 4-й степени; S3 действует на модуль λ=k² и переставляет точки порядка 2. Соответствие уровням не найдено.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** числовое и структурное совпадение; мост к семантике уровней не доказан (К2/К4/К5 не проводились); вопрос остаётся открытым (парк).
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_045); прежняя доказательная ось: числовое и структурное совпадение; мост к семантике уровней не доказан (К2/К4/К5 не проводились); вопрос остаётся открытым (парк).
 - **Ссылается на:** карточки `U_08`, `U_14`, `U_17`; проверки `G60-01`, `G60-02`, `G60-03`, `G60-04`, `G60-26`; OQ `oq-vieta-cubic-s3`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md). Также: [AUTHOR_ANSWERS_60.md](../../AUTHOR_ANSWERS_60.md).
 
@@ -713,8 +716,8 @@ V4 и S3 на пяти адресах: S3 как симметрия выбора
 
 Ограничитель порядка вопросов/шагов: уровни как факторы носителя по подгруппам симметрий креста D4 (на свидетеле NC-01 18 цепей → 2 → 1) — кандидат-условие допустимого класса O_07 для шагов различения; допустимые цепи D4 — композиционные ряды через V4 двухканального чтения.
 
-- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** кандидат-условие; ответ на вопрос 57 принят автором 2026-10-08 (принят вариант ассистента, не авторская формулировка).
+- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_046); прежняя доказательная ось: кандидат-условие; ответ на вопрос 57 принят автором 2026-10-08 (принят вариант ассистента, не авторская формулировка).
 - **Ссылается на:** карточки `O_07`, `O_14`; проверки `G60-18`; OQ `oq-next-question-principle`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md). Также: [DECISIONS.md](../../DECISIONS.md); [AUTHOR_ANSWERS_60.md](../../AUTHOR_ANSWERS_60.md).
 
@@ -722,8 +725,8 @@ V4 и S3 на пяти адресах: S3 как симметрия выбора
 
 Формы 6–11 как отношения с постоянным коэффициентом (C-44 переносится тривиально: (−F)/F=−1 для МУ2…МУ11); число членов отношения: 3 у МУ6 и МУ8, 4 у МУ9, 3 у МУ10, 2 у МУ11. Смысловая роль ряда не показана.
 
-- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** кандидат (ответ на вопрос 24); статус «частично».
+- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_047); прежняя доказательная ось: кандидат (ответ на вопрос 24); статус «частично».
 - **Ссылается на:** карточки `U_06`, `U_08`, `U_09`, `U_10`, `U_11`; проверки `C-44`, `G60-29`; OQ `oq-forms8plus-ratio`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md).
 
@@ -740,8 +743,8 @@ V4 и S3 на пяти адресах: S3 как симметрия выбора
 
 Паспорта П6 для У13–У15 и У12: У12 = замкнутая граница отношения (окружность, анти-мода Поглощение/Разрыв) — кандидат; У13 Мир-Мы/Космос-острова — candidate_prediction; У14 Воображение/Вычисление и У15 Красота — projected_candidate (У15 — узел); паспорт дисциплинирует, но не доказывает.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate / candidate_prediction / projected_candidate (paper §10–§11); машинно непроверяемы, нужны тесты пунктов (а)–(д).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_049); прежняя доказательная ось: candidate / candidate_prediction / projected_candidate (paper §10–§11); машинно непроверяемы, нужны тесты пунктов (а)–(д).
 - **Ссылается на:** карточки `U_12`, `M_12`, `U_13`, `U_14`, `U_15`, `SP_U12`, `ADD_U12_CIRCLE`; OQ `oq-passport-u14-u15`, `oq-u13-boundary-union-op`.
 - **Первичное место:** [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md#101-у12-конфликтсоюз-замкнутая-граница-отношения-кандидат) `#101-у12-конфликтсоюз-замкнутая-граница-отношения-кандидат`. Также: [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md).
 
@@ -757,8 +760,8 @@ V4 и S3 на пяти адресах: S3 как симметрия выбора
 
 Tot = абсолютизация: на 0–6 отвержение соседнего, с 7 отсутствие входит в уровень; Tot(n) запрещает операцию, порождающую n+1 — на 0–6 отражение (Z/2→{1}), на 7 поворот на 90° (Z/4→Z/2; поворот на 180° МУ7 сохраняет); Tot(7) — пять точек (0,0), (±1,±1).
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** принято как рабочее определение (DN-0035); «запрет поворота» — рабочее чтение Tot(7) (DN-0036); единое определение «Tot = коллапс группы» за автором.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_050); прежняя доказательная ось: принято как рабочее определение (DN-0035); «запрет поворота» — рабочее чтение Tot(7) (DN-0036); единое определение «Tot = коллапс группы» за автором.
 - **Ссылается на:** карточки `OP_Tot`, `A_07`, `U_07`; проверки `C-100`, `m_ops_check_2026-10-10.py`; OQ `oq-tot-level7-plus`, `oq-tot-groups-8-11`; журнал `DN-0035`, `DN-0036`.
 - **Первичное место:** [v14_rebuild/sphere_holes_note_2026-10-11.md](../sphere_holes_note_2026-10-11.md), §1. Также: [v14_rebuild/dialogue_integration_2026-10-11.md](../dialogue_integration_2026-10-11.md).
 
@@ -766,8 +769,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Девять операций симметрии (вдавить, вынуть, сложить, разделить, отразить, повернуть, вывернуть, разложить, продолжить) и их привязка к шагам: 7→8 «повернуть» (точно, C-100); 8→9 «разложить», лучше «вынуть» (B|B|=A, C-75); 9→10 «вывернуть» (цепочка производных x³ обрывается, у cos цикл); 10→11 «разложить+продолжить» (cos=(e^{ix}+e^{−ix})/2).
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** перечень принят как список (DN-0034); соответствие шагам — предложение ассистента, открыто; замена правила чётности §8.1б не сделана.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_051); прежняя доказательная ось: перечень принят как список (DN-0034); соответствие шагам — предложение ассистента, открыто; замена правила чётности §8.1б не сделана.
 - **Ссылается на:** карточки `U_07`, `U_08`, `U_09`, `U_10`, `U_11`; проверки `C-100`, `C-75`, `m_ops_check_2026-10-10.py`; OQ `oq-nine-operations-levels`; журнал `DN-0034`.
 - **Первичное место:** [v14_rebuild/sphere_holes_note_2026-10-11.md](../sphere_holes_note_2026-10-11.md), §1. Также: [v14_rebuild/dialogue_integration_2026-10-11.md](../dialogue_integration_2026-10-11.md).
 
@@ -775,8 +778,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Образ сферы автора: основание 0, верхушка ∞ (карта у верхушки — инверсия); МУ6 даёт циссоиду u²(1−v)=v³ (у верхушки остриё), МУ7 у верхушки u²=|v|³; чётные формы у верхушки разворачиваются, нечётные проходят насквозь; поворот на 90° — вращение сферы, инверсия z↦1/z — переворот.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** принято как образ (DN-0036), расчёты — чтение ассистента, математика [внешнее]; candidate / analogy_only.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_052); прежняя доказательная ось: принято как образ (DN-0036), расчёты — чтение ассистента, математика [внешнее]; candidate / analogy_only.
 - **Ссылается на:** карточки `ADD_TOPO_INVARIANTS`, `ADD_PARITY_TOPOLOGY`, `U_06`; проверки `sphere_torus_check_2026-10-11.py`; OQ `oq-sphere-u6-carrier`; журнал `DN-0036`.
 - **Первичное место:** [v14_rebuild/sphere_holes_note_2026-10-11.md](../sphere_holes_note_2026-10-11.md), §1. Также: [v14_rebuild/dialogue_integration_2026-10-11.md](../dialogue_integration_2026-10-11.md).
 
@@ -784,8 +787,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Согласование «6 — идеализированная сфера (минус скрыт); 7 — половина дыр; 8 — вторая; 9 — замкнутый объект»; дыры не возникают, а выявляются поворотом (Морс: диск → кольцо → две петли → тор). Заменяет июльское «6→7 сфера→тор»; опоры: Риман–Гурвиц, b₁ форм, род плоской кривой.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** принято как рабочее согласование (DN-0037, DN-0038); candidate / analogy_only; «тор или тело» на 9 (текст оборван) — вопрос автору.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_053); прежняя доказательная ось: принято как рабочее согласование (DN-0037, DN-0038); candidate / analogy_only; «тор или тело» на 9 (текст оборван) — вопрос автору.
 - **Ссылается на:** карточки `U_06`, `U_07`, `U_08`, `U_09`, `ADD_TOPO_INVARIANTS`; проверки `sphere_torus_check_2026-10-11.py`, `lens_torus_check_2026-10-11.py`; OQ `oq-closed-object-torus-or-body`, `oq-sphere-u6-carrier`; журнал `DN-0037`, `DN-0038`.
 - **Первичное место:** [v14_rebuild/sphere_holes_note_2026-10-11.md](../sphere_holes_note_2026-10-11.md), §2. Также: [v14_rebuild/topo_chi_note.md](../topo_chi_note.md); [v14_rebuild/dialogue_integration_2026-10-11.md](../dialogue_integration_2026-10-11.md).
 
@@ -811,8 +814,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Вариант согласования ассистента: замкнутая аналоговая форма — на 9; линзирование — операция 9→10; идеализированный объект на 10 — cos (cos = x² на сфере, повёрнутой на 90°: φ(J(q))=φ(q)²); 10→11 — масштаб (эллипсы cos(a+ib), полуоси (e^b±e^{−b})/2 различает только eˣ).
 
-- **Происхождение:** ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** ответ автора «я с тобой согласен» (DN-0042) принят как рабочее чтение, не как доказательство; запись STATE.md «автором не принят» приведена в соответствие 2026-10-15.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_056); прежняя доказательная ось: ответ автора «я с тобой согласен» (DN-0042) принят как рабочее чтение, не как доказательство; запись STATE.md «автором не принят» приведена в соответствие 2026-10-15.
 - **Ссылается на:** карточки `U_09`, `U_10`, `U_11`; проверки `phase_modulus_check_2026-10-11.py`; OQ `oq-phase-modulus-12-15`; журнал `DN-0041`, `DN-0042`.
 - **Первичное место:** [v14_rebuild/sphere_holes_note_2026-10-11.md](../sphere_holes_note_2026-10-11.md), §6. Также: [v14_rebuild/dialogue_integration_2026-10-11.md](../dialogue_integration_2026-10-11.md); [STATE.md](../../STATE.md).
 
@@ -820,8 +823,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Пентада §8.2, применённая к операциям: блок фазы 5–9 (отражение → x² на 6; 7 и 8 — две половины; 9 — замыкание) и блок модуля 9–13 (линза → cos на 10; 11 — eˣ, масштаб; 12 — повёрнутая; 13 — замыкание); порядок сложности: отражение → поворот → линзирование → масштаб.
 
-- **Происхождение:** ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** принято как рабочее чтение (DN-0041, DN-0042); 12, 13 — прогноз; узел 15 по схеме относился бы к третьему блоку, не проверено.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_057); прежняя доказательная ось: принято как рабочее чтение (DN-0041, DN-0042); 12, 13 — прогноз; узел 15 по схеме относился бы к третьему блоку, не проверено.
 - **Ссылается на:** карточки `U_06`, `U_09`, `U_10`, `U_11`, `U_12`, `U_13`; проверки `phase_modulus_check_2026-10-11.py`; OQ `oq-phase-modulus-12-15`, `oq-pentad-role-cycle`; журнал `DN-0041`, `DN-0042`.
 - **Первичное место:** [v14_rebuild/sphere_holes_note_2026-10-11.md](../sphere_holes_note_2026-10-11.md), §6.
 
@@ -847,8 +850,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Две функции Вейерштрасса не исключают друг друга: ℘ — идеализированный замкнутый объект (два периода, масштаб меняет размер, не форму), W(x)=Σaⁿcos(bⁿπx) — предел непрерывной операции масштаба с отклонениями на каждом масштабе; квадратный тор y²=x³−x — лемнискатический ℘ (окно 5), шестиугольный — эквиангармонический (окно 7).
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** pending (DN-0043); возражение автора принято, интерпретация ассистента; разложение ℘ по q [внешнее], локально не проверено.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_060); прежняя доказательная ось: pending (DN-0043); возражение автора принято, интерпретация ассистента; разложение ℘ по q [внешнее], локально не проверено.
 - **Ссылается на:** карточки `U_10`, `U_17`; проверки `C-99`; OQ `oq-torus-on-9-shape`, `oq-phase-modulus-12-15`; журнал `DN-0043`, `DN-0042`.
 - **Первичное место:** [DIALOGUE_NUANCE_JOURNAL.md](../../DIALOGUE_NUANCE_JOURNAL.md#dn-0043) `#dn-0043`. Также: [v14_rebuild/addendum_2026-10-04_upper_levels.md](../addendum_2026-10-04_upper_levels.md).
 
@@ -865,8 +868,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Лемма-кандидат: классы нулей форм (один / бесконечно много / нет) ↔ χ_E (Пуанкаре–Хопф); eˣ (У11) не имеет нулей, поэтому наверху нужен носитель с χ_E=0. Инстансы XE-1…XE-3 проверены как математика.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate / analogy_only; частично засвидетельствована, не канон.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_062); прежняя доказательная ось: candidate / analogy_only; частично засвидетельствована, не канон.
 - **Ссылается на:** карточки `ADD_TOPO_INVARIANTS`, `ADD_PARITY_TOPOLOGY`, `U_11`; проверки `C-19`, `probes.py`; OQ `oq-zero-classes-chi-e`.
 - **Первичное место:** [v14_rebuild/topo_chi_note.md](../topo_chi_note.md). Также: [OPEN_QUESTIONS.md](../../OPEN_QUESTIONS.md); [OQ_POOLS.md](../../OQ_POOLS.md).
 
@@ -883,8 +886,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Допущение о происхождении x² (DN-0027): кандидатное внутреннее чтение — сравнение истории и тороидальная опора Я. Тороидальную опору нельзя выдавать за Я, сознание или АГИ.
 
-- **Происхождение:** автор. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** pending, принято как кандидатное чтение; без оператора, сохраняющего уровневую роль, — analogy_only.
+- **Происхождение:** автор. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_064); прежняя доказательная ось: pending, принято как кандидатное чтение; без оператора, сохраняющего уровневую роль, — analogy_only.
 - **Ссылается на:** карточки `U_09`, `U_11`, `U_12`; OQ `oq-reflection-label-internalization`, `oq-sphere-u6-carrier`; журнал `DN-0027`.
 - **Первичное место:** [v14_rebuild/dialogue_integration_2026-09-22.md](../dialogue_integration_2026-09-22.md). Также: [v14_rebuild/topo_chi_note.md](../topo_chi_note.md); [v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md](../train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md).
 
@@ -892,8 +895,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Кандидатная геометрическая линия У6–У12 (DN-0026): проверить, можно ли склеить последовательность форм У6…У12 в замкнутый контур; внутреннее геометрическое чтение недоступности.
 
-- **Происхождение:** автор. **Авторская ось:** сформулировано автором.
-- **Статус в источнике:** pending; не утверждение тождества уровней и не новая каноническая геометрия.
+- **Происхождение:** автор. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_065); прежняя доказательная ось: pending; не утверждение тождества уровней и не новая каноническая геометрия.
 - **Ссылается на:** карточки `U_06`, `U_12`, `ADD_U12_CIRCLE`; OQ `oq-sphere-u6-carrier`, `oq-upper-12-17-done`; журнал `DN-0026`.
 - **Первичное место:** [v14_rebuild/dialogue_integration_2026-09-22.md](../dialogue_integration_2026-09-22.md). Также: [v14_rebuild/topo_chi_note.md](../topo_chi_note.md); [DIALOGUE_NUANCE_SOURCES.md](../../DIALOGUE_NUANCE_SOURCES.md).
 
@@ -928,8 +931,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Фигура-представитель: гироид (три периода в R³, род 3, семейство Бонне) — кандидат выше тора, без якоря в каноне; сильнее всего как образ поворота с одним допустимым направлением.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate / analogy_only; без якоря в каноне; вопрос «где гироид?» автору.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_069); прежняя доказательная ось: candidate / analogy_only; без якоря в каноне; вопрос «где гироид?» автору.
 - **Ссылается на:** карточки `U_10`; OQ `oq-phase-modulus-12-15`.
 - **Первичное место:** [v14_rebuild/figures_note_2026-10-11.md](../figures_note_2026-10-11.md), §6.
 
@@ -937,8 +940,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Фигура: рогатая сфера Александера (S², дикая внешность) — не представитель уровня, а граничный пример рядом с W на пределе масштаба.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** граничный пример; не принято автором.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_070); прежняя доказательная ось: граничный пример; не принято автором.
 - **Ссылается на:** карточки `U_11`; проверки `figures_check_2026-10-11.py`.
 - **Первичное место:** [v14_rebuild/figures_note_2026-10-11.md](../figures_note_2026-10-11.md), §5.
 
@@ -963,8 +966,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Цикл «код → различение → новый код»: текущий код сохраняется, его предел становится явным остаточным вопросом, результат различения включается в новый код; «свобода от кода» — наличие вопроса, не факторизующегося через текущий код. Контекстные чтения (имя, лицо, голос, сарказм «Ну ты гений») — второй случай того же принципа.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md).
-- **Статус в источнике:** кандидатное чтение механизма У2/У3 и Lift, не новое основание связности и не новое определение У3. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_072); прежняя доказательная ось: кандидатное чтение механизма У2/У3 и Lift, не новое основание связности и не новое определение У3. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
 - **Ссылается на:** карточки `M_02`, `M_03`, `CH_03`, `O_02`, `O_03`, `O_08`, `O_14`, `OP_Lift`; OQ `oq-code-link-vs-leads-to`, `oq-u0-u7-refinement-protocol`.
 - **Первичное место:** [v14_rebuild/code_information_recode_note.md](../code_information_recode_note.md). Также: [v14_rebuild/external_bridge_u1_u5.md](../external_bridge_u1_u5.md).
 
@@ -972,8 +975,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 Интерпретация при понижении: при У3→У2 снимается степень интерпретации (авторский кандидат утраты); общий способ проверки — сравнивать, какие преобразования смысловой связи представление позволяет выполнять самостоятельно; шесть пар У9→…→У3 получили кандидатные вопросы проверки.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md).
-- **Статус в источнике:** candidate_connection / кандидат следствия, St_FTS не повышен; «наш синтез для дальнейшей проверки», не цитата. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_073); прежняя доказательная ось: candidate_connection / кандидат следствия, St_FTS не повышен; «наш синтез для дальнейшей проверки», не цитата. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
 - **Ссылается на:** карточки `O_03`, `O_08`, `O_14`, `U_02`, `U_03`; OQ `oq-u0-u7-refinement-protocol`.
 - **Первичное место:** [v14_rebuild/interpretation_descent_undermind_2026-09-12/REVIEW.md](../interpretation_descent_undermind_2026-09-12/REVIEW.md). Также: [v14_rebuild/recursive_distinction_2026-09-12/AUTHOR_QUESTIONS.md](../recursive_distinction_2026-09-12/AUTHOR_QUESTIONS.md); [v14_rebuild/recursive_distinction_2026-09-12/REVIEW.md](../recursive_distinction_2026-09-12/REVIEW.md); [v14_rebuild/interpretation_descent_undermind_2026-09-12/PROTOCOL.md](../interpretation_descent_undermind_2026-09-12/PROTOCOL.md); [v14_rebuild/interpretation_descent_undermind_2026-09-12/VALIDATION.md](../interpretation_descent_undermind_2026-09-12/VALIDATION.md).
 
@@ -981,8 +984,8 @@ Tot = абсолютизация: на 0–6 отвержение соседне
 
 QuestionGain: для q:X→Q и дополнительного вопроса r:X→R есть прирост, если существуют a,b с q(a)=q(b), r(a)≠r(b); Dec_q(y)=q⁻¹(y) возвращает множество допустимых прообразов и не восстанавливает исходное состояние. Информационное ядро критерия O_14; равная цена, RoleNec и трасса остаются за критерием.
 
-- **Происхождение:** ассистент. **Авторская ось:** принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md).
-- **Статус в источнике:** O_14 — candidate; только необходимая информационная часть критерия, не доказательство следующего уровня. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_074); прежняя доказательная ось: O_14 — candidate; только необходимая информационная часть критерия, не доказательство следующего уровня. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
 - **Ссылается на:** карточки `O_14`; OQ `oq-next-question-principle`.
 - **Первичное место:** [v14_rebuild/questiongain_criterion.md](../questiongain_criterion.md). Также: [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md).
 
@@ -990,8 +993,8 @@ QuestionGain: для q:X→Q и дополнительного вопроса r:
 
 Принцип следующего вопроса: выбирать допустимый следующий вопрос по ожидаемому улучшению решения за вычетом полной цены получения и использования ответа, включая цену самого выбора. Одношаговое правило полезности может проиграть последовательному плану.
 
-- **Происхождение:** другая модель. **Авторская ось:** не принято автором.
-- **Статус в источнике:** кандидат правила (ANSWERS_60); поиск оптимального плана сам может быть трудным.
+- **Происхождение:** другая модель. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_075); прежняя доказательная ось: кандидат правила (ANSWERS_60); поиск оптимального плана сам может быть трудным.
 - **Ссылается на:** карточки `O_14`, `O_07`; OQ `oq-next-question-principle`, `oq-cost-model-scope`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md](../e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md).
 
@@ -999,8 +1002,8 @@ QuestionGain: для q:X→Q и дополнительного вопроса r:
 
 Внутренняя мера времени — глубина различения в принятой цепочке. Условие поражения: время ответа не монотонно по глубине при равной цене вопросов.
 
-- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** кандидат (вопрос 10); статус вопроса сохранён.
+- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_076); прежняя доказательная ось: кандидат (вопрос 10); статус вопроса сохранён.
 - **Ссылается на:** карточки `O_14`; проверки `G60-18`; OQ `oq-expectation-speed-fundamentality`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md). Также: [OPEN_QUESTIONS.md](../../OPEN_QUESTIONS.md).
 
@@ -1008,8 +1011,8 @@ QuestionGain: для q:X→Q и дополнительного вопроса r:
 
 Условие закрытия по флагу: закрывать по одному флагу легитимно, если I(Y;Prov|S,флаг)=0; иначе закрытие — Tot отсутствия, на свидетеле G60-42 теряется 1 бит (критерий различия типов — G60-49). Оценка условия по данным требует допущений.
 
-- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** кандидат (вопрос 2); статус вопроса сохранён; поправка самопроверки 2026-10-09 к критерию типа.
+- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_077); прежняя доказательная ось: кандидат (вопрос 2); статус вопроса сохранён; поправка самопроверки 2026-10-09 к критерию типа.
 - **Ссылается на:** карточки `OP_kappa`, `O_15`, `U7_WINDOW_CORE`; проверки `G60-42`, `G60-49`; OQ `oq-kappa-provenance`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md). Также: [OPEN_QUESTIONS.md](../../OPEN_QUESTIONS.md).
 
@@ -1017,8 +1020,8 @@ QuestionGain: для q:X→Q и дополнительного вопроса r:
 
 Колонка неопределённости node+1={0,4,8,12} (шаг +4) и «Половина_А»: неопределённость как содержание уровня эскалирует по типу — остаётся в ℝ (4), выходит из ℝ (8), выходит из класса функций (12); Половина_А — пара {A,−A}, удержанная как вопрос (У8); узкое «8+» опровергнуто (D1). Генезис −1 формализуется через нехватки: единственный уровень без правой части, нулевой границы и зеркального окна.
 
-- **Происхождение:** автор. **Авторская ось:** сформулировано автором.
-- **Статус в источнике:** candidate (авторская гипотеза 2026-06-14); имена — нет в артефактах, формы и пентада +4 — канон; машинные свидетели кандидатные, verification.py не тронут.
+- **Происхождение:** автор. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_078); прежняя доказательная ось: candidate (авторская гипотеза 2026-06-14); имена — нет в артефактах, формы и пентада +4 — канон; машинные свидетели кандидатные, verification.py не тронут.
 - **Ссылается на:** карточки `U_m1`, `M_m1`, `U_04`, `U_08`, `U_12`, `M_12`; проверки `C-01`; OQ `oq-d4-column-precision`.
 - **Первичное место:** [v14_rebuild/half_hypothesis.md](../half_hypothesis.md). Также: [OPEN_QUESTIONS.md](../../OPEN_QUESTIONS.md).
 
@@ -1026,8 +1029,8 @@ QuestionGain: для q:X→Q и дополнительного вопроса r:
 
 Цикл ролей пентады (пять мест, двуликий узел; имена — автор, 2026-06-14): RoleNec-абляция пройдена (§8.1), имена выживают.
 
-- **Происхождение:** автор. **Авторская ось:** сформулировано автором.
-- **Статус в источнике:** candidate; единый оператор пентады не доказан (PA-C03).
+- **Происхождение:** автор. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_079); прежняя доказательная ось: candidate; единый оператор пентады не доказан (PA-C03).
 - **Ссылается на:** карточки `O_13`; OQ `oq-pentad-role-cycle`.
 - **Первичное место:** [v14_rebuild/half_hypothesis.md](../half_hypothesis.md), §8. Также: [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md).
 
@@ -1035,8 +1038,8 @@ QuestionGain: для q:X→Q и дополнительного вопроса r:
 
 Сборка ℂ / полярных координат: каждая неопределённость импортирует более богатый тип числа (Z/2 → Z/4 → U(1)), колонка 0/4/8/12; нить B — алгебра → трансцендентность (перелом на У10), нить D — третья переменная: круг прячет параметр.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** candidate; PA-C06 «комплексная сборка» ждёт чистого capacity-matched RoleNec.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_080); прежняя доказательная ось: candidate; PA-C06 «комплексная сборка» ждёт чистого capacity-matched RoleNec.
 - **Ссылается на:** карточки `COMPLEX_BRANCH_OVERLAY`, `COMPLEX_CARRIER`; OQ `oq-synthesis-c-assembly`.
 - **Первичное место:** [v14_rebuild/half_hypothesis.md](../half_hypothesis.md), §7. Также: [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md).
 
@@ -1044,8 +1047,8 @@ QuestionGain: для q:X→Q и дополнительного вопроса r:
 
 Residual-композиция и sensitivity: формулы чувствительности/производной (q, r=Dq) и residual y=x+F(x) из приложенных разборов — внешние кандидатные предложения; residual — кандидат композиции представлений и тройки (типы C/⊕), не равный Lift или раннему выходу.
 
-- **Происхождение:** внешнее [внешнее]. **Авторская ось:** не принято автором.
-- **Статус в источнике:** external_candidate; typed_scope_required; no St_FTS promotion.
+- **Происхождение:** внешнее [внешнее]. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_081); прежняя доказательная ось: external_candidate; typed_scope_required; no St_FTS promotion.
 - **Ссылается на:** карточки `O_14`; OQ `oq-cost-model-scope`, `oq-u0-u7-refinement-protocol`; журнал `DN-0023`, `DN-0024`.
 - **Первичное место:** [v14_rebuild/dialogue_integration_2026-09-22.md](../dialogue_integration_2026-09-22.md). Также: [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md); [v14_rebuild/neural_skeleton_research_2026-09-15/DEEP_RESEARCH_REPORT_10_INTEGRATION.md](../neural_skeleton_research_2026-09-15/DEEP_RESEARCH_REPORT_10_INTEGRATION.md); [v14_rebuild/claim_graph/RESEARCH_CLAIMS.tsv](../claim_graph/RESEARCH_CLAIMS.tsv).
 
@@ -1053,8 +1056,8 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 Внутренний контур диалога: вопрос, Вера, проекция, внутренний мотиватор, свобода инструмента и скорость/фундаментальность образуют кандидатный внутренний контур без единой выбранной метрики.
 
-- **Происхождение:** автор. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** author_clarification; candidate bridge; no St_FTS promotion.
+- **Происхождение:** автор. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_082); прежняя доказательная ось: author_clarification; candidate bridge; no St_FTS promotion.
 - **Ссылается на:** карточки `U_08`; OQ `oq-expectation-speed-fundamentality`, `oq-reflection-label-internalization`, `oq-next-question-principle`, `oq-cost-model-scope`; журнал `DN-0018`, `DN-0019`, `DN-0021`, `DN-0022`, `DN-0025`.
 - **Первичное место:** [v14_rebuild/dialogue_integration_2026-09-22.md](../dialogue_integration_2026-09-22.md). Также: [v14_rebuild/claim_graph/RESEARCH_CLAIMS.tsv](../claim_graph/RESEARCH_CLAIMS.tsv).
 
@@ -1062,8 +1065,8 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 У7 — обработка ожидания: закрытие даёт 1 или 0, удержание — «знаю, чего не знаю» (связь с Hyp(W) не установлена).
 
-- **Происхождение:** автор. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** принято как рабочее чтение (DN-0033); связь с Hyp(W) — остаток.
+- **Происхождение:** автор. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_083); прежняя доказательная ось: принято как рабочее чтение (DN-0033); связь с Hyp(W) — остаток.
 - **Ссылается на:** карточки `U_07`, `U7_WINDOW_CORE`; OQ `oq-u7-hold-vs-hyp-w`; журнал `DN-0033`.
 - **Первичное место:** [v14_rebuild/dialogue_integration_2026-10-11.md](../dialogue_integration_2026-10-11.md).
 
@@ -1089,8 +1092,8 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 Кандидатная спецификация У7 U7-SPEC (Claim, Domain, AcceptanceRule, RevisionRule) для перехода У6→У7.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** кандидатная спецификация, пока не предъявлен QuestionGain/RoleNec.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_086); прежняя доказательная ось: кандидатная спецификация, пока не предъявлен QuestionGain/RoleNec.
 - **Ссылается на:** карточки `U7_WINDOW_CORE`, `CH_07`, `O_14`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/EXPLICIT_ADDITIONS_2026-09-05.md](../e5_literature_review/EXPLICIT_ADDITIONS_2026-09-05.md).
 
@@ -1107,8 +1110,8 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 У6 — случайная закономерность: V·V теряет знак (математическое свойство модели); перенос на происхождение выбора — кандидатный мост. Предложенное 2026-09-13 AND/OR сохранено как история прежнего авторского кандидата элементарного прочтения У6; актуальная авторская форма — AC-2026-09-21.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** принятое рабочее уточнение + кандидатный мост.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_088); прежняя доказательная ось: принятое рабочее уточнение + кандидатный мост.
 - **Ссылается на:** карточки `M_06`, `U_06`, `CH_06`; проверки `C-03`, `C-07`, `C-09`.
 - **Первичное место:** [v14_rebuild/U6_RANDOM_REGULARITY_2026-09-13.md](../U6_RANDOM_REGULARITY_2026-09-13.md).
 
@@ -1116,8 +1119,8 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 Эджворт: стандартизованная r-я кумулянта суммы убывает как n^{1−r/2}, асимметрия — ведущая поправка; прочтение У9 как «объяснения структуры остатка» — кандидат, причинное не утверждается.
 
-- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** принят текст ответа ассистента.
-- **Статус в источнике:** частично; парк.
+- **Происхождение:** ответ ассистента (текст принят). **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_089); прежняя доказательная ось: частично; парк.
 - **Ссылается на:** карточки `U_09`, `CHI_LADDER_U9`; OQ `oq-edgeworth-u9`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md](../e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md). Также: [AUTHOR_ANSWERS_60.md](../../AUTHOR_ANSWERS_60.md); [OPEN_QUESTIONS.md](../../OPEN_QUESTIONS.md).
 
@@ -1125,8 +1128,8 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 У9 — рабочий кандидат первого явного проявления закрытости: понимание передаётся и сравнивается через упрощённые выражения, Упрощение помогает передаче и блокирует восстановление; отказ не превращается в гарантированно полезную операцию.
 
-- **Происхождение:** автор. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** рабочий кандидат (DN-0007, DN-0009); замкнутость ≠ невозможность внешнего выражения.
+- **Происхождение:** автор. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_090); прежняя доказательная ось: рабочий кандидат (DN-0007, DN-0009); замкнутость ≠ невозможность внешнего выражения.
 - **Ссылается на:** карточки `U_09`, `U_07`; OQ `oq-reflection-label-internalization`; журнал `DN-0007`, `DN-0009`.
 - **Первичное место:** [v14_rebuild/dialogue_semantics_2026-09-15.md](../dialogue_semantics_2026-09-15.md), §5.
 
@@ -1134,16 +1137,16 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 Кандидатный функциональный scaffold: ФТС имеет компонентные и первые интегральные основания, чтобы рассматриваться как кандидатный функциональный scaffold искусственных нейронных архитектур в объявленном synthetic scope (иерархия/остаток, композиция, память, типизированное отсутствие, refinement).
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate_functional_scaffold (claim NEURAL_T2_SCAFFOLD); внешний фазовый/статистический контакт не доказан.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_091); прежняя доказательная ось: candidate_functional_scaffold (claim NEURAL_T2_SCAFFOLD); внешний фазовый/статистический контакт не доказан.
 - **Первичное место:** [v14_rebuild/neural_skeleton_research_2026-09-15/SYNTHESIS.md](../neural_skeleton_research_2026-09-15/SYNTHESIS.md). Также: [v14_rebuild/neural_skeleton_research_2026-09-15/CONSIDERATION_BRIEF.md](../neural_skeleton_research_2026-09-15/CONSIDERATION_BRIEF.md); [v14_rebuild/neural_skeleton_research_2026-09-15/RESEARCH_QUESTION.md](../neural_skeleton_research_2026-09-15/RESEARCH_QUESTION.md); [v14_rebuild/claim_graph/RESEARCH_CLAIMS.tsv](../claim_graph/RESEARCH_CLAIMS.tsv); [v14_rebuild/neural_skeleton_research_2026-09-15/ARCHITECTURE_SPEC.md](../neural_skeleton_research_2026-09-15/ARCHITECTURE_SPEC.md); [v14_rebuild/neural_skeleton_research_2026-09-15/TARGET_INDEPENDENT_AUDIT.md](../neural_skeleton_research_2026-09-15/TARGET_INDEPENDENT_AUDIT.md).
 
 #### CP-122 · СУ · уровни: 6–8 · оператор
 
 Лемма о нижней тени: агрегаты пары инвариантны к обмену; ФТС-чтение «тень = инварианты Tot»; общий класс «чётный агрегат теряет знак/ветвь» (инстансы PAR, D2, VIETA).
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate (алгебраическое ядро — [внешнее] + machine-check; ФТС-чтение кандидатное; SHADOW-1…5 PASS ничего не повышают); рабочая формулировка исправлена после NEW_CONNECTIONS.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_122); прежняя доказательная ось: candidate (алгебраическое ядро — [внешнее] + machine-check; ФТС-чтение кандидатное; SHADOW-1…5 PASS ничего не повышают); рабочая формулировка исправлена после NEW_CONNECTIONS.
 - **Ссылается на:** карточки `OP_Tot`; проверки `probes.py`; OQ `oq-d11-branch-bit-test`.
 - **Первичное место:** [v14_rebuild/shadow_lemma.md](../shadow_lemma.md). Также: [v14_rebuild/NEW_CONNECTIONS_2026-09-09.md](../NEW_CONNECTIONS_2026-09-09.md).
 
@@ -1151,8 +1154,8 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 Виета как нижняя тень пары корней: r₁+r₂=−p и r₁r₂=q — Ч-агрегаты пары, инвариантные к обмену; школьное «при D<0 нельзя» склеивает оба режима §8.1б, то есть полосу 6→7→8 (вопрос падает в образ анти-формы; «корней нет» = вопрос ветви без ℝ-носителя); D=(r₁−r₂)² — V·V пары; бит ветви в агрегаты не входит (VIETA-5). Механика отражения: чётные формы регенерируют ±-пару, нечётные выносят знак.
 
-- **Происхождение:** ассистент. **Авторская ось:** принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md).
-- **Статус в источнике:** кандидат-пробы VIETA-1…5 и PAR-1…4 (probes.py, все PASS); теоремы Виета в каноне нет [внешнее]; в сьют — при фолде (П1). Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_123); прежняя доказательная ось: кандидат-пробы VIETA-1…5 и PAR-1…4 (probes.py, все PASS); теоремы Виета в каноне нет [внешнее]; в сьют — при фолде (П1). Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
 - **Ссылается на:** карточки `SP_ZERO`, `SP_WINDOW`; проверки `C-60`, `C-61`, `C-62`, `C-21`, `probes.py`; OQ `oq-d11-branch-bit-test`.
 - **Первичное место:** [v14_rebuild/ladder_table.md](../ladder_table.md). Также: [v14_rebuild/shadow_lemma.md](../shadow_lemma.md).
 
@@ -1160,8 +1163,8 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 Если «ссылка» обозначает целую связь, в которой вопрос и ответ — взаимно соотнесённые роли, то новым предметом работы становится само отношение: кандидат свидетеля остатка (композиция против отношения эквивалентности; метка «инструмент» не решает вопрос «резать или забивать»). Диалектическое обобщение автора: вопрос+ответ=ссылка и вопрос=ответ=ссылка.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** кандидат свидетеля остатка, не отрицание локально слитого чтения; область, цена и сохранение ролей не заданы.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_125); прежняя доказательная ось: кандидат свидетеля остатка, не отрицание локально слитого чтения; область, цена и сохранение ролей не заданы.
 - **Ссылается на:** карточки `O_14`.
 - **Первичное место:** [v14_rebuild/neural_analogy_2026-09-19/REVIEW.md](../neural_analogy_2026-09-19/REVIEW.md). Также: [v14_rebuild/code_information_recode_note.md](../code_information_recode_note.md).
 
@@ -1169,8 +1172,8 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 Четыре новые связи (candidate_connection): NC-01 перестановка вопросов и контекстная избыточность; NC-02 совместный выигрыш без выигрыша одиночных добавлений; NC-03 порядок совместной агрегации и Q-считывания меняет остаток; NC-04 нуль носителя и слепота выбранного детектора. NC-01 (18 насыщенных цепей) — исходный свидетель для CP-046.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate_connection; математические ядра [внешнее]; соответствие семантике ФТС — кандидат.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_126); прежняя доказательная ось: candidate_connection; математические ядра [внешнее]; соответствие семантике ФТС — кандидат.
 - **Ссылается на:** карточки `O_07`, `O_13`, `O_14`, `O_19`, `O_20`; проверки `check_new_connections.py`.
 - **Первичное место:** [v14_rebuild/NEW_CONNECTIONS_2026-09-09.md](../NEW_CONNECTIONS_2026-09-09.md).
 
@@ -1204,8 +1207,8 @@ Residual-композиция и sensitivity: формулы чувствите�
 
 Двустороннее чтение М-записи: кандидатное правило ρ на паре (τ(X∧Y):=X∨Y, τ(X∨Y):=X∧Y; Expand_ρ(B):=B∧τ(B)=B∧D; Compress_ρ обратно). Содержательный кандидат на механизм, различающий краткую запись и её развёрнутое основание; наличие двух операций не гарантирует, что быстрое представление перестанет считаться самым фундаментальным.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** рекомендация ассистента; «новое авторское предложение о границе» нельзя выдавать за проверенную прежнюю формулу.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_093); прежняя доказательная ось: рекомендация ассистента; «новое авторское предложение о границе» нельзя выдавать за проверенную прежнюю формулу.
 - **Ссылается на:** карточки `M_04`, `M_05`, `M_06`, `O_03`; OQ `oq-expectation-speed-fundamentality`.
 - **Первичное место:** [v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md](../m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md). Также: [DECISIONS.md](../../DECISIONS.md).
 
@@ -1231,8 +1234,8 @@ R=B∨D (B:=p∧q, D:=p∨q) как кандидат на краткую M_07 и
 
 Ряд уровней как одна минимальная двухрегистровая грамматика M+CH (ND-C09 «Ряд можно считать одной минимальной грамматикой» — принято как кандидат; точнее: двухрегистровая грамматика M+CH).
 
-- **Происхождение:** ассистент. **Авторская ось:** принято автором как рабочее чтение.
-- **Статус в источнике:** принято как кандидат (nonarbitrariness_dialogue); единственность не доказана (О4а).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_096); прежняя доказательная ось: принято как кандидат (nonarbitrariness_dialogue); единственность не доказана (О4а).
 - **Ссылается на:** карточки `M_03`, `CH_06`; OQ `oq-dict-d-completeness`.
 - **Первичное место:** [v14_rebuild/nonarbitrariness_dialogue_2026-09-13/CLAIM_MAP.md](../nonarbitrariness_dialogue_2026-09-13/CLAIM_MAP.md). Также: [v14_rebuild/nonarbitrariness_dialogue_2026-09-13/REVIEW.md](../nonarbitrariness_dialogue_2026-09-13/REVIEW.md).
 
@@ -1249,8 +1252,8 @@ R=B∨D (B:=p∧q, D:=p∨q) как кандидат на краткую M_07 и
 
 Двухсписочная реализация О3 (регистры «Есть А?» / «Есть 0_А?»): авторская фиксация 2026-06-12; нужна структура данных и тест конверсии.
 
-- **Происхождение:** автор. **Авторская ось:** сформулировано автором.
-- **Статус в источнике:** candidate_v14 (paper §11.3).
+- **Происхождение:** автор. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_098); прежняя доказательная ось: candidate_v14 (paper §11.3).
 - **Ссылается на:** карточки `O_03`, `A2`; OQ `oq-o3-twolists`.
 - **Первичное место:** [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено) `#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено`.
 
@@ -1258,8 +1261,8 @@ R=B∨D (B:=p∧q, D:=p∨q) как кандидат на краткую M_07 и
 
 Равенство оснований композиции X∧Y =_basis X∨Y (замена X или Y обнаруживается); обозначение =₇ допустимо лишь в кандидатном уровневом чтении, пока принадлежность У7 не обоснована. «Выбор вместе с сохранённым полем» — разумное кандидатное чтение сложной T5; закон перехода к Select и Agg_i — нет в артефактах.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** кандидатное чтение (рабочее авторское уточнение 2026-09-26); область — бинарные композиции.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_124); прежняя доказательная ось: кандидатное чтение (рабочее авторское уточнение 2026-09-26); область — бинарные композиции.
 - **Ссылается на:** карточки `O_01`, `O_08`, `CH_04`, `CH_05`, `CH_06`; OQ `oq-code-link-vs-leads-to`, `oq-reflection-label-internalization`; журнал `DN-0030`, `DN-0031`.
 - **Первичное место:** [v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md](../m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md).
 
@@ -1275,8 +1278,8 @@ R=B∨D (B:=p∧q, D:=p∨q) как кандидат на краткую M_07 и
 
 Типизированное отсутствие: 0_A*(ℓ)=⟨A,ℓ,m,p,w⟩ (ℓ — уровень, m — механизм, p — происхождение, w — свидетель); event/Tot-тень не восстанавливает структуру; объясняет, что именно теряется при переходе к ¬A.
 
-- **Происхождение:** ассистент. **Авторская ось:** принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md).
-- **Статус в источнике:** содержательный кандидат; нет универсальной онтологии механизмов, положительного свидетельства AbsDataGain и канонизации. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_099); прежняя доказательная ось: содержательный кандидат; нет универсальной онтологии механизмов, положительного свидетельства AbsDataGain и канонизации. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
 - **Ссылается на:** карточки `A2`, `OP_event0A`, `OP_Tot`, `T7C`, `OP_Sever`; проверки `check_absence_lift_projects.py`; OQ `oq-typed-absence-finite-witness`, `oq-typed-absence-provenance-benchmark`, `oq-level-specific-absence`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/TYPED_ABSENCE_BRIDGE.md](../e5_literature_review/TYPED_ABSENCE_BRIDGE.md). Также: [notation.md](../../notation.md); [v14_rebuild/e5_literature_review/ABSENCE_LIFT_REPORT.md](../e5_literature_review/ABSENCE_LIFT_REPORT.md); [v14_rebuild/e5_literature_review/PROTOCOL_AMENDMENT_004.md](../e5_literature_review/PROTOCOL_AMENDMENT_004.md); [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md#32b-содержательное-кандидатное-чтение-0_a).
 
@@ -1284,8 +1287,8 @@ R=B∨D (B:=p∧q, D:=p∨q) как кандидат на краткую M_07 и
 
 Lift в Set: L(X,R)=X×R, ι(x)=(x,r₀), π(x,r)=x, ρ(x,r)=r; нужна секция/точка r₀; ∄q: ρ=q∘π выражает остаточный прирост. Lift_FTS и внешнее lifting property различны; конечный пример X×{±1}→X имеет отмеченную Set-секцию, но не имеет секции, эквивариантной перестановке ветвей.
 
-- **Происхождение:** ассистент. **Авторская ось:** принято ассистентом по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md).
-- **Статус в источнике:** candidate (LT-01…LT-05, обязательства L0–L7); общий случай открыт. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_100); прежняя доказательная ось: candidate (LT-01…LT-05, обязательства L0–L7); общий случай открыт. Принято по поручению автора 2026-10-15 (ACCEPTANCE_2026-10-15.md), область и оговорки — там же; статус карточек не повышен..
 - **Ссылается на:** карточки `OP_Lift`, `A6`, `A7`; проверки `check_absence_lift_projects.py`; OQ `oq-lift-typing-passport`, `oq-lift-section-and-category`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/LIFT_TYPING_PROJECT.md](../e5_literature_review/LIFT_TYPING_PROJECT.md). Также: [notation.md](../../notation.md); [v14_rebuild/e5_literature_review/ABSENCE_LIFT_REPORT.md](../e5_literature_review/ABSENCE_LIFT_REPORT.md); [v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md](../e5_literature_review/oq_closure_2026-10-05/REVIEW.md); [v14_rebuild/e5_literature_review/WAVE_0_STATUS.md](../e5_literature_review/WAVE_0_STATUS.md).
 
@@ -1293,8 +1296,8 @@ Lift в Set: L(X,R)=X×R, ι(x)=(x,r₀), π(x,r)=x, ρ(x,r)=r; нужна се�
 
 Мост Блэквелла У4–У6: У4 ↔ P∈Stoch(Θ,X) (семейство законов удерживает состояния до решения), У5 ↔ δ∈Stoch(X,A) (Select как выбор действия по наблюдению), У6 ↔ r(P,δ,L) или V_μ(P;d) (Agg как сумма потерь); матрица K_{6→4} как кандидат-свидетель проекции; пробы BW-01…BW-06.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate_external_bridge (paper §8.1в); решение 2026-10-09: инстанс 0_A ⪰ ¬A и условие строгости — в статью узким разделом, HoTT вне v14.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_101); прежняя доказательная ось: candidate_external_bridge (paper §8.1в); решение 2026-10-09: инстанс 0_A ⪰ ¬A и условие строгости — в статью узким разделом, HoTT вне v14.
 - **Ссылается на:** карточки `U_04`, `U_05`, `U_06`, `O_08`, `OP_pi`; проверки `check_blackwell_bridge.py`; OQ `oq-blackwell-u4-u6-witness`, `oq-blackwell-canonical-projection`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/BLACKWELL_BRIDGE.md](../e5_literature_review/BLACKWELL_BRIDGE.md). Также: [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md); [v14_rebuild/e5_literature_review/COUPLING_MAP.md](../e5_literature_review/COUPLING_MAP.md); [v14_rebuild/e5_literature_review/PROTOCOL_AMENDMENT_003.md](../e5_literature_review/PROTOCOL_AMENDMENT_003.md); [OQ_TRIAGE.md](../../OQ_TRIAGE.md).
 
@@ -1302,8 +1305,8 @@ Lift в Set: L(X,R)=X×R, ι(x)=(x,r₀), π(x,r)=x, ρ(x,r)=r; нужна се�
 
 Blackwell-остаток как кандидат Res_n / QuestionGain: операциональный кандидат для остатка перехода, но не доказательство роли.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate; требуется реальный носитель ФТС.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_102); прежняя доказательная ось: candidate; требуется реальный носитель ФТС.
 - **Ссылается на:** карточки `O_14`; OQ `oq-blackwell-canonical-projection`.
 - **Первичное место:** [v14_rebuild/e5_literature_review/BLACKWELL_BRIDGE.md](../e5_literature_review/BLACKWELL_BRIDGE.md).
 
@@ -1337,8 +1340,8 @@ Blackwell-остаток как кандидат Res_n / QuestionGain: опер�
 
 Д10: фаза — деформация формы в анти-форму; операциональный тест (RadioML, фазовая ротация {BPSK,QPSK,8PSK} против амплитудного контроля) — PASS был бы только кандидатом на снятие потолка комплексного слоя. Прогон v3 остановлен как артефакт (CFO-нормализация не сошлась), вердикт о фазе не выносится.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate_overlay; PA-R05: «Д10 дал фазовый вердикт» снято (конфаунды и стоп-артефакты); для снятия потолка нужна независимая реплика на второй площадке.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_105); прежняя доказательная ось: candidate_overlay; PA-R05: «Д10 дал фазовый вердикт» снято (конфаунды и стоп-артефакты); для снятия потолка нужна независимая реплика на второй площадке.
 - **Ссылается на:** карточки `COMPLEX_BRANCH_OVERLAY`, `COMPLEX_CARRIER`, `OP_ComplexNormReadout`; проверки `d10_phase/radioml/RESULTS_v3.md`; OQ `oq-d10-phase-test`.
 - **Первичное место:** [v14_rebuild/d10_phase/radioml/RESULTS_v3.md](../d10_phase/radioml/RESULTS_v3.md). Также: [v14_rebuild/d10_phase/radioml/PREREGISTRATION_v3.md](../d10_phase/radioml/PREREGISTRATION_v3.md); [v14_rebuild/d10_phase/CANDIDATES.md](../d10_phase/CANDIDATES.md); [v14_rebuild/runbook_complex_axis.md](../runbook_complex_axis.md); [v14_rebuild/d10_phase/radioml/PREREGISTRATION.md](../d10_phase/radioml/PREREGISTRATION.md); [v14_rebuild/d10_phase/radioml/PREREGISTRATION_v2.md](../d10_phase/radioml/PREREGISTRATION_v2.md); [v14_rebuild/d10_phase/radioml/RESULTS.md](../d10_phase/radioml/RESULTS.md); [v14_rebuild/d10_phase/radioml/runbook_v3.md](../d10_phase/radioml/runbook_v3.md).
 
@@ -1346,8 +1349,8 @@ Blackwell-остаток как кандидат Res_n / QuestionGain: опер�
 
 Рефлексия на примере поезда: кандидат операционализации У11 (включение собственного правила в предмет рассмотрения, «если я снова…»); сравнение реализаций через O_09 и кандидат O_13; протокол v1 и черновик v2.
 
-- **Происхождение:** автор + ассистент. **Авторская ось:** тезис автора + формализация ассистента.
-- **Статус в источнике:** кандидат операционализации; не модель реального управления и не свидетельство достижения У11.
+- **Происхождение:** автор + ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_106); прежняя доказательная ось: кандидат операционализации; не модель реального управления и не свидетельство достижения У11.
 - **Ссылается на:** карточки `U_11`, `O_09`, `O_13`; OQ `oq-train-reflection-test`, `oq-reflection-label-internalization`.
 - **Первичное место:** [v14_rebuild/TRAIN_REFLECTION_TEST_DRAFT_2026-09-14.md](../TRAIN_REFLECTION_TEST_DRAFT_2026-09-14.md). Также: [v14_rebuild/train_reflection/PROTOCOL.md](../train_reflection/PROTOCOL.md); [v14_rebuild/train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md](../train_reflection/PROTOCOL_V2_DRAFT_2026-09-15.md).
 
@@ -1355,8 +1358,8 @@ Blackwell-остаток как кандидат Res_n / QuestionGain: опер�
 
 AbsDataGain (O_20): типизированное отсутствие как данные; внешний тест o20 отрицателен (1/4 выигрышей по наборам данных, точный тест знака p=0.9375); кандидат остаётся, подтверждение 0_A (PA-R03) снято; новый benchmark — только с отдельной предрегистрацией и более информативным механизмом.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate_requires_empirical_test; опровергнутое обобщение «O_20 подтверждает 0_A».
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_107); прежняя доказательная ось: candidate_requires_empirical_test; опровергнутое обобщение «O_20 подтверждает 0_A».
 - **Ссылается на:** карточки `O_20`, `A2`; OQ `oq-o20-missing-benchmark`, `oq-typed-absence-provenance-benchmark`.
 - **Первичное место:** [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md). Также: [v14_rebuild/e5_literature_review/COUPLING_MAP.md](../e5_literature_review/COUPLING_MAP.md); [v14_rebuild/e5_literature_review/TYPED_ABSENCE_BRIDGE.md](../e5_literature_review/TYPED_ABSENCE_BRIDGE.md); [v14_rebuild/e5_literature_review/papers/E5-H04/DOSSIER.ru.md](../e5_literature_review/papers/E5-H04/DOSSIER.ru.md); [v14_rebuild/e5_literature_review/papers/E5-H05/DOSSIER.ru.md](../e5_literature_review/papers/E5-H05/DOSSIER.ru.md).
 
@@ -1372,16 +1375,16 @@ AbsDataGain (O_20): типизированное отсутствие как д�
 
 Д6 (взвешенный ряд = критерий) как общее правило. Не хватает общей формы критерия за пределами аналитических рядов.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate_v14 (paper §11.3).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_108); прежняя доказательная ось: candidate_v14 (paper §11.3).
 - **Первичное место:** [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено) `#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено`.
 
 #### CP-109 · СУ · уровни: 10 · чтение
 
 Чтение У10 «агрегация пониманий, сходящаяся при цене ошибки». Операционального теста уровня в каноне нет: лист 29_7plus_tests содержит только агентные гейты T7A–T7C и открытые вопросы; тест для У10 нужно создать.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate_v14 (paper §11.3).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_109); прежняя доказательная ось: candidate_v14 (paper §11.3).
 - **Ссылается на:** карточки `U_10`, `T7A`, `T7B`, `T7C`; OQ `oq-u8-u10-optests`.
 - **Первичное место:** [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено) `#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено`.
 
@@ -1389,8 +1392,8 @@ AbsDataGain (O_20): типизированное отсутствие как д�
 
 Аргумент невставляемости через атомарность словаря Д (§6.1): нужно доказательство полноты словаря (сейчас — аргумент, опровержимый по §12 п.8 / F1).
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate_v14 (paper §11.3).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_110); прежняя доказательная ось: candidate_v14 (paper §11.3).
 - **Ссылается на:** карточки `O_07`, `F1`; OQ `oq-dict-d-completeness`.
 - **Первичное место:** [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено) `#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено`.
 
@@ -1398,8 +1401,8 @@ AbsDataGain (O_20): типизированное отсутствие как д�
 
 Д11 / регистр отношений (§5.1b) и лемма Tot = коллапс Z/2→{1}: математика — formal_math_fact (C-44…C-48), статус чтения — candidate_v14. Нужны операциональный тест, где бит ветви работает, а аддитивная разность — нет (§12 п.9), и применение леммы к не-механизированным уровням (см. CP-033).
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate_v14 (paper §11.3).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_111); прежняя доказательная ось: candidate_v14 (paper §11.3).
 - **Ссылается на:** карточки `OP_Tot`; проверки `C-44`, `C-45`, `C-46`, `C-47`, `C-48`; OQ `oq-d11-branch-bit-test`, `oq-tot-groups-8-11`.
 - **Первичное место:** [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено) `#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено`.
 
@@ -1407,8 +1410,8 @@ AbsDataGain (O_20): типизированное отсутствие как д�
 
 Арностный паттерн окон (§8.5, обобщение O_19): Select → Agg_i(V_i); третье окно должно подтвердить или опровергнуть арностный скачок 13→14.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** candidate_v14 (paper §11.3); PA-C05 «арностный цикл» держится на двух инстансах.
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_112); прежняя доказательная ось: candidate_v14 (paper §11.3); PA-C05 «арностный цикл» держится на двух инстансах.
 - **Ссылается на:** карточки `O_19`, `CH_06`; OQ `oq-arity-window-13-14`.
 - **Первичное место:** [v14_rebuild/FTS_v14_paper.md](../FTS_v14_paper.md#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено) `#113-оставлено-кандидатами-не-прошло-в-канон-но-не-отброшено`. Также: [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md).
 
@@ -1416,8 +1419,8 @@ AbsDataGain (O_20): типизированное отсутствие как д�
 
 PA-C01 — словарь Д1…Д11 (связывает повторяющиеся операции); победить или повысить может только атомарность + RoleNec/QuestionGain. Развёрнуто: CP-095, CP-110.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** PA-C01 (кандидат атласа закономерностей).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_113); прежняя доказательная ось: PA-C01 (кандидат атласа закономерностей).
 - **Ссылается на:** карточки `O_03`, `O_13`, `O_14`; OQ `oq-dict-d-completeness`.
 - **Первичное место:** [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md). Также: [v14_rebuild/audit/AUDIT_REPORT.md](../audit/AUDIT_REPORT.md); [v14_rebuild/audit/PATTERN_OQ_MAP.md](../audit/PATTERN_OQ_MAP.md); [v14_rebuild/audit/REVIEW_CONCLUSION.md](../audit/REVIEW_CONCLUSION.md).
 
@@ -1425,8 +1428,8 @@ PA-C01 — словарь Д1…Д11 (связывает повторяющие�
 
 PA-C02 — семантика У7…У12 (согласуется с формами и мостами); нужны отдельные К1–К5 и абляции. Развёрнуто: CP-006, CP-033, CP-036, CP-084.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** PA-C02 (кандидат атласа).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_114); прежняя доказательная ось: PA-C02 (кандидат атласа).
 - **Ссылается на:** карточки `U_07`, `U_08`, `U_09`, `U_10`, `U_11`, `U_12`; OQ `oq-forms8plus-ratio`.
 - **Первичное место:** [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md).
 
@@ -1434,8 +1437,8 @@ PA-C02 — семантика У7…У12 (согласуется с формам
 
 PA-C03 — пентада / эскалация симметрии узлов (A0b + два окна и projected третье); нужны общий оператор и формы 13…15. Развёрнуто: CP-040, CP-079, CP-057.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** PA-C03 (кандидат атласа).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_115); прежняя доказательная ось: PA-C03 (кандидат атласа).
 - **Ссылается на:** карточки `A0b`; OQ `oq-pentad-role-cycle`, `oq-node11-asymmetry`.
 - **Первичное место:** [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md). Также: [OQ_TRIAGE.md](../../OQ_TRIAGE.md).
 
@@ -1443,8 +1446,8 @@ PA-C03 — пентада / эскалация симметрии узлов (A0
 
 PA-C04 — правило предсказания П / паспорт П6 (ретродикция и defeat-клаузы); победит или повысит независимое успешное предсказание. Развёрнуто: CP-049.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** PA-C04 (кандидат атласа).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_116); прежняя доказательная ось: PA-C04 (кандидат атласа).
 - **Ссылается на:** карточки `O_13`, `O_14`, `O_15`, `O_16`, `O_17`, `O_18`, `O_19`, `O_20`; OQ `oq-passport-u14-u15`.
 - **Первичное место:** [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md).
 
@@ -1452,8 +1455,8 @@ PA-C04 — правило предсказания П / паспорт П6 (ре
 
 PA-C06 — комплексная сборка (Z/2 → Z/4 → U(1), колонка 0/4/8/12): нужен чистый capacity-matched RoleNec. Развёрнуто: CP-080, CP-105.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** PA-C06 (кандидат атласа).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_117); прежняя доказательная ось: PA-C06 (кандидат атласа).
 - **Ссылается на:** карточки `COMPLEX_BRANCH_OVERLAY`; OQ `oq-synthesis-c-assembly`, `oq-d10-phase-test`.
 - **Первичное место:** [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md).
 
@@ -1461,8 +1464,8 @@ PA-C06 — комплексная сборка (Z/2 → Z/4 → U(1), колон
 
 PA-C07 — Tot как group collapse (ratio-алгебра): нужен явный операционный морфизм Tot. Развёрнуто: CP-033, CP-050, CP-111.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** PA-C07 (кандидат атласа).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_118); прежняя доказательная ось: PA-C07 (кандидат атласа).
 - **Ссылается на:** карточки `OP_Tot`; OQ `oq-tot-groups-8-11`.
 - **Первичное место:** [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md).
 
@@ -1470,8 +1473,8 @@ PA-C07 — Tot как group collapse (ratio-алгебра): нужен явны
 
 PA-C08 — χ / статистический / тензорный оверлеи (повторные overlay-карточки): нужны закон преобразования и абляция. Развёрнуто: карточные семейства FAM-CHI, FAM-COMPLEX, FAM-TENSOR (таблица A), CP-104.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** PA-C08 (кандидат атласа).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_119); прежняя доказательная ось: PA-C08 (кандидат атласа).
 - **Ссылается на:** карточки `CHI_STAT_LADDER`, `COMPLEX_BRANCH_OVERLAY`, `TENSOR_CONTEXT_OVERLAY`; OQ `oq-chi-ladder-done`, `oq-graph-reference-definitions`.
 - **Первичное место:** [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md). Также: [v14_rebuild/FTS_v14_register_map.md](../FTS_v14_register_map.md).
 
@@ -1479,8 +1482,8 @@ PA-C08 — χ / статистический / тензорный оверлеи
 
 PA-C09 — типизированные внешние мосты У1–У5 / Blackwell / category / HoTT: У2–У5 имеют component-level formal contact, остальные — направления; нужны явные объекты, морфизмы, риски и законы. Развёрнуто: CP-099, CP-100, CP-101.
 
-- **Происхождение:** ассистент. **Авторская ось:** не принято автором.
-- **Статус в источнике:** PA-C09 (кандидат атласа).
+- **Происхождение:** ассистент. **Авторская ось:** канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md).
+- **Статус в источнике:** canonical_adopted 2026-10-18 (CP_120); прежняя доказательная ось: PA-C09 (кандидат атласа).
 - **Ссылается на:** карточки `OP_Lift`; OQ `oq-blackwell-canonical-projection`, `oq-lift-typing-passport`.
 - **Первичное место:** [v14_rebuild/audit/PATTERN_ATLAS.md](../audit/PATTERN_ATLAS.md).
 
@@ -1537,27 +1540,27 @@ PA-C09 — типизированные внешние мосты У1–У5 / Bl
 | `U_06` | canonical_strict | 13 | CP-001, CP-047, CP-048, CP-052, CP-053, CP-057, CP-061, CP-065, CP-066, CP-084, CP-087, CP-088, CP-101 |
 | `M_06` | canonical_strict | 5 | CP-005, CP-084, CP-088, CP-092, CP-093 |
 | `CH_06` | canonical_strict | 8 | CP-005, CP-063, CP-084, CP-087, CP-088, CP-096, CP-112, CP-124 |
-| `U_07`* | candidate_with_operational_gate | 16 | CP-001, CP-006, CP-007, CP-015, CP-030, CP-031, CP-034, CP-050, CP-051, CP-053, CP-063, CP-083, CP-084, CP-085, CP-090, CP-114 |
-| `M_07`* | candidate_with_operational_gate | 6 | CP-005, CP-084, CP-085, CP-092, CP-094, CP-095 |
-| `CH_07`* | candidate_with_operational_gate | 4 | CP-084, CP-085, CP-086, CP-094 |
-| `U_08`* | candidate_with_operational_gate | 13 | CP-004, CP-006, CP-007, CP-009, CP-015, CP-033, CP-045, CP-047, CP-051, CP-053, CP-078, CP-082, CP-114 |
+| `U_07`* | canonical_adopted | 16 | CP-001, CP-006, CP-007, CP-015, CP-030, CP-031, CP-034, CP-050, CP-051, CP-053, CP-063, CP-083, CP-084, CP-085, CP-090, CP-114 |
+| `M_07`* | canonical_adopted | 6 | CP-005, CP-084, CP-085, CP-092, CP-094, CP-095 |
+| `CH_07`* | canonical_adopted | 4 | CP-084, CP-085, CP-086, CP-094 |
+| `U_08`* | canonical_adopted | 13 | CP-004, CP-006, CP-007, CP-009, CP-015, CP-033, CP-045, CP-047, CP-051, CP-053, CP-078, CP-082, CP-114 |
 | `M_08`* | candidate_with_operational_gate | 2 | CP-004, CP-095 |
-| `U_09`* | FTS_candidate | 21 | CP-006, CP-007, CP-010, CP-011, CP-015, CP-033, CP-034, CP-047, CP-051, CP-053, CP-054, CP-055, CP-056, CP-057, CP-059, CP-064, CP-067, CP-068, CP-089, CP-090, CP-114 |
+| `U_09`* | canonical_adopted | 21 | CP-006, CP-007, CP-010, CP-011, CP-015, CP-033, CP-034, CP-047, CP-051, CP-053, CP-054, CP-055, CP-056, CP-057, CP-059, CP-064, CP-067, CP-068, CP-089, CP-090, CP-114 |
 | `M_09`* | FTS_candidate | 3 | CP-010, CP-011, CP-095 |
-| `U_10`* | reserved_underformalized | 11 | CP-033, CP-047, CP-051, CP-055, CP-056, CP-057, CP-060, CP-068, CP-069, CP-109, CP-114 |
+| `U_10`* | canonical_adopted | 11 | CP-033, CP-047, CP-051, CP-055, CP-056, CP-057, CP-060, CP-068, CP-069, CP-109, CP-114 |
 | `M_10`* | reserved_underformalized | 1 | CP-095 |
-| `U_11`* | reserved_underformalized | 13 | CP-014, CP-033, CP-035, CP-040, CP-047, CP-051, CP-056, CP-057, CP-062, CP-064, CP-070, CP-106, CP-114 |
+| `U_11`* | canonical_adopted | 13 | CP-014, CP-033, CP-035, CP-040, CP-047, CP-051, CP-056, CP-057, CP-062, CP-064, CP-070, CP-106, CP-114 |
 | `M_11`* | reserved_underformalized | 1 | CP-095 |
-| `U_12`* | candidate_requires_formalization + canonical_alignment | 11 | CP-036, CP-041, CP-044, CP-049, CP-057, CP-058, CP-064, CP-065, CP-071, CP-078, CP-114 |
-| `M_12`* | formal_math_fact / candidate_requires_formalization + canonical_alignment | 7 | CP-036, CP-044, CP-049, CP-058, CP-071, CP-078, CP-095 |
-| `U_13`* | projected_underformalized | 7 | CP-019, CP-041, CP-042, CP-049, CP-057, CP-058, CP-071 |
+| `U_12`* | canonical_adopted | 11 | CP-036, CP-041, CP-044, CP-049, CP-057, CP-058, CP-064, CP-065, CP-071, CP-078, CP-114 |
+| `M_12`* | canonical_adopted | 7 | CP-036, CP-044, CP-049, CP-058, CP-071, CP-078, CP-095 |
+| `U_13`* | canonical_adopted | 7 | CP-019, CP-041, CP-042, CP-049, CP-057, CP-058, CP-071 |
 | `M_13`* | projected_underformalized | 1 | CP-095 |
-| `U_14`* | projected_underformalized | 5 | CP-037, CP-041, CP-042, CP-045, CP-049 |
+| `U_14`* | canonical_adopted | 5 | CP-037, CP-041, CP-042, CP-045, CP-049 |
 | `M_14`* | projected_underformalized | 1 | CP-037 |
 | `U_15` | canonical_node_underformalized_semantics | 4 | CP-019, CP-040, CP-041, CP-049 |
-| `U_16`* | speculative | 1 | CP-038 |
+| `U_16`* | canonical_adopted | 1 | CP-038 |
 | `M_16`* | speculative | 1 | CP-038 |
-| `U_17`* | speculative | 4 | CP-032, CP-039, CP-045, CP-060 |
+| `U_17`* | canonical_adopted | 4 | CP-032, CP-039, CP-045, CP-060 |
 | `M_17`* | speculative | 1 | CP-039 |
 | `O_01` | canon/base | 3 | CP-013, CP-014, CP-124 |
 | `O_02` | canon/base | 2 | CP-072, CP-087 |
@@ -1565,18 +1568,18 @@ PA-C09 — типизированные внешние мосты У1–У5 / Bl
 | `O_07` | canon/base | 4 | CP-046, CP-075, CP-110, CP-126 |
 | `O_08` | canon/base | 4 | CP-072, CP-073, CP-101, CP-124 |
 | `O_09` | canon/base | 1 | CP-106 |
-| `O_13`* | candidate | 5 | CP-079, CP-106, CP-113, CP-116, CP-126 |
-| `O_14`* | candidate | 14 | CP-046, CP-072, CP-073, CP-074, CP-075, CP-076, CP-081, CP-086, CP-102, CP-113, CP-116, CP-125, CP-126, CP-127 |
-| `O_15`* | candidate | 2 | CP-077, CP-116 |
-| `O_16`* | candidate | 1 | CP-116 |
-| `O_17`* | candidate | 1 | CP-116 |
-| `O_18`* | candidate | 1 | CP-116 |
-| `O_19`* | candidate | 5 | CP-042, CP-084, CP-112, CP-116, CP-126 |
-| `O_20`* | candidate_requires_empirical_test | 3 | CP-107, CP-116, CP-126 |
+| `O_13`* | canonical_adopted | 5 | CP-079, CP-106, CP-113, CP-116, CP-126 |
+| `O_14`* | canonical_adopted | 14 | CP-046, CP-072, CP-073, CP-074, CP-075, CP-076, CP-081, CP-086, CP-102, CP-113, CP-116, CP-125, CP-126, CP-127 |
+| `O_15`* | canonical_adopted | 2 | CP-077, CP-116 |
+| `O_16`* | canonical_adopted | 1 | CP-116 |
+| `O_17`* | canonical_adopted | 1 | CP-116 |
+| `O_18`* | canonical_adopted | 1 | CP-116 |
+| `O_19`* | canonical_adopted | 5 | CP-042, CP-084, CP-112, CP-116, CP-126 |
+| `O_20`* | canonical_adopted | 3 | CP-107, CP-116, CP-126 |
 | `OP_Tot` | canonical | 6 | CP-033, CP-050, CP-099, CP-111, CP-118, CP-122 |
 | `OP_Lift` | canonical | 3 | CP-072, CP-100, CP-120 |
 | `OP_Sever` | canonical | 1 | CP-099 |
-| `OP_kappa`* | candidate_with_operational_gate | 1 | CP-077 |
+| `OP_kappa`* | canonical_adopted | 1 | CP-077 |
 | `OP_event0A` | canonical | 1 | CP-099 |
 | `OP_pi` | canonical | 2 | CP-034, CP-101 |
 | `A0b` | canonical | 2 | CP-040, CP-115 |
@@ -1593,32 +1596,32 @@ PA-C09 — типизированные внешние мосты У1–У5 / Bl
 | `T7C` | canonical | 2 | CP-099, CP-109 |
 | `ADD_ZERO_BOUNDARY` | formal_math_fact / derived_constraint | 2 | CP-012, CP-043 |
 | `ADD_PARITY_TOPOLOGY` | canonical_alignment | 2 | CP-052, CP-062 |
-| `ADD_TOPO_INVARIANTS`* | candidate | 5 | CP-052, CP-053, CP-061, CP-062, CP-063 |
-| `ADD_U11_EPI`* | candidate | 1 | CP-035 |
-| `ADD_U12_CIRCLE`* | candidate_requires_formalization | 5 | CP-036, CP-043, CP-049, CP-058, CP-065 |
+| `ADD_TOPO_INVARIANTS`* | canonical_adopted | 5 | CP-052, CP-053, CP-061, CP-062, CP-063 |
+| `ADD_U11_EPI`* | canonical_adopted | 1 | CP-035 |
+| `ADD_U12_CIRCLE`* | canonical_adopted | 5 | CP-036, CP-043, CP-049, CP-058, CP-065 |
 | `SP_WINDOW` | derived_constraint | 1 | CP-123 |
 | `SP_ZERO` | formal_math_fact / derived_constraint | 1 | CP-123 |
 | `SP_U12`* | candidate_requires_formalization + canonical_alignment | 1 | CP-049 |
-| `U7_WINDOW_CORE`* | candidate_with_operational_gate | 5 | CP-077, CP-083, CP-084, CP-086, CP-094 |
-| `CHI_STAT_LADDER`* | statistical_overlay_candidate | 1 | CP-119 |
-| `CHI_CARRIER`* | statistical_overlay_candidate | 1 | CP-104 |
-| `OP_ChiCarrier`* | statistical_overlay_candidate | 1 | CP-104 |
+| `U7_WINDOW_CORE`* | canonical_adopted | 5 | CP-077, CP-083, CP-084, CP-086, CP-094 |
+| `CHI_STAT_LADDER`* | canonical_adopted | 1 | CP-119 |
+| `CHI_CARRIER`* | canonical_adopted | 1 | CP-104 |
+| `OP_ChiCarrier`* | canonical_adopted | 1 | CP-104 |
 | `CHI_LADDER_U6` | strong_statistical_analog | 1 | CP-104 |
-| `CHI_LADDER_U9`* | FTS_candidate_guarded | 1 | CP-089 |
-| `COMPLEX_BRANCH_OVERLAY`* | candidate_overlay | 4 | CP-080, CP-105, CP-117, CP-119 |
-| `COMPLEX_CARRIER`* | candidate_overlay | 2 | CP-080, CP-105 |
-| `OP_ComplexNormReadout`* | candidate_overlay | 1 | CP-105 |
-| `OP_ComplexBranchAccess`* | candidate_overlay | 1 | CP-103 |
-| `U12_CHI_PI_COMPLEX_BOUNDARY`* | candidate_requires_formalization | 1 | CP-103 |
-| `TENSOR_CONTEXT_OVERLAY`* | candidate_overlay | 1 | CP-119 |
-| `TENSOR_CARRIER`* | candidate_overlay | 1 | CP-103 |
-| `A_07`* | candidate_with_operational_gate | 5 | CP-004, CP-008, CP-015, CP-050, CP-054 |
+| `CHI_LADDER_U9`* | canonical_adopted | 1 | CP-089 |
+| `COMPLEX_BRANCH_OVERLAY`* | canonical_adopted | 4 | CP-080, CP-105, CP-117, CP-119 |
+| `COMPLEX_CARRIER`* | canonical_adopted | 2 | CP-080, CP-105 |
+| `OP_ComplexNormReadout`* | canonical_adopted | 1 | CP-105 |
+| `OP_ComplexBranchAccess`* | canonical_adopted | 1 | CP-103 |
+| `U12_CHI_PI_COMPLEX_BOUNDARY`* | canonical_adopted | 1 | CP-103 |
+| `TENSOR_CONTEXT_OVERLAY`* | canonical_adopted | 1 | CP-119 |
+| `TENSOR_CARRIER`* | canonical_adopted | 1 | CP-103 |
+| `A_07`* | canonical_adopted | 5 | CP-004, CP-008, CP-015, CP-050, CP-054 |
 | `U7_LOGIC_GROUPING` | derived_constraint | 1 | CP-026 |
 | `AC_20261003_WINDOW_FAMILIES` | author_canonical_amendment | 8 | CP-016, CP-017, CP-022, CP-023, CP-024, CP-026, CP-027, CP-028 |
 | `AC_20261003_WINDOWS_TRIPLES` | author_canonical_amendment | 4 | CP-011, CP-016, CP-018, CP-020 |
 | `AC_20261003_WINDOWS_FIVES` | author_canonical_amendment | 2 | CP-020, CP-021 |
 | `AC_20261003_WINDOWS_SEVENS` | author_canonical_amendment | 4 | CP-020, CP-021, CP-029, CP-121 |
-| `WINDOW_GROUPINGS`* | candidate_research_index | 1 | CP-025 |
+| `WINDOW_GROUPINGS`* | canonical_adopted | 1 | CP-025 |
 | `WINDOW_GROUPING_13`* | candidate_math_overlay | 1 | CP-025 |
 | `WINDOW_GROUPING_25`* | candidate_math_overlay | 1 | CP-025 |
 
@@ -1714,7 +1717,7 @@ PA-C09 — типизированные внешние мосты У1–У5 / Bl
 | `oq-mu9-counterweight` | Противовес У9: что блокирует и дополняет `x³` — `x` (тогда `x³=x` даёт `t³=t`), запрет `−x³` или иное | CP-015, CP-059 | — |
 | `oq-phase-modulus-12-15` | Уровни 12, 13, 15 в схеме блоков (фаза 5–9, модуль 9–13): 12 как поворот 11 на 90°; 13 как замыкание блока … | CP-056, CP-057, CP-058, CP-060, CP-069, CP-071 | — |
 
-В `OPEN_QUESTIONS.md` 112 адресов; реестр связан с 85; 27 не связаны ни с одной строкой.
+В `OPEN_QUESTIONS.md` 116 адресов; реестр связан с 85; 31 не связаны ни с одной строкой.
 
 ### 5.3. Проверки и свидетели
 
@@ -1968,6 +1971,11 @@ PA-C09 — типизированные внешние мосты У1–У5 / Bl
 | [v14_rebuild/claim_questions/OBJECTS.md](../claim_questions/OBJECTS.md) | `derived` | слой вопросов к утверждениям (assistant_derived); «кандидатный паттерн» цитирует PATTERN_ATLAS |
 | [v14_rebuild/claim_questions/README.md](../claim_questions/README.md) | `derived` | слой вопросов к утверждениям; «автоматический поиск кандидатов» — про способ связывания вопросов |
 | [v14_rebuild/claim_questions/RECORDS_PENDING.md](../claim_questions/RECORDS_PENDING.md) | `derived` | слой вопросов; «почти-дубли остаются кандидатами» — про дубликаты вопросов, а не предложения ФТС |
+| [v14_rebuild/paper_plan/habr_draft_v1.md](../paper_plan/habr_draft_v1.md) | `derived` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
+| [v14_rebuild/paper_plan/habr_draft_v2.md](../paper_plan/habr_draft_v2.md) | `derived` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
+| [v14_rebuild/paper_plan/habr_draft_v3.md](../paper_plan/habr_draft_v3.md) | `derived` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
+| [v14_rebuild/paper_plan/habr_draft_v4.md](../paper_plan/habr_draft_v4.md) | `derived` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
+| [v14_rebuild/paper_plan/habr_final.md](../paper_plan/habr_final.md) | `derived` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
 | [v14_rebuild/e5_literature_review/INDEX.md](../e5_literature_review/INDEX.md) | `lit_protocol` | оглавление пакета E5; «раздельные кандидаты для 0_A и Lift» названы в строках реестра по первоисточникам |
 | [v14_rebuild/e5_literature_review/PROTOCOL.md](../e5_literature_review/PROTOCOL.md) | `lit_protocol` | протокол поиска литературы; «кандидаты» — найденные записи (до 200 уникальных) |
 | [v14_rebuild/e5_literature_review/PROTOCOL_AMENDMENT_002.md](../e5_literature_review/PROTOCOL_AMENDMENT_002.md) | `lit_protocol` | поправка протокола поиска; «кандидаты» — найденные записи |
@@ -1984,10 +1992,21 @@ PA-C09 — типизированные внешние мосты У1–У5 / Bl
 | [project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md](../../project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md) | `procedure` | аудит/сверка графа и охвата; «кандидаты» — категория учёта, не предложение ФТС |
 | [v14_rebuild/audit/BASELINE.md](../audit/BASELINE.md) | `procedure` | базовый прогон проверок; «кандидатные пробы» — служебное имя набора probes.py |
 | [v14_rebuild/e5_literature_review/DEEP_RESEARCH_REQUESTS_CONNECTIVITY.md](../e5_literature_review/DEEP_RESEARCH_REQUESTS_CONNECTIVITY.md) | `procedure` | тексты запросов на внешний поиск по кандидатным основаниям О13–О20; сами основания учтены в таблице карточек |
+| [v14_rebuild/paper_plan/INTEGRITY_2_5.md](../paper_plan/INTEGRITY_2_5.md) | `procedure` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
+| [v14_rebuild/paper_plan/INTEGRITY_4_5.md](../paper_plan/INTEGRITY_4_5.md) | `procedure` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
+| [v14_rebuild/paper_plan/PLAN_SESSION.md](../paper_plan/PLAN_SESSION.md) | `procedure` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
+| [v14_rebuild/paper_plan/RESPONSE_R1.md](../paper_plan/RESPONSE_R1.md) | `procedure` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
+| [v14_rebuild/paper_plan/REVIEW_ROUND1.md](../paper_plan/REVIEW_ROUND1.md) | `procedure` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
+| [v14_rebuild/paper_plan/REVIEW_ROUND1_OPUS_CHECK.md](../paper_plan/REVIEW_ROUND1_OPUS_CHECK.md) | `procedure` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
+| [v14_rebuild/paper_plan/REVIEW_ROUND2.md](../paper_plan/REVIEW_ROUND2.md) | `procedure` | статья Хабра и её подготовка: изложение существующих положений, не отдельный список предложений ФТС |
 | [author_canon/2026-09-19/AMENDMENT.md](../../author_canon/2026-09-19/AMENDMENT.md) | `status_note` | констатирует, что логическая форма У6 — уже принятое содержание, «а не только кандидат» |
 | [v14_rebuild/canon_coverage_v14.md](../canon_coverage_v14.md) | `status_note` | таблица покрытия канона: «7+ — кандидат», «оверлей-кандидат» повторяют статусы карточек (раздел 2 реестра) |
 
 ## 7. Решения, которые источники оставляют за автором
+
+Актуальный результат 2026-10-18 — [таблица всех решений](dispositions_2026-10-18.tsv).
+Ниже сохранён перечень исходных развилок; совместимые принятые части и их области
+читаются по `CP_NNN` в каноне. Само наличие открытого обязательства не отменяет принятие.
 
 Сводка из `STATE.md`, `DECISIONS.md` (2026-10-09…11), `DIALOGUE_NUANCE_JOURNAL.md` и заметок; в реестре эти пункты
 не решаются. Столбец «Строки» — где предложение развёрнуто.
@@ -2038,7 +2057,7 @@ py -3.11 -X utf8 work/v14_rebuild/candidates_register_2026-10-15/build_register.
 ```
 
 Новый документ со словом «кандидат» в `work/` без записи в реестре или в `excluded_files.tsv` приводит к ошибке покрытия.
-Если предложение принято автором или получило статус по `SP_*`, обновляются поля `author_axis` и `status` строки;
-сам статус повышается не здесь. Перенос реестра в карточку канона (по образцу `WINDOW_GROUPINGS`,
-`candidate_research_index`) потребовал бы правки `source/`, пересборки производных и `verify.py --strict`; в этом шаге
-не выполнялся.
+Если предложение принято автором или получило статус по `SP_*`, обновляются поля `author_axis` и `status` строки.
+Каноническое принятие без альтернатив выполняется по `PROJECT_INSTRUCTIONS.md#canon`:
+реальная запись в `source/`, отдельная доказательная ось, пересборка производных и `verify.py --strict`.
+Первое применение выполнено 2026-10-18; `canonize_2026-10-18.py --check` сверяет полный набор решений.

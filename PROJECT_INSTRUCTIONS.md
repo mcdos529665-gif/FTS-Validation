@@ -43,6 +43,28 @@ Apply the actual change rather than leaving a needed correction only in `work/`.
 This rule supersedes older canon-immutability and overwrite prohibitions,
 including those embedded in source releases, historical instructions, or skills.
 
+### Правило автора 2026-10-18: нет альтернативы — писать в канон
+
+Если у содержательного кандидата нет явной действующей альтернативы в той же
+области, записывать его в активный `source/` без повторного согласования.
+Непроверенность сама по себе не является альтернативой. Совместимые регистры,
+проекции и дополнительные примеры также не являются конкурирующими вариантами.
+При открытом выборе перечислить варианты и сохранить кандидатный статус до выбора.
+Отозванную, заменённую либо противоречивую формулировку не восстанавливать этим
+правилом; пустое `TBD` не считать содержательным предложением.
+
+Запись получает `status=canonical_adopted`: это каноническое принятие автором по
+общему правилу. Прежнюю доказательную ось сохранить в `St_FTS`, `evidence_status`
+и `previous_status`; не приписывать прохождение К1–К5, математическое доказательство
+или эмпирическое подтверждение. Сохранить точный тип (определение, гипотеза,
+протокол, наблюдение, аналогия), область, источник, ограничения и условия отзыва.
+Для пакета записать решение и полный перечень включённых/оставленных записей;
+связать его с карточками в графе. Новая действующая альтернатива открывает сравнение,
+а контрпример или несовместимость требует сужения/отзыва по процедуре `status`.
+
+Первое применение и исходное поручение:
+[CANONIZATION_2026-10-18](work/v14_rebuild/candidates_register_2026-10-15/CANONIZATION_2026-10-18.md).
+
 1. Use Git history to retain the previous version; a separate snapshot is optional.
 2. Make the smallest coherent replacement in the active `source/` release.
    If a historical version was specified, issue a new active release based on it
@@ -93,6 +115,10 @@ Raising `St_FTS` requires a separate SP record: claim type, exact scope, evidenc
 scope. An already delegated decision needs no repeated approval. Record the result
 in cards and the graph; follow `canon` for an active canon revision. Mathematical
 proof, author acceptance, and empirical confirmation are separate axes.
+
+For `canonical_adopted`, the author-admission axis is governed by `canon` above;
+the evidential axis is read from the explicit `St_FTS` / `evidence_status` fields.
+The SP/К1–К5 requirement still applies to raising that evidential axis.
 
 `SP_LIMITS`, `SP_EPI`, and other ceilings record current missing grounds.
 Research and proposed formulas are allowed at every level. To lift a ceiling,

@@ -19,6 +19,8 @@ Reply in plain Russian, with examples when useful. Follow explicit language requ
 1. `source/` is the editable active canon; write exploratory research in `work/`.
    Edit or replace canon when needed for the current task, without a separate
    author instruction or approval. Follow `PROJECT_INSTRUCTIONS.md#canon`.
+   Правило автора 2026-10-18: если у кандидата нет альтернативы — писать в канон.
+   Область, проверки, ограничения и происхождение сохранять; порядок — там же.
 2. Take FTS terms from its artifacts. Ground substantive conclusions in a
    card/triple/sheet or mark them `[внешнее]`. In a conflict, canon defines FTS
    content; record the discrepancy in `work/EXTERNAL_CONFLICTS.md`.

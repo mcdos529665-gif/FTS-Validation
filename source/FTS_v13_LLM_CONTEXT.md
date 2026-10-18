@@ -1,6 +1,6 @@
-# FTS active canonical release — v13_u7_counterfeit_intuition_2026-10-17
+# FTS active canonical release — v13_candidates_no_alternative_2026-10-18
 
-Release date: 2026-10-17. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-18. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 ## Reading rules
@@ -18,14 +18,22 @@ release was produced by a new workbook round-trip.
 
 ## Active changes
 
-DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17.
+Правило автора: нет альтернативы — писать в канон; 94 предложения и 64 карточки приняты с сохранением доказательных осей; 56 записей оставлены с причинами.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
 AC-2026-10-03 adds the exact finite triple/five/seven window families, with author
 and editorial statuses retained. Intersections do not automatically define carriers.
 
-Cards: 172. Triples: 384. Sheets: 54.
+Cards: 268. Triples: 543. Sheets: 54.
+
+Author rule (2026-10-18): a substantive proposal without an explicit competing
+alternative is admitted to canon. `canonical_adopted` records author admission;
+read `St_FTS` / `evidence_status` for the retained evidential assessment. This is
+not `canonical_strict`, proof, or empirical confirmation. Read `adoption_scope`
+and source restrictions. Historical candidate wording in sheets/research is
+superseded only on the admission axis by the active card; limitations remain.
+Decision: `SP_CANON_NO_ALTERNATIVE_20261018`; rule: `CANON_NO_ALTERNATIVE`.
 
 ## Counts by card type
 
@@ -62,8 +70,10 @@ Cards: 172. Triples: 384. Sheets: 54.
 | overlay | 3 |
 | private_expression | 19 |
 | research_index | 1 |
+| research_proposal | 94 |
+| rule | 1 |
 | statistical_analog | 6 |
-| status_promotion | 5 |
+| status_promotion | 6 |
 | tensor_analog | 3 |
 | test | 3 |
 | topology_candidate | 1 |
@@ -75,45 +85,32 @@ Cards: 172. Triples: 384. Sheets: 54.
 
 | status | count |
 | --- | --- |
-| FTS_candidate | 4 |
-| FTS_candidate_guarded | 2 |
+| FTS_candidate | 2 |
 | active_instruction | 1 |
 | assistant_formalization_not_adopted | 2 |
 | author_canonical_amendment | 5 |
-| candidate | 12 |
-| candidate_U12_overlay | 3 |
-| candidate_boundary | 1 |
 | candidate_bridge | 2 |
-| candidate_bundle | 1 |
-| candidate_core | 2 |
 | candidate_logical_supplement | 2 |
 | candidate_math_overlay | 2 |
-| candidate_overlay | 9 |
-| candidate_requires_empirical_test | 1 |
-| candidate_requires_formalization | 2 |
-| candidate_requires_formalization + canonical_alignment | 3 |
-| candidate_research_index | 1 |
-| candidate_with_operational_gate | 11 |
+| candidate_requires_formalization + canonical_alignment | 1 |
+| candidate_with_operational_gate | 2 |
 | canon/base | 11 |
 | canon/base_plus_user_refinement | 1 |
-| canonical | 29 |
+| canonical | 30 |
+| canonical_adopted | 158 |
+| canonical_adoption_record | 1 |
 | canonical_alignment | 1 |
 | canonical_node_underformalized_semantics | 3 |
 | canonical_note | 1 |
 | canonical_strict | 24 |
 | derived_constraint | 3 |
 | editorial_check | 1 |
-| formal_math_fact / candidate_requires_formalization + canonical_alignment | 1 |
 | formal_math_fact / derived_constraint | 2 |
 | lifted_by_author | 1 |
 | operational_diagnostic_layer | 1 |
-| projected_underformalized | 6 |
-| reserved_overlay | 2 |
-| reserved_underformalized | 6 |
-| reserved_underformalized_overlay | 2 |
-| speculative | 6 |
-| statistical_overlay_candidate | 3 |
-| strong_overlay_for_U6 | 1 |
+| projected_underformalized | 4 |
+| reserved_underformalized | 2 |
+| speculative | 4 |
 | strong_statistical_analog | 1 |
 
 ## Added and restored records
@@ -121,7 +118,7 @@ Cards: 172. Triples: 384. Sheets: 54.
 | id | status | text |
 | --- | --- | --- |
 | U7_MATH_LOCAL_FORBID | lifted_by_author | Запрет снят автором 2026-10-08. Прежнее требование: МУ7 обязан включать local_forbid y=-x*x и y!=x*x; без правой части МУ7 схлопывается в МУ6. Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Различение МУ6/МУ7 теперь держится не запретом, а включением противоположности: МУ6 y=x*x (y!=-x*x), МУ7 \|y\|=x*x. |
-| A_07 | candidate_with_operational_gate | А-регистр (МУ7): \|y\|=x*x, то есть y=-x*x вместе с y=x*x (пара парабол). Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Запрет y!=x*x снят. Отличие от МУ6 (y=x*x): в МУ6 противоположность исключена, в МУ7 входит в структуру. Математический аналог сохраняется отдельно от логической формы M_07 (ЛУ7); мост между регистрами открыт. |
+| A_07 | canonical_adopted | А-регистр (МУ7): \|y\|=x*x, то есть y=-x*x вместе с y=x*x (пара парабол). Основание (автор 2026-10-08): до МУ7 противоположная функция исключается из уровня (точно на МУ0–МУ3); с уровня 7 отсутствие, то есть противоположность, входит во внутреннюю структуру уровня, поэтому МУ7 не выражается одной функцией. Запрет y!=x*x снят. Отличие от МУ6 (y=x*x): в МУ6 противоположность исключена, в МУ7 входит в структуру. Математический аналог сохраняется отдельно от логической формы M_07 (ЛУ7); мост между регистрами открыт. |
 | U7_LOGIC_GROUPING | derived_constraint | Активная каноническая форма У7 обязана сохранять всю вложенную группировку; обычная булева тень не заменяет эту форму. |
 | AC_20261003_AUTHOR_DECISION | author_canonical_amendment | Окна строятся группами нечётной длины: минимальные тройки, пятёрки, семёрки. |
 | AC_20261003_WINDOW_FAMILIES | author_canonical_amendment | Построение окон идёт группами нечётной длины; записаны тройки, пятёрки и семёрки, начинающиеся с уровня −1; соседние окна семейства пересекаются по одному уровню. |

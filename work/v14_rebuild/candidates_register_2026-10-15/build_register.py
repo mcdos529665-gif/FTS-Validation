@@ -36,9 +36,10 @@ CAND_COLS = ["id", "group", "ladder", "levels", "claim", "kind", "origin", "stat
 KINDS = {"form", "reading", "operator", "protocol", "bridge", "prediction", "observation", "method"}
 ORIGINS = {"author", "author_delegated", "mixed", "assistant", "assistant_accepted_text",
            "other_model", "external"}
-AXES = ["authored", "mixed", "delegated", "working_accepted", "text_accepted",
+AXES = ["canonical_rule_accepted", "authored", "mixed", "delegated", "working_accepted", "text_accepted",
         "delegated_accepted", "not_accepted", "needs_author"]
 AXIS_RU = {
+    "canonical_rule_accepted": "канонически принято по правилу автора 2026-10-18 (CANONIZATION_2026-10-18.md)",
     "authored": "сформулировано автором",
     "mixed": "тезис автора + формализация ассистента",
     "delegated": "выбор делегирован ассистенту",
@@ -48,7 +49,7 @@ AXIS_RU = {
     "not_accepted": "не принято автором",
     "needs_author": "ждёт решения автора",
 }
-AXIS_SHORT = {"authored": "авт.", "mixed": "смеш.", "delegated": "делег.",
+AXIS_SHORT = {"canonical_rule_accepted": "канон", "authored": "авт.", "mixed": "смеш.", "delegated": "делег.",
               "working_accepted": "раб.", "text_accepted": "текст", "delegated_accepted": "поруч.",
               "not_accepted": "нет", "needs_author": "ждёт"}
 ORIGIN_RU = {
@@ -301,7 +302,11 @@ def main():
                 errors.append(f"{i}: нет файла {path}")
 
     # --- семейства карточек канона ---
-    cand_cards = {k for k, c in cards.items() if CAND_STATUS_RE.search(c.get("status") or "")}
+    # Families preserve the original inventory after an admission. New CP cards
+    # belong to the research rows, not to the historical 87-card family inventory.
+    cand_cards = {k for k, c in cards.items()
+                  if not k.startswith('CP_') and (CAND_STATUS_RE.search(c.get("status") or "")
+                  or c.get('canonical_rule') == 'CANON_NO_ALTERNATIVE')}
     _, fams = read_tsv(PKG / "canon_families.tsv", ["family", "title", "belongs_to", "cards", "note"])
     fam_cards = collections.defaultdict(list)
     for fm in fams:
@@ -355,8 +360,10 @@ def main():
             a_ = int(a_); b_ = int(b_) if b_ else a_
             seen += [f"CP-{k:03d}" for k in range(a_, b_ + 1)]
         accepted = {m.group(1) for m in re.finditer(r"^\| (CP-\d{3}) \|", acc_part, re.M)}
-        if accepted != {i for i in ids if axes.get(i) == "delegated_accepted"}:
-            errors.append(f"ACCEPTANCE §2 и axes.tsv расходятся: {sorted(accepted ^ {i for i in ids if axes.get(i) == 'delegated_accepted'})}")
+        historical_axes = {i: cards.get(i.replace('-', '_'), {}).get('historical_author_axis', axes.get(i))
+                           for i in ids}
+        if accepted != {i for i in ids if historical_axes.get(i) == "delegated_accepted"}:
+            errors.append(f"ACCEPTANCE §2 и историческая ось расходятся: {sorted(accepted ^ {i for i in ids if historical_axes.get(i) == 'delegated_accepted'})}")
         open_ids = {i for i in ids if axes.get(i) in ("not_accepted", "mixed", "needs_author", "delegated_accepted")}
         cnt = collections.Counter(s_ for s_ in seen if s_ in open_ids)
         miss_dec = sorted(open_ids - set(cnt))

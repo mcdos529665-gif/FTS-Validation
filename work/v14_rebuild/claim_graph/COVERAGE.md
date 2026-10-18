@@ -5,17 +5,17 @@
 
 ## Покрытие
 
-- `canonical_cards`: 172
-- `canonical_triples`: 384
-- `canonical_card_depends_on`: 167
-- `canonical_input_assertions`: 601
+- `canonical_cards`: 268
+- `canonical_triples`: 543
+- `canonical_card_depends_on`: 168
+- `canonical_input_assertions`: 761
 - `author_cards`: 8
 - `author_triples`: 32
 - `audit_claim_groups`: 25
 - `audit_findings`: 20
 - `patterns`: 31
-- `open_question_anchors`: 115
-- `mapped_open_questions`: 94
+- `open_question_anchors`: 116
+- `mapped_open_questions`: 95
 - `verification_nodes`: 62
 - `external_evidence_nodes`: 21
 - `internal_evidence_nodes`: 18
@@ -23,8 +23,8 @@
 - `curated_research_bridges`: 201
 - `project_entities`: 1
 - `declared_research_scopes`: 4
-- `nodes`: 936
-- `edges`: 2316
+- `nodes`: 1130
+- `edges`: 2735
 - `unresolved_references`: 4
 
 ## Границы

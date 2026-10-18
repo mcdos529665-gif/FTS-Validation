@@ -1,6 +1,6 @@
-# FTS active canonical release — v13_u7_counterfeit_intuition_2026-10-17
+# FTS active canonical release — v13_candidates_no_alternative_2026-10-18
 
-Release date: 2026-10-17. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
+Release date: 2026-10-18. Primary active records: `fts_cards.jsonl` and `fts_triples.tsv`.
 Original workbook SHA256: `32a6ed34febaf62a57f6aac986e8caf9716b09b7b8f14bc131e76f81d15acbd6` (historical input, not reissued).
 
 ## Reading rules
@@ -18,14 +18,22 @@ release was produced by a new workbook round-trip.
 
 ## Active changes
 
-DN-0044: лист 04_7plus_minusA, У7, «Ложное повышение»: забывание (отказ от ожидания) выдаётся за интуицию = предположение (У8), а не за знание; восстанавливает образец «отказ У(n) → за У(n+1)» строк 8–10. Авторская поправка 2026-10-17.
+Правило автора: нет альтернативы — писать в канон; 94 предложения и 64 карточки приняты с сохранением доказательных осей; 56 записей оставлены с причинами.
 
 U6/U7 logical forms retain AC-2026-09-21. U7's mathematical reading is stored in
 `A_07` / `U7_MATH_LOCAL_FORBID`; logical grouping in `U7_LOGIC_GROUPING`.
 AC-2026-10-03 adds the exact finite triple/five/seven window families, with author
 and editorial statuses retained. Intersections do not automatically define carriers.
 
-Cards: 172. Triples: 384. Sheets: 54.
+Cards: 268. Triples: 543. Sheets: 54.
+
+Author rule (2026-10-18): a substantive proposal without an explicit competing
+alternative is admitted to canon. `canonical_adopted` records author admission;
+read `St_FTS` / `evidence_status` for the retained evidential assessment. This is
+not `canonical_strict`, proof, or empirical confirmation. Read `adoption_scope`
+and source restrictions. Historical candidate wording in sheets/research is
+superseded only on the admission axis by the active card; limitations remain.
+Decision: `SP_CANON_NO_ALTERNATIVE_20261018`; rule: `CANON_NO_ALTERNATIVE`.
 
 ## Files
 
