@@ -4,6 +4,7 @@ Routing by a literal identifier is navigation only. Only reviewed facets become
 properties of an entity. Full source context remains available in the vault.
 """
 from collections import defaultdict
+from obsidian_fts_registry import Registry, blocks
 import hashlib
 import json
 from pathlib import Path
@@ -95,6 +96,7 @@ class Corpus:
         self.scan_assets()
         self.validate_facets()
         self.load_questions()
+        self.registry = Registry(self)
 
     def load_questions(self):
         rel='work/v14_rebuild/claim_questions/QUESTION_CARDS.jsonl'
@@ -223,6 +225,7 @@ class Corpus:
             lines += ['## Полный документ происхождения',
                       link(doc['page'],'Читать '+primary),
                       'Документ указан в самой карточке как source_document. Его остальные положения не приписываются этой карточке автоматически.']
+        lines += self.registry.reference_lines(cid,link)
         questions=self.entity_questions.get(cid,[])
         if questions:
             lines += ['## Вопросы к сущности и её адресованным утверждениям',
@@ -235,7 +238,7 @@ class Corpus:
             lines += ['## Дополнительный контекст work',
                       'Ниже разделы, буквально упоминающие ID этой сущности. Это поисковый контекст, а не утверждение зависимости или наследования. Полные тексты сохранены внутри хранилища.']
             lines += ['- '+link(d['page']+'#'+s['anchor'],d['path']+' — '+s['title']) for d,s in mentions]
-        return '\n\n'.join(lines)+'\n' if lines else ''
+        return blocks(lines) if lines else ''
 
     def rebase(self, text, source_path):
         def replace(m):
@@ -250,7 +253,8 @@ class Corpus:
         text = text.replace('[[',r'\[\[').replace(']]',r'\]\]')
         return text
 
-    def build(self, link, cell, fenced):
+    def build(self, link, cell, fenced, frontmatter):
+        research_count = self.registry.build(link,cell,fenced,frontmatter)
         for d in self.documents:
             if not d['included']: continue
             title = d['sections'][0]['title'] if d['sections'] else Path(d['path']).stem
@@ -288,4 +292,4 @@ class Corpus:
         serial = [{k:v for k,v in d.items() if k!='sections'} | {'sections':[{k:v for k,v in s.items() if k!='text'} for s in d.get('sections',[])]} for d in self.documents]
         self.enc.files['90 — Служебное/work_coverage.json'] = json.dumps({'documents':serial,'assets':self.assets,'facets':self.facets,'stale_facets':[f['id'] for f in self.stale_facets],'errors':self.errors},ensure_ascii=False,sort_keys=True,indent=2)+'\n'
         self.enc.files['90 — Служебное/entity_questions_snapshot.json'] = json.dumps(self.questions,ensure_ascii=False,sort_keys=True,indent=2)+'\n'
-        return {'documents':len(included),'reviewed':len(reviewed),'facets':len(self.facets)-len(self.stale_facets),'stale_facets':len(self.stale_facets),'entities':len(self.by_entity),'pending':len(included)-len(reviewed)}
+        return {'documents':len(included),'reviewed':len(reviewed),'facets':len(self.facets)-len(self.stale_facets),'stale_facets':len(self.stale_facets),'entities':len(self.by_entity),'pending':len(included)-len(reviewed),'research_proposals':research_count}

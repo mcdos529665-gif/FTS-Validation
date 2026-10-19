@@ -18,13 +18,14 @@ import subprocess
 import sys
 from urllib.parse import quote, unquote
 from obsidian_fts_corpus import Corpus, CORPUS_INDEX, COVERAGE
+from obsidian_fts_registry import INDEX as RESEARCH_INDEX, blocks
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_VAULT = Path('E:/projects/Obsidian/FTS')
 PACKAGE = 'work/v14_rebuild/obsidian_encyclopedia'
 GRAPH = 'work/v14_rebuild/claim_graph/claim_graph.json'
 MANIFEST = '90 — Служебное/manifest.json'
-VERSION = '1.1'
+VERSION = '1.2'
 FOLDERS = [
     '00 — Начало', '01 — ФТС в целом', '02 — Уровни',
     '03 — Сущности и свойства', '04 — Операции и связи',
@@ -373,7 +374,7 @@ class Encyclopedia:
         if expansion:
             pos = lines.index('## Происхождение')
             lines.insert(pos, expansion)
-        return '\n\n'.join(lines) + '\n'
+        return blocks(lines)
 
     def add_documents(self):
         text = (self.root / 'work/DOCUMENT_MAP.md').read_text(encoding='utf-8')
@@ -398,7 +399,7 @@ class Encyclopedia:
         self.files[SOURCE_INDEX] = '\n\n'.join(lines[:3]) + '\n\n' + '\n'.join(lines[3:]) + '\n'
 
     def build(self):
-        self.corpus_summary = self.corpus.build(link, cell, fenced)
+        self.corpus_summary = self.corpus.build(link, cell, fenced, frontmatter)
         for n in self.nodes.values():
             dest = self.paths[n['id']]
             if '#' not in dest: self.files[dest] = self.page(n)
@@ -447,7 +448,8 @@ class Encyclopedia:
         date = self.manifest_source.get('canonical_update_date','не указана')
         self.files[HOME] = '\n\n'.join(['# ФТС — энциклопедия сущностей',
             'Здесь можно найти сущность, прочитать её определение и свойства, затем перейти к основаниям, связям и открытым вопросам.',
-            link(CORPUS_INDEX,'Полные материалы work')+' · '+link(COVERAGE,'Состояние раскрытия сущностей'),
+            link(CORPUS_INDEX,'Полные материалы work')+' · '+link(COVERAGE,'Состояние раскрытия сущностей')+' · '+link(RESEARCH_INDEX,'Реестр исследовательских предложений'),
+            f'**Исследовательские предложения:** {self.corpus_summary["research_proposals"]} отдельных страниц вне канона; принятые предложения адресованы существующим карточкам.',
             f'**Рабочий слой:** {self.corpus_summary["documents"]} полных текстов; {self.corpus_summary["reviewed"]} содержательно разобранных документов; {self.corpus_summary["facets"]} проверенных адресных раскрытий. Наличие полного текста и полнота его разбора различаются.',
             f'**Версия канона:** `{self.manifest_source.get("package")}`. Дата канона: {date}. Дата сборки и контроль источников — '+link(FOLDERS[9]+'/Состояние обновления.md','Состояние обновления')+'.',
             f'**Покрытие:** {len(self.cards)} карточек канона; {len(self.nodes)} узла и {len(self.graph["edges"])} направленная связь исходного графа.',
@@ -456,7 +458,8 @@ class Encyclopedia:
             '## Источники, вопросы и свои заметки', link(SOURCE_INDEX,'Документы проекта')+' · '+link(FOLDERS[9]+'/Известные пробелы.md','Известные пробелы')+' · '+link(FOLDERS[8]+'/Как вести мои заметки.md','Мои заметки'),
             '## Как понимать связи', 'Иерархия папок — навигация. Основания, зависимости, проверки и ограничения показаны подписанными направленными связями. Каноническое принятие, авторское принятие и доказательный статус различаются.',
             'База подготовлена из артефактов ФТС; пояснения составителя не являются новыми положениями теории.'])+'\n'
-        self.inputs['tools/obsidian_fts_corpus.py'] = sha((self.root/'tools/obsidian_fts_corpus.py').read_bytes())
+        for module in ('tools/obsidian_fts_corpus.py','tools/obsidian_fts_registry.py'):
+            self.inputs[module] = sha((self.root/module).read_bytes())
         return self.files
 
     def level_pages(self):
@@ -494,13 +497,13 @@ class Encyclopedia:
                     target=self.corpus.source_target(f)
                     basis=link(target, f['source_file']+':'+str(f['line_start'])) if target else self.source(f['source_file'])
                     lines[-1] += f'\n| {cell(f["title"])} | {cell(f["summary_ru"])} | {cell(f["scope_ru"])} | {cell(f["status_ru"])} | {basis} |'
-            self.files[p] = '\n\n'.join(lines)+'\n'
+            self.files[p] = blocks(lines)
             overview += ['- '+link(p,f'{level}: {c["title"]}')]
         self.files[FOLDERS[2]+'/Лестница уровней.md']='\n\n'.join(overview)+'\n'
 
     def verify(self, files=None):
         files = files or self.files
-        errors=list(self.corpus.errors)
+        errors=list(self.corpus.errors)+self.corpus.registry.verify(files)
         plain={p for p in files if p.endswith('.md')}
         adjacency=defaultdict(set)
         for path, text in files.items():
@@ -528,6 +531,8 @@ class Encyclopedia:
             if path not in plain: errors.append(f'Missing mapping {id_}')
             if anchor and f'## {anchor}\n' not in files[path]: errors.append(f'Missing node anchor {id_}')
             if '#' not in dest and distances.get(path,999)>3: errors.append(f'Over 3 clicks: {id_}')
+        for rid,path in self.corpus.registry.paths.items():
+            if distances.get(path,999)>3: errors.append('Over 3 clicks: '+rid)
         for c in self.cards:
             n=next(n for n in self.nodes.values() if n.get('card_id')==c['id'] and self.card_for(n))
             text=files[self.paths[n['id']]]
@@ -649,7 +654,7 @@ def main(argv=None):
         files={rel:(args.vault/rel).read_text(encoding='utf-8') for rel in m['files'] if (args.vault/rel).exists()}
         errs+=enc.verify(files)
         if errs: raise RuntimeError('\n'.join(errs[:30]))
-        print(dump({'result':'PASS','cards':len(enc.cards),'nodes':len(enc.nodes),'edges':len(enc.graph['edges']),'managed_files':len(m['files']),'stale_editorial':enc.stale_editorial,'missing_sources':sorted(enc.missing_sources)}))
+        print(dump({'result':'PASS','cards':len(enc.cards),'nodes':len(enc.nodes),'edges':len(enc.graph['edges']),'managed_files':len(m['files']),'stale_editorial':enc.stale_editorial,'stale_registry_editorial':enc.corpus.registry.stale,'research_proposals':enc.corpus_summary['research_proposals'],'missing_sources':sorted(enc.missing_sources)}))
     else:
         summary=publish(args.vault,enc,args.write)
         print(dump(summary))

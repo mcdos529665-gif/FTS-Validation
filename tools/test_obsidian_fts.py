@@ -164,4 +164,61 @@ class VaultTests(unittest.TestCase):
         self.assertNotIn('Проверена конкретная область.',changed['content_review'])
 
 
+    def test_all_registry_proposals_have_distinct_main_addresses(self):
+        r=self.enc.corpus.registry
+        self.assertEqual(len(r.rows),127)
+        accepted=[rid for rid,d in r.dispositions.items() if d['decision']=='canonical']
+        outside=set(r.rows)-set(accepted)
+        self.assertEqual(len(accepted),94)
+        self.assertEqual(len(outside),33)
+        self.assertEqual(len(self.enc.cards),268)
+        self.assertEqual(len(set(r.paths.values())),127)
+        for rid in accepted:
+            cid=r.dispositions[rid]['card']
+            self.assertEqual(r.paths[rid],self.enc.paths[self.enc.corpus.card_nodes[cid]])
+        self.assertEqual(r.verify(self.enc.files),[])
+        for rid in outside:
+            text=self.enc.files[r.paths[rid]]
+            for exact in (r.rows[rid]['claim'],r.primary[rid]['exact_quote'],r.dispositions[rid]['exact_quote']):
+                self.assertIn(exact,text)
+            self.assertIn('Вне действующего набора CP-карточек source',text)
+        self.assertIn('открытый выбор',self.enc.files[r.paths['CP-055']])
+        self.assertIn('заменённая формулировка',self.enc.files[r.paths['CP-063']])
+
+    def test_registry_exact_quote_spans_match_primary_files(self):
+        r=self.enc.corpus.registry
+        for rid,p in r.primary.items():
+            lines=(export.ROOT/p['source_file']).read_text(encoding='utf-8-sig').splitlines()
+            self.assertEqual(p['exact_quote'],'\n'.join(lines[p['line_start']-1:p['line_end']]),rid)
+            self.assertIn(rid,p['exact_quote'])
+
+    def test_stale_registry_explanation_is_withheld_without_losing_source(self):
+        original=self.enc.corpus.registry
+        r=copy.copy(original)
+        r.enc=copy.copy(self.enc); r.enc.files={}; r.enc.sections=copy.deepcopy(self.enc.sections)
+        rid='CP-002'; r.stale=[rid]
+        r.build(export.link,export.cell,export.fenced,export.frontmatter)
+        text=r.enc.files[r.paths[rid]]
+        self.assertIn('Пояснение требует пересмотра',text)
+        for field in ('summary_ru','scope_ru','example_ru'):
+            self.assertNotIn(r.editorial[rid][field],text)
+        self.assertIn(r.rows[rid]['claim'],text)
+        self.assertIn(r.dispositions[rid]['exact_quote'],text)
+        self.assertEqual(r.paths[rid],original.paths[rid])
+
+
+    def test_generated_property_and_status_tables_are_contiguous(self):
+        r=self.enc.corpus.registry
+        pages=[self.enc.files[r.paths['CP-002']],self.enc.page(self.enc.nodes['card_u_00']),
+               self.enc.files[export.FOLDERS[2]+'/LEVEL_07 — Уровень 7.md']]
+        for page in pages:
+            in_code=False; previous=''
+            for line in page.splitlines():
+                if line.startswith('```'): in_code=not in_code
+                if in_code: continue
+                if line.startswith('|'):
+                    self.assertFalse(previous.endswith('|\n'), 'Blank line inside generated table')
+                previous=(previous+'\n') if line=='' and previous.endswith('|') else line
+
+
 if __name__=='__main__': unittest.main()
