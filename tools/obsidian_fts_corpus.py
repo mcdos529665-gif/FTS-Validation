@@ -94,9 +94,9 @@ class Corpus:
         self.card_nodes = {n['card_id']: nid for nid,n in enc.nodes.items() if enc.card_for(n)}
         self.scan()
         self.scan_assets()
+        self.registry = Registry(self)
         self.validate_facets()
         self.load_questions()
-        self.registry = Registry(self)
 
     def load_questions(self):
         rel='work/v14_rebuild/claim_questions/QUESTION_CARDS.jsonl'
@@ -190,7 +190,7 @@ class Corpus:
             if f.get('kind') not in KINDS or not f.get('summary_ru') or not f.get('scope_ru') or not f.get('status_ru'):
                 self.errors.append('Неполное раскрытие: '+str(fid))
             for cid in f.get('entity_ids',[]):
-                if cid not in self.card_nodes: self.errors.append('Неизвестная сущность раскрытия: '+str(cid))
+                if cid not in self.card_nodes and cid not in self.registry.research_ids: self.errors.append('Неизвестная сущность раскрытия: '+str(cid))
                 else: self.by_entity[cid].append(f)
 
     def source_target(self, f):
@@ -255,6 +255,8 @@ class Corpus:
 
     def build(self, link, cell, fenced, frontmatter):
         research_count = self.registry.build(link,cell,fenced,frontmatter)
+        canonical_entities = len(self.by_entity.keys() & self.card_nodes.keys())
+        research_entities = len(self.by_entity.keys() & self.registry.research_ids)
         for d in self.documents:
             if not d['included']: continue
             title = d['sections'][0]['title'] if d['sections'] else Path(d['path']).stem
@@ -275,7 +277,7 @@ class Corpus:
         lines += [f'| {link(d["page"], d["path"])} | {d["category"]} | {"подтверждён" if d["review"] else "не завершён"} |' for d in included]
         self.enc.files[CORPUS_INDEX] = '\n\n'.join(lines[:3])+'\n\n'+'\n'.join(lines[3:])+'\n'
         report = ['# Разбор материалов work',link('00 — Начало/Начать здесь.md','Главная'),
-                  f'Перепись: {len(self.documents)} Markdown-документов. Полных текстов включено: {len(included)}. Подтверждённых содержательных разборов: {len(reviewed)}. Проверенных адресных раскрытий: {len(self.facets)-len(self.stale_facets)}. Требуют пересмотра: {len(self.stale_facets)}. Сущностей с такими раскрытиями: {len(self.by_entity)} из {len(self.card_nodes)}.',
+                  f'Перепись: {len(self.documents)} Markdown-документов. Полных текстов включено: {len(included)}. Подтверждённых содержательных разборов: {len(reviewed)}. Проверенных адресных раскрытий: {len(self.facets)-len(self.stale_facets)}. Требуют пересмотра: {len(self.stale_facets)}. Сущностей с такими раскрытиями: {canonical_entities} из {len(self.card_nodes)}; дополнительных исследовательских страниц с раскрытиями: {research_entities}.',
                   'Точное включение текста, поиск упоминания и проверенное содержательное раскрытие учитываются раздельно. Наличие полного текста не закрывает обязательство его разбора.',
                   '| Источник | Роль / решение | Разбор |', '|---|---|---|']
         for d in self.documents:
@@ -292,4 +294,4 @@ class Corpus:
         serial = [{k:v for k,v in d.items() if k!='sections'} | {'sections':[{k:v for k,v in s.items() if k!='text'} for s in d.get('sections',[])]} for d in self.documents]
         self.enc.files['90 — Служебное/work_coverage.json'] = json.dumps({'documents':serial,'assets':self.assets,'facets':self.facets,'stale_facets':[f['id'] for f in self.stale_facets],'errors':self.errors},ensure_ascii=False,sort_keys=True,indent=2)+'\n'
         self.enc.files['90 — Служебное/entity_questions_snapshot.json'] = json.dumps(self.questions,ensure_ascii=False,sort_keys=True,indent=2)+'\n'
-        return {'documents':len(included),'reviewed':len(reviewed),'facets':len(self.facets)-len(self.stale_facets),'stale_facets':len(self.stale_facets),'entities':len(self.by_entity),'pending':len(included)-len(reviewed),'research_proposals':research_count}
+        return {'documents':len(included),'reviewed':len(reviewed),'facets':len(self.facets)-len(self.stale_facets),'stale_facets':len(self.stale_facets),'entities':canonical_entities,'research_entities':research_entities,'pending':len(included)-len(reviewed),'research_proposals':research_count}

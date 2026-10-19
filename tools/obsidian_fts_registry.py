@@ -84,6 +84,7 @@ class Registry:
                       e.get('disposition_sha256')!=self.inputs[rel]): self.stale.append(rid)
                 elif not all(e.get(k) for k in ('title','summary_ru','scope_ru')):
                     self.errors.append('Неполное пояснение CP: '+rid)
+        self.research_ids={rid for rid,d in self.dispositions.items() if d['decision']!='canonical'}
         for rid in self.editorial:
             if rid not in self.rows: self.errors.append('Неизвестное пояснение CP: '+rid)
 
@@ -169,6 +170,8 @@ class Registry:
             lines+=[' · '.join(self.question_link(q,link) for q in qs) if qs else 'Открытый вопрос в этой строке не указан.',
                 'DN: '+(row.get('dn') or 'не указано')+'. Личные комментарии храните в «08 — Мои заметки» со ссылкой на эту страницу.',
                 '### Полная запись реестра',fenced(json.dumps(row,ensure_ascii=False,sort_keys=True,indent=2),'json')]
+            expansion=self.corpus.render_facets(rid,link,cell,fenced)
+            if expansion: lines.append(expansion)
             self.enc.files[self.paths[rid]]=blocks(lines)
             entry=(self.paths[rid],rid+' — '+title)
             if entry not in self.enc.sections[6]: self.enc.sections[6].append(entry)

@@ -221,4 +221,23 @@ class VaultTests(unittest.TestCase):
                 previous=(previous+'\n') if line=='' and previous.endswith('|') else line
 
 
+    def test_research_facets_are_rendered_without_inflating_canon_coverage(self):
+        c=self.enc.corpus
+        self.assertEqual(self.enc.corpus_summary['entities'],len(self.enc.cards))
+        self.assertEqual(self.enc.corpus_summary['research_entities'],2)
+        self.assertTrue(c.by_entity['CP-005'])
+        text=self.enc.files[c.registry.paths['CP-005']]
+        for f in c.by_entity['CP-005']:
+            self.assertIn(export.fenced(f['exact_quote']),text)
+            self.assertIn(f['summary_ru'],text)
+
+    def test_verification_detects_lost_facet_in_a_research_page(self):
+        c=self.enc.corpus; cid='CP-005'
+        f=c.by_entity[cid][0]; path=c.registry.paths[cid]
+        files=self.enc.files.copy()
+        files[export.FOLDERS[9]+'/Состояние обновления.md']='# Состояние обновления\n'
+        files[path]=files[path].replace(export.fenced(f['exact_quote']),'',1)
+        self.assertIn('Facet quotation lost: '+f['id']+' / '+cid,self.enc.verify(files))
+
+
 if __name__=='__main__': unittest.main()

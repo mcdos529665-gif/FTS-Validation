@@ -538,6 +538,16 @@ class Encyclopedia:
             text=files[self.paths[n['id']]]
             if fenced(c['text']) not in text: errors.append(f'Canonical text changed: {c["id"]}')
             if fenced(dump(c).rstrip(),'json') not in text: errors.append(f'Canonical record lost: {c["id"]}')
+        for cid,facets in self.corpus.by_entity.items():
+            nid=self.corpus.card_nodes.get(cid)
+            path=self.paths[nid] if nid else self.corpus.registry.paths.get(cid)
+            text=files.get(path,'')
+            for facet in facets:
+                if fenced(facet['exact_quote']) not in text:
+                    errors.append('Facet quotation lost: '+facet['id']+' / '+cid)
+                for field in ('summary_ru','scope_ru','status_ru'):
+                    if facet[field] not in text:
+                        errors.append('Facet explanation lost: '+facet['id']+' / '+cid+' / '+field)
         # Sample gate: exact U7 registers and retained proof/adoption axes.
         for cid in ['U_07','M_07','CH_07','A_07','OP_Lift','OP_pi','AC_20261003_WINDOWS_TRIPLES']:
             if cid not in self.card_by_id: errors.append(f'Sample card missing: {cid}')
