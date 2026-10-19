@@ -6,6 +6,7 @@ import tempfile
 import unittest
 
 import obsidian_fts as export
+import obsidian_fts_corpus as corpus
 
 
 class VaultTests(unittest.TestCase):
@@ -88,6 +89,79 @@ class VaultTests(unittest.TestCase):
         for path in self.enc.paths.values():
             if '#' not in path:
                 self.assertEqual(Path(path).stem,Path(path).stem.rstrip(' .'))
+
+    def test_work_census_covers_every_markdown_and_preserves_all_lines(self):
+        actual={p.relative_to(export.ROOT).as_posix() for p in (export.ROOT/'work').rglob('*.md')}
+        self.assertEqual(actual,{d['path'] for d in self.enc.corpus.documents})
+        for d in self.enc.corpus.documents:
+            if not d['included']: continue
+            original=(export.ROOT/d['path']).read_text(encoding='utf-8-sig').splitlines()
+            addressed=[n for s in d['sections'] for n in range(s['start'],s['end']+1)]
+            self.assertEqual(list(range(1,len(original)+1)),addressed,d['path'])
+            text=self.enc.files[d['page']]
+            for s in d['sections']:
+                self.assertEqual('\n'.join(original[s['start']-1:s['end']]),s['text'])
+                self.assertIn('## '+s['anchor']+'\n',text)
+                self.assertIn('### '+s['title'],text)
+
+    def test_heading_parser_ignores_code_and_partitions_text(self):
+        text='# Title\n\n```python\n# code comment\n```\n\n## Next\nbody\n'
+        parts=corpus.sections(text)
+        self.assertEqual([x['title'] for x in parts],['Title','Next'])
+        self.assertEqual([n for s in parts for n in range(s['start'],s['end']+1)],list(range(1,len(text.splitlines())+1)))
+
+    def test_facets_require_exact_source_hash_and_quote(self):
+        obj=copy.copy(self.enc.corpus)
+        obj.facets=copy.deepcopy(obj.facets)
+        self.assertTrue(obj.facets,'Reviewed substantive facets must exist')
+        obj.errors=[]; obj.by_entity=__import__('collections').defaultdict(list)
+        obj.facets[0]['exact_quote']+=' invented condition'
+        obj.validate_facets()
+        self.assertTrue(any('Неточный фрагмент' in e for e in obj.errors))
+
+    def test_stale_facet_is_withheld_and_marked_for_review(self):
+        obj=copy.copy(self.enc.corpus)
+        obj.facets=copy.deepcopy(obj.facets[:1]); obj.stale_facets=[]
+        obj.errors=[]; obj.by_entity=__import__('collections').defaultdict(list)
+        obj.facets[0]['source_sha256']='changed'
+        obj.validate_facets()
+        self.assertEqual(obj.errors,[])
+        self.assertEqual(obj.stale_facets,obj.facets)
+        cid=obj.facets[0]['entity_ids'][0]
+        text=obj.render_facets(cid,export.link,export.cell,export.fenced)
+        self.assertIn('Требуют пересмотра',text)
+        self.assertNotIn(obj.facets[0]['summary_ru'],text)
+
+    def test_question_coverage_does_not_imply_an_answer(self):
+        expected=[x for x in (export.ROOT/'work/v14_rebuild/claim_questions/QUESTION_CARDS.jsonl').read_text(encoding='utf-8').splitlines() if x.strip()]
+        self.assertEqual(len(self.enc.corpus.questions),len(expected))
+        unanswered=[q for q in self.enc.corpus.questions if q.get('answer_status')=='unanswered' and q.get('corpus_coverage')=='covered']
+        self.assertTrue(unanswered)
+        text=self.enc.page(self.enc.nodes['card_u_00'])
+        self.assertIn('Вопросы к сущности',text)
+        self.assertIn('unanswered',text)
+
+    def test_all_other_work_formats_have_explicit_inventory_decisions(self):
+        expected={p.relative_to(export.ROOT).as_posix() for p in (export.ROOT/'work').rglob('*') if p.is_file() and p.suffix.lower()!='.md'}
+        self.assertEqual(expected,{a['path'] for a in self.enc.corpus.assets})
+        for a in self.enc.corpus.assets:
+            self.assertTrue(a.get('excluded_reason') or (a.get('sha256') and a.get('content_review')))
+
+    def test_asset_review_is_bound_to_current_source_hash(self):
+        obj=copy.copy(self.enc.corpus)
+        asset=next(a for a in obj.assets if not a.get('excluded_reason'))
+        rel=asset['path']
+        obj.reviews={rel:{'sha256':asset['sha256'],'review_note':'Проверена конкретная область.'}}
+        obj.assets=[]; obj.scan_assets()
+        current=next(a for a in obj.assets if a['path']==rel)
+        self.assertTrue(current['review'])
+        self.assertFalse(current['review_stale'])
+        obj.reviews[rel]['sha256']='changed'
+        obj.assets=[]; obj.scan_assets()
+        changed=next(a for a in obj.assets if a['path']==rel)
+        self.assertFalse(changed['review'])
+        self.assertTrue(changed['review_stale'])
+        self.assertNotIn('Проверена конкретная область.',changed['content_review'])
 
 
 if __name__=='__main__': unittest.main()

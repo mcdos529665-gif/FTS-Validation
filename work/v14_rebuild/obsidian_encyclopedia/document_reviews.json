@@ -1,0 +1,438 @@
+{
+  "source/fts_cards.jsonl": {
+    "review_note": "JSONL целиком разобран для ID/title/status/scope-связи, не как доказательство внешних claims.",
+    "sha256": "3fa1ba95612df9a3d921139e1bf38c61b6e938853ffae2c253dad13e57eb64a0"
+  },
+  "work/AUTHOR_ANSWERS_60.md": {
+    "review_note": "Прочитан полностью, строки 1–1039; принятие варианта ассистента не приравнивалось к доказательству.",
+    "sha256": "6e97f1d717e692cca9fd2d7153e2a7b5b51c03327b34ecc5f1c8893772f59431"
+  },
+  "work/AUTHOR_CANON.md": {
+    "review_note": "Полностью прочитан реестр принятия; имя релиза в старом повествовании отделено от фактического текущего MANIFEST, оси принятия/доказательства сохранены.",
+    "sha256": "cafb6d7ff6c9d3596e8ad48d2300c049ab494beb94c793fef29f986b43083edb"
+  },
+  "work/DIALOGUE_NUANCE_SOURCES.md": {
+    "review_note": "Прочитаны все обработанные DN-0001…0047 в источнике (кроме отсутствующих здесь pending DN-0040/0043). Выделены авторство, гипотезы и ограничения; поздние исправления сохранены раздельно. Разбор источника цитат не заменяет проверки всех документов-назначений.",
+    "sha256": "7cfdd1b98a62c8b1d946add56b0da6b61a599ccf102eb45d1b177cdbe04377ad"
+  },
+  "work/EXTERNAL_CONFLICTS.md": {
+    "review_note": "Полностью прочитан, строки 1–903; включает EC-001…029 и ревизии.",
+    "sha256": "0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a"
+  },
+  "work/OPEN_QUESTIONS.md": {
+    "review_note": "Прочитан полностью, строки 1–866; использован для областей и сохранённых статусов вопросов.",
+    "sha256": "e2246f9c476434c4d67c0dcd0b1e013650b6b36ceada0241db667462a6ebc6bb"
+  },
+  "work/REFUTED.md": {
+    "review_note": "Прочитан полностью, строки 1–402; поздние поправки учтены, отвергнутые версии не перенесены как действующие.",
+    "sha256": "adb5360a2269b099d28c48a5092f5ed4fbb4337fa46e33d710af0a7b97642ec7"
+  },
+  "work/STATE.md": {
+    "review_note": "Прочитан полностью для актуальной точки проекта; использован только как контекст.",
+    "sha256": "cc94e9dfb4d51a3fe97c71264e9976883a88f5e148bf9e0372294a2245b68a73"
+  },
+  "work/author_canon/2026-09-19/AMENDMENT.md": {
+    "review_note": "Прочитан полностью; авторские положения приняты, а области У0 и ожидания ограничены явно.",
+    "sha256": "122dd603a7530bea14e7fd6b44e2f8c74460904e76dd65a1c11b9d603c2afc85"
+  },
+  "work/author_canon/2026-09-21/AMENDMENT.md": {
+    "review_note": "Прочитан полностью; коррекция У6/У7 принята и действует в заявленной области поверх AC-2026-09-19.",
+    "sha256": "b1b8c209f98c557afff5c439ac9112abdc01ee17afd4dde164d18056eaaaae6d"
+  },
+  "work/author_canon/2026-10-03/AMENDMENT.md": {
+    "review_note": "Полный Markdown-файл прочитан; использован для происхождения авторских решений и границ.",
+    "sha256": "7cea8db76d1277a0a879e0549ae80df09be05d5c08d5c9921a9e7aa4d08460cb"
+  },
+  "work/author_canon/2026-10-03/INTEGRATION.md": {
+    "review_note": "Полный Markdown-файл прочитан; использован для происхождения авторских решений и границ.",
+    "sha256": "019fa66b7ebe6a206de01e7b9282fd1e91013ddc73d70c59523faaac81f77be8"
+  },
+  "work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md": {
+    "review_note": "Полный Markdown-файл прочитан; использован для происхождения авторских решений и границ.",
+    "sha256": "cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b"
+  },
+  "work/deep-research-report (10).md": {
+    "review_note": "Прочитан полностью как первичный вход; устаревшие тезисы не считаются активными после интеграции.",
+    "sha256": "81acf5286a73e7b7ac7698ddd841a0cc423719b11c2c355a11e58c43060c0b2d"
+  },
+  "work/notation.md": {
+    "review_note": "Прочитан полностью; использован для различения уровней, регистров и статусов.",
+    "sha256": "f92d153ddbcae9159e206698e1f7344830476d94bdbf40c9660e70982516d87d"
+  },
+  "work/v14_rebuild/NEW_CONNECTIONS_2026-09-09.md": {
+    "review_note": "Прочитан полностью (232 строки); связи NC-01…04 сохранены как кандидатные, конечные проверки не выданы за общий закон.",
+    "sha256": "14ac4e314709679caae157ce9f5dc2c7ad4875e10d341167858839c8258c8245"
+  },
+  "work/v14_rebuild/U6_RANDOM_REGULARITY_2026-09-13.md": {
+    "review_note": "Прочитан полностью; ранняя форма V*V оставлена исторической после поправки 2026-09-21.",
+    "sha256": "a853cd62237b9502c9d8a8d02bb5ea597a86c3ff4219143d72ccfeba21f5a799"
+  },
+  "work/v14_rebuild/addendum_2026-10-04_upper_levels.md": {
+    "review_note": "Полный Markdown-файл прочитан; авторские указания и кандидатные сопоставления разделены.",
+    "sha256": "1d4150c7a17385caf742c7ad9e32b7e806462064a13f1ee736e43fb3ed75f7cd"
+  },
+  "work/v14_rebuild/addendum_2026-10-04_windows_numbers.md": {
+    "review_note": "Полный Markdown-файл прочитан; авторские указания и кандидатные сопоставления разделены.",
+    "sha256": "dff5360efcf478a66ead4d6638fd69b6850146bc3b4511859751fcf88ac77875"
+  },
+  "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md": {
+    "review_note": "Полный Markdown-файл прочитан; авторские указания и кандидатные сопоставления разделены.",
+    "sha256": "4918e386fe753a45bcd6fe3ebc90d05b9f418acf3fd2216faff09d312047dc0a"
+  },
+  "work/v14_rebuild/addendum_2026-10-08_rotation_projection.md": {
+    "review_note": "Полный Markdown-файл прочитан; авторские указания и кандидатные сопоставления разделены.",
+    "sha256": "6b983938545302a21f812a44eadb316940db9ab3e19aeac947aee3e66fa12a51"
+  },
+  "work/v14_rebuild/candidates_register_2026-10-15/ACCEPTANCE_2026-10-15.md": {
+    "review_note": "Полностью прочитано рабочее принятие 2026-10-15. Сопоставлено с поздней канонизацией 2026-10-18; ранние «не принято» не выданы за нынешнее членство в каноне. Точные области десяти принятых строк сверены с действующими CP-карточками.",
+    "sha256": "34334517a5bc1ac3394557791f6db7916e45af2c044960165c0ba85624d3b148"
+  },
+  "work/v14_rebuild/candidates_register_2026-10-15/CANONIZATION_2026-10-18.md": {
+    "review_note": "Полностью прочитан акт 2026-10-18: рассмотренные записи, правила отбора, области, исключения, отдельные оси статуса и границы проверок. Старые 1130/2735 относятся к моменту акта, не текущему графу.",
+    "sha256": "704519ff42fcb3ca22f35bc3914d0ca0af0ea69fde75a5f27b2fc084adf67602"
+  },
+  "work/v14_rebuild/clt_u6_note.md": {
+    "review_note": "Прочитан полностью; ЦПТ и кейс Марков–Некрасов представлены как внешнее кандидатное чтение/ретродикция.",
+    "sha256": "27694f02e67ba53aa1dd64dde2f1c9a1d9f8aa7fd82075e42a1b045de1e720ac"
+  },
+  "work/v14_rebuild/code_information_recode_note.md": {
+    "review_note": "Прочитан полностью; авторские уточнения, конечные модели и внешние гипотезы разведены.",
+    "sha256": "f077b16aa04b3ee08a2293fd5a2745f6e69033236d7c7812e0abd1f96cac0992"
+  },
+  "work/v14_rebuild/d10_phase/SECOND_SITE_AUDIT.md": {
+    "review_note": "Полностью прочитан аудит: независимость фазового кода, PLV/arg/CCA, происхождение формул и открытый вердикт сохранены.",
+    "sha256": "f66a7e9debb3c42ef379c62a827529a51495554503021aa66379a99eab9ea961"
+  },
+  "work/v14_rebuild/d2_sign/AUDIT_REANALYSIS.md": {
+    "review_note": "Прочитан весь аудит, утечка и смена единицы репликации учтены; семантический перенос ограничен.",
+    "sha256": "9e914022de8548ff0460969b05c094cbf3eb4d1e88b7c779d90df736e16c86f6"
+  },
+  "work/v14_rebuild/dialogue_integration_2026-09-22.md": {
+    "review_note": "Прочитан полностью, включая диапазон строк 149–205; статусы канона не меняются.",
+    "sha256": "f702af4f46119ec6aa68e9fc3f48876b59f46305a93a68317c107c0f0b229b6b"
+  },
+  "work/v14_rebuild/dialogue_integration_2026-10-17.md": {
+    "review_note": "Прочитан полный разбор DN-0044…0047. Путаница/подделка, область смешения и закрытые списки вынесены отдельно; статус рабочего принятия сохранён.",
+    "sha256": "b72fcc6cdd0cb39c3ef60a4b10d61e19930a1c075a0ba423785e13e13955964d"
+  },
+  "work/v14_rebuild/dialogue_semantics_2026-09-15.md": {
+    "review_note": "Прочитан полностью; интеграция DN остаётся рабочим слоем.",
+    "sha256": "e5c934477f52646aa6f1a8f5d98c7b486358c343eed2bb45d27c7d683ee0ef5e"
+  },
+  "work/v14_rebuild/e5_literature_review/BLACKWELL_BRIDGE.md": {
+    "review_note": "Прочитан полностью (321 строка); внешний конечный результат, кандидатное соответствие У4–У6 и отсутствие St_FTS-продвижения разделены.",
+    "sha256": "270267fb95c2530d7cb677bf0b01a81e0cf1e196d30b4569dbb342e6be61ff8b"
+  },
+  "work/v14_rebuild/e5_literature_review/EXPLICIT_ADDITIONS_2026-09-05.md": {
+    "review_note": "Прочитан полностью (272 строки); конечные/Set-результаты и ограниченные связи с ФТС размечены отдельно.",
+    "sha256": "7656cfc9919c5f2fe4bd68e7ec64a1008617df18a00acb7568354d35cd9354ba"
+  },
+  "work/v14_rebuild/e5_literature_review/LIFT_TYPING_PROJECT.md": {
+    "review_note": "Прочитан полностью (256 строк); проект типизации отделён от канонического OP_Lift и внешней WFS-терминологии.",
+    "sha256": "39074bfcf243ce7e8feee60d081fdda79c0e750eec51147b62dfe62e4793f11f"
+  },
+  "work/v14_rebuild/e5_literature_review/TYPED_ABSENCE_BRIDGE.md": {
+    "review_note": "Прочитан полностью (292 строки); все цитаты взяты из указанных диапазонов. Каноническая опора отделена от candidate_typed_absence и отрицательного эмпирического результата.",
+    "sha256": "148000dbb6a00b3a5c47ec6ed7858f3c7643a4a35dd90791d3ac24a400bd1ea7"
+  },
+  "work/v14_rebuild/e5_literature_review/dr_core_2026-09-11/CHECK_REPORT.md": {
+    "review_note": "Полностью прочитан: локальные предикаты и их конечные области.",
+    "sha256": "1918612948da434651a41d30df0411bc29c11e811349fc483e70299633644a7c"
+  },
+  "work/v14_rebuild/e5_literature_review/dr_core_2026-09-11/CONFLICT_ROUTING.md": {
+    "review_note": "Полностью прочитан: дедупликация маршрутов семи отчётов.",
+    "sha256": "d9c4946740a153c9f5fe1a8dc2ea9588f14e164889a38ef6d371c65f55fdb9ea"
+  },
+  "work/v14_rebuild/e5_literature_review/dr_core_2026-09-11/REVIEW.md": {
+    "review_note": "Полностью прочитан: приёмка семи отчётов, конечные свидетели, пределы и следующие gates.",
+    "sha256": "c3e7be21ffcfaa6533c6206b4ff454ad474ab102cb241ee6f86599c49f2c77b1"
+  },
+  "work/v14_rebuild/e5_literature_review/dr_core_2026-09-11/SOURCE_AUDIT.md": {
+    "review_note": "Полностью прочитан: первичные источники, локаторы, примеры и ограничения доступа.",
+    "sha256": "8d266bc9d7c9d9dc478596b99cd4771fdd48946b363781f889ec6d79b43ba796"
+  },
+  "work/v14_rebuild/e5_literature_review/dr_core_2026-09-11/VALIDATION.md": {
+    "review_note": "Полностью прочитан: интеграционные проверки и незакрытый screening.",
+    "sha256": "b8e8ebbeb056633c8fb8e34a39c0d66fe8f30f5efbe380335fad5e5399e41d92"
+  },
+  "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/CHECK_RESULTS.json": {
+    "review_note": "Прочитаны все 15 сохранённых записей и evidence; сопоставлены с телами OC01…OC15. pass=true относится к локальному предикату; строковое evidence само по себе не доказывает универсальное утверждение. Свежесть исполнения относительно окружения этим чтением не подтверждается.",
+    "sha256": "d7b562ea7743e42fdc4c8174398e3630dbec9c42ff41a537f7471e50204da620"
+  },
+  "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/PROTOCOL.md": {
+    "review_note": "Полностью прочитан: мандат, охват и правила закрытия вопросов.",
+    "sha256": "4b0363a17f5b2150d7bfa09f5b1319d394330a2d79d04de41721ae52ca000e70"
+  },
+  "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/REVIEW.md": {
+    "review_note": "Полностью прочитан: решения OQ, кандидатные определения и остаток gates.",
+    "sha256": "a494f5416defaff632a5a31fcd700e585cbc6003dae658148608b65df8ff2720"
+  },
+  "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/SOURCES.md": {
+    "review_note": "Полностью прочитан: S1–S7 и границы чтения/переноса.",
+    "sha256": "61a9d8b47085a07a74fed5120ef5e693f3c517982f959f5bf7d236ca1c004596"
+  },
+  "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/WOLFRAM.md": {
+    "review_note": "Полностью прочитан: принятые CAS-фрагменты и непригодные/невычисленные части.",
+    "sha256": "c45f60e6fd2b1005c196fedc3302cb6d5444844725e1f86e2c936b6aa8021e5e"
+  },
+  "work/v14_rebuild/e5_literature_review/oq_closure_2026-10-05/check_candidates.py": {
+    "review_note": "Прочитан весь исполняемый текст OC01…OC15. Различены полный конечный перебор, символьное тождество, отдельный контрпример и проверка сетки/фиксированных матриц. OC03/OC10/OC14 не расширены на универсальную область. Новый запуск не заявлен.",
+    "sha256": "3b2832d822c3c91b8288ccf070313a4351efd024dc926b81b76514940bb118c5"
+  },
+  "work/v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/ANSWERS_60.md": {
+    "review_note": "Прочитан полностью, строки 1–1679; первоначальные ответы сверены с поздними исправлениями.",
+    "sha256": "dc5838ab9ff4528852b75c1449553fc840bb450b0b354da13d98af7234949e1b"
+  },
+  "work/v14_rebuild/e5_literature_review/undermind_60_oq_2026-09-30/GROUPED_OPEN_2026-10-08.md": {
+    "review_note": "Прочитан полностью, строки 1–1475; включая обязательную самопроверку групп 4–10.",
+    "sha256": "32de4d0621ebbb9ba54715a8fcf97bb5658954e607ca57d0a87798510395de8c"
+  },
+  "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены предикаты, примеры, области и ограничения.",
+    "sha256": "958d755655a80afb8753080e17b137df41cfbbef6ac1b1086949a32519b0ec14"
+  },
+  "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены предикаты, примеры, области и ограничения.",
+    "sha256": "19afe2091bf88f86cff205feaba0f0c496c702a638da4efa67bfabef452d39fe"
+  },
+  "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены предикаты, примеры, области и ограничения.",
+    "sha256": "199488f1139b2ec8d3823b74b76612156ec71616b47d8ce8c82e549b2411fc1d"
+  },
+  "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/PRECHECK.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены предикаты, примеры, области и ограничения.",
+    "sha256": "d29bed061a7c04117ce154147cb445a02a3e1b22e92620e92bf2a3dd08ff3b9b"
+  },
+  "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены предикаты, примеры, области и ограничения.",
+    "sha256": "de3bebe1559c14610166bf9e649c62c3f41bd496c688db031ec4466aee8aa727"
+  },
+  "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены предикаты, примеры, области и ограничения.",
+    "sha256": "cbb40149a5492e2cf55c3d85381f9b6de195040a636e261fec65df6e811ea983"
+  },
+  "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены предикаты, примеры, области и ограничения.",
+    "sha256": "af8820632c6e5994599b9b58a4bcc6a0f6998ff939c6efecf351dec2ebac127e"
+  },
+  "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены предикаты, примеры, области и ограничения.",
+    "sha256": "62a0f4e04f7850d887d7b9d8cbecb4395ba7b4f5ba0510b8707ee611227a8028"
+  },
+  "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_108.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены предикаты, примеры, области и ограничения.",
+    "sha256": "9d859d4e156b9e9cf8a6b25c9dcd7f3f70eaa3e819422a4b6de07cf3e130de80"
+  },
+  "work/v14_rebuild/external_bridge_u1_u5.md": {
+    "review_note": "Прочитан полностью (182 строки); компонентная внешняя поддержка не распространена на всю лестницу и не меняет St_FTS.",
+    "sha256": "3ae0b6af574a3928bbe34fe4d52b5b04c096547a164f5a95ab135e3455643ed3"
+  },
+  "work/v14_rebuild/figures_note_2026-10-11.md": {
+    "review_note": "Полный Markdown-файл прочитан; авторские указания и кандидатные сопоставления разделены.",
+    "sha256": "0d9745e3dbb06ad8aecc1d240204baeb258019f8be32b2dcf7564e5432f70872"
+  },
+  "work/v14_rebuild/half_hypothesis.md": {
+    "review_note": "Прочитан полностью (326 строк); авторские уточнения, кандидатные гипотезы, отрицательный тест и projected-область разведены.",
+    "sha256": "dcfb6afb12941f4110c68d7362c027eb559ad06fbb20b7f55919683338dcec79"
+  },
+  "work/v14_rebuild/interpretation_descent_undermind_2026-09-12/EVIDENCE_MATRIX.md": {
+    "review_note": "Прочитана полностью; уровни доступа P/U/A и границы внешних источников сохранены.",
+    "sha256": "ba4cc5ab82cbb700d6081ebe0efb27831ffd23eab3ee809bcc83619eba1648ab"
+  },
+  "work/v14_rebuild/interpretation_descent_undermind_2026-09-12/REVIEW.md": {
+    "review_note": "Прочитан полностью; синтез кандидатного протокола не повышает St_FTS.",
+    "sha256": "5727803ec12474e03a16ee572755a079e6ae886a10c9f1fd929181dbcf7f140e"
+  },
+  "work/v14_rebuild/lean/README.md": {
+    "review_note": "Полный README прочитан; пять предикатов, доверенная база и ограничение перевода сопоставлены; доказательства не перезапускались в задаче экспорта.",
+    "sha256": "f474a2e958ba0d0e316c79c6655e9865eab2ea08ba907ac48424de9d88eee95c"
+  },
+  "work/v14_rebuild/m_register_grammar_2026-09-25/AUTHOR_TABLE.md": {
+    "review_note": "Прочитан полностью; отдельная таблица предложена для анализа, принятие в канон не заявлено.",
+    "sha256": "ca727b0bbf8f720de459717780db007056bf14f17235dce6b72c046b7b0f6dea"
+  },
+  "work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md": {
+    "review_note": "Прочитан полностью; кандидатное правило двустороннего чтения отделено от канонической операции.",
+    "sha256": "9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f"
+  },
+  "work/v14_rebuild/m_register_grammar_2026-09-25/CYCLE_CLARIFICATION.md": {
+    "review_note": "Прочитан полностью; локальная модель Out и её ограничения сохранены как исследовательские.",
+    "sha256": "0a2d06f95433bb9a0ebce5d5ae08f8a0efd113c3e2d99fd76000f96f279ad264"
+  },
+  "work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md": {
+    "review_note": "Прочитан полностью; различены авторские уточнения, активные карточки и ассистентская модель basis.",
+    "sha256": "1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5"
+  },
+  "work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md": {
+    "review_note": "Прочитан полностью; особое равенство уровня осталось неформализованным предложением.",
+    "sha256": "a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69"
+  },
+  "work/v14_rebuild/m_register_grammar_2026-09-25/REVIEW.md": {
+    "review_note": "Прочитан полностью; сравнение относится к деревьям и ограниченным внешним проверкам, статусы не повышены.",
+    "sha256": "5cda1f2981c039ddfe4968a135981460ebd8b2edcb2e2d690d4467a0f5668d5a"
+  },
+  "work/v14_rebuild/neural_analogy_2026-09-19/REVIEW.md": {
+    "review_note": "Прочитан полностью; извлечены аналогии/примеры/ограничения с разделением авторского предложения и принятого статуса.",
+    "sha256": "9d5e0df0301712671d4597d936b2c8893c4b0f7a3fb7387ae0ad2510c5556ec0"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/ARCHITECTURE_SPEC.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "76ca2807e0c3424e1ab869423aa5abb996dda8a0f38a4c3cf8365be928557962"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/CONSIDERATION_BRIEF.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "f8000546733f0dfc3ab06e035c0414dec90773d98e0b03993a78e7cef3c5433b"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/DEEP_RESEARCH_REPORT_10_INTEGRATION.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "40508a83228c61ae691c907f33658fd903ad1fc46ec0dcbb8572147f4666628c"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/EXTENDED_AUDIT.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "c6739f12f1e64738c089b04cc661d447fffd756bdd07a0f13343a5e8c4360fb3"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/EXTENDED_PROTOCOL.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "9a57adf1f5a9e86faa55fb119cf266653282dc98d5081611a3214c3935d0e052"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/EXTENDED_RESULTS.md": {
+    "review_note": "Прочитан полностью; результаты этого файла уже извлечены родителем и здесь не дублируются.",
+    "sha256": "16e7e97b5703a02e62d4455739e49222a0d5e2def7fa1041cc2ed6358f8755e3"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/GATE_CONTROL_PROTOCOL.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "fd9d376e852f89fb9036b38b5ca11ca7f4b8ca3c03822252072f431dd43f5d9c"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/GATE_CONTROL_RESULTS.md": {
+    "review_note": "Прочитан полностью; результаты этого файла уже извлечены родителем и здесь не дублируются.",
+    "sha256": "7036129f726548ce4f5d3c6c50a3893dcacacdc29fd3a4fd9ee0c2bba98039d4"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/INTERNAL_EVIDENCE.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "a5e2e859c14abb8dcee524284e4d75df16b706ec50f61a35583687c6beec5bba"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/MPRIME_AUDIT.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "26aa439bfdef721429890336a03cca66218c00e3379976639f363229e8dee340"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/PROTOCOL.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "9f10e28df42bf0f0fd7aea0156feb373b1991df8e0661e538258dc21d422d2f7"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/PROTOTYPE_AUDIT.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "9d79302374265a0dbe64885b95865f89faa8865f0fdf570aa78ac19c6eef5164"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/PROTOTYPE_PROTOCOL.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "1e385084fd222a876266447413654e2d403f7457e8edf4ce2c6a535184311083"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/RESEARCH_QUESTION.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "d7638847e41c0aaaec9ed2df65dfc6aa5b4aa8147b372f728e4f161892dbd48e"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/RESULTS.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "4456281e9ca7f396d5bee2dd137b95ceca66a776fa4b52a850e62a5810d77b69"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/SOURCE_AUDIT.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "bf34720424a034af749901f9acbc834f5f7dc3490c1064e7e09ccb076055e01b"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/SUM_DISTINCTION_PROTOCOL.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "6bbeece23e53b2e2bd74e3d96070ce847c9203ae9bef7dd54f69392a123308d1"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/SUM_DISTINCTION_SPEC.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "fa1712ed2ccb0f1ffc749303a1c77c2f9f70ead468b65916bff26038e66fc444"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/SYNTHESIS.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "4374e21ffeb8099d0f8da88c20fbe2efe7913d521986bc4d283e3f182b3b4001"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/TARGET_INDEPENDENT_AUDIT.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "02fb90b7dd0b283ad06c02cab28ce8e734751d199d902982ea846ab97bb7318e"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/TARGET_INDEPENDENT_PROTOCOL.md": {
+    "review_note": "Прочитан полностью; извлечены самостоятельные определения, свойства, ограничения, примеры и требования.",
+    "sha256": "0e27729c72630360330ac40e9c6754c3b80382a46c56a0c7ccc3692ff0adbab2"
+  },
+  "work/v14_rebuild/neural_skeleton_research_2026-09-15/TARGET_INDEPENDENT_RESULTS.md": {
+    "review_note": "Прочитан полностью; результаты этого файла уже извлечены родителем и здесь не дублируются.",
+    "sha256": "e71e32136d6e67c6eafbb92a2d56ed0ccbc82ae3a38eb088f237570c1199d652"
+  },
+  "work/v14_rebuild/o20/AUDIT_REANALYSIS.md": {
+    "review_note": "Прочитан весь аудит; результаты, зависимость фолдов, ёмкость моделей и ограничение OpenML перенесены с областями.",
+    "sha256": "af3cc4cf4aa6566fe788f9b7e0ef3dba53a55f9a8f145ac0fc09418113450f6c"
+  },
+  "work/v14_rebuild/questiongain_criterion.md": {
+    "review_note": "Прочитан полностью (216 строк); различены информационный свидетель, равная цена, локальная роль и глобальный порядок.",
+    "sha256": "3c0a08a4642338b1532d72a847e54c7f30a8e47b4375bcacc8c46b9c3a0aa517"
+  },
+  "work/v14_rebuild/recursive_distinction_2026-09-12/REVIEW.md": {
+    "review_note": "Прочитан полностью; Min/Cap/Act и внешние модели не добавлены в канон.",
+    "sha256": "71fa4e0ecdd7a12bcbcd4a7665bf35ce2fd2bc4c5dcb83886f813f4a0fab60a3"
+  },
+  "work/v14_rebuild/red_team_F3.md": {
+    "review_note": "Прочитан полностью (193 строки); исторические защиты отмечены как отозванные там, где это делает ревизия; отсутствие F3 не названо доказательством уникальности.",
+    "sha256": "f920f3ef3b3e3b48cc1ad667dd4112b60e82e977e5c0af04b8f59c3c85d05ed4"
+  },
+  "work/v14_rebuild/seven_window_torus_klein_2026-09-30.md": {
+    "review_note": "Полный Markdown-файл прочитан; авторские указания и кандидатные сопоставления разделены.",
+    "sha256": "ac4cf92596ab4f8596ff482fc425a798a7e99b83b2b3f8d3fe4502578c35f883"
+  },
+  "work/v14_rebuild/shadow_lemma.md": {
+    "review_note": "Прочитан полностью (134 строки); сохранены оговорки Z/2 против U(1), слепоты детектора и кандидатного статуса.",
+    "sha256": "8a05e352bda9ba7cf0be80ec9be1ad49a9769b8a6e18878b61ec5d0236ea686c"
+  },
+  "work/v14_rebuild/sphere_holes_note_2026-10-11.md": {
+    "review_note": "Полный Markdown-файл прочитан; авторские указания и кандидатные сопоставления разделены.",
+    "sha256": "e8e4f37e5c02d08e4999c64d4ed7e8725af491bddfc0cfcb170a8faa874d4c68"
+  },
+  "work/v14_rebuild/topo_chi_note.md": {
+    "review_note": "Прочитан полностью (188 строк); χ_E отделена от χ-носителя, авторское чтение и внешняя топология маркированы как candidate/analogy_only.",
+    "sha256": "a8ff8276f689dc5f76a05b068f5b692d7a8afade4ad61aec3ce01a3fb841e64c"
+  },
+  "work/v14_rebuild/train_reflection/RESULTS.md": {
+    "review_note": "Полный результат прочитан; численные эффекты отделены от семантики Я и заявления об уникальности.",
+    "sha256": "136219897aefb27d5d70015cbf6fb3237dfc1e1d49db2ea78d705eb3ee6cdb25"
+  },
+  "work/v14_rebuild/u0_nan_example_2026-10-19.md": {
+    "review_note": "Проверены исходные M_00/CH_00, исполнен вычислительный пример; внешняя иллюстрация отделена от утверждения ФТС.",
+    "sha256": "4b729b58f35258fb5e4f30b97ae0717ae15f101fa53443df2d373f2caa15f90d"
+  },
+  "work/v14_rebuild/u4_u7_bridge_2026-09-22/REVIEW.md": {
+    "review_note": "Прочитан полностью; модель D1–D6 и P01–P12 ограничены своими предикатами.",
+    "sha256": "a4fcb71edcd4d04b8c58a8ec040da70ac4813a92c734db8f769e69591198b3d7"
+  },
+  "work/v14_rebuild/window_groupings/BOUNDARY_RECHECK.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены группировки, примеры и ограничения.",
+    "sha256": "1ef2f2a16a61c676fcb4263569341392de62f7c6bd5b2c94bd0bdaafaa5b4094"
+  },
+  "work/v14_rebuild/window_groupings/FANO_AND_COMMON_NODE.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены группировки, примеры и ограничения.",
+    "sha256": "f196619a9cef275733730827201f2607184fa716923948ee29ef23a0cead6cbc"
+  },
+  "work/v14_rebuild/window_groupings/WINDOW_GROUPINGS.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены группировки, примеры и ограничения.",
+    "sha256": "d9c4dcea65daf9d57b2cfb43604bb6d81ea7885e3718c923c25477e827296ff7"
+  },
+  "work/v14_rebuild/window_groupings/WINDOW_GROUPING_13.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены группировки, примеры и ограничения.",
+    "sha256": "9a63b3bbf83b02a1bcd61d53601ca3c29c4e0d092077d5689798182bb2fc004e"
+  },
+  "work/v14_rebuild/window_groupings/WINDOW_GROUPING_25.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены группировки, примеры и ограничения.",
+    "sha256": "428247846d2e5b862732681b150b2eec1f37fd140625c5c65d6a39b5007831db"
+  },
+  "work/v14_rebuild/window_groupings/WOLFRAM_109.md": {
+    "review_note": "Полный Markdown-файл прочитан; извлечены группировки, примеры и ограничения.",
+    "sha256": "f69038150b57a3b5dd74ec5be006686d44e5b90223a220813b461b7c1b2f18bd"
+  },
+  "work/v14_rebuild/windows_number_systems_context_2026-10-06.md": {
+    "review_note": "Полный Markdown-файл прочитан; авторские указания и кандидатные сопоставления разделены.",
+    "sha256": "d83819a8f2c68f76101d97ccd9391d657933b78eb656fb694e98e02e598ab510"
+  }
+}
