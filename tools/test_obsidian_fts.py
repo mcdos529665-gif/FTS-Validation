@@ -224,7 +224,7 @@ class VaultTests(unittest.TestCase):
     def test_research_facets_are_rendered_without_inflating_canon_coverage(self):
         c=self.enc.corpus
         self.assertEqual(self.enc.corpus_summary['entities'],len(self.enc.cards))
-        self.assertEqual(self.enc.corpus_summary['research_entities'],2)
+        self.assertEqual(self.enc.corpus_summary['research_entities'],5)
         self.assertTrue(c.by_entity['CP-005'])
         text=self.enc.files[c.registry.paths['CP-005']]
         for f in c.by_entity['CP-005']:
@@ -238,6 +238,33 @@ class VaultTests(unittest.TestCase):
         files[export.FOLDERS[9]+'/Состояние обновления.md']='# Состояние обновления\n'
         files[path]=files[path].replace(export.fenced(f['exact_quote']),'',1)
         self.assertIn('Facet quotation lost: '+f['id']+' / '+cid,self.enc.verify(files))
+
+
+    def test_main_example_uses_reviewed_work_with_scope_and_source(self):
+        text=self.enc.page(self.enc.nodes['card_u_00'])
+        example=text.split('## Пример и чтение',1)[1].split('## Ограничения и различия',1)[0]
+        self.assertIn("float('nan')",example)
+        self.assertIn('Область примера:',example)
+        self.assertIn('Статус примера:',example)
+        self.assertIn('Основание примера',example)
+        self.assertNotIn('нет в артефактах',example)
+
+    def test_main_intro_uses_source_bound_explanation_and_withholds_it_when_stale(self):
+        cid='CP_035'; c=self.enc.corpus
+        f=next(f for f in c.by_entity[cid] if f['id']=='P_CP_ROW_035')
+        node=self.enc.nodes[c.card_nodes[cid]]
+        intro=self.enc.page(node).split('## Что это',1)[1].split('## Место в ФТС',1)[0]
+        self.assertIn(f['summary_ru'],intro)
+        self.assertIn(f['scope_ru'],intro)
+        self.assertIn(f['status_ru'],intro)
+        enc=copy.copy(self.enc); enc.corpus=copy.copy(c)
+        enc.corpus.facets=copy.deepcopy(c.facets)
+        enc.corpus.stale_facets=[]; enc.corpus.errors=[]
+        enc.corpus.by_entity=__import__('collections').defaultdict(list)
+        next(x for x in enc.corpus.facets if x['id']==f['id'])['source_sha256']='changed'
+        enc.corpus.validate_facets()
+        stale_intro=enc.page(node).split('## Что это',1)[1].split('## Место в ФТС',1)[0]
+        self.assertNotIn(f['summary_ru'],stale_intro)
 
 
 if __name__=='__main__': unittest.main()

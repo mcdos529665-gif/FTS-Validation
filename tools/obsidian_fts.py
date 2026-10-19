@@ -324,8 +324,25 @@ class Encyclopedia:
         valid_ed = ed.get('source_sha256') == sha(dump(record))
         if ed and not valid_ed: self.stale_editorial.append(id_)
         intro = ed.get('intro_ru') if valid_ed else None
+        intro_facet = None
+        entries = self.corpus.by_entity.get(id_,[])
         if not intro:
-            intro = f'{TYPES.get(type_, "Сущность ФТС")}: {title}. Ниже приведены точная запись и зарегистрированные свойства; пояснение не расширяет их область действия.'
+            intro_facet = next((f for f in entries if f['id'].startswith(('P_CARD_EXPLAIN_','P_CP_ROW_','P_CP_ACCEPTED_'))),None)
+            if intro_facet:
+                target=self.corpus.source_target(intro_facet)
+                origin=link(target,'Основание пояснения') if target else self.source(intro_facet['source_file'])
+                intro=intro_facet['summary_ru']+'\n\n**Область пояснения:** '+intro_facet['scope_ru']+'\n\n**Статус пояснения:** '+intro_facet['status_ru']+'\n\n'+origin
+            else:
+                intro = f'{TYPES.get(type_, "Сущность ФТС")}: {title}. Ниже приведены точная запись и зарегистрированные свойства; пояснение не расширяет их область действия.'
+        example = ed.get('example_ru') if valid_ed else None
+        if not example:
+            item=next((f for f in entries if f['kind']=='example'),None)
+            if item:
+                target=self.corpus.source_target(item)
+                origin=link(target,'Основание примера') if target else self.source(item['source_file'])
+                example=item['summary_ru']+'\n\n**Область примера:** '+item['scope_ru']+'\n\n**Статус примера:** '+item['status_ru']+'\n\n'+origin
+            else:
+                example='Отдельный пример пока не подтверждён адресной записью проверенного слоя. Полнота разбора источников показана в разделе «Разбор материалов work»; связи и свойства доступны ниже.'
         exact = record.get('text') or record.get('statement') or record.get('question') or record.get('conclusion')
         if not exact and n['type'] not in ('verification', 'source_document'):
             exact = 'Самостоятельное определение: нет в артефактах. Название и характеристики сохранены из записи графа.'
@@ -356,7 +373,7 @@ class Encyclopedia:
         for k,v in props:
             lines.append(f'| {LABELS.get(k,k)} | {cell(v)} | {cell(record.get("mathematical_scope",record.get("scope",record.get("adoption_scope","не указано отдельно"))))} | {basis} | {cell(record.get("evidence_status",record.get("status_text",record.get("status","не указано"))))} |')
         lines += ['## Связи', self.relationships(n['id']), '## Пример и чтение',
-                  ed.get('example_ru', 'Содержательный пример: нет в артефактах этой записи. Пример навигации: перейдите по подписанной связи выше и сопоставьте область действия обеих записей.') if valid_ed else 'Содержательный пример: нет в артефактах этой записи. Связанные определения доступны в таблице связей.',
+                  example,
                   '## Ограничения и различия',
                   ed.get('caution_ru','Область определяется источником. Связь и соседство страниц сами по себе не доказывают тождество, наследование или повышение статуса.') if valid_ed else 'Область определяется источником. Соседство страниц не доказывает тождество, наследование или повышение статуса.']
         for k in ('limitation','revision_condition','open_obligations','open_questions','local_forbid','notes'):
@@ -368,7 +385,7 @@ class Encyclopedia:
                   'Исследования, вопросы и свидетельства перечислены в таблице направленных связей.',
                   link(FOLDERS[8]+'/Как вести мои заметки.md','Как добавить собственную заметку'),
                   f'Для комментария создайте файл в «08 — Мои заметки» и добавьте ссылку {link(self.paths[n["id"]],title)}. Он появится в обратных ссылках этой страницы.',
-                  '## Происхождение', f'- ID графа: `{n["id"]}`.', f'- Редакторское пояснение: {"проверенный пересказ составителя, привязанный к хэшу источника" if valid_ed else "структурная справка; точный текст приведён выше"}.',
+                  '## Происхождение', f'- ID графа: `{n["id"]}`.', f'- Редакторское пояснение: {"проверенный пересказ составителя, привязанный к хэшу источника" if (valid_ed or intro_facet) else "структурная справка; точный текст приведён выше"}.',
                   '### Полная исходная запись', fenced(dump(record).rstrip(),'json')]
         expansion = self.corpus.render_facets(id_, link, cell, fenced)
         if expansion:
