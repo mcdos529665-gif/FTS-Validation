@@ -271,17 +271,22 @@ class Corpus:
             self.enc.files[d['page']] = '\n\n'.join(lines)+'\n'
         included = [d for d in self.documents if d['included']]
         reviewed = [d for d in included if d['review']]
+        derived_verified = sum(d['review'].get('review_method')=='derived_verified' for d in reviewed)
+        def review_state(d):
+            if d['review'].get('review_method')=='derived_verified':
+                return 'производный документ сверён с источниками; самостоятельное чтение каждой строки не заявлено'
+            return 'подтверждён' if d['review'] else 'не завершён'
         lines = ['# Материалы work',link('00 — Начало/Начать здесь.md','Главная'),
                  'Полные рабочие тексты, в том числе вне графа. Авторские уточнения, модели, протоколы, отрицательные результаты и вопросы имеют разные роли. '+link(COVERAGE,'Границы и состояние содержательного разбора'),
                  '| Документ | Роль | Содержательный разбор |', '|---|---|---|']
-        lines += [f'| {link(d["page"], d["path"])} | {d["category"]} | {"подтверждён" if d["review"] else "не завершён"} |' for d in included]
+        lines += [f'| {link(d["page"], d["path"])} | {d["category"]} | {review_state(d)} |' for d in included]
         self.enc.files[CORPUS_INDEX] = '\n\n'.join(lines[:3])+'\n\n'+'\n'.join(lines[3:])+'\n'
         report = ['# Разбор материалов work',link('00 — Начало/Начать здесь.md','Главная'),
                   f'Перепись: {len(self.documents)} Markdown-документов. Полных текстов включено: {len(included)}. Подтверждённых содержательных разборов: {len(reviewed)}. Проверенных адресных раскрытий: {len(self.facets)-len(self.stale_facets)}. Требуют пересмотра: {len(self.stale_facets)}. Сущностей с такими раскрытиями: {canonical_entities} из {len(self.card_nodes)}; дополнительных исследовательских страниц с раскрытиями: {research_entities}.',
-                  'Точное включение текста, поиск упоминания и проверенное содержательное раскрытие учитываются раздельно. Наличие полного текста не закрывает обязательство его разбора.',
+                  f'Из разобранных документов {derived_verified} производных сверены с первичными данными и генератором; это отдельно от полного чтения остальных {len(reviewed)-derived_verified}. Точное включение текста, поиск упоминания и проверенное содержательное раскрытие учитываются раздельно. Наличие полного текста не закрывает обязательство его разбора.',
                   '| Источник | Роль / решение | Разбор |', '|---|---|---|']
         for d in self.documents:
-            state = 'подтверждён' if d['review'] else ('требует пересмотра' if d['review_stale'] else ('ожидает разбора' if d['included'] else 'исключён с основанием'))
+            state = review_state(d) if d['review'] else ('требует пересмотра' if d['review_stale'] else ('ожидает разбора' if d['included'] else 'исключён с основанием'))
             report.append(f'| `{d["path"]}` | {cell(d["category"]+": "+d["reason"])} | {state} |')
         self.enc.files[COVERAGE] = '\n\n'.join(report[:4])+'\n\n'+'\n'.join(report[4:])+'\n'
         other='90 — Служебное/Материалы кроме Markdown.md'
@@ -294,4 +299,4 @@ class Corpus:
         serial = [{k:v for k,v in d.items() if k!='sections'} | {'sections':[{k:v for k,v in s.items() if k!='text'} for s in d.get('sections',[])]} for d in self.documents]
         self.enc.files['90 — Служебное/work_coverage.json'] = json.dumps({'documents':serial,'assets':self.assets,'facets':self.facets,'stale_facets':[f['id'] for f in self.stale_facets],'errors':self.errors},ensure_ascii=False,sort_keys=True,indent=2)+'\n'
         self.enc.files['90 — Служебное/entity_questions_snapshot.json'] = json.dumps(self.questions,ensure_ascii=False,sort_keys=True,indent=2)+'\n'
-        return {'documents':len(included),'reviewed':len(reviewed),'facets':len(self.facets)-len(self.stale_facets),'stale_facets':len(self.stale_facets),'entities':canonical_entities,'research_entities':research_entities,'pending':len(included)-len(reviewed),'research_proposals':research_count}
+        return {'documents':len(included),'reviewed':len(reviewed),'derived_verified':derived_verified,'facets':len(self.facets)-len(self.stale_facets),'stale_facets':len(self.stale_facets),'entities':canonical_entities,'research_entities':research_entities,'pending':len(included)-len(reviewed),'research_proposals':research_count}
