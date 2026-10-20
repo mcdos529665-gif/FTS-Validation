@@ -36,7 +36,7 @@
     },
     {
       "path": "work/OPEN_QUESTIONS.md",
-      "sha256": "01dbe57ca8e26706db55ecb3359fc206b75a4adf6b5f3165e364c75b5a61c736"
+      "sha256": "b0ad134a7b94f2dbc5786615a46747ea27cc6cd29928452a369bcdd4929221f8"
     },
     {
       "path": "work/author_canon/2026-09-21/AUTHOR_MESSAGE.txt",
@@ -136,7 +136,7 @@
     },
     {
       "path": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "sha256": "5e132a0e5ad131809d466ccd09d2c88708bc8da18698be7340fa520a5cd2a936"
+      "sha256": "27dcaf4a34fa690224bc96c1c0491df3ba5518992ca0fbf704bd4b0ab7d6de57"
     },
     {
       "path": "work/v14_rebuild/audit/REFERENCE_RESOLUTIONS.tsv",
@@ -13538,12 +13538,22 @@
       "source_location": "L720"
     },
     {
+      "id": "oq_oq_canon_m07_chi_carrier_open_alternative",
+      "type": "open_question",
+      "label": "oq-canon-m07-chi-carrier-open-alternative — Для `M_07` и `CHI_CARRIER` в реестре есть открытые именованные альтернативы (`CP-094`: краткая `R=B∨D` против действующей M_07; `CP-104`: другой паспорт χ), хотя причина принятия…",
+      "layer": "audit",
+      "anchor": "oq-canon-m07-chi-carrier-open-alternative",
+      "oq_status": "open",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L880"
+    },
+    {
       "id": "oq_oq_canon_no_alt_per_card_reason",
       "type": "open_question",
       "label": "oq-canon-no-alt-per-card-reason — У всех 64 принятых карточек в `dispositions_2026-10-18.tsv` одна и та же причина «нет открытого конкурирующего варианта» и одна область; следа поиска альтернативы по каждой карточ…",
       "layer": "audit",
       "anchor": "oq-canon-no-alt-per-card-reason",
-      "oq_status": "open",
+      "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
       "source_location": "L872"
     },
@@ -13843,9 +13853,9 @@
       "label": "oq-graph-status-evidence-axis — `O_20` `canonical_adopted` при отрицательном первом внешнем тесте (REFUTED 2026-06-13); ось доказательности сохранена (`candidate_requires_empirical_test`), но поле `status` в гра…",
       "layer": "audit",
       "anchor": "oq-graph-status-evidence-axis",
-      "oq_status": "open",
+      "oq_status": "closed",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L876"
+      "source_location": "L882"
     },
     {
       "id": "oq_oq_kappa_provenance",
@@ -14353,9 +14363,19 @@
       "label": "oq-u07-u12-refuted-vs-adoption — `U_07`, `U_12` теперь `canonical_adopted`, а REFUTED 2026-07-13 оставляет их семантические гипотезы «живыми кандидатами с условиями повторного повышения». Снята ли эта запись прав…",
       "layer": "audit",
       "anchor": "oq-u07-u12-refuted-vs-adoption",
+      "oq_status": "closed",
+      "source_file": "work/OPEN_QUESTIONS.md",
+      "source_location": "L875"
+    },
+    {
+      "id": "oq_oq_u08_u11_refuted_vs_adoption",
+      "type": "open_question",
+      "label": "oq-u08-u11-refuted-vs-adoption — Для `U_08…U_11` запись REFUTED 2026-07-13 тоже перечисляет U_07…U_12, а решение автора 2026-10-20 касалось только `U_07` и `U_12`. Распространяется ли снятие на `U_08…U_11`?",
+      "layer": "audit",
+      "anchor": "oq-u08-u11-refuted-vs-adoption",
       "oq_status": "open",
       "source_file": "work/OPEN_QUESTIONS.md",
-      "source_location": "L874"
+      "source_location": "L878"
     },
     {
       "id": "oq_oq_u0_absence_distinction_boundary",
@@ -37464,14 +37484,14 @@
       "source_location": "row:71"
     },
     {
-      "id": "oq_map_contains_oq_canon_no_alt_per_card_reason",
+      "id": "oq_map_contains_oq_canon_m07_chi_carrier_open_alternative",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
-      "target": "oq_oq_canon_no_alt_per_card_reason",
+      "target": "oq_oq_canon_m07_chi_carrier_open_alternative",
       "relation": "contains",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:97"
+      "source_location": "row:98"
     },
     {
       "id": "oq_map_contains_oq_canon_star_fate",
@@ -37712,16 +37732,6 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:63"
-    },
-    {
-      "id": "oq_map_contains_oq_graph_status_evidence_axis",
-      "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
-      "target": "oq_oq_graph_status_evidence_axis",
-      "relation": "contains",
-      "layer": "audit",
-      "confidence": "EXTRACTED",
-      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:99"
     },
     {
       "id": "oq_map_contains_oq_kappa_provenance",
@@ -38144,14 +38154,14 @@
       "source_location": "row:51"
     },
     {
-      "id": "oq_map_contains_oq_u07_u12_refuted_vs_adoption",
+      "id": "oq_map_contains_oq_u08_u11_refuted_vs_adoption",
       "source": "doc_work_v14_rebuild_audit_pattern_oq_map_tsv",
-      "target": "oq_oq_u07_u12_refuted_vs_adoption",
+      "target": "oq_oq_u08_u11_refuted_vs_adoption",
       "relation": "contains",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:98"
+      "source_location": "row:97"
     },
     {
       "id": "oq_map_contains_oq_u0_absence_distinction_boundary",
@@ -38584,34 +38594,34 @@
       "source_location": "row:71"
     },
     {
-      "id": "oq_oq_canon_no_alt_per_card_reason_event",
-      "source": "oq_oq_canon_no_alt_per_card_reason",
-      "target": "event_e6",
+      "id": "oq_oq_canon_m07_chi_carrier_open_alternative_event",
+      "source": "oq_oq_canon_m07_chi_carrier_open_alternative",
+      "target": "event_e7",
       "relation": "planned_resolution_event",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:97"
+      "source_location": "row:98"
     },
     {
-      "id": "oq_oq_canon_no_alt_per_card_reason_meta_mp_c",
-      "source": "oq_oq_canon_no_alt_per_card_reason",
+      "id": "oq_oq_canon_m07_chi_carrier_open_alternative_meta_mp_c",
+      "source": "oq_oq_canon_m07_chi_carrier_open_alternative",
       "target": "meta_mp_c",
       "relation": "grouped_by_meta_pattern",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:97"
+      "source_location": "row:98"
     },
     {
-      "id": "oq_oq_canon_no_alt_per_card_reason_program",
-      "source": "oq_oq_canon_no_alt_per_card_reason",
+      "id": "oq_oq_canon_m07_chi_carrier_open_alternative_program",
+      "source": "oq_oq_canon_m07_chi_carrier_open_alternative",
       "target": "program_rp_2",
       "relation": "belongs_to_program",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:97"
+      "source_location": "row:98"
     },
     {
       "id": "oq_oq_canon_star_fate_event",
@@ -39402,36 +39412,6 @@
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
       "source_location": "row:63"
-    },
-    {
-      "id": "oq_oq_graph_status_evidence_axis_event",
-      "source": "oq_oq_graph_status_evidence_axis",
-      "target": "event_e6",
-      "relation": "planned_resolution_event",
-      "layer": "audit",
-      "confidence": "EXTRACTED",
-      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:99"
-    },
-    {
-      "id": "oq_oq_graph_status_evidence_axis_meta_mp_c",
-      "source": "oq_oq_graph_status_evidence_axis",
-      "target": "meta_mp_c",
-      "relation": "grouped_by_meta_pattern",
-      "layer": "audit",
-      "confidence": "EXTRACTED",
-      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:99"
-    },
-    {
-      "id": "oq_oq_graph_status_evidence_axis_program",
-      "source": "oq_oq_graph_status_evidence_axis",
-      "target": "program_rp_4",
-      "relation": "belongs_to_program",
-      "layer": "audit",
-      "confidence": "EXTRACTED",
-      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:99"
     },
     {
       "id": "oq_oq_kappa_provenance_event",
@@ -40874,34 +40854,34 @@
       "source_location": "row:51"
     },
     {
-      "id": "oq_oq_u07_u12_refuted_vs_adoption_event",
-      "source": "oq_oq_u07_u12_refuted_vs_adoption",
+      "id": "oq_oq_u08_u11_refuted_vs_adoption_event",
+      "source": "oq_oq_u08_u11_refuted_vs_adoption",
       "target": "event_e7",
       "relation": "planned_resolution_event",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:98"
+      "source_location": "row:97"
     },
     {
-      "id": "oq_oq_u07_u12_refuted_vs_adoption_meta_mp_c",
-      "source": "oq_oq_u07_u12_refuted_vs_adoption",
+      "id": "oq_oq_u08_u11_refuted_vs_adoption_meta_mp_c",
+      "source": "oq_oq_u08_u11_refuted_vs_adoption",
       "target": "meta_mp_c",
       "relation": "grouped_by_meta_pattern",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:98"
+      "source_location": "row:97"
     },
     {
-      "id": "oq_oq_u07_u12_refuted_vs_adoption_program",
-      "source": "oq_oq_u07_u12_refuted_vs_adoption",
+      "id": "oq_oq_u08_u11_refuted_vs_adoption_program",
+      "source": "oq_oq_u08_u11_refuted_vs_adoption",
       "target": "program_rp_2",
       "relation": "belongs_to_program",
       "layer": "audit",
       "confidence": "EXTRACTED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:98"
+      "source_location": "row:97"
     },
     {
       "id": "oq_oq_u0_absence_distinction_boundary_event",
@@ -42028,15 +42008,15 @@
       "status_effect": "navigation only; no status change"
     },
     {
-      "id": "pa_c02_oq_u07_u12_refuted_vs_adoption_curated_bridge_to",
+      "id": "pa_c02_oq_u08_u11_refuted_vs_adoption_curated_bridge_to",
       "source": "pattern_pa_c02",
-      "target": "oq_oq_u07_u12_refuted_vs_adoption",
+      "target": "oq_oq_u08_u11_refuted_vs_adoption",
       "relation": "curated_bridge_to",
       "layer": "audit",
       "confidence": "INFERRED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:98",
-      "scope": "Не записано, снимает ли правило 2026-10-18 запись REFUTED 2026-07-13 о кандидатном статусе семантики U_07/U_12.",
+      "source_location": "row:97",
+      "scope": "Решение о снятии записи REFUTED 2026-07-13 принято для U_07 и U_12; для U_08…U_11 не записано.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -43948,15 +43928,15 @@
       "status_effect": "navigation only; no status change"
     },
     {
-      "id": "pa_r01_oq_canon_no_alt_per_card_reason_curated_bridge_to",
+      "id": "pa_r01_oq_canon_m07_chi_carrier_open_alternative_curated_bridge_to",
       "source": "pattern_pa_r01",
-      "target": "oq_oq_canon_no_alt_per_card_reason",
+      "target": "oq_oq_canon_m07_chi_carrier_open_alternative",
       "relation": "curated_bridge_to",
       "layer": "audit",
       "confidence": "INFERRED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:97",
-      "scope": "У 64 принятых карточек одна и та же причина «нет альтернативы»; покарточного следа поиска альтернатив нет.",
+      "source_location": "row:98",
+      "scope": "У M_07 и CHI_CARRIER есть открытые именованные альтернативы (CP-094, CP-104) при причине принятия «нет конкурента».",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -43984,15 +43964,15 @@
       "status_effect": "navigation only; no status change"
     },
     {
-      "id": "pa_r01_oq_u07_u12_refuted_vs_adoption_curated_bridge_to",
+      "id": "pa_r01_oq_u08_u11_refuted_vs_adoption_curated_bridge_to",
       "source": "pattern_pa_r01",
-      "target": "oq_oq_u07_u12_refuted_vs_adoption",
+      "target": "oq_oq_u08_u11_refuted_vs_adoption",
       "relation": "curated_bridge_to",
       "layer": "audit",
       "confidence": "INFERRED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:98",
-      "scope": "Не записано, снимает ли правило 2026-10-18 запись REFUTED 2026-07-13 о кандидатном статусе семантики U_07/U_12.",
+      "source_location": "row:97",
+      "scope": "Решение о снятии записи REFUTED 2026-07-13 принято для U_07 и U_12; для U_08…U_11 не записано.",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -44020,27 +44000,15 @@
       "status_effect": "navigation only; no status change"
     },
     {
-      "id": "pa_r02_oq_canon_no_alt_per_card_reason_curated_bridge_to",
+      "id": "pa_r02_oq_canon_m07_chi_carrier_open_alternative_curated_bridge_to",
       "source": "pattern_pa_r02",
-      "target": "oq_oq_canon_no_alt_per_card_reason",
+      "target": "oq_oq_canon_m07_chi_carrier_open_alternative",
       "relation": "curated_bridge_to",
       "layer": "audit",
       "confidence": "INFERRED",
       "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:97",
-      "scope": "У 64 принятых карточек одна и та же причина «нет альтернативы»; покарточного следа поиска альтернатив нет.",
-      "status_effect": "navigation only; no status change"
-    },
-    {
-      "id": "pa_r03_oq_graph_status_evidence_axis_curated_bridge_to",
-      "source": "pattern_pa_r03",
-      "target": "oq_oq_graph_status_evidence_axis",
-      "relation": "curated_bridge_to",
-      "layer": "audit",
-      "confidence": "INFERRED",
-      "source_file": "work/v14_rebuild/audit/PATTERN_OQ_MAP.tsv",
-      "source_location": "row:99",
-      "scope": "В узлах графа поле status не показывает ось доказательности; у O_20 отрицательный внешний тест при canonical_adopted.",
+      "source_location": "row:98",
+      "scope": "У M_07 и CHI_CARRIER есть открытые именованные альтернативы (CP-094, CP-104) при причине принятия «нет конкурента».",
       "status_effect": "navigation only; no status change"
     },
     {
@@ -50134,8 +50102,8 @@
     "audit_claim_groups": 25,
     "audit_findings": 20,
     "patterns": 31,
-    "open_question_anchors": 119,
-    "mapped_open_questions": 98,
+    "open_question_anchors": 121,
+    "mapped_open_questions": 97,
     "verification_nodes": 62,
     "external_evidence_nodes": 21,
     "internal_evidence_nodes": 19,
@@ -50143,8 +50111,8 @@
     "curated_research_bridges": 206,
     "project_entities": 1,
     "declared_research_scopes": 4,
-    "nodes": 1146,
-    "edges": 2768,
+    "nodes": 1148,
+    "edges": 2763,
     "unresolved_references": 4
   }
 }
