@@ -280,9 +280,9 @@
     "semantic_hash": "27d18179e08f08dbb5ad0b2de79fe632"
   },
   "work/v14_rebuild/claim_graph/claim_graph.json": {
-    "mtime": 1792500581.8818722,
-    "ast_hash": "8718862176f047c5c5152dd160920c7e",
-    "semantic_hash": "8718862176f047c5c5152dd160920c7e"
+    "mtime": 1792503950.0782857,
+    "ast_hash": "d7dd698e5fa9fa05bef3574a98249638",
+    "semantic_hash": "d7dd698e5fa9fa05bef3574a98249638"
   },
   "work/v14_rebuild/claim_questions/tools/build.py": {
     "mtime": 1791636787.483019,
@@ -770,9 +770,9 @@
     "semantic_hash": "a8c734a6010ac66baa5667ba8cd6989c"
   },
   "README.md": {
-    "mtime": 1791045014.0192335,
-    "ast_hash": "81ab3e63aaf8562840b5233aaf99746c",
-    "semantic_hash": "81ab3e63aaf8562840b5233aaf99746c"
+    "mtime": 1792503949.0382588,
+    "ast_hash": "adaa7ea0ed4326ca34778efb65e14023",
+    "semantic_hash": "adaa7ea0ed4326ca34778efb65e14023"
   },
   "SLASH_COMMANDS.md": {
     "mtime": 1791026238.739328,
@@ -800,9 +800,9 @@
     "semantic_hash": "3a7d4963d739f0b54c684cdb9397f4e2"
   },
   "suro/AI_DISCUSSION_BRIEF.md": {
-    "mtime": 1791026238.9124756,
-    "ast_hash": "0c90afe6af5d4faf0d3901bc8a925d11",
-    "semantic_hash": "0c90afe6af5d4faf0d3901bc8a925d11"
+    "mtime": 1792503495.8601785,
+    "ast_hash": "bfd35657cfb6c47a508d9d7f31fa54ca",
+    "semantic_hash": "bfd35657cfb6c47a508d9d7f31fa54ca"
   },
   "suro/INTEGRATION_2026-10-03.md": {
     "mtime": 1791026238.9193804,
@@ -815,9 +815,9 @@
     "semantic_hash": "e9e80c37ef4ccce812e468df7b71e65c"
   },
   "tools/GRAPHIFY_REBUILD.md": {
-    "mtime": 1791705176.090774,
-    "ast_hash": "a090327fe2b0a68b01541b736adeabdd",
-    "semantic_hash": "a090327fe2b0a68b01541b736adeabdd"
+    "mtime": 1792503495.8611815,
+    "ast_hash": "bf519ed3ba332f464a539c14712d0cfc",
+    "semantic_hash": "bf519ed3ba332f464a539c14712d0cfc"
   },
   "tools/README_graphify_canon.md": {
     "mtime": 1791705130.7488806,
@@ -835,9 +835,9 @@
     "semantic_hash": "53f19c938755b496b1ef9e7fefe5ffd7"
   },
   "work/DECISIONS.md": {
-    "mtime": 1792500626.9258797,
-    "ast_hash": "59572e04ddcdda42672684a75ce181e4",
-    "semantic_hash": "59572e04ddcdda42672684a75ce181e4"
+    "mtime": 1792503949.0402632,
+    "ast_hash": "e52471b6bc7c3a3959005c6407a0de24",
+    "semantic_hash": "e52471b6bc7c3a3959005c6407a0de24"
   },
   "work/DIALOGUE_NUANCE_JOURNAL.md": {
     "mtime": 1792253283.4962132,
@@ -895,9 +895,9 @@
     "semantic_hash": "226b68172ffbd9d4439207fc8c5426da"
   },
   "work/STATE.md": {
-    "mtime": 1792500489.959742,
-    "ast_hash": "e064e6a55026ed44525225e0cc639353",
-    "semantic_hash": "e064e6a55026ed44525225e0cc639353"
+    "mtime": 1792503495.8651786,
+    "ast_hash": "942aa5827720909ec5f4a7b70ddbe14a",
+    "semantic_hash": "942aa5827720909ec5f4a7b70ddbe14a"
   },
   "work/author_canon/2026-09-19/AMENDMENT.md": {
     "mtime": 1791026239.0032797,
@@ -1050,9 +1050,9 @@
     "semantic_hash": "8e78b4380a01cb48f8488571f7a0c689"
   },
   "work/project_consistency/GRAPH_RECONCILIATION_2026-10-03.md": {
-    "mtime": 1791034216.263873,
-    "ast_hash": "3110bb98334c76e17299e06a0504d9b5",
-    "semantic_hash": "3110bb98334c76e17299e06a0504d9b5"
+    "mtime": 1792503495.8661785,
+    "ast_hash": "6a561f76f13df460fdd391f6e0467fc1",
+    "semantic_hash": "6a561f76f13df460fdd391f6e0467fc1"
   },
   "work/project_consistency/MERGE_2026-10-03.md": {
     "mtime": 1791026375.9940844,
@@ -1060,9 +1060,9 @@
     "semantic_hash": "390e1cec4838742a209668ef40fde146"
   },
   "work/project_consistency/PLAN_GRAPH_RECONCILIATION_2026-10-03.md": {
-    "mtime": 1791034216.2568736,
-    "ast_hash": "ea77058729f96465b9599410269f0383",
-    "semantic_hash": "ea77058729f96465b9599410269f0383"
+    "mtime": 1792503495.8661785,
+    "ast_hash": "9e5561a2745f0225d059634e9485817e",
+    "semantic_hash": "9e5561a2745f0225d059634e9485817e"
   },
   "work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md": {
     "mtime": 1791050940.6025002,
@@ -1125,24 +1125,24 @@
     "semantic_hash": "f02269a701dc09140840e6159fbad824"
   },
   "work/v14_rebuild/addendum_2026-10-04_upper_levels.md": {
-    "mtime": 1791284745.95374,
-    "ast_hash": "073649244d07280b32669af729a27612",
-    "semantic_hash": "073649244d07280b32669af729a27612"
+    "mtime": 1792503495.8681798,
+    "ast_hash": "bec74698d139e6e127da98fe62f801a5",
+    "semantic_hash": "bec74698d139e6e127da98fe62f801a5"
   },
   "work/v14_rebuild/addendum_2026-10-04_windows_numbers.md": {
-    "mtime": 1791118779.9559536,
-    "ast_hash": "35eb9bc1911014a4266678c3c567c177",
-    "semantic_hash": "35eb9bc1911014a4266678c3c567c177"
+    "mtime": 1792503495.8681798,
+    "ast_hash": "f057f779eded4454255ef8a535a951a0",
+    "semantic_hash": "f057f779eded4454255ef8a535a951a0"
   },
   "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md": {
-    "mtime": 1791217447.6353295,
-    "ast_hash": "b354380c5556249ddddd856b904d739f",
-    "semantic_hash": "b354380c5556249ddddd856b904d739f"
+    "mtime": 1792503495.8691795,
+    "ast_hash": "9b235aafb245841a333940fc559c72cb",
+    "semantic_hash": "9b235aafb245841a333940fc559c72cb"
   },
   "work/v14_rebuild/addendum_2026-10-08_rotation_projection.md": {
-    "mtime": 1791468677.4403422,
-    "ast_hash": "12514117d06da3dcd9e058529a48f457",
-    "semantic_hash": "12514117d06da3dcd9e058529a48f457"
+    "mtime": 1792503495.8701804,
+    "ast_hash": "37f5e0f86ac7b1344e59a837e785910e",
+    "semantic_hash": "37f5e0f86ac7b1344e59a837e785910e"
   },
   "work/v14_rebuild/audit/AUDIT_REPORT.md": {
     "mtime": 1791026239.0993285,
@@ -1230,12 +1230,12 @@
     "semantic_hash": "0ad267f155aff26153271cb10aa93839"
   },
   "work/v14_rebuild/claim_graph/CHANGE_REPORT.md": {
-    "mtime": 1792500581.8858695,
+    "mtime": 1792503950.0832882,
     "ast_hash": "cfd3fa0c57f41a6f6c15c58ea5f62df7",
     "semantic_hash": "cfd3fa0c57f41a6f6c15c58ea5f62df7"
   },
   "work/v14_rebuild/claim_graph/COVERAGE.md": {
-    "mtime": 1792500581.8828714,
+    "mtime": 1792503950.0792873,
     "ast_hash": "6b655b2dd746fa5668284c402317ddec",
     "semantic_hash": "6b655b2dd746fa5668284c402317ddec"
   },
@@ -1245,9 +1245,9 @@
     "semantic_hash": "0a7db971b9061110fbba755a0681af5e"
   },
   "work/v14_rebuild/claim_graph/claim_graph.html": {
-    "mtime": 1792500581.911337,
-    "ast_hash": "8cc3c867e14ee12dde51e2d18cf3ac88",
-    "semantic_hash": "8cc3c867e14ee12dde51e2d18cf3ac88"
+    "mtime": 1792503950.1108117,
+    "ast_hash": "b6ea49354afa4662cd07f79a39308e6b",
+    "semantic_hash": "b6ea49354afa4662cd07f79a39308e6b"
   },
   "work/v14_rebuild/claim_questions/CHANGES_FOR_GRAPH_2026-10-10.md": {
     "mtime": 1791643352.0982778,
@@ -1685,9 +1685,9 @@
     "semantic_hash": "87530a1d47f06832081ad4cc90a35bbc"
   },
   "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md": {
-    "mtime": 1791381860.8226912,
-    "ast_hash": "a08d28b524dc20ae4aa9380e7a833419",
-    "semantic_hash": "a08d28b524dc20ae4aa9380e7a833419"
+    "mtime": 1792503495.8711834,
+    "ast_hash": "9c7d40facf5acd9b6851ea0c258f0ab6",
+    "semantic_hash": "9c7d40facf5acd9b6851ea0c258f0ab6"
   },
   "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/PRECHECK.md": {
     "mtime": 1791287694.3595586,
@@ -1720,12 +1720,12 @@
     "semantic_hash": "27d5834ed61b9ff5fa252b3d7edf7f52"
   },
   "work/v14_rebuild/export/FTS_research_project_for_AI.md": {
-    "mtime": 1792500627.221603,
-    "ast_hash": "89d28ceb0e9401f609d39e5f32458796",
-    "semantic_hash": "89d28ceb0e9401f609d39e5f32458796"
+    "mtime": 1792503953.5416093,
+    "ast_hash": "805a0d5eb8e2f0bf698b8f3d119a4cc8",
+    "semantic_hash": "805a0d5eb8e2f0bf698b8f3d119a4cc8"
   },
   "work/v14_rebuild/export/FTS_v14_paper.md": {
-    "mtime": 1792500627.221603,
+    "mtime": 1792503953.5426724,
     "ast_hash": "e420ece511f7cff2a8fa0197118eb43d",
     "semantic_hash": "e420ece511f7cff2a8fa0197118eb43d"
   },
@@ -1735,62 +1735,62 @@
     "semantic_hash": "1393eae9d4922d4b9b710aeff54720ea"
   },
   "work/v14_rebuild/export/audit/AUDIT_REPORT.md": {
-    "mtime": 1792500627.226626,
+    "mtime": 1792503953.5462322,
     "ast_hash": "903383e5d4eae41f16af459309818d47",
     "semantic_hash": "903383e5d4eae41f16af459309818d47"
   },
   "work/v14_rebuild/export/audit/BASELINE.md": {
-    "mtime": 1792500627.226626,
+    "mtime": 1792503953.5473053,
     "ast_hash": "99547627ee54303992275a4e0dc6346e",
     "semantic_hash": "99547627ee54303992275a4e0dc6346e"
   },
   "work/v14_rebuild/export/audit/GRAPH_AUDIT.md": {
-    "mtime": 1792500627.2296877,
+    "mtime": 1792503953.5499685,
     "ast_hash": "2f3d87f7e18e89d82bd3bbc99619153e",
     "semantic_hash": "2f3d87f7e18e89d82bd3bbc99619153e"
   },
   "work/v14_rebuild/export/audit/PATTERN_ATLAS.md": {
-    "mtime": 1792500627.23622,
+    "mtime": 1792503953.5541582,
     "ast_hash": "4a64612f5cecc38eabbaf1f0297cc342",
     "semantic_hash": "4a64612f5cecc38eabbaf1f0297cc342"
   },
   "work/v14_rebuild/export/audit/PATTERN_OQ_MAP.md": {
-    "mtime": 1792500627.2372208,
+    "mtime": 1792503953.5552206,
     "ast_hash": "f767631cb67e2979a612063a73b94395",
     "semantic_hash": "f767631cb67e2979a612063a73b94395"
   },
   "work/v14_rebuild/export/audit/REPRODUCIBILITY.md": {
-    "mtime": 1792500627.2383246,
+    "mtime": 1792503953.5572188,
     "ast_hash": "296f84ea7c3022c2043f3308ab024141",
     "semantic_hash": "296f84ea7c3022c2043f3308ab024141"
   },
   "work/v14_rebuild/export/audit/REVIEW_CONCLUSION.md": {
-    "mtime": 1792500627.239326,
+    "mtime": 1792503953.5582178,
     "ast_hash": "e6db56b659ea9b58f964f36646ebefed",
     "semantic_hash": "e6db56b659ea9b58f964f36646ebefed"
   },
   "work/v14_rebuild/export/audit/SEARCH_LOG.md": {
-    "mtime": 1792500627.2404025,
+    "mtime": 1792503953.5592153,
     "ast_hash": "743bffc85d08c1c378f067de27b95335",
     "semantic_hash": "743bffc85d08c1c378f067de27b95335"
   },
   "work/v14_rebuild/export/audit/requirements-audit.txt": {
-    "mtime": 1792500627.239326,
+    "mtime": 1792503953.5582178,
     "ast_hash": "de7b31535026eaaa0871a6bf063ec40c",
     "semantic_hash": "de7b31535026eaaa0871a6bf063ec40c"
   },
   "work/v14_rebuild/export/external_bridge_u1_u5.md": {
-    "mtime": 1792500627.221603,
+    "mtime": 1792503953.5456991,
     "ast_hash": "654b6571baaefc0548ee8e156071ec06",
     "semantic_hash": "654b6571baaefc0548ee8e156071ec06"
   },
   "work/v14_rebuild/export/status_patch_v14.md": {
-    "mtime": 1792500627.221603,
+    "mtime": 1792503953.5436647,
     "ast_hash": "d4cb0d350f75946f6018f7dbd50c276b",
     "semantic_hash": "d4cb0d350f75946f6018f7dbd50c276b"
   },
   "work/v14_rebuild/export/verification_report.md": {
-    "mtime": 1792500627.221603,
+    "mtime": 1792503953.5446644,
     "ast_hash": "c1feef994591bd6e692352d2e13d7c32",
     "semantic_hash": "c1feef994591bd6e692352d2e13d7c32"
   },
@@ -2090,7 +2090,7 @@
     "semantic_hash": "fb16df8ab83bb09c15bce51ff30b7f2e"
   },
   "work/v14_rebuild/verification_report.md": {
-    "mtime": 1792500236.2096653,
+    "mtime": 1792503921.1477678,
     "ast_hash": "c1feef994591bd6e692352d2e13d7c32",
     "semantic_hash": "c1feef994591bd6e692352d2e13d7c32"
   },
@@ -2125,9 +2125,9 @@
     "semantic_hash": "ad4e5c20b8d9a816138d7becf6d371ee"
   },
   "work/v14_rebuild/windows_number_systems_context_2026-10-06.md": {
-    "mtime": 1791286587.7734032,
-    "ast_hash": "ed5db6875ed153fb97e66bed6a6ccb7c",
-    "semantic_hash": "ed5db6875ed153fb97e66bed6a6ccb7c"
+    "mtime": 1792503495.8721807,
+    "ast_hash": "2cffe87b1efa7ae07fad8630f5210678",
+    "semantic_hash": "2cffe87b1efa7ae07fad8630f5210678"
   },
   ".agents/skills/arxiv-source-import/SKILL.md": {
     "mtime": 1791026238.704725,

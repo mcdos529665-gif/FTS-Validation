@@ -3,7 +3,7 @@
     "nodes": 18311,
     "links": 33919,
     "hyperedges": 244,
-    "communities": 1265
+    "communities": 1259
   },
   "canonical_fields": "all exact",
   "idempotency": "two passes preserve node/edge sets",

@@ -29,4 +29,4 @@
 - [Findings](../work/v14_rebuild/audit/FINDINGS.tsv)
 - [Review Conclusion](../work/v14_rebuild/audit/REVIEW_CONCLUSION.md)
 
-Состояние графа: 18311 узлов, 33919 рёбер, community `17`.
+Состояние графа: 18311 узлов, 33919 рёбер, community `13`.

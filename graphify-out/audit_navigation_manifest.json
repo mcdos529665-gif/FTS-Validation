@@ -25,10 +25,10 @@
     "bridge_support": 39,
     "finding_claim_links": 6
   },
-  "community": 17,
+  "community": 13,
   "graph_nodes": 18311,
   "graph_edges": 33919,
-  "built_at_commit": "866597c761cbe409fd7c7bd4644aa26cdb147f92",
+  "built_at_commit": "720c68d327dc9d65257e3c4468f88093ef93ca63",
   "trust_boundary": {
     "EXTRACTED": "буквальные связи TSV/Markdown",
     "INFERRED": "курируемые indirect и непрямой фрагмент mixed",
