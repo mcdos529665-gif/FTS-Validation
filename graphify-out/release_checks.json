@@ -1,9 +1,9 @@
 {
   "counts": {
     "nodes": 18311,
-    "links": 33941,
+    "links": 33919,
     "hyperedges": 244,
-    "communities": 1273
+    "communities": 1265
   },
   "canonical_fields": "all exact",
   "idempotency": "two passes preserve node/edge sets",
