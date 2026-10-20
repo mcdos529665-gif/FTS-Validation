@@ -16,7 +16,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "56c7837aa5f9babc099679d9c088f39f08e33806abf30c73f4e7699646b0a8dc"
+      "sha256": "4ddc11960d3f8bbfd8caf9fe3890fb7d45db5e38e36d8879e491bfa8f8108b16"
     },
     {
       "path": "source/FTS_v13_LLM_FULL_DUMP.md",
@@ -92,15 +92,15 @@
     },
     {
       "path": "work/v14_rebuild/addendum_2026-10-04_upper_levels.md",
-      "sha256": "1d4150c7a17385caf742c7ad9e32b7e806462064a13f1ee736e43fb3ed75f7cd"
+      "sha256": "03dd82e335480507f74daa56f56aea23d30a95ced887789bc5b4f8023c6d4777"
     },
     {
       "path": "work/v14_rebuild/addendum_2026-10-04_windows_numbers.md",
-      "sha256": "dff5360efcf478a66ead4d6638fd69b6850146bc3b4511859751fcf88ac77875"
+      "sha256": "df4d54749c38717cf2b897c73871c7715df0280a180e7a52658b19431312b389"
     },
     {
       "path": "work/v14_rebuild/addendum_2026-10-04_windows_symmetry.md",
-      "sha256": "4918e386fe753a45bcd6fe3ebc90d05b9f418acf3fd2216faff09d312047dc0a"
+      "sha256": "ce0262b1ea881fc495e533af484fc62f8a97a0586a54a69200aeb7ad0c983abf"
     },
     {
       "path": "work/v14_rebuild/audit/BASELINE.md",
@@ -244,7 +244,7 @@
     },
     {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md",
-      "sha256": "199488f1139b2ec8d3823b74b76612156ec71616b47d8ce8c82e549b2411fc1d"
+      "sha256": "b6fa6db03d3d4c596c190945784a8ce05593c4bc39b655245e5bf148a8ec52a2"
     },
     {
       "path": "work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md",
@@ -400,7 +400,7 @@
     },
     {
       "path": "work/v14_rebuild/windows_number_systems_context_2026-10-06.md",
-      "sha256": "d83819a8f2c68f76101d97ccd9391d657933b78eb656fb694e98e02e598ab510"
+      "sha256": "30845fccf583d8c8842aa43d33a52c2bc2af9bd9dfbe3e304922fb1a0e4b4597"
     },
     {
       "path": "work/v14_rebuild/windows_table.tsv",

@@ -9,11 +9,11 @@
 
 Обсуждаемый исходный документ:
 
-`C:\Users\Mcdos\Desktop\FTS_v13_project\suro\suro.md`
+`<корень проекта>\suro\suro.md`
 
 Основной проект:
 
-`C:\Users\Mcdos\Desktop\FTS_v13_project`
+`<корень проекта>`
 
 ## Важное различие версий
 
@@ -22,7 +22,7 @@
 - Июньские активные карточки: `source\fts_cards.jsonl` основного корня.
 - Рабочая статья v14: `work\v14_rebuild\FTS_v14_paper.md`.
 - Патч статусов v14: `work\v14_rebuild\status_patch_v14.md`.
-- Сентябрьская поправка: `C:\Users\Mcdos\Desktop\FTS_v13_project\.claude\worktrees\agitated-khorana-ac2ec6\work\author_canon\2026-09-21\AMENDMENT.md`.
+- Сентябрьская поправка: `<корень проекта>\.claude\worktrees\agitated-khorana-ac2ec6\work\author_canon\2026-09-21\AMENDMENT.md`.
 
 Активная июньская карточка `U_07` сохраняет статус `candidate_with_operational_gate` (`source\fts_cards.jsonl`, строка 25). Рабочая формулировка `canonical_v14` и таблица предложенного патча не обновляют автоматически статус этой карточки.
 

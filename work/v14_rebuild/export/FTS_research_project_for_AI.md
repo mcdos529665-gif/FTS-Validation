@@ -34,20 +34,20 @@
 | `work/v14_rebuild/window_groupings/FANO_AND_COMMON_NODE.md` | `f196619a9cef275733730827201f2607184fa716923948ee29ef23a0cead6cbc` |
 | `work/v14_rebuild/window_groupings/fano_probe.py` | `b3d57fcc46c6659061d7bcdbffd26dec4dc211822ac79f66f64e514695c3bc69` |
 | `work/v14_rebuild/window_groupings/FANO_RESULTS.json` | `fcce36e624945a21ad027a34ae5262d308e84b660976d2469364af67be736ea1` |
-| `work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md` | `199488f1139b2ec8d3823b74b76612156ec71616b47d8ce8c82e549b2411fc1d` |
+| `work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/DIALOGUE_13_POINTS.md` | `b6fa6db03d3d4c596c190945784a8ce05593c4bc39b655245e5bf148a8ec52a2` |
 | `work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/COUNTING_AND_NESTING_DIALOGUE.md` | `19afe2091bf88f86cff205feaba0f0c496c702a638da4efa67bfabef452d39fe` |
 | `AGENTS.md` | `f09a7544b5e5490456cf3c8b3ed2df58a7479eec59ddaa4761ba6aa5b6b98d6f` |
 | `PROJECT.json` | `717b1ff9ee55f90afb6e95965210d66d655810d87df15adbb29f2a78c7b49832` |
 | `work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md` | `e7e066c50b50d97f64b53ed7bf59c8e8695ce0e62eebcac37ee51d7224268f16` |
 | `work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md` | `cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b` |
 | `PROJECT_INSTRUCTIONS.md` | `312748242dc10c63f0b4835ef32d7dec94e3f2c8f29ee5bc80bc875bb41ca4f3` |
-| `work/STATE.md` | `398fa63aac7b3986f973b72ed1d77712ccc37070815afa90a8e8231ecc8baf60` |
+| `work/STATE.md` | `5c0c702555240094d00268843de94d864280923fae09face06ef351b17810647` |
 | `work/notation.md` | `f92d153ddbcae9159e206698e1f7344830476d94bdbf40c9660e70982516d87d` |
 | `work/DOCUMENT_MAP.md` | `2094cc16c8dbcd7683402a134f2bfe777558856f47384b2b700b644a33be46d8` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
-| `work/DECISIONS.md` | `62d3c8acaff37eb622dc948d9b80a32ed2afdd63f359ed3a0ee3248f3cc27c3d` |
+| `work/DECISIONS.md` | `3e553bb56f19f8d3045a28da1d07e6ed1d1b9e8064efd34e3f7247fe1244c874` |
 | `work/OPEN_QUESTIONS.md` | `e740cfd041027796096b219ae7248102a93b1f51949926ca4d31ac3d2e5ecee3` |
 | `work/EXTERNAL_CONFLICTS.md` | `0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a` |
 | `work/v14_rebuild/FTS_v14_paper.md` | `6cf33ee6572fda0ab5668d3131d34322bcfce998518b2fa8602942716a96c554` |
@@ -825,7 +825,7 @@ scope-ребра и недопустимые адреса. Полный марш
 
 ### STATE — текущая точка
 
-Обновлено 2026-10-20. Основной каталог: `C:/Users/Mcdos/Desktop/FTS_v13_project`.
+Обновлено 2026-10-20. Основной каталог: `<корень проекта>`.
 
 #### Текущая работа
 
@@ -6678,8 +6678,8 @@ if __name__ == "__main__":
 - 2026-09-13 (журнал диалога) — введены две разные команды: «в журнал»
   добавляет компактные DN-записи в `work/DIALOGUE_NUANCE_JOURNAL.md`,
   «из журнала» пакетно интегрирует pending-записи. Глобальные навыки:
-  `C:/Users/Mcdos/.codex/skills/fts-dialogue-journal/` и
-  `C:/Users/Mcdos/.codex/skills/fts-journal-integrate/`. Причина разделения —
+  `~/.codex/skills/fts-dialogue-journal/` и
+  `~/.codex/skills/fts-journal-integrate/`. Причина разделения —
   сохранять точные авторские нюансы сразу без повторного чтения канона,
   пересборки экспорта и полного аудита после каждой реплики. Журнал не включён
   в INPUT_PATHS исследовательской выгрузки; интегрированные целевые документы
@@ -7172,7 +7172,7 @@ if __name__ == "__main__":
 
 - 2026-10-10 — завершение базового Graphify-графа и публикация в основном проекте. Заменены все 45 структурных результатов: 82/82 глубоких пакета, 793/793 базовых входных фрагмента; новые материалы после снимка обработаны дополнительным глубоким извлечением и точным импортом структурированных реестров. Перечень: work/v14_rebuild/claim_questions/CHANGES_FOR_GRAPH_2026-10-10.md. Актуальный релиз v13_u12_radius_free_2026-10-10 перенесён с полными полями карточек; радиус r>0 свободный, r=2 — представитель. Авторские статусы и St_FTS навигацией не повышаются. DN-0033/0034 остаются pending; вывод ассистента в DN-0034 отделён от цитаты автора.
   Слой вопросов хранится в едином QUESTION_CARDS.jsonl: 536 карточек (402 к утверждениям, 134 к объектам), 14 групп, 29 объектов. Все вопросы assistant_derived, author_review=none; вопросные связи INFERRED. Полнота навигационных ссылок не означает решения вопросов. Аспект external применяется к понятиям вне канона и проверок; 81 пара почти-дублей остаётся кандидатами. Ручные входы inputs/, производные создаёт claim_questions/tools/build.py; проверяет tools/check.py. Фрагменты RECORDS_PENDING.md внесены в STATE и эту запись.
-  Основная опубликованная версия — graphify-out/ в C:/Users/Mcdos/Desktop/FTS_v13_project; MCP направлен туда. Рабочий каталог E:/Codex/work/fts_graphify_rebuild_20261009_a/finish_20261010 содержит кэш, снимки, резервные копии, сырые направленные отношения и решения конфликтов ID. Штатный manifest.json создаёт Graphify; build_manifest.json содержит расширенное покрытие, хэши и ограничения. Одни сообщества/названия используются во всех выходах. Фактические счётчики токенов недоступны (null), оценки записаны отдельно. Известная устаревшая research_export отмечена отдельно от готовности Graphify; её содержимое не обновлялось этой задачей.
+  Основная опубликованная версия — graphify-out/ в <корень проекта>; MCP направлен туда. Рабочий каталог E:/Codex/work/fts_graphify_rebuild_20261009_a/finish_20261010 содержит кэш, снимки, резервные копии, сырые направленные отношения и решения конфликтов ID. Штатный manifest.json создаёт Graphify; build_manifest.json содержит расширенное покрытие, хэши и ограничения. Одни сообщества/названия используются во всех выходах. Фактические счётчики токенов недоступны (null), оценки записаны отдельно. Известная устаревшая research_export отмечена отдельно от готовности Graphify; её содержимое не обновлялось этой задачей.
 
   Дополнительные пакеты a/b/c извлечены GPT-6 Luna (max). После двух отказов по usage limit автор разрешил GPT-6.1 Sol выполнить пакеты d/e в том же глубоком режиме; структурные подстановки и неизвестное происхождение не принимаются. Очередь/покрытие сохранены в finish_queue.json.
 
@@ -7198,6 +7198,7 @@ if __name__ == "__main__":
 
 - 2026-10-20 — АРХИТЕКТУРА ПАМЯТИ И ПЕРЕСБОРКА ГРАФА. Найдено: по отчёту о памяти LLM (KG / vector / episodic) проект уже устроен как гибрид. Источник правды — `source/` и канон на диске; производные индексы — `query.py` и graphify; эпизодический слой — DECISIONS/REFUTED/журнал. Зависимости: инвариант 2 (у понятий ФТС нет априорного смысла) исключает векторный поиск как довод. Отдельная KG-память стёрла бы различия `¬A ≠ 0_A ≠ −A`. Вывод (принято автором): новую систему памяти не вводить. Добавлены `tools/graph_freshness.py` (сверка SHA256 входов из `build_manifest.json`, видит только изменённые/удалённые входы, не новые) и журнал промахов [SEARCH_MISSES](SEARCH_MISSES.md); новые слои поиска вводить только при повторяющемся классе промахов. Проверка показала, что граф отстал от канона на 36 из 444 входов. Пересборка (решения автора по ходу): (а) `tools/graphify_question_edges.py` читает DN-записи из журнала (`pending`) и архива `DIALOGUE_NUANCE_SOURCES.md` (`integrated`, `integrated_at`, связи по `targets`), всего 47 узлов; прежний код ждал `DN-0034` в журнале и падал; (б) `!.agents/skills/` в `.graphifyignore` — каталог попал в `.git/info/exclude`, а graphify читает этот файл; (в) `work/v14_rebuild/paper_plan/` исключён из входов как черновики; (г) 21 недостающий документ (в т.ч. REGISTER.md четырьмя частями) извлечён агентами Sonnet в пакет `h`: 1141 узел, 2400 связей; 41 id OQ исправлен на `audit_oq_oq_*`; 106 связей на несуществующие узлы (`claim_checks_*`, `source_fts_cards_lambda_link` и др.) отброшены. Содержимое пакета `h` — вывод модели, схема и ссылки проверены скриптами, смысл человеком не проверен. Изменения вне репозитория (E:/Codex/work/fts_graphify_rebuild_20261009_a/finish_20261010/): `finalize.py` — пакеты `abcdefgh`; удаления при инкрементальной проверке разрешены только для `paper_plan/` (`intentional_exclusions`); пакетная валидация проверяет внутрипакетные связи, межслойные — на финальном уровне. `check_release.py` — `dialogue_dn_0033/0034` = `integrated`, членств 686 (641 + 45 архивных DN в G14). Устаревший `release_checks.json` (PASS от 2026-10-10) убран в `release_aside/`, т.к. `publish.py` доверяет ему. Пакет `h` читает снимки входов из `finish_20261010/snapshot_h/`, как пакеты a–g, поэтому правки этих документов в проекте не ломают сборку; их семантика в графе — на момент извлечения. Гейт PASS; опубликовано 26 файлов: 18 302 узла, 33 930 связей (число сообществ недетерминировано и в запись не входит). Откатная копия `backup_before_finish` у `publish.py` устарела; актуальная копия до публикации — `backup_pre_publish_20261020/`. Сверка 66 переходов статуса в графе: 64 = ровно принятые карточки CANONIZATION 2026-10-18 (оси `previous_status`/`St_FTS`/`evidence_status` сохранены, у всех есть ребро `adopts`) + 2 узла DN (`pending` → `integrated`). Не закрыто: три вопроса автору в OPEN_QUESTIONS («Канонизация 2026-10-18: сверка графа»).
 - 2026-10-20 — РЕШЕНИЯ АВТОРА ПО ТРЁМ ВОПРОСАМ СВЕРКИ КАНОНИЗАЦИИ. Найдено: три вопроса из «Канонизация 2026-10-18: сверка графа». Решения автора: (1) `oq-canon-no-alt-per-card-reason` — покарточную запись делать только для карточек, где альтернативу найти легче всего; сначала отбор. Отбор по трём следам (id в строке таблицы решений с решением, отличным от `canonical`; id в открытом пункте OPEN_QUESTIONS; id в REFUTED): 10 карточек из 64 (`A_07`, `M_07`, `CHI_CARRIER`, `U_07`, `U_12`, `O_20`, `CHI_LADDER_U9`, `M_12`, `O_14`, `O_19`), у 54 следов в этих источниках нет — это «не найдено в проверенных источниках», а не «альтернативы нет». Записи: [ALTERNATIVE_SEARCH_2026-10-20](v14_rebuild/candidates_register_2026-10-15/ALTERNATIVE_SEARCH_2026-10-20.md). Вывод ассистента (не авторское решение): у `M_07` (`CP-094`) и `CHI_CARRIER` (`CP-104`) есть открытые именованные альтернативы, причина принятия «нет открытого конкурирующего варианта» к ним неточна; для M_03 и M_08…M_11 аналогичные случаи решены иначе. Принятие не менялось, вопрос автору — `oq-canon-m07-chi-carrier-open-alternative`. (2) `oq-u07-u12-refuted-vs-adoption` — правило 2026-10-18 снимает оговорку REFUTED 2026-07-13 для `U_07` и `U_12` на авторской оси; в REFUTED добавлена поправка; доказательная ось не менялась (повторное повышение по К1–К5 — `oq-audit-semantic-repromotion`). Решение касалось только двух карточек, для `U_08…U_11` вопрос открыт: `oq-u08-u11-refuted-vs-adoption`. (3) `oq-graph-status-evidence-axis` — ось доказательности показывать рядом со статусом: `tools/graphify_canon_edges.py` добавляет в узлы карточек поле `status_display` («принятие: …; доказательность: …»); `status`, `St_FTS`, `evidence_status` не менялись, статусы не повышались. Граф пересобран и опубликован: 18 311 узлов, 33 919 связей (после ответов автора; до них было 33 941); новый документ ALTERNATIVE_SEARCH добавлен в пакет `h` как группа G6 (7 узлов, 21 связь, извлечено вручную ассистентом, не агентом); у всех 158 узлов `canonical_adopted` есть `status_display`. Перед публикацией сделана свежая копия опубликованного графа (`backup_pre_publish_20261020c/`) на E. Дополнение того же дня (ответы автора на два новых вопроса): (а) снятие оговорки REFUTED 2026-07-13 распространяется на все `U_07…U_12` (`oq-u08-u11-refuted-vs-adoption` закрыт, поправка в REFUTED обобщена); (б) `CP-094` и `CP-104` относятся к другому регистру, принятие `M_07` и `CHI_CARRIER` сохраняется (`oq-canon-m07-chi-carrier-open-alternative` закрыт; пометка в ALTERNATIVE_SEARCH, карточки и таблица решений не менялись). Не закрыто: поиск альтернатив вне перечисленных источников (внешняя литература, неоформленные идеи) не проводился.
+- 2026-10-20 — ПУБЛИКАЦИЯ РЕПОЗИТОРИЯ. Решения автора: репозиторий делается публичным; чужой материал (статья arXiv cs/0401016v3: `original.pdf`, `source/main.tex`, `article.md`, `provenance.json`, `source_manifest.sha256`) удалён из всей истории ветки `main` (переписывание истории и force-push); отчёты внешних моделей (`deep-research-report (10).md`, `external_bridge_u1_u5.md`) и .bib-выгрузки оставлены; локальные пути и логин заменены в Markdown-файлах (пути — на `<корень проекта>` или относительные ссылки, «Mcdos» — на «автор»). Не заменялись: машинные файлы с путями (`graphify-out/*`, `work/project_consistency/GRAPH_*.json`, `facets.jsonl`, `stdout.txt` воспроизведений, `tools/import_from.py` — пример команды), адрес почты в истории коммитов (352 коммита). Статья остаётся у автора локально, исключена через `.git/info/exclude` и открыта графу в `.graphifyignore`; остальные ветки и worktree в `E:/` историю не меняли. Резервная копия всего репозитория до переписывания: `E:/Codex/work/fts_repo_backup_20261020.bundle`. Не закрыто: лицензия репозитория не выбрана; права на отчёты внешних моделей не проверялись.
 
 ### 6.2. Открытые вопросы
 
@@ -12987,7 +12988,7 @@ e1e2=e7; e2e3=−e6; e3e4=e7; e4e5=−e2; e5e6=e7; e6e7=e5.
 такого правила не задаёт. Перевод произведения остатков в операции ФТС —
 `нет в артефактах` в пределах проверенных источников.
 
-Основание: [REVIEW, §1–2](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md).
+Основание: [REVIEW, §1–2](REVIEW.md).
 
 ##### 2. При одинаковых метках возможны разные алгебры
 
@@ -13019,7 +13020,7 @@ H4 и S4 различаются квадратами даже при смена�
 носитель её действий, перевод операций и критерий наблюдаемого равенства
 не заданы. Полнота классификации всех ε не утверждается.
 
-Основание: [REVIEW, §3–4](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md).
+Основание: [REVIEW, §3–4](REVIEW.md).
 
 ##### 3. Проекция на метки стирает порядок и группировку
 
@@ -13036,7 +13037,7 @@ H4 и S4 различаются квадратами даже при смена�
 Это математическая граница объявленного наблюдения. Она не распространяется
 автоматически на все наблюдения ФТС и не запрещает совместное сравнение до π.
 
-Основание: [REVIEW, §4](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md).
+Основание: [REVIEW, §4](REVIEW.md).
 
 ##### 4. Совместное наблюдение до проекции видит относительный знак
 
@@ -13061,7 +13062,7 @@ H4 и S4 различаются квадратами даже при смена�
 Мультипликативность Qcal не предполагается. Перенос суммы, разности и
 поляризации из рабочего двухканального чтения на новый носитель — кандидат.
 
-Основание: [RELATIVE_SIGN_PROBE](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md).
+Основание: [RELATIVE_SIGN_PROBE](RELATIVE_SIGN_PROBE.md).
 
 ##### 5. Три пробы для различения моделей
 
@@ -13083,7 +13084,7 @@ H4 и S4 различаются квадратами даже при смена�
 Остатки 5,7,11 по mod24 не независимы: `5·7≡11`; их тройка не даёт
 указанного октонионного различия скобок.
 
-Основание: [RELATIVE_SIGN_PROBE, проверяемые пробы](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md).
+Основание: [RELATIVE_SIGN_PROBE, проверяемые пробы](RELATIVE_SIGN_PROBE.md).
 
 ##### 6. Круг превращает относительный знак в относительную фазу
 
@@ -13106,7 +13107,7 @@ H4 и S4 различаются квадратами даже при смена�
 При нулевом входе тождество верно, но фаза не определена.
 Общий комплексный носитель, сложение и поворот на i дополнительно выбраны.
 
-Основание: [CIRCLE_MODEL, относительная фаза](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [CIRCLE_MODEL, относительная фаза](CIRCLE_MODEL.md).
 
 ##### 7. Порядок поворота и отражения наблюдаемо различается
 
@@ -13124,7 +13125,7 @@ H4 и S4 различаются квадратами даже при смена�
 Совместное наблюдение исходной пары даёт `Bcal=−1`, `O_pair=(0,4)`.
 Это точная геометрическая проба порядка в выбранной реализации.
 
-Основание: [CIRCLE_MODEL, действия наверху](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [CIRCLE_MODEL, действия наверху](CIRCLE_MODEL.md).
 
 ##### 8. Возведение в квадрат стирает различие этих путей
 
@@ -13139,7 +13140,7 @@ H4 и S4 различаются квадратами даже при смена�
 Это пример потери информации при конкретном отображении. Тождество
 «наблюдение ФТС = возведение в квадрат» пока не задано.
 
-Основание: [CIRCLE_MODEL, проба порядка](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [CIRCLE_MODEL, проба порядка](CIRCLE_MODEL.md).
 
 ##### 9. Шаги 24 и 12 связаны точным двухкратным отображением
 
@@ -13167,7 +13168,7 @@ H4 и S4 различаются квадратами даже при смена�
 Номер уровня этими данными не определяется. Связь p с наблюдением ФТС —
 кандидат; геометрически p забывает один двоичный выбор.
 
-Основание: [CIRCLE_MODEL, шаги 24 и 12](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [CIRCLE_MODEL, шаги 24 и 12](CIRCLE_MODEL.md).
 
 ##### 10. Арифметика остатков, минус, поворот и сопряжение различны
 
@@ -13189,7 +13190,7 @@ H4 и S4 различаются квадратами даже при смена�
 единичную метку; арифметический остаток −1 имеет ненулевую метку.
 Ни одно из этих действий автоматически не отождествляется с анти-модой `⊖`.
 
-Основание: [REVIEW, §2](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md), [CIRCLE_MODEL](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [REVIEW, §2](REVIEW.md), [CIRCLE_MODEL](CIRCLE_MODEL.md).
 
 ##### 11. Обычные вращения и отражения реализуют M₂(R)
 
@@ -13214,7 +13215,7 @@ H4 и S4 различаются квадратами даже при смена�
 октонионную зависимость от скобок. Сохранение дерева M_07 также само по
 себе не требует неассоциативности вычисленного значения.
 
-Основание: [REVIEW, §4](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md), [CIRCLE_MODEL, матрицы](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [REVIEW, §4](REVIEW.md), [CIRCLE_MODEL, матрицы](CIRCLE_MODEL.md).
 
 ##### 12. Недостающие определения и следующий вопрос
 
@@ -13233,7 +13234,7 @@ H4 и S4 различаются квадратами даже при смена�
 использовать пробы пункта 5. Пока новые геометрические соответствия имеют
 статус `assistant_candidate`; авторское принятие из вопроса о круге не следует.
 
-Основание: [RELATIVE_SIGN_PROBE, следующий шаг](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md), [CIRCLE_MODEL, вывод](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [RELATIVE_SIGN_PROBE, следующий шаг](RELATIVE_SIGN_PROBE.md), [CIRCLE_MODEL, вывод](CIRCLE_MODEL.md).
 
 ##### 13. Проверки, статусы и сохранённые данные
 
@@ -13254,15 +13255,15 @@ WF-107/108 не переоценивают неудачный WF-106. Канон
 
 Основные материалы:
 
-- [REVIEW.md — исходный разбор](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md).
-- [RESULTS.json — данные восьми моделей](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RESULTS.json).
-- [INDEPENDENT_FINITE.json — отдельная реализация](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/INDEPENDENT_FINITE.json).
-- [RELATIVE_SIGN_RESULTS.json — совместные пробы](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_RESULTS.json).
-- [CIRCLE_RESULTS.json — круг, следы и матрицы](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_RESULTS.json).
-- [WOLFRAM.md — WF-106 и диагноз](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md).
-- [WOLFRAM_107.md — код и результат WF-107](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md).
-- [WOLFRAM_108.md — код и результат WF-108](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_108.md).
-- [SOURCES.tsv — литературные основания](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/SOURCES.tsv).
+- [REVIEW.md — исходный разбор](REVIEW.md).
+- [RESULTS.json — данные восьми моделей](RESULTS.json).
+- [INDEPENDENT_FINITE.json — отдельная реализация](INDEPENDENT_FINITE.json).
+- [RELATIVE_SIGN_RESULTS.json — совместные пробы](RELATIVE_SIGN_RESULTS.json).
+- [CIRCLE_RESULTS.json — круг, следы и матрицы](CIRCLE_RESULTS.json).
+- [WOLFRAM.md — WF-106 и диагноз](WOLFRAM.md).
+- [WOLFRAM_107.md — код и результат WF-107](WOLFRAM_107.md).
+- [WOLFRAM_108.md — код и результат WF-108](WOLFRAM_108.md).
+- [SOURCES.tsv — литературные основания](SOURCES.tsv).
 
 Предыдущие результаты сохранены коммитами `e92b5c7` (модели и границы),
 `0e99aeb` (совместная проба), `c41e449` (круг и действия).

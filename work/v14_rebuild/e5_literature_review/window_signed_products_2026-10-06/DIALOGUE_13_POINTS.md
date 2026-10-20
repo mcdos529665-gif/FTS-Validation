@@ -33,7 +33,7 @@
 такого правила не задаёт. Перевод произведения остатков в операции ФТС —
 `нет в артефактах` в пределах проверенных источников.
 
-Основание: [REVIEW, §1–2](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md).
+Основание: [REVIEW, §1–2](REVIEW.md).
 
 ## 2. При одинаковых метках возможны разные алгебры
 
@@ -65,7 +65,7 @@ H4 и S4 различаются квадратами даже при смена�
 носитель её действий, перевод операций и критерий наблюдаемого равенства
 не заданы. Полнота классификации всех ε не утверждается.
 
-Основание: [REVIEW, §3–4](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md).
+Основание: [REVIEW, §3–4](REVIEW.md).
 
 ## 3. Проекция на метки стирает порядок и группировку
 
@@ -82,7 +82,7 @@ H4 и S4 различаются квадратами даже при смена�
 Это математическая граница объявленного наблюдения. Она не распространяется
 автоматически на все наблюдения ФТС и не запрещает совместное сравнение до π.
 
-Основание: [REVIEW, §4](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md).
+Основание: [REVIEW, §4](REVIEW.md).
 
 ## 4. Совместное наблюдение до проекции видит относительный знак
 
@@ -107,7 +107,7 @@ H4 и S4 различаются квадратами даже при смена�
 Мультипликативность Qcal не предполагается. Перенос суммы, разности и
 поляризации из рабочего двухканального чтения на новый носитель — кандидат.
 
-Основание: [RELATIVE_SIGN_PROBE](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md).
+Основание: [RELATIVE_SIGN_PROBE](RELATIVE_SIGN_PROBE.md).
 
 ## 5. Три пробы для различения моделей
 
@@ -129,7 +129,7 @@ H4 и S4 различаются квадратами даже при смена�
 Остатки 5,7,11 по mod24 не независимы: `5·7≡11`; их тройка не даёт
 указанного октонионного различия скобок.
 
-Основание: [RELATIVE_SIGN_PROBE, проверяемые пробы](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md).
+Основание: [RELATIVE_SIGN_PROBE, проверяемые пробы](RELATIVE_SIGN_PROBE.md).
 
 ## 6. Круг превращает относительный знак в относительную фазу
 
@@ -152,7 +152,7 @@ H4 и S4 различаются квадратами даже при смена�
 При нулевом входе тождество верно, но фаза не определена.
 Общий комплексный носитель, сложение и поворот на i дополнительно выбраны.
 
-Основание: [CIRCLE_MODEL, относительная фаза](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [CIRCLE_MODEL, относительная фаза](CIRCLE_MODEL.md).
 
 ## 7. Порядок поворота и отражения наблюдаемо различается
 
@@ -170,7 +170,7 @@ H4 и S4 различаются квадратами даже при смена�
 Совместное наблюдение исходной пары даёт `Bcal=−1`, `O_pair=(0,4)`.
 Это точная геометрическая проба порядка в выбранной реализации.
 
-Основание: [CIRCLE_MODEL, действия наверху](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [CIRCLE_MODEL, действия наверху](CIRCLE_MODEL.md).
 
 ## 8. Возведение в квадрат стирает различие этих путей
 
@@ -185,7 +185,7 @@ H4 и S4 различаются квадратами даже при смена�
 Это пример потери информации при конкретном отображении. Тождество
 «наблюдение ФТС = возведение в квадрат» пока не задано.
 
-Основание: [CIRCLE_MODEL, проба порядка](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [CIRCLE_MODEL, проба порядка](CIRCLE_MODEL.md).
 
 ## 9. Шаги 24 и 12 связаны точным двухкратным отображением
 
@@ -213,7 +213,7 @@ H4 и S4 различаются квадратами даже при смена�
 Номер уровня этими данными не определяется. Связь p с наблюдением ФТС —
 кандидат; геометрически p забывает один двоичный выбор.
 
-Основание: [CIRCLE_MODEL, шаги 24 и 12](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [CIRCLE_MODEL, шаги 24 и 12](CIRCLE_MODEL.md).
 
 ## 10. Арифметика остатков, минус, поворот и сопряжение различны
 
@@ -235,7 +235,7 @@ H4 и S4 различаются квадратами даже при смена�
 единичную метку; арифметический остаток −1 имеет ненулевую метку.
 Ни одно из этих действий автоматически не отождествляется с анти-модой `⊖`.
 
-Основание: [REVIEW, §2](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md), [CIRCLE_MODEL](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [REVIEW, §2](REVIEW.md), [CIRCLE_MODEL](CIRCLE_MODEL.md).
 
 ## 11. Обычные вращения и отражения реализуют M₂(R)
 
@@ -260,7 +260,7 @@ H4 и S4 различаются квадратами даже при смена�
 октонионную зависимость от скобок. Сохранение дерева M_07 также само по
 себе не требует неассоциативности вычисленного значения.
 
-Основание: [REVIEW, §4](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md), [CIRCLE_MODEL, матрицы](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [REVIEW, §4](REVIEW.md), [CIRCLE_MODEL, матрицы](CIRCLE_MODEL.md).
 
 ## 12. Недостающие определения и следующий вопрос
 
@@ -279,7 +279,7 @@ H4 и S4 различаются квадратами даже при смена�
 использовать пробы пункта 5. Пока новые геометрические соответствия имеют
 статус `assistant_candidate`; авторское принятие из вопроса о круге не следует.
 
-Основание: [RELATIVE_SIGN_PROBE, следующий шаг](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_PROBE.md), [CIRCLE_MODEL, вывод](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_MODEL.md).
+Основание: [RELATIVE_SIGN_PROBE, следующий шаг](RELATIVE_SIGN_PROBE.md), [CIRCLE_MODEL, вывод](CIRCLE_MODEL.md).
 
 ## 13. Проверки, статусы и сохранённые данные
 
@@ -300,15 +300,15 @@ WF-107/108 не переоценивают неудачный WF-106. Канон
 
 Основные материалы:
 
-- [REVIEW.md — исходный разбор](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/REVIEW.md).
-- [RESULTS.json — данные восьми моделей](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RESULTS.json).
-- [INDEPENDENT_FINITE.json — отдельная реализация](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/INDEPENDENT_FINITE.json).
-- [RELATIVE_SIGN_RESULTS.json — совместные пробы](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/RELATIVE_SIGN_RESULTS.json).
-- [CIRCLE_RESULTS.json — круг, следы и матрицы](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/CIRCLE_RESULTS.json).
-- [WOLFRAM.md — WF-106 и диагноз](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM.md).
-- [WOLFRAM_107.md — код и результат WF-107](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_107.md).
-- [WOLFRAM_108.md — код и результат WF-108](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/WOLFRAM_108.md).
-- [SOURCES.tsv — литературные основания](C:/Users/Mcdos/Desktop/FTS_v13_project/work/v14_rebuild/e5_literature_review/window_signed_products_2026-10-06/SOURCES.tsv).
+- [REVIEW.md — исходный разбор](REVIEW.md).
+- [RESULTS.json — данные восьми моделей](RESULTS.json).
+- [INDEPENDENT_FINITE.json — отдельная реализация](INDEPENDENT_FINITE.json).
+- [RELATIVE_SIGN_RESULTS.json — совместные пробы](RELATIVE_SIGN_RESULTS.json).
+- [CIRCLE_RESULTS.json — круг, следы и матрицы](CIRCLE_RESULTS.json).
+- [WOLFRAM.md — WF-106 и диагноз](WOLFRAM.md).
+- [WOLFRAM_107.md — код и результат WF-107](WOLFRAM_107.md).
+- [WOLFRAM_108.md — код и результат WF-108](WOLFRAM_108.md).
+- [SOURCES.tsv — литературные основания](SOURCES.tsv).
 
 Предыдущие результаты сохранены коммитами `e92b5c7` (модели и границы),
 `0e99aeb` (совместная проба), `c41e449` (круг и действия).
