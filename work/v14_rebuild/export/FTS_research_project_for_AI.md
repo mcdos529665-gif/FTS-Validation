@@ -41,14 +41,14 @@
 | `work/project_consistency/RESEARCH_SCOPE_AUDIT_2026-10-03.md` | `e7e066c50b50d97f64b53ed7bf59c8e8695ce0e62eebcac37ee51d7224268f16` |
 | `work/author_canon/2026-10-03/LOGICAL_SUPPLEMENT_CLARIFICATION.md` | `cf42c75d17c3ca33f0d4bcaebcc638adb822f68d93cc4b62fd731553e771654b` |
 | `PROJECT_INSTRUCTIONS.md` | `312748242dc10c63f0b4835ef32d7dec94e3f2c8f29ee5bc80bc875bb41ca4f3` |
-| `work/STATE.md` | `5ca0a22d97eb554013bfba0d4c2756b37c84598c93e2e6a8c6f9d8ea5940a4aa` |
+| `work/STATE.md` | `f3c7575c6a2085d3f61b6f1546edb69716a3074e7c2b2c019cb27f23e7a8e04c` |
 | `work/notation.md` | `f92d153ddbcae9159e206698e1f7344830476d94bdbf40c9660e70982516d87d` |
-| `work/DOCUMENT_MAP.md` | `d4ff2d575bdadf9b7663485f957fd70ca8f4e048b22ec752d74d52e392648fea` |
+| `work/DOCUMENT_MAP.md` | `2094cc16c8dbcd7683402a134f2bfe777558856f47384b2b700b644a33be46d8` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/PROPOSAL_2026-09-26.md` | `a801d4518c7062504780858f696d6cd6696a41f0783f0daee6e214ede4160b69` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/EQUALITY_REVIEW_2026-09-26.md` | `1289b95473c658a75530b58654750fc6a47c42aca589547cf9d1d9afd79f17d5` |
 | `work/v14_rebuild/m_register_grammar_2026-09-25/BIDIRECTIONAL_READING.md` | `9fc437d53148b64cc4653a9b3e417cd3c10cd5485bacc092d5843c1b48e1546f` |
-| `work/DECISIONS.md` | `f400baaf00839f8c905726c7e70750fe37220d2905f1ac51e0cc7116eca18400` |
-| `work/OPEN_QUESTIONS.md` | `e2246f9c476434c4d67c0dcd0b1e013650b6b36ceada0241db667462a6ebc6bb` |
+| `work/DECISIONS.md` | `43e1b4afe5d5ef1356009741c11ab096d567106f6de451742e513616f40317fb` |
+| `work/OPEN_QUESTIONS.md` | `01dbe57ca8e26706db55ecb3359fc206b75a4adf6b5f3165e364c75b5a61c736` |
 | `work/EXTERNAL_CONFLICTS.md` | `0eb9f0e2c41048982feb43efde594c9f2ec006cca266cc9c9704f40fc61b5d9a` |
 | `work/v14_rebuild/FTS_v14_paper.md` | `6cf33ee6572fda0ab5668d3131d34322bcfce998518b2fa8602942716a96c554` |
 | `work/v14_rebuild/FTS_v14_register_map.md` | `fea2edd18ba7b1901530e95140d5dee39b16e2637c5f66aeb11c377a6ccae384` |
@@ -825,9 +825,13 @@ scope-ребра и недопустимые адреса. Полный марш
 
 ### STATE — текущая точка
 
-Обновлено 2026-10-18. Основной каталог: `C:/Users/Mcdos/Desktop/FTS_v13_project`.
+Обновлено 2026-10-20. Основной каталог: `C:/Users/Mcdos/Desktop/FTS_v13_project`.
 
 #### Текущая работа
+
+- **Память и граф (2026-10-20):** новая система памяти не вводится (DECISIONS 2026-10-20). Свежесть графа — `tools/graph_freshness.py`, промахи поиска — [SEARCH_MISSES](SEARCH_MISSES.md). Граф пересобран и опубликован (18 302 узла); три вопроса автору по канонизации — OPEN_QUESTIONS «Канонизация 2026-10-18: сверка графа».
+
+- **Энциклопедия Obsidian (2026-10-19):** хранилище `E:/projects/Obsidian/FTS`, [правила и обновление](v14_rebuild/obsidian_encyclopedia/README.md); 268 карточек канона, 1143 адресованных узла и 2751 связь. Генератор `tools/obsidian_fts.py`: предпросмотр, запись, проверка; комментарии отдельно, ручные правки защищены, удалённые страницы архивируются. По поручению «сделай полное раскрытие сущностей» идёт содержательный разбор всего work: 819 проверенных раскрытий для 268 карточек и 5 исследовательских страниц; разобраны все 221 включённый Markdown-документ (219 полных чтений и 2 сверки производных с источниками), ещё 15 разобранных материалов иных форматов. Остаются 207 неисключённых материалов иных форматов без завершённого разбора. Реестр v1.2 адресует 127 CP-предложений: 94 существующим карточкам, 33 отдельным исследовательским страницам с пояснениями, точными основаниями и причинами решения. Основная статья прочитана полностью (2156 строк); последний проход добавил 11 раскрытий по экспериментальным поколениям, примерам популярной статьи и ограничениям O_02/Д10. В начале карточек выводятся адресные примеры, а для 136 карточек — уже проверенные пояснения из рабочего слоя. Это промежуточное покрытие, цель не завершена. Состояние и остаток — [аудит раскрытия](v14_rebuild/obsidian_encyclopedia/DISCLOSURE_AUDIT.md); исходные статусы ФТС сохранены.
 
 - **Lean (2026-10-18):** встроен [пакет формальных доказательств](v14_rebuild/lean/README.md): C01/C03/C04/C09/C49 над ℝ, точные типы и аудит аксиом. Lean v4.35.0 и Mathlib закреплены; окружение и кеши — E:/Codex/tools/lean. tools/lean.py check входит в полный маршрут как lean_proofs; свидетельство — verification_result.json и LEAN_CNN в графе. Следующее расширение — формализация следующих точных предикатов по мере необходимости; смысловые статусы ФТС сохранены.
 
@@ -3258,6 +3262,7 @@ following a link does not require loading neighbouring documents.
 | Status promotion | [status_patch_v14.md](v14_rebuild/status_patch_v14.md) and SP card | Promotion conditions; separate mathematical/semantic axes |
 | Canonical admission without alternatives | [Decision and complete inventory](v14_rebuild/candidates_register_2026-10-15/CANONIZATION_2026-10-18.md) | Rule in PROJECT_INSTRUCTIONS#canon; 127 research + 87 card decisions, canonical CP_NNN records, retained evidence axes |
 | Machine derivatives | `claim_graph/`, `export/` | Update with standard generators after changes to working source documents |
+| Obsidian encyclopedia | [Rules and generator](v14_rebuild/obsidian_encyclopedia/README.md), `E:/projects/Obsidian/FTS` | Derived Russian reference; exact canon and graph, reviewed explanations, separate personal notes; preview/check before updates |
 | Lean mathematical proofs | [Lean package](v14_rebuild/lean/README.md) | Exact C-check predicates, pinned Lean/Mathlib, proofs.tsv, saved SHA256-bound result; command tools/lean.py check |
 | Earlier document versions | `state_history/`, `notation_history/`, `instruction_history/`, Git | Transfer/recovery history; read when verifying an earlier version |
 
@@ -7191,6 +7196,8 @@ if __name__ == "__main__":
 
 - 2026-10-18 — LEAN В ПРОЕКТЕ. Поручение автора: «Ты можешь встроить lean в проект?». Добавлен work/v14_rebuild/lean: Lean v4.35.0, Mathlib 56a005855ea17e0b0958f73ec801ae140b0a1679, закреплённые зависимости. Пять неизменённых математических ядер C01/C03/C04/C09/C49 доказаны над ℝ; сборка, точные типы и аудит аксиом прошли. Разрешены propext, Classical.choice, Quot.sound; sorryAx и пользовательские аксиомы запрещены. lean_proofs — обязательная 14-я проверка полного маршрута. Установка/кеши/сборка на E:/Codex/tools/lean; ручная загрузка официального архива Lean сверена по SHA256 893fde3f52b48c647e3edcf33844cbb61f8ef70fcd88e0536bfc83f29844081e. Свидетельство — verification_result.json, граф LEAN_CNN → lean_kernel_20261018. Повторный CAS для неизменённых предикатов не запускался; семантика, канон и St_FTS не повышены.
 
+- 2026-10-20 — АРХИТЕКТУРА ПАМЯТИ И ПЕРЕСБОРКА ГРАФА. Найдено: по отчёту о памяти LLM (KG / vector / episodic) проект уже устроен как гибрид. Источник правды — `source/` и канон на диске; производные индексы — `query.py` и graphify; эпизодический слой — DECISIONS/REFUTED/журнал. Зависимости: инвариант 2 (у понятий ФТС нет априорного смысла) исключает векторный поиск как довод. Отдельная KG-память стёрла бы различия `¬A ≠ 0_A ≠ −A`. Вывод (принято автором): новую систему памяти не вводить. Добавлены `tools/graph_freshness.py` (сверка SHA256 входов из `build_manifest.json`, видит только изменённые/удалённые входы, не новые) и журнал промахов [SEARCH_MISSES](SEARCH_MISSES.md); новые слои поиска вводить только при повторяющемся классе промахов. Проверка показала, что граф отстал от канона на 36 из 444 входов. Пересборка (решения автора по ходу): (а) `tools/graphify_question_edges.py` читает DN-записи из журнала (`pending`) и архива `DIALOGUE_NUANCE_SOURCES.md` (`integrated`, `integrated_at`, связи по `targets`), всего 47 узлов; прежний код ждал `DN-0034` в журнале и падал; (б) `!.agents/skills/` в `.graphifyignore` — каталог попал в `.git/info/exclude`, а graphify читает этот файл; (в) `work/v14_rebuild/paper_plan/` исключён из входов как черновики; (г) 21 недостающий документ (в т.ч. REGISTER.md четырьмя частями) извлечён агентами Sonnet в пакет `h`: 1141 узел, 2400 связей; 41 id OQ исправлен на `audit_oq_oq_*`; 106 связей на несуществующие узлы (`claim_checks_*`, `source_fts_cards_lambda_link` и др.) отброшены. Содержимое пакета `h` — вывод модели, схема и ссылки проверены скриптами, смысл человеком не проверен. Изменения вне репозитория (E:/Codex/work/fts_graphify_rebuild_20261009_a/finish_20261010/): `finalize.py` — пакеты `abcdefgh`; удаления при инкрементальной проверке разрешены только для `paper_plan/` (`intentional_exclusions`); пакетная валидация проверяет внутрипакетные связи, межслойные — на финальном уровне. `check_release.py` — `dialogue_dn_0033/0034` = `integrated`, членств 686 (641 + 45 архивных DN в G14). Устаревший `release_checks.json` (PASS от 2026-10-10) убран в `release_aside/`, т.к. `publish.py` доверяет ему. Пакет `h` читает снимки входов из `finish_20261010/snapshot_h/`, как пакеты a–g, поэтому правки этих документов в проекте не ломают сборку; их семантика в графе — на момент извлечения. Гейт PASS; опубликовано 26 файлов: 18 302 узла, 33 930 связей (число сообществ недетерминировано и в запись не входит). Откатная копия `backup_before_finish` у `publish.py` устарела; актуальная копия до публикации — `backup_pre_publish_20261020/`. Сверка 66 переходов статуса в графе: 64 = ровно принятые карточки CANONIZATION 2026-10-18 (оси `previous_status`/`St_FTS`/`evidence_status` сохранены, у всех есть ребро `adopts`) + 2 узла DN (`pending` → `integrated`). Не закрыто: три вопроса автору в OPEN_QUESTIONS («Канонизация 2026-10-18: сверка графа»).
+
 ### 6.2. Открытые вопросы
 
 *Источник сборки: `work/OPEN_QUESTIONS.md`.*
@@ -8061,6 +8068,17 @@ if __name__ == "__main__":
 
 - [ ] Крест У4 и правило исключения противоположности: множество `|y|=|x|` (МУ4, решение автора 2026-10-04) содержит `−|x|` — форму МУ5, а правило 2026-10-08 гласит «до МУ7 противоположная функция исключается из уровня (точно до МУ3)». Распространяется ли исключение на 4–6, и если да, как читать крест? {#oq-mu4-cross-opposite-rule}
   Источник: DECISIONS 2026-10-04, 2026-10-08; [решение о принятии](v14_rebuild/candidates_register_2026-10-15/ACCEPTANCE_2026-10-15.md) (CP-002 не принят из-за этого напряжения). **Вопрос автору.**
+
+##### Канонизация 2026-10-18: сверка графа (2026-10-20)
+
+Найдено при сверке 64 переходов в `canonical_adopted`; статусы не менялись.
+
+- [ ] У всех 64 принятых карточек в `dispositions_2026-10-18.tsv` одна и та же причина «нет открытого конкурирующего варианта» и одна область; следа поиска альтернативы по каждой карточке в артефактах нет. Нужна ли покарточная запись? {#oq-canon-no-alt-per-card-reason}
+  Источник: [CANONIZATION](v14_rebuild/candidates_register_2026-10-15/CANONIZATION_2026-10-18.md); DECISIONS 2026-10-20. **Вопрос автору.**
+- [ ] `U_07`, `U_12` теперь `canonical_adopted`, а REFUTED 2026-07-13 оставляет их семантические гипотезы «живыми кандидатами с условиями повторного повышения». Снята ли эта запись правилом 2026-10-18 для этих карточек? В CANONIZATION и DECISIONS она не упомянута {#oq-u07-u12-refuted-vs-adoption}
+  Источник: REFUTED 2026-07-13; DECISIONS 2026-10-18. **Вопрос автору.**
+- [ ] `O_20` `canonical_adopted` при отрицательном первом внешнем тесте (REFUTED 2026-06-13); ось доказательности сохранена (`candidate_requires_empirical_test`), но поле `status` в графе её не показывает. Выводить ли ось доказательности рядом со статусом в узлах графа? {#oq-graph-status-evidence-axis}
+  Источник: REFUTED 2026-06-13; DECISIONS 2026-10-20.
 
 ### 6.3. Журнал внешних коллизий
 
