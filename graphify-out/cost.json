@@ -1,10 +1,1 @@
-{
-  "build_date": "2026-10-10",
-  "input_tokens": null,
-  "output_tokens": null,
-  "note": "Actual counters unavailable. Estimates and historical accounting remain separately in build_manifest and backup.",
-  "models": {
-    "a,b,c": "GPT-6 Luna; reasoning=max",
-    "d,e,f,g": "GPT-6.1 Sol; reasoning=max; explicit user override"
-  }
-}
+{"build_date":"2026-10-10","input_tokens":null,"output_tokens":null,"note":"Actual counters unavailable. Estimates and historical accounting remain separately in build_manifest and backup.","models":{"a,b,c":"GPT-6 Luna; reasoning=max","d,e,f,g":"GPT-6.1 Sol; reasoning=max; explicit user override"}}
