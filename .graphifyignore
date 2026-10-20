@@ -22,3 +22,11 @@ source/fts_v13_workbook_sheets.json
 source/FTS_v13_LLM_FULL_DUMP.md
 source/FTS_v13_LLM_CONTEXT.md
 source/FTS.yaml
+
+# --- .agents/skills: включены как в сборке 2026-10-10. После неё каталог попал в
+# .git/info/exclude (вместе с .orx/, .openresearch/), а graphify читает этот файл.
+# Git сам эти файлы отслеживает; исключение нужно только для локального инструментария. ---
+!.agents/skills/
+
+# --- черновики статьи: план, рецензии, ответы, интегритет (рабочий слой, не канон; решение автора) ---
+work/v14_rebuild/paper_plan/

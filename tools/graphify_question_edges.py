@@ -182,38 +182,48 @@ def build_fragment(root):
         edge(target, aliases[x["primary_group"]], "in_group", rel + "inputs/oq_groups.tsv", f"L{i}", True)
         for group in re.findall(r"G\d{2}", x.get("secondary_groups", "")):
             edge(target, aliases[group], "in_group_secondary", rel + "inputs/oq_groups.tsv", f"L{i}", True)
+    # Журнал держит ожидающие записи; после интеграции запись переносится в
+    # DIALOGUE_NUANCE_SOURCES.md (цитата автора + integrated_at + targets).
+    # Оба файла дают узлы dialogue_dn_*, статус берётся из того, где запись лежит.
     journal_path = "work/DIALOGUE_NUANCE_JOURNAL.md"
-    journal = (root / journal_path).read_text(encoding="utf-8")
-    for match in re.finditer(r"^## (DN-\d+) · ([^\n]+)\n(.*?)(?=^## DN-|\Z)", journal, re.M | re.S):
-        jid, title, body = match.groups()
-        line = journal[:match.start()].count("\n") + 1
-        quoted = "\n".join(x.strip()[2:] for x in body.splitlines() if x.strip().startswith("> "))
-        fields = dict(re.findall(r"^- ([a-z_]+): (.*)$", body, re.M))
-        nid = add_node(dict(id="dialogue_" + slug(jid), label=jid + " · " + title, type="author_statement", file_type="concept",
-            source_file=journal_path, source_location=f"L{line}", journal_id=jid, author_claim=quoted,
-            accepted_meaning=fields.get("accepted_meaning"), assistant_inference=fields.get("assistant_inference"),
-            status="pending", navigation_only=True, status_effect="no St_FTS change"))
-        aliases[jid] = nid
-        hints = fields.get("target_hints", "")
-        targets = [cid for cid in cards if re.search(r"(?<![\w])" + re.escape(cid) + r"(?![\w])", hints)]
-        if jid == "DN-0034":
-            targets.extend(f"M_{i:02d}" for i in range(4, 8))
-        for cid in sorted(set(targets)):
-            edge(nid, aliases[cid], "refers_to", journal_path, f"L{line}")
-        edge(nid, aliases["G14"], "in_group", rel + "QUESTION_GROUPS.tsv", "journal:" + jid, True)
-        inference = fields.get("assistant_inference", "none")
-        if inference != "none":
-            inf = add_node(dict(id=nid + "_assistant_inference", label=jid + " · вывод ассистента", text=inference,
-                type="assistant_inference", file_type="concept", source_file=journal_path, source_location=f"L{line}",
-                confidence="INFERRED", confidence_score=0.85, status="pending", status_effect="no St_FTS change"))
-            edge(nid, inf, "records_inference", journal_path, f"L{line}", True)
+    sources_path = "work/DIALOGUE_NUANCE_SOURCES.md"
+    dialogue_paths = {}
+    for path, state in ((journal_path, "pending"), (sources_path, "integrated")):
+        text = (root / path).read_text(encoding="utf-8")
+        for match in re.finditer(r"^## (DN-\d+) · ([^\n]+)\n(.*?)(?=^## DN-|\Z)", text, re.M | re.S):
+            jid, title, body = match.groups()
+            if jid in aliases:
+                continue
+            line = text[:match.start()].count("\n") + 1
+            quoted = "\n".join(x.strip()[2:] for x in body.splitlines() if x.strip().startswith("> "))
+            fields = dict(re.findall(r"^- ([a-z_]+): (.*)$", body, re.M))
+            nid = add_node(dict(id="dialogue_" + slug(jid), label=jid + " · " + title, type="author_statement", file_type="concept",
+                source_file=path, source_location=f"L{line}", journal_id=jid, author_claim=quoted,
+                accepted_meaning=fields.get("accepted_meaning"), assistant_inference=fields.get("assistant_inference"),
+                integrated_at=fields.get("integrated_at"), status=state, navigation_only=True, status_effect="no St_FTS change"))
+            aliases[jid] = nid
+            dialogue_paths[jid] = path
+            hints = fields.get("target_hints", "") + " " + fields.get("targets", "")
+            targets = [cid for cid in cards if re.search(r"(?<![\w])" + re.escape(cid) + r"(?![\w])", hints)]
+            if jid == "DN-0034":
+                targets.extend(f"M_{i:02d}" for i in range(4, 8))
+            targets.extend(oid for oid in re.findall(r"#(oq-[\w-]+)", hints) if oid in aliases)
+            for cid in sorted(set(targets)):
+                edge(nid, aliases[cid], "refers_to", path, f"L{line}")
+            edge(nid, aliases["G14"], "in_group", rel + "QUESTION_GROUPS.tsv", "journal:" + jid, True)
+            inference = fields.get("assistant_inference", "none")
+            if inference != "none":
+                inf = add_node(dict(id=nid + "_assistant_inference", label=jid + " · вывод ассистента", text=inference,
+                    type="assistant_inference", file_type="concept", source_file=path, source_location=f"L{line}",
+                    confidence="INFERRED", confidence_score=0.85, status=state, status_effect="no St_FTS change"))
+                edge(nid, inf, "records_inference", path, f"L{line}", True)
     witness_file = "work/v14_rebuild/m_ops_check_2026-10-10.py"
     witness = add_node(dict(id="fts_verification_m_ops_20261010", label="Проверка операций ЛУ2…ЛУ7 (2026-10-10)", type="verification",
         file_type="code", source_file=witness_file, source_location="L1", status="candidate", registered_in_general_suite=False,
         reported_result="9 PASS; recorded in journal, not a promotion", status_effect="no St_FTS change"))
     for cid in ["M_04", "M_05", "M_06", "M_07", "U7_LOGIC_GROUPING"]:
         edge(witness, aliases[cid], "verifies", witness_file, "candidate witness")
-    edge(aliases["DN-0034"], witness, "references", journal_path, "DN-0034")
+    edge(aliases["DN-0034"], witness, "references", dialogue_paths["DN-0034"], "DN-0034")
     refuted_file = "work/REFUTED.md"
     refuted_lines = (root / refuted_file).read_text(encoding="utf-8").splitlines()
     refline = next(i for i, line in enumerate(refuted_lines, 1) if "Устаревшие предпосылки в слое вопросов" in line)
