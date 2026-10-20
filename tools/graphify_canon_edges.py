@@ -114,6 +114,20 @@ def make_resolver(ids):
     return resolve
 
 
+def status_display(card):
+    """Оси статуса рядом: авторское принятие (status) и доказательность (St_FTS).
+
+    Поле только для чтения графа; статусы оно не меняет и не повышает.
+    """
+    evidence = card.get("St_FTS")
+    if not evidence:
+        return {}
+    text = f"принятие: {card.get('status')}; доказательность: {evidence}"
+    if card.get("evidence_status") and card["evidence_status"] != evidence:
+        text += f" (evidence_status: {card['evidence_status']})"
+    return {"status_display": text}
+
+
 def build_fragment(cards, triples):
     """Return (nodes, edges, summary). Pure: no graphify, no I/O."""
     ids = set(cards)
@@ -127,6 +141,7 @@ def build_fragment(cards, triples):
         "file_type": "concept",
         "_origin": "canonical_cards",
         "status_effect": "stored_only; no automatic promotion",
+        **status_display(c),
         "source_file": "source/fts_cards.jsonl",
         "source_location": c.get("path"),
         "source_url": None, "captured_at": None, "author": None, "contributor": None,
